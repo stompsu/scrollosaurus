@@ -1,0 +1,122 @@
+{
+  "slug": "therizinosaurus",
+  "scientificName": "Therizinosaurus cheloniformis",
+  "genus": "Therizinosaurus",
+  "nameMeaning": {
+    "text": {
+      "en": "scythe lizard"
+    },
+    "sourceIds": ["nhm"]
+  },
+  "group": "therizinosauria",
+  "groupSourceIds": ["pbdb-taxon", "nhm", "zanno-makovicky-2011"],
+  "isDinosaur": true,
+  "taxonomy": {
+    "status": "valid"
+  },
+  "diet": {
+    "value": "herbivore",
+    "confidence": "probable",
+    "sourceIds": ["zanno-makovicky-2011", "nhm", "pbdb-taxon"],
+    "note": "Inferred from skull and tooth features shared by therizinosaurs; no gut contents are known (Zanno & Makovicky 2011 report no extrinsic diet evidence for Therizinosauria)."
+  },
+  "timeRange": {
+    "startMa": 72.2,
+    "endMa": 66.0,
+    "sourceIds": ["pbdb-occs"],
+    "note": "PBDB dates T. cheloniformis occurrences (Nemegt Formation, Mongolia) to the Maastrichtian; the Ma values are the ICS v2024/12 Maastrichtian stage boundaries. NHM gives about 70 Ma."
+  },
+  "periods": ["cretaceous"],
+  "size": {
+    "lengthM": {
+      "value": [10, 10],
+      "sourceIds": ["nhm"],
+      "note": "Single published figure (NHM Dino Directory). Therizinosaurus is known only from arm, leg and rib bones, so full-body size is reconstructed from relatives."
+    },
+    "massKg": {
+      "value": [6647, 6647],
+      "sourceIds": ["zanno-makovicky-2013"],
+      "note": "Single estimate from a theropod equation relating body mass to femur length (Zanno & Makovicky 2013); the skeleton is very incomplete, so this is a rough figure."
+    }
+  },
+  "locations": [
+    {
+      "continent": "asia",
+      "countryCode": "MN",
+      "formation": "Nemegt",
+      "sourceIds": ["pbdb-occs"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "Maleev",
+    "year": 1954,
+    "sourceIds": ["pbdb-taxon", "nhm"]
+  },
+  "summary": {
+    "en": "Therizinosaurus was a giant, two-legged plant eater from Mongolia, living near the end of the Cretaceous. It belonged to the same big group as meat-eaters like Tyrannosaurus, yet it probably ate plants. Its hands carried enormous claws, possibly used to pull branches closer. It is known only from arm, leg and rib bones, so its full shape and size are partly guesswork."
+  },
+  "funFacts": [
+    {
+      "text": {
+        "en": "Therizinosaurus's hand claws were about 50 centimetres long, thought to be the longest of any known land animal."
+      },
+      "sourceIds": ["nhm"]
+    }
+  ],
+  "famous": false,
+  "images": [],
+  "uncertain": [
+    {
+      "field": "size.lengthM",
+      "note": "Only arm, leg and rib bones are known; length is reconstructed from relatives (NHM)."
+    },
+    {
+      "field": "size.massKg",
+      "note": "Single estimate from limited material (Zanno & Makovicky 2013)."
+    }
+  ],
+  "sources": [
+    {
+      "id": "zanno-makovicky-2011",
+      "title": "Herbivorous ecomorphology and specialization patterns in theropod dinosaur evolution",
+      "authors": "Zanno, L. E.; Makovicky, P. J.",
+      "year": 2011,
+      "publisher": "Proceedings of the National Academy of Sciences",
+      "doi": "10.1073/pnas.1011924108",
+      "url": "https://doi.org/10.1073/pnas.1011924108",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "zanno-makovicky-2013",
+      "title": "No evidence for directional evolution of body mass in herbivorous theropod dinosaurs",
+      "authors": "Zanno, L. E.; Makovicky, P. J.",
+      "year": 2013,
+      "publisher": "Proceedings of the Royal Society B",
+      "doi": "10.1098/rspb.2012.2526",
+      "url": "https://doi.org/10.1098/rspb.2012.2526",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "nhm",
+      "title": "Therizinosaurus | Dino Directory",
+      "publisher": "Natural History Museum, London",
+      "url": "https://www.nhm.ac.uk/discover/dino-directory/therizinosaurus.html",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-taxon",
+      "title": "Therizinosaurus (taxon 38553)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/single.json?name=Therizinosaurus&show=attr,app,parent,class,ecospace",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-occs",
+      "title": "Occurrences of Therizinosaurus cheloniformis (stratigraphy and location)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.txt?base_name=Therizinosaurus%20cheloniformis&show=strat,loc",
+      "accessed": "2026-11-20"
+    }
+  ],
+  "lastReviewed": "2026-11-20"
+}

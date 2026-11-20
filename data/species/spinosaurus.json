@@ -1,0 +1,167 @@
+{
+  "slug": "spinosaurus",
+  "scientificName": "Spinosaurus aegyptiacus",
+  "genus": "Spinosaurus",
+  "nameMeaning": {
+    "text": {
+      "en": "spine lizard"
+    },
+    "sourceIds": ["nhm"]
+  },
+  "group": "spinosauridae",
+  "groupSourceIds": ["pbdb-taxon", "sereno-2022"],
+  "isDinosaur": true,
+  "taxonomy": {
+    "status": "valid",
+    "note": "The holotype from Egypt, described by Stromer, was destroyed in the Second World War; a partial skeleton from the Kem Kem Group of Morocco (FSAC-KK 11888) was designated as the neotype.",
+    "sourceIds": ["sereno-2022", "nhm"]
+  },
+  "diet": {
+    "value": "piscivore",
+    "confidence": "debated",
+    "sourceIds": [
+      "ibrahim-2014",
+      "ibrahim-2020",
+      "fabbri-2022",
+      "henderson-2018",
+      "sereno-2022",
+      "nhm"
+    ],
+    "note": "Fish-eating is widely accepted, and it may also have eaten other animals. How it caught fish is disputed: one team argues it was a semi-aquatic or aquatic animal that swam with its tail and hunted underwater (Ibrahim et al. 2014, 2020; Fabbri et al. 2022); others argue it was buoyant, could not dive, walked on two legs on land and fed by wading in shallow water (Henderson 2018; Sereno et al. 2022). Posture is debated with it: the aquatic hypothesis implies a quadrupedal stance on land, while Sereno et al. 2022 found it was bipedal."
+  },
+  "timeRange": {
+    "startMa": 100.5,
+    "endMa": 93.9,
+    "sourceIds": ["pbdb-occs", "sereno-2022"],
+    "note": "Sereno et al. 2022 place S. aegyptiacus in the Cenomanian (about 95 Ma); the Ma values are the ICS v2024/12 Cenomanian stage boundaries. Some PBDB occurrences from Morocco are only dated to Late Albian-Early Cenomanian, and a few Tunisian and Algerian referrals extend to the Aptian-Albian; these are not used here. NHM gives 99-94 Ma."
+  },
+  "periods": ["cretaceous"],
+  "size": {
+    "lengthM": {
+      "value": [14, 15.55],
+      "sourceIds": ["sereno-2022", "henderson-2018"],
+      "note": "Sereno et al. 2022 reconstruct an adult at just under 14 m; Henderson 2018 built a 15.55 m model following the Ibrahim et al. 2014 reconstruction, which those authors described as over 15 m long."
+    },
+    "massKg": {
+      "value": [6500, 7390],
+      "sourceIds": ["henderson-2018", "sereno-2022"],
+      "note": "Volumetric (digital model) estimates: 6,500 kg (Henderson 2018) and 7,390 kg (Sereno et al. 2022, with bird-like air spaces; up to about 8,000 kg with less air space). Estimates depend on the reconstruction used."
+    }
+  },
+  "locations": [
+    {
+      "continent": "africa",
+      "countryCode": "EG",
+      "formation": "Bahariya",
+      "sourceIds": ["pbdb-occs", "sereno-2022"]
+    },
+    {
+      "continent": "africa",
+      "countryCode": "MA",
+      "formation": "Kem Kem",
+      "sourceIds": ["pbdb-occs", "sereno-2022"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "Stromer",
+    "year": 1915,
+    "sourceIds": ["pbdb-taxon", "nhm"]
+  },
+  "summary": {
+    "en": "Spinosaurus was one of the largest meat-eating dinosaurs, about 14 to 15 metres long, living in North Africa roughly 100 to 94 million years ago. It had a long, narrow snout with cone-shaped teeth for catching fish, and a tall sail on its back. Scientists still argue about how it lived: was it a swimmer that chased fish underwater, or a wader that stood in the shallows and ambushed them?"
+  },
+  "funFacts": [
+    {
+      "text": {
+        "en": "The first Spinosaurus bones, found in Egypt in 1912, were destroyed during the Second World War. For decades scientists had only drawings and photographs to study."
+      },
+      "sourceIds": ["nhm"]
+    }
+  ],
+  "famous": true,
+  "images": [],
+  "uncertain": [
+    {
+      "field": "diet",
+      "note": "Fish-eating is agreed, but whether Spinosaurus hunted underwater or waded is disputed (Ibrahim et al. 2014, 2020; Fabbri et al. 2022 vs Henderson 2018; Sereno et al. 2022)."
+    },
+    {
+      "field": "size.lengthM",
+      "note": "Length depends on the reconstruction: just under 14 m (Sereno et al. 2022) versus over 15 m (Ibrahim et al. 2014, as modelled by Henderson 2018)."
+    }
+  ],
+  "sources": [
+    {
+      "id": "ibrahim-2014",
+      "title": "Semiaquatic adaptations in a giant predatory dinosaur",
+      "authors": "Ibrahim, N.; Sereno, P. C.; Dal Sasso, C.; Maganuco, S.; Fabbri, M.; Martill, D. M.; Zouhri, S.; Myhrvold, N.; Iurino, D. A.",
+      "year": 2014,
+      "publisher": "Science",
+      "doi": "10.1126/science.1258750",
+      "url": "https://doi.org/10.1126/science.1258750",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "ibrahim-2020",
+      "title": "Tail-propelled aquatic locomotion in a theropod dinosaur",
+      "authors": "Ibrahim, N.; Maganuco, S.; Dal Sasso, C.; Fabbri, M.; Auditore, M.; Bindellini, G.; Martill, D. M.; Zouhri, S.; Mattarelli, D. A.; Unwin, D. M.; Wiemann, J.; Bonadonna, D.; Amane, A.; Jakubczak, J.; Joger, U.; Lauder, G. V.; Pierce, S. E.",
+      "year": 2020,
+      "publisher": "Nature",
+      "doi": "10.1038/s41586-020-2190-3",
+      "url": "https://doi.org/10.1038/s41586-020-2190-3",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "fabbri-2022",
+      "title": "Subaqueous foraging among carnivorous dinosaurs",
+      "authors": "Fabbri, M.; Navalón, G.; Benson, R. B. J.; Pol, D.; O'Connor, J.; Bhullar, B.-A. S.; Erickson, G. M.; Norell, M. A.; Orkney, A.; Lamanna, M. C.; Zouhri, S.; Becker, J.; Emke, A.; Dal Sasso, C.; Bindellini, G.; Maganuco, S.; Auditore, M.; Ibrahim, N.",
+      "year": 2022,
+      "publisher": "Nature",
+      "doi": "10.1038/s41586-022-04528-0",
+      "url": "https://doi.org/10.1038/s41586-022-04528-0",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "henderson-2018",
+      "title": "A buoyancy, balance and stability challenge to the hypothesis of a semi-aquatic Spinosaurus Stromer, 1915 (Dinosauria: Theropoda)",
+      "authors": "Henderson, D. M.",
+      "year": 2018,
+      "publisher": "PeerJ",
+      "doi": "10.7717/peerj.5409",
+      "url": "https://doi.org/10.7717/peerj.5409",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "sereno-2022",
+      "title": "Spinosaurus is not an aquatic dinosaur",
+      "authors": "Sereno, P. C.; Myhrvold, N.; Henderson, D. M.; Fish, F. E.; Vidal, D.; Baumgart, S. L.; Keillor, T. M.; Formoso, K. K.; Conroy, L. L.",
+      "year": 2022,
+      "publisher": "eLife",
+      "doi": "10.7554/eLife.80092",
+      "url": "https://doi.org/10.7554/eLife.80092",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "nhm",
+      "title": "Spinosaurus | Dino Directory",
+      "publisher": "Natural History Museum, London",
+      "url": "https://www.nhm.ac.uk/discover/dino-directory/spinosaurus.html",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-taxon",
+      "title": "Spinosaurus (taxon 38598)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/single.json?name=Spinosaurus&show=attr,app,parent,class,ecospace",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-occs",
+      "title": "Occurrences of Spinosaurus aegyptiacus (stratigraphy and location)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.txt?base_name=Spinosaurus%20aegyptiacus&show=strat,loc",
+      "accessed": "2026-11-20"
+    }
+  ],
+  "lastReviewed": "2026-11-20"
+}

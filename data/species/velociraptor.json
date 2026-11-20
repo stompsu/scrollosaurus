@@ -1,0 +1,101 @@
+{
+  "slug": "velociraptor",
+  "scientificName": "Velociraptor mongoliensis",
+  "genus": "Velociraptor",
+  "nameMeaning": {
+    "text": {
+      "en": "quick plunderer"
+    },
+    "sourceIds": ["nhm"]
+  },
+  "group": "dromaeosauridae",
+  "groupSourceIds": ["pbdb-taxon", "nhm"],
+  "isDinosaur": true,
+  "taxonomy": {
+    "status": "valid"
+  },
+  "diet": {
+    "value": "carnivore",
+    "confidence": "established",
+    "sourceIds": ["nhm", "pbdb-taxon"]
+  },
+  "timeRange": {
+    "startMa": 83.6,
+    "endMa": 72.2,
+    "sourceIds": ["pbdb-occs"],
+    "note": "PBDB dates nearly all V. mongoliensis occurrences (Djadokhta Formation, Mongolia) only to the Campanian; the Ma values are the ICS v2024/12 Campanian stage boundaries. Single outlying referrals from Kazakhstan (Coniacian-Santonian) and China are not used. NHM gives 74-70 Ma."
+  },
+  "periods": ["cretaceous"],
+  "size": {
+    "lengthM": {
+      "value": [1.8, 1.8],
+      "sourceIds": ["nhm"],
+      "note": "Single published figure (NHM Dino Directory)."
+    },
+    "massKg": {
+      "value": [7, 7],
+      "sourceIds": ["nhm"],
+      "note": "Single published estimate (NHM Dino Directory); method not stated."
+    }
+  },
+  "locations": [
+    {
+      "continent": "asia",
+      "countryCode": "MN",
+      "formation": "Djadokhta",
+      "sourceIds": ["pbdb-occs"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "Osborn",
+    "year": 1924,
+    "sourceIds": ["pbdb-taxon", "nhm"]
+  },
+  "summary": {
+    "en": "Velociraptor was a small predator from Mongolia, living about 84 to 72 million years ago. It was only about 1.8 metres long, around half the size of the version in the Jurassic Park films. Bumps on its arm bones show where large feathers were attached, so it looked more like a fierce bird than a scaly lizard."
+  },
+  "funFacts": [
+    {
+      "text": {
+        "en": "A Velociraptor forearm has small bumps called quill knobs, where big wing feathers attach in living birds. This shows Velociraptor had feathers even though it could not fly."
+      },
+      "sourceIds": ["turner-2007"]
+    }
+  ],
+  "famous": true,
+  "images": [],
+  "sources": [
+    {
+      "id": "turner-2007",
+      "title": "Feather quill knobs in the dinosaur Velociraptor",
+      "authors": "Turner, A. H.; Makovicky, P. J.; Norell, M. A.",
+      "year": 2007,
+      "publisher": "Science",
+      "doi": "10.1126/science.1145076",
+      "url": "https://doi.org/10.1126/science.1145076",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "nhm",
+      "title": "Velociraptor | Dino Directory",
+      "publisher": "Natural History Museum, London",
+      "url": "https://www.nhm.ac.uk/discover/dino-directory/velociraptor.html",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-taxon",
+      "title": "Velociraptor (taxon 38564)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/single.json?name=Velociraptor&show=attr,app,parent,class,ecospace",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-occs",
+      "title": "Occurrences of Velociraptor mongoliensis (stratigraphy and location)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.txt?base_name=Velociraptor%20mongoliensis&show=strat,loc",
+      "accessed": "2026-11-20"
+    }
+  ],
+  "lastReviewed": "2026-11-20"
+}

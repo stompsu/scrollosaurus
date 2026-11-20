@@ -1,0 +1,118 @@
+{
+  "slug": "oviraptor",
+  "scientificName": "Oviraptor philoceratops",
+  "genus": "Oviraptor",
+  "nameMeaning": {
+    "text": {
+      "en": "egg thief"
+    },
+    "sourceIds": ["nhm"]
+  },
+  "group": "oviraptorosauria",
+  "groupSourceIds": ["pbdb-taxon", "nhm"],
+  "isDinosaur": true,
+  "taxonomy": {
+    "status": "valid"
+  },
+  "diet": {
+    "value": "uncertain",
+    "confidence": "debated",
+    "sourceIds": ["nhm", "zanno-makovicky-2011", "norell-1994", "pbdb-taxon"],
+    "note": "Its toothless, beaked jaws give no clear answer. Suggestions include eggs, hard fruits, shellfish and other plant or animal food (NHM; PBDB lists it as an omnivore). Zanno & Makovicky 2011 infer herbivory for oviraptorosaurs as a group. The old idea that it was stealing eggs was overturned when the eggs it was found with turned out to be oviraptorid eggs (Norell et al. 1994)."
+  },
+  "timeRange": {
+    "startMa": 83.6,
+    "endMa": 72.2,
+    "sourceIds": ["pbdb-occs"],
+    "note": "PBDB dates the O. philoceratops occurrence (Djadokhta Formation, Mongolia) only to the Campanian; the Ma values are the ICS v2024/12 Campanian stage boundaries. A genus-level PBDB record from Kazakhstan (Coniacian-Santonian) is not used. NHM gives 85-75 Ma."
+  },
+  "periods": ["cretaceous"],
+  "size": {
+    "lengthM": {
+      "value": [2, 2],
+      "sourceIds": ["nhm"],
+      "note": "Single published figure (NHM Dino Directory)."
+    },
+    "massKg": {
+      "value": [20, 20],
+      "sourceIds": ["nhm"],
+      "note": "Single published estimate (NHM Dino Directory); method not stated."
+    }
+  },
+  "locations": [
+    {
+      "continent": "asia",
+      "countryCode": "MN",
+      "formation": "Djadokhta",
+      "sourceIds": ["pbdb-occs", "norell-1994"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "Osborn",
+    "year": 1924,
+    "sourceIds": ["pbdb-taxon", "nhm"]
+  },
+  "summary": {
+    "en": "Oviraptor was a toothless, beaked dinosaur about 2 metres long that lived in Mongolia around 84 to 72 million years ago. Its name means 'egg thief', because its skeleton was found on a nest and scientists thought it was stealing the eggs. Later discoveries showed the eggs were probably its own. What it actually ate is still unclear."
+  },
+  "funFacts": [
+    {
+      "text": {
+        "en": "In 1923 the first Oviraptor was found lying on a nest of eggs. Seventy years later, an embryo inside the same kind of egg showed the eggs belonged to an oviraptorid, so the adult may have been guarding its nest."
+      },
+      "sourceIds": ["norell-1994"]
+    }
+  ],
+  "famous": false,
+  "images": [],
+  "uncertain": [
+    {
+      "field": "diet",
+      "note": "No direct evidence (gut contents) for Oviraptor's diet; proposals range from eggs and shellfish to plants (NHM; Zanno & Makovicky 2011)."
+    }
+  ],
+  "sources": [
+    {
+      "id": "norell-1994",
+      "title": "A theropod dinosaur embryo and the affinities of the Flaming Cliffs dinosaur eggs",
+      "authors": "Norell, M. A.; Clark, J. M.; Dashzeveg, D.; Barsbold, R.; Chiappe, L. M.; Davidson, A. R.; McKenna, M. C.; Perle, A.; Novacek, M. J.",
+      "year": 1994,
+      "publisher": "Science",
+      "doi": "10.1126/science.266.5186.779",
+      "url": "https://doi.org/10.1126/science.266.5186.779",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "zanno-makovicky-2011",
+      "title": "Herbivorous ecomorphology and specialization patterns in theropod dinosaur evolution",
+      "authors": "Zanno, L. E.; Makovicky, P. J.",
+      "year": 2011,
+      "publisher": "Proceedings of the National Academy of Sciences",
+      "doi": "10.1073/pnas.1011924108",
+      "url": "https://doi.org/10.1073/pnas.1011924108",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "nhm",
+      "title": "Oviraptor | Dino Directory",
+      "publisher": "Natural History Museum, London",
+      "url": "https://www.nhm.ac.uk/discover/dino-directory/oviraptor.html",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-taxon",
+      "title": "Oviraptor (taxon 38559)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/single.json?name=Oviraptor&show=attr,app,parent,class,ecospace",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-occs",
+      "title": "Occurrences of Oviraptor philoceratops (stratigraphy and location)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.txt?base_name=Oviraptor%20philoceratops&show=strat,loc",
+      "accessed": "2026-11-20"
+    }
+  ],
+  "lastReviewed": "2026-11-20"
+}

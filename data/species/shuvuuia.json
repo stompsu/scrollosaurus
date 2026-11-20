@@ -1,0 +1,117 @@
+{
+  "slug": "shuvuuia",
+  "scientificName": "Shuvuuia deserti",
+  "genus": "Shuvuuia",
+  "nameMeaning": {
+    "text": {
+      "en": "bird"
+    },
+    "sourceIds": ["nhm"]
+  },
+  "group": "alvarezsauridae",
+  "groupSourceIds": ["pbdb-taxon", "nhm"],
+  "isDinosaur": true,
+  "taxonomy": {
+    "status": "valid"
+  },
+  "diet": {
+    "value": "insectivore",
+    "confidence": "probable",
+    "sourceIds": ["nhm", "leedham-2026", "choiniere-2021"],
+    "note": "An inference from anatomy, not from gut contents. Alvarezsauroids have tiny teeth, slender jaws and short, strong arms suited to digging, consistent with eating insects such as termites (Leedham et al. 2026; NHM). Choiniere et al. 2021 found Shuvuuia's eyes and ears suited to hunting at night. PBDB lists it simply as a carnivore."
+  },
+  "timeRange": {
+    "startMa": 83.6,
+    "endMa": 72.2,
+    "sourceIds": ["pbdb-occs"],
+    "note": "PBDB dates S. deserti occurrences (Djadokhta Formation, Mongolia) only to the Campanian; the Ma values are the ICS v2024/12 Campanian stage boundaries. NHM gives 81-75 Ma."
+  },
+  "periods": ["cretaceous"],
+  "size": {
+    "lengthM": {
+      "value": [0.6, 0.6],
+      "sourceIds": ["nhm"],
+      "note": "Single published figure (NHM Dino Directory)."
+    }
+  },
+  "locations": [
+    {
+      "continent": "asia",
+      "countryCode": "MN",
+      "formation": "Djadokhta",
+      "sourceIds": ["pbdb-occs"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "Chiappe, Norell & Clark",
+    "year": 1998,
+    "sourceIds": ["pbdb-taxon", "nhm"]
+  },
+  "summary": {
+    "en": "Shuvuuia was a tiny, bird-like dinosaur from the deserts of Mongolia, about 60 centimetres long, living roughly 84 to 72 million years ago. Its relatives had tiny teeth and short, strong arms suited to digging, so scientists think it ate insects such as termites. Its eyes and ears suggest it hunted at night."
+  },
+  "funFacts": [
+    {
+      "text": {
+        "en": "Shuvuuia's inner ear suggests its hearing rivalled that of a barn owl, and its eyes were suited to very low light."
+      },
+      "sourceIds": ["choiniere-2021"]
+    }
+  ],
+  "famous": false,
+  "images": [],
+  "uncertain": [
+    {
+      "field": "diet",
+      "note": "Insectivory is inferred from alvarezsauroid anatomy (Leedham et al. 2026; NHM); there is no direct evidence such as gut contents."
+    },
+    {
+      "field": "size.massKg",
+      "note": "No published mass estimate found in the sources checked."
+    }
+  ],
+  "sources": [
+    {
+      "id": "choiniere-2021",
+      "title": "Evolution of vision and hearing modalities in theropod dinosaurs",
+      "authors": "Choiniere, J. N.; Neenan, J. M.; Schmitz, L.; Ford, D. P.; Chapelle, K. E. J.; Balanoff, A. M.; Sipla, J. S.; Georgi, J. A.; Walsh, S. A.; Norell, M. A.; Xu, X.; Clark, J. M.; Benson, R. B. J.",
+      "year": 2021,
+      "publisher": "Science",
+      "doi": "10.1126/science.abe7941",
+      "url": "https://doi.org/10.1126/science.abe7941",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "leedham-2026",
+      "title": "Range of motion and myology support a digging function for the forelimbs of alvarezsauroid dinosaurs",
+      "authors": "Leedham, S.; Qin, Z.; Griffin, B. W.; Ballell, A.; Yu, Y.; Xu, X.; Rayfield, E.",
+      "year": 2026,
+      "publisher": "Proceedings of the Royal Society B",
+      "doi": "10.1098/rspb.2026.0565",
+      "url": "https://doi.org/10.1098/rspb.2026.0565",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "nhm",
+      "title": "Shuvuuia | Dino Directory",
+      "publisher": "Natural History Museum, London",
+      "url": "https://www.nhm.ac.uk/discover/dino-directory/shuvuuia.html",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-taxon",
+      "title": "Shuvuuia (taxon 66043)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/single.json?name=Shuvuuia&show=attr,app,parent,class,ecospace",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-occs",
+      "title": "Occurrences of Shuvuuia deserti (stratigraphy and location)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.txt?base_name=Shuvuuia%20deserti&show=strat,loc",
+      "accessed": "2026-11-20"
+    }
+  ],
+  "lastReviewed": "2026-11-20"
+}
