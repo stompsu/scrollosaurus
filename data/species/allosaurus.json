@@ -1,0 +1,103 @@
+{
+  "slug": "allosaurus",
+  "scientificName": "Allosaurus fragilis",
+  "genus": "Allosaurus",
+  "nameMeaning": {
+    "text": {
+      "en": "different lizard"
+    },
+    "sourceIds": ["nhm"]
+  },
+  "group": "allosauroidea",
+  "groupSourceIds": ["pbdb-taxon"],
+  "isDinosaur": true,
+  "taxonomy": {
+    "status": "valid",
+    "note": "The holotype of A. fragilis is not diagnostic, and a neotype has been proposed to the ICZN (Case 3506) to conserve the name. A second species, A. jimmadseni, was named in 2020 from the lower Morrison Formation.",
+    "sourceIds": ["chure-loewen-2020"]
+  },
+  "diet": {
+    "value": "carnivore",
+    "confidence": "established",
+    "sourceIds": ["nhm"]
+  },
+  "timeRange": {
+    "startMa": 154.8,
+    "endMa": 143.1,
+    "sourceIds": ["pbdb-occs"],
+    "note": "PBDB dates A. fragilis occurrences in the Morrison Formation to the Kimmeridgian-Tithonian; the Ma values are the ICS v2024/12 stage boundaries. The NHM Dino Directory gives 152-145 Ma."
+  },
+  "periods": ["jurassic"],
+  "size": {
+    "lengthM": {
+      "value": [9.7, 9.7],
+      "sourceIds": ["nhm"],
+      "note": "Single published figure (NHM Dino Directory)."
+    },
+    "massKg": {
+      "value": [2700, 2700],
+      "sourceIds": ["nhm"],
+      "note": "Single published estimate (NHM Dino Directory); method not stated. Mass estimates for large theropods vary widely between methods."
+    }
+  },
+  "locations": [
+    {
+      "continent": "north-america",
+      "countryCode": "US",
+      "formation": "Morrison",
+      "sourceIds": ["pbdb-occs", "chure-loewen-2020"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "Marsh",
+    "year": 1877,
+    "sourceIds": ["pbdb-taxon", "chure-loewen-2020"]
+  },
+  "summary": {
+    "en": "Allosaurus was a large predator of Late Jurassic North America, about 155 to 143 million years ago. It walked on two legs, had three-fingered hands, serrated teeth and small horns above its eyes. It hunted large plant eaters such as Stegosaurus. Many skeletons have been found together, but whether it hunted in packs, fought each other, or both, is still unknown."
+  },
+  "funFacts": [
+    {
+      "text": {
+        "en": "Several Allosaurus have been found in the same bone beds, and some bones carry bite marks from other Allosaurus."
+      },
+      "sourceIds": ["nhm"]
+    }
+  ],
+  "famous": true,
+  "images": [],
+  "sources": [
+    {
+      "id": "chure-loewen-2020",
+      "title": "Cranial anatomy of Allosaurus jimmadseni, a new species from the lower part of the Morrison Formation (Upper Jurassic) of Western North America",
+      "authors": "Chure, D. J.; Loewen, M. A.",
+      "year": 2020,
+      "publisher": "PeerJ",
+      "doi": "10.7717/peerj.7803",
+      "url": "https://doi.org/10.7717/peerj.7803",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "nhm",
+      "title": "Allosaurus | Dino Directory",
+      "publisher": "Natural History Museum, London",
+      "url": "https://www.nhm.ac.uk/discover/dino-directory/allosaurus.html",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-taxon",
+      "title": "Allosaurus (taxon 38590)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/single.json?name=Allosaurus&show=attr,app,parent,ref,class",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-occs",
+      "title": "Occurrences of Allosaurus fragilis (stratigraphy and location)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.txt?base_name=Allosaurus%20fragilis&show=strat,loc",
+      "accessed": "2026-11-20"
+    }
+  ],
+  "lastReviewed": "2026-11-20"
+}

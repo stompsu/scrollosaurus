@@ -1,0 +1,113 @@
+{
+  "slug": "plesiosaurus",
+  "scientificName": "Plesiosaurus dolichodeirus",
+  "genus": "Plesiosaurus",
+  "nameMeaning": {
+    "text": {
+      "en": "near lizard"
+    },
+    "sourceIds": ["smith-directory"]
+  },
+  "group": "plesiosauria",
+  "groupSourceIds": ["pbdb-taxon", "smith-directory"],
+  "isDinosaur": false,
+  "taxonomy": {
+    "status": "valid",
+    "note": "For a long time Plesiosaurus was a wastebasket genus. After revision it contains only one valid species, the type species P. dolichodeirus.",
+    "sourceIds": ["smith-directory"]
+  },
+  "diet": {
+    "value": "piscivore",
+    "confidence": "probable",
+    "sourceIds": ["smith-directory-diet"],
+    "note": "Inferred from tooth form: plesiosauroid teeth pierced small soft-bodied prey such as fish and cephalopods."
+  },
+  "timeRange": {
+    "startMa": 199.5,
+    "endMa": 192.9,
+    "sourceIds": ["smith-directory", "pbdb-occs"],
+    "note": "The holotype comes from the late Sinemurian (Charmouth Mudstone). The Ma values are the ICS v2024/12 Sinemurian boundaries. PBDB also has two loosely dated records (Hettangian to Pliensbachian) not used here."
+  },
+  "periods": ["jurassic"],
+  "size": {},
+  "locations": [
+    {
+      "continent": "europe",
+      "countryCode": "GB",
+      "formation": "Charmouth Mudstone",
+      "sourceIds": ["smith-directory", "pbdb-occs"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "De la Beche & Conybeare",
+    "year": 1821,
+    "sourceIds": ["smith-directory", "pbdb-taxon"]
+  },
+  "summary": {
+    "en": "Plesiosaurus was not a dinosaur but a marine reptile that swam in the seas over what is now southern England in the Early Jurassic. Its neck was very long, roughly as long as its body and tail combined. Its pointed teeth were good for piercing small, soft prey such as fish and squid-like animals. Mary Anning found the famous complete skeleton at Lyme Regis."
+  },
+  "funFacts": [
+    {
+      "text": {
+        "en": "Its species name dolichodeirus comes from Greek words for 'long' and 'neck'."
+      },
+      "sourceIds": ["nhm-anning"]
+    },
+    {
+      "text": {
+        "en": "The complete skeleton that defines the species was discovered and collected by Mary Anning."
+      },
+      "sourceIds": ["smith-directory", "nhm-anning"]
+    }
+  ],
+  "famous": false,
+  "images": [],
+  "uncertain": [
+    {
+      "field": "size.lengthM",
+      "note": "No total length found in a source we could verify."
+    },
+    {
+      "field": "size.massKg",
+      "note": "No mass estimate found in a source we could verify."
+    }
+  ],
+  "sources": [
+    {
+      "id": "smith-directory",
+      "title": "Plesiosaurus | The Plesiosaur Directory",
+      "authors": "Smith, A. S.",
+      "url": "https://plesiosauria.com/genera/plesiosaurus/",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "smith-directory-diet",
+      "title": "What did plesiosaurs eat and how do we know? | The Plesiosaur Directory",
+      "authors": "Smith, A. S.",
+      "url": "https://plesiosauria.com/diet/",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "nhm-anning",
+      "title": "Mary Anning's fossils",
+      "publisher": "Natural History Museum, London",
+      "url": "https://www.nhm.ac.uk/discover/mary-anning-fossils.html",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-taxon",
+      "title": "Plesiosaurus (taxon 36504)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/single.json?name=Plesiosaurus&show=attr,app,parent,ref,class",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-occs",
+      "title": "Occurrences of Plesiosaurus dolichodeirus (stratigraphy and location)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.txt?base_name=Plesiosaurus%20dolichodeirus&show=strat,loc",
+      "accessed": "2026-11-20"
+    }
+  ],
+  "lastReviewed": "2026-11-20"
+}

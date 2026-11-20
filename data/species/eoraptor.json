@@ -1,0 +1,125 @@
+{
+  "slug": "eoraptor",
+  "scientificName": "Eoraptor lunensis",
+  "genus": "Eoraptor",
+  "nameMeaning": {
+    "text": {
+      "en": "dawn plunderer"
+    },
+    "sourceIds": ["sereno-lab"]
+  },
+  "group": "sauropodomorpha",
+  "groupSourceIds": ["martinez-2011", "pbdb-taxon"],
+  "isDinosaur": true,
+  "taxonomy": {
+    "status": "valid"
+  },
+  "diet": {
+    "value": "omnivore",
+    "confidence": "probable",
+    "sourceIds": ["martinez-2011"],
+    "note": "Martinez et al. (2011) read its tooth crowns as evidence of an omnivorous, if not wholly herbivorous, diet. Older accounts that treated it as a theropod describe it as a meat eater (NHM Dino Directory)."
+  },
+  "timeRange": {
+    "startMa": 231.5,
+    "endMa": 229,
+    "sourceIds": ["martinez-2011", "pbdb-occs"],
+    "note": "All Ischigualasto dinosaurs, Eoraptor included, come from the Scaphonyx-Exaeretodon-Herrerasaurus biozone, dated by Martinez et al. (2011) to 231.5-229 Ma (late Carnian). Only one PBDB occurrence (Ischigualasto, Carnian)."
+  },
+  "periods": ["triassic"],
+  "size": {
+    "lengthM": {
+      "value": [0.9, 1.7],
+      "sourceIds": ["sereno-lab", "nhm"],
+      "note": "Sereno's lab page gives 3 feet (about 0.9 m); the NHM Dino Directory gives 1.7 m."
+    },
+    "massKg": {
+      "value": [10, 10],
+      "sourceIds": ["nhm"],
+      "note": "Single published estimate (NHM Dino Directory); method not stated."
+    }
+  },
+  "locations": [
+    {
+      "continent": "south-america",
+      "countryCode": "AR",
+      "formation": "Ischigualasto",
+      "sourceIds": ["pbdb-occs", "martinez-2011"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "Sereno, Forster, Rogers & Monetta",
+    "year": 1993,
+    "sourceIds": ["sereno-1993", "nhm"]
+  },
+  "summary": {
+    "en": "Eoraptor was a small, lightly built dinosaur from the Ischigualasto valley of Argentina, one of the oldest dinosaurs known. It lived about 231 to 229 million years ago and was roughly as long as a large dog. First described as an early meat eater, it is now thought to be an early relative of the giant long-necked sauropods, with teeth suited to eating plants and perhaps small animals."
+  },
+  "funFacts": [
+    {
+      "text": {
+        "en": "Eoraptor and its neighbour Eodromaeus are the only dinosaurs known to keep tiny teeth on the roof of the mouth."
+      },
+      "sourceIds": ["martinez-2011"]
+    }
+  ],
+  "famous": false,
+  "images": [],
+  "uncertain": [
+    {
+      "field": "group",
+      "note": "Originally described as a theropod (Sereno et al. 1993; still shown as a theropod on the NHM Dino Directory and Sereno lab page). Martinez et al. (2011) reinterpreted it as a basal sauropodomorph, which PBDB follows."
+    }
+  ],
+  "sources": [
+    {
+      "id": "martinez-2011",
+      "title": "A basal dinosaur from the dawn of the dinosaur era in southwestern Pangaea",
+      "authors": "Martinez, R. N.; Sereno, P. C.; Alcober, O. A.; Colombi, C. E.; Renne, P. R.; Montañez, I. P.; Currie, B. S.",
+      "year": 2011,
+      "publisher": "Science",
+      "doi": "10.1126/science.1198467",
+      "url": "https://doi.org/10.1126/science.1198467",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "sereno-1993",
+      "title": "Primitive dinosaur skeleton from Argentina and the early evolution of Dinosauria",
+      "authors": "Sereno, P. C.; Forster, C. A.; Rogers, R. R.; Monetta, A. M.",
+      "year": 1993,
+      "publisher": "Nature",
+      "doi": "10.1038/361064a0",
+      "url": "https://doi.org/10.1038/361064a0",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "sereno-lab",
+      "title": "Eoraptor lunensis: Dawn Plunderer",
+      "publisher": "Paul Sereno lab, University of Chicago",
+      "url": "https://paulsereno.uchicago.edu/discoveries/eoraptor_lunensis/",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "nhm",
+      "title": "Eoraptor | Dino Directory",
+      "publisher": "Natural History Museum, London",
+      "url": "https://www.nhm.ac.uk/discover/dino-directory/eoraptor.html",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-taxon",
+      "title": "Eoraptor (taxon 57453)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/single.json?name=Eoraptor&show=attr,app,parent,ref,class",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-occs",
+      "title": "Occurrences of Eoraptor lunensis (stratigraphy and location)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.txt?base_name=Eoraptor%20lunensis&show=strat,loc",
+      "accessed": "2026-11-20"
+    }
+  ],
+  "lastReviewed": "2026-11-20"
+}

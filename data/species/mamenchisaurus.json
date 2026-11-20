@@ -1,0 +1,109 @@
+{
+  "slug": "mamenchisaurus",
+  "scientificName": "Mamenchisaurus constructus",
+  "genus": "Mamenchisaurus",
+  "nameMeaning": {
+    "text": {
+      "en": "Mamenchi lizard"
+    },
+    "sourceIds": ["nhm"]
+  },
+  "group": "mamenchisauridae",
+  "groupSourceIds": ["pbdb-taxon"],
+  "isDinosaur": true,
+  "taxonomy": {
+    "status": "valid",
+    "note": "This record follows the type species, M. constructus Young, 1954. The genus also contains several other named species of different ages and sizes (in PBDB from the Bathonian-Callovian to the Late Jurassic, plus one Aptian record of M. anyuensis); their ranges and sizes are not used here.",
+    "sourceIds": ["pbdb-taxon", "pbdb-genus-occs"]
+  },
+  "diet": {
+    "value": "herbivore",
+    "confidence": "established",
+    "sourceIds": ["nhm"]
+  },
+  "timeRange": {
+    "startMa": 161.5,
+    "endMa": 143.1,
+    "sourceIds": ["pbdb-occs"],
+    "note": "PBDB dates the type occurrence (Shaximiao) to the Kimmeridgian-Tithonian and two further M. constructus records only to the Late Jurassic; the range spans all three, using ICS v2024/12 boundaries. The NHM Dino Directory gives 155-145 Ma for the genus."
+  },
+  "periods": ["jurassic"],
+  "size": {},
+  "locations": [
+    {
+      "continent": "asia",
+      "countryCode": "CN",
+      "formation": "Shaximiao",
+      "sourceIds": ["pbdb-occs"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "Young",
+    "year": 1954,
+    "sourceIds": ["pbdb-taxon", "nhm"]
+  },
+  "summary": {
+    "en": "Mamenchisaurus was a long-necked plant-eating sauropod from China in the Late Jurassic. Its neck was extremely long, more than 40 percent of its whole body length. This record follows the first species named, Mamenchisaurus constructus, described in 1954 from Sichuan. Several other Mamenchisaurus species, some of them older, have been named since."
+  },
+  "funFacts": [
+    {
+      "text": {
+        "en": "In Mamenchisaurus the neck makes up more than 40 percent of the total body length."
+      },
+      "sourceIds": ["christian-2013"]
+    }
+  ],
+  "famous": false,
+  "images": [],
+  "uncertain": [
+    {
+      "field": "size.lengthM",
+      "note": "No length estimate found for the type species M. constructus. The NHM Dino Directory gives 22 m for the genus, which is not specific to this species."
+    },
+    {
+      "field": "size.massKg",
+      "note": "No mass estimate found for M. constructus in a source we could verify."
+    }
+  ],
+  "sources": [
+    {
+      "id": "christian-2013",
+      "title": "Biomechanical reconstructions and selective advantages of neck poses and feeding strategies of sauropods with the example of Mamenchisaurus youngi",
+      "authors": "Christian, A.; Peng, G.; Sekiya, T.; Ye, Y.; Wulf, M. G.; Steuer, T.",
+      "year": 2013,
+      "publisher": "PLOS ONE",
+      "doi": "10.1371/journal.pone.0071172",
+      "url": "https://doi.org/10.1371/journal.pone.0071172",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "nhm",
+      "title": "Mamenchisaurus | Dino Directory",
+      "publisher": "Natural History Museum, London",
+      "url": "https://www.nhm.ac.uk/discover/dino-directory/mamenchisaurus.html",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-taxon",
+      "title": "Mamenchisaurus (taxon 38670)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/single.json?name=Mamenchisaurus&show=attr,app,parent,ref,class",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-occs",
+      "title": "Occurrences of Mamenchisaurus constructus (stratigraphy and location)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.txt?base_name=Mamenchisaurus%20constructus&show=strat,loc",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-genus-occs",
+      "title": "Occurrences of Mamenchisaurus (all species; stratigraphy and location)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.txt?base_name=Mamenchisaurus&show=strat,loc",
+      "accessed": "2026-11-20"
+    }
+  ],
+  "lastReviewed": "2026-11-20"
+}
