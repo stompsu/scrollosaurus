@@ -42,6 +42,13 @@ describe('geologic-time data', () => {
     }
   });
 
+  it('has the ICS Mesozoic epochs and stages', () => {
+    expect(unitsByRank('epoch')).toHaveLength(8);
+    expect(unitsByRank('stage')).toHaveLength(30);
+    expect(unitsByRank('stage')[0]?.name).toBe('Induan');
+    expect(unitsByRank('stage').at(-1)?.name).toBe('Maastrichtian');
+  });
+
   it('looks units up by id', () => {
     expect(unitById('mesozoic').rank).toBe('era');
     expect(() => unitById('nope')).toThrow(/Unknown geologic unit/);

@@ -14,8 +14,11 @@ export const geologicUnitSchema = z
     parent: z.string().optional(),
     baseMa: z.number().positive(),
     baseUncertaintyMa: z.number().nonnegative().optional(),
+    /** The chart gives this boundary only as an approximate age ("~"). */
+    baseApproximate: z.literal(true).optional(),
     topMa: z.number().nonnegative(),
     topUncertaintyMa: z.number().nonnegative().optional(),
+    topApproximate: z.literal(true).optional(),
   })
   .strict()
   .refine((u) => u.baseMa > u.topMa, {
