@@ -1,0 +1,117 @@
+{
+  "slug": "stegosaurus",
+  "scientificName": "Stegosaurus stenops",
+  "genus": "Stegosaurus",
+  "nameMeaning": {
+    "text": { "en": "roof lizard" },
+    "sourceIds": ["nhm-stegosaurus"]
+  },
+  "group": "stegosauria",
+  "groupSourceIds": ["pbdb-stegosaurus", "nhm-stegosaurus", "maidment-2015"],
+  "isDinosaur": true,
+  "taxonomy": {
+    "status": "valid",
+    "note": "S. stenops is now the type species of Stegosaurus: the ICZN (Opinion 2320, 2013) replaced the poorly preserved former type species, S. armatus, with the better known S. stenops.",
+    "sourceIds": ["maidment-2015"]
+  },
+  "diet": {
+    "value": "herbivore",
+    "confidence": "established",
+    "sourceIds": ["nhm-stegosaurus"]
+  },
+  "timeRange": {
+    "startMa": 154.8,
+    "endMa": 143.1,
+    "sourceIds": ["pbdb-stegosaurus-stenops-occs", "maidment-2015"],
+    "note": "Kimmeridgian to Tithonian, from PBDB occurrence ages for S. stenops in the Morrison Formation (stage-level dates). The well-preserved 'Sophie' specimen comes from a part of the Morrison Formation believed to be Tithonian."
+  },
+  "periods": ["jurassic"],
+  "size": {
+    "lengthM": {
+      "value": [5.5, 9],
+      "sourceIds": ["maidment-2015", "nhm-stegosaurus"],
+      "note": "The near-complete S. stenops specimen NHMUK PV R36730 ('Sophie') is 5.5-6 m long but was not fully grown; 9 m is the museum figure for the genus."
+    },
+    "massKg": {
+      "value": [1560, 1560],
+      "sourceIds": ["brassey-2015"],
+      "note": "Volumetric estimate for the subadult 'Sophie' specimen (95% prediction interval 1082-2256 kg). Limb-bone equations give 2355-3751 kg, which the authors consider implausible. Fully grown animals were larger."
+    }
+  },
+  "locations": [
+    {
+      "continent": "north-america",
+      "countryCode": "US",
+      "formation": "Morrison",
+      "sourceIds": ["pbdb-stegosaurus-stenops-occs", "maidment-2015"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "Marsh",
+    "year": 1887,
+    "sourceIds": ["maidment-2015", "pbdb-stegosaurus-stenops-occs"]
+  },
+  "summary": {
+    "en": "Stegosaurus was a large, slow plant-eater from the Late Jurassic of western North America, about 150 million years ago. Two rows of tall bony plates ran along its back, and its tail ended in spikes that probably helped fight off predators such as Allosaurus. Its head was tiny for its body. Nobody is sure what the plates were for: ideas include defence, display and controlling body temperature."
+  },
+  "funFacts": [
+    {
+      "text": {
+        "en": "Stegosaurus plates grew in the skin rather than being attached to the skeleton, which is why fossils often show them scattered away from the body."
+      },
+      "sourceIds": ["nhm-stegosaurus"]
+    },
+    {
+      "text": {
+        "en": "One of the most complete Stegosaurus skeletons ever found, nicknamed 'Sophie', is on display at the Natural History Museum in London."
+      },
+      "sourceIds": ["nhm-stegosaurus", "maidment-2015"]
+    }
+  ],
+  "famous": true,
+  "images": [],
+  "sources": [
+    {
+      "id": "maidment-2015",
+      "title": "The postcranial skeleton of an exceptionally complete individual of the plated dinosaur Stegosaurus stenops (Dinosauria: Thyreophora) from the Upper Jurassic Morrison Formation of Wyoming, U.S.A.",
+      "authors": "Maidment S.C.R., Brassey C., Barrett P.M.",
+      "year": 2015,
+      "publisher": "PLOS ONE",
+      "doi": "10.1371/journal.pone.0138352",
+      "url": "https://doi.org/10.1371/journal.pone.0138352",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "brassey-2015",
+      "title": "Body mass estimates of an exceptionally complete Stegosaurus (Ornithischia: Thyreophora): comparing volumetric and linear bivariate mass estimation methods",
+      "authors": "Brassey C.A., Maidment S.C.R., Barrett P.M.",
+      "year": 2015,
+      "publisher": "Biology Letters",
+      "doi": "10.1098/rsbl.2014.0984",
+      "url": "https://doi.org/10.1098/rsbl.2014.0984",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "nhm-stegosaurus",
+      "title": "Stegosaurus | Dino Directory",
+      "publisher": "Natural History Museum, London",
+      "url": "https://www.nhm.ac.uk/discover/dino-directory/stegosaurus.html",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-stegosaurus",
+      "title": "Stegosaurus (taxon 38814)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=38814",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-stegosaurus-stenops-occs",
+      "title": "Stegosaurus stenops occurrences (taxon 56491)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Stegosaurus%20stenops&show=strat,loc",
+      "accessed": "2026-11-20"
+    }
+  ],
+  "lastReviewed": "2026-11-20"
+}

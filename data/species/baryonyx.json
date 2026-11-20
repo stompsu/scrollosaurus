@@ -1,0 +1,108 @@
+{
+  "slug": "baryonyx",
+  "scientificName": "Baryonyx walkeri",
+  "genus": "Baryonyx",
+  "nameMeaning": {
+    "text": {
+      "en": "heavy claw"
+    },
+    "sourceIds": ["nhm-baryonyx"]
+  },
+  "group": "spinosauridae",
+  "groupSourceIds": ["nhm-baryonyx", "pbdb-baryonyx"],
+  "isDinosaur": true,
+  "taxonomy": {
+    "status": "valid"
+  },
+  "diet": {
+    "value": "carnivore",
+    "confidence": "established",
+    "sourceIds": ["nhm-baryonyx"],
+    "note": "Ate fish and also Iguanodon; it probably caught fish at riverbanks or in shallow water and also scavenged."
+  },
+  "timeRange": {
+    "startMa": 125.77,
+    "endMa": 121.4,
+    "sourceIds": ["pbdb-baryonyx-walkeri-occs"],
+    "note": "Barremian, from PBDB occurrence ages for B. walkeri in the Upper Weald Clay of Surrey, England (stage-level dates)."
+  },
+  "periods": ["cretaceous"],
+  "size": {
+    "lengthM": {
+      "value": [10, 10],
+      "sourceIds": ["nhm-baryonyx"],
+      "note": "Museum figure."
+    },
+    "massKg": {
+      "value": [2000, 2000],
+      "sourceIds": ["nhm-baryonyx"],
+      "note": "Museum figure."
+    }
+  },
+  "locations": [
+    {
+      "continent": "europe",
+      "countryCode": "GB",
+      "formation": "Weald Clay",
+      "sourceIds": ["pbdb-baryonyx-walkeri-occs", "charig-milner-1986"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "Charig & Milner",
+    "year": 1986,
+    "sourceIds": ["charig-milner-1986", "pbdb-baryonyx"]
+  },
+  "summary": {
+    "en": "Baryonyx was a large meat-eating dinosaur from the Early Cretaceous of southern England, about 125 million years ago. It had a long, narrow snout like a crocodile's and a huge curved claw, probably on its thumb. It likely waded into shallow water or crouched on riverbanks to catch fish, but it also ate Iguanodon. Its well-preserved skeleton was dug out of a clay pit in Surrey in 1983."
+  },
+  "funFacts": [
+    {
+      "text": {
+        "en": "Baryonyx was discovered when a claw bone about 30 cm long turned up in a Surrey clay pit in January 1983. The rest of the skeleton was dug up the following month."
+      },
+      "sourceIds": ["charig-milner-1986"]
+    }
+  ],
+  "famous": false,
+  "images": [],
+  "uncertain": [
+    {
+      "field": "locations",
+      "note": "Only the English type material is listed. The museum source also lists Spain for the genus, but no Spanish fossil referred to B. walkeri was verified for this record."
+    }
+  ],
+  "sources": [
+    {
+      "id": "charig-milner-1986",
+      "title": "Baryonyx, a remarkable new theropod dinosaur",
+      "authors": "Charig A.J., Milner A.C.",
+      "year": 1986,
+      "publisher": "Nature",
+      "doi": "10.1038/324359a0",
+      "url": "https://doi.org/10.1038/324359a0",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "nhm-baryonyx",
+      "title": "Baryonyx | Dino Directory",
+      "publisher": "Natural History Museum, London",
+      "url": "https://www.nhm.ac.uk/discover/dino-directory/baryonyx.html",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-baryonyx",
+      "title": "Baryonyx (taxon 58891)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=58891",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-baryonyx-walkeri-occs",
+      "title": "Baryonyx walkeri occurrences (taxon 53370)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Baryonyx%20walkeri&show=strat,loc",
+      "accessed": "2026-11-20"
+    }
+  ],
+  "lastReviewed": "2026-11-20"
+}
