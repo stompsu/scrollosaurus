@@ -1,6 +1,7 @@
 /**
  * Minimal static server that mimics GitHub Pages for e2e tests: serves dist/ under BASE_PATH,
- * resolves directories to index.html, and answers unknown paths with 404.html and status 404.
+ * redirects directories without a trailing slash (301, as Pages does), resolves directories to
+ * index.html, and answers unknown paths with 404.html and status 404.
  * Unlike `vite preview`, it has no SPA fallback, so missing per-route HTML shows up as a 404.
  */
 import { createReadStream } from 'node:fs';
@@ -24,17 +25,26 @@ const TYPES: Record<string, string> = {
   '.woff2': 'font/woff2',
 };
 
-async function resolveFile(urlPath: string): Promise<string | null> {
+type Resolved = { kind: 'file'; path: string } | { kind: 'redirect'; location: string } | null;
+
+async function resolve(urlPath: string): Promise<Resolved> {
+  // Pages redirects /scrollosaurus to /scrollosaurus/.
+  if (`${urlPath}/` === BASE) return { kind: 'redirect', location: BASE };
   if (!urlPath.startsWith(BASE)) return null;
   const rel = normalize(decodeURIComponent(urlPath.slice(BASE.length)));
   if (rel.startsWith('..')) return null;
   const candidate = join(DIST, rel);
   try {
     const s = await stat(candidate);
-    if (s.isFile()) return candidate;
+    if (s.isFile()) return { kind: 'file', path: candidate };
     if (s.isDirectory()) {
       const index = join(candidate, 'index.html');
-      if ((await stat(index)).isFile()) return index;
+      if ((await stat(index)).isFile()) {
+        // Pages answers /about with a 301 to /about/ before serving about/index.html.
+        return urlPath.endsWith('/')
+          ? { kind: 'file', path: index }
+          : { kind: 'redirect', location: `${urlPath}/` };
+      }
     }
   } catch {
     // Not found.
@@ -44,14 +54,13 @@ async function resolveFile(urlPath: string): Promise<string | null> {
 
 createServer((req, res) => {
   const urlPath = new URL(req.url ?? '/', 'http://localhost').pathname;
-  // Pages redirects /scrollosaurus to /scrollosaurus/.
-  if (`${urlPath}/` === BASE) {
-    res.writeHead(301, { Location: BASE }).end();
-    return;
-  }
-  void resolveFile(urlPath).then((file) => {
-    const path = file ?? join(DIST, '404.html');
-    res.writeHead(file ? 200 : 404, {
+  void resolve(urlPath).then((found) => {
+    if (found?.kind === 'redirect') {
+      res.writeHead(301, { Location: found.location }).end();
+      return;
+    }
+    const path = found?.path ?? join(DIST, '404.html');
+    res.writeHead(found ? 200 : 404, {
       'Content-Type': TYPES[extname(path)] ?? 'application/octet-stream',
     });
     createReadStream(path).pipe(res);

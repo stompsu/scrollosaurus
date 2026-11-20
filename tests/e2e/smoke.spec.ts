@@ -57,6 +57,13 @@ for (const { path, title } of pages) {
   });
 }
 
+test('a route without a trailing slash redirects like GitHub Pages', async ({ page }) => {
+  const response = await page.goto('about');
+  expect(response?.request().redirectedFrom()?.url()).toMatch(/\/about$/);
+  await expect(page).toHaveURL(/\/about\/$/);
+  await expect(page.getByRole('heading', { level: 1, name: 'About' })).toBeVisible();
+});
+
 test('unknown paths return 404 and render an accessible not-found page', async ({ page }) => {
   const response = await page.goto('no-such-page');
   expect(response?.status()).toBe(404);
