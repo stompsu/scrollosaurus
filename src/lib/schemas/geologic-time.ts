@@ -77,7 +77,9 @@ export const geologicTimeSchema = z
       }
     }
 
-    // Siblings must tile their parent with no gaps or overlaps.
+    // Siblings must tile their parent with no gaps or overlaps. Exact equality is intentional:
+    // shared boundaries are copied as identical literals from the ICS chart, so an epsilon would
+    // only hide typos such as 201.4 vs 201.40001.
     for (const parent of data.units) {
       const children = data.units
         .filter((u) => u.parent === parent.id)

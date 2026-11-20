@@ -1,7 +1,7 @@
 import { defineConfig, devices } from '@playwright/test';
 
 const PORT = 4173;
-const BASE_PATH = '/scrollosaurus/';
+const BASE_PATH = process.env.BASE_PATH ?? '/scrollosaurus/';
 
 export default defineConfig({
   testDir: 'tests/e2e',
@@ -17,10 +17,11 @@ export default defineConfig({
     { name: 'desktop', use: { ...devices['Desktop Chrome'] } },
     { name: 'mobile', use: { ...devices['Pixel 7'] } },
   ],
-  // Tests the real static output, including per-route HTML files.
+  // Builds the real static output and serves it the way GitHub Pages does (no SPA fallback).
   webServer: {
-    command: `pnpm build && pnpm preview --port ${PORT} --strictPort`,
+    command: `pnpm build && tsx scripts/serve-pages.ts`,
     url: `http://localhost:${PORT}${BASE_PATH}`,
+    env: { PORT: String(PORT), BASE_PATH },
     reuseExistingServer: !process.env.CI,
     timeout: 120_000,
   },
