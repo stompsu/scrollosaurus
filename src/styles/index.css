@@ -1,0 +1,59 @@
+@import 'tailwindcss';
+
+/*
+ * Design tokens. Phase 0 placeholders; ui-designer refines them in Phase 5.
+ * Source values use the --sc-* prefix; @theme maps them to Tailwind names (bg-surface,
+ * text-accent, font-display…). Documented in docs/design/tokens.md. Dark "deep time" is the default.
+ */
+:root {
+  color-scheme: dark;
+  --sc-bg: #12100e;
+  --sc-surface: #1d1a17;
+  --sc-text: #f3ede4;
+  --sc-text-muted: #b9afa2;
+  --sc-accent: #e0a458;
+  --sc-focus: #ffd27a;
+
+  /* Period band fills; text on them uses --sc-on-band (6.99–7.63:1, see tokens.md). */
+  --sc-triassic: #8c3f1c;
+  --sc-jurassic: #1e5b4f;
+  --sc-cretaceous: #7d3a53;
+  --sc-on-band: #fdf8f0;
+
+  --sc-font-display: ui-serif, Georgia, 'Times New Roman', serif;
+  --sc-font-body: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+
+@theme inline {
+  --color-bg: var(--sc-bg);
+  --color-surface: var(--sc-surface);
+  --color-text: var(--sc-text);
+  --color-text-muted: var(--sc-text-muted);
+  --color-accent: var(--sc-accent);
+  --color-on-band: var(--sc-on-band);
+  --font-display: var(--sc-font-display);
+  --font-body: var(--sc-font-body);
+}
+
+html,
+body {
+  background: var(--sc-bg);
+  color: var(--sc-text);
+  font-family: var(--sc-font-body);
+}
+
+:focus-visible {
+  outline: 3px solid var(--sc-focus);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "chart": {
+    "name": "International Chronostratigraphic Chart",
+    "publisher": "International Commission on Stratigraphy",
+    "version": "v2024/12",
+    "url": "https://stratigraphy.org/chart",
+    "citation": "Cohen K, Harper D, Gibbard P, Car N. The ICS international chronostratigraphic chart this decade. Episodes 2025;48:105-115. https://doi.org/10.18814/epiiugs/2025/025001",
+    "license": "CC BY 4.0",
+    "accessed": "2026-11-20"
+  },
+  "units": [
+    {
+      "id": "mesozoic",
+      "name": "Mesozoic",
+      "rank": "era",
+      "baseMa": 251.902,
+      "baseUncertaintyMa": 0.024,
+      "topMa": 66.0
+    },
+    {
+      "id": "triassic",
+      "name": "Triassic",
+      "rank": "period",
+      "parent": "mesozoic",
+      "baseMa": 251.902,
+      "baseUncertaintyMa": 0.024,
+      "topMa": 201.4,
+      "topUncertaintyMa": 0.2
+    },
+    {
+      "id": "jurassic",
+      "name": "Jurassic",
+      "rank": "period",
+      "parent": "mesozoic",
+      "baseMa": 201.4,
+      "baseUncertaintyMa": 0.2,
+      "topMa": 143.1,
+      "topUncertaintyMa": 0.6
+    },
+    {
+      "id": "cretaceous",
+      "name": "Cretaceous",
+      "rank": "period",
+      "parent": "mesozoic",
+      "baseMa": 143.1,
+      "baseUncertaintyMa": 0.6,
+      "topMa": 66.0
+    }
+  ]
+}
