@@ -58,7 +58,11 @@ Feature folders under `src/features/{timeline,species,filters}`, shared primitiv
 ### 4. Data loading
 
 - Geologic time (`data/geologic-time.json`, with ICS chart version recorded) and a lightweight species index load up front.
-- Per-period species bundles and detail data are lazy-loaded; images load lazily with placeholders.
+- The species index is **generated at build time** (`scripts/build-data.ts`, after validation, into a gitignored `src/generated/`). Per species it holds only what the timeline, filters and search need: slug, name, group and its ancestors, `isDinosaur`, diet, time range, periods, derived size class, continents, `famous`, thumbnail. The search index is built in the same step. (Decided in Phase 1 after the schema review, implemented in Phase 2 when the timeline first reads species.)
+- Full species records are **not** bundled eagerly: a non-eager `import.meta.glob('/data/species/*.json')` gives each record its own chunk, fetched when its detail view opens. An eager glob of 100+ records would spend most of the JS budget on JSON.
+- Size class is derived at build time from `size.massKg` (falling back to `lengthM`) with thresholds in `data/site.json`; it is never stored per species, because it would be an unsourced fact.
+- The browser never runs Zod: data is validated by `pnpm validate:data` before every build.
+- Images load lazily with placeholders.
 - Initial JS budget: ≤ 200 KB gzipped.
 
 ### 5. Privacy
