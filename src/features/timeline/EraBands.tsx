@@ -2,9 +2,9 @@ import type { CSSProperties } from 'react';
 import { durationMa, formatMa, unitsByRank } from '@/lib/geologic-time';
 
 const BAND_COLOR: Record<string, string> = {
-  triassic: 'var(--color-triassic)',
-  jurassic: 'var(--color-jurassic)',
-  cretaceous: 'var(--color-cretaceous)',
+  triassic: 'var(--sc-triassic)',
+  jurassic: 'var(--sc-jurassic)',
+  cretaceous: 'var(--sc-cretaceous)',
 };
 
 /**
@@ -17,6 +17,8 @@ export function EraBands() {
 
   return (
     <ol
+      // Tailwind's preflight removes list styling, which makes Safari/VoiceOver drop the list role.
+      role="list"
       aria-label="Periods of the Mesozoic era, oldest first"
       className="flex min-h-[70vh] w-full flex-col overflow-hidden rounded-lg md:min-h-[50vh] md:flex-row"
     >
@@ -24,7 +26,7 @@ export function EraBands() {
         const style: CSSProperties = {
           flexGrow: durationMa(period) / total,
           flexBasis: 0,
-          backgroundColor: BAND_COLOR[period.id] ?? 'var(--color-surface)',
+          backgroundColor: BAND_COLOR[period.id] ?? 'var(--sc-surface)',
         };
         return (
           <li

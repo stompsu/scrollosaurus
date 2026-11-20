@@ -1,6 +1,7 @@
 export default function AboutPage() {
   return (
     <article className="flex max-w-prose flex-col gap-4">
+      <title>About · Scrollosaurus</title>
       <h1 className="font-display text-3xl">About</h1>
       <p>
         Scrollosaurus places dinosaurs on a timeline of the Mesozoic by the first and last time they

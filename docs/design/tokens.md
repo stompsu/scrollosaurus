@@ -2,27 +2,27 @@
 
 > Phase 0 placeholders. `ui-designer` owns this file and refines the palette, typography and light mode in Phase 5.
 
-Tokens are CSS custom properties on `:root` in `src/styles/index.css`, exposed to Tailwind through `@theme inline` (e.g. `bg-surface`, `text-accent`, `font-display`). Dark "deep time" is the default.
+Tokens are CSS custom properties on `:root` in `src/styles/index.css` with an `--sc-` prefix, mapped to Tailwind names through `@theme inline` (e.g. `bg-surface`, `text-accent`, `font-display`). Distinct names avoid a self-referencing variable in Tailwind's theme layer. Dark "deep time" is the default.
 
 ## Colour
 
-| Token                | Value     | Use                  |
-| -------------------- | --------- | -------------------- |
-| `--color-bg`         | `#12100e` | Page background      |
-| `--color-surface`    | `#1d1a17` | Cards, panels        |
-| `--color-text`       | `#f3ede4` | Body text            |
-| `--color-text-muted` | `#b9afa2` | Secondary text       |
-| `--color-accent`     | `#e0a458` | Links, active nav    |
-| `--color-focus`      | `#ffd27a` | Focus outline (3 px) |
-| `--color-on-band`    | `#fdf8f0` | Text on period bands |
+| Token             | Value     | Use                  |
+| ----------------- | --------- | -------------------- |
+| `--sc-bg`         | `#12100e` | Page background      |
+| `--sc-surface`    | `#1d1a17` | Cards, panels        |
+| `--sc-text`       | `#f3ede4` | Body text            |
+| `--sc-text-muted` | `#b9afa2` | Secondary text       |
+| `--sc-accent`     | `#e0a458` | Links, active nav    |
+| `--sc-focus`      | `#ffd27a` | Focus outline (3 px) |
+| `--sc-on-band`    | `#fdf8f0` | Text on period bands |
 
 ### Period bands
 
-| Token                | Value     | Direction from the brief    | Contrast with `--color-on-band` |
-| -------------------- | --------- | --------------------------- | ------------------------------- |
-| `--color-triassic`   | `#8c3f1c` | Arid ochre / red            | 6.99:1 (AA)                     |
-| `--color-jurassic`   | `#1e5b4f` | Fern green / teal           | 7.45:1 (AAA)                    |
-| `--color-cretaceous` | `#7d3a53` | Warm floral (ash near K–Pg) | 7.63:1 (AAA)                    |
+| Token             | Value     | Direction from the brief    | Contrast with `--sc-on-band` |
+| ----------------- | --------- | --------------------------- | ---------------------------- |
+| `--sc-triassic`   | `#8c3f1c` | Arid ochre / red            | 6.99:1 (AA)                  |
+| `--sc-jurassic`   | `#1e5b4f` | Fern green / teal           | 7.45:1 (AAA)                 |
+| `--sc-cretaceous` | `#7d3a53` | Warm floral (ash near K–Pg) | 7.63:1 (AAA)                 |
 
 Text contrast is checked by axe in the Playwright suite.
 
