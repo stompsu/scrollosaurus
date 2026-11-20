@@ -192,7 +192,11 @@ export const speciesSchema = z
     for (const [field, list] of cited) {
       for (const sid of list ?? []) {
         if (!ids.has(sid)) {
-          ctx.addIssue({ code: 'custom', message: `${field} cites unknown source "${sid}"` });
+          ctx.addIssue({
+            code: 'custom',
+            path: field.split('.'),
+            message: `${field} cites unknown source "${sid}"`,
+          });
         }
       }
     }
