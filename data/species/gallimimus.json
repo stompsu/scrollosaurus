@@ -53,7 +53,10 @@
     "sourceIds": ["pbdb-taxon", "nhm"]
   },
   "summary": {
-    "en": "Gallimimus was an 'ostrich dinosaur' from Mongolia, living near the very end of the Age of Dinosaurs. About 6 metres long, it was a fast runner with a toothless beak. Its name means 'chicken mimic' because its neck bones resemble a chicken's. Nobody is sure what it ate: plants, small animals, or food strained from water."
+    "text": {
+      "en": "Gallimimus was an 'ostrich dinosaur' from Mongolia, living near the very end of the Age of Dinosaurs. About 6 metres long, it was a fast runner with a toothless beak. Its name means 'chicken mimic' because its neck bones resemble a chicken's. Scientists still debate what it ate: plants, small animals, food strained from water, or a mix."
+    },
+    "sourceIds": ["nhm", "pbdb-occs", "zanno-makovicky-2011", "norell-2001"]
   },
   "funFacts": [
     {

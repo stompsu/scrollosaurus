@@ -22,7 +22,7 @@
   "timeRange": {
     "startMa": 72.2,
     "endMa": 66.0,
-    "sourceIds": ["pbdb-occs", "pol-2024"],
+    "sourceIds": ["pbdb-occs", "pol-2024", "mazzetta-2004"],
     "note": "Pol et al. 2024 and PBDB date the La Colonia Formation to the Maastrichtian; the Ma values are the ICS v2024/12 Maastrichtian stage boundaries. Older work gave Campanian-Maastrichtian (Mazzetta et al. 2004). NHM gives 71-69 Ma."
   },
   "periods": ["cretaceous"],
@@ -52,7 +52,10 @@
     "sourceIds": ["pbdb-taxon", "nhm"]
   },
   "summary": {
-    "en": "Carnotaurus was a meat-eating dinosaur from Patagonia, Argentina, living near the end of the Cretaceous. About 8 metres long, it had two horns on top of its head, an unusually short snout and tiny arms that were almost useless. Skin impressions show it was covered in scales. Nobody is sure what the horns were for: fighting rivals, attacking prey or showing off."
+    "text": {
+      "en": "Carnotaurus was a meat-eating dinosaur from Patagonia, Argentina, living near the end of the Cretaceous. About 8 metres long, it had two horns on top of its head, an unusually short snout and tiny arms that were probably not very useful. Skin impressions show scales over much of its body. Nobody is sure what the horns were for: fighting rivals, attacking prey or attracting a mate."
+    },
+    "sourceIds": ["nhm", "pbdb-occs"]
   },
   "funFacts": [
     {

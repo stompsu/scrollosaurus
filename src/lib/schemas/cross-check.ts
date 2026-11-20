@@ -1,7 +1,7 @@
 import type { GeologicTime } from './geologic-time';
 import type { Groups } from './groups';
 import type { Site } from './site';
-import { PERIOD_IDS, type PeriodId, type Species } from './species';
+import { PERIOD_IDS, citations, type PeriodId, type Species } from './species';
 
 export interface SpeciesFile {
   /** File name without extension; must equal the slug. */
@@ -90,19 +90,10 @@ export function crossCheck({
         warnings.push(`${at}: size.${key} is empty but not listed in uncertain`);
       }
     }
-    const cited = new Set(
-      [
-        s.timeRange.sourceIds,
-        s.diet.sourceIds,
-        s.discovery.sourceIds,
-        s.taxonomy.sourceIds ?? [],
-        s.nameMeaning.sourceIds,
-        s.groupSourceIds,
-        ...s.locations.map((l) => l.sourceIds),
-        ...[s.size.lengthM, s.size.massKg, s.size.heightM].map((m) => m?.sourceIds ?? []),
-        ...(s.funFacts ?? []).map((f) => f.sourceIds),
-      ].flat(),
-    );
+    if (s.diet.confidence === 'debated' && !flagged.has('diet')) {
+      warnings.push(`${at}: diet is debated but not listed in uncertain`);
+    }
+    const cited = new Set(citations(s).flatMap(([, ids]) => ids));
     const uncited = s.sources.filter((src) => !cited.has(src.id)).map((src) => src.id);
     if (uncited.length > 0) {
       warnings.push(`${at}: sources not cited by any field: ${uncited.join(', ')}`);
@@ -110,7 +101,7 @@ export function crossCheck({
 
     const texts = [
       s.nameMeaning.text,
-      s.summary,
+      s.summary.text,
       ...(s.funFacts ?? []).map((f) => f.text),
       ...s.images.map((img) => img.alt),
     ];

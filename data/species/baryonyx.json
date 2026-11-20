@@ -53,14 +53,17 @@
     "sourceIds": ["charig-milner-1986", "pbdb-baryonyx"]
   },
   "summary": {
-    "en": "Baryonyx was a large meat-eating dinosaur from the Early Cretaceous of southern England, about 125 million years ago. It had a long, narrow snout like a crocodile's and a huge curved claw, probably on its thumb. It likely waded into shallow water or crouched on riverbanks to catch fish, but it also ate Iguanodon. Its well-preserved skeleton was dug out of a clay pit in Surrey in 1983."
+    "text": {
+      "en": "Baryonyx was a large meat-eating dinosaur from the Early Cretaceous of southern England, about 125 million years ago. Its mouth was shaped much like a crocodile's, and it had a huge claw, probably on its thumb. It may have crouched on riverbanks or waded into shallow water to hook fish, and it also ate Iguanodon. Its skeleton was dug out of a clay pit in Surrey after a fossil hunter found its claw in 1983."
+    },
+    "sourceIds": ["nhm-baryonyx", "nhm-baryonyx-spinosaurs", "pbdb-baryonyx-walkeri-occs"]
   },
   "funFacts": [
     {
       "text": {
-        "en": "Baryonyx was discovered when a claw bone about 30 cm long turned up in a Surrey clay pit in January 1983. The rest of the skeleton was dug up the following month."
+        "en": "Baryonyx was discovered when a fossil hunter found a claw, 31 cm along its outer curve, in a Surrey clay pit in January 1983. The rest of the skeleton was dug up between May and June that year."
       },
-      "sourceIds": ["charig-milner-1986"]
+      "sourceIds": ["nhm-baryonyx-spinosaurs"]
     }
   ],
   "famous": false,
@@ -101,6 +104,15 @@
       "title": "Baryonyx walkeri occurrences (taxon 53370)",
       "publisher": "The Paleobiology Database",
       "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Baryonyx%20walkeri&show=strat,loc",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "nhm-baryonyx-spinosaurs",
+      "title": "How did Baryonyx change what we knew about spinosaurs?",
+      "authors": "Osterloff, E.",
+      "year": 2019,
+      "publisher": "Natural History Museum, London",
+      "url": "https://www.nhm.ac.uk/discover/how-did-baryonyx-change-what-we-knew-about-spinosaurs.html",
       "accessed": "2026-11-20"
     }
   ],

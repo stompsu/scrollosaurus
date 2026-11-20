@@ -37,6 +37,7 @@ is missing. Scientific names are never translated.
    | `size.lengthM`, `massKg`, `heightM`     | each value's `sourceIds`               |
    | each `locations[]` entry                | its own `sourceIds`                    |
    | `discovery` (author, year)              | `discovery.sourceIds`                  |
+   | `summary` (every claim in it)           | `summary.sourceIds`                    |
    | each `funFacts[]` entry                 | its own `sourceIds`                    |
 
 4. **Numbers.**
@@ -54,8 +55,11 @@ is missing. Scientific names are never translated.
    Use `diet.confidence: "debated"` (with a note) for contested diets, and
    `taxonomy.status: "dubious"` or `"contested"` for doubtful genera.
 7. **Non-dinosaurs** (pterosaurs, marine reptiles): `isDinosaur: false`, and a non-dinosaur group.
-8. **Text.** `summary` is at most 80 words for a curious teenager. Fun facts are optional and
-   sourced.
+8. **Text.** `summary.text` is at most 80 words for a curious teenager, and every claim in it must
+   be supported by `summary.sourceIds`; a claim no verified source supports is removed, not kept.
+   Fun facts are optional and sourced. A note that names a study ("Qiu et al. 2025") cites it in
+   the same field's `sourceIds`. `discovery.describedBy` holds surnames joined with " & "; naming
+   history goes in `discovery.note`.
 9. **Images.** List only the Commons file, its kind and alt text. Credits are fetched from Commons in
    Phase 4; never type them by hand.
 10. **Set `lastReviewed`** to today and run `pnpm validate:data`. It prints errors, warnings and

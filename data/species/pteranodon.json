@@ -43,12 +43,15 @@
     }
   ],
   "discovery": {
-    "describedBy": "Othniel Charles Marsh",
+    "describedBy": "Marsh",
     "year": 1876,
     "sourceIds": ["pbdb-taxon"]
   },
   "summary": {
-    "en": "Pteranodon was a flying reptile, not a dinosaur. It belonged to the pterosaurs, cousins of the dinosaurs. It had long wings, a toothless beak and a backward-pointing crest. It flew over the shallow sea that covered central North America in the Late Cretaceous, and its fossils are common in the chalk of Kansas."
+    "text": {
+      "en": "Pteranodon was a flying reptile called a pterosaur, neither a dinosaur nor a bird. It had no teeth, and museum models give it wings about 5.5 metres (18 feet) across. It was common in North America in the Late Cretaceous, and its fossils come from Kansas, South Dakota and Wyoming. It probably ate fish."
+    },
+    "sourceIds": ["field-museum-2018", "pbdb-occurrences", "pbdb-taxon"]
   },
   "famous": true,
   "images": [],

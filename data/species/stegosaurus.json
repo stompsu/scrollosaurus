@@ -49,10 +49,19 @@
   "discovery": {
     "describedBy": "Marsh",
     "year": 1887,
-    "sourceIds": ["maidment-2015", "pbdb-stegosaurus-stenops-occs"]
+    "note": "Marsh named the genus Stegosaurus in 1877 and the species S. stenops in 1887.",
+    "sourceIds": [
+      "maidment-2015",
+      "pbdb-stegosaurus-stenops-occs",
+      "nhm-stegosaurus",
+      "pbdb-stegosaurus"
+    ]
   },
   "summary": {
-    "en": "Stegosaurus was a large, slow plant-eater from the Late Jurassic of western North America, about 150 million years ago. Two rows of tall bony plates ran along its back, and its tail ended in spikes that probably helped fight off predators such as Allosaurus. Its head was tiny for its body. Nobody is sure what the plates were for: ideas include defence, display and controlling body temperature."
+    "text": {
+      "en": "Stegosaurus was a large, slow plant eater from the Late Jurassic of western North America, about 150 million years ago. Tall bony plates stood upright along its back, and its spiked tail helped it fight off predators such as Allosaurus. Its head was small for its body. Nobody is sure what the plates were for: ideas include warning off predators, recognising each other and controlling body temperature."
+    },
+    "sourceIds": ["nhm-stegosaurus", "maidment-2015"]
   },
   "funFacts": [
     {

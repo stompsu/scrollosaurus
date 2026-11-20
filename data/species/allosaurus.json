@@ -54,7 +54,10 @@
     "sourceIds": ["pbdb-taxon", "chure-loewen-2020"]
   },
   "summary": {
-    "en": "Allosaurus was a large predator of Late Jurassic North America, about 155 to 143 million years ago. It walked on two legs, had three-fingered hands, serrated teeth and small horns above its eyes. It hunted large plant eaters such as Stegosaurus. Many skeletons have been found together, but whether it hunted in packs, fought each other, or both, is still unknown."
+    "text": {
+      "en": "Allosaurus was a large predator of Late Jurassic North America, about 155 to 143 million years ago. It walked on two legs and had three-fingered hands, serrated teeth and small horns above its eyes. It hunted plant eaters such as Stegosaurus. Several skeletons have been found together in bone beds, which hints at pack hunting, but this is unconfirmed. Possible bite marks from other Allosaurus suggest they also fought each other."
+    },
+    "sourceIds": ["nhm", "pbdb-occs"]
   },
   "funFacts": [
     {

@@ -53,7 +53,10 @@
     "sourceIds": ["pbdb-taxon", "nhm"]
   },
   "summary": {
-    "en": "Therizinosaurus was a giant, two-legged plant eater from Mongolia, living near the end of the Cretaceous. It belonged to the same big group as meat-eaters like Tyrannosaurus, yet it probably ate plants. Its hands carried enormous claws, possibly used to pull branches closer. It is known only from arm, leg and rib bones, so its full shape and size are partly guesswork."
+    "text": {
+      "en": "Therizinosaurus was a giant, two-legged plant eater from Mongolia, living about 70 million years ago, near the end of the Cretaceous. It was a theropod, a group made up mostly of meat-eaters, yet it probably ate plants. Its hands carried enormous claws, possibly used to pull branches closer. It is known only from arm, leg and rib bones, so its full shape and size are partly guesswork."
+    },
+    "sourceIds": ["nhm", "zanno-makovicky-2011"]
   },
   "funFacts": [
     {

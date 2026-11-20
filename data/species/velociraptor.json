@@ -52,7 +52,10 @@
     "sourceIds": ["pbdb-taxon", "nhm"]
   },
   "summary": {
-    "en": "Velociraptor was a small predator from Mongolia, living about 84 to 72 million years ago. It was only about 1.8 metres long, around half the size of the version in the Jurassic Park films. Bumps on its arm bones show where large feathers were attached, so it looked more like a fierce bird than a scaly lizard."
+    "text": {
+      "en": "Velociraptor was a small predator from Mongolia, living about 84 to 72 million years ago. It was only about 1.8 metres long; the Jurassic Park films showed it at twice its real size. Bumps on its arm bones show where large feathers were attached, so it had feathers even though it could not fly."
+    },
+    "sourceIds": ["nhm", "pbdb-occs", "turner-2007"]
   },
   "funFacts": [
     {

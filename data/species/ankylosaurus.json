@@ -59,12 +59,15 @@
     }
   ],
   "discovery": {
-    "describedBy": "Barnum Brown",
+    "describedBy": "Brown",
     "year": 1908,
     "sourceIds": ["pbdb-taxon", "nhm-ankylosaurus"]
   },
   "summary": {
-    "en": "Ankylosaurus was a low, wide plant-eater covered in bony armour plates, with a heavy club at the end of its tail. It lived in western North America at the very end of the Cretaceous, alongside Tyrannosaurus and Triceratops. Although it is famous, it is known only from incomplete skeletons, so palaeontologists still estimate its full size from its relatives."
+    "text": {
+      "en": "Ankylosaurus was a plant-eater covered in bony armour plates, with a heavy club at the end of its tail that it probably swung from side to side to defend itself. It lived in western North America at the very end of the Cretaceous, about 68 to 66 million years ago. No complete skeleton has been found, and it is known from more fragmentary remains than some of its smaller relatives."
+    },
+    "sourceIds": ["nhm-ankylosaurus", "pbdb-occurrences", "arbour-mallon-2017"]
   },
   "famous": true,
   "images": [],

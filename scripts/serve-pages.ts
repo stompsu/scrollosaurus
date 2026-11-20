@@ -27,9 +27,9 @@ const TYPES: Record<string, string> = {
 
 type Resolved = { kind: 'file'; path: string } | { kind: 'redirect'; location: string } | null;
 
-async function resolve(urlPath: string): Promise<Resolved> {
+async function resolve(urlPath: string, search: string): Promise<Resolved> {
   // Pages redirects /scrollosaurus to /scrollosaurus/.
-  if (`${urlPath}/` === BASE) return { kind: 'redirect', location: BASE };
+  if (`${urlPath}/` === BASE) return { kind: 'redirect', location: `${BASE}${search}` };
   if (!urlPath.startsWith(BASE)) return null;
   const rel = normalize(decodeURIComponent(urlPath.slice(BASE.length)));
   if (rel.startsWith('..')) return null;
@@ -43,7 +43,7 @@ async function resolve(urlPath: string): Promise<Resolved> {
         // Pages answers /about with a 301 to /about/ before serving about/index.html.
         return urlPath.endsWith('/')
           ? { kind: 'file', path: index }
-          : { kind: 'redirect', location: `${urlPath}/` };
+          : { kind: 'redirect', location: `${urlPath}/${search}` };
       }
     }
   } catch {
@@ -53,8 +53,8 @@ async function resolve(urlPath: string): Promise<Resolved> {
 }
 
 createServer((req, res) => {
-  const urlPath = new URL(req.url ?? '/', 'http://localhost').pathname;
-  void resolve(urlPath).then((found) => {
+  const { pathname: urlPath, search } = new URL(req.url ?? '/', 'http://localhost');
+  void resolve(urlPath, search).then((found) => {
     if (found?.kind === 'redirect') {
       res.writeHead(301, { Location: found.location }).end();
       return;

@@ -28,7 +28,8 @@ export const sourceSchema = z
       .string()
       .regex(/^10\.\d{4,9}\/\S+$/, 'DOI without the https://doi.org/ prefix')
       .optional(),
-    url: z.url(),
+    // http(s) only: these become links in the UI.
+    url: z.url({ protocol: /^https?$/ }),
     accessed: z.iso.date(),
   })
   .strict();

@@ -18,7 +18,7 @@
     "value": "insectivore",
     "confidence": "probable",
     "sourceIds": ["nhm", "leedham-2026", "choiniere-2021"],
-    "note": "An inference from anatomy, not from gut contents. Alvarezsauroids have tiny teeth, slender jaws and short, strong arms suited to digging, consistent with eating insects such as termites (Leedham et al. 2026; NHM). Choiniere et al. 2021 found Shuvuuia's eyes and ears suited to hunting at night. PBDB lists it simply as a carnivore."
+    "note": "An inference from anatomy, not from gut contents. Alvarezsauroids have short, strong forelimbs suited to digging, consistent with eating insects such as ants and termites (Leedham et al. 2026; NHM). Choiniere et al. 2021 found Shuvuuia's eyes and ears suited to hunting at night. PBDB lists it simply as a carnivore."
   },
   "timeRange": {
     "startMa": 83.6,
@@ -48,7 +48,10 @@
     "sourceIds": ["pbdb-taxon", "nhm"]
   },
   "summary": {
-    "en": "Shuvuuia was a tiny, bird-like dinosaur from the deserts of Mongolia, about 60 centimetres long, living roughly 84 to 72 million years ago. Its relatives had tiny teeth and short, strong arms suited to digging, so scientists think it ate insects such as termites. Its eyes and ears suggest it hunted at night."
+    "text": {
+      "en": "Shuvuuia was a tiny desert dinosaur from Mongolia, about 60 centimetres long, living roughly 84 to 72 million years ago. Its name means 'bird'. Its relatives, the alvarezsauroids, had short, strong arms suited to digging, so scientists think it may have eaten insects such as termites. Its large eyes and owl-like ears suggest it hunted at night."
+    },
+    "sourceIds": ["nhm", "pbdb-occs", "leedham-2026", "choiniere-2021"]
   },
   "funFacts": [
     {

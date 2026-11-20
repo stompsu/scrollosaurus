@@ -49,7 +49,10 @@
     "sourceIds": ["pbdb-archaeopteryx"]
   },
   "summary": {
-    "en": "Archaeopteryx is the famous 'first bird' from the Late Jurassic of southern Germany, about 150 million years ago. About the size of a magpie, it had feathered wings like a bird but also teeth and a long bony tail like other small dinosaurs. Its fossils are preserved in fine limestone from a lagoon. Found in 1861, soon after Darwin published his theory of evolution, it became key evidence that birds evolved from dinosaurs."
+    "text": {
+      "en": "Archaeopteryx is a famous bird-like dinosaur from the Late Jurassic of southern Germany, about 149 to 145 million years ago. About the size of a magpie, it had broad feathered wings, but unlike modern birds it also had sharp teeth and a long bony tail. Its fossils come from limestone that formed in a lagoon. Found in 1861, two years after Darwin's On the Origin of Species, it seemed to support the idea that birds evolved from dinosaurs."
+    },
+    "sourceIds": ["nhm-archaeopteryx", "pbdb-archaeopteryx-lithographica-occs"]
   },
   "funFacts": [
     {

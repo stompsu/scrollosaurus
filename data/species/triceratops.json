@@ -53,12 +53,16 @@
     }
   ],
   "discovery": {
-    "describedBy": "Othniel Charles Marsh (as Ceratops horridus)",
+    "describedBy": "Marsh",
     "year": 1889,
+    "note": "Marsh first described the species as Ceratops horridus and moved it to his new genus Triceratops the same year.",
     "sourceIds": ["pbdb-taxon", "nhm-triceratops"]
   },
   "summary": {
-    "en": "Triceratops was a huge plant-eater with three horns and a wide bony frill around its neck. About nine metres long, it lived in western North America at the very end of the Cretaceous. It shared its world with Tyrannosaurus and lived right up to the mass extinction 66 million years ago."
+    "text": {
+      "en": "Triceratops was a huge plant eater with three horns, a parrot-like beak and a wide bony frill. About nine metres long, it lived in western North America about 68 to 66 million years ago, at the very end of the Cretaceous. It shared its world with Tyrannosaurus, and one fossil shows a horn that had been bitten off and later healed."
+    },
+    "sourceIds": ["nhm-triceratops", "pbdb-occurrences"]
   },
   "famous": true,
   "images": [],

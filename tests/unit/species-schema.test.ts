@@ -34,7 +34,7 @@ function species(overrides: Partial<Record<keyof Species, unknown>> = {}): Recor
     },
     locations: [{ continent: 'europe', countryCode: 'GB', sourceIds: ['src'] }],
     discovery: { describedBy: 'A. Author', year: 1900, sourceIds: ['src'] },
-    summary: { en: 'A test animal.' },
+    summary: { text: { en: 'A test animal.' }, sourceIds: ['src'] },
     famous: false,
     images: [],
     sources: [source],
@@ -112,13 +112,42 @@ describe('speciesSchema', () => {
   });
 
   it('rejects an English summary over 80 words', () => {
-    const m = messages(species({ summary: { en: Array(81).fill('word').join(' ') } }));
+    const m = messages(
+      species({ summary: { text: { en: Array(81).fill('word').join(' ') }, sourceIds: ['src'] } }),
+    );
     expect(m).toContainEqual(expect.stringMatching(/80 words/));
   });
 
   it('rejects a scientific name that does not start with the genus', () => {
     const m = messages(species({ scientificName: 'Otherus exemplaris' }));
     expect(m).toContainEqual(expect.stringMatching(/start with the genus/));
+  });
+
+  it('requires the summary to cite sources', () => {
+    expect(
+      messages(species({ summary: { text: { en: 'A test animal.' } } })).length,
+    ).toBeGreaterThan(0);
+  });
+
+  it.each(['javascript:alert(1)', 'mailto:a@example.org', 'ftp://example.org/x'])(
+    'rejects a source URL with scheme %s',
+    (url) => {
+      expect(messages(species({ sources: [{ ...source, url }] })).length).toBeGreaterThan(0);
+    },
+  );
+
+  it('rejects a genus that is only a prefix of the scientific name', () => {
+    const m = messages(species({ scientificName: 'Testosaurusx exemplaris' }));
+    expect(m).toContainEqual(expect.stringMatching(/start with the genus/));
+  });
+
+  it('keeps naming history out of describedBy', () => {
+    const m = messages(
+      species({
+        discovery: { describedBy: 'Gilmore (as Troodon)', year: 1931, sourceIds: ['src'] },
+      }),
+    );
+    expect(m).toContainEqual(expect.stringMatching(/discovery.note/));
   });
 
   it('rejects unknown fields', () => {
@@ -193,6 +222,13 @@ describe('crossCheck', () => {
     expect(flagged.warnings.filter((w) => w.includes('size.'))).toEqual([]);
   });
 
+  it('warns when a debated diet is not listed in uncertain', () => {
+    const r = check({
+      diet: { value: 'piscivore', confidence: 'debated', sourceIds: ['src'], note: 'Disputed' },
+    });
+    expect(r.warnings).toContainEqual(expect.stringMatching(/diet is debated/));
+  });
+
   it('warns about sources no field cites', () => {
     const extra = { ...source, id: 'unused' };
     expect(check({ sources: [source, extra] }).warnings).toContainEqual(
@@ -253,7 +289,15 @@ describe('groupsSchema', () => {
   });
 
   it('rejects a child whose isDinosaur differs from its parent', () => {
-    const r = groupsSchema.safeParse({ ...base, groups: [node('a'), node('b', 'a', false)] });
+    const r = groupsSchema.safeParse({
+      ...base,
+      groups: [node('dinosauria'), node('b', 'dinosauria', false)],
+    });
+    expect(r.success).toBe(false);
+  });
+
+  it('rejects a dinosaur root other than dinosauria', () => {
+    const r = groupsSchema.safeParse({ ...base, groups: [node('theropoda')] });
     expect(r.success).toBe(false);
   });
 

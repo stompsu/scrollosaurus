@@ -39,7 +39,7 @@
   "size": {
     "lengthM": {
       "value": [14, 15.55],
-      "sourceIds": ["sereno-2022", "henderson-2018"],
+      "sourceIds": ["sereno-2022", "henderson-2018", "ibrahim-2014"],
       "note": "Sereno et al. 2022 reconstruct an adult at just under 14 m; Henderson 2018 built a 15.55 m model following the Ibrahim et al. 2014 reconstruction, which those authors described as over 15 m long."
     },
     "massKg": {
@@ -68,7 +68,10 @@
     "sourceIds": ["pbdb-taxon", "nhm"]
   },
   "summary": {
-    "en": "Spinosaurus was one of the largest meat-eating dinosaurs, about 14 to 15 metres long, living in North Africa roughly 100 to 94 million years ago. It had a long, narrow snout with cone-shaped teeth for catching fish, and a tall sail on its back. Scientists still argue about how it lived: was it a swimmer that chased fish underwater, or a wader that stood in the shallows and ambushed them?"
+    "text": {
+      "en": "Spinosaurus was one of the longest meat-eating dinosaurs known, about 14 to 15 metres long, living in North Africa roughly 100 to 94 million years ago. It had a long, narrow snout with cone-shaped teeth for catching fish, and a tall sail on its back. Scientists still argue about how it lived: was it a swimmer that chased fish underwater, or a wader that stood in the shallows and ambushed them?"
+    },
+    "sourceIds": ["nhm", "sereno-2022", "henderson-2018", "ibrahim-2020", "pbdb-occs"]
   },
   "funFacts": [
     {

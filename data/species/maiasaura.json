@@ -47,12 +47,15 @@
     }
   ],
   "discovery": {
-    "describedBy": "John R. Horner and Robert Makela",
+    "describedBy": "Horner & Makela",
     "year": 1979,
     "sourceIds": ["pbdb-taxon", "horner-makela-1979"]
   },
   "summary": {
-    "en": "Maiasaura was a duck-billed plant-eater from Montana, USA, that lived during the Campanian, about 80–75 million years ago. Its name means 'good mother lizard' because it was found with nests and young, showing that some dinosaurs cared for their babies. It grew to around nine metres long."
+    "text": {
+      "en": "Maiasaura was a duck-billed plant-eater from Montana, USA, that lived during the Campanian, about 80 to 75 million years ago. Its name means 'good mother lizard'. It was found with nests of babies too young to walk well, whose worn teeth show they had been eating: the first evidence that some dinosaurs cared for their young. It grew to around nine metres long."
+    },
+    "sourceIds": ["nhm-maiasaura", "pbdb-occurrences", "serc-egg-mountain"]
   },
   "funFacts": [
     {
@@ -94,6 +97,15 @@
       "publisher": "Nature",
       "doi": "10.1038/282296a0",
       "url": "https://doi.org/10.1038/282296a0",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "serc-egg-mountain",
+      "title": "Paleontology - Egg Mountain",
+      "authors": "Freimuth, W.",
+      "year": 2018,
+      "publisher": "Science Education Resource Center, Carleton College (Montana Geoheritage Project)",
+      "url": "https://serc.carleton.edu/research_education/mt_geoheritage/sites/augusta_choteau/paleontology.html",
       "accessed": "2026-11-20"
     }
   ],

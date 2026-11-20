@@ -53,7 +53,10 @@
     "sourceIds": ["pbdb-taxon", "nhm"]
   },
   "summary": {
-    "en": "Oviraptor was a toothless, beaked dinosaur about 2 metres long that lived in Mongolia around 84 to 72 million years ago. Its name means 'egg thief', because its skeleton was found on a nest and scientists thought it was stealing the eggs. Later discoveries showed the eggs were probably its own. What it actually ate is still unclear."
+    "text": {
+      "en": "Oviraptor was a toothless, beaked dinosaur about 2 metres long that lived in Mongolia around 84 to 72 million years ago. Its name means 'egg thief'. The first skeleton, found in 1923, lay on top of a nest of eggs. Decades later, an embryo inside the same kind of egg turned out to be an oviraptorid, so the adult may have been brooding its own nest. What it actually ate is still unclear."
+    },
+    "sourceIds": ["nhm", "pbdb-occs", "norell-1994", "zanno-makovicky-2011"]
   },
   "funFacts": [
     {

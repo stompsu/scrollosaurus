@@ -52,7 +52,10 @@
     "sourceIds": ["pbdb-taxon", "nhm"]
   },
   "summary": {
-    "en": "Argentinosaurus was a gigantic long-necked plant eater from Argentina, one of the largest land animals ever found. It lived in the Late Cretaceous, roughly 100 to 90 million years ago. Only a few bones are known, including huge back vertebrae and part of a leg, so its size is hard to pin down: estimates range from about 60 to nearly 90 tonnes and around 35 to 40 metres long."
+    "text": {
+      "en": "Argentinosaurus was a gigantic long-necked plant eater from Argentina, one of the largest land animals ever found. It lived in the Late Cretaceous, roughly 100 to 90 million years ago. It is known only from fragmentary bones, including vertebrae and a leg bone, so its size is hard to pin down: estimates range from about 60 to 88 tonnes and around 35 to 40 metres long."
+    },
+    "sourceIds": ["nhm", "garrido-2010", "sellers-2013", "mazzetta-2004"]
   },
   "funFacts": [
     {

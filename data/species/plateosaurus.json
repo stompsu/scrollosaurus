@@ -55,7 +55,10 @@
     "sourceIds": ["pbdb-taxon", "nhm", "iczn-2435"]
   },
   "summary": {
-    "en": "Plateosaurus was a large plant eater that lived in Europe about 227 to 206 million years ago, in the Late Triassic. Grown animals were roughly 5 to 10 metres long. It had five-fingered hands with a large thumb claw. It is the most abundant dinosaur in Europe's Late Triassic rocks, found at more than 40 sites in France, Germany and Switzerland, and in Greenland."
+    "text": {
+      "en": "Plateosaurus was a large plant eater that lived in Europe in the Late Triassic, about 227 to 206 million years ago. Grown animals were roughly 5 to 10 metres long, and adults varied a lot in size. It had five-fingered hands with a large thumb claw, perhaps used for defence or gathering food. Its fossils come from Germany and Switzerland, and finds in Germany suggest it may have lived in herds."
+    },
+    "sourceIds": ["nhm", "bonn-2005", "pbdb-occs", "hofmann-sander-2014"]
   },
   "funFacts": [
     {

@@ -143,15 +143,28 @@ export const speciesSchema = z
       .min(1),
     discovery: z
       .object({
-        describedBy: z.string().trim().min(1),
+        /** Surnames only, joined with " & " (e.g. "Ji & Ji", "Horner & Makela"). */
+        describedBy: z
+          .string()
+          .trim()
+          .min(1)
+          .refine((v) => !/[()]/.test(v), { message: 'Put history in discovery.note' }),
         year: z.number().int().min(1800).max(2100),
+        /** Naming history, e.g. the original genus the species was described in. */
+        note: z.string().trim().min(1).optional(),
         sourceIds: sourceIdsSchema,
       })
       .strict(),
-    summary: localizedTextSchema.refine(
-      (t) => wordCount(t.en) <= 80 && (t.pl === undefined || wordCount(t.pl) <= 80),
-      { message: 'Summary must be 80 words or fewer' },
-    ),
+    /** Every claim in the summary must be supported by the cited sources. */
+    summary: z
+      .object({
+        text: localizedTextSchema.refine(
+          (t) => wordCount(t.en) <= 80 && (t.pl === undefined || wordCount(t.pl) <= 80),
+          { message: 'Summary must be 80 words or fewer' },
+        ),
+        sourceIds: sourceIdsSchema,
+      })
+      .strict(),
     funFacts: z
       .array(z.object({ text: localizedTextSchema, sourceIds: sourceIdsSchema }).strict())
       .optional(),
@@ -173,24 +186,8 @@ export const speciesSchema = z
       }
       ids.add(src.id);
     }
-    const cited: [string, readonly string[] | undefined][] = [
-      ['timeRange', s.timeRange.sourceIds],
-      ['diet', s.diet.sourceIds],
-      ['nameMeaning', s.nameMeaning.sourceIds],
-      ['group', s.groupSourceIds],
-      ...s.locations.map((l, i): [string, string[]] => [`locations.${String(i)}`, l.sourceIds]),
-      ['discovery', s.discovery.sourceIds],
-      ['taxonomy', s.taxonomy.sourceIds],
-      ['size.lengthM', s.size.lengthM?.sourceIds],
-      ['size.massKg', s.size.massKg?.sourceIds],
-      ['size.heightM', s.size.heightM?.sourceIds],
-      ...(s.funFacts ?? []).map((f, i): [string, string[]] => [
-        `funFacts.${String(i)}`,
-        f.sourceIds,
-      ]),
-    ];
-    for (const [field, list] of cited) {
-      for (const sid of list ?? []) {
+    for (const [field, list] of citations(s)) {
+      for (const sid of list) {
         if (!ids.has(sid)) {
           ctx.addIssue({
             code: 'custom',
@@ -200,7 +197,7 @@ export const speciesSchema = z
         }
       }
     }
-    if (!s.scientificName.startsWith(s.genus)) {
+    if (s.scientificName !== s.genus && !s.scientificName.startsWith(`${s.genus} `)) {
       ctx.addIssue({ code: 'custom', message: 'scientificName must start with the genus' });
     }
     const flagged = (s.uncertain ?? []).map((u) => u.field);
@@ -209,3 +206,35 @@ export const speciesSchema = z
     }
   });
 export type Species = z.infer<typeof speciesSchema>;
+
+type CitableSpecies = Pick<
+  Species,
+  | 'timeRange'
+  | 'diet'
+  | 'nameMeaning'
+  | 'groupSourceIds'
+  | 'locations'
+  | 'discovery'
+  | 'taxonomy'
+  | 'size'
+  | 'summary'
+  | 'funFacts'
+>;
+
+/** Every field that cites sources, with its path. The single list used by all citation checks. */
+export function citations(s: CitableSpecies): [string, readonly string[]][] {
+  return [
+    ['timeRange', s.timeRange.sourceIds],
+    ['diet', s.diet.sourceIds],
+    ['nameMeaning', s.nameMeaning.sourceIds],
+    ['group', s.groupSourceIds],
+    ...s.locations.map((l, i): [string, string[]] => [`locations.${String(i)}`, l.sourceIds]),
+    ['discovery', s.discovery.sourceIds],
+    ['taxonomy', s.taxonomy.sourceIds ?? []],
+    ['size.lengthM', s.size.lengthM?.sourceIds ?? []],
+    ['size.massKg', s.size.massKg?.sourceIds ?? []],
+    ['size.heightM', s.size.heightM?.sourceIds ?? []],
+    ['summary', s.summary.sourceIds],
+    ...(s.funFacts ?? []).map((f, i): [string, string[]] => [`funFacts.${String(i)}`, f.sourceIds]),
+  ];
+}

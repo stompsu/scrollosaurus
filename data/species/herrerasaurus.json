@@ -47,7 +47,10 @@
     "sourceIds": ["pbdb-taxon", "nhm"]
   },
   "summary": {
-    "en": "Herrerasaurus was one of the first big meat-eating dinosaurs. It hunted in what is now Argentina about 231 to 229 million years ago, when dinosaurs were still new. It ran on two legs and used short arms with sharp claws to grab prey. A complete skull and skeleton, described in 1992, helped scientists picture what the earliest dinosaurs looked like."
+    "text": {
+      "en": "Herrerasaurus was one of the earliest dinosaurs, a meat eater about 3 metres long. It lived in what is now Argentina about 231 to 229 million years ago. It was an agile hunter that ran on two legs and used short arms built for grasping and raking prey. A complete skull and skeleton, described in 1992, helped scientists picture the common ancestor of all dinosaurs."
+    },
+    "sourceIds": ["nhm", "martinez-2011", "sereno-novas-1992"]
   },
   "funFacts": [
     {

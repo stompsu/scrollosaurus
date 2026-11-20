@@ -52,7 +52,10 @@
     "sourceIds": ["tschopp-2015", "pbdb-diplodocus-carnegii-occs"]
   },
   "summary": {
-    "en": "Diplodocus was one of the longest dinosaurs, a plant-eater from the Late Jurassic of western North America, about 150 million years ago. Much of its length was tail. It used its long neck to reach plants at different heights and to drink. Its name, 'double beam', refers to the two-pronged bones under its tail. All known fossils come from the Morrison Formation in the USA."
+    "text": {
+      "en": "Diplodocus was one of the longest dinosaurs, a plant-eater from the Late Jurassic of western North America, about 150 million years ago. Its very long, whip-like tail made up much of that length. It used its long neck to reach plants at different heights and to drink. Its name, 'double beam', refers to the two-pronged bones under its tail. All known fossils come from the Morrison Formation in the USA."
+    },
+    "sourceIds": ["nhm-diplodocus", "pbdb-diplodocus-carnegii-occs"]
   },
   "funFacts": [
     {

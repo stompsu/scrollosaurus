@@ -52,7 +52,10 @@
     "sourceIds": ["pbdb-taxon", "marsh-rowe-2020"]
   },
   "summary": {
-    "en": "Dilophosaurus was a meat-eating dinosaur about 7 metres long that lived in what is now Arizona in the Early Jurassic, roughly 200 to 184 million years ago. It is named for the pair of thin crests on top of its head, which were probably for display rather than fighting. It was the largest land animal known from North America at that time."
+    "text": {
+      "en": "Dilophosaurus was a meat-eating dinosaur about 7 metres long that lived in what is now Arizona in the Early Jurassic, roughly 200 to 184 million years ago. It is named for the pair of crests on top of its head, which probably helped it recognise its own kind or attract a mate, and were likely too weak for fighting. It was the largest land animal known from North America at that time."
+    },
+    "sourceIds": ["nhm", "marsh-rowe-2020"]
   },
   "funFacts": [
     {

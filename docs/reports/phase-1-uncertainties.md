@@ -9,7 +9,8 @@ behind them and the points that need a decision.
 
 ## Checks run
 
-- All 34 species and the group tree pass `pnpm validate:data`. Every fact cites a source by id.
+- All 34 species and the group tree pass `pnpm validate:data`. Every fact cites a source by id,
+  including every claim in the summaries (enforced by the schema since the code review).
 - All **58 DOIs** resolve, and their titles and years match Crossref.
 - **150 non-DOI source URLs**: 91 return 200. The other 59 are Paleobiology Database pages
   (`paleobiodb.org/classic/…`), which answer automated requests with 403; they open in a browser.
@@ -34,38 +35,59 @@ behind them and the points that need a decision.
    - Many sizes come from the NHM Dino Directory alone (method not stated), stored as `[v, v]`
      with a note.
 
-## Flagged fields (39)
+## Flagged fields (43)
 
-| Species         | Field                     | Why                                                                         |
-| --------------- | ------------------------- | --------------------------------------------------------------------------- |
-| Archaeopteryx   | group                     | One analysis (Xu et al. 2011) moved it into Deinonychosauria, weak support. |
-| Archaeopteryx   | taxonomy                  | Possible "species flock" (Rauhut et al. 2018).                              |
-| Argentinosaurus | length, mass              | Fragmentary; 35–39.7 m and 60–88 t depending on method.                     |
-| Argentinosaurus | timeRange                 | Huincul Fm. age poorly constrained; PBDB still says Middle Albian.          |
-| Baryonyx        | locations                 | Spanish material listed by NHM not verified as _B. walkeri_.                |
-| Carnotaurus     | timeRange                 | Maastrichtian (Pol et al. 2024) vs Campanian–Maastrichtian (older work).    |
-| Diplodocus      | taxonomy                  | _D. carnegii_ proposed as type species; no ICZN ruling verified.            |
-| Eoraptor        | group                     | Described as a theropod; now usually a sauropodomorph (Martinez 2011).      |
-| Gallimimus      | diet                      | Herbivory, omnivory and filter-feeding all proposed.                        |
-| Herrerasaurus   | group, mass               | Placement unresolved (see above); no verified mass.                         |
-| Iguanodon       | timeRange                 | Older referrals excluded as doubtful (Gasulla et al. 2022).                 |
-| Mamenchisaurus  | length, mass              | Only genus-level figures exist; none for _M. constructus_.                  |
-| Microraptor     | taxonomy                  | Some diet studies used _M. gui_; synonymy not checked.                      |
-| Mosasaurus      | mass, timeRange           | No verified mass; Campanian start depends on "M. maximus" synonymy.         |
-| Oviraptor       | diet                      | No direct evidence; eggs, shellfish and plants all proposed.                |
-| Parasaurolophus | timeRange                 | 77–73 Ma is the genus range, not _P. walkeri_ alone.                        |
-| Plateosaurus    | mass                      | NHM's 4 t looks like an outlier; method-based estimate not verified.        |
-| Plesiosaurus    | length, mass              | No verified figures.                                                        |
-| Psittacosaurus  | timeRange, length         | Type locality dated only "Early Cretaceous"; sizes genus-level.             |
-| Pteranodon      | length, mass, time, group | Wingspan not modelled; stage-level ages; family not verified.               |
-| Quetzalcoatlus  | length, mass              | Wingspan not modelled; no species-specific mass.                            |
-| Shuvuuia        | diet, mass                | Insectivory inferred from anatomy; no mass estimate.                        |
-| Sinosauropteryx | group, length             | Family debate (see above); genus-level length only.                         |
-| Spinosaurus     | diet, length              | Underwater hunter vs wader; 14 m vs over 15 m reconstructions.              |
-| Therizinosaurus | length, mass              | Known from limbs and ribs; single mass estimate.                            |
+| Species            | Field                     | Why                                                                              |
+| ------------------ | ------------------------- | -------------------------------------------------------------------------------- |
+| Archaeopteryx      | group                     | One analysis (Xu et al. 2011) moved it into Deinonychosauria, weak support.      |
+| Archaeopteryx      | taxonomy                  | Possible "species flock" (Rauhut et al. 2018).                                   |
+| Argentinosaurus    | length, mass              | Fragmentary; 35–39.7 m and 60–88 t depending on method.                          |
+| Argentinosaurus    | timeRange                 | Huincul Fm. age poorly constrained; PBDB still says Middle Albian.               |
+| Baryonyx           | locations                 | Spanish material listed by NHM not verified as _B. walkeri_.                     |
+| Carnotaurus        | timeRange                 | Maastrichtian (Pol et al. 2024) vs Campanian–Maastrichtian (older work).         |
+| Diplodocus         | taxonomy                  | _D. carnegii_ proposed as type species; no ICZN ruling verified.                 |
+| Eoraptor           | group                     | Described as a theropod; now usually a sauropodomorph (Martinez 2011).           |
+| Gallimimus         | diet                      | Herbivory, omnivory and filter-feeding all proposed.                             |
+| Herrerasaurus      | group, mass               | Placement unresolved (see above); no verified mass.                              |
+| Iguanodon          | timeRange, mass           | Older referrals excluded (Gasulla et al. 2022); mass 4–15 t depending on method. |
+| Mamenchisaurus     | length, mass              | Only genus-level figures exist; none for _M. constructus_.                       |
+| Microraptor        | taxonomy                  | Some diet studies used _M. gui_; synonymy not checked.                           |
+| Mosasaurus         | mass, timeRange           | No verified mass; Campanian start depends on "M. maximus" synonymy.              |
+| Oviraptor          | diet                      | No direct evidence; eggs, shellfish and plants all proposed.                     |
+| Pachycephalosaurus | mass                      | Single museum figure (NHM), likely low.                                          |
+| Parasaurolophus    | timeRange                 | 77–73 Ma is the genus range, not _P. walkeri_ alone.                             |
+| Plateosaurus       | mass                      | NHM's 4 t looks like an outlier; method-based estimate not verified.             |
+| Plesiosaurus       | length, mass              | No verified figures.                                                             |
+| Psittacosaurus     | timeRange, length, mass   | Type locality dated only "Early Cretaceous"; sizes genus-level.                  |
+| Pteranodon         | length, mass, time, group | Wingspan not modelled; stage-level ages; family not verified.                    |
+| Quetzalcoatlus     | length, mass, diet        | Wingspan not modelled; no species-specific mass; ground forager vs water prober. |
+| Shuvuuia           | diet, mass                | Insectivory inferred from anatomy; no mass estimate.                             |
+| Sinosauropteryx    | group, length             | Family debate (see above); genus-level length only.                              |
+| Spinosaurus        | diet, length              | Underwater hunter vs wader; 14 m vs over 15 m reconstructions.                   |
+| Therizinosaurus    | length, mass              | Known from limbs and ribs; single mass estimate.                                 |
 
 Debated diets are also marked in the data with `confidence: "debated"`: Spinosaurus, Oviraptor,
 Gallimimus, Quetzalcoatlus.
+
+## Changes from the phase-end review
+
+The code review found that summaries carried facts with no sources. Summaries now cite sources, and
+the curators checked every claim against them:
+
+- **Claims removed** because no verified source supported them, e.g. Plateosaurus in France and
+  Greenland (PBDB lists them only at genus level), Mosasaurus "first skulls near Maastricht", the
+  Ankylosaurus/T. rex/Triceratops "alongside" claims, Brachiosaurus's giraffe comparison,
+  "remarkably long tail" for Sinosauropteryx.
+- **Claims softened** to what the sources say, e.g. Archaeopteryx "first bird" → "bird-like
+  dinosaur"; Quetzalcoatlus "largest" → "among the largest animals known to fly"; Spinosaurus
+  "largest" → "longest"; Microraptor "hundreds of fossils" → "about 300 specimens" (NHM).
+- **Values corrected:** Baryonyx excavation date (May–June 1983) and claw length (31 cm, NHM);
+  Plesiosaurus dolichodeirus authority (Conybeare 1824, not the genus authors); a Shuvuuia diet note
+  that overstated what Leedham et al. 2026 covers.
+- **Discovery** now lists surnames only; naming history moved to `discovery.note`.
+- **To note:** two citations were added to notes that already named the study but whose full text
+  the second-pass curator could not reopen: Mazzetta et al. 2004 (Carnotaurus age) and Ibrahim et
+  al. 2014 (Spinosaurus length, read via Henderson 2018).
 
 ## Other judgement calls
 

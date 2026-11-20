@@ -60,12 +60,20 @@
     }
   ],
   "discovery": {
-    "describedBy": "Boulenger (in van Beneden)",
+    "describedBy": "Boulenger",
     "year": 1881,
-    "sourceIds": ["nhm-iguanodon", "pbdb-iguanodon-bernissartensis-occs"]
+    "note": "PBDB attributes the species to Boulenger (1881); the NHM Dino Directory credits Boulenger and van Beneden.",
+    "sourceIds": [
+      "nhm-iguanodon",
+      "pbdb-iguanodon-bernissartensis-occs",
+      "pbdb-iguanodon-bernissartensis"
+    ]
   },
   "summary": {
-    "en": "Iguanodon was a big plant-eater that lived in Europe in the Early Cretaceous, about 125 million years ago. It could walk on two legs or on all fours, and it had a large spike on its thumb, probably for defence against predators. This species is named after Bernissart in Belgium, where its fossils were dug from a coal mine. Fossils have also been found in Spain, England and Germany."
+    "text": {
+      "en": "Iguanodon was a big plant-eater that lived in Europe in the Early Cretaceous, about 125 million years ago. It could probably walk on two legs or on all fours, and it had a large spike on each hand, probably for defence against predators. This species is named after Bernissart in Belgium, where it was first found in a coal seam. Fossils have also been found in Spain, England and Germany."
+    },
+    "sourceIds": ["nhm-iguanodon", "pbdb-iguanodon-bernissartensis-occs", "gasulla-2022"]
   },
   "funFacts": [
     {
@@ -81,6 +89,10 @@
     {
       "field": "timeRange",
       "note": "Many fossils have been referred to I. bernissartensis across Western Europe, some likely wrongly (Gasulla et al. 2022). The range uses only the Barremian to early Aptian records; including all PBDB referrals would push the start back to the late Tithonian."
+    },
+    {
+      "field": "size.massKg",
+      "note": "Estimates span 4 to 15 t depending on method: 4,000 kg (NHM museum figure) versus 15,000 kg from limb-bone scaling (Benson et al. 2014)."
     }
   ],
   "sources": [
@@ -123,6 +135,13 @@
       "title": "Iguanodon bernissartensis occurrences (taxon 58905)",
       "publisher": "The Paleobiology Database",
       "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Iguanodon%20bernissartensis&show=strat,loc",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-iguanodon-bernissartensis",
+      "title": "Iguanodon bernissartensis (taxon 58905)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/single.json?name=Iguanodon%20bernissartensis&show=attr",
       "accessed": "2026-11-20"
     }
   ],

@@ -47,12 +47,15 @@
     }
   ],
   "discovery": {
-    "describedBy": "William Parks",
+    "describedBy": "Parks",
     "year": 1922,
     "sourceIds": ["pbdb-taxon", "nhm-parasaurolophus"]
   },
   "summary": {
-    "en": "Parasaurolophus was a duck-billed dinosaur with a long, hollow, backward-curving crest on its head. It walked on two or four legs and ate plants. The type species, P. walkeri, comes from Alberta, Canada, in rocks from the late Campanian, roughly 77–73 million years ago."
+    "text": {
+      "en": "Parasaurolophus was a duck-billed dinosaur with a long, hollow crest on its head. A tube ran from its nostrils up through the crest and back, and the crest may have helped it make sounds, recognise others or control its temperature. It ate plants and could walk on two or four legs. The type species, P. walkeri, comes from the Dinosaur Park Formation of Alberta, Canada."
+    },
+    "sourceIds": ["nhm-parasaurolophus", "pbdb-occurrences"]
   },
   "famous": true,
   "images": [],

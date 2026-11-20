@@ -37,12 +37,15 @@
     }
   ],
   "discovery": {
-    "describedBy": "Douglas A. Lawson",
+    "describedBy": "Lawson",
     "year": 1975,
     "sourceIds": ["pbdb-taxon"]
   },
   "summary": {
-    "en": "Quetzalcoatlus was a giant pterosaur, a flying reptile, not a dinosaur. With wings about 10 metres across, it was one of the largest flying animals ever. It lived in Texas at the very end of the Cretaceous. Scientists still debate how it fed: stalking small prey on land, or probing for crabs and worms in shallow water."
+    "text": {
+      "en": "Quetzalcoatlus was a giant pterosaur, a flying reptile, not a dinosaur. With wings about 10 metres across, it was among the largest animals ever known to fly. Its fossils come from Big Bend National Park in Texas, from the very end of the Cretaceous. Scientists still debate how it fed: stalking small animals on land, or probing for crabs and worms in shallow water."
+    },
+    "sourceIds": ["pbdb-taxon", "witton-naish-2008", "ut-news-2021", "nps-big-bend"]
   },
   "funFacts": [
     {
@@ -62,6 +65,10 @@
     {
       "field": "size.massKg",
       "note": "No verified mass estimate specific to Q. northropi; Witton & Naish (2008) cite earlier estimates of 86–136 kg and give about 250 kg for a generic 10 m azhdarchid."
+    },
+    {
+      "field": "diet",
+      "note": "How azhdarchids fed is debated: stork-like ground foraging (Witton & Naish 2008) versus probing water and mud for invertebrates (Lehman, reported by UT News 2021; NPS)."
     }
   ],
   "sources": [

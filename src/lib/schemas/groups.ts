@@ -44,7 +44,15 @@ export const groupsSchema = z
           });
         }
       }
-      if (g.parent === undefined) continue;
+      if (g.parent === undefined) {
+        if (g.isDinosaur && g.id !== 'dinosauria') {
+          ctx.addIssue({
+            code: 'custom',
+            message: `Root group "${g.id}" must be dinosauria or a non-dinosaur group`,
+          });
+        }
+        continue;
+      }
       const parent = byId.get(g.parent);
       if (!parent) {
         ctx.addIssue({

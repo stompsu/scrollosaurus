@@ -111,6 +111,13 @@ export const geologicTimeSchema = z
             message: `Gap or overlap between "${prev.id}" and "${curr.id}"`,
           });
         }
+        // A shared boundary is either approximate on both sides or on neither.
+        if (prev && curr && (prev.topApproximate ?? false) !== (curr.baseApproximate ?? false)) {
+          ctx.addIssue({
+            code: 'custom',
+            message: `"${prev.id}" and "${curr.id}" disagree on whether their boundary is approximate`,
+          });
+        }
       }
     }
   });

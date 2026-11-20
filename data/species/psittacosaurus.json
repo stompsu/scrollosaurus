@@ -53,7 +53,10 @@
     "sourceIds": ["nhm-psittacosaurus", "pbdb-psittacosaurus"]
   },
   "summary": {
-    "en": "Psittacosaurus was a small plant-eating dinosaur from the Early Cretaceous of Asia, around 120 million years ago. Its name means 'parrot lizard'. It belongs to the ceratopsians, the same group as horned dinosaurs like Triceratops. Fossils of P. mongoliensis include animals from juveniles to adults, so scientists have been able to work out how fast it grew."
+    "text": {
+      "en": "Psittacosaurus was a plant-eating dinosaur about 2 metres long from the Early Cretaceous of China, Mongolia and Russia. Its name means 'parrot lizard', and it had a beak. It belongs to the ceratopsians. Fossils of P. mongoliensis include animals from juveniles to adults, so scientists have been able to work out how fast it grew."
+    },
+    "sourceIds": ["nhm-psittacosaurus", "erickson-tumanova-2000"]
   },
   "funFacts": [
     {
@@ -73,6 +76,10 @@
     {
       "field": "size.lengthM",
       "note": "Only genus-level museum figures (length and mass) were verified; no species-specific peer-reviewed estimate was found."
+    },
+    {
+      "field": "size.massKg",
+      "note": "Only a genus-level museum figure (NHM, 50 kg) was verified; no species-specific estimate for P. mongoliensis was found."
     }
   ],
   "sources": [

@@ -53,12 +53,16 @@
     }
   ],
   "discovery": {
-    "describedBy": "Charles W. Gilmore (as Troodon wyomingensis; genus named by Brown and Schlaikjer in 1943)",
+    "describedBy": "Gilmore",
     "year": 1931,
+    "note": "Gilmore described the species as Troodon wyomingensis. The genus Pachycephalosaurus was named by Brown & Schlaikjer in 1943, and the species now belongs to it.",
     "sourceIds": ["pbdb-taxon", "nhm-pachycephalosaurus"]
   },
   "summary": {
-    "en": "Pachycephalosaurus had a thick, dome-shaped skull roof ringed with bony knobs. It walked on two legs and lived in western North America at the very end of the Cretaceous. Most fossils are skulls, so the rest of its body is poorly known."
+    "text": {
+      "en": "Pachycephalosaurus was a two-legged plant eater with a large bony dome on its head, surrounded by spikes and bumps. Some scientists think it used the dome in head-butting contests, others that it was for display. It lived in North America about 69 to 66 million years ago, alongside Tyrannosaurus and Triceratops. Dracorex and Stygimoloch, once named as separate dinosaurs, may be its younger growth stages."
+    },
+    "sourceIds": ["nhm-pachycephalosaurus", "horner-goodwin-2009"]
   },
   "funFacts": [
     {
@@ -70,6 +74,12 @@
   ],
   "famous": false,
   "images": [],
+  "uncertain": [
+    {
+      "field": "size.massKg",
+      "note": "Only a single museum figure (NHM, 450 kg) was found; mass estimates vary widely between methods, so this figure may not be representative."
+    }
+  ],
   "sources": [
     {
       "id": "nhm-pachycephalosaurus",

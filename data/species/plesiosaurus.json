@@ -39,12 +39,16 @@
     }
   ],
   "discovery": {
-    "describedBy": "De la Beche & Conybeare",
-    "year": 1821,
+    "describedBy": "Conybeare",
+    "year": 1824,
+    "note": "The genus Plesiosaurus was named by De la Beche & Conybeare in 1821; Conybeare named the species P. dolichodeirus in 1824.",
     "sourceIds": ["smith-directory", "pbdb-taxon"]
   },
   "summary": {
-    "en": "Plesiosaurus was not a dinosaur but a marine reptile that swam in the seas over what is now southern England in the Early Jurassic. Its neck was very long, roughly as long as its body and tail combined. Its pointed teeth were good for piercing small, soft prey such as fish and squid-like animals. Mary Anning found the famous complete skeleton at Lyme Regis."
+    "text": {
+      "en": "Plesiosaurus was not a dinosaur but a marine reptile that swam in the seas over what is now southern England in the Early Jurassic. It had a long neck, and its pointed teeth were good for piercing small, soft prey such as fish and squid-like animals. Mary Anning found the complete skeleton that defines the species at Lyme Regis."
+    },
+    "sourceIds": ["smith-directory", "smith-directory-diet", "nhm-anning", "pbdb-taxon"]
   },
   "funFacts": [
     {

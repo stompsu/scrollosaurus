@@ -52,7 +52,10 @@
     "sourceIds": ["pbdb-taxon"]
   },
   "summary": {
-    "en": "Coelophysis was a slim, fast meat eater about 2 metres long that lived in the Late Triassic of what is now the United States. Its name means 'hollow form', after its hollow limb bones, which kept it light and agile. It relied on speed, sharp teeth and grasping claws to catch insects and small reptiles. It is one of the early dinosaurs that lived before dinosaurs ruled the land."
+    "text": {
+      "en": "Coelophysis was a lightly built, fast meat eater about 2 metres long that lived in the Late Triassic of what is now the United States. Its name means 'hollow form', after its hollow limb bones, which kept it light and agile. It relied on speed, small sharp teeth and grasping claws to catch insects and small reptiles. In its time, dinosaurs were not yet at the top of the food chain: large reptiles such as phytosaurs were."
+    },
+    "sourceIds": ["nhm", "pbdb-occs"]
   },
   "funFacts": [
     {

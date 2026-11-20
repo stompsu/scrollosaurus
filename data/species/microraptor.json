@@ -53,7 +53,17 @@
     "sourceIds": ["xu-2000"]
   },
   "summary": {
-    "en": "Microraptor was a crow-sized feathered dinosaur from the Early Cretaceous of north-eastern China, about 120 million years ago. It had long flight feathers on both its arms and its legs, giving it four wings, and it could probably glide or even fly. Its feathers had a glossy, iridescent sheen. Hundreds of fossils are known, and some still hold their last meals: a bird, fish, a lizard and mammal bones."
+    "text": {
+      "en": "Microraptor was a crow-sized feathered dinosaur from the Early Cretaceous of north-eastern China, about 120 million years ago. It had wings on both its arms and its legs, and it could probably glide or even fly. Its feathers were black with a glossy, iridescent sheen. About 300 specimens are known, and some still hold their last meals: a bird, fish, a lizard and mammal bones."
+    },
+    "sourceIds": [
+      "nhm-microraptor",
+      "li-2012",
+      "pbdb-microraptor-zhaoianus-occs",
+      "oconnor-2011",
+      "xing-2013",
+      "oconnor-2019"
+    ]
   },
   "funFacts": [
     {

@@ -59,12 +59,15 @@
     }
   ],
   "discovery": {
-    "describedBy": "Henry Fairfield Osborn",
+    "describedBy": "Osborn",
     "year": 1905,
     "sourceIds": ["pbdb-taxon", "nhm-tyrannosaurus"]
   },
   "summary": {
-    "en": "Tyrannosaurus rex was one of the largest meat-eating dinosaurs ever. Adults stretched 11–12 metres and weighed several tonnes. It lived in western North America at the very end of the Cretaceous, alongside Triceratops, and was among the last non-bird dinosaurs before the mass extinction 66 million years ago."
+    "text": {
+      "en": "Tyrannosaurus rex was a huge, ferocious meat-eating dinosaur. Adults were 11 to 12 metres long and weighed around 6 to 8 tonnes, and its bite was stronger than that of any other known land animal. Its arms were small for its body. It lived in what is now Canada and the USA about 68 to 66 million years ago, at the very end of the Cretaceous."
+    },
+    "sourceIds": ["hutchinson-2011", "nhm-tyrannosaurus"]
   },
   "famous": true,
   "images": [],

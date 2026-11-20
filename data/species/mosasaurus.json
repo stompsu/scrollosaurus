@@ -68,12 +68,16 @@
     }
   ],
   "discovery": {
-    "describedBy": "Gideon Mantell",
+    "describedBy": "Mantell",
     "year": 1829,
-    "sourceIds": ["pbdb-taxon", "harrell-martin-2015"]
+    "note": "Mantell named the species in 1829; PBDB dates the genus name Mosasaurus to 1822.",
+    "sourceIds": ["pbdb-taxon", "harrell-martin-2015", "pbdb-genus"]
   },
   "summary": {
-    "en": "Mosasaurus was a giant marine lizard, not a dinosaur. It swam in the shallow seas of the Late Cretaceous with a long tail, paddle-like limbs and big jaws full of strong teeth. The first skulls were found near Maastricht in the Netherlands, and it lived on both sides of the Atlantic until the mass extinction 66 million years ago."
+    "text": {
+      "en": "Mosasaurus was a huge sea-going reptile, not a dinosaur, that hunted in the seas of the Late Cretaceous. It had a powerfully built lower jaw. Its fossils come from Europe, Africa, Asia and North America. One giant from Penza in Russia, known from a partial skull, is estimated at about 17 metres long, one of the largest mosasaurs ever found. Mosasaurus survived until just before the mass extinction 66 million years ago."
+    },
+    "sourceIds": ["pbdb-genus", "grigoriev-2014", "harrell-martin-2015"]
   },
   "famous": true,
   "images": [],

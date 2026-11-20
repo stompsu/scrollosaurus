@@ -13,7 +13,7 @@
   "diet": {
     "value": "carnivore",
     "confidence": "established",
-    "sourceIds": ["chen-1998", "nhm-sinosauropteryx", "hendrickx-2025"],
+    "sourceIds": ["chen-1998", "nhm-sinosauropteryx", "hendrickx-2025", "qiu-2025"],
     "note": "Stomach contents are preserved in the larger of the two specimens described in 1998. Mammal jaws once reported inside a 'Sinosauropteryx' (NGMC/GMV 2124) are now attributed to a small tyrannosauroid (Qiu et al. 2025), so they are not used here."
   },
   "timeRange": {
@@ -28,7 +28,7 @@
   "size": {
     "lengthM": {
       "value": [1.1, 1.1],
-      "sourceIds": ["nhm-sinosauropteryx"],
+      "sourceIds": ["nhm-sinosauropteryx", "qiu-2025"],
       "note": "Museum figure for the genus. The 1.2 m holotype of the second species, S. lingyuanensis, is described as the largest known Sinosauropteryx specimen (Qiu et al. 2025), so S. prima specimens are smaller."
     },
     "massKg": {
@@ -51,7 +51,15 @@
     "sourceIds": ["nhm-sinosauropteryx", "hendrickx-2025"]
   },
   "summary": {
-    "en": "Sinosauropteryx was a small meat-eater, about a metre long, that lived around 125 million years ago in what is now north-eastern China. Its body was covered in simple, hair-like filaments, and in 1996 it became the first non-bird dinosaur found with evidence of feather-like structures. It had a remarkably long tail, and stomach contents show it hunted small animals. Fossil pigments suggest a dark back, pale belly, striped tail and a dark mask across its eyes."
+    "text": {
+      "en": "Sinosauropteryx was a small meat-eater, about a metre long, that lived around 125 million years ago in what is now north-eastern China. Its body was covered in thin, hair-like primitive feathers. Named in 1996, it was the first feathered dinosaur discovered that was not directly related to birds. A tiny lizard was found in the stomach of one fossil. Fossil pigments suggest a dark back, pale belly, banded tail and a dark 'bandit mask' across its eyes."
+    },
+    "sourceIds": [
+      "nhm-sinosauropteryx",
+      "zhong-2021",
+      "pbdb-sinosauropteryx-prima-occs",
+      "smithwick-2017"
+    ]
   },
   "funFacts": [
     {

@@ -43,7 +43,10 @@
     "sourceIds": ["pbdb-taxon", "nhm"]
   },
   "summary": {
-    "en": "Mamenchisaurus was a long-necked plant-eating sauropod from China in the Late Jurassic. Its neck was extremely long, more than 40 percent of its whole body length. This record follows the first species named, Mamenchisaurus constructus, described in 1954 from Sichuan. Several other Mamenchisaurus species, some of them older, have been named since."
+    "text": {
+      "en": "Mamenchisaurus was a long-necked plant-eating sauropod from China in the Late Jurassic. Its neck was extremely long, more than 40 percent of its whole body length. This record follows the first species named, Mamenchisaurus constructus, described in 1954 from Sichuan. Several other Mamenchisaurus species, some of them older, have been named since."
+    },
+    "sourceIds": ["nhm", "christian-2013", "pbdb-taxon", "pbdb-occs", "pbdb-genus-occs"]
   },
   "funFacts": [
     {

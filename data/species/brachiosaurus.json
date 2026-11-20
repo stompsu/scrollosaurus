@@ -52,7 +52,10 @@
     "sourceIds": ["taylor-2009", "nhm-brachiosaurus"]
   },
   "summary": {
-    "en": "Brachiosaurus was a giant long-necked plant-eater from the Late Jurassic of western North America, about 150 million years ago. Its front legs were longer than its back legs, so its body sloped upwards like a giraffe's, letting it browse leaves high in the trees. It was much taller than its neighbour Brontosaurus. Few fossils are known, and the first, found in Colorado in 1900, came from an animal that was probably still growing."
+    "text": {
+      "en": "Brachiosaurus was a giant long-necked plant-eater from the Late Jurassic of western North America, about 150 million years ago. Its front legs were longer than its back legs, so its body tilted upwards, letting it feed on leaves high in tall trees. It was much taller than Brontosaurus, which ate plants near the ground. No complete skeleton is known, and the first remains, found in Colorado in 1900, may have come from an animal that was not fully grown."
+    },
+    "sourceIds": ["nhm-brachiosaurus", "pbdb-brachiosaurus-altithorax-occs"]
   },
   "funFacts": [
     {
