@@ -1,0 +1,107 @@
+{
+  "slug": "pachycephalosaurus",
+  "scientificName": "Pachycephalosaurus wyomingensis",
+  "genus": "Pachycephalosaurus",
+  "nameMeaning": {
+    "text": {
+      "en": "Thick-headed lizard"
+    },
+    "sourceIds": ["nhm-pachycephalosaurus"]
+  },
+  "group": "pachycephalosauria",
+  "groupSourceIds": ["pbdb-taxon", "nhm-pachycephalosaurus"],
+  "isDinosaur": true,
+  "taxonomy": {
+    "status": "valid"
+  },
+  "diet": {
+    "value": "herbivore",
+    "confidence": "probable",
+    "sourceIds": ["nhm-pachycephalosaurus", "pbdb-taxon"]
+  },
+  "timeRange": {
+    "startMa": 69,
+    "endMa": 66,
+    "sourceIds": ["nhm-pachycephalosaurus"],
+    "note": "NHM gives 69–66 Ma. PBDB occurrences of P. wyomingensis are almost all Maastrichtian (stage 72.2–66 Ma)."
+  },
+  "periods": ["cretaceous"],
+  "size": {
+    "lengthM": {
+      "value": [3, 3],
+      "sourceIds": ["nhm-pachycephalosaurus"],
+      "note": "Single museum estimate (NHM); the skeleton is poorly known beyond the skull."
+    },
+    "massKg": {
+      "value": [450, 450],
+      "sourceIds": ["nhm-pachycephalosaurus"],
+      "note": "Single museum estimate (NHM); mass estimates vary widely between methods."
+    }
+  },
+  "locations": [
+    {
+      "continent": "north-america",
+      "countryCode": "US",
+      "formation": "Hell Creek",
+      "sourceIds": ["pbdb-occurrences"]
+    },
+    {
+      "continent": "north-america",
+      "countryCode": "US",
+      "formation": "Lance",
+      "sourceIds": ["pbdb-occurrences"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "Charles W. Gilmore (as Troodon wyomingensis; genus named by Brown and Schlaikjer in 1943)",
+    "year": 1931,
+    "sourceIds": ["pbdb-taxon", "nhm-pachycephalosaurus"]
+  },
+  "summary": {
+    "en": "Pachycephalosaurus had a thick, dome-shaped skull roof ringed with bony knobs. It walked on two legs and lived in western North America at the very end of the Cretaceous. Most fossils are skulls, so the rest of its body is poorly known."
+  },
+  "funFacts": [
+    {
+      "text": {
+        "en": "Dracorex and Stygimoloch, once named as separate dinosaurs, may be younger growth stages of Pachycephalosaurus: its skull seems to have changed shape dramatically as it grew up."
+      },
+      "sourceIds": ["horner-goodwin-2009"]
+    }
+  ],
+  "famous": false,
+  "images": [],
+  "sources": [
+    {
+      "id": "nhm-pachycephalosaurus",
+      "title": "Pachycephalosaurus | Dino Directory",
+      "publisher": "Natural History Museum, London",
+      "url": "https://www.nhm.ac.uk/discover/dino-directory/pachycephalosaurus.html",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-taxon",
+      "title": "Pachycephalosaurus wyomingensis (taxon 64648)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=64648",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-occurrences",
+      "title": "Fossil occurrences of Pachycephalosaurus wyomingensis",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Pachycephalosaurus+wyomingensis&idreso=species&show=strat%2Cloc",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "horner-goodwin-2009",
+      "title": "Extreme cranial ontogeny in the Upper Cretaceous dinosaur Pachycephalosaurus",
+      "authors": "Horner JR, Goodwin MB",
+      "year": 2009,
+      "publisher": "PLoS ONE",
+      "doi": "10.1371/journal.pone.0007626",
+      "url": "https://doi.org/10.1371/journal.pone.0007626",
+      "accessed": "2026-11-20"
+    }
+  ],
+  "lastReviewed": "2026-11-20"
+}

@@ -1,0 +1,144 @@
+{
+  "slug": "mosasaurus",
+  "scientificName": "Mosasaurus hoffmannii",
+  "genus": "Mosasaurus",
+  "nameMeaning": {
+    "text": {
+      "en": "Lizard of the Meuse (Latin Mosa), the river at Maastricht"
+    },
+    "sourceIds": ["street-caldwell-2017", "pbdb-genus"]
+  },
+  "group": "mosasauridae",
+  "groupSourceIds": ["pbdb-taxon", "pbdb-genus"],
+  "isDinosaur": false,
+  "taxonomy": {
+    "status": "valid"
+  },
+  "diet": {
+    "value": "carnivore",
+    "confidence": "established",
+    "sourceIds": ["pbdb-genus"]
+  },
+  "timeRange": {
+    "startMa": 83.6,
+    "endMa": 66,
+    "sourceIds": ["harrell-martin-2015"],
+    "note": "Harrell and Martin (2015) give upper Campanian to uppermost Maastrichtian, just below the K/Pg boundary. ICS has no upper-Campanian boundary, so the start uses the base of the Campanian (83.6 Ma); the true first appearance is younger."
+  },
+  "periods": ["cretaceous"],
+  "size": {
+    "lengthM": {
+      "value": [17, 17],
+      "sourceIds": ["grigoriev-2014"],
+      "note": "Estimate of about 17 m for one exceptionally large individual from Penza, Russia, based on a partial skull; most individuals were smaller."
+    }
+  },
+  "locations": [
+    {
+      "continent": "europe",
+      "countryCode": "NL",
+      "formation": "Maastricht",
+      "sourceIds": ["harrell-martin-2015", "pbdb-occurrences"]
+    },
+    {
+      "continent": "europe",
+      "countryCode": "BE",
+      "sourceIds": ["harrell-martin-2015"]
+    },
+    {
+      "continent": "europe",
+      "countryCode": "RU",
+      "sourceIds": ["grigoriev-2014"]
+    },
+    {
+      "continent": "africa",
+      "countryCode": "NE",
+      "sourceIds": ["harrell-martin-2015"]
+    },
+    {
+      "continent": "asia",
+      "countryCode": "TR",
+      "sourceIds": ["harrell-martin-2015"]
+    },
+    {
+      "continent": "north-america",
+      "countryCode": "US",
+      "formation": "Fox Hills",
+      "sourceIds": ["harrell-martin-2015"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "Gideon Mantell",
+    "year": 1829,
+    "sourceIds": ["pbdb-taxon", "harrell-martin-2015"]
+  },
+  "summary": {
+    "en": "Mosasaurus was a giant marine lizard, not a dinosaur. It swam in the shallow seas of the Late Cretaceous with a long tail, paddle-like limbs and big jaws full of strong teeth. The first skulls were found near Maastricht in the Netherlands, and it lived on both sides of the Atlantic until the mass extinction 66 million years ago."
+  },
+  "famous": true,
+  "images": [],
+  "uncertain": [
+    {
+      "field": "size.massKg",
+      "note": "No verified mass estimate found."
+    },
+    {
+      "field": "timeRange",
+      "note": "The Campanian start depends on North American 'Mosasaurus maximus' records, which Harrell and Martin (2015) treat as M. hoffmannii; Polish Upper Campanian material is an uncertain identification."
+    }
+  ],
+  "sources": [
+    {
+      "id": "pbdb-taxon",
+      "title": "Mosasaurus hoffmannii (taxon 170671)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=170671",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-genus",
+      "title": "Mosasaurus (taxon 36402)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=36402",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-occurrences",
+      "title": "Fossil occurrences of Mosasaurus hoffmannii",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Mosasaurus+hoffmannii&idreso=species&show=strat%2Cloc",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "harrell-martin-2015",
+      "title": "A mosasaur from the Maastrichtian Fox Hills Formation of the northern Western Interior Seaway of the United States and the synonymy of Mosasaurus maximus with Mosasaurus hoffmanni (Reptilia: Mosasauridae)",
+      "authors": "Harrell TL Jr, Martin JE",
+      "year": 2015,
+      "publisher": "Netherlands Journal of Geosciences",
+      "doi": "10.1017/njg.2014.27",
+      "url": "https://doi.org/10.1017/njg.2014.27",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "street-caldwell-2017",
+      "title": "Rediagnosis and redescription of Mosasaurus hoffmannii (Squamata: Mosasauridae) and an assessment of species assigned to the genus Mosasaurus",
+      "authors": "Street HP, Caldwell MW",
+      "year": 2017,
+      "publisher": "Geological Magazine",
+      "doi": "10.1017/S0016756816000236",
+      "url": "https://doi.org/10.1017/S0016756816000236",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "grigoriev-2014",
+      "title": "Giant Mosasaurus hoffmanni (Squamata, Mosasauridae) from the Late Cretaceous (Maastrichtian) of Penza, Russia",
+      "authors": "Grigoriev DV",
+      "year": 2014,
+      "publisher": "Proceedings of the Zoological Institute RAS",
+      "doi": "10.31610/trudyzin/2014.318.2.148",
+      "url": "https://doi.org/10.31610/trudyzin/2014.318.2.148",
+      "accessed": "2026-11-20"
+    }
+  ],
+  "lastReviewed": "2026-11-20"
+}

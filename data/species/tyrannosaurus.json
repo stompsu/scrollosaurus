@@ -1,0 +1,105 @@
+{
+  "slug": "tyrannosaurus",
+  "scientificName": "Tyrannosaurus rex",
+  "genus": "Tyrannosaurus",
+  "nameMeaning": {
+    "text": {
+      "en": "Tyrant lizard"
+    },
+    "sourceIds": ["nhm-tyrannosaurus"]
+  },
+  "group": "tyrannosauridae",
+  "groupSourceIds": ["pbdb-taxon", "nhm-tyrannosaurus"],
+  "isDinosaur": true,
+  "taxonomy": {
+    "status": "valid"
+  },
+  "diet": {
+    "value": "carnivore",
+    "confidence": "established",
+    "sourceIds": ["nhm-tyrannosaurus", "pbdb-taxon"]
+  },
+  "timeRange": {
+    "startMa": 68,
+    "endMa": 66,
+    "sourceIds": ["nhm-tyrannosaurus"],
+    "note": "NHM gives 68–66 Ma. PBDB occurrences of T. rex are almost all Maastrichtian (stage 72.2–66 Ma); two PBDB records dated Late Campanian are not used here."
+  },
+  "periods": ["cretaceous"],
+  "size": {
+    "lengthM": {
+      "value": [11, 12],
+      "sourceIds": ["hutchinson-2011", "nhm-tyrannosaurus"],
+      "note": "Hutchinson et al. (2011) give body lengths of 11–12 m for four large adults; NHM gives 12 m."
+    },
+    "massKg": {
+      "value": [6000, 9500],
+      "sourceIds": ["hutchinson-2011", "nhm-tyrannosaurus"],
+      "note": "Hutchinson et al. (2011): adults around 6,000–8,000 kg, the largest specimen ('Sue') perhaps about 9,500 kg; their maximal models give much higher values they consider implausible. NHM gives 7,000 kg."
+    }
+  },
+  "locations": [
+    {
+      "continent": "north-america",
+      "countryCode": "US",
+      "formation": "Hell Creek",
+      "sourceIds": ["pbdb-occurrences"]
+    },
+    {
+      "continent": "north-america",
+      "countryCode": "US",
+      "formation": "Lance",
+      "sourceIds": ["pbdb-occurrences"]
+    },
+    {
+      "continent": "north-america",
+      "countryCode": "CA",
+      "formation": "Scollard",
+      "sourceIds": ["pbdb-occurrences"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "Henry Fairfield Osborn",
+    "year": 1905,
+    "sourceIds": ["pbdb-taxon", "nhm-tyrannosaurus"]
+  },
+  "summary": {
+    "en": "Tyrannosaurus rex was one of the largest meat-eating dinosaurs ever. Adults stretched 11–12 metres and weighed several tonnes. It lived in western North America at the very end of the Cretaceous, alongside Triceratops, and was among the last non-bird dinosaurs before the mass extinction 66 million years ago."
+  },
+  "famous": true,
+  "images": [],
+  "sources": [
+    {
+      "id": "nhm-tyrannosaurus",
+      "title": "Tyrannosaurus | Dino Directory",
+      "publisher": "Natural History Museum, London",
+      "url": "https://www.nhm.ac.uk/discover/dino-directory/tyrannosaurus.html",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-taxon",
+      "title": "Tyrannosaurus rex (taxon 54833)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=54833",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-occurrences",
+      "title": "Fossil occurrences of Tyrannosaurus rex",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Tyrannosaurus+rex&idreso=species&show=strat%2Cloc",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "hutchinson-2011",
+      "title": "A computational analysis of limb and body dimensions in Tyrannosaurus rex with implications for locomotion, ontogeny, and growth",
+      "authors": "Hutchinson JR, Bates KT, Molnar J, Allen V, Makovicky PJ",
+      "year": 2011,
+      "publisher": "PLoS ONE",
+      "doi": "10.1371/journal.pone.0026037",
+      "url": "https://doi.org/10.1371/journal.pone.0026037",
+      "accessed": "2026-11-20"
+    }
+  ],
+  "lastReviewed": "2026-11-20"
+}

@@ -1,0 +1,101 @@
+{
+  "slug": "maiasaura",
+  "scientificName": "Maiasaura peeblesorum",
+  "genus": "Maiasaura",
+  "nameMeaning": {
+    "text": {
+      "en": "Good mother lizard"
+    },
+    "sourceIds": ["nhm-maiasaura"]
+  },
+  "group": "hadrosauridae",
+  "groupSourceIds": ["pbdb-taxon", "nhm-maiasaura"],
+  "isDinosaur": true,
+  "taxonomy": {
+    "status": "valid"
+  },
+  "diet": {
+    "value": "herbivore",
+    "confidence": "established",
+    "sourceIds": ["nhm-maiasaura", "pbdb-taxon"]
+  },
+  "timeRange": {
+    "startMa": 80,
+    "endMa": 75,
+    "sourceIds": ["nhm-maiasaura"],
+    "note": "NHM gives 80–75 Ma. PBDB occurrences are all from the Campanian Two Medicine Formation."
+  },
+  "periods": ["cretaceous"],
+  "size": {
+    "lengthM": {
+      "value": [9, 9],
+      "sourceIds": ["nhm-maiasaura"],
+      "note": "Single museum estimate (NHM)."
+    },
+    "massKg": {
+      "value": [2500, 2500],
+      "sourceIds": ["nhm-maiasaura"],
+      "note": "Single museum estimate (NHM); mass estimates vary widely between methods."
+    }
+  },
+  "locations": [
+    {
+      "continent": "north-america",
+      "countryCode": "US",
+      "formation": "Two Medicine",
+      "sourceIds": ["pbdb-occurrences"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "John R. Horner and Robert Makela",
+    "year": 1979,
+    "sourceIds": ["pbdb-taxon", "horner-makela-1979"]
+  },
+  "summary": {
+    "en": "Maiasaura was a duck-billed plant-eater from Montana, USA, that lived during the Campanian, about 80–75 million years ago. Its name means 'good mother lizard' because it was found with nests and young, showing that some dinosaurs cared for their babies. It grew to around nine metres long."
+  },
+  "funFacts": [
+    {
+      "text": {
+        "en": "Maiasaura was named from a nest of juveniles, which gave evidence of family life among dinosaurs."
+      },
+      "sourceIds": ["horner-makela-1979"]
+    }
+  ],
+  "famous": false,
+  "images": [],
+  "sources": [
+    {
+      "id": "nhm-maiasaura",
+      "title": "Maiasaura | Dino Directory",
+      "publisher": "Natural History Museum, London",
+      "url": "https://www.nhm.ac.uk/discover/dino-directory/maiasaura.html",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-taxon",
+      "title": "Maiasaura peeblesorum (taxon 55574)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=55574",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-occurrences",
+      "title": "Fossil occurrences of Maiasaura peeblesorum",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Maiasaura+peeblesorum&idreso=species&show=strat%2Cloc",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "horner-makela-1979",
+      "title": "Nest of juveniles provides evidence of family structure among dinosaurs",
+      "authors": "Horner JR, Makela R",
+      "year": 1979,
+      "publisher": "Nature",
+      "doi": "10.1038/282296a0",
+      "url": "https://doi.org/10.1038/282296a0",
+      "accessed": "2026-11-20"
+    }
+  ],
+  "lastReviewed": "2026-11-20"
+}

@@ -1,0 +1,105 @@
+{
+  "slug": "ankylosaurus",
+  "scientificName": "Ankylosaurus magniventris",
+  "genus": "Ankylosaurus",
+  "nameMeaning": {
+    "text": {
+      "en": "Fused lizard"
+    },
+    "sourceIds": ["nhm-ankylosaurus"]
+  },
+  "group": "ankylosauria",
+  "groupSourceIds": ["pbdb-taxon", "nhm-ankylosaurus", "arbour-mallon-2017"],
+  "isDinosaur": true,
+  "taxonomy": {
+    "status": "valid"
+  },
+  "diet": {
+    "value": "herbivore",
+    "confidence": "established",
+    "sourceIds": ["nhm-ankylosaurus", "pbdb-taxon"]
+  },
+  "timeRange": {
+    "startMa": 68,
+    "endMa": 66,
+    "sourceIds": ["nhm-ankylosaurus"],
+    "note": "NHM gives 68–66 Ma. All PBDB occurrences of A. magniventris are Maastrichtian (stage 72.2–66 Ma)."
+  },
+  "periods": ["cretaceous"],
+  "size": {
+    "lengthM": {
+      "value": [8, 8],
+      "sourceIds": ["nhm-ankylosaurus"],
+      "note": "Single museum estimate (NHM). Ankylosaurus is known from fragmentary remains, so length is extrapolated."
+    },
+    "massKg": {
+      "value": [8000, 8000],
+      "sourceIds": ["nhm-ankylosaurus"],
+      "note": "Single museum estimate (NHM); mass estimates vary widely between methods."
+    }
+  },
+  "locations": [
+    {
+      "continent": "north-america",
+      "countryCode": "US",
+      "formation": "Hell Creek",
+      "sourceIds": ["pbdb-occurrences"]
+    },
+    {
+      "continent": "north-america",
+      "countryCode": "US",
+      "formation": "Lance",
+      "sourceIds": ["pbdb-occurrences"]
+    },
+    {
+      "continent": "north-america",
+      "countryCode": "CA",
+      "formation": "Scollard",
+      "sourceIds": ["pbdb-occurrences"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "Barnum Brown",
+    "year": 1908,
+    "sourceIds": ["pbdb-taxon", "nhm-ankylosaurus"]
+  },
+  "summary": {
+    "en": "Ankylosaurus was a low, wide plant-eater covered in bony armour plates, with a heavy club at the end of its tail. It lived in western North America at the very end of the Cretaceous, alongside Tyrannosaurus and Triceratops. Although it is famous, it is known only from incomplete skeletons, so palaeontologists still estimate its full size from its relatives."
+  },
+  "famous": true,
+  "images": [],
+  "sources": [
+    {
+      "id": "nhm-ankylosaurus",
+      "title": "Ankylosaurus | Dino Directory",
+      "publisher": "Natural History Museum, London",
+      "url": "https://www.nhm.ac.uk/discover/dino-directory/ankylosaurus.html",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-taxon",
+      "title": "Ankylosaurus magniventris (taxon 52793)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=52793",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-occurrences",
+      "title": "Fossil occurrences of Ankylosaurus magniventris",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Ankylosaurus+magniventris&idreso=species&show=strat%2Cloc",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "arbour-mallon-2017",
+      "title": "Unusual cranial and postcranial anatomy in the archetypal ankylosaur Ankylosaurus magniventris",
+      "authors": "Arbour VM, Mallon JC",
+      "year": 2017,
+      "publisher": "FACETS",
+      "doi": "10.1139/facets-2017-0063",
+      "url": "https://doi.org/10.1139/facets-2017-0063",
+      "accessed": "2026-11-20"
+    }
+  ],
+  "lastReviewed": "2026-11-20"
+}

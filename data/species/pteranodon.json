@@ -1,0 +1,98 @@
+{
+  "slug": "pteranodon",
+  "scientificName": "Pteranodon longiceps",
+  "genus": "Pteranodon",
+  "nameMeaning": {
+    "text": {
+      "en": "Winged and toothless"
+    },
+    "sourceIds": ["field-museum-2018"]
+  },
+  "group": "pteranodontidae",
+  "groupSourceIds": ["pbdb-taxon"],
+  "isDinosaur": false,
+  "taxonomy": {
+    "status": "valid"
+  },
+  "diet": {
+    "value": "piscivore",
+    "confidence": "probable",
+    "sourceIds": ["pbdb-taxon"],
+    "note": "Based on the PBDB ecology entry for the genus."
+  },
+  "timeRange": {
+    "startMa": 85.7,
+    "endMa": 72.2,
+    "sourceIds": ["pbdb-occurrences"],
+    "note": "PBDB occurrences: Santonian (Niobrara) to Early–Middle Campanian (Pierre Shale). Ages are ICS stage bounds (Santonian base 85.7 Ma, Campanian top 72.2 Ma), so the range is broader than the fossils themselves."
+  },
+  "periods": ["cretaceous"],
+  "size": {},
+  "locations": [
+    {
+      "continent": "north-america",
+      "countryCode": "US",
+      "formation": "Niobrara",
+      "sourceIds": ["pbdb-occurrences"]
+    },
+    {
+      "continent": "north-america",
+      "countryCode": "US",
+      "formation": "Pierre Shale",
+      "sourceIds": ["pbdb-occurrences"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "Othniel Charles Marsh",
+    "year": 1876,
+    "sourceIds": ["pbdb-taxon"]
+  },
+  "summary": {
+    "en": "Pteranodon was a flying reptile, not a dinosaur. It belonged to the pterosaurs, cousins of the dinosaurs. It had long wings, a toothless beak and a backward-pointing crest. It flew over the shallow sea that covered central North America in the Late Cretaceous, and its fossils are common in the chalk of Kansas."
+  },
+  "famous": true,
+  "images": [],
+  "uncertain": [
+    {
+      "field": "size.lengthM",
+      "note": "Wingspan, the usual size measure for pterosaurs, is not modelled in the schema; no verified body length found."
+    },
+    {
+      "field": "size.massKg",
+      "note": "No verified mass estimate found."
+    },
+    {
+      "field": "timeRange",
+      "note": "Only stage-level ages available (PBDB); the end bound uses the top of the Campanian although records are labelled Early–Middle Campanian."
+    },
+    {
+      "field": "group",
+      "note": "PBDB places Pteranodon in Pteranodontia without naming a family; no verified source for Pteranodontidae was opened."
+    }
+  ],
+  "sources": [
+    {
+      "id": "pbdb-taxon",
+      "title": "Pteranodon (taxon 38502)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=38502",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-occurrences",
+      "title": "Fossil occurrences of Pteranodon longiceps",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Pteranodon+longiceps&idreso=species&show=strat%2Cloc",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "field-museum-2018",
+      "title": "Meet the Pterosaur Flock",
+      "year": 2018,
+      "publisher": "Field Museum",
+      "url": "https://fieldmuseum.org/blog/meet-pterosaur-flock",
+      "accessed": "2026-11-20"
+    }
+  ],
+  "lastReviewed": "2026-11-20"
+}

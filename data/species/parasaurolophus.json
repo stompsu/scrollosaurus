@@ -1,0 +1,89 @@
+{
+  "slug": "parasaurolophus",
+  "scientificName": "Parasaurolophus walkeri",
+  "genus": "Parasaurolophus",
+  "nameMeaning": {
+    "text": {
+      "en": "Like Saurolophus"
+    },
+    "sourceIds": ["nhm-parasaurolophus"]
+  },
+  "group": "hadrosauridae",
+  "groupSourceIds": ["pbdb-taxon", "nhm-parasaurolophus"],
+  "isDinosaur": true,
+  "taxonomy": {
+    "status": "valid"
+  },
+  "diet": {
+    "value": "herbivore",
+    "confidence": "established",
+    "sourceIds": ["nhm-parasaurolophus", "pbdb-taxon"]
+  },
+  "timeRange": {
+    "startMa": 77,
+    "endMa": 73,
+    "sourceIds": ["nhm-parasaurolophus"],
+    "note": "NHM gives 77–73 Ma for the genus. P. walkeri itself is known in PBDB only from the Dinosaur Park Formation (Late Campanian)."
+  },
+  "periods": ["cretaceous"],
+  "size": {
+    "lengthM": {
+      "value": [9, 9],
+      "sourceIds": ["nhm-parasaurolophus"],
+      "note": "Single museum estimate (NHM)."
+    },
+    "massKg": {
+      "value": [5000, 5000],
+      "sourceIds": ["nhm-parasaurolophus"],
+      "note": "Single museum estimate (NHM); mass estimates vary widely between methods."
+    }
+  },
+  "locations": [
+    {
+      "continent": "north-america",
+      "countryCode": "CA",
+      "formation": "Dinosaur Park",
+      "sourceIds": ["pbdb-occurrences"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "William Parks",
+    "year": 1922,
+    "sourceIds": ["pbdb-taxon", "nhm-parasaurolophus"]
+  },
+  "summary": {
+    "en": "Parasaurolophus was a duck-billed dinosaur with a long, hollow, backward-curving crest on its head. It walked on two or four legs and ate plants. The type species, P. walkeri, comes from Alberta, Canada, in rocks from the late Campanian, roughly 77–73 million years ago."
+  },
+  "famous": true,
+  "images": [],
+  "uncertain": [
+    {
+      "field": "timeRange",
+      "note": "The 77–73 Ma range is the NHM figure for the whole genus; no verified radiometric range for P. walkeri alone was found."
+    }
+  ],
+  "sources": [
+    {
+      "id": "nhm-parasaurolophus",
+      "title": "Parasaurolophus | Dino Directory",
+      "publisher": "Natural History Museum, London",
+      "url": "https://www.nhm.ac.uk/discover/dino-directory/parasaurolophus.html",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-taxon",
+      "title": "Parasaurolophus walkeri (taxon 63256)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=63256",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-occurrences",
+      "title": "Fossil occurrences of Parasaurolophus walkeri",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Parasaurolophus+walkeri&idreso=species&show=strat%2Cloc",
+      "accessed": "2026-11-20"
+    }
+  ],
+  "lastReviewed": "2026-11-20"
+}
