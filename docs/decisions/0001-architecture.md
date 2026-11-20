@@ -70,7 +70,9 @@ No cookies, no accounts, no tracking analytics. Optional `localStorage` for them
 - Deployed from `main` by `.github/workflows/deploy.yml` using `actions/upload-pages-artifact` + `actions/deploy-pages`.
 - Served at `https://stompsu.github.io/scrollosaurus/`, so Vite's `base` is `/scrollosaurus/` (override with `BASE_PATH`, e.g. `/` for a custom domain). The router reads its basename from `import.meta.env.BASE_URL`.
 - **Deep links return 200, without the `404.html` workaround:** every route is known at build time, so `scripts/emit-route-html.ts` writes `dist/<route>/index.html` for each static route (and, from Phase 3, each species). `404.html` is a copy of the app that renders the not-found page. The same files will carry per-species meta/Open Graph tags in Phase 7.
-- No custom response headers: CSP goes in a `<meta>` tag; caching is Pages' default, which is fine because Vite emits hashed asset names.
+- No custom response headers: the CSP is a `<meta>` tag added to production builds by a small Vite plugin (`vite.config.ts`; strict `'self'` policy, no inline scripts or styles). Caching is Pages' default, which is fine because Vite emits hashed asset names.
+- E2E tests run against `scripts/serve-pages.ts`, a tiny static server that behaves like Pages (no SPA fallback, `404.html` with status 404), so a missing per-route file fails the tests.
+- Deploys run only after the CI workflow succeeds on `main` (`workflow_run`), building the exact commit CI tested.
 - No per-PR preview deployments. If needed later (e.g. Phase 6 content review), add a preview host alongside Pages; the output is plain static files.
 
 ## Rejected alternatives
