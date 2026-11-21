@@ -62,7 +62,15 @@
     }
   ],
   "famous": false,
-  "images": [],
+  "images": [
+    {
+      "commonsFile": "File:Life restoration of a group of giant azhdarchids, Quetzalcoatlus northropi, foraging on a Cretaceous fern prairie.png",
+      "kind": "life-reconstruction",
+      "alt": {
+        "en": "Life restoration of a group of Quetzalcoatlus northropi foraging on a Cretaceous fern prairie, one of them holding a juvenile titanosaur."
+      }
+    }
+  ],
   "uncertain": [
     {
       "field": "size.lengthM",

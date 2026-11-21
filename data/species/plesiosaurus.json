@@ -65,7 +65,13 @@
     }
   ],
   "famous": false,
-  "images": [],
+  "images": [
+    {
+      "commonsFile": "File:Plesiosaurus dolichodeirus 65.jpg",
+      "kind": "fossil",
+      "alt": { "en": "Fossil skeleton of Plesiosaurus at Teylers Museum in Haarlem." }
+    }
+  ],
   "uncertain": [
     {
       "field": "size.lengthM",

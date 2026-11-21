@@ -78,7 +78,15 @@
     }
   ],
   "famous": true,
-  "images": [],
+  "images": [
+    {
+      "commonsFile": "File:Sophie the Stegosaurus stenops of the Natural History Museum, London.jpg",
+      "kind": "skeleton-mount",
+      "alt": {
+        "en": "Sophie, a Stegosaurus stenops skeleton at the Natural History Museum, London."
+      }
+    }
+  ],
   "sources": [
     {
       "id": "maidment-2015",

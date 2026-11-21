@@ -70,7 +70,15 @@
     "sourceIds": ["hutchinson-2011", "nhm-tyrannosaurus"]
   },
   "famous": true,
-  "images": [],
+  "images": [
+    {
+      "commonsFile": "File:Tyrannosaurus rex skeleton (cast of specimen MOR 555) at Cleveland Museum of Natural History.jpg",
+      "kind": "skeleton-mount",
+      "alt": {
+        "en": "Cast of the Tyrannosaurus rex skeleton MOR 555, the “Wankel rex”, at the Cleveland Museum of Natural History."
+      }
+    }
+  ],
   "sources": [
     {
       "id": "nhm-tyrannosaurus",

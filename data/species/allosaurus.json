@@ -68,7 +68,15 @@
     }
   ],
   "famous": true,
-  "images": [],
+  "images": [
+    {
+      "commonsFile": "File:Allosaurus fragilis moulage MNHN paleontologie 1.JPG",
+      "kind": "skeleton-mount",
+      "alt": {
+        "en": "Cast of an Allosaurus fragilis skeleton mounted in a museum palaeontology hall."
+      }
+    }
+  ],
   "sources": [
     {
       "id": "chure-loewen-2020",

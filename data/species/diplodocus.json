@@ -66,7 +66,15 @@
     }
   ],
   "famous": true,
-  "images": [],
+  "images": [
+    {
+      "commonsFile": "File:Diplodocus carnegii sauropod dinosaur (Morrison Formation, Upper Jurassic; Sheep Creek, Albany County, southeastern Wyoming, USA) 1 (15396317462).jpg",
+      "kind": "skeleton-mount",
+      "alt": {
+        "en": "Mounted holotype skeleton of Diplodocus carnegii on public display in a museum."
+      }
+    }
+  ],
   "uncertain": [
     {
       "field": "taxonomy",

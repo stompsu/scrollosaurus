@@ -70,7 +70,13 @@
     "sourceIds": ["nhm-ankylosaurus", "pbdb-occurrences", "arbour-mallon-2017"]
   },
   "famous": true,
-  "images": [],
+  "images": [
+    {
+      "commonsFile": "File:Ankylosaur head - cast - Custer County Montana - Museum of the Rockies - 2013-07-08.jpg",
+      "kind": "skull",
+      "alt": { "en": "Cast of an Ankylosaurus skull on display in a museum." }
+    }
+  ],
   "sources": [
     {
       "id": "nhm-ankylosaurus",

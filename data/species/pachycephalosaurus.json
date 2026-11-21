@@ -73,7 +73,15 @@
     }
   ],
   "famous": false,
-  "images": [],
+  "images": [
+    {
+      "commonsFile": "File:Pachycephalosaurus wyomingensis skeleton.JPG",
+      "kind": "skeleton-mount",
+      "alt": {
+        "en": "Cast skeleton of Pachycephalosaurus wyomingensis at the North American Museum of Ancient Life."
+      }
+    }
+  ],
   "uncertain": [
     {
       "field": "size.massKg",

@@ -67,7 +67,15 @@
     }
   ],
   "famous": false,
-  "images": [],
+  "images": [
+    {
+      "commonsFile": "File:Oviraptor Restoration.png",
+      "kind": "life-reconstruction",
+      "alt": {
+        "en": "Life restoration of Oviraptor, a Late Cretaceous oviraptorid dinosaur from the Djadokhta Formation."
+      }
+    }
+  ],
   "uncertain": [
     {
       "field": "diet",

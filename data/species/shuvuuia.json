@@ -62,7 +62,15 @@
     }
   ],
   "famous": false,
-  "images": [],
+  "images": [
+    {
+      "commonsFile": "File:Shuvuuia.jpg",
+      "kind": "life-reconstruction",
+      "alt": {
+        "en": "Life restoration of Shuvuuia deserti based on a skeletal diagram and fossils."
+      }
+    }
+  ],
   "uncertain": [
     {
       "field": "diet",

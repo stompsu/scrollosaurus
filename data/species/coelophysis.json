@@ -66,7 +66,13 @@
     }
   ],
   "famous": true,
-  "images": [],
+  "images": [
+    {
+      "commonsFile": "File:Coelophysis bauri mount.jpg",
+      "kind": "skeleton-mount",
+      "alt": { "en": "Mounted skeleton of the small early theropod Coelophysis bauri." }
+    }
+  ],
   "sources": [
     {
       "id": "nhm",

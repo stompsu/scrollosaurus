@@ -65,7 +65,15 @@
     "sourceIds": ["nhm-triceratops", "pbdb-occurrences"]
   },
   "famous": true,
-  "images": [],
+  "images": [
+    {
+      "commonsFile": "File:Triceratops horridus - Cleveland Museum of Natural History (34800619235).jpg",
+      "kind": "skeleton-mount",
+      "alt": {
+        "en": "Cast of a Triceratops horridus skeleton on exhibit at the Cleveland Museum of Natural History."
+      }
+    }
+  ],
   "sources": [
     {
       "id": "nhm-triceratops",

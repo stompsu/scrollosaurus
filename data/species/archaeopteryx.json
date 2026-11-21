@@ -69,7 +69,15 @@
     }
   ],
   "famous": true,
-  "images": [],
+  "images": [
+    {
+      "commonsFile": "File:Berlin Archaeopteryx.jpg",
+      "kind": "fossil",
+      "alt": {
+        "en": "The original Berlin specimen of Archaeopteryx lithographica, a fossil skeleton with feather impressions in a limestone slab."
+      }
+    }
+  ],
   "uncertain": [
     {
       "field": "group",

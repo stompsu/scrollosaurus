@@ -69,7 +69,15 @@
     }
   ],
   "famous": true,
-  "images": [],
+  "images": [
+    {
+      "commonsFile": "File:Plateosaurus Skelett 1.jpg",
+      "kind": "skeleton-mount",
+      "alt": {
+        "en": "Nearly complete Plateosaurus skeleton from Trossingen, Germany, mounted in the museum of the Institute for Geosciences at the University of Tübingen."
+      }
+    }
+  ],
   "uncertain": [
     {
       "field": "size.massKg",

@@ -72,7 +72,15 @@
     }
   ],
   "famous": false,
-  "images": [],
+  "images": [
+    {
+      "commonsFile": "File:Dilophosaurus 2020.jpg",
+      "kind": "life-reconstruction",
+      "alt": {
+        "en": "Life reconstruction of Dilophosaurus wetherilli, a two-legged predator with a pair of crests on its head."
+      }
+    }
+  ],
   "sources": [
     {
       "id": "marsh-rowe-2020",

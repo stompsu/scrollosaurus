@@ -67,7 +67,15 @@
     }
   ],
   "famous": false,
-  "images": [],
+  "images": [
+    {
+      "commonsFile": "File:Therizinosaurus Restoration.png",
+      "kind": "life-reconstruction",
+      "alt": {
+        "en": "Life restoration of the giant therizinosaurid Therizinosaurus cheloniformis."
+      }
+    }
+  ],
   "uncertain": [
     {
       "field": "size.lengthM",

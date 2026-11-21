@@ -80,7 +80,15 @@
     "sourceIds": ["pbdb-genus", "grigoriev-2014", "harrell-martin-2015"]
   },
   "famous": true,
-  "images": [],
+  "images": [
+    {
+      "commonsFile": "File:Mosasaurus hoffmannii - skeleton.jpg",
+      "kind": "skeleton-mount",
+      "alt": {
+        "en": "Reconstructed skeleton of the Bemelen Mosasaurus on display at the Natural History Museum of Maastricht."
+      }
+    }
+  ],
   "uncertain": [
     {
       "field": "size.massKg",
