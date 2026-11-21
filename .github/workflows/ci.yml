@@ -50,3 +50,19 @@ jobs:
           name: playwright-report
           path: playwright-report
           retention-days: 7
+
+  lighthouse:
+    name: Lighthouse (Performance ≥ 90)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: pnpm/action-setup@v6
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm exec playwright install --with-deps chromium
+      - run: pnpm build
+      # Fails the job if Performance is below 90 on any measured page.
+      - run: pnpm lighthouse:ci

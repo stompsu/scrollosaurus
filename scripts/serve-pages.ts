@@ -4,10 +4,13 @@
  * index.html, and answers unknown paths with 404.html and status 404.
  * Unlike `vite preview`, it has no SPA fallback, so missing per-route HTML shows up as a 404.
  * DIST_DIR overrides the served directory (the perf build lives outside dist/).
+ * Text files are gzipped when the client accepts it, as Pages does, so Lighthouse measures
+ * realistic transfer sizes.
  */
 import { createReadStream } from 'node:fs';
 import { stat } from 'node:fs/promises';
 import { createServer } from 'node:http';
+import { createGzip } from 'node:zlib';
 import { extname, join, normalize, resolve as resolvePath } from 'node:path';
 
 const DIST = process.env.DIST_DIR
@@ -63,10 +66,17 @@ createServer((req, res) => {
       return;
     }
     const path = found?.path ?? join(DIST, '404.html');
+    const type = TYPES[extname(path)] ?? 'application/octet-stream';
+    const gzip =
+      /^(text\/|application\/json|image\/svg)/.test(type) &&
+      /\bgzip\b/.test(req.headers['accept-encoding'] ?? '');
     res.writeHead(found ? 200 : 404, {
-      'Content-Type': TYPES[extname(path)] ?? 'application/octet-stream',
+      'Content-Type': type,
+      ...(gzip ? { 'Content-Encoding': 'gzip', Vary: 'Accept-Encoding' } : {}),
     });
-    createReadStream(path).pipe(res);
+    const stream = createReadStream(path);
+    if (gzip) stream.pipe(createGzip()).pipe(res);
+    else stream.pipe(res);
   });
 }).listen(PORT, () => {
   console.log(`Serving ${DIST} like GitHub Pages at http://localhost:${PORT}${BASE}`);
