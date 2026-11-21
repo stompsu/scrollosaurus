@@ -1,3 +1,4 @@
+import { IMAGE_KIND_LABELS } from '@/lib/labels';
 import type { SpeciesImage } from '@/lib/species-index';
 
 const BASE = import.meta.env.BASE_URL;
@@ -80,8 +81,18 @@ export function ImageCredit({
       )}
       , via{' '}
       <a href={image.sourceUrl} rel="noreferrer">
-        Wikimedia Commons
+        Wikimedia Commons<span className="sr-only">, file page for {imageTitle(image)}</span>
       </a>
+    </span>
+  );
+}
+
+/** "Mounted skeleton", plus the image's note when it has one (a related species, a debated pose). */
+export function ImageContext({ image }: { image: SpeciesImage }) {
+  return (
+    <span className="sc-image-context" data-testid="image-context">
+      {IMAGE_KIND_LABELS[image.kind]}
+      {image.note && <>. {image.note}</>}
     </span>
   );
 }

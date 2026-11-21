@@ -1,5 +1,5 @@
 import { Link } from 'react-router';
-import { ImageCredit, SpeciesPicture } from '@/components/ui/SpeciesPicture';
+import { ImageContext, ImageCredit, SpeciesPicture } from '@/components/ui/SpeciesPicture';
 import { geologicTime } from '@/lib/geologic-time';
 import { species } from '@/lib/species';
 
@@ -44,6 +44,9 @@ export default function CreditsPage() {
                     <i>{s.genus}</i>
                   </Link>
                   : {image.alt}
+                </p>
+                <p className="text-sm">
+                  <ImageContext image={image} />
                 </p>
                 <ImageCredit image={image} />
               </div>

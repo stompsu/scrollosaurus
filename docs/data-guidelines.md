@@ -65,6 +65,9 @@ is missing. Scientific names are never translated.
    API, rejects licences outside PD / CC0 / CC BY / CC BY-SA, writes resized copies to
    `public/images/` and the credit to `data/generated/images.json`. Commit both. Never type a
    credit by hand; `pnpm images --refresh` re-reads every credit.
+   If the image needs context to be honest (a related species, a contested pose), add
+   `note.en`: it is shown under the image. The image kind (fossil, mounted skeleton, skull, life
+   reconstruction) is always shown.
 10. **Set `lastReviewed`** to today and run `pnpm validate:data`. It prints errors, warnings and
     the list of fields flagged as uncertain.
 

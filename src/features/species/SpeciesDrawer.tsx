@@ -9,7 +9,7 @@ import {
 } from 'react';
 import { Link } from 'react-router';
 import { DietBadge, NotADinosaurTag } from '@/components/ui/DietBadge';
-import { ImageCredit, SpeciesPicture } from '@/components/ui/SpeciesPicture';
+import { ImageContext, ImageCredit, SpeciesPicture } from '@/components/ui/SpeciesPicture';
 import { formatMa, formatMaWithUncertainty } from '@/lib/geologic-time';
 import { groupName } from '@/lib/groups';
 import { CONTINENT_LABELS, countryName, formatMass, formatRange } from '@/lib/labels';
@@ -180,7 +180,8 @@ export function SpeciesDrawer({
                 sizes="(max-width: 40rem) 100vw, 34rem"
                 loading="eager"
               />
-              <figcaption>
+              <figcaption className="sc-drawer-caption">
+                <ImageContext image={item.images[0]} />
                 <ImageCredit image={item.images[0]} />
               </figcaption>
             </figure>

@@ -70,3 +70,16 @@ test('images reserve their space before they load', async ({ page }) => {
   // Blocking the files above logs network errors on purpose.
   consoleErrors = [];
 });
+
+test('the drawer says what an image shows, including when it is a related species', async ({
+  page,
+}) => {
+  await page.goto('species/mamenchisaurus');
+  const context = page.getByTestId('species-drawer').getByTestId('image-context');
+  await expect(context).toContainText('Mounted skeleton');
+  await expect(context).toContainText('Mamenchisaurus hochuanensis, a related species');
+  await page.goto('species/oviraptor');
+  await expect(page.getByTestId('species-drawer').getByTestId('image-context')).toHaveText(
+    /^Life reconstruction/,
+  );
+});

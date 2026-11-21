@@ -574,6 +574,20 @@ body {
 .sc-card-thumb {
   overflow: hidden;
 }
+.sc-card-thumb picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.sc-drawer-caption {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+.sc-image-context {
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
 .sc-card-thumb .sc-picture {
   width: 100%;
   height: 100%;

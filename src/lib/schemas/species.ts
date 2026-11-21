@@ -61,6 +61,8 @@ const imageSchema = z
     commonsFile: z.string().regex(/^File:.+\.(jpe?g|png|svg|tiff?|webp)$/i),
     kind: z.enum(['fossil', 'skeleton-mount', 'life-reconstruction', 'skull']),
     alt: localizedTextSchema,
+    /** Shown under the image when it needs context, e.g. a related species or a debated pose. */
+    note: localizedTextSchema.optional(),
   })
   .strict();
 

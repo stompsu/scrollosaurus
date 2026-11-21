@@ -34,6 +34,14 @@ export const PERIOD_LABELS: Record<PeriodId, string> = {
 
 export const NOT_A_DINOSAUR = 'not a dinosaur';
 
+/** What an image shows, as labelled under it. */
+export const IMAGE_KIND_LABELS: Record<Species['images'][number]['kind'], string> = {
+  fossil: 'Fossil',
+  'skeleton-mount': 'Mounted skeleton',
+  skull: 'Skull',
+  'life-reconstruction': 'Life reconstruction (an artist’s interpretation)',
+};
+
 const regionNames =
   typeof Intl.DisplayNames === 'function'
     ? new Intl.DisplayNames(['en'], { type: 'region' })

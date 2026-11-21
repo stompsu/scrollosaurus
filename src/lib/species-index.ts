@@ -9,6 +9,8 @@ export interface SpeciesImage {
   commonsFile: string;
   kind: Species['images'][number]['kind'];
   alt: string;
+  /** Visible context for the image, when the data gives one. */
+  note?: string;
   /** Path under the site root without width and extension, e.g. "images/1a2b3c4d5e6f". */
   basename: string;
   widths: number[];
@@ -102,6 +104,7 @@ export function buildSpeciesIndex(
               commonsFile: img.commonsFile,
               kind: img.kind,
               alt: img.alt.en,
+              ...(img.note === undefined ? {} : { note: img.note.en }),
               basename: e.basename,
               widths: e.widths,
               width: e.width,
