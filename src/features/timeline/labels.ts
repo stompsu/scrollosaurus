@@ -1,4 +1,6 @@
-import { formatMa, formatUncertainty } from '@/lib/geologic-time';
+import { formatMa, formatUncertainty, unitName } from '@/lib/geologic-time';
+import { i18nFor } from '@/lib/i18n';
+import { getLocale } from '@/lib/locale';
 import type { GeologicUnit } from '@/lib/schemas/geologic-time';
 
 /** One edge between geologic units, with the chart's uncertainty or approximate flag. */
@@ -19,9 +21,14 @@ export function formatBoundary(b: Boundary): string {
 
 /** Spoken form of a boundary, e.g. "about 237" or "201.4 plus or minus 0.2". */
 export function describeBoundary(b: Boundary): string {
-  if (b.approximate) return `about ${formatMa(b.ma)}`;
+  const i18n = i18nFor(getLocale());
+  const t = i18n.t.bind(i18n);
+  if (b.approximate) return t('time.about', { value: formatMa(b.ma) });
   if (b.uncertaintyMa !== undefined && b.uncertaintyMa > 0) {
-    return `${formatMa(b.ma)} plus or minus ${formatUncertainty(b.uncertaintyMa)}`;
+    return t('time.plusMinus', {
+      value: formatMa(b.ma),
+      uncertainty: formatUncertainty(b.uncertaintyMa),
+    });
   }
   return formatMa(b.ma);
 }
@@ -45,7 +52,7 @@ export function boundariesOf(units: readonly GeologicUnit[]): Boundary[] {
 
 /** Label candidates for a band, longest first. The empty string means "no label". */
 export function bandLabelCandidates(unit: GeologicUnit): string[] {
-  const { name } = unit;
+  const name = unitName(unit);
   switch (unit.rank) {
     case 'era':
       return [name, ''];

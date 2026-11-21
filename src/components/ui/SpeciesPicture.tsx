@@ -1,4 +1,5 @@
-import { IMAGE_KIND_LABELS } from '@/lib/labels';
+import { useTranslation } from 'react-i18next';
+import { useLocalize } from '@/lib/lang';
 import type { SpeciesImage } from '@/lib/species-index';
 
 const BASE = import.meta.env.BASE_URL;
@@ -31,6 +32,7 @@ export function SpeciesPicture({
   loading = 'lazy',
   decorative = false,
 }: SpeciesPictureProps) {
+  const localize = useLocalize();
   const largest = image.widths[image.widths.length - 1] ?? image.width;
   return (
     <picture>
@@ -41,7 +43,7 @@ export function SpeciesPicture({
         src={`${BASE}${image.basename}-${String(largest)}.webp`}
         width={image.width}
         height={image.height}
-        alt={decorative ? '' : image.alt}
+        alt={decorative ? '' : localize(image.alt)}
         loading={loading}
         decoding="async"
         style={{ backgroundImage: `url("${image.placeholder}")` }}
@@ -67,11 +69,12 @@ export function ImageCredit({
   image: SpeciesImage;
   compact?: boolean;
 }) {
+  const { t } = useTranslation();
   const who = image.attribution ?? image.author;
+  const title = imageTitle(image);
   return (
     <span className={`sc-credit${compact ? ' sc-credit--compact' : ''}`} data-testid="image-credit">
-      Image: {compact ? '' : `“${imageTitle(image)}” by `}
-      {who},{' '}
+      {compact ? t('image.creditCompact', { who }) : t('image.credit', { title, who })}
       {image.licenseUrl ? (
         <a href={image.licenseUrl} rel="license noreferrer">
           {image.license}
@@ -79,9 +82,10 @@ export function ImageCredit({
       ) : (
         image.license
       )}
-      , via{' '}
+      {t('image.via')}
       <a href={image.sourceUrl} rel="noreferrer">
-        Wikimedia Commons<span className="sr-only">, file page for {imageTitle(image)}</span>
+        {t('image.commons')}
+        <span className="sr-only">{t('image.filePage', { title })}</span>
       </a>
     </span>
   );
@@ -89,10 +93,12 @@ export function ImageCredit({
 
 /** "Mounted skeleton", plus the image's note when it has one (a related species, a debated pose). */
 export function ImageContext({ image }: { image: SpeciesImage }) {
+  const { t } = useTranslation();
+  const localize = useLocalize();
   return (
     <span className="sc-image-context" data-testid="image-context">
-      {IMAGE_KIND_LABELS[image.kind]}
-      {image.note && <>. {image.note}</>}
+      {t(`imageKind.${image.kind}`)}
+      {image.note && <>. {localize(image.note)}</>}
     </span>
   );
 }

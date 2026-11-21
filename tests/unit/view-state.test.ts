@@ -47,7 +47,7 @@ describe('size classes', () => {
   it('is in the species index', () => {
     expect(bySlug('plateosaurus').sizeClasses).toEqual(['medium', 'large']);
     expect(bySlug('mamenchisaurus').sizeClasses).toEqual([]);
-    expect(bySlug('sinosauropteryx').nameMeaning).toBe('Chinese lizard wing');
+    expect(bySlug('sinosauropteryx').nameMeaning.en).toBe('Chinese lizard wing');
   });
 });
 

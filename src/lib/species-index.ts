@@ -4,13 +4,19 @@ import type { Continent, Diet, PeriodId, Species } from './schemas/species';
 // Runtime import with an extension: vite.config.ts loads this file through Node.
 import { sizeClassesFor, type SizeClass } from './size-class.ts';
 
+/** A text in English and, when written, Polish. */
+export interface LocalText {
+  en: string;
+  pl?: string | undefined;
+}
+
 /** An image ready to show: alt text, derivative files and its full credit. */
 export interface SpeciesImage {
   commonsFile: string;
   kind: Species['images'][number]['kind'];
-  alt: string;
+  alt: LocalText;
   /** Visible context for the image, when the data gives one. */
-  note?: string;
+  note?: LocalText;
   /** Path under the site root without width and extension, e.g. "images/1a2b3c4d5e6f". */
   basename: string;
   widths: number[];
@@ -34,8 +40,8 @@ export interface SpeciesIndexEntry {
   slug: string;
   scientificName: string;
   genus: string;
-  /** What the name means, in English (e.g. "tyrant lizard king"). */
-  nameMeaning: string;
+  /** What the name means (e.g. "tyrant lizard"), in English and, when written, Polish. */
+  nameMeaning: LocalText;
   /** Most specific group id. */
   group: string;
   /** Group ids from the root down to `group`, e.g. ["dinosauria", "theropoda", …]. */
@@ -83,7 +89,7 @@ export function buildSpeciesIndex(
         slug: s.slug,
         scientificName: s.scientificName,
         genus: s.genus,
-        nameMeaning: s.nameMeaning.text.en,
+        nameMeaning: s.nameMeaning.text,
         group: s.group,
         groupPath: groupPath(groups, s.group),
         isDinosaur: s.isDinosaur,
@@ -103,8 +109,8 @@ export function buildSpeciesIndex(
             {
               commonsFile: img.commonsFile,
               kind: img.kind,
-              alt: img.alt.en,
-              ...(img.note === undefined ? {} : { note: img.note.en }),
+              alt: img.alt,
+              ...(img.note === undefined ? {} : { note: img.note }),
               basename: e.basename,
               widths: e.widths,
               width: e.width,

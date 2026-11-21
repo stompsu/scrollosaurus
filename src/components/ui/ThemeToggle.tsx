@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 const KEY = 'scrollosaurus:theme';
 type Theme = 'dark' | 'light';
@@ -12,6 +13,7 @@ function currentTheme(): Theme {
  * preference, allowed by the project's privacy rules) and applied before paint by theme-init.js.
  */
 export function ThemeToggle() {
+  const { t } = useTranslation();
   const [theme, setTheme] = useState<Theme>(currentTheme);
   const light = theme === 'light';
   const toggle = () => {
@@ -47,7 +49,7 @@ export function ThemeToggle() {
           <path d="M13 9.5A5.5 5.5 0 0 1 6.5 3a5.5 5.5 0 1 0 6.5 6.5z" fill="currentColor" />
         )}
       </svg>
-      Light mode
+      {t('site.lightMode')}
     </button>
   );
 }

@@ -1,4 +1,6 @@
 import { useEffect, useRef } from 'react';
+import { tr } from '@/lib/i18n';
+import { localize } from '@/lib/locale';
 import type { Story } from '@/lib/schemas/stories';
 import { SourceNotes } from './SourceNotes';
 
@@ -37,13 +39,11 @@ export function StoryPanel({ story, step, onStep, onClose, focusOnOpen = true }:
 
   return (
     <section className="sc-story" aria-labelledby="story-step-title" data-testid="story-panel">
-      <p className="sc-story-progress">
-        Tour: step {step + 1} of {total}
-      </p>
+      <p className="sc-story-progress">{tr('tour.progress', { step: step + 1, total })}</p>
       <h2 id="story-step-title" ref={headingRef} tabIndex={-1} className="sc-story-title">
-        {current.title.en}
+        {localize(current.title)}
       </h2>
-      <p className="sc-story-text">{current.text.en}</p>
+      <p className="sc-story-text">{localize(current.text)}</p>
       <SourceNotes sources={sources} />
       <div className="sc-story-actions">
         <button
@@ -54,7 +54,7 @@ export function StoryPanel({ story, step, onStep, onClose, focusOnOpen = true }:
             onStep(step - 1);
           }}
         >
-          Back
+          {tr('tour.back')}
         </button>
         {step < total - 1 ? (
           <button
@@ -64,15 +64,15 @@ export function StoryPanel({ story, step, onStep, onClose, focusOnOpen = true }:
               onStep(step + 1);
             }}
           >
-            Next
+            {tr('tour.next')}
           </button>
         ) : (
           <button type="button" className="sc-button sc-button--primary" onClick={onClose}>
-            Finish
+            {tr('tour.finish')}
           </button>
         )}
         <button type="button" className="sc-button" onClick={onClose}>
-          Close tour
+          {tr('tour.close')}
         </button>
       </div>
     </section>

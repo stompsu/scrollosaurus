@@ -93,6 +93,13 @@ The guided tour's step is part of the view too: `?tour=N` (Phase 5). Each step i
 - **Lighthouse:** `lighthouse` (dev dependency) runs from `scripts/lighthouse.ts` against the production build served like Pages, using Playwright's Chromium. `pnpm lighthouse` locally; a CI job fails if Performance is below 90 on `/`, a species page or `/credits` (owner decision: local and CI). Results in `docs/perf/lighthouse.md`.
 - **Story content:** `data/events.json`, `data/story.json` and `data/size-references.json`, validated with sources like species data; story views point at geologic units, unit boundaries or species, never hand-typed dates. The tour and the end-Cretaceous notes live in `src/features/story`.
 
+### 9. Languages (Phase 6)
+
+- **English and Polish, chosen by the URL:** `/…` is English, `/pl/…` Polish (owner decision). Every route exists in both, and `scripts/emit-route-html.ts` writes static pages for both, the Polish ones with `<html lang="pl">`. Shared links open in the language they were copied in.
+- **No browser-language detection.** The header switch links to the same page and query in the other language and stores the choice in `localStorage` (`scrollosaurus:lang`); an unprefixed address on the first page of a later visit follows that stored choice.
+- **i18next + react-i18next** (in the stack) with one instance per language; interface strings in `data/i18n/{en,pl}/common.json`, Polish names of geologic units in `data/i18n/pl/geology.json`. Content text stays inline in the data as `{ en, pl }` (ADR-0002 §5), including every note (made bilingual in Phase 6).
+- **Formatting follows the language:** numbers through `Intl` (`1,1 m`, `77,7`), country names through `Intl.DisplayNames`. The language layout sets the formatting locale before its pages render; switching language changes the route branch, so pages re-render in the new language. Scientific names are never translated.
+
 ## Rejected alternatives
 
 | Alternative                            | Why rejected                                                                                                                                                                                                       |

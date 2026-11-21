@@ -768,3 +768,23 @@ h3 {
     animation: none !important;
   }
 }
+
+/* ---- Phase 6: language switch ---- */
+
+.sc-lang-switch {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.5rem;
+  padding: 0.25rem 0.75rem;
+  border: 1px solid var(--sc-border);
+  border-radius: 999px;
+  background: var(--sc-surface);
+  color: var(--sc-text);
+  font-size: 0.875rem;
+  text-decoration: none;
+}
+@media (hover: hover) {
+  .sc-lang-switch:hover {
+    border-color: var(--sc-accent);
+  }
+}

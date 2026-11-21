@@ -12,7 +12,9 @@ import { DietBadge, NotADinosaurTag } from '@/components/ui/DietBadge';
 import { ImageContext, ImageCredit, SpeciesPicture } from '@/components/ui/SpeciesPicture';
 import { formatMa, formatMaWithUncertainty } from '@/lib/geologic-time';
 import { groupName } from '@/lib/groups';
-import { CONTINENT_LABELS, countryName, formatMass, formatRange } from '@/lib/labels';
+import { tr } from '@/lib/i18n';
+import { countryName, formatMass, formatRange } from '@/lib/labels';
+import { localize } from '@/lib/locale';
 import { livedAlongside } from '@/lib/lived-alongside';
 import type { Species } from '@/lib/schemas/species';
 import { loadSpecies } from '@/lib/species';
@@ -126,7 +128,7 @@ export function SpeciesDrawer({
       }}
       onClick={onBackdropClick}
     >
-      <title>{`${item.genus} · Scrollosaurus`}</title>
+      <title>{tr('site.pageTitle', { page: item.genus })}</title>
       <div className="sc-drawer-panel">
         <header className="sc-drawer-header">
           <div>
@@ -136,14 +138,20 @@ export function SpeciesDrawer({
             </h2>
             {item.scientificName !== item.genus && (
               <p className="text-text-muted text-sm">
-                Species: <i>{item.scientificName}</i>
+                {tr('drawer.species')}
+                <i>{item.scientificName}</i>
               </p>
             )}
             <p className="sc-card-meaning">
-              <span className="sr-only">Name means </span>“{item.nameMeaning}”
+              <span className="sr-only">{tr('card.nameMeans')}</span>“{localize(item.nameMeaning)}”
             </p>
           </div>
-          <button type="button" className="sc-icon-button" onClick={onClose} aria-label="Close">
+          <button
+            type="button"
+            className="sc-icon-button"
+            onClick={onClose}
+            aria-label={tr('drawer.close')}
+          >
             <span aria-hidden="true">×</span>
           </button>
         </header>
@@ -153,9 +161,7 @@ export function SpeciesDrawer({
             <div className="sc-notice" role="note">
               {hidden === 'non-dinosaur' ? (
                 <>
-                  <p>
-                    <i>{item.genus}</i> was not a dinosaur, so it is hidden on the timeline.
-                  </p>
+                  <p>{tr('drawer.hiddenNonDinosaur', { genus: item.genus })}</p>
                   <button
                     type="button"
                     className="sc-button"
@@ -165,11 +171,11 @@ export function SpeciesDrawer({
                       document.getElementById(titleId)?.focus();
                     }}
                   >
-                    Show animals that weren’t dinosaurs
+                    {tr('drawer.showNonDinosaurs')}
                   </button>
                 </>
               ) : (
-                <p>Your filters hide this species on the timeline.</p>
+                <p>{tr('drawer.hiddenByFilters')}</p>
               )}
             </div>
           )}
@@ -191,18 +197,16 @@ export function SpeciesDrawer({
               <div className="sc-drawer-image" aria-hidden="true">
                 <span>{item.genus.charAt(0)}</span>
               </div>
-              <p className="text-text-muted text-xs">No image yet.</p>
+              <p className="text-text-muted text-xs">{tr('image.none')}</p>
             </>
           )}
 
           {load.status === 'loading' && (
             <p className="text-text-muted" role="status">
-              Loading details…
+              {tr('drawer.loading')}
             </p>
           )}
-          {load.status === 'error' && (
-            <p role="alert">The details for this species could not be loaded.</p>
-          )}
+          {load.status === 'error' && <p role="alert">{tr('drawer.loadError')}</p>}
           {load.status === 'ready' && <RecordDetails record={load.record} item={item} />}
 
           {/* Rendered with the record, below it, so nothing already on screen moves when it loads. */}
@@ -246,7 +250,7 @@ function Refs({ record, ids }: { record: Species; ids: readonly string[] }) {
               onClick={(e) => {
                 onClick(e, id);
               }}
-              aria-label={`Source ${String(n)}`}
+              aria-label={tr('drawer.source', { n })}
             >
               [{n}]
             </a>
@@ -261,7 +265,7 @@ function Uncertain({ record, field }: { record: Species; field: string }) {
   if (!flag) return null;
   return (
     <p className="sc-uncertain">
-      <span className="sc-uncertain-label">Uncertain:</span> {flag.note}
+      <span className="sc-uncertain-label">{tr('drawer.uncertain')}</span> {localize(flag.note)}
     </p>
   );
 }
@@ -286,7 +290,7 @@ function Fact({ term, children }: FactProps) {
 }
 
 function RecordDetails({ record, item }: { record: Species; item: SpeciesIndexEntry }) {
-  const t = record.timeRange;
+  const range = record.timeRange;
   const { size, diet, discovery } = record;
   const measured = (
     term: string,
@@ -298,7 +302,7 @@ function RecordDetails({ record, item }: { record: Species; item: SpeciesIndexEn
     if (!m) {
       return record.uncertain?.some((u) => u.field === uncertainField) ? (
         <Fact term={term}>
-          <span className="text-text-muted">Not known</span>
+          <span className="text-text-muted">{tr('drawer.notKnown')}</span>
           <Uncertain record={record} field={uncertainField} />
         </Fact>
       ) : null;
@@ -306,7 +310,7 @@ function RecordDetails({ record, item }: { record: Species; item: SpeciesIndexEn
     return (
       <Fact term={term}>
         {format(m.value)} <Refs record={record} ids={m.sourceIds} />
-        <Note>{m.note}</Note>
+        <Note>{m.note && localize(m.note)}</Note>
         <Uncertain record={record} field={uncertainField} />
       </Fact>
     );
@@ -315,58 +319,68 @@ function RecordDetails({ record, item }: { record: Species; item: SpeciesIndexEn
   return (
     <>
       <p className="sc-summary">
-        {record.summary.text.en} <Refs record={record} ids={record.summary.sourceIds} />
+        {localize(record.summary.text)} <Refs record={record} ids={record.summary.sourceIds} />
       </p>
 
       {record.taxonomy.status !== 'valid' && (
         <div className="sc-notice" role="note">
           <p>
-            Status: this genus is <strong>{record.taxonomy.status}</strong>. {record.taxonomy.note}{' '}
+            {tr('drawer.status')}{' '}
+            <strong>
+              {tr(
+                record.taxonomy.status === 'dubious'
+                  ? 'drawer.statusDubious'
+                  : 'drawer.statusContested',
+              )}
+            </strong>
+            . {record.taxonomy.note && localize(record.taxonomy.note)}{' '}
             <Refs record={record} ids={record.taxonomy.sourceIds ?? []} />
           </p>
         </div>
       )}
 
-      <h3 className="sc-drawer-h3">Facts</h3>
+      <h3 className="sc-drawer-h3">{tr('drawer.facts')}</h3>
       <dl className="sc-facts">
-        <Fact term="Lived">
-          {formatMaWithUncertainty(t.startMa, t.startUncertaintyMa)} to{' '}
-          {formatMaWithUncertainty(t.endMa, t.endUncertaintyMa)} million years ago{' '}
-          <Refs record={record} ids={t.sourceIds} />
-          <Note>{t.note}</Note>
+        <Fact term={tr('drawer.lived')}>
+          {tr('time.range', {
+            start: formatMaWithUncertainty(range.startMa, range.startUncertaintyMa),
+            end: formatMaWithUncertainty(range.endMa, range.endUncertaintyMa),
+          })}{' '}
+          <Refs record={record} ids={range.sourceIds} />
+          <Note>{range.note && localize(range.note)}</Note>
           <Uncertain record={record} field="timeRange" />
         </Fact>
-        {measured('Length', 'lengthM', (v) => formatRange(v, 'm'))}
-        {measured('Weight', 'massKg', formatMass)}
-        {measured('Height', 'heightM', (v) => formatRange(v, 'm'))}
-        {measured('Wingspan', 'wingspanM', (v) => formatRange(v, 'm'))}
-        <Fact term="Diet">
+        {measured(tr('drawer.length'), 'lengthM', (v) => formatRange(v, 'm'))}
+        {measured(tr('drawer.weight'), 'massKg', formatMass)}
+        {measured(tr('drawer.height'), 'heightM', (v) => formatRange(v, 'm'))}
+        {measured(tr('drawer.wingspan'), 'wingspanM', (v) => formatRange(v, 'm'))}
+        <Fact term={tr('drawer.diet')}>
           <DietBadge diet={diet.value} confidence={diet.confidence} />{' '}
           <Refs record={record} ids={diet.sourceIds} />
-          <Note>{diet.note}</Note>
+          <Note>{diet.note && localize(diet.note)}</Note>
           <Uncertain record={record} field="diet" />
         </Fact>
-        <Fact term="Group">
+        <Fact term={tr('drawer.group')}>
           {item.groupPath.map(groupName).join(' › ')}{' '}
           <Refs record={record} ids={record.groupSourceIds} />
           <Uncertain record={record} field="group" />
         </Fact>
-        <Fact term="Where it lived">
+        <Fact term={tr('drawer.where')}>
           <ul className="sc-plain-list">
             {record.locations.map((l, i) => (
               <li key={i}>
-                {countryName(l.countryCode)} ({CONTINENT_LABELS[l.continent]})
-                {l.formation && <>, {l.formation} Formation</>}{' '}
+                {countryName(l.countryCode)} ({tr(`continent.${l.continent}`)})
+                {l.formation && <>, {tr('drawer.formation', { name: l.formation })}</>}{' '}
                 <Refs record={record} ids={l.sourceIds} />
               </li>
             ))}
           </ul>
           <Uncertain record={record} field="locations" />
         </Fact>
-        <Fact term="Described by">
+        <Fact term={tr('drawer.describedBy')}>
           {discovery.describedBy}, {discovery.year}{' '}
           <Refs record={record} ids={discovery.sourceIds} />
-          <Note>{discovery.note}</Note>
+          <Note>{discovery.note && localize(discovery.note)}</Note>
           <Uncertain record={record} field="discovery" />
         </Fact>
       </dl>
@@ -380,11 +394,11 @@ function RecordDetails({ record, item }: { record: Species; item: SpeciesIndexEn
 
       {record.funFacts && record.funFacts.length > 0 && (
         <>
-          <h3 className="sc-drawer-h3">Did you know?</h3>
+          <h3 className="sc-drawer-h3">{tr('drawer.didYouKnow')}</h3>
           <ul className="sc-fun-facts">
             {record.funFacts.map((f, i) => (
               <li key={i}>
-                {f.text.en} <Refs record={record} ids={f.sourceIds} />
+                {localize(f.text)} <Refs record={record} ids={f.sourceIds} />
               </li>
             ))}
           </ul>
@@ -407,18 +421,13 @@ function LivedAlongside({
   return (
     <section aria-labelledby={`alongside-${item.slug}`}>
       <h3 id={`alongside-${item.slug}`} className="sc-drawer-h3">
-        Lived alongside
+        {tr('drawer.alongside')}
       </h3>
       {contemporaries.length === 0 ? (
-        <p className="text-text-muted">
-          None of the other species here overlap with its time range.
-        </p>
+        <p className="text-text-muted">{tr('drawer.alongsideNone')}</p>
       ) : (
         <>
-          <p className="sc-note">
-            Species whose recorded time ranges overlap, longest shared time first. Ranges are
-            approximate, and living at the same time does not mean living in the same place.
-          </p>
+          <p className="sc-note">{tr('drawer.alongsideNote')}</p>
           <ul className="sc-alongside">
             {contemporaries.map(({ item: other, overlapMa }) => (
               <li key={other.slug}>
@@ -427,10 +436,15 @@ function LivedAlongside({
                 </Link>
                 {!other.isDinosaur && <NotADinosaurTag />}{' '}
                 <span className="text-text-muted text-sm">
-                  {formatLived(other)}; shared{' '}
-                  {overlapMa < 0.1
-                    ? 'less than 0.1 million years'
-                    : `about ${formatMa(overlapMa)} million years`}
+                  {tr('drawer.shared', {
+                    range: formatLived(other),
+                    overlap:
+                      overlapMa < 0.1
+                        ? tr('time.lessThanMillionYears', { value: formatMa(0.1) })
+                        : tr('time.about', {
+                            value: tr('time.millionYears', { value: formatMa(overlapMa) }),
+                          }),
+                  })}
                 </span>
               </li>
             ))}
@@ -445,7 +459,7 @@ function SourceList({ record }: { record: Species }) {
   return (
     <section aria-labelledby={`sources-${record.slug}`}>
       <h3 id={`sources-${record.slug}`} className="sc-drawer-h3">
-        Sources
+        {tr('drawer.sources')}
       </h3>
       <ol className="sc-sources">
         {record.sources.map((s) => (
@@ -456,11 +470,11 @@ function SourceList({ record }: { record: Species }) {
               {s.title}
             </a>
             {s.publisher && <>. {s.publisher}</>}.{' '}
-            <span className="text-text-muted">Accessed {s.accessed}.</span>
+            <span className="text-text-muted">{tr('drawer.accessed', { date: s.accessed })}</span>
           </li>
         ))}
       </ol>
-      <p className="sc-note">Last reviewed {record.lastReviewed}.</p>
+      <p className="sc-note">{tr('drawer.reviewed', { date: record.lastReviewed })}</p>
     </section>
   );
 }

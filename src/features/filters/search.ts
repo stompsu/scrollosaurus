@@ -18,7 +18,7 @@ const MIN_ENDING = 4;
 
 /**
  * Fuzzy, prefix-matching name search that runs in the browser: genus (and any part of it, so
- * "raptor" works), full scientific name and what the name means ("tyrant", "lizard"). Typos
+ * "raptor" works), full scientific name and what the name means, in English or Polish ("tyrant", "jaszczur"). Typos
  * within about a fifth of the word still match.
  */
 export function createSpeciesSearch(items: readonly SpeciesIndexEntry[]): SpeciesSearch {
@@ -35,7 +35,8 @@ export function createSpeciesSearch(items: readonly SpeciesIndexEntry[]): Specie
         case 'scientificName':
           return doc.scientificName;
         case 'nameMeaning':
-          return doc.nameMeaning;
+          // Both languages, so "lizard" and "jaszczur" both find a name.
+          return `${doc.nameMeaning.en} ${doc.nameMeaning.pl ?? ''}`;
         default:
           return doc.slug;
       }

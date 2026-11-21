@@ -1,4 +1,4 @@
-import { DIET_CONFIDENCE_LABELS, DIET_LABELS, NOT_A_DINOSAUR } from '@/lib/labels';
+import { useTranslation } from 'react-i18next';
 import type { Diet, Species } from '@/lib/schemas/species';
 
 /** Simple 16 px line icons; the badge always pairs one with text, never colour alone. */
@@ -71,12 +71,14 @@ interface DietBadgeProps {
 
 /** Diet badge: icon, label and (when not established) the confidence, e.g. "Piscivore (debated)". */
 export function DietBadge({ diet, confidence }: DietBadgeProps) {
-  const qualifier = confidence === undefined ? undefined : DIET_CONFIDENCE_LABELS[confidence];
+  const { t } = useTranslation();
+  const qualifier =
+    confidence === undefined || confidence === 'established' ? undefined : t(`diet.${confidence}`);
   return (
     <span className="sc-badge" data-diet={diet}>
       <DietIcon diet={diet} />
       <span>
-        {DIET_LABELS[diet].label}
+        {t(`diet.${diet}`)}
         {qualifier && <span className="text-text-muted"> ({qualifier})</span>}
       </span>
     </span>
@@ -85,5 +87,6 @@ export function DietBadge({ diet, confidence }: DietBadgeProps) {
 
 /** The "not a dinosaur" tag on pterosaurs and marine reptiles. */
 export function NotADinosaurTag() {
-  return <span className="sc-tag">{NOT_A_DINOSAUR}</span>;
+  const { t } = useTranslation();
+  return <span className="sc-tag">{t('timeline.notADinosaur')}</span>;
 }

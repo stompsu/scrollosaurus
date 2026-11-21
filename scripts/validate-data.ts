@@ -5,7 +5,7 @@
 import { access, readdir, readFile } from 'node:fs/promises';
 import { basename, join } from 'node:path';
 import type { z } from 'zod';
-import { crossCheck, type SpeciesFile } from '../src/lib/schemas/cross-check.ts';
+import { crossCheck, untranslated, type SpeciesFile } from '../src/lib/schemas/cross-check.ts';
 import { geologicTimeSchema } from '../src/lib/schemas/geologic-time.ts';
 import { groupsSchema } from '../src/lib/schemas/groups.ts';
 import { checkImages } from '../src/lib/schemas/image-check.ts';
@@ -90,6 +90,13 @@ async function main(): Promise<void> {
       speciesSlugs: new Set(species.map((s) => s.data.slug)),
     });
     errors.push(...storyErrors);
+    for (const [file, data] of [
+      ['events.json', events],
+      ['story.json', story],
+      ['size-references.json', sizeReferences],
+    ] as const) {
+      for (const path of untranslated(data)) errors.push(`${file}: no Polish text at ${path}`);
+    }
     if (events && story && sizeReferences && storyErrors.length === 0) {
       console.log(
         `✓ events (${String(events.events.length)}), story (${String(story.steps.length)} steps), size references (${String(sizeReferences.references.length)})`,
@@ -129,7 +136,7 @@ async function main(): Promise<void> {
 
   // The fields curators flagged; this list feeds the phase uncertainties report.
   const flagged = species.flatMap(({ data }) =>
-    (data.uncertain ?? []).map((u) => `${data.slug} ${u.field}: ${u.note}`),
+    (data.uncertain ?? []).map((u) => `${data.slug} ${u.field}: ${u.note.en}`),
   );
   if (flagged.length > 0) {
     console.log(`\nFlagged as uncertain (${String(flagged.length)}):`);

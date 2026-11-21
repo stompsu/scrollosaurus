@@ -21,7 +21,10 @@ import {
 } from '@/features/timeline';
 import { EventNotes, StoryPanel } from '@/features/story';
 import { eraColor, eraThemeFor, reachesEndCretaceous } from '@/lib/era-theme';
-import { formatMaRounded, unitById } from '@/lib/geologic-time';
+import { formatMaRounded, unitById, unitName } from '@/lib/geologic-time';
+import { tr } from '@/lib/i18n';
+import { useLang } from '@/lib/lang';
+import { langPath, type Lang } from '@/lib/locale';
 import { primarySpeciesSlug, species } from '@/lib/species';
 import { events, story, windowForView } from '@/lib/stories';
 import {
@@ -43,8 +46,8 @@ function filterKey(filters: SpeciesFilters): string {
   return queryString(serializeViewState({ filters }));
 }
 
-function speciesPath(slug: string, search: string): string {
-  return `/species/${slug}${search}`;
+function speciesPath(slug: string, search: string, lang: Lang): string {
+  return `${langPath(`/species/${slug}`, lang)}${search}`;
 }
 
 function sameWindow(a: MaRange | undefined, b: MaRange | undefined): boolean {
@@ -58,6 +61,7 @@ function sameWindow(a: MaRange | undefined, b: MaRange | undefined): boolean {
  * The page stays mounted between the two paths, so the timeline keeps its place.
  */
 export default function TimelinePage() {
+  const lang = useLang();
   const { slug } = useParams();
   const [params] = useSearchParams();
   const location = useLocation();
@@ -208,9 +212,9 @@ export default function TimelinePage() {
   const openSpecies = useCallback(
     (next: string, reveal: boolean) => {
       const state: RevealState = { reveal };
-      void navigate(speciesPath(next, latestSearch.current), { state });
+      void navigate(speciesPath(next, latestSearch.current, lang), { state });
     },
-    [navigate],
+    [navigate, lang],
   );
 
   const onSelect = useCallback(
@@ -223,8 +227,8 @@ export default function TimelinePage() {
   // Closing replaces the species entry, so Back after closing leaves the page instead of
   // reopening the drawer.
   const closeDrawer = useCallback(() => {
-    void navigate(`/${latestSearch.current}`, { replace: true });
-  }, [navigate]);
+    void navigate(`${langPath('/', lang)}${latestSearch.current}`, { replace: true });
+  }, [navigate, lang]);
 
   // Search and "Lived alongside" move the timeline to the species they open.
   const reveal = (location.state as RevealState | null)?.reveal === true;
@@ -296,19 +300,22 @@ export default function TimelinePage() {
   if (legacy !== null) {
     const rest = new URLSearchParams(params);
     rest.delete('species');
-    return <Navigate replace to={speciesPath(legacy, queryString(rest))} />;
+    return <Navigate replace to={speciesPath(legacy, queryString(rest), lang)} />;
   }
   if (slug !== undefined && !selected) return <NotFoundPage />;
 
-  const hrefFor = (other: string) => speciesPath(other, search);
+  const hrefFor = (other: string) => speciesPath(other, search, lang);
 
   return (
     <section aria-labelledby="home-title" className="flex flex-col gap-4">
-      {!selected && <title>Scrollosaurus: dinosaurs on a timeline of the Mesozoic</title>}
+      {!selected && <title>{tr('site.title')}</title>}
       <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-2">
         <h1 id="home-title" className="font-display text-xl">
-          The {mesozoic.name}, {formatMaRounded(mesozoic.baseMa)} to{' '}
-          {formatMaRounded(mesozoic.topMa)} million years ago
+          {tr('home.heading', {
+            era: unitName(mesozoic),
+            start: formatMaRounded(mesozoic.baseMa),
+            end: formatMaRounded(mesozoic.topMa),
+          })}
         </h1>
         {tourIndex === undefined && (
           <button
@@ -320,7 +327,7 @@ export default function TimelinePage() {
             }}
             data-testid="start-tour"
           >
-            Take the tour
+            {tr('home.startTour')}
           </button>
         )}
       </div>
@@ -373,7 +380,7 @@ export default function TimelinePage() {
       {showEventNotes && <EventNotes events={events} />}
 
       {previewed && (
-        <section aria-label="Species preview" data-testid="species-preview">
+        <section aria-label={tr('card.preview')} data-testid="species-preview">
           <SpeciesCard
             item={previewed}
             action={
@@ -382,7 +389,10 @@ export default function TimelinePage() {
                 className="sc-link-button"
                 data-testid="preview-details"
               >
-                Details<span className="sr-only"> about {previewed.genus}</span>
+                {tr('card.details')}
+                <span className="sr-only">
+                  {tr('card.detailsAbout', { genus: previewed.genus })}
+                </span>
               </Link>
             }
           />

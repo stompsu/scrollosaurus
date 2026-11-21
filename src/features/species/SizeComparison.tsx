@@ -1,10 +1,10 @@
 import { useId } from 'react';
+import { tr } from '@/lib/i18n';
 import { formatRange } from '@/lib/labels';
+import { formatNumber, localize } from '@/lib/locale';
 import type { Species } from '@/lib/schemas/species';
 import type { SizeReferences } from '@/lib/schemas/stories';
 import { bodyPlanFor, SILHOUETTES } from './silhouettes';
-
-type Reference = SizeReferences['references'][number];
 
 /** The bus is only drawn next to animals at least this long, m; beside smaller ones it says little. */
 const BUS_FROM_M = 4;
@@ -71,12 +71,17 @@ export function SizeComparison({ genus, groupPath, size, references }: SizeCompa
   const pe = at('person');
   const bu = at('bus');
 
-  const what = plan.measure === 'wingspan' ? 'wingspan' : 'length';
-  const refText = (r: Reference) => `${r.label.en.toLowerCase()} (${String(r.lengthM)} m)`;
+  const wingspan = plan.measure === 'wingspan';
+  const value = formatRange(measured.value, 'm');
+  const height = formatNumber(person?.heightM ?? 0, 2);
   const description = [
-    `${genus}, ${what} ${formatRange(measured.value, 'm')}`,
-    person ? `next to an adult person ${String(person.heightM)} m tall` : undefined,
-    bus && showBus ? `and a ${refText(bus)}` : undefined,
+    tr('sizeScene.desc', {
+      genus,
+      what: tr(wingspan ? 'sizeScene.wingspanWord' : 'sizeScene.lengthWord'),
+      value,
+    }),
+    person ? tr('sizeScene.descPerson', { height }) : undefined,
+    bus && showBus ? tr('sizeScene.descBus', { length: formatNumber(bus.lengthM, 2) }) : undefined,
   ]
     .filter(Boolean)
     .join(' ');
@@ -84,7 +89,7 @@ export function SizeComparison({ genus, groupPath, size, references }: SizeCompa
   return (
     <figure className="sc-size" data-testid="size-comparison">
       <figcaption id={titleId} className="sc-drawer-h3">
-        Size compared with a person{bus && showBus ? ' and a school bus' : ''}
+        {tr(bus && showBus ? 'sizeScene.titleBus' : 'sizeScene.title')}
       </figcaption>
       <svg
         className="sc-size-scene"
@@ -139,23 +144,27 @@ export function SizeComparison({ genus, groupPath, size, references }: SizeCompa
       </svg>
       <ul className="sc-size-legend">
         <li>
-          <i>{genus}</i>: {formatRange(measured.value, 'm')}{' '}
-          {what === 'length' ? 'long' : 'wingspan'}
-          {hi > lo
-            ? '; drawn at the upper estimate, the lighter part of the bar shows the range'
-            : ''}
-          .
+          <i>{genus}</i>:{' '}
+          {tr('sizeScene.species', {
+            value,
+            what: tr(wingspan ? 'sizeScene.wingspan' : 'sizeScene.long'),
+          })}
+          {hi > lo ? tr('sizeScene.rangeNote') : ''}.
         </li>
-        {person && <li>Adult person: {String(person.heightM)} m tall (a reference figure).</li>}
+        {person && <li>{tr('sizeScene.person', { height })}</li>}
         {bus && showBus && (
           <li>
-            {bus.label.en}: up to {String(bus.lengthM)} m long. {bus.note?.en}
+            {tr('sizeScene.bus', {
+              label: localize(bus.label),
+              length: formatNumber(bus.lengthM, 2),
+              note: bus.note ? localize(bus.note) : '',
+            })}
           </li>
         )}
       </ul>
       <p className="sc-note">
-        The outline is a generic {plan.label}, not the exact shape of <i>{genus}</i>; only its
-        length is to scale.
+        {tr('sizeScene.outline', { plan: tr(`bodyPlan.${bodyPlanFor(groupPath)}`) })} <i>{genus}</i>
+        {tr('sizeScene.outlineEnd')}
       </p>
     </figure>
   );
