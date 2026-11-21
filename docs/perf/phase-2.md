@@ -6,7 +6,7 @@ Exit criterion (kickoff brief): the timeline stays smooth at 60 fps with the see
 
 - d3-zoom owns the transform. Input events only update it and request one `requestAnimationFrame`.
 - Each frame, `TimelineEngine.apply()` (`src/features/timeline/engine.ts`) writes CSS transforms straight to the DOM. A pan frame writes one transform per layer (three layers); only a frame where the zoom factor changed rewrites each rendered marker (position and bar length) and band.
-- React re-renders ("commits") only when the half-octave zoom level changes, when the view has drifted half a viewport (time or lanes) since the last render, or 150 ms after the view comes to rest. Lane packing runs on those commits, never per frame.
+- React re-renders ("commits") only when the half-octave zoom level changes, when the view has drifted half a viewport (time or lanes) since the last render, or 150 ms after the view comes to rest. During an animated jump or +/− button zoom, zoom-level commits wait for the end of the animation. Lane packing runs on those commits, never per frame.
 - Markers are virtualised on both axes: only markers whose range overlaps the visible window ± one viewport, and whose lane is within the visible lanes ± one viewport, are in the DOM. Markers are memoised, so a commit re-renders only the ones whose lane, highlight or tab stop changed.
 
 ## Method
@@ -25,20 +25,20 @@ Reading the "> 16.7 ms" column: headless Chromium's rAF timestamps alternate bet
 
 ## Results
 
-`pnpm perf` rewrites the two tables below.
+Each cell is the range across the last three `pnpm perf` runs (min–max, or one value when all runs agree). Every run stores its results under `node_modules/.cache/scrollosaurus-perf-history/` and rewrites the two tables below from the last three runs. Ranges understate real variance: the QA audit measured mobile pinch zoom at 2.5% of frames over 25 ms in its own run, higher than any of these three.
 
 ### Desktop
 
 <!-- perf:desktop:start -->
 
-Desktop Chrome (1280×720). Apple M1, 8 GB RAM, Chromium 159.0.8154.6, headless. Measured 2026-11-21.
+Desktop Chrome (1280×720). Apple M1, 8 GB RAM, Chromium 159.0.8154.6, headless. Range over the last 3 run(s), latest 2026-11-21.
 
-| Scenario                | Frames | Median frame (ms) | p95 frame (ms) | Frames > 16.7 ms | Frames > 25 ms | `apply()` median / p95 (ms) | React commits |
-| ----------------------- | -----: | ----------------: | -------------: | ---------------: | -------------: | --------------------------: | ------------: |
-| Wheel pan               |    241 |              16.7 |           16.8 |            60.6% |           0.0% |                   0.0 / 0.1 |             2 |
-| Ctrl + wheel zoom       |    241 |              16.7 |           16.7 |            62.7% |           0.0% |                   0.2 / 0.2 |            19 |
-| Mouse drag pan          |    239 |              16.7 |           16.7 |            63.2% |           0.0% |                   0.0 / 0.1 |             0 |
-| Keyboard arrows and +/− |    238 |              16.7 |           16.7 |            62.2% |           0.0% |                   0.0 / 0.3 |            85 |
+| Scenario                |  Frames | Median frame (ms) | p95 frame (ms) | Frames > 16.7 ms | Frames > 25 ms | `apply()` p95 (ms) | React commits |
+| ----------------------- | ------: | ----------------: | -------------: | ---------------: | -------------: | -----------------: | ------------: |
+| Wheel pan               | 240–241 |              16.7 |           16.7 |      62.1%–64.3% |           0.0% |                0.1 |             2 |
+| Ctrl + wheel zoom       | 240–242 |              16.7 |      16.7–16.8 |      60.7%–63.6% |           0.0% |            0.2–0.3 |         18–23 |
+| Mouse drag pan          | 238–240 |              16.7 |           16.7 |      62.6%–63.3% |           0.0% |                0.1 |             0 |
+| Keyboard arrows and +/− | 237–239 |              16.7 |      16.7–16.8 |      60.3%–63.2% |      0.0%–0.4% |                0.2 |         87–89 |
 
 <!-- perf:desktop:end -->
 
@@ -46,26 +46,27 @@ Desktop Chrome (1280×720). Apple M1, 8 GB RAM, Chromium 159.0.8154.6, headless.
 
 <!-- perf:mobile:start -->
 
-Pixel 7 emulation (412×839, touch), CPU throttled 4× via CDP. Apple M1, 8 GB RAM, Chromium 159.0.8154.6, headless. Measured 2026-11-21.
+Pixel 7 emulation (412×839, touch), CPU throttled 4× via CDP. Apple M1, 8 GB RAM, Chromium 159.0.8154.6, headless. Range over the last 3 run(s), latest 2026-11-21.
 
-| Scenario                 | Frames | Median frame (ms) | p95 frame (ms) | Frames > 16.7 ms | Frames > 25 ms | `apply()` median / p95 (ms) | React commits |
-| ------------------------ | -----: | ----------------: | -------------: | ---------------: | -------------: | --------------------------: | ------------: |
-| Touch pan (one finger)   |    245 |              16.7 |           16.7 |            62.9% |           0.0% |                   0.0 / 0.3 |             0 |
-| Pinch zoom (two fingers) |    241 |              16.7 |           16.7 |            63.5% |           0.4% |                   0.1 / 0.9 |            10 |
-| Keyboard arrows and +/−  |    215 |              16.7 |           33.3 |            66.5% |          11.2% |                   0.0 / 0.8 |            68 |
+| Scenario                 |  Frames | Median frame (ms) | p95 frame (ms) | Frames > 16.7 ms | Frames > 25 ms | `apply()` p95 (ms) | React commits |
+| ------------------------ | ------: | ----------------: | -------------: | ---------------: | -------------: | -----------------: | ------------: |
+| Touch pan (one finger)   | 241–243 |              16.7 |      16.7–16.8 |      60.1%–63.9% |           0.0% |            0.1–0.5 |             0 |
+| Pinch zoom (two fingers) | 240–244 |              16.7 |      16.7–16.8 |      60.7%–63.5% |      0.0%–0.8% |            0.9–1.0 |          9–10 |
+| Keyboard arrows and +/−  | 214–222 |              16.7 |           33.3 |      64.4%–65.9% |     6.8%–10.7% |            0.8–0.9 |         72–74 |
 
 <!-- perf:mobile:end -->
 
 ## Verdict
 
-- **Desktop:** 60 fps met. Medians are 16.7 ms and p95 is at most 16.8 ms in every scenario; essentially no frame misses a vsync. `apply()` takes at most a few tenths of a millisecond.
-- **Mobile, 4× CPU throttling:** touch pan and pinch zoom meet 60 fps (median 16.7 ms, p95 16.7 ms, under 1% of frames over 25 ms). Rapid keyboard zooming does not: the scenario presses a key about every 10–20 ms, and almost every +/− press crosses a zoom level, so React re-renders and re-packs lanes about 70 times in 4 s; with the CPU slowed 4×, some of those commits take longer than a frame (see the p95 and "> 25 ms" figures). Panning with the arrow keys alone does not commit on each press.
+- **Desktop:** 60 fps met. Medians are 16.7 ms and p95 is at most 16.8 ms in every scenario and every run; at most 0.4% of frames miss a vsync (keyboard). `apply()` p95 is at most 0.3 ms.
+- **Mobile, 4× CPU throttling, touch pan and pinch zoom:** 60 fps met in these runs (median 16.7 ms, p95 at most 16.8 ms, 0–0.8% of frames over 25 ms), with the caveat that QA saw 2.5% for pinch zoom in one run.
+- **Mobile, 4× CPU throttling, rapid keyboard zoom: 60 fps not met.** p95 is 33.3 ms and 6.8–10.7% of frames are over 25 ms across runs (about 8–11% in earlier runs too). The scenario presses a key every 10–20 ms and almost every +/− press crosses a zoom level, so React re-renders and re-packs lanes about 70 times in 4 s; with the CPU slowed 4×, some of those commits take longer than a frame. Panning with the arrow keys alone does not commit on each press.
 
 ## What was tried
 
 1. First version: virtualised along time only. On the whole-Mesozoic view all 300 markers were in the DOM, and every zoom frame recalculated style for about 650 elements. Mobile pinch zoom ran at a median of 33 ms per frame (p95 100 ms, 75% of frames over 25 ms) and keyboard zoom at p95 117 ms. A Chrome trace showed style recalculation (`UpdateLayoutTree`) as the main cost, not our JavaScript (`apply()` median 1 ms). Disabling every stylesheet didn't change the recalculation cost, so it was element count, not selectors.
 2. Added virtualisation across lanes (render only lanes in view ± one viewport). Pinch zoom dropped to under 1% of frames over 25 ms.
-3. Memoised markers and replaced a forced layout read (band label widths) with canvas text measurement. Keyboard zoom at 4× went from 12.8% to 9–11% of frames over 25 ms (it varies between runs); the remaining cost is React commits and style for newly mounted markers.
+3. Memoised markers and replaced a forced layout read (band label widths) with canvas text measurement. Keyboard zoom at 4× went from 12.8% to roughly 7–11% of frames over 25 ms (it varies between runs); the remaining cost is React commits and style for newly mounted markers.
 
 ## Known limitations
 
@@ -73,4 +74,4 @@ Pixel 7 emulation (412×839, touch), CPU throttled 4× via CDP. Apple M1, 8 GB R
 - Input is synthetic: Playwright and CDP events, sent about once per frame. Real trackpads send wheel events at a higher rate, which d3-zoom coalesces into one frame anyway.
 - Frame deltas include the cost of the input dispatch from Playwright, which slightly penalises the keyboard and wheel scenarios.
 - Rapid keyboard zooming on a slow CPU still drops frames; a possible fix is to defer the lane re-pack until key repeat stops.
-- Numbers vary between runs: by a few tenths of a percent for pan and pinch, and by a few percentage points for the keyboard scenario on mobile.
+- Numbers vary between runs and machines: by up to a few percent of frames for pinch (0–0.8% here, 2.5% in the QA run) and by several percentage points for the keyboard scenario on mobile.

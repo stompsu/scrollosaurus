@@ -4,9 +4,11 @@
  *
  * Each scenario drives continuous input for SCENARIO_MS while a requestAnimationFrame loop in the
  * page records frame-to-frame deltas. The mobile project also slows the CPU 4× through CDP.
- * Results are written into docs/perf/phase-2.md between the perf:<project> markers.
+ * Each run's results are kept in HISTORY_DIR (last RUNS_KEPT runs per project), and
+ * docs/perf/phase-2.md shows the range across those runs between the perf:<project> markers.
+ * Run `pnpm perf` RUNS_KEPT times to fill the table with a full range.
  */
-import { readFileSync, writeFileSync } from 'node:fs';
+import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { cpus, totalmem } from 'node:os';
 import { join } from 'node:path';
 import { expect, test, type CDPSession, type Page } from '@playwright/test';
@@ -14,7 +16,10 @@ import { format, resolveConfig } from 'prettier';
 
 const SCENARIO_MS = 4000;
 const FRAME_BUDGET_MS = 1000 / 60;
-const DOC = join(import.meta.dirname, '..', '..', 'docs', 'perf', 'phase-2.md');
+const ROOT = join(import.meta.dirname, '..', '..');
+const DOC = join(ROOT, 'docs', 'perf', 'phase-2.md');
+const HISTORY_DIR = join(ROOT, 'node_modules', '.cache', 'scrollosaurus-perf-history');
+const RUNS_KEPT = 3;
 
 interface PerfWindow {
   __frames?: number[];
@@ -219,17 +224,58 @@ test.afterAll(async () => {
     project === 'mobile'
       ? 'Pixel 7 emulation (412×839, touch), CPU throttled 4× via CDP'
       : 'Desktop Chrome (1280×720)';
+  // Keep this run alongside the previous ones and report the range across them.
+  mkdirSync(HISTORY_DIR, { recursive: true });
+  const historyFile = join(HISTORY_DIR, `${project}.json`);
+  let history: Result[][] = [];
+  try {
+    history = JSON.parse(readFileSync(historyFile, 'utf8')) as Result[][];
+  } catch {
+    history = [];
+  }
+  history = [...history, results].slice(-RUNS_KEPT);
+  writeFileSync(historyFile, JSON.stringify(history));
+
+  const range = (values: number[], fmt: (n: number) => string): string => {
+    const lo = Math.min(...values);
+    const hi = Math.max(...values);
+    return fmt(lo) === fmt(hi) ? fmt(lo) : `${fmt(lo)}–${fmt(hi)}`;
+  };
   const ms = (n: number) => (Number.isFinite(n) ? n.toFixed(1) : '–');
-  const rows = results.map(
-    (r) =>
-      `| ${r.scenario} | ${r.frames} | ${ms(r.median)} | ${ms(r.p95)} | ${r.over.toFixed(1)}% | ${r.dropped.toFixed(1)}% | ${ms(r.applyMedian)} / ${ms(r.applyP95)} | ${r.commits} |`,
-  );
+  const pct = (n: number) => `${n.toFixed(1)}%`;
+  const int = (n: number) => String(Math.round(n));
+  const rows = results.map(({ scenario }) => {
+    const runs = history.flatMap((run) => run.filter((r) => r.scenario === scenario));
+    const of = (f: (r: Result) => number) => runs.map(f);
+    return `| ${scenario} | ${range(
+      of((r) => r.frames),
+      int,
+    )} | ${range(
+      of((r) => r.median),
+      ms,
+    )} | ${range(
+      of((r) => r.p95),
+      ms,
+    )} | ${range(
+      of((r) => r.over),
+      pct,
+    )} | ${range(
+      of((r) => r.dropped),
+      pct,
+    )} | ${range(
+      of((r) => r.applyP95),
+      ms,
+    )} | ${range(
+      of((r) => r.commits),
+      int,
+    )} |`;
+  });
   const block = [
     `<!-- perf:${project}:start -->`,
     '',
-    `${setup}. ${cpu}, ${ram} RAM, Chromium ${browserVersion}, headless. Measured ${new Date().toISOString().slice(0, 10)}.`,
+    `${setup}. ${cpu}, ${ram} RAM, Chromium ${browserVersion}, headless. Range over the last ${history.length} run(s), latest ${new Date().toISOString().slice(0, 10)}.`,
     '',
-    '| Scenario | Frames | Median frame (ms) | p95 frame (ms) | Frames > 16.7 ms | Frames > 25 ms | `apply()` median / p95 (ms) | React commits |',
+    '| Scenario | Frames | Median frame (ms) | p95 frame (ms) | Frames > 16.7 ms | Frames > 25 ms | `apply()` p95 (ms) | React commits |',
     '| --- | --: | --: | --: | --: | --: | --: | --: |',
     ...rows,
     '',
