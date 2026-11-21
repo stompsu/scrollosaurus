@@ -1,0 +1,131 @@
+{
+  "slug": "gallimimus",
+  "scientificName": "Gallimimus bullatus",
+  "genus": "Gallimimus",
+  "nameMeaning": {
+    "text": {
+      "en": "chicken mimic"
+    },
+    "sourceIds": ["nhm"]
+  },
+  "group": "ornithomimosauria",
+  "groupSourceIds": ["pbdb-taxon", "nhm"],
+  "isDinosaur": true,
+  "taxonomy": {
+    "status": "valid"
+  },
+  "diet": {
+    "value": "omnivore",
+    "confidence": "debated",
+    "sourceIds": ["nhm", "pbdb-taxon", "zanno-makovicky-2011", "norell-2001"],
+    "note": "Gallimimus had a toothless beak, and its diet is disputed. NHM lists it as omnivorous and PBDB as herbivore or omnivore; Zanno & Makovicky 2011 infer herbivory for ornithomimosaurs from skull features; Norell et al. 2001 suggested that ornithomimids with preserved beak tissue strained food from sediment in water."
+  },
+  "timeRange": {
+    "startMa": 72.2,
+    "endMa": 66.0,
+    "sourceIds": ["pbdb-occs", "zanno-makovicky-2013"],
+    "note": "PBDB dates G. bullatus occurrences (Nemegt Formation, Mongolia) to the Maastrichtian; the Ma values are the ICS v2024/12 Maastrichtian stage boundaries. The Nemegt Formation is not precisely dated (Zanno & Makovicky 2013 cite about 69 and 68 Ma). Genus-level PBDB records from the Baruungoyot Formation and Uzbekistan are not used."
+  },
+  "periods": ["cretaceous"],
+  "size": {
+    "lengthM": {
+      "value": [6, 6],
+      "sourceIds": ["nhm"],
+      "note": "Single published figure (NHM Dino Directory)."
+    },
+    "massKg": {
+      "value": [490, 490],
+      "sourceIds": ["nhm"],
+      "note": "Single published estimate (NHM Dino Directory); method not stated."
+    }
+  },
+  "locations": [
+    {
+      "continent": "asia",
+      "countryCode": "MN",
+      "formation": "Nemegt",
+      "sourceIds": ["pbdb-occs"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "Osmólska, Roniewicz & Barsbold",
+    "year": 1972,
+    "sourceIds": ["pbdb-taxon", "nhm"]
+  },
+  "summary": {
+    "text": {
+      "en": "Gallimimus was an 'ostrich dinosaur' from Mongolia, living near the very end of the Age of Dinosaurs. About 6 metres long, it was a fast runner with a toothless beak. Its name means 'chicken mimic' because its neck bones resemble a chicken's. Scientists still debate what it ate: plants, small animals, food strained from water, or a mix."
+    },
+    "sourceIds": ["nhm", "pbdb-occs", "zanno-makovicky-2011", "norell-2001"]
+  },
+  "funFacts": [
+    {
+      "text": {
+        "en": "Experts estimate that Gallimimus could run at 47 to 55 kilometres per hour, more than twice as fast as a fit human."
+      },
+      "sourceIds": ["nhm"]
+    }
+  ],
+  "famous": false,
+  "images": [],
+  "uncertain": [
+    {
+      "field": "diet",
+      "note": "Herbivory, omnivory and filter-feeding have all been proposed for ornithomimids (NHM; Zanno & Makovicky 2011; Norell et al. 2001)."
+    }
+  ],
+  "sources": [
+    {
+      "id": "norell-2001",
+      "title": "The beaks of ostrich dinosaurs",
+      "authors": "Norell, M. A.; Makovicky, P. J.; Currie, P. J.",
+      "year": 2001,
+      "publisher": "Nature",
+      "doi": "10.1038/35091139",
+      "url": "https://doi.org/10.1038/35091139",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "zanno-makovicky-2011",
+      "title": "Herbivorous ecomorphology and specialization patterns in theropod dinosaur evolution",
+      "authors": "Zanno, L. E.; Makovicky, P. J.",
+      "year": 2011,
+      "publisher": "Proceedings of the National Academy of Sciences",
+      "doi": "10.1073/pnas.1011924108",
+      "url": "https://doi.org/10.1073/pnas.1011924108",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "zanno-makovicky-2013",
+      "title": "No evidence for directional evolution of body mass in herbivorous theropod dinosaurs",
+      "authors": "Zanno, L. E.; Makovicky, P. J.",
+      "year": 2013,
+      "publisher": "Proceedings of the Royal Society B",
+      "doi": "10.1098/rspb.2012.2526",
+      "url": "https://doi.org/10.1098/rspb.2012.2526",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "nhm",
+      "title": "Gallimimus | Dino Directory",
+      "publisher": "Natural History Museum, London",
+      "url": "https://www.nhm.ac.uk/discover/dino-directory/gallimimus.html",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-taxon",
+      "title": "Gallimimus (taxon 38547)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/single.json?name=Gallimimus&show=attr,app,parent,class,ecospace",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-occs",
+      "title": "Occurrences of Gallimimus bullatus (stratigraphy and location)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.txt?base_name=Gallimimus%20bullatus&show=strat,loc",
+      "accessed": "2026-11-20"
+    }
+  ],
+  "lastReviewed": "2026-11-20"
+}

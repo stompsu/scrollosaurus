@@ -1,0 +1,117 @@
+{
+  "slug": "pteranodon",
+  "scientificName": "Pteranodon longiceps",
+  "genus": "Pteranodon",
+  "nameMeaning": {
+    "text": {
+      "en": "Winged and toothless"
+    },
+    "sourceIds": ["field-museum-2018"]
+  },
+  "group": "pteranodontidae",
+  "groupSourceIds": ["pbdb-taxon"],
+  "isDinosaur": false,
+  "taxonomy": {
+    "status": "valid"
+  },
+  "diet": {
+    "value": "piscivore",
+    "confidence": "probable",
+    "sourceIds": ["pbdb-taxon"],
+    "note": "Based on the PBDB ecology entry for the genus."
+  },
+  "timeRange": {
+    "startMa": 85.7,
+    "endMa": 72.2,
+    "sourceIds": ["pbdb-occurrences"],
+    "note": "PBDB occurrences: Santonian (Niobrara) to Early–Middle Campanian (Pierre Shale). Ages are ICS stage bounds (Santonian base 85.7 Ma, Campanian top 72.2 Ma), so the range is broader than the fossils themselves."
+  },
+  "periods": ["cretaceous"],
+  "size": {
+    "wingspanM": {
+      "value": [5.5, 7.25],
+      "sourceIds": ["field-museum-2018", "witton-habib-2010"],
+      "note": "Field Museum models have 18 ft (about 5.5 m) wingspans. Witton & Habib (2010), citing Bennett (2001), give about 7 m for the largest pteranodontids and about 7.25 m for the largest Pteranodon; these figures are for the genus, not specifically P. longiceps."
+    }
+  },
+  "locations": [
+    {
+      "continent": "north-america",
+      "countryCode": "US",
+      "formation": "Niobrara",
+      "sourceIds": ["pbdb-occurrences"]
+    },
+    {
+      "continent": "north-america",
+      "countryCode": "US",
+      "formation": "Pierre Shale",
+      "sourceIds": ["pbdb-occurrences"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "Marsh",
+    "year": 1876,
+    "sourceIds": ["pbdb-taxon"]
+  },
+  "summary": {
+    "text": {
+      "en": "Pteranodon was a flying reptile called a pterosaur, neither a dinosaur nor a bird. It had no teeth, and museum models give it wings about 5.5 metres (18 feet) across; the largest known Pteranodon reached about 7 metres. It was common in North America in the Late Cretaceous, and its fossils come from Kansas, South Dakota and Wyoming. It probably ate fish."
+    },
+    "sourceIds": ["field-museum-2018", "witton-habib-2010", "pbdb-occurrences", "pbdb-taxon"]
+  },
+  "famous": true,
+  "images": [],
+  "uncertain": [
+    {
+      "field": "size.lengthM",
+      "note": "No verified body length found."
+    },
+    {
+      "field": "size.massKg",
+      "note": "No verified mass estimate found."
+    },
+    {
+      "field": "timeRange",
+      "note": "Only stage-level ages available (PBDB); the end bound uses the top of the Campanian although records are labelled Early–Middle Campanian."
+    },
+    {
+      "field": "group",
+      "note": "PBDB places Pteranodon in Pteranodontia without naming a family; no verified source for Pteranodontidae was opened."
+    }
+  ],
+  "sources": [
+    {
+      "id": "pbdb-taxon",
+      "title": "Pteranodon (taxon 38502)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=38502",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-occurrences",
+      "title": "Fossil occurrences of Pteranodon longiceps",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Pteranodon+longiceps&idreso=species&show=strat%2Cloc",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "field-museum-2018",
+      "title": "Meet the Pterosaur Flock",
+      "year": 2018,
+      "publisher": "Field Museum",
+      "url": "https://fieldmuseum.org/blog/meet-pterosaur-flock",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "witton-habib-2010",
+      "title": "On the size and flight diversity of giant pterosaurs, the use of birds as pterosaur analogues and comments on pterosaur flightlessness",
+      "authors": "Witton MP, Habib MB",
+      "year": 2010,
+      "publisher": "PLoS ONE",
+      "doi": "10.1371/journal.pone.0013982",
+      "url": "https://doi.org/10.1371/journal.pone.0013982",
+      "accessed": "2026-11-21"
+    }
+  ],
+  "lastReviewed": "2026-11-21"
+}

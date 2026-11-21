@@ -1,0 +1,149 @@
+{
+  "slug": "iguanodon",
+  "scientificName": "Iguanodon bernissartensis",
+  "genus": "Iguanodon",
+  "nameMeaning": {
+    "text": { "en": "iguana tooth" },
+    "sourceIds": ["nhm-iguanodon"]
+  },
+  "group": "ornithopoda",
+  "groupSourceIds": ["nhm-iguanodon", "pbdb-iguanodon", "gasulla-2022"],
+  "isDinosaur": true,
+  "taxonomy": { "status": "valid" },
+  "diet": {
+    "value": "herbivore",
+    "confidence": "established",
+    "sourceIds": ["nhm-iguanodon"]
+  },
+  "timeRange": {
+    "startMa": 125.77,
+    "endMa": 119.57,
+    "sourceIds": ["pbdb-iguanodon-bernissartensis-occs", "gasulla-2022"],
+    "note": "Barremian to early Aptian, from PBDB occurrence ages of the best-dated finds: the Bernissart type locality in Belgium, the upper Barremian Arcillas de Morella Formation and the lower Aptian Capas Rojas in Spain, and Nehden in Germany. PBDB also lists older referrals (Hauterivian England, Berriasian Germany, late Tithonian France) that are left out here, because many assignments to this species need revision (Gasulla et al. 2022)."
+  },
+  "periods": ["cretaceous"],
+  "size": {
+    "lengthM": {
+      "value": [10, 10],
+      "sourceIds": ["nhm-iguanodon"],
+      "note": "Museum figure."
+    },
+    "massKg": {
+      "value": [4000, 15000],
+      "sourceIds": ["nhm-iguanodon", "benson-2014"],
+      "note": "Estimates differ widely by method: 4,000 kg (museum figure) versus 15,000 kg from limb-bone scaling (Benson et al. 2014)."
+    }
+  },
+  "locations": [
+    {
+      "continent": "europe",
+      "countryCode": "BE",
+      "formation": "Sainte-Barbe Clays",
+      "sourceIds": ["pbdb-iguanodon-bernissartensis-occs", "nhm-iguanodon"]
+    },
+    {
+      "continent": "europe",
+      "countryCode": "ES",
+      "formation": "Arcillas de Morella",
+      "sourceIds": ["gasulla-2022", "pbdb-iguanodon-bernissartensis-occs"]
+    },
+    {
+      "continent": "europe",
+      "countryCode": "GB",
+      "formation": "Weald Clay",
+      "sourceIds": ["pbdb-iguanodon-bernissartensis-occs", "nhm-iguanodon"]
+    },
+    {
+      "continent": "europe",
+      "countryCode": "DE",
+      "sourceIds": ["pbdb-iguanodon-bernissartensis-occs"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "Boulenger",
+    "year": 1881,
+    "note": "PBDB attributes the species to Boulenger (1881); the NHM Dino Directory credits Boulenger and van Beneden.",
+    "sourceIds": [
+      "nhm-iguanodon",
+      "pbdb-iguanodon-bernissartensis-occs",
+      "pbdb-iguanodon-bernissartensis"
+    ]
+  },
+  "summary": {
+    "text": {
+      "en": "Iguanodon was a big plant-eater that lived in Europe in the Early Cretaceous, about 125 million years ago. It could probably walk on two legs or on all fours, and it had a large spike on each hand, probably for defence against predators. This species is named after Bernissart in Belgium, where it was first found in a coal seam. Fossils have also been found in Spain, England and Germany."
+    },
+    "sourceIds": ["nhm-iguanodon", "pbdb-iguanodon-bernissartensis-occs", "gasulla-2022"]
+  },
+  "funFacts": [
+    {
+      "text": {
+        "en": "The way its head muscles were arranged suggests Iguanodon had a very long tongue."
+      },
+      "sourceIds": ["nhm-iguanodon"]
+    }
+  ],
+  "famous": false,
+  "images": [],
+  "uncertain": [
+    {
+      "field": "timeRange",
+      "note": "Many fossils have been referred to I. bernissartensis across Western Europe, some likely wrongly (Gasulla et al. 2022). The range uses only the Barremian to early Aptian records; including all PBDB referrals would push the start back to the late Tithonian."
+    },
+    {
+      "field": "size.massKg",
+      "note": "Estimates span 4 to 15 t depending on method: 4,000 kg (NHM museum figure) versus 15,000 kg from limb-bone scaling (Benson et al. 2014)."
+    }
+  ],
+  "sources": [
+    {
+      "id": "gasulla-2022",
+      "title": "New Iguanodon bernissartensis axial bones (Dinosauria, Ornithopoda) from the Early Cretaceous of Morella, Spain",
+      "authors": "Gasulla J.M., Escaso F., Narváez I., Sanz J.L., Ortega F.",
+      "year": 2022,
+      "publisher": "Diversity 14(2): 63",
+      "doi": "10.3390/d14020063",
+      "url": "https://doi.org/10.3390/d14020063",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "benson-2014",
+      "title": "Rates of dinosaur body mass evolution indicate 170 million years of sustained ecological innovation on the avian stem lineage",
+      "authors": "Benson R.B.J., Campione N.E., Carrano M.T., Mannion P.D., Sullivan C., Upchurch P., Evans D.C.",
+      "year": 2014,
+      "publisher": "PLOS Biology 12(5): e1001853",
+      "doi": "10.1371/journal.pbio.1001853",
+      "url": "https://doi.org/10.1371/journal.pbio.1001853",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "nhm-iguanodon",
+      "title": "Iguanodon | Dino Directory",
+      "publisher": "Natural History Museum, London",
+      "url": "https://www.nhm.ac.uk/discover/dino-directory/iguanodon.html",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-iguanodon",
+      "title": "Iguanodon (taxon 38749)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=38749",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-iguanodon-bernissartensis-occs",
+      "title": "Iguanodon bernissartensis occurrences (taxon 58905)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Iguanodon%20bernissartensis&show=strat,loc",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-iguanodon-bernissartensis",
+      "title": "Iguanodon bernissartensis (taxon 58905)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/single.json?name=Iguanodon%20bernissartensis&show=attr",
+      "accessed": "2026-11-20"
+    }
+  ],
+  "lastReviewed": "2026-11-20"
+}

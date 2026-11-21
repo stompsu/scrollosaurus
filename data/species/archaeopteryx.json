@@ -1,0 +1,147 @@
+{
+  "slug": "archaeopteryx",
+  "scientificName": "Archaeopteryx lithographica",
+  "genus": "Archaeopteryx",
+  "nameMeaning": {
+    "text": { "en": "ancient wing" },
+    "sourceIds": ["nhm-archaeopteryx"]
+  },
+  "group": "avialae",
+  "groupSourceIds": ["pbdb-archaeopteryx", "erickson-2009", "rauhut-2018", "xu-2011"],
+  "isDinosaur": true,
+  "taxonomy": { "status": "valid" },
+  "diet": {
+    "value": "carnivore",
+    "confidence": "probable",
+    "sourceIds": ["nhm-archaeopteryx"],
+    "note": "No preserved stomach contents; diet inferred. It may have eaten small reptiles, mammals or insects."
+  },
+  "timeRange": {
+    "startMa": 149.2,
+    "endMa": 145.06,
+    "sourceIds": ["pbdb-archaeopteryx-lithographica-occs", "rauhut-2018"],
+    "note": "Early Tithonian, from PBDB occurrence ages for A. lithographica. All Archaeopteryx specimens come from the Altmühltal, Mörnsheim and Painten formations of Bavaria; the oldest, from the earliest Tithonian Painten Formation, is referred only to the genus (Rauhut et al. 2018)."
+  },
+  "periods": ["jurassic"],
+  "size": {
+    "lengthM": {
+      "value": [0.5, 0.5],
+      "sourceIds": ["nhm-archaeopteryx"],
+      "note": "Museum figure."
+    },
+    "massKg": {
+      "value": [0.2, 0.93],
+      "sourceIds": ["erickson-2009"],
+      "note": "Earlier estimates for known specimens range from 200 to 600 g; Erickson et al. (2009) estimate an adult (asymptotic) mass of about 895 to 928 g, because none of the known specimens appears fully grown."
+    }
+  },
+  "locations": [
+    {
+      "continent": "europe",
+      "countryCode": "DE",
+      "formation": "Altmühltal",
+      "sourceIds": ["pbdb-archaeopteryx-lithographica-occs", "rauhut-2018"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "Meyer",
+    "year": 1861,
+    "sourceIds": ["pbdb-archaeopteryx"]
+  },
+  "summary": {
+    "text": {
+      "en": "Archaeopteryx is a famous bird-like dinosaur from the Late Jurassic of southern Germany, about 149 to 145 million years ago. About the size of a magpie, it had broad feathered wings, but unlike modern birds it also had sharp teeth and a long bony tail. Its fossils come from limestone that formed in a lagoon. Found in 1861, two years after Darwin's On the Origin of Species, it seemed to support the idea that birds evolved from dinosaurs."
+    },
+    "sourceIds": ["nhm-archaeopteryx", "pbdb-archaeopteryx-lithographica-occs"]
+  },
+  "funFacts": [
+    {
+      "text": {
+        "en": "Fossil pigment structures in an isolated Archaeopteryx feather suggest it was black, with 95% probability."
+      },
+      "sourceIds": ["carney-2012"]
+    },
+    {
+      "text": {
+        "en": "Archaeopteryx grew slowly: its bones suggest it took about two to three years to reach adult size, about three times slower than living precocial birds."
+      },
+      "sourceIds": ["erickson-2009"]
+    }
+  ],
+  "famous": true,
+  "images": [],
+  "uncertain": [
+    {
+      "field": "group",
+      "note": "Archaeopteryx is usually placed at the base of Avialae, but one analysis (Xu et al. 2011) moved it into Deinonychosauria, with only weak support."
+    },
+    {
+      "field": "taxonomy",
+      "note": "Archaeopteryx specimens vary a lot in limb proportions and teeth; Rauhut et al. (2018) discuss whether they belong to one species or a 'species flock', so not every specimen may be A. lithographica."
+    }
+  ],
+  "sources": [
+    {
+      "id": "rauhut-2018",
+      "title": "The oldest Archaeopteryx (Theropoda: Avialiae): a new specimen from the Kimmeridgian/Tithonian boundary of Schamhaupten, Bavaria",
+      "authors": "Rauhut O.W.M., Foth C., Tischlinger H.",
+      "year": 2018,
+      "publisher": "PeerJ 6: e4191",
+      "doi": "10.7717/peerj.4191",
+      "url": "https://doi.org/10.7717/peerj.4191",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "erickson-2009",
+      "title": "Was dinosaurian physiology inherited by birds? Reconciling slow growth in Archaeopteryx",
+      "authors": "Erickson G.M., Rauhut O.W.M., Zhou Z., Turner A.H., Inouye B.D., Hu D., Norell M.A.",
+      "year": 2009,
+      "publisher": "PLOS ONE 4(10): e7390",
+      "doi": "10.1371/journal.pone.0007390",
+      "url": "https://doi.org/10.1371/journal.pone.0007390",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "carney-2012",
+      "title": "New evidence on the colour and nature of the isolated Archaeopteryx feather",
+      "authors": "Carney R.M., Vinther J., Shawkey M.D., D'Alba L., Ackermann J.",
+      "year": 2012,
+      "publisher": "Nature Communications",
+      "doi": "10.1038/ncomms1642",
+      "url": "https://doi.org/10.1038/ncomms1642",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "xu-2011",
+      "title": "An Archaeopteryx-like theropod from China and the origin of Avialae",
+      "authors": "Xu X., You H., Du K., Han F.",
+      "year": 2011,
+      "publisher": "Nature",
+      "doi": "10.1038/nature10288",
+      "url": "https://doi.org/10.1038/nature10288",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "nhm-archaeopteryx",
+      "title": "Archaeopteryx | Dino Directory",
+      "publisher": "Natural History Museum, London",
+      "url": "https://www.nhm.ac.uk/discover/dino-directory/archaeopteryx.html",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-archaeopteryx",
+      "title": "Archaeopteryx (taxon 39240)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=39240",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-archaeopteryx-lithographica-occs",
+      "title": "Archaeopteryx lithographica occurrences (taxon 55487)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Archaeopteryx%20lithographica&show=strat,loc",
+      "accessed": "2026-11-20"
+    }
+  ],
+  "lastReviewed": "2026-11-20"
+}

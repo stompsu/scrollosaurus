@@ -1,0 +1,129 @@
+{
+  "slug": "plateosaurus",
+  "scientificName": "Plateosaurus trossingensis",
+  "genus": "Plateosaurus",
+  "nameMeaning": {
+    "text": {
+      "en": "flat lizard"
+    },
+    "sourceIds": ["nhm"]
+  },
+  "group": "plateosauridae",
+  "groupSourceIds": ["pbdb-taxon", "nhm"],
+  "isDinosaur": true,
+  "taxonomy": {
+    "status": "valid",
+    "note": "The original type species, P. engelhardti Meyer, 1837, rests on fragmentary, non-diagnostic bones, and the name was long disputed. In 2019 the ICZN (Opinion 2435) set aside earlier fixations and made P. trossingensis Fraas, 1913 the type species. Older literature, including Hofmann & Sander (2014) and the NHM Dino Directory, uses P. engelhardti for the same material.",
+    "sourceIds": ["iczn-2435", "hofmann-sander-2014"]
+  },
+  "diet": {
+    "value": "herbivore",
+    "confidence": "probable",
+    "sourceIds": ["nhm"]
+  },
+  "timeRange": {
+    "startMa": 227.3,
+    "endMa": 205.7,
+    "sourceIds": ["hofmann-sander-2014", "pbdb-occs"],
+    "note": "Plateosaurus remains come from the Norian stage (Hofmann & Sander 2014; all PBDB P. trossingensis occurrences are Norian). The Ma values are the ICS v2024/12 Norian boundaries. PBDB also lists Rhaetian and one Hettangian 'Plateosaurus sp.' record not used here."
+  },
+  "periods": ["triassic"],
+  "size": {
+    "lengthM": {
+      "value": [4.8, 10],
+      "sourceIds": ["bonn-2005"],
+      "note": "Fully grown individuals ranged from 4.8 m to about 10 m (University of Bonn report on Sander & Klein 2005). The NHM Dino Directory gives 7 m."
+    }
+  },
+  "locations": [
+    {
+      "continent": "europe",
+      "countryCode": "DE",
+      "formation": "Löwenstein",
+      "sourceIds": ["pbdb-occs"]
+    },
+    {
+      "continent": "europe",
+      "countryCode": "CH",
+      "formation": "Klettgau",
+      "sourceIds": ["pbdb-occs"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "Meyer",
+    "year": 1837,
+    "sourceIds": ["pbdb-taxon", "nhm", "iczn-2435"]
+  },
+  "summary": {
+    "text": {
+      "en": "Plateosaurus was a large plant eater that lived in Europe in the Late Triassic, about 227 to 206 million years ago. Grown animals were roughly 5 to 10 metres long, and adults varied a lot in size. It had five-fingered hands with a large thumb claw, perhaps used for defence or gathering food. Its fossils come from Germany and Switzerland, and finds in Germany suggest it may have lived in herds."
+    },
+    "sourceIds": ["nhm", "bonn-2005", "pbdb-occs", "hofmann-sander-2014"]
+  },
+  "funFacts": [
+    {
+      "text": {
+        "en": "Adult Plateosaurus varied a lot in size: some were less than half as long as others, a sign that growth depended on living conditions."
+      },
+      "sourceIds": ["bonn-2005"]
+    }
+  ],
+  "famous": true,
+  "images": [],
+  "uncertain": [
+    {
+      "field": "size.massKg",
+      "note": "Published mass estimates differ widely; the NHM Dino Directory lists 4000 kg, but we could not verify a method-based range, so the field is left empty."
+    }
+  ],
+  "sources": [
+    {
+      "id": "iczn-2435",
+      "title": "Case 3560: Plateosaurus engelhardti Meyer, 1837 (Dinosauria, Sauropodomorpha); Opinion 2435",
+      "publisher": "International Commission on Zoological Nomenclature",
+      "year": 2019,
+      "url": "https://www.iczn.org/cases/all-cases/case/3560",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "hofmann-sander-2014",
+      "title": "The first juvenile specimens of Plateosaurus engelhardti from Frick, Switzerland: isolated neural arches and their implications for developmental plasticity in a basal sauropodomorph",
+      "authors": "Hofmann, R.; Sander, P. M.",
+      "year": 2014,
+      "publisher": "PeerJ",
+      "doi": "10.7717/peerj.458",
+      "url": "https://doi.org/10.7717/peerj.458",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "bonn-2005",
+      "title": "Unexpected: Dinosaurs Grew Slower If Times Were Hard (University of Bonn press release on Sander & Klein 2005, Science)",
+      "publisher": "ScienceDaily",
+      "year": 2005,
+      "url": "https://www.sciencedaily.com/releases/2005/12/051219084817.htm",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "nhm",
+      "title": "Plateosaurus | Dino Directory",
+      "publisher": "Natural History Museum, London",
+      "url": "https://www.nhm.ac.uk/discover/dino-directory/plateosaurus.html",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-taxon",
+      "title": "Plateosaurus (taxon 38644)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/single.json?name=Plateosaurus&show=attr,app,parent,ref,class",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-occs",
+      "title": "Occurrences of Plateosaurus trossingensis (stratigraphy and location)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.txt?base_name=Plateosaurus%20trossingensis&show=strat,loc",
+      "accessed": "2026-11-20"
+    }
+  ],
+  "lastReviewed": "2026-11-20"
+}

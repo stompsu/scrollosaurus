@@ -1,0 +1,661 @@
+{
+  "groups": [
+    {
+      "id": "dinosauria",
+      "name": "Dinosauria",
+      "isDinosaur": true,
+      "sourceIds": ["pbdb-dinosauria", "baron-2017", "langer-2017"]
+    },
+    {
+      "id": "theropoda",
+      "name": "Theropoda",
+      "parent": "dinosauria",
+      "isDinosaur": true,
+      "filter": "clade",
+      "sourceIds": ["pbdb-theropoda", "langer-2017", "marsh-rowe-2020"]
+    },
+    {
+      "id": "sauropodomorpha",
+      "name": "Sauropodomorpha",
+      "parent": "dinosauria",
+      "isDinosaur": true,
+      "filter": "clade",
+      "sourceIds": ["pbdb-sauropodomorpha", "martinez-2011"]
+    },
+    {
+      "id": "ornithischia",
+      "name": "Ornithischia",
+      "parent": "dinosauria",
+      "isDinosaur": true,
+      "filter": "clade",
+      "sourceIds": ["pbdb-ornithischia", "baron-2017"]
+    },
+    {
+      "id": "herrerasauridae",
+      "name": "Herrerasauridae",
+      "parent": "theropoda",
+      "isDinosaur": true,
+      "filter": "subgroup",
+      "sourceIds": ["pbdb-herrerasauridae", "nesbitt-2009"]
+    },
+    {
+      "id": "coelophysoidea",
+      "name": "Coelophysoidea",
+      "parent": "theropoda",
+      "isDinosaur": true,
+      "filter": "subgroup",
+      "sourceIds": ["pbdb-coelophysoidea", "marsh-rowe-2020"]
+    },
+    {
+      "id": "ceratosauria",
+      "name": "Ceratosauria",
+      "parent": "theropoda",
+      "isDinosaur": true,
+      "sourceIds": ["pbdb-ceratosauria"]
+    },
+    {
+      "id": "abelisauridae",
+      "name": "Abelisauridae",
+      "parent": "ceratosauria",
+      "isDinosaur": true,
+      "filter": "subgroup",
+      "sourceIds": ["pbdb-abelisauridae"]
+    },
+    {
+      "id": "tetanurae",
+      "name": "Tetanurae",
+      "parent": "theropoda",
+      "isDinosaur": true,
+      "sourceIds": ["pbdb-tetanurae"]
+    },
+    {
+      "id": "spinosauridae",
+      "name": "Spinosauridae",
+      "parent": "tetanurae",
+      "isDinosaur": true,
+      "filter": "subgroup",
+      "sourceIds": ["pbdb-spinosauridae"]
+    },
+    {
+      "id": "allosauroidea",
+      "name": "Allosauroidea",
+      "parent": "tetanurae",
+      "isDinosaur": true,
+      "filter": "subgroup",
+      "sourceIds": ["pbdb-allosauroidea"]
+    },
+    {
+      "id": "coelurosauria",
+      "name": "Coelurosauria",
+      "parent": "tetanurae",
+      "isDinosaur": true,
+      "sourceIds": ["pbdb-coelurosauria", "brusatte-2014"]
+    },
+    {
+      "id": "tyrannosauridae",
+      "name": "Tyrannosauridae",
+      "parent": "coelurosauria",
+      "isDinosaur": true,
+      "filter": "subgroup",
+      "sourceIds": ["pbdb-tyrannosauridae", "brusatte-2014"]
+    },
+    {
+      "id": "compsognathidae",
+      "name": "Compsognathidae",
+      "parent": "coelurosauria",
+      "isDinosaur": true,
+      "filter": "subgroup",
+      "sourceIds": ["pbdb-compsognathidae", "brusatte-2014"]
+    },
+    {
+      "id": "ornithomimosauria",
+      "name": "Ornithomimosauria",
+      "parent": "coelurosauria",
+      "isDinosaur": true,
+      "filter": "subgroup",
+      "sourceIds": ["pbdb-ornithomimosauria", "brusatte-2014"]
+    },
+    {
+      "id": "alvarezsauridae",
+      "name": "Alvarezsauridae",
+      "parent": "coelurosauria",
+      "isDinosaur": true,
+      "filter": "subgroup",
+      "sourceIds": ["pbdb-alvarezsauridae", "brusatte-2014"]
+    },
+    {
+      "id": "therizinosauria",
+      "name": "Therizinosauria",
+      "parent": "coelurosauria",
+      "isDinosaur": true,
+      "filter": "subgroup",
+      "sourceIds": ["pbdb-therizinosauria", "brusatte-2014"]
+    },
+    {
+      "id": "maniraptora",
+      "name": "Maniraptora",
+      "parent": "coelurosauria",
+      "isDinosaur": true,
+      "sourceIds": ["pbdb-maniraptora", "brusatte-2014"]
+    },
+    {
+      "id": "oviraptorosauria",
+      "name": "Oviraptorosauria",
+      "parent": "maniraptora",
+      "isDinosaur": true,
+      "filter": "subgroup",
+      "sourceIds": ["pbdb-oviraptorosauria", "brusatte-2014"]
+    },
+    {
+      "id": "dromaeosauridae",
+      "name": "Dromaeosauridae",
+      "parent": "maniraptora",
+      "isDinosaur": true,
+      "filter": "subgroup",
+      "sourceIds": ["pbdb-dromaeosauridae", "brusatte-2014"]
+    },
+    {
+      "id": "avialae",
+      "name": "Avialae",
+      "parent": "maniraptora",
+      "isDinosaur": true,
+      "filter": "subgroup",
+      "sourceIds": ["pbdb-avialae", "brusatte-2014"]
+    },
+    {
+      "id": "plateosauridae",
+      "name": "Plateosauridae",
+      "parent": "sauropodomorpha",
+      "isDinosaur": true,
+      "filter": "subgroup",
+      "sourceIds": ["pbdb-plateosauridae"]
+    },
+    {
+      "id": "sauropoda",
+      "name": "Sauropoda",
+      "parent": "sauropodomorpha",
+      "isDinosaur": true,
+      "filter": "subgroup",
+      "sourceIds": ["pbdb-sauropoda"]
+    },
+    {
+      "id": "mamenchisauridae",
+      "name": "Mamenchisauridae",
+      "parent": "sauropoda",
+      "isDinosaur": true,
+      "filter": "subgroup",
+      "sourceIds": ["pbdb-mamenchisauridae"]
+    },
+    {
+      "id": "diplodocidae",
+      "name": "Diplodocidae",
+      "parent": "sauropoda",
+      "isDinosaur": true,
+      "filter": "subgroup",
+      "sourceIds": ["pbdb-diplodocidae", "tschopp-2015"]
+    },
+    {
+      "id": "brachiosauridae",
+      "name": "Brachiosauridae",
+      "parent": "sauropoda",
+      "isDinosaur": true,
+      "filter": "subgroup",
+      "sourceIds": ["pbdb-brachiosauridae"]
+    },
+    {
+      "id": "titanosauria",
+      "name": "Titanosauria",
+      "parent": "sauropoda",
+      "isDinosaur": true,
+      "filter": "subgroup",
+      "sourceIds": ["pbdb-titanosauria"]
+    },
+    {
+      "id": "thyreophora",
+      "name": "Thyreophora",
+      "parent": "ornithischia",
+      "isDinosaur": true,
+      "sourceIds": ["pbdb-thyreophora"]
+    },
+    {
+      "id": "stegosauria",
+      "name": "Stegosauria",
+      "parent": "thyreophora",
+      "isDinosaur": true,
+      "filter": "subgroup",
+      "sourceIds": ["pbdb-stegosauria"]
+    },
+    {
+      "id": "ankylosauria",
+      "name": "Ankylosauria",
+      "parent": "thyreophora",
+      "isDinosaur": true,
+      "filter": "subgroup",
+      "sourceIds": ["pbdb-ankylosauria"]
+    },
+    {
+      "id": "ornithopoda",
+      "name": "Ornithopoda",
+      "parent": "ornithischia",
+      "isDinosaur": true,
+      "filter": "subgroup",
+      "sourceIds": ["pbdb-ornithopoda"]
+    },
+    {
+      "id": "hadrosauridae",
+      "name": "Hadrosauridae",
+      "parent": "ornithopoda",
+      "isDinosaur": true,
+      "filter": "subgroup",
+      "sourceIds": ["pbdb-hadrosauridae"]
+    },
+    {
+      "id": "marginocephalia",
+      "name": "Marginocephalia",
+      "parent": "ornithischia",
+      "isDinosaur": true,
+      "sourceIds": ["pbdb-marginocephalia"]
+    },
+    {
+      "id": "ceratopsia",
+      "name": "Ceratopsia",
+      "parent": "marginocephalia",
+      "isDinosaur": true,
+      "filter": "subgroup",
+      "sourceIds": ["pbdb-ceratopsia"]
+    },
+    {
+      "id": "pachycephalosauria",
+      "name": "Pachycephalosauria",
+      "parent": "marginocephalia",
+      "isDinosaur": true,
+      "filter": "subgroup",
+      "sourceIds": ["pbdb-pachycephalosauria"]
+    },
+    {
+      "id": "pterosauria",
+      "name": "Pterosauria",
+      "isDinosaur": false,
+      "sourceIds": ["pbdb-pterosauria"]
+    },
+    {
+      "id": "pteranodontidae",
+      "name": "Pteranodontidae",
+      "parent": "pterosauria",
+      "isDinosaur": false,
+      "sourceIds": ["pbdb-pteranodontidae"]
+    },
+    {
+      "id": "azhdarchidae",
+      "name": "Azhdarchidae",
+      "parent": "pterosauria",
+      "isDinosaur": false,
+      "sourceIds": ["pbdb-azhdarchidae"]
+    },
+    {
+      "id": "plesiosauria",
+      "name": "Plesiosauria",
+      "isDinosaur": false,
+      "sourceIds": ["pbdb-plesiosauria"]
+    },
+    {
+      "id": "mosasauridae",
+      "name": "Mosasauridae",
+      "isDinosaur": false,
+      "sourceIds": ["pbdb-mosasauridae"]
+    }
+  ],
+  "sources": [
+    {
+      "id": "pbdb-dinosauria",
+      "title": "Dinosauria (taxon 52775)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=52775",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-theropoda",
+      "title": "Theropoda (taxon 38513)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=38513",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-sauropodomorpha",
+      "title": "Sauropodomorpha (taxon 38633)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=38633",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-ornithischia",
+      "title": "Ornithischia (taxon 38712)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=38712",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-herrerasauridae",
+      "title": "Herrerasauridae (taxon 38510)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=38510",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-coelophysoidea",
+      "title": "Coelophysoidea (taxon 55476)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=55476",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-ceratosauria",
+      "title": "Ceratosauria (taxon 90100)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=90100",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-abelisauridae",
+      "title": "Abelisauridae (taxon 53942)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=53942",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-tetanurae",
+      "title": "Tetanurae (taxon 53374)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=53374",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-spinosauridae",
+      "title": "Spinosauridae (taxon 38595)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=38595",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-allosauroidea",
+      "title": "Allosauroidea (taxon 64112)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=64112",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-coelurosauria",
+      "title": "Coelurosauria (taxon 53940)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=53940",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-tyrannosauridae",
+      "title": "Tyrannosauridae (taxon 38606)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=38606",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-compsognathidae",
+      "title": "Compsognathidae (taxon 38537)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=38537",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-ornithomimosauria",
+      "title": "Ornithomimosauria (taxon 55491)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=55491",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-alvarezsauridae",
+      "title": "Alvarezsauridae (taxon 64116)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=64116",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-therizinosauria",
+      "title": "Therizinosauria (taxon 67254)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=67254",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-maniraptora",
+      "title": "Maniraptora (taxon 55486)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=55486",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-oviraptorosauria",
+      "title": "Oviraptorosauria (taxon 54546)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=54546",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-dromaeosauridae",
+      "title": "Dromaeosauridae (taxon 38561)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=38561",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-avialae",
+      "title": "Avialae (taxon 53211)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=53211",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-plateosauridae",
+      "title": "Plateosauridae (taxon 54157)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=54157",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-sauropoda",
+      "title": "Sauropoda (taxon 38653)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=38653",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-mamenchisauridae",
+      "title": "Mamenchisauridae (taxon 53026)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=53026",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-diplodocidae",
+      "title": "Diplodocidae (taxon 38664)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=38664",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-brachiosauridae",
+      "title": "Brachiosauridae (taxon 38673)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=38673",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-titanosauria",
+      "title": "Titanosauria (taxon 55585)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=55585",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-thyreophora",
+      "title": "Thyreophora (taxon 52777)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=52777",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-stegosauria",
+      "title": "Stegosauria (taxon 38798)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=38798",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-ankylosauria",
+      "title": "Ankylosauria (taxon 38816)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=38816",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-ornithopoda",
+      "title": "Ornithopoda (taxon 38713)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=38713",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-hadrosauridae",
+      "title": "Hadrosauridae (taxon 38755)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=38755",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-marginocephalia",
+      "title": "Marginocephalia (taxon 52814)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=52814",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-ceratopsia",
+      "title": "Ceratopsia (taxon 38842)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=38842",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-pachycephalosauria",
+      "title": "Pachycephalosauria (taxon 38782)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=38782",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-pterosauria",
+      "title": "Pterosauria (taxon 38461)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=38461",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-pteranodontidae",
+      "title": "Pteranodontidae (taxon 52933)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=52933",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-azhdarchidae",
+      "title": "Azhdarchidae (taxon 81005)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=81005",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-plesiosauria",
+      "title": "Plesiosauria (taxon 36454)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=36454",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-mosasauridae",
+      "title": "Mosasauridae (taxon 38049)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=38049",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "baron-2017",
+      "title": "A new hypothesis of dinosaur relationships and early dinosaur evolution",
+      "authors": "Baron, M. G.; Norman, D. B.; Barrett, P. M.",
+      "year": 2017,
+      "publisher": "Nature",
+      "doi": "10.1038/nature21700",
+      "url": "https://doi.org/10.1038/nature21700",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "langer-2017",
+      "title": "Untangling the dinosaur family tree",
+      "authors": "Langer, M. C.; Ezcurra, M. D.; Rauhut, O. W. M.; Benton, M. J.; Knoll, F.; McPhee, B. W.; Novas, F. E.; Pol, D.; Brusatte, S. L.",
+      "year": 2017,
+      "publisher": "Nature",
+      "doi": "10.1038/nature24011",
+      "url": "https://doi.org/10.1038/nature24011",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "martinez-2011",
+      "title": "A basal dinosaur from the dawn of the dinosaur era in southwestern Pangaea",
+      "authors": "Martinez, R. N.; Sereno, P. C.; Alcober, O. A.; Colombi, C. E.; Renne, P. R.; Montañez, I. P.; Currie, B. S.",
+      "year": 2011,
+      "publisher": "Science",
+      "doi": "10.1126/science.1198467",
+      "url": "https://doi.org/10.1126/science.1198467",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "nesbitt-2009",
+      "title": "A complete skeleton of a Late Triassic saurischian and the early evolution of dinosaurs",
+      "authors": "Nesbitt, S. J.; Smith, N. D.; Irmis, R. B.; Turner, A. H.; Downs, A.; Norell, M. A.",
+      "year": 2009,
+      "publisher": "Science",
+      "doi": "10.1126/science.1180350",
+      "url": "https://doi.org/10.1126/science.1180350",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "brusatte-2014",
+      "title": "Gradual assembly of avian body plan culminated in rapid rates of evolution across the dinosaur-bird transition",
+      "authors": "Brusatte, S. L.; Lloyd, G. T.; Wang, S. C.; Norell, M. A.",
+      "year": 2014,
+      "publisher": "Current Biology",
+      "doi": "10.1016/j.cub.2014.08.034",
+      "url": "https://doi.org/10.1016/j.cub.2014.08.034",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "marsh-rowe-2020",
+      "title": "A comprehensive anatomical and phylogenetic evaluation of Dilophosaurus wetherilli (Dinosauria, Theropoda) with descriptions of new specimens from the Kayenta Formation of northern Arizona",
+      "authors": "Marsh, A. D.; Rowe, T. B.",
+      "year": 2020,
+      "publisher": "Journal of Paleontology",
+      "doi": "10.1017/jpa.2020.14",
+      "url": "https://doi.org/10.1017/jpa.2020.14",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "tschopp-2015",
+      "title": "A specimen-level phylogenetic analysis and taxonomic revision of Diplodocidae (Dinosauria, Sauropoda)",
+      "authors": "Tschopp, E.; Mateus, O.; Benson, R. B. J.",
+      "year": 2015,
+      "publisher": "PeerJ",
+      "doi": "10.7717/peerj.857",
+      "url": "https://doi.org/10.7717/peerj.857",
+      "accessed": "2026-11-20"
+    }
+  ],
+  "lastReviewed": "2026-11-20"
+}

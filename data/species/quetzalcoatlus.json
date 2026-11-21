@@ -1,0 +1,132 @@
+{
+  "slug": "quetzalcoatlus",
+  "scientificName": "Quetzalcoatlus northropi",
+  "genus": "Quetzalcoatlus",
+  "nameMeaning": {
+    "text": {
+      "en": "Named after Quetzalcoatl, the feathered-serpent god of the Aztecs; northropi honours aircraft designer Jack Northrop"
+    },
+    "sourceIds": ["nps-big-bend", "ut-news-2021"]
+  },
+  "group": "azhdarchidae",
+  "groupSourceIds": ["pbdb-taxon", "witton-naish-2008"],
+  "isDinosaur": false,
+  "taxonomy": {
+    "status": "valid"
+  },
+  "diet": {
+    "value": "carnivore",
+    "confidence": "debated",
+    "sourceIds": ["witton-naish-2008", "ut-news-2021", "nps-big-bend"],
+    "note": "Witton and Naish (2008) argue azhdarchids were stork-like ground foragers eating small animals and carrion; Lehman (reported by UT News 2021) and the NPS describe it probing water and mud for invertebrates."
+  },
+  "timeRange": {
+    "startMa": 72.2,
+    "endMa": 66,
+    "sourceIds": ["pbdb-occurrences", "witton-naish-2008"],
+    "note": "Maastrichtian (Javelina Formation). Ages are ICS Maastrichtian stage bounds from PBDB occurrences; popular sources give about 67 Ma (Field Museum) or about 70 Ma (UT News)."
+  },
+  "periods": ["cretaceous"],
+  "size": {
+    "wingspanM": {
+      "value": [10, 11.9],
+      "sourceIds": ["witton-naish-2008", "witton-habib-2010", "nps-big-bend"],
+      "note": "About 10 m (Witton & Naish 2008); 10–11 m (Witton & Habib 2010); 36–39 ft, about 11.0–11.9 m (NPS). Larger spans of 11–12 m and 15.5 m appear in Witton & Naish (2008) only as Langston's scenarios for mass estimates, not as measurements."
+    }
+  },
+  "locations": [
+    {
+      "continent": "north-america",
+      "countryCode": "US",
+      "formation": "Javelina",
+      "sourceIds": ["pbdb-occurrences", "witton-naish-2008"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "Lawson",
+    "year": 1975,
+    "sourceIds": ["pbdb-taxon"]
+  },
+  "summary": {
+    "text": {
+      "en": "Quetzalcoatlus was a giant pterosaur, a flying reptile, not a dinosaur. With wings about 10 metres across, it was among the largest animals ever known to fly. Its fossils come from Big Bend National Park in Texas, from the very end of the Cretaceous. Scientists still debate how it fed: stalking small animals on land, or probing for crabs and worms in shallow water."
+    },
+    "sourceIds": ["pbdb-taxon", "witton-naish-2008", "ut-news-2021", "nps-big-bend"]
+  },
+  "funFacts": [
+    {
+      "text": {
+        "en": "The first fossil, a wing bone, was found in 1971 in Big Bend National Park, Texas, by Douglas Lawson, then a University of Texas student."
+      },
+      "sourceIds": ["nps-big-bend"]
+    }
+  ],
+  "famous": false,
+  "images": [],
+  "uncertain": [
+    {
+      "field": "size.lengthM",
+      "note": "No verified body length found."
+    },
+    {
+      "field": "size.massKg",
+      "note": "No verified mass estimate specific to Q. northropi; Witton & Naish (2008) cite earlier estimates of 86–136 kg and give about 250 kg for a generic 10 m azhdarchid."
+    },
+    {
+      "field": "diet",
+      "note": "How azhdarchids fed is debated: stork-like ground foraging (Witton & Naish 2008) versus probing water and mud for invertebrates (Lehman, reported by UT News 2021; NPS)."
+    }
+  ],
+  "sources": [
+    {
+      "id": "pbdb-taxon",
+      "title": "Quetzalcoatlus northropi (taxon 133904)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=133904",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-occurrences",
+      "title": "Fossil occurrences of Quetzalcoatlus northropi",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Quetzalcoatlus+northropi&idreso=species&show=strat%2Cloc",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "witton-naish-2008",
+      "title": "A reappraisal of azhdarchid pterosaur functional morphology and paleoecology",
+      "authors": "Witton MP, Naish D",
+      "year": 2008,
+      "publisher": "PLoS ONE",
+      "doi": "10.1371/journal.pone.0002271",
+      "url": "https://doi.org/10.1371/journal.pone.0002271",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "nps-big-bend",
+      "title": "Pterosaurs - Big Bend National Park",
+      "publisher": "U.S. National Park Service",
+      "url": "https://www.nps.gov/bibe/learn/nature/pterosaur.htm",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "ut-news-2021",
+      "title": "World's Largest Pterosaur Leaped Aloft to Fly",
+      "year": 2021,
+      "publisher": "University of Texas at Austin (UT News)",
+      "url": "https://news.utexas.edu/2021/12/08/worlds-largest-pterosaur-leaped-aloft-to-fly",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "witton-habib-2010",
+      "title": "On the size and flight diversity of giant pterosaurs, the use of birds as pterosaur analogues and comments on pterosaur flightlessness",
+      "authors": "Witton MP, Habib MB",
+      "year": 2010,
+      "publisher": "PLoS ONE",
+      "doi": "10.1371/journal.pone.0013982",
+      "url": "https://doi.org/10.1371/journal.pone.0013982",
+      "accessed": "2026-11-21"
+    }
+  ],
+  "lastReviewed": "2026-11-21"
+}

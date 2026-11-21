@@ -1,0 +1,110 @@
+{
+  "slug": "dilophosaurus",
+  "scientificName": "Dilophosaurus wetherilli",
+  "genus": "Dilophosaurus",
+  "nameMeaning": {
+    "text": {
+      "en": "two-crested lizard"
+    },
+    "sourceIds": ["nhm"]
+  },
+  "group": "theropoda",
+  "groupSourceIds": ["marsh-rowe-2020", "pbdb-taxon"],
+  "isDinosaur": true,
+  "taxonomy": {
+    "status": "valid"
+  },
+  "diet": {
+    "value": "carnivore",
+    "confidence": "established",
+    "sourceIds": ["nhm", "marsh-rowe-2020"]
+  },
+  "timeRange": {
+    "startMa": 199.5,
+    "endMa": 184.2,
+    "sourceIds": ["marsh-rowe-2020", "pbdb-occs"],
+    "note": "Marsh & Rowe (2020) give the age as Sinemurian-Pliensbachian (Kayenta Formation); the Ma values are the ICS v2024/12 stage boundaries. Two PBDB records of cf. Dilophosaurus are dated Hettangian-Sinemurian."
+  },
+  "periods": ["jurassic"],
+  "size": {
+    "lengthM": {
+      "value": [7, 7],
+      "sourceIds": ["nhm"],
+      "note": "Single published figure (NHM Dino Directory)."
+    },
+    "massKg": {
+      "value": [400, 400],
+      "sourceIds": ["nhm"],
+      "note": "Single published estimate (NHM Dino Directory); method not stated."
+    }
+  },
+  "locations": [
+    {
+      "continent": "north-america",
+      "countryCode": "US",
+      "formation": "Kayenta",
+      "sourceIds": ["marsh-rowe-2020", "pbdb-occs"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "Welles",
+    "year": 1970,
+    "sourceIds": ["pbdb-taxon", "marsh-rowe-2020"]
+  },
+  "summary": {
+    "text": {
+      "en": "Dilophosaurus was a meat-eating dinosaur about 7 metres long that lived in what is now Arizona in the Early Jurassic, roughly 200 to 184 million years ago. It is named for the pair of crests on top of its head, which probably helped it recognise its own kind or attract a mate, and were likely too weak for fighting. It was the largest land animal known from North America at that time."
+    },
+    "sourceIds": ["nhm", "marsh-rowe-2020"]
+  },
+  "funFacts": [
+    {
+      "text": {
+        "en": "Its fossils were first thought to be a new species of Megalosaurus. Only after a skull with crests was found did it get its own name in 1970."
+      },
+      "sourceIds": ["nhm", "marsh-rowe-2020"]
+    },
+    {
+      "text": {
+        "en": "It was the largest animal known to have lived on land in North America during the Early Jurassic."
+      },
+      "sourceIds": ["marsh-rowe-2020"]
+    }
+  ],
+  "famous": false,
+  "images": [],
+  "sources": [
+    {
+      "id": "marsh-rowe-2020",
+      "title": "A comprehensive anatomical and phylogenetic evaluation of Dilophosaurus wetherilli (Dinosauria, Theropoda) with descriptions of new specimens from the Kayenta Formation of northern Arizona",
+      "authors": "Marsh, A. D.; Rowe, T. B.",
+      "year": 2020,
+      "publisher": "Journal of Paleontology",
+      "doi": "10.1017/jpa.2020.14",
+      "url": "https://doi.org/10.1017/jpa.2020.14",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "nhm",
+      "title": "Dilophosaurus | Dino Directory",
+      "publisher": "Natural History Museum, London",
+      "url": "https://www.nhm.ac.uk/discover/dino-directory/dilophosaurus.html",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-taxon",
+      "title": "Dilophosaurus (taxon 38522)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/single.json?name=Dilophosaurus&show=attr,app,parent,ref,class",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-occs",
+      "title": "Occurrences of Dilophosaurus wetherilli (stratigraphy and location)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.txt?base_name=Dilophosaurus%20wetherilli&show=strat,loc",
+      "accessed": "2026-11-20"
+    }
+  ],
+  "lastReviewed": "2026-11-20"
+}

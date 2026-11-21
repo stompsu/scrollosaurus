@@ -57,6 +57,16 @@ for (const { path, title } of pages) {
   });
 }
 
+test('a route without a trailing slash redirects like GitHub Pages, keeping the query', async ({
+  page,
+}) => {
+  const response = await page.goto('about?diet=herbivore');
+  expect(response?.request().redirectedFrom()?.url()).toMatch(/\/about\?diet=herbivore$/);
+  // Pages keeps the query string, which holds filter state.
+  await expect(page).toHaveURL(/\/about\/\?diet=herbivore$/);
+  await expect(page.getByRole('heading', { level: 1, name: 'About' })).toBeVisible();
+});
+
 test('unknown paths return 404 and render an accessible not-found page', async ({ page }) => {
   const response = await page.goto('no-such-page');
   expect(response?.status()).toBe(404);

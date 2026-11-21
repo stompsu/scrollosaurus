@@ -1,0 +1,126 @@
+{
+  "slug": "psittacosaurus",
+  "scientificName": "Psittacosaurus mongoliensis",
+  "genus": "Psittacosaurus",
+  "nameMeaning": {
+    "text": { "en": "parrot lizard" },
+    "sourceIds": ["nhm-psittacosaurus"]
+  },
+  "group": "ceratopsia",
+  "groupSourceIds": ["pbdb-psittacosaurus", "nhm-psittacosaurus", "erickson-tumanova-2000"],
+  "isDinosaur": true,
+  "taxonomy": { "status": "valid" },
+  "diet": {
+    "value": "herbivore",
+    "confidence": "established",
+    "sourceIds": ["nhm-psittacosaurus"]
+  },
+  "timeRange": {
+    "startMa": 121.4,
+    "endMa": 110.1,
+    "sourceIds": ["pbdb-psittacosaurus-mongoliensis"],
+    "note": "Aptian, from the PBDB first and last appearance of P. mongoliensis (stage-level dates). Several occurrences, including the type locality in the Öösh Formation, are dated only as 'Early Cretaceous' in PBDB, so the true range may be wider. Other Psittacosaurus species span a longer interval."
+  },
+  "periods": ["cretaceous"],
+  "size": {
+    "lengthM": {
+      "value": [2, 2],
+      "sourceIds": ["nhm-psittacosaurus"],
+      "note": "Museum figure for the genus, not specifically P. mongoliensis."
+    },
+    "massKg": {
+      "value": [50, 50],
+      "sourceIds": ["nhm-psittacosaurus"],
+      "note": "Museum figure for the genus, not specifically P. mongoliensis."
+    }
+  },
+  "locations": [
+    {
+      "continent": "asia",
+      "countryCode": "MN",
+      "formation": "Öösh",
+      "sourceIds": ["pbdb-psittacosaurus-mongoliensis-occs"]
+    },
+    {
+      "continent": "asia",
+      "countryCode": "CN",
+      "sourceIds": ["pbdb-psittacosaurus-mongoliensis-occs"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "Osborn",
+    "year": 1923,
+    "sourceIds": ["nhm-psittacosaurus", "pbdb-psittacosaurus"]
+  },
+  "summary": {
+    "text": {
+      "en": "Psittacosaurus was a plant-eating dinosaur about 2 metres long from the Early Cretaceous of China, Mongolia and Russia. Its name means 'parrot lizard', and it had a beak. It belongs to the ceratopsians. Fossils of P. mongoliensis include animals from juveniles to adults, so scientists have been able to work out how fast it grew."
+    },
+    "sourceIds": ["nhm-psittacosaurus", "erickson-tumanova-2000"]
+  },
+  "funFacts": [
+    {
+      "text": {
+        "en": "Psittacosaurus mongoliensis was the first dinosaur to have its growth curve (body mass against age) reconstructed from bone histology. It grew faster than living reptiles but slower than most birds."
+      },
+      "sourceIds": ["erickson-tumanova-2000"]
+    }
+  ],
+  "famous": false,
+  "images": [],
+  "uncertain": [
+    {
+      "field": "timeRange",
+      "note": "PBDB dates the type locality only to the Early Cretaceous; the Aptian range rests on the better-dated occurrences."
+    },
+    {
+      "field": "size.lengthM",
+      "note": "Only genus-level museum figures (length and mass) were verified; no species-specific peer-reviewed estimate was found."
+    },
+    {
+      "field": "size.massKg",
+      "note": "Only a genus-level museum figure (NHM, 50 kg) was verified; no species-specific estimate for P. mongoliensis was found."
+    }
+  ],
+  "sources": [
+    {
+      "id": "erickson-tumanova-2000",
+      "title": "Growth curve of Psittacosaurus mongoliensis Osborn (Ceratopsia: Psittacosauridae) inferred from long bone histology",
+      "authors": "Erickson G.M., Tumanova T.A.",
+      "year": 2000,
+      "publisher": "Zoological Journal of the Linnean Society",
+      "doi": "10.1111/j.1096-3642.2000.tb02201.x",
+      "url": "https://doi.org/10.1111/j.1096-3642.2000.tb02201.x",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "nhm-psittacosaurus",
+      "title": "Psittacosaurus | Dino Directory",
+      "publisher": "Natural History Museum, London",
+      "url": "https://www.nhm.ac.uk/discover/dino-directory/psittacosaurus.html",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-psittacosaurus",
+      "title": "Psittacosaurus (taxon 38844)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=38844",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-psittacosaurus-mongoliensis",
+      "title": "Psittacosaurus mongoliensis (taxon 52831)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=52831",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-psittacosaurus-mongoliensis-occs",
+      "title": "Psittacosaurus mongoliensis occurrences (taxon 52831)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Psittacosaurus%20mongoliensis&show=strat,loc",
+      "accessed": "2026-11-20"
+    }
+  ],
+  "lastReviewed": "2026-11-20"
+}

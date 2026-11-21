@@ -1,0 +1,93 @@
+{
+  "slug": "triceratops",
+  "scientificName": "Triceratops horridus",
+  "genus": "Triceratops",
+  "nameMeaning": {
+    "text": {
+      "en": "Three-horned face"
+    },
+    "sourceIds": ["nhm-triceratops"]
+  },
+  "group": "ceratopsia",
+  "groupSourceIds": ["pbdb-taxon"],
+  "isDinosaur": true,
+  "taxonomy": {
+    "status": "valid"
+  },
+  "diet": {
+    "value": "herbivore",
+    "confidence": "established",
+    "sourceIds": ["nhm-triceratops", "pbdb-taxon"]
+  },
+  "timeRange": {
+    "startMa": 68,
+    "endMa": 66,
+    "sourceIds": ["nhm-triceratops"],
+    "note": "NHM gives 68–66 Ma. PBDB occurrences of T. horridus are almost all Maastrichtian (stage 72.2–66 Ma); one PBDB record dated Late Campanian is not used here."
+  },
+  "periods": ["cretaceous"],
+  "size": {
+    "lengthM": {
+      "value": [9, 9],
+      "sourceIds": ["nhm-triceratops"],
+      "note": "Single museum estimate (NHM)."
+    },
+    "massKg": {
+      "value": [10000, 10000],
+      "sourceIds": ["nhm-triceratops"],
+      "note": "Single museum estimate (NHM); mass estimates vary widely between methods."
+    }
+  },
+  "locations": [
+    {
+      "continent": "north-america",
+      "countryCode": "US",
+      "formation": "Lance",
+      "sourceIds": ["pbdb-occurrences"]
+    },
+    {
+      "continent": "north-america",
+      "countryCode": "US",
+      "formation": "Hell Creek",
+      "sourceIds": ["pbdb-occurrences"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "Marsh",
+    "year": 1889,
+    "note": "Marsh first described the species as Ceratops horridus and moved it to his new genus Triceratops the same year.",
+    "sourceIds": ["pbdb-taxon", "nhm-triceratops"]
+  },
+  "summary": {
+    "text": {
+      "en": "Triceratops was a huge plant eater with three horns, a parrot-like beak and a wide bony frill. About nine metres long, it lived in western North America about 68 to 66 million years ago, at the very end of the Cretaceous. It shared its world with Tyrannosaurus, and one fossil shows a horn that had been bitten off and later healed."
+    },
+    "sourceIds": ["nhm-triceratops", "pbdb-occurrences"]
+  },
+  "famous": true,
+  "images": [],
+  "sources": [
+    {
+      "id": "nhm-triceratops",
+      "title": "Triceratops | Dino Directory",
+      "publisher": "Natural History Museum, London",
+      "url": "https://www.nhm.ac.uk/discover/dino-directory/triceratops.html",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-taxon",
+      "title": "Triceratops horridus (taxon 63766)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=63766",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-occurrences",
+      "title": "Fossil occurrences of Triceratops horridus",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Triceratops+horridus&idreso=species&show=strat%2Cloc",
+      "accessed": "2026-11-20"
+    }
+  ],
+  "lastReviewed": "2026-11-20"
+}

@@ -1,0 +1,114 @@
+{
+  "slug": "brachiosaurus",
+  "scientificName": "Brachiosaurus altithorax",
+  "genus": "Brachiosaurus",
+  "nameMeaning": {
+    "text": { "en": "arm lizard" },
+    "sourceIds": ["nhm-brachiosaurus"]
+  },
+  "group": "brachiosauridae",
+  "groupSourceIds": ["taylor-2009", "pbdb-brachiosaurus", "nhm-brachiosaurus"],
+  "isDinosaur": true,
+  "taxonomy": {
+    "status": "valid",
+    "note": "The African species once called Brachiosaurus brancai differs in at least 26 characters and is now a separate genus, Giraffatitan. Most classic full-body reconstructions of 'Brachiosaurus' are really based on Giraffatitan.",
+    "sourceIds": ["taylor-2009", "nhm-brachiosaurus"]
+  },
+  "diet": {
+    "value": "herbivore",
+    "confidence": "established",
+    "sourceIds": ["nhm-brachiosaurus"]
+  },
+  "timeRange": {
+    "startMa": 154.8,
+    "endMa": 143.1,
+    "sourceIds": ["pbdb-brachiosaurus-altithorax-occs"],
+    "note": "Stage-level PBDB occurrence ages for B. altithorax in the Brushy Basin Member of the Morrison Formation (Kimmeridgian to Tithonian). Only a few specimens are known, so the true range is poorly constrained."
+  },
+  "periods": ["jurassic"],
+  "size": {
+    "lengthM": {
+      "value": [22, 22],
+      "sourceIds": ["nhm-brachiosaurus"],
+      "note": "Museum figure. The holotype was probably not fully grown, so adults may have been larger."
+    },
+    "massKg": {
+      "value": [46900, 56000],
+      "sourceIds": ["nhm-brachiosaurus", "benson-2014"],
+      "note": "Museum figure (46,900 kg) and a limb-bone scaling estimate (56,000 kg); methods differ."
+    }
+  },
+  "locations": [
+    {
+      "continent": "north-america",
+      "countryCode": "US",
+      "formation": "Morrison",
+      "sourceIds": ["pbdb-brachiosaurus-altithorax-occs", "nhm-brachiosaurus"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "Riggs",
+    "year": 1903,
+    "sourceIds": ["taylor-2009", "nhm-brachiosaurus"]
+  },
+  "summary": {
+    "text": {
+      "en": "Brachiosaurus was a giant long-necked plant-eater from the Late Jurassic of western North America, about 150 million years ago. Its front legs were longer than its back legs, so its body tilted upwards, letting it feed on leaves high in tall trees. It was much taller than Brontosaurus, which ate plants near the ground. No complete skeleton is known, and the first remains, found in Colorado in 1900, may have come from an animal that was not fully grown."
+    },
+    "sourceIds": ["nhm-brachiosaurus", "pbdb-brachiosaurus-altithorax-occs"]
+  },
+  "funFacts": [
+    {
+      "text": {
+        "en": "Most classic pictures of Brachiosaurus are really based on a different African dinosaur, Giraffatitan. The American Brachiosaurus had a longer, deeper body and probably a longer tail."
+      },
+      "sourceIds": ["taylor-2009"]
+    }
+  ],
+  "famous": true,
+  "images": [],
+  "sources": [
+    {
+      "id": "taylor-2009",
+      "title": "A re-evaluation of Brachiosaurus altithorax Riggs 1903 (Dinosauria, Sauropoda) and its generic separation from Giraffatitan brancai (Janensch 1914)",
+      "authors": "Taylor M.P.",
+      "year": 2009,
+      "publisher": "Journal of Vertebrate Paleontology 29: 787-806",
+      "doi": "10.1671/039.029.0309",
+      "url": "https://doi.org/10.1671/039.029.0309",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "benson-2014",
+      "title": "Rates of dinosaur body mass evolution indicate 170 million years of sustained ecological innovation on the avian stem lineage",
+      "authors": "Benson R.B.J., Campione N.E., Carrano M.T., Mannion P.D., Sullivan C., Upchurch P., Evans D.C.",
+      "year": 2014,
+      "publisher": "PLOS Biology 12(5): e1001853",
+      "doi": "10.1371/journal.pbio.1001853",
+      "url": "https://doi.org/10.1371/journal.pbio.1001853",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "nhm-brachiosaurus",
+      "title": "Brachiosaurus | Dino Directory",
+      "publisher": "Natural History Museum, London",
+      "url": "https://www.nhm.ac.uk/discover/dino-directory/brachiosaurus.html",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-brachiosaurus",
+      "title": "Brachiosaurus (taxon 38677)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=38677",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-brachiosaurus-altithorax-occs",
+      "title": "Brachiosaurus altithorax occurrences (taxon 54864)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Brachiosaurus%20altithorax&show=strat,loc",
+      "accessed": "2026-11-20"
+    }
+  ],
+  "lastReviewed": "2026-11-20"
+}

@@ -1,0 +1,164 @@
+{
+  "slug": "microraptor",
+  "scientificName": "Microraptor zhaoianus",
+  "genus": "Microraptor",
+  "nameMeaning": {
+    "text": { "en": "tiny plunderer" },
+    "sourceIds": ["nhm-microraptor"]
+  },
+  "group": "dromaeosauridae",
+  "groupSourceIds": ["xu-2000", "pbdb-microraptor", "nhm-microraptor"],
+  "isDinosaur": true,
+  "taxonomy": {
+    "status": "valid",
+    "note": "Cryptovolans pauli is now considered the same animal as Microraptor.",
+    "sourceIds": ["nhm-microraptor"]
+  },
+  "diet": {
+    "value": "carnivore",
+    "confidence": "established",
+    "sourceIds": ["oconnor-2019", "oconnor-2011", "xing-2013", "nhm-microraptor"],
+    "note": "An opportunistic generalist: gut contents include a lizard (in M. zhaoianus), and a bird, fish and mammal remains in other Microraptor specimens (two of those studies were on specimens identified as M. gui)."
+  },
+  "timeRange": {
+    "startMa": 121.4,
+    "endMa": 113.2,
+    "sourceIds": ["pbdb-microraptor-zhaoianus-occs", "xu-2000"],
+    "note": "Aptian, from PBDB occurrence ages for M. zhaoianus in the Jiufotang Formation of Liaoning (stage-level dates)."
+  },
+  "periods": ["cretaceous"],
+  "size": {
+    "lengthM": {
+      "value": [0.8, 0.8],
+      "sourceIds": ["nhm-microraptor"],
+      "note": "Museum figure."
+    },
+    "massKg": {
+      "value": [1, 1],
+      "sourceIds": ["nhm-microraptor"],
+      "note": "Museum figure."
+    }
+  },
+  "locations": [
+    {
+      "continent": "asia",
+      "countryCode": "CN",
+      "formation": "Jiufotang",
+      "sourceIds": ["xu-2000", "pbdb-microraptor-zhaoianus-occs"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "Xu, Zhou & Wang",
+    "year": 2000,
+    "sourceIds": ["xu-2000"]
+  },
+  "summary": {
+    "text": {
+      "en": "Microraptor was a crow-sized feathered dinosaur from the Early Cretaceous of north-eastern China, about 120 million years ago. It had wings on both its arms and its legs, and it could probably glide or even fly. Its feathers were black with a glossy, iridescent sheen. About 300 specimens are known, and some still hold their last meals: a bird, fish, a lizard and mammal bones."
+    },
+    "sourceIds": [
+      "nhm-microraptor",
+      "li-2012",
+      "pbdb-microraptor-zhaoianus-occs",
+      "oconnor-2011",
+      "xing-2013",
+      "oconnor-2019"
+    ]
+  },
+  "funFacts": [
+    {
+      "text": {
+        "en": "When it was named in 2000, Microraptor was the first fully grown non-bird dinosaur known to be smaller than Archaeopteryx."
+      },
+      "sourceIds": ["xu-2000"]
+    },
+    {
+      "text": {
+        "en": "Tiny pigment structures in a Microraptor fossil suggest its plumage was mostly iridescent, with a glossy sheen."
+      },
+      "sourceIds": ["li-2012"]
+    }
+  ],
+  "famous": false,
+  "images": [],
+  "uncertain": [
+    {
+      "field": "taxonomy",
+      "note": "Two of the diet studies cited here used specimens identified as Microraptor gui. Whether M. gui is a separate species from M. zhaoianus was not checked against a primary source for this record."
+    }
+  ],
+  "sources": [
+    {
+      "id": "xu-2000",
+      "title": "The smallest known non-avian theropod dinosaur",
+      "authors": "Xu X., Zhou Z., Wang X.",
+      "year": 2000,
+      "publisher": "Nature",
+      "doi": "10.1038/35047056",
+      "url": "https://doi.org/10.1038/35047056",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "oconnor-2011",
+      "title": "Additional specimen of Microraptor provides unique evidence of dinosaurs preying on birds",
+      "authors": "O'Connor J., Zhou Z., Xu X.",
+      "year": 2011,
+      "publisher": "PNAS",
+      "doi": "10.1073/pnas.1117727108",
+      "url": "https://doi.org/10.1073/pnas.1117727108",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "xing-2013",
+      "title": "Piscivory in the feathered dinosaur Microraptor",
+      "authors": "Xing L., Persons W.S., Bell P.R., Xu X., Zhang J., Miyashita T., Wang F., Currie P.J.",
+      "year": 2013,
+      "publisher": "Evolution",
+      "doi": "10.1111/evo.12119",
+      "url": "https://doi.org/10.1111/evo.12119",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "oconnor-2019",
+      "title": "Microraptor with ingested lizard suggests non-specialized digestive function",
+      "authors": "O'Connor J., Zheng X., Dong L., Wang X., Wang Y., Zhang X., Zhou Z.",
+      "year": 2019,
+      "publisher": "Current Biology",
+      "doi": "10.1016/j.cub.2019.06.020",
+      "url": "https://doi.org/10.1016/j.cub.2019.06.020",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "li-2012",
+      "title": "Reconstruction of Microraptor and the evolution of iridescent plumage",
+      "authors": "Li Q., Gao K.-Q., Meng Q., Clarke J.A., Shawkey M.D., D'Alba L., Pei R., Ellison M., Norell M.A., Vinther J.",
+      "year": 2012,
+      "publisher": "Science",
+      "doi": "10.1126/science.1213780",
+      "url": "https://doi.org/10.1126/science.1213780",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "nhm-microraptor",
+      "title": "Microraptor | Dino Directory",
+      "publisher": "Natural History Museum, London",
+      "url": "https://www.nhm.ac.uk/discover/dino-directory/microraptor.html",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-microraptor",
+      "title": "Microraptor (taxon 68238)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=68238",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-microraptor-zhaoianus-occs",
+      "title": "Microraptor zhaoianus occurrences (taxon 68239)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Microraptor%20zhaoianus&show=strat,loc",
+      "accessed": "2026-11-20"
+    }
+  ],
+  "lastReviewed": "2026-11-20"
+}

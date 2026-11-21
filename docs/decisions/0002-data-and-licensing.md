@@ -31,27 +31,32 @@ Scrollosaurus is an educational app. Its value depends on being right and on res
 ### 4. Image licensing
 
 - Allowed licences: **Public Domain, CC0, CC BY, CC BY-SA** (any version). Rejected: NC, ND, "fair use", all-rights-reserved, unclear or missing licences.
-- Source: mainly Wikimedia Commons. Metadata (author, licence, licence URL, source URL) is fetched from the Commons API, not typed by hand, and stored with each image.
+- Source: mainly Wikimedia Commons. Species files hold only the chosen Commons file, its kind and alt text. Credit metadata (author, licence, licence URL, source URL) is fetched from the Commons API by the Phase 4 pipeline into a generated file under `data/generated/`, never typed by hand, and validated there.
 - Every image is credited in the UI next to the image and on `/credits`. Attribution is never stripped. CC BY-SA derivatives (resized/converted files) keep the same licence.
 - Prefer fossils and skeleton mounts, then scientifically reviewed life reconstructions. Outdated reconstructions appear only when labelled as historical.
 - Images are self-hosted (downloaded and optimised at build time), not hotlinked.
 
-### 5. Non-dinosaurs
+### 5. Translations
+
+Translatable text (name meanings, summaries, fun facts, alt text) sits inline in each record as `{ en, pl }`, not in separate `data/i18n/` files as the kickoff sketched: a record and its translations change together. `data/i18n/{en,pl}/` is kept for UI strings (Phase 6). Polish is deferred to Phase 6 by the owner's decision; until then `pl` is optional and the validator warns once while it is missing.
+
+### 6. Non-dinosaurs
 
 Pterosaurs, plesiosaurs, ichthyosaurs and mosasaurs have `isDinosaur: false`, live in a separate layer that is off by default, and are labelled "not a dinosaur".
 
-### 6. Enforcement: the build fails when
+### 7. Enforcement: the build fails when
 
 `pnpm validate:data` runs before every build and in CI. It fails if:
 
 - any data file doesn't match its Zod schema (unknown fields are rejected);
 - geological units overlap, leave gaps, or fall outside their parent;
-- a species has no sources, no `lastReviewed`, or a time range that falls outside the Mesozoic or disagrees with its listed periods;
+- a species has no sources, no `lastReviewed`, a claim citing a source id it doesn't list, a time range that falls outside the Mesozoic or disagrees with its listed periods, an unknown group, or an `isDinosaur` that disagrees with its group;
+- the primary species in `data/site.json` has no species file;
 - an image lacks author, licence, licence URL or source URL, or has a licence outside the allowed list.
 
-(Species and image checks are added with their schemas in Phases 1 and 4.)
+It warns (without failing) when a length or mass is empty but not listed in `uncertain`, when a listed source is cited by no field, and while Polish text is missing. Image credit checks arrive with the Phase 4 pipeline.
 
-### 7. Licensing of our own content
+### 8. Licensing of our own content
 
 The geological chart is © ICS, CC BY 4.0, credited on `/credits`. The licence for Scrollosaurus's own code and texts is still to be chosen (open question for the owner).
 

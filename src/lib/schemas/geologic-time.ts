@@ -14,8 +14,11 @@ export const geologicUnitSchema = z
     parent: z.string().optional(),
     baseMa: z.number().positive(),
     baseUncertaintyMa: z.number().nonnegative().optional(),
+    /** The chart gives this boundary only as an approximate age ("~"). */
+    baseApproximate: z.literal(true).optional(),
     topMa: z.number().nonnegative(),
     topUncertaintyMa: z.number().nonnegative().optional(),
+    topApproximate: z.literal(true).optional(),
   })
   .strict()
   .refine((u) => u.baseMa > u.topMa, {
@@ -106,6 +109,13 @@ export const geologicTimeSchema = z
           ctx.addIssue({
             code: 'custom',
             message: `Gap or overlap between "${prev.id}" and "${curr.id}"`,
+          });
+        }
+        // A shared boundary is either approximate on both sides or on neither.
+        if (prev && curr && (prev.topApproximate ?? false) !== (curr.baseApproximate ?? false)) {
+          ctx.addIssue({
+            code: 'custom',
+            message: `"${prev.id}" and "${curr.id}" disagree on whether their boundary is approximate`,
           });
         }
       }

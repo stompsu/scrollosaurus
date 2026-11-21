@@ -1,36 +1,72 @@
 # Data guidelines: adding a species
 
-> Draft (Phase 0). The full schema arrives in Phase 1; this page will be updated then.
-> Policy background: [ADR-0002](decisions/0002-data-and-licensing.md).
+> Policy background: [ADR-0002](decisions/0002-data-and-licensing.md). The schema is the source of
+> truth: [`src/lib/schemas/species.ts`](../src/lib/schemas/species.ts).
 
 ## Where things live
 
-| What                                                     | Where                              |
-| -------------------------------------------------------- | ---------------------------------- |
-| One species                                              | `data/species/<slug>.json`         |
-| Geological time (ICS chart)                              | `data/geologic-time.json`          |
-| Group tree (clades, subgroups)                           | `data/groups.json` (Phase 1)       |
-| Translated long text                                     | `data/i18n/{en,pl}/` (Phase 6)     |
-| Schemas                                                  | `src/lib/schemas/`                 |
-| Generated images (never edit by hand, not committed yet) | `public/images/species/` (Phase 4) |
+| What                                        | Where                              |
+| ------------------------------------------- | ---------------------------------- |
+| One species                                 | `data/species/<slug>.json`         |
+| Geological time (ICS chart)                 | `data/geologic-time.json`          |
+| Group tree (clades, subgroups)              | `data/groups.json`                 |
+| Site settings (primary species)             | `data/site.json`                   |
+| Image credits (generated from Commons)      | `data/generated/` (Phase 4)        |
+| Schemas and cross-file checks               | `src/lib/schemas/`                 |
+| Optimised images (generated, not committed) | `public/images/species/` (Phase 4) |
+
+Translatable text sits inline in each record as `{ "en": "…", "pl": "…" }`. **Polish is deferred to
+Phase 6**: `en` is required, `pl` is optional, and `pnpm validate:data` prints one warning while it
+is missing. Scientific names are never translated.
 
 ## Steps
 
-1. **Pick a slug**: lowercase genus, hyphenated if needed (`tyrannosaurus`, `sinosauropteryx`).
-2. **Gather sources first.** At least one primary or museum source for the time range and for each size value. Record title, URL and the date you accessed it.
-3. **Fill the record** following the schema. Use ranges for sizes. Use the first and last appearance in the fossil record for the time range, in Ma.
-4. **When unsure, leave it out.** Empty field + note in the phase uncertainties report. Use `dietConfidence: "debated"` for contested diets.
-5. **Non-dinosaurs** (pterosaurs, marine reptiles): `isDinosaur: false`.
-6. **Text**: summary ≤ 80 words, written for a curious teenager. Polish must read naturally, not as a literal translation. Scientific names are never translated.
-7. **Images**: add only the Commons file name; `pnpm images` fetches credit metadata. Allowed licences: PD, CC0, CC BY, CC BY-SA.
-8. **Set `lastReviewed`** to today and run:
+1. **Pick a slug**: lowercase genus, hyphenated if needed (`tyrannosaurus`, `sinosauropteryx`). The
+   file name must equal the slug.
+2. **Gather sources first.** Peer-reviewed papers (with DOI), museum or university pages, the
+   Paleobiology Database. Wikipedia only points to them. Give each source a short local `id`.
+3. **Fill the record.** Every claim cites its sources by id:
 
-   ```bash
-   pnpm validate:data
-   ```
+   | Field                                            | Cites with                             |
+   | ------------------------------------------------ | -------------------------------------- |
+   | `nameMeaning` (etymology)                        | `nameMeaning.sourceIds`                |
+   | `group` (placement in `groups.json`)             | `groupSourceIds`                       |
+   | `taxonomy` when dubious or contested             | `taxonomy.sourceIds` + `note`          |
+   | `diet` + `confidence`                            | `diet.sourceIds` (+ `note` if debated) |
+   | `timeRange` (first/last appearance, Ma)          | `timeRange.sourceIds`                  |
+   | `size.lengthM`, `massKg`, `heightM`, `wingspanM` | each value's `sourceIds`               |
+   | each `locations[]` entry                         | its own `sourceIds`                    |
+   | `discovery` (author, year)                       | `discovery.sourceIds`                  |
+   | `summary` (every claim in it)                    | `summary.sourceIds`                    |
+   | each `funFacts[]` entry                          | its own `sourceIds`                    |
 
-9. Open a PR. The `paleo-content-curator` agent can draft and fact-check; a human reviews every batch.
+4. **Numbers.**
+   - Sizes are `[min, max]` ranges. A single published value is `[v, v]`. An open-ended figure
+     ("over 10 m") is `[10, 10]` with a `note` saying so.
+   - `timeRange.startMa` is the older (larger) value. Use `startUncertaintyMa` / `endUncertaintyMa`
+     only when the source gives them.
+   - `periods` must match the time range against `data/geologic-time.json`. Touching a boundary
+     does not count as living in the next period.
+5. **Places.** `continent` is one of the schema's ids; `countryCode` is ISO 3166-1 alpha-2
+   (`US`, `CN`, `AR`). `formation` is the name as the source spells it, without the word
+   "Formation" (`Hell Creek`, `Yixian`), so species can later be matched by formation.
+6. **When unsure, leave it out.** Leave the field empty and add an entry to `uncertain` with the
+   field and a note. A missing length or mass that is not listed in `uncertain` produces a warning.
+   Use `diet.confidence: "debated"` (with a note) for contested diets, and
+   `taxonomy.status: "dubious"` or `"contested"` for doubtful genera.
+7. **Non-dinosaurs** (pterosaurs, marine reptiles): `isDinosaur: false`, and a non-dinosaur group.
+8. **Text.** `summary.text` is at most 80 words for a curious teenager, and every claim in it must
+   be supported by `summary.sourceIds`; a claim no verified source supports is removed, not kept.
+   Fun facts are optional and sourced. A note that names a study ("Qiu et al. 2025") cites it in
+   the same field's `sourceIds`. `discovery.describedBy` holds surnames joined with " & "; naming
+   history goes in `discovery.note`.
+9. **Images.** List only the Commons file, its kind and alt text. Credits are fetched from Commons in
+   Phase 4; never type them by hand.
+10. **Set `lastReviewed`** to today and run `pnpm validate:data`. It prints errors, warnings and
+    the list of fields flagged as uncertain.
 
 ## Product notes
 
-- **Primary species: _Sinosauropteryx_.** When the page loads with no species or filter in the URL, the timeline highlights _Sinosauropteryx_ first. It must be in the Phase 1 seed set. Keep its slug in config/data, not hard-coded in components.
+- **Primary species: _Sinosauropteryx_.** When the page loads with no species or filter in the URL,
+  the timeline highlights _Sinosauropteryx_ first. Its slug is `primarySpecies` in
+  `data/site.json`; the build fails if that species file is missing.

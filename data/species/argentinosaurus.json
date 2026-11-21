@@ -1,0 +1,147 @@
+{
+  "slug": "argentinosaurus",
+  "scientificName": "Argentinosaurus huinculensis",
+  "genus": "Argentinosaurus",
+  "nameMeaning": {
+    "text": {
+      "en": "Argentina lizard"
+    },
+    "sourceIds": ["nhm"]
+  },
+  "group": "titanosauria",
+  "groupSourceIds": ["pbdb-taxon", "nhm", "carballido-2017"],
+  "isDinosaur": true,
+  "taxonomy": {
+    "status": "valid"
+  },
+  "diet": {
+    "value": "herbivore",
+    "confidence": "established",
+    "sourceIds": ["nhm", "pbdb-taxon"]
+  },
+  "timeRange": {
+    "startMa": 100.5,
+    "endMa": 89.8,
+    "sourceIds": ["garrido-2010", "pbdb-occs"],
+    "note": "Argentinosaurus comes from the Huincul Formation (PBDB), which Garrido 2010 tentatively dates to the late Cenomanian-Turonian; the Ma values are the ICS v2024/12 Cenomanian base and Turonian top, because the chart has no late-Cenomanian boundary. The original description gave Albian-Cenomanian, and PBDB still lists Middle Albian. NHM gives about 90 Ma."
+  },
+  "periods": ["cretaceous"],
+  "size": {
+    "lengthM": {
+      "value": [35, 39.7],
+      "sourceIds": ["nhm", "sellers-2013"],
+      "note": "35 m (NHM Dino Directory); the museum reconstruction at Museo Carmen Funes is 39.7 m long (Sellers et al. 2013). Both are reconstructions from very incomplete remains."
+    },
+    "massKg": {
+      "value": [60000, 88000],
+      "sourceIds": ["mazzetta-2004", "sellers-2013", "carballido-2017"],
+      "note": "Limb-bone regressions give 60-88 t, with 73 t preferred (Mazzetta et al. 2004); a volumetric model of the mounted reconstruction gives about 83 t (Sellers et al. 2013); Carballido et al. 2017 call estimates above 60 t rough. Earlier guesses of 90-100 t are reported by Mazzetta et al. 2004."
+    }
+  },
+  "locations": [
+    {
+      "continent": "south-america",
+      "countryCode": "AR",
+      "formation": "Huincul",
+      "sourceIds": ["pbdb-occs", "sellers-2013"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "Bonaparte & Coria",
+    "year": 1993,
+    "sourceIds": ["pbdb-taxon", "nhm"]
+  },
+  "summary": {
+    "text": {
+      "en": "Argentinosaurus was a gigantic long-necked plant eater from Argentina, one of the largest land animals ever found. It lived in the Late Cretaceous, roughly 100 to 90 million years ago. It is known only from fragmentary bones, including vertebrae and a leg bone, so its size is hard to pin down: estimates range from about 60 to 88 tonnes and around 35 to 40 metres long."
+    },
+    "sourceIds": ["nhm", "garrido-2010", "sellers-2013", "mazzetta-2004"]
+  },
+  "funFacts": [
+    {
+      "text": {
+        "en": "A computer simulation of an 83-tonne Argentinosaurus showed it could walk, but only slowly, close to the limit of what its body could support."
+      },
+      "sourceIds": ["sellers-2013"]
+    }
+  ],
+  "famous": false,
+  "images": [],
+  "uncertain": [
+    {
+      "field": "size.lengthM",
+      "note": "Known only from fragments; length comes from reconstructions (NHM; Sellers et al. 2013)."
+    },
+    {
+      "field": "size.massKg",
+      "note": "Estimates vary widely with method, from about 60 to 88 t (Mazzetta et al. 2004; Sellers et al. 2013)."
+    },
+    {
+      "field": "timeRange",
+      "note": "The Huincul Formation's age is not well established (Garrido 2010); PBDB still lists Middle Albian, from the original description."
+    }
+  ],
+  "sources": [
+    {
+      "id": "mazzetta-2004",
+      "title": "Giants and bizarres: body size of some southern South American Cretaceous dinosaurs",
+      "authors": "Mazzetta, G. V.; Christiansen, P.; Fariña, R. A.",
+      "year": 2004,
+      "publisher": "Historical Biology",
+      "doi": "10.1080/08912960410001715132",
+      "url": "https://doi.org/10.1080/08912960410001715132",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "sellers-2013",
+      "title": "March of the titans: the locomotor capabilities of sauropod dinosaurs",
+      "authors": "Sellers, W. I.; Margetts, L.; Coria, R. A.; Manning, P. L.",
+      "year": 2013,
+      "publisher": "PLoS ONE",
+      "doi": "10.1371/journal.pone.0078733",
+      "url": "https://doi.org/10.1371/journal.pone.0078733",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "carballido-2017",
+      "title": "A new giant titanosaur sheds light on body mass evolution among sauropod dinosaurs",
+      "authors": "Carballido, J. L.; Pol, D.; Otero, A.; Cerda, I. A.; Salgado, L.; Garrido, A. C.; Ramezani, J.; Cúneo, N. R.; Krause, J. M.",
+      "year": 2017,
+      "publisher": "Proceedings of the Royal Society B",
+      "doi": "10.1098/rspb.2017.1219",
+      "url": "https://doi.org/10.1098/rspb.2017.1219",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "garrido-2010",
+      "title": "Estratigrafía del Grupo Neuquén, Cretácico Superior de la Cuenca Neuquina (Argentina): nueva propuesta de ordenamiento litoestratigráfico",
+      "authors": "Garrido, A. C.",
+      "year": 2010,
+      "publisher": "Revista del Museo Argentino de Ciencias Naturales",
+      "url": "http://www.scielo.org.ar/scielo.php?script=sci_arttext&pid=S1853-04002010000200003",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "nhm",
+      "title": "Argentinosaurus | Dino Directory",
+      "publisher": "Natural History Museum, London",
+      "url": "https://www.nhm.ac.uk/discover/dino-directory/argentinosaurus.html",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-taxon",
+      "title": "Argentinosaurus (taxon 66645)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/single.json?name=Argentinosaurus&show=attr,app,parent,class,ecospace",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-occs",
+      "title": "Occurrences of Argentinosaurus huinculensis (stratigraphy and location)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.txt?base_name=Argentinosaurus%20huinculensis&show=strat,loc",
+      "accessed": "2026-11-20"
+    }
+  ],
+  "lastReviewed": "2026-11-20"
+}

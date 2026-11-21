@@ -45,6 +45,376 @@
       "baseMa": 143.1,
       "baseUncertaintyMa": 0.6,
       "topMa": 66.0
+    },
+    {
+      "id": "early-triassic",
+      "name": "Early Triassic",
+      "rank": "epoch",
+      "parent": "triassic",
+      "baseMa": 251.902,
+      "baseUncertaintyMa": 0.024,
+      "topMa": 247.0
+    },
+    {
+      "id": "middle-triassic",
+      "name": "Middle Triassic",
+      "rank": "epoch",
+      "parent": "triassic",
+      "baseMa": 247.0,
+      "topMa": 237,
+      "topApproximate": true
+    },
+    {
+      "id": "late-triassic",
+      "name": "Late Triassic",
+      "rank": "epoch",
+      "parent": "triassic",
+      "baseMa": 237,
+      "baseApproximate": true,
+      "topMa": 201.4,
+      "topUncertaintyMa": 0.2
+    },
+    {
+      "id": "early-jurassic",
+      "name": "Early Jurassic",
+      "rank": "epoch",
+      "parent": "jurassic",
+      "baseMa": 201.4,
+      "baseUncertaintyMa": 0.2,
+      "topMa": 174.7,
+      "topUncertaintyMa": 0.8
+    },
+    {
+      "id": "middle-jurassic",
+      "name": "Middle Jurassic",
+      "rank": "epoch",
+      "parent": "jurassic",
+      "baseMa": 174.7,
+      "baseUncertaintyMa": 0.8,
+      "topMa": 161.5,
+      "topUncertaintyMa": 1.0
+    },
+    {
+      "id": "late-jurassic",
+      "name": "Late Jurassic",
+      "rank": "epoch",
+      "parent": "jurassic",
+      "baseMa": 161.5,
+      "baseUncertaintyMa": 1.0,
+      "topMa": 143.1,
+      "topUncertaintyMa": 0.6
+    },
+    {
+      "id": "early-cretaceous",
+      "name": "Early Cretaceous",
+      "rank": "epoch",
+      "parent": "cretaceous",
+      "baseMa": 143.1,
+      "baseUncertaintyMa": 0.6,
+      "topMa": 100.5,
+      "topUncertaintyMa": 0.1
+    },
+    {
+      "id": "late-cretaceous",
+      "name": "Late Cretaceous",
+      "rank": "epoch",
+      "parent": "cretaceous",
+      "baseMa": 100.5,
+      "baseUncertaintyMa": 0.1,
+      "topMa": 66.0
+    },
+    {
+      "id": "induan",
+      "name": "Induan",
+      "rank": "stage",
+      "parent": "early-triassic",
+      "baseMa": 251.902,
+      "baseUncertaintyMa": 0.024,
+      "topMa": 250.8
+    },
+    {
+      "id": "olenekian",
+      "name": "Olenekian",
+      "rank": "stage",
+      "parent": "early-triassic",
+      "baseMa": 250.8,
+      "topMa": 247.0
+    },
+    {
+      "id": "anisian",
+      "name": "Anisian",
+      "rank": "stage",
+      "parent": "middle-triassic",
+      "baseMa": 247.0,
+      "topMa": 241.464,
+      "topUncertaintyMa": 0.28
+    },
+    {
+      "id": "ladinian",
+      "name": "Ladinian",
+      "rank": "stage",
+      "parent": "middle-triassic",
+      "baseMa": 241.464,
+      "baseUncertaintyMa": 0.28,
+      "topMa": 237,
+      "topApproximate": true
+    },
+    {
+      "id": "carnian",
+      "name": "Carnian",
+      "rank": "stage",
+      "parent": "late-triassic",
+      "baseMa": 237,
+      "baseApproximate": true,
+      "topMa": 227.3,
+      "topApproximate": true
+    },
+    {
+      "id": "norian",
+      "name": "Norian",
+      "rank": "stage",
+      "parent": "late-triassic",
+      "baseMa": 227.3,
+      "baseApproximate": true,
+      "topMa": 205.7,
+      "topApproximate": true
+    },
+    {
+      "id": "rhaetian",
+      "name": "Rhaetian",
+      "rank": "stage",
+      "parent": "late-triassic",
+      "baseMa": 205.7,
+      "baseApproximate": true,
+      "topMa": 201.4,
+      "topUncertaintyMa": 0.2
+    },
+    {
+      "id": "hettangian",
+      "name": "Hettangian",
+      "rank": "stage",
+      "parent": "early-jurassic",
+      "baseMa": 201.4,
+      "baseUncertaintyMa": 0.2,
+      "topMa": 199.5,
+      "topUncertaintyMa": 0.3
+    },
+    {
+      "id": "sinemurian",
+      "name": "Sinemurian",
+      "rank": "stage",
+      "parent": "early-jurassic",
+      "baseMa": 199.5,
+      "baseUncertaintyMa": 0.3,
+      "topMa": 192.9,
+      "topUncertaintyMa": 0.3
+    },
+    {
+      "id": "pliensbachian",
+      "name": "Pliensbachian",
+      "rank": "stage",
+      "parent": "early-jurassic",
+      "baseMa": 192.9,
+      "baseUncertaintyMa": 0.3,
+      "topMa": 184.2,
+      "topUncertaintyMa": 0.3
+    },
+    {
+      "id": "toarcian",
+      "name": "Toarcian",
+      "rank": "stage",
+      "parent": "early-jurassic",
+      "baseMa": 184.2,
+      "baseUncertaintyMa": 0.3,
+      "topMa": 174.7,
+      "topUncertaintyMa": 0.8
+    },
+    {
+      "id": "aalenian",
+      "name": "Aalenian",
+      "rank": "stage",
+      "parent": "middle-jurassic",
+      "baseMa": 174.7,
+      "baseUncertaintyMa": 0.8,
+      "topMa": 170.9,
+      "topUncertaintyMa": 0.8
+    },
+    {
+      "id": "bajocian",
+      "name": "Bajocian",
+      "rank": "stage",
+      "parent": "middle-jurassic",
+      "baseMa": 170.9,
+      "baseUncertaintyMa": 0.8,
+      "topMa": 168.2,
+      "topUncertaintyMa": 1.2
+    },
+    {
+      "id": "bathonian",
+      "name": "Bathonian",
+      "rank": "stage",
+      "parent": "middle-jurassic",
+      "baseMa": 168.2,
+      "baseUncertaintyMa": 1.2,
+      "topMa": 165.3,
+      "topUncertaintyMa": 1.1
+    },
+    {
+      "id": "callovian",
+      "name": "Callovian",
+      "rank": "stage",
+      "parent": "middle-jurassic",
+      "baseMa": 165.3,
+      "baseUncertaintyMa": 1.1,
+      "topMa": 161.5,
+      "topUncertaintyMa": 1.0
+    },
+    {
+      "id": "oxfordian",
+      "name": "Oxfordian",
+      "rank": "stage",
+      "parent": "late-jurassic",
+      "baseMa": 161.5,
+      "baseUncertaintyMa": 1.0,
+      "topMa": 154.8,
+      "topUncertaintyMa": 0.8
+    },
+    {
+      "id": "kimmeridgian",
+      "name": "Kimmeridgian",
+      "rank": "stage",
+      "parent": "late-jurassic",
+      "baseMa": 154.8,
+      "baseUncertaintyMa": 0.8,
+      "topMa": 149.2,
+      "topUncertaintyMa": 0.7
+    },
+    {
+      "id": "tithonian",
+      "name": "Tithonian",
+      "rank": "stage",
+      "parent": "late-jurassic",
+      "baseMa": 149.2,
+      "baseUncertaintyMa": 0.7,
+      "topMa": 143.1,
+      "topUncertaintyMa": 0.6
+    },
+    {
+      "id": "berriasian",
+      "name": "Berriasian",
+      "rank": "stage",
+      "parent": "early-cretaceous",
+      "baseMa": 143.1,
+      "baseUncertaintyMa": 0.6,
+      "topMa": 137.05,
+      "topUncertaintyMa": 0.2
+    },
+    {
+      "id": "valanginian",
+      "name": "Valanginian",
+      "rank": "stage",
+      "parent": "early-cretaceous",
+      "baseMa": 137.05,
+      "baseUncertaintyMa": 0.2,
+      "topMa": 132.6,
+      "topUncertaintyMa": 0.6
+    },
+    {
+      "id": "hauterivian",
+      "name": "Hauterivian",
+      "rank": "stage",
+      "parent": "early-cretaceous",
+      "baseMa": 132.6,
+      "baseUncertaintyMa": 0.6,
+      "topMa": 125.77
+    },
+    {
+      "id": "barremian",
+      "name": "Barremian",
+      "rank": "stage",
+      "parent": "early-cretaceous",
+      "baseMa": 125.77,
+      "topMa": 121.4,
+      "topUncertaintyMa": 0.6
+    },
+    {
+      "id": "aptian",
+      "name": "Aptian",
+      "rank": "stage",
+      "parent": "early-cretaceous",
+      "baseMa": 121.4,
+      "baseUncertaintyMa": 0.6,
+      "topMa": 113.2,
+      "topUncertaintyMa": 0.3
+    },
+    {
+      "id": "albian",
+      "name": "Albian",
+      "rank": "stage",
+      "parent": "early-cretaceous",
+      "baseMa": 113.2,
+      "baseUncertaintyMa": 0.3,
+      "topMa": 100.5,
+      "topUncertaintyMa": 0.1
+    },
+    {
+      "id": "cenomanian",
+      "name": "Cenomanian",
+      "rank": "stage",
+      "parent": "late-cretaceous",
+      "baseMa": 100.5,
+      "baseUncertaintyMa": 0.1,
+      "topMa": 93.9,
+      "topUncertaintyMa": 0.2
+    },
+    {
+      "id": "turonian",
+      "name": "Turonian",
+      "rank": "stage",
+      "parent": "late-cretaceous",
+      "baseMa": 93.9,
+      "baseUncertaintyMa": 0.2,
+      "topMa": 89.8,
+      "topUncertaintyMa": 0.3
+    },
+    {
+      "id": "coniacian",
+      "name": "Coniacian",
+      "rank": "stage",
+      "parent": "late-cretaceous",
+      "baseMa": 89.8,
+      "baseUncertaintyMa": 0.3,
+      "topMa": 85.7,
+      "topUncertaintyMa": 0.2
+    },
+    {
+      "id": "santonian",
+      "name": "Santonian",
+      "rank": "stage",
+      "parent": "late-cretaceous",
+      "baseMa": 85.7,
+      "baseUncertaintyMa": 0.2,
+      "topMa": 83.6,
+      "topUncertaintyMa": 0.2
+    },
+    {
+      "id": "campanian",
+      "name": "Campanian",
+      "rank": "stage",
+      "parent": "late-cretaceous",
+      "baseMa": 83.6,
+      "baseUncertaintyMa": 0.2,
+      "topMa": 72.2,
+      "topUncertaintyMa": 0.2
+    },
+    {
+      "id": "maastrichtian",
+      "name": "Maastrichtian",
+      "rank": "stage",
+      "parent": "late-cretaceous",
+      "baseMa": 72.2,
+      "baseUncertaintyMa": 0.2,
+      "topMa": 66.0
     }
   ]
 }

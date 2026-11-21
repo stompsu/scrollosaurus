@@ -1,0 +1,177 @@
+{
+  "slug": "sinosauropteryx",
+  "scientificName": "Sinosauropteryx prima",
+  "genus": "Sinosauropteryx",
+  "nameMeaning": {
+    "text": { "en": "Chinese lizard wing" },
+    "sourceIds": ["nhm-sinosauropteryx"]
+  },
+  "group": "compsognathidae",
+  "groupSourceIds": ["chen-1998", "hendrickx-2025", "nhm-sinosauropteryx"],
+  "isDinosaur": true,
+  "taxonomy": { "status": "valid" },
+  "diet": {
+    "value": "carnivore",
+    "confidence": "established",
+    "sourceIds": ["chen-1998", "nhm-sinosauropteryx", "hendrickx-2025", "qiu-2025"],
+    "note": "Stomach contents are preserved in the larger of the two specimens described in 1998. Mammal jaws once reported inside a 'Sinosauropteryx' (NGMC/GMV 2124) are now attributed to a small tyrannosauroid (Qiu et al. 2025), so they are not used here."
+  },
+  "timeRange": {
+    "startMa": 125.755,
+    "startUncertaintyMa": 0.061,
+    "endMa": 124.122,
+    "endUncertaintyMa": 0.048,
+    "sourceIds": ["zhong-2021", "pbdb-sinosauropteryx-prima-occs", "hendrickx-2025"],
+    "note": "S. prima comes from the Jianshangou bed of the Yixian Formation near Sihetun (PBDB). The range is the U-Pb bracket for the whole Yixian Formation in the Jin-Yang basin (Zhong et al. 2021); the Jianshangou unit lies inside it. PBDB's stage-based range is wider (125.77 to 119.57 Ma)."
+  },
+  "periods": ["cretaceous"],
+  "size": {
+    "lengthM": {
+      "value": [1.1, 1.1],
+      "sourceIds": ["nhm-sinosauropteryx", "qiu-2025"],
+      "note": "Museum figure for the genus. The 1.2 m holotype of the second species, S. lingyuanensis, is described as the largest known Sinosauropteryx specimen (Qiu et al. 2025), so S. prima specimens are smaller."
+    },
+    "massKg": {
+      "value": [0.99, 0.99],
+      "sourceIds": ["benson-2014"],
+      "note": "Single estimate from limb-bone robustness scaling; standard error 0.135 log10(kg)."
+    }
+  },
+  "locations": [
+    {
+      "continent": "asia",
+      "countryCode": "CN",
+      "formation": "Yixian",
+      "sourceIds": ["pbdb-sinosauropteryx-prima-occs", "hendrickx-2025"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "Ji & Ji",
+    "year": 1996,
+    "sourceIds": ["nhm-sinosauropteryx", "hendrickx-2025"]
+  },
+  "summary": {
+    "text": {
+      "en": "Sinosauropteryx was a small meat-eater, about a metre long, that lived around 125 million years ago in what is now north-eastern China. Its body was covered in thin, hair-like primitive feathers. Named in 1996, it was the first feathered dinosaur discovered that was not directly related to birds. A tiny lizard was found in the stomach of one fossil. Fossil pigments suggest a dark back, pale belly, banded tail and a dark 'bandit mask' across its eyes."
+    },
+    "sourceIds": [
+      "nhm-sinosauropteryx",
+      "zhong-2021",
+      "pbdb-sinosauropteryx-prima-occs",
+      "smithwick-2017"
+    ]
+  },
+  "funFacts": [
+    {
+      "text": {
+        "en": "Pigment traces on S. prima fossils show countershading (dark above, light below), a banded tail and a 'bandit mask' around the eyes, a pattern that suggests it lived in fairly open habitats."
+      },
+      "sourceIds": ["smithwick-2017"]
+    },
+    {
+      "text": {
+        "en": "The famous reddish-brown colour reconstruction from 2010 was based on specimen IVPP V 14202. In 2025 that specimen became the holotype of a separate genus, Huadanosaurus."
+      },
+      "sourceIds": ["zhang-2010", "qiu-2025"]
+    }
+  ],
+  "famous": false,
+  "images": [],
+  "uncertain": [
+    {
+      "field": "group",
+      "note": "Kept in Compsognathidae, the traditional placement. Qiu et al. (2025) group the Jehol compsognathid-like theropods in a separate clade, Sinosauropterygidae, because Compsognathus falls outside it in one of their analyses; PBDB also lists Sinosauropterygidae. Hendrickx (2025) notes a 2024 study suggesting compsognathids may be an artificial group of juveniles of other theropods."
+    },
+    {
+      "field": "size.lengthM",
+      "note": "No peer-reviewed length for S. prima specimens was verified; only a museum figure for the genus is given."
+    }
+  ],
+  "sources": [
+    {
+      "id": "chen-1998",
+      "title": "An exceptionally well-preserved theropod dinosaur from the Yixian Formation of China",
+      "authors": "Chen P., Dong Z., Zhen S.",
+      "year": 1998,
+      "publisher": "Nature 391: 147-152",
+      "doi": "10.1038/34356",
+      "url": "https://doi.org/10.1038/34356",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "zhang-2010",
+      "title": "Fossilized melanosomes and the colour of Cretaceous dinosaurs and birds",
+      "authors": "Zhang F., Kearns S.L., Orr P.J., Benton M.J., Zhou Z., Johnson D., Xu X., Wang X.",
+      "year": 2010,
+      "publisher": "Nature 463: 1075-1078",
+      "doi": "10.1038/nature08740",
+      "url": "https://doi.org/10.1038/nature08740",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "smithwick-2017",
+      "title": "Countershading and stripes in the theropod dinosaur Sinosauropteryx reveal heterogeneous habitats in the Early Cretaceous Jehol Biota",
+      "authors": "Smithwick F.M., Nicholls R., Cuthill I.C., Vinther J.",
+      "year": 2017,
+      "publisher": "Current Biology 27(21): 3337-3343",
+      "doi": "10.1016/j.cub.2017.09.032",
+      "url": "https://doi.org/10.1016/j.cub.2017.09.032",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "qiu-2025",
+      "title": "Two new compsognathid-like theropods show diversified predation strategies in theropod dinosaurs",
+      "authors": "Qiu R., Wang X., Jiang S., Meng J., Zhou Z.",
+      "year": 2025,
+      "publisher": "National Science Review 12(5): nwaf068",
+      "doi": "10.1093/nsr/nwaf068",
+      "url": "https://doi.org/10.1093/nsr/nwaf068",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "hendrickx-2025",
+      "title": "Comment on 'Two new compsognathid-like theropods show diversified predation strategies of theropod dinosaurs' by Qiu et al.",
+      "authors": "Hendrickx C.",
+      "year": 2025,
+      "publisher": "National Science Review 12(5): nwaf131",
+      "doi": "10.1093/nsr/nwaf131",
+      "url": "https://doi.org/10.1093/nsr/nwaf131",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "zhong-2021",
+      "title": "High-precision geochronological constraints on the duration of 'Dinosaur Pompeii' and the Yixian Formation",
+      "authors": "Zhong Y., Huyskens M.H., Yin Q.-Z., Wang Y., Ma Q., Xu Y.-G.",
+      "year": 2021,
+      "publisher": "National Science Review 8: nwab063",
+      "doi": "10.1093/nsr/nwab063",
+      "url": "https://doi.org/10.1093/nsr/nwab063",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "benson-2014",
+      "title": "Rates of dinosaur body mass evolution indicate 170 million years of sustained ecological innovation on the avian stem lineage",
+      "authors": "Benson R.B.J., Campione N.E., Carrano M.T., Mannion P.D., Sullivan C., Upchurch P., Evans D.C.",
+      "year": 2014,
+      "publisher": "PLOS Biology 12(5): e1001853",
+      "doi": "10.1371/journal.pbio.1001853",
+      "url": "https://doi.org/10.1371/journal.pbio.1001853",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "nhm-sinosauropteryx",
+      "title": "Sinosauropteryx | Dino Directory",
+      "publisher": "Natural History Museum, London",
+      "url": "https://www.nhm.ac.uk/discover/dino-directory/sinosauropteryx.html",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-sinosauropteryx-prima-occs",
+      "title": "Sinosauropteryx prima occurrences (taxon 54549)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Sinosauropteryx%20prima&show=strat,loc",
+      "accessed": "2026-11-20"
+    }
+  ],
+  "lastReviewed": "2026-11-20"
+}

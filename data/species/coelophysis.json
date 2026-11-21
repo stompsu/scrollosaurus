@@ -1,0 +1,94 @@
+{
+  "slug": "coelophysis",
+  "scientificName": "Coelophysis bauri",
+  "genus": "Coelophysis",
+  "nameMeaning": {
+    "text": {
+      "en": "hollow form"
+    },
+    "sourceIds": ["nhm"]
+  },
+  "group": "coelophysoidea",
+  "groupSourceIds": ["nhm", "pbdb-taxon"],
+  "isDinosaur": true,
+  "taxonomy": {
+    "status": "valid"
+  },
+  "diet": {
+    "value": "carnivore",
+    "confidence": "established",
+    "sourceIds": ["nhm"]
+  },
+  "timeRange": {
+    "startMa": 227.3,
+    "endMa": 201.4,
+    "sourceIds": ["pbdb-occs"],
+    "note": "PBDB dates the Chinle occurrences of C. bauri only to stage (Norian to Rhaetian); the Ma values are the ICS v2024/12 stage boundaries. The NHM Dino Directory gives 225-190 Ma for the genus, which includes material from southern Africa not assigned to C. bauri here."
+  },
+  "periods": ["triassic"],
+  "size": {
+    "lengthM": {
+      "value": [2, 2],
+      "sourceIds": ["nhm"],
+      "note": "Single published figure (NHM Dino Directory)."
+    },
+    "massKg": {
+      "value": [27, 27],
+      "sourceIds": ["nhm"],
+      "note": "Single published estimate (NHM Dino Directory); method not stated."
+    }
+  },
+  "locations": [
+    {
+      "continent": "north-america",
+      "countryCode": "US",
+      "formation": "Chinle",
+      "sourceIds": ["pbdb-occs"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "Cope",
+    "year": 1889,
+    "sourceIds": ["pbdb-taxon"]
+  },
+  "summary": {
+    "text": {
+      "en": "Coelophysis was a lightly built, fast meat eater about 2 metres long that lived in the Late Triassic of what is now the United States. Its name means 'hollow form', after its hollow limb bones, which kept it light and agile. It relied on speed, small sharp teeth and grasping claws to catch insects and small reptiles. In its time, dinosaurs were not yet at the top of the food chain: large reptiles such as phytosaurs were."
+    },
+    "sourceIds": ["nhm", "pbdb-occs"]
+  },
+  "funFacts": [
+    {
+      "text": {
+        "en": "Bones once thought to be baby Coelophysis inside an adult's ribcage, taken as a sign of cannibalism, turned out to belong to a small crocodile relative."
+      },
+      "sourceIds": ["nhm"]
+    }
+  ],
+  "famous": true,
+  "images": [],
+  "sources": [
+    {
+      "id": "nhm",
+      "title": "Coelophysis | Dino Directory",
+      "publisher": "Natural History Museum, London",
+      "url": "https://www.nhm.ac.uk/discover/dino-directory/coelophysis.html",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-taxon",
+      "title": "Coelophysis (taxon 38520)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/single.json?name=Coelophysis&show=attr,app,parent,ref,class",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-occs",
+      "title": "Occurrences of Coelophysis bauri (stratigraphy and location)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.txt?base_name=Coelophysis%20bauri&show=strat,loc",
+      "accessed": "2026-11-20"
+    }
+  ],
+  "lastReviewed": "2026-11-20"
+}

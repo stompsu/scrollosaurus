@@ -1,0 +1,119 @@
+{
+  "slug": "herrerasaurus",
+  "scientificName": "Herrerasaurus ischigualastensis",
+  "genus": "Herrerasaurus",
+  "nameMeaning": {
+    "text": {
+      "en": "Herrera's lizard"
+    },
+    "sourceIds": ["nhm"]
+  },
+  "group": "herrerasauridae",
+  "groupSourceIds": ["sereno-novas-1992", "martinez-2011", "pbdb-taxon"],
+  "isDinosaur": true,
+  "taxonomy": {
+    "status": "valid"
+  },
+  "diet": {
+    "value": "carnivore",
+    "confidence": "established",
+    "sourceIds": ["sereno-novas-1992", "martinez-2011", "nhm"]
+  },
+  "timeRange": {
+    "startMa": 231.5,
+    "endMa": 229,
+    "sourceIds": ["martinez-2011", "pbdb-occs"],
+    "note": "Ischigualasto dinosaurs come from the Scaphonyx-Exaeretodon-Herrerasaurus biozone, dated by Martinez et al. (2011) to 231.5-229 Ma (late Carnian). PBDB places all occurrences in the Carnian."
+  },
+  "periods": ["triassic"],
+  "size": {
+    "lengthM": {
+      "value": [3, 3],
+      "sourceIds": ["nhm"],
+      "note": "Single published figure (NHM Dino Directory); specimens vary in size."
+    }
+  },
+  "locations": [
+    {
+      "continent": "south-america",
+      "countryCode": "AR",
+      "formation": "Ischigualasto",
+      "sourceIds": ["pbdb-occs", "sereno-novas-1992"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "Reig",
+    "year": 1963,
+    "sourceIds": ["pbdb-taxon", "nhm"]
+  },
+  "summary": {
+    "text": {
+      "en": "Herrerasaurus was one of the earliest dinosaurs, a meat eater about 3 metres long. It lived in what is now Argentina about 231 to 229 million years ago. It was an agile hunter that ran on two legs and used short arms built for grasping and raking prey. A complete skull and skeleton, described in 1992, helped scientists picture the common ancestor of all dinosaurs."
+    },
+    "sourceIds": ["nhm", "martinez-2011", "sereno-novas-1992"]
+  },
+  "funFacts": [
+    {
+      "text": {
+        "en": "A complete skull and skeleton show Herrerasaurus was an agile two-legged predator with short arms built for grasping and raking."
+      },
+      "sourceIds": ["sereno-novas-1992"]
+    }
+  ],
+  "famous": true,
+  "images": [],
+  "uncertain": [
+    {
+      "field": "group",
+      "note": "Placed in Theropoda, following Sereno & Novas (1992) and Martinez et al. (2011), which recover Herrerasaurus as a basal theropod. Other analyses place herrerasaurids near sauropodomorphs or outside both groups, so the placement is still debated."
+    },
+    {
+      "field": "size.massKg",
+      "note": "No mass estimate found in a source we could verify."
+    }
+  ],
+  "sources": [
+    {
+      "id": "martinez-2011",
+      "title": "A basal dinosaur from the dawn of the dinosaur era in southwestern Pangaea",
+      "authors": "Martinez, R. N.; Sereno, P. C.; Alcober, O. A.; Colombi, C. E.; Renne, P. R.; Montañez, I. P.; Currie, B. S.",
+      "year": 2011,
+      "publisher": "Science",
+      "doi": "10.1126/science.1198467",
+      "url": "https://doi.org/10.1126/science.1198467",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "sereno-novas-1992",
+      "title": "The complete skull and skeleton of an early dinosaur",
+      "authors": "Sereno, P. C.; Novas, F. E.",
+      "year": 1992,
+      "publisher": "Science",
+      "doi": "10.1126/science.258.5085.1137",
+      "url": "https://doi.org/10.1126/science.258.5085.1137",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "nhm",
+      "title": "Herrerasaurus | Dino Directory",
+      "publisher": "Natural History Museum, London",
+      "url": "https://www.nhm.ac.uk/discover/dino-directory/herrerasaurus.html",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-taxon",
+      "title": "Herrerasaurus (taxon 38511)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/single.json?name=Herrerasaurus&show=attr,app,parent,ref,class",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-occs",
+      "title": "Occurrences of Herrerasaurus ischigualastensis (stratigraphy and location)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.txt?base_name=Herrerasaurus%20ischigualastensis&show=strat,loc",
+      "accessed": "2026-11-20"
+    }
+  ],
+  "lastReviewed": "2026-11-21"
+}

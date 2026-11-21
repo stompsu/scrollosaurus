@@ -1,0 +1,120 @@
+{
+  "slug": "carnotaurus",
+  "scientificName": "Carnotaurus sastrei",
+  "genus": "Carnotaurus",
+  "nameMeaning": {
+    "text": {
+      "en": "carnivorous bull"
+    },
+    "sourceIds": ["nhm"]
+  },
+  "group": "abelisauridae",
+  "groupSourceIds": ["pbdb-taxon", "pol-2024"],
+  "isDinosaur": true,
+  "taxonomy": {
+    "status": "valid"
+  },
+  "diet": {
+    "value": "carnivore",
+    "confidence": "established",
+    "sourceIds": ["nhm", "pbdb-taxon"]
+  },
+  "timeRange": {
+    "startMa": 72.2,
+    "endMa": 66.0,
+    "sourceIds": ["pbdb-occs", "pol-2024", "mazzetta-2004"],
+    "note": "Pol et al. 2024 and PBDB date the La Colonia Formation to the Maastrichtian; the Ma values are the ICS v2024/12 Maastrichtian stage boundaries. Older work gave Campanian-Maastrichtian (Mazzetta et al. 2004). NHM gives 71-69 Ma."
+  },
+  "periods": ["cretaceous"],
+  "size": {
+    "lengthM": {
+      "value": [8, 8],
+      "sourceIds": ["nhm"],
+      "note": "Single published figure (NHM Dino Directory). The tail and lower legs are not known."
+    },
+    "massKg": {
+      "value": [1500, 2100],
+      "sourceIds": ["mazzetta-2004"],
+      "note": "1,500 kg from a volumetric model (Mazzetta et al. 1998, as reported in Mazzetta et al. 2004); about 2,100 kg as the average of limb-bone regressions, which the authors consider likely overestimates."
+    }
+  },
+  "locations": [
+    {
+      "continent": "south-america",
+      "countryCode": "AR",
+      "formation": "La Colonia",
+      "sourceIds": ["pbdb-occs", "pol-2024"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "Bonaparte",
+    "year": 1985,
+    "sourceIds": ["pbdb-taxon", "nhm"]
+  },
+  "summary": {
+    "text": {
+      "en": "Carnotaurus was a meat-eating dinosaur from Patagonia, Argentina, living near the end of the Cretaceous. About 8 metres long, it had two horns on top of its head, an unusually short snout and tiny arms that were probably not very useful. Skin impressions show scales over much of its body. Nobody is sure what the horns were for: fighting rivals, attacking prey or attracting a mate."
+    },
+    "sourceIds": ["nhm", "pbdb-occs"]
+  },
+  "funFacts": [
+    {
+      "text": {
+        "en": "Carnotaurus is one of the few large dinosaurs with lots of preserved skin impressions, which show a scaly body and no sign of feathers."
+      },
+      "sourceIds": ["nhm"]
+    }
+  ],
+  "famous": false,
+  "images": [],
+  "uncertain": [
+    {
+      "field": "timeRange",
+      "note": "The La Colonia Formation is dated Maastrichtian by Pol et al. 2024 and PBDB, but Campanian-Maastrichtian by older work (Mazzetta et al. 2004)."
+    }
+  ],
+  "sources": [
+    {
+      "id": "pol-2024",
+      "title": "A new abelisaurid dinosaur from the end Cretaceous of Patagonia and evolutionary rates among the Ceratosauria",
+      "authors": "Pol, D.; Baiano, M. A.; Černý, D.; Novas, F. E.; Cerda, I. A.; Pittman, M.",
+      "year": 2024,
+      "publisher": "Cladistics",
+      "doi": "10.1111/cla.12583",
+      "url": "https://doi.org/10.1111/cla.12583",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "mazzetta-2004",
+      "title": "Giants and bizarres: body size of some southern South American Cretaceous dinosaurs",
+      "authors": "Mazzetta, G. V.; Christiansen, P.; Fariña, R. A.",
+      "year": 2004,
+      "publisher": "Historical Biology",
+      "doi": "10.1080/08912960410001715132",
+      "url": "https://doi.org/10.1080/08912960410001715132",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "nhm",
+      "title": "Carnotaurus | Dino Directory",
+      "publisher": "Natural History Museum, London",
+      "url": "https://www.nhm.ac.uk/discover/dino-directory/carnotaurus.html",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-taxon",
+      "title": "Carnotaurus (taxon 54533)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/single.json?name=Carnotaurus&show=attr,app,parent,class,ecospace",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-occs",
+      "title": "Occurrences of Carnotaurus sastrei (stratigraphy and location)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.txt?base_name=Carnotaurus%20sastrei&show=strat,loc",
+      "accessed": "2026-11-20"
+    }
+  ],
+  "lastReviewed": "2026-11-20"
+}

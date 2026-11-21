@@ -1,0 +1,110 @@
+{
+  "slug": "diplodocus",
+  "scientificName": "Diplodocus carnegii",
+  "genus": "Diplodocus",
+  "nameMeaning": {
+    "text": { "en": "double beam" },
+    "sourceIds": ["nhm-diplodocus"]
+  },
+  "group": "diplodocidae",
+  "groupSourceIds": ["tschopp-2015", "pbdb-diplodocus", "nhm-diplodocus"],
+  "isDinosaur": true,
+  "taxonomy": {
+    "status": "valid",
+    "note": "This record uses D. carnegii, known from the nearly complete holotype CM 84. The original type species, D. longus, is based on scrappy tail bones and was judged a nomen dubium by Tschopp et al. (2015), who proposed that the ICZN make D. carnegii the type species.",
+    "sourceIds": ["tschopp-2015"]
+  },
+  "diet": {
+    "value": "herbivore",
+    "confidence": "established",
+    "sourceIds": ["nhm-diplodocus"]
+  },
+  "timeRange": {
+    "startMa": 154.8,
+    "endMa": 143.1,
+    "sourceIds": ["pbdb-diplodocus-carnegii-occs"],
+    "note": "Stage-level PBDB occurrence ages for D. carnegii in the Morrison Formation (Kimmeridgian to Tithonian)."
+  },
+  "periods": ["jurassic"],
+  "size": {
+    "lengthM": {
+      "value": [26, 26],
+      "sourceIds": ["nhm-diplodocus"],
+      "note": "Museum figure for the genus."
+    },
+    "massKg": {
+      "value": [15000, 15000],
+      "sourceIds": ["nhm-diplodocus"],
+      "note": "Museum figure for the genus; no species-level peer-reviewed estimate was verified."
+    }
+  },
+  "locations": [
+    {
+      "continent": "north-america",
+      "countryCode": "US",
+      "formation": "Morrison",
+      "sourceIds": ["pbdb-diplodocus-carnegii-occs", "nhm-diplodocus"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "Hatcher",
+    "year": 1901,
+    "sourceIds": ["tschopp-2015", "pbdb-diplodocus-carnegii-occs"]
+  },
+  "summary": {
+    "text": {
+      "en": "Diplodocus was one of the longest dinosaurs, a plant-eater from the Late Jurassic of western North America, about 150 million years ago. Its very long, whip-like tail made up much of that length. It used its long neck to reach plants at different heights and to drink. Its name, 'double beam', refers to the two-pronged bones under its tail. All known fossils come from the Morrison Formation in the USA."
+    },
+    "sourceIds": ["nhm-diplodocus", "pbdb-diplodocus-carnegii-occs"]
+  },
+  "funFacts": [
+    {
+      "text": {
+        "en": "'Dippy', the Natural History Museum's famous Diplodocus cast, was a gift from Andrew Carnegie in 1905."
+      },
+      "sourceIds": ["nhm-diplodocus"]
+    }
+  ],
+  "famous": true,
+  "images": [],
+  "uncertain": [
+    {
+      "field": "taxonomy",
+      "note": "D. longus is still the formal type species unless the ICZN has ruled on the Tschopp et al. (2015) proposal; no ruling was verified for this record."
+    }
+  ],
+  "sources": [
+    {
+      "id": "tschopp-2015",
+      "title": "A specimen-level phylogenetic analysis and taxonomic revision of Diplodocidae (Dinosauria, Sauropoda)",
+      "authors": "Tschopp E., Mateus O., Benson R.B.J.",
+      "year": 2015,
+      "publisher": "PeerJ",
+      "doi": "10.7717/peerj.857",
+      "url": "https://doi.org/10.7717/peerj.857",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "nhm-diplodocus",
+      "title": "Diplodocus | Dino Directory",
+      "publisher": "Natural History Museum, London",
+      "url": "https://www.nhm.ac.uk/discover/dino-directory/diplodocus.html",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-diplodocus",
+      "title": "Diplodocus (taxon 38669)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=38669",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "pbdb-diplodocus-carnegii-occs",
+      "title": "Diplodocus carnegii occurrences (taxon 65917)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Diplodocus%20carnegii&show=strat,loc",
+      "accessed": "2026-11-20"
+    }
+  ],
+  "lastReviewed": "2026-11-20"
+}
