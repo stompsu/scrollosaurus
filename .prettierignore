@@ -5,3 +5,6 @@ test-results
 pnpm-lock.yaml
 public/images
 docs/kickoff-prompt.md
+
+# Written by `pnpm images`
+data/generated
