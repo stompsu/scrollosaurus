@@ -540,8 +540,8 @@ export class TimelineEngine {
     this.schedule();
   }
 
-  /** Brings a focused marker into view along both axes. */
-  reveal(el: HTMLElement): void {
+  /** Brings a marker into view across the lanes and, unless `alongTime` is false, along time. */
+  reveal(el: HTMLElement, alongTime = true): void {
     const node = this.markers.find((m) => m.el === el);
     if (!node) return;
     const { k, offset } = this.t;
@@ -552,7 +552,7 @@ export class TimelineEngine {
       Math.max(MIN_BAR_PX, k * (node.e - node.s)),
       h ? el.offsetWidth : el.offsetHeight,
     );
-    if (start < pad || start + extent > this.length - pad) {
+    if (alongTime && (start < pad || start + extent > this.length - pad)) {
       const target =
         extent > this.length - 2 * pad
           ? pad - k * node.s

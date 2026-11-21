@@ -185,6 +185,8 @@ export function Timeline({ items, filters, onSelect, highlightedSlug, ref }: Tim
     orientation,
   });
   const [focusedSlug, setFocusedSlug] = useState<string | null>(null);
+  const firstSnap = useRef(snap);
+  const pendingReveal = useRef(true);
 
   const includeNonDinosaurs = filters?.includeNonDinosaurs ?? false;
   const predicate = filters?.predicate;
@@ -294,7 +296,15 @@ export function Timeline({ items, filters, onSelect, highlightedSlug, ref }: Tim
     const bandLayer = bandLayerRef.current;
     const gridLayer = gridLayerRef.current;
     if (!markerLayer || !bandLayer || !gridLayer) return;
-    engineRef.current?.setNodes({ markerLayer, bandLayers: [bandLayer, gridLayer] }, crossExtent);
+    const engine = engineRef.current;
+    if (!engine) return;
+    engine.setNodes({ markerLayer, bandLayers: [bandLayer, gridLayer] }, crossExtent);
+    // Once the opening view has rendered, scroll the lanes so the highlighted marker shows.
+    if (pendingReveal.current && snap !== firstSnap.current) {
+      pendingReveal.current = false;
+      const current = markerLayer.querySelector<HTMLElement>('[aria-current="true"]');
+      if (current) engine.reveal(current, false);
+    }
   });
 
   const centreMa = (win.startMa + win.endMa) / 2;
