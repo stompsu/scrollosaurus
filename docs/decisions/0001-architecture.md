@@ -15,9 +15,8 @@ Scrollosaurus shows ~100–300 Mesozoic species on an interactive, zoomable time
 The app is a fully static build. All content lives as versioned JSON in `data/` and is validated at build time. Node/TypeScript scripts in `scripts/` do the work a backend would otherwise do:
 
 1. `validate:data` — Zod-validate every data file; fail the build on any error, missing source or missing image credit.
-2. `fetch-images` — read Commons file IDs from species data, fetch author/licence/URL from the Wikimedia Commons API, download originals.
-3. `optimize-images` — sharp → AVIF + WebP at 320/640/1280 px, blur placeholders, `srcset` metadata.
-4. `build-index` — build the MiniSearch index and `species.min.json` bundles split by period.
+2. `images` (`pnpm images`, Phase 4) — read the Commons files listed in species data, fetch author/licence/URL from the Wikimedia Commons API, download a 1280 px rendering, write AVIF + WebP at 320/640/1280 px and blur placeholders to `public/images/`, and the credits to `data/generated/images.json` (one script instead of the separate fetch and optimise scripts first sketched).
+3. The species index (including image credits) and the search index are built from the data by Vite and in the browser, not by a separate script (see §4).
 
 Search, filtering and sorting run in the browser. Images are self-hosted in the static output so they can't disappear upstream.
 

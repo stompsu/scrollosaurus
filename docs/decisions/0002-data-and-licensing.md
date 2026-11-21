@@ -32,6 +32,9 @@ Scrollosaurus is an educational app. Its value depends on being right and on res
 
 - Allowed licences: **Public Domain, CC0, CC BY, CC BY-SA** (any version). Rejected: NC, ND, "fair use", all-rights-reserved, unclear or missing licences.
 - Source: mainly Wikimedia Commons. Species files hold only the chosen Commons file, its kind and alt text. Credit metadata (author, licence, licence URL, source URL) is fetched from the Commons API by the Phase 4 pipeline into a generated file under `data/generated/`, never typed by hand, and validated there.
+- Public-domain files sometimes have no licence URL on Commons; for those the credit links the Commons file page, which states the public-domain reason. Every other licence needs its licence URL.
+- The optimised copies (AVIF and WebP at up to 320/640/1280 px) and `data/generated/images.json` are committed, so builds and deploys never depend on Commons being reachable (owner decision, Phase 4). Originals are not committed; the pipeline downloads a 1280 px rendering into a cache outside git. It identifies itself to Wikimedia as "Scrollosaurus image pipeline" with the public repository URL.
+- A species with no acceptable image ships without one ("No image yet") and is listed on `/credits`; no outdated or unlicensed image is used to fill the gap (owner decision, Phase 4).
 - Every image is credited in the UI next to the image and on `/credits`. Attribution is never stripped. CC BY-SA derivatives (resized/converted files) keep the same licence.
 - Prefer fossils and skeleton mounts, then scientifically reviewed life reconstructions. Outdated reconstructions appear only when labelled as historical.
 - Images are self-hosted (downloaded and optimised at build time), not hotlinked.
@@ -52,9 +55,9 @@ Pterosaurs, plesiosaurs, ichthyosaurs and mosasaurs have `isDinosaur: false`, li
 - geological units overlap, leave gaps, or fall outside their parent;
 - a species has no sources, no `lastReviewed`, a claim citing a source id it doesn't list, a time range that falls outside the Mesozoic or disagrees with its listed periods, an unknown group, or an `isDinosaur` that disagrees with its group;
 - the primary species in `data/site.json` has no species file;
-- an image lacks author, licence, licence URL or source URL, or has a licence outside the allowed list.
+- an image listed by a species has no entry in `data/generated/images.json`, lacks author, licence or source URL, lacks a licence URL without being public domain, has a licence outside the allowed list, or is missing one of its derivative files.
 
-It warns (without failing) when a length or mass is empty but not listed in `uncertain`, when a listed source is cited by no field, and while Polish text is missing. Image credit checks arrive with the Phase 4 pipeline.
+It warns (without failing) when a length or mass is empty but not listed in `uncertain`, when a listed source is cited by no field, while Polish text is missing, when a species has no image, and when a credit is no longer used.
 
 ### 8. Licensing of our own content
 
