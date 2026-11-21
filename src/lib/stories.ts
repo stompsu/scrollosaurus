@@ -35,8 +35,3 @@ export function windowForView(
   const item = speciesBySlug(view.species);
   return item ? aroundSpecies(item) : undefined;
 }
-
-/** Sources by id, for a file's citation list. */
-export function sourcesById<T extends { id: string }>(sources: readonly T[]): Map<string, T> {
-  return new Map(sources.map((s) => [s.id, s]));
-}

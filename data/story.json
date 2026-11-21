@@ -4,7 +4,7 @@
       "id": "first-dinosaurs",
       "title": { "en": "The first dinosaurs" },
       "text": {
-        "en": "Some 230 million years ago, in the Late Triassic, some of the earliest known dinosaurs lived in what is now Argentina. Their fossils come from the Ischigualasto Formation. Eoraptor was small, about 1.7 metres long. Herrerasaurus was an agile hunter that ran on two legs. Dinosaurs were already the main meat-eaters there, but they would not dominate life on land for millions of years."
+        "en": "Some 230 million years ago, in the Late Triassic, some of the earliest known dinosaurs lived in what is now Argentina. Their fossils come from the Ischigualasto Formation. Eoraptor was small, less than 2 metres long. Herrerasaurus was an agile hunter that ran on two legs. Dinosaurs would not dominate life on land for millions of years."
       },
       "view": { "species": "eoraptor" },
       "highlight": "eoraptor",
@@ -14,7 +14,7 @@
       "id": "triassic-jurassic-extinction",
       "title": { "en": "Disaster at the end of the Triassic" },
       "text": {
-        "en": "About 201 million years ago, the Triassic ended with a mass extinction on land and in the sea. It began at the same time as enormous volcanic eruptions, called the Central Atlantic Magmatic Province, as the supercontinent Pangaea started to break apart. With many other animals gone, dinosaurs filled the empty places and went on to dominate Earth for the next 136 million years."
+        "en": "About 201 million years ago, the Triassic ended with a mass extinction on land and in the sea. It began at the same time as enormous volcanic eruptions, called the Central Atlantic Magmatic Province, as the supercontinent Pangaea started to break apart. With many other animals gone, dinosaurs filled the empty places and went on to dominate life on land for the rest of the Mesozoic."
       },
       "view": { "boundaryAtBaseOf": "jurassic" },
       "sourceIds": ["blackburn-2013", "nps-extinction-events"]
@@ -38,7 +38,7 @@
       "id": "feathers",
       "title": { "en": "Dinosaurs with feathers" },
       "text": {
-        "en": "About 125 million years ago, a small meat-eater called Sinosauropteryx lived in what is now north-eastern China. Its fossils, from the Yixian Formation, show a covering of thin, hair-like primitive feathers. Named in 1996, it was the first feathered dinosaur discovered that was not directly related to birds. Later finds, like Microraptor with feathered wings on its arms and legs, showed that feathers evolved before birds."
+        "en": "About 125 million years ago, a small meat-eater called Sinosauropteryx lived in what is now north-eastern China. Its fossils, from the Yixian Formation, show a covering of thin, hair-like primitive feathers. Named in 1996, it was the first dinosaur other than a bird found with feathers. Later finds, like Microraptor with feathered wings on its arms and legs, showed that feathers evolved before birds."
       },
       "view": { "species": "sinosauropteryx" },
       "highlight": "sinosauropteryx",

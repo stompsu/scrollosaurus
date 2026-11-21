@@ -30,13 +30,13 @@ export const SILHOUETTES: Record<BodyPlan, Silhouette> = {
   theropod: {
     height: 36,
     measure: 'length',
-    label: 'two-legged meat-eating dinosaur',
+    label: 'two-legged theropod dinosaur',
     path: 'M0 15 L30 10 L45 6 L62 7 L75 10 L83 6 L93 5 L100 8 L99 11 L90 13 L84 14 L78 17 L70 20 L66 22 L64 26 L61 22 L54 22 L51 28 L53 36 L47 36 L45 28 L42 23 L40 28 L43 36 L38 36 L35 26 L30 18 L0 17 Z',
   },
   'small-theropod': {
     height: 44,
     measure: 'length',
-    label: 'small feathered dinosaur',
+    label: 'small feathered theropod dinosaur',
     path: 'M0 16 L8 13 L28 12 L46 10 L58 11 L70 13 L78 6 L86 3 L95 3 L100 6 L97 8 L88 9 L82 13 L78 19 L72 24 L70 29 L66 25 L58 26 L55 33 L58 44 L53 44 L50 33 L47 27 L45 33 L48 44 L43 44 L40 31 L34 21 L20 18 L0 19 Z',
   },
   sauropod: {

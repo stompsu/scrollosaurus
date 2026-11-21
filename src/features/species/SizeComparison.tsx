@@ -18,9 +18,10 @@ interface SizeComparisonProps {
   references: SizeReferences;
 }
 
-/** A standing person, facing right, in a 0–100 tall box (height = 1.8 m reference). */
+/** A standing person in a box 44 wide and 100 tall (height = the 1.8 m reference). */
 const PERSON =
-  'M50 0 a9 9 0 1 1 0.1 0 Z M38 22 h24 l8 34 h-7 l-5 -20 v64 h-9 v-38 h-2 v38 h-9 v-64 l-5 20 h-7 Z';
+  'M24 0 a9 9 0 1 1 0.1 0 Z M12 22 h24 l8 34 h-7 l-5 -20 v64 h-9 v-38 h-2 v38 h-9 v-64 l-5 20 h-7 Z';
+const PERSON_WIDTH = 0.44;
 
 /**
  * A side-on bus in a 100 × 26 box (length × height): body with window cut-outs (even-odd fill)
@@ -49,7 +50,7 @@ export function SizeComparison({ genus, groupPath, size, references }: SizeCompa
     { key: 'species', widthM: hi, heightM: (hi * plan.height) / 100 },
   ];
   if (person)
-    figures.push({ key: 'person', widthM: person.heightM * 0.45, heightM: person.heightM });
+    figures.push({ key: 'person', widthM: person.heightM * PERSON_WIDTH, heightM: person.heightM });
   const showBus = bus !== undefined && hi >= BUS_FROM_M;
   if (bus && showBus) figures.push({ key: 'bus', widthM: bus.lengthM, heightM: bus.heightM });
 
@@ -145,12 +146,13 @@ export function SizeComparison({ genus, groupPath, size, references }: SizeCompa
         {person && <li>Adult person: {String(person.heightM)} m tall (a reference figure).</li>}
         {bus && showBus && (
           <li>
-            {bus.label.en}: {String(bus.lengthM)} m long. {bus.note?.en}
+            {bus.label.en}: up to {String(bus.lengthM)} m long. {bus.note?.en}
           </li>
         )}
       </ul>
       <p className="sc-note">
-        The outline is a generic {plan.label}, not the exact shape of <i>{genus}</i>.
+        The outline is a generic {plan.label}, not the exact shape of <i>{genus}</i>; only its
+        length is to scale.
       </p>
     </figure>
   );

@@ -4,6 +4,7 @@
 try {
   if (localStorage.getItem('scrollosaurus:theme') === 'light') {
     document.documentElement.dataset.theme = 'light';
+    document.querySelector('meta[name="theme-color"]')?.setAttribute('content', '#f4efe4');
   }
 } catch {
   // Storage blocked (private mode, settings): stay on the default dark theme.

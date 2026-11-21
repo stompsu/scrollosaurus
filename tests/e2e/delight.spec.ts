@@ -72,7 +72,7 @@ test('the size scene draws the species with a person, and a bus for large animal
   await page.goto('species/tyrannosaurus');
   const scene = page.getByTestId('size-comparison');
   await expect(scene.getByRole('img', { name: /person and a school bus/ })).toBeVisible();
-  await expect(scene).toContainText('generic two-legged meat-eating dinosaur');
+  await expect(scene).toContainText('generic two-legged theropod dinosaur');
   await page.goto('species/archaeopteryx');
   await expect(page.getByTestId('size-comparison')).not.toContainText('School bus');
 });
@@ -113,4 +113,39 @@ test('the period tint follows the view and fades to ash at the end of the Cretac
   await expect
     .poll(era)
     .toMatch(/color-mix\(in srgb, var\(--sc-cretaceous\) \d+%, var\(--sc-ash\)\)/);
+});
+
+test('the person fits inside the scene next to a small animal', async ({ page }) => {
+  await page.goto('species/archaeopteryx');
+  const svg = page.getByTestId('size-comparison').locator('svg');
+  await expect(svg).toBeVisible();
+  const [box, person] = await Promise.all([
+    svg.boundingBox(),
+    svg.locator('.sc-size-ref').first().boundingBox(),
+  ]);
+  if (!box || !person) throw new Error('scene not rendered');
+  expect(person.x).toBeGreaterThanOrEqual(box.x);
+  expect(person.x + person.width).toBeLessThanOrEqual(box.x + box.width + 0.5);
+});
+
+test('an out-of-range tour link shows no tour and still offers it', async ({ page }) => {
+  await page.goto('./?tour=99');
+  await expect(page.getByTestId('story-panel')).toHaveCount(0);
+  await expect(page.getByTestId('start-tour')).toBeVisible();
+  await expect(page.locator('[aria-current="true"][data-slug]')).toHaveAttribute(
+    'data-slug',
+    'sinosauropteryx',
+  );
+});
+
+test('closing the tour returns focus to its button; Back reopens the last step', async ({
+  page,
+}) => {
+  await page.goto('./?tour=3');
+  const panel = page.getByTestId('story-panel');
+  await panel.getByRole('button', { name: 'Close tour' }).click();
+  await expect(panel).toHaveCount(0);
+  await expect(page.getByTestId('start-tour')).toBeFocused();
+  await page.goBack();
+  await expect(panel).toContainText('step 3 of 5');
 });

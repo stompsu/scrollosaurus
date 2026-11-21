@@ -94,13 +94,17 @@ export default function TimelinePage() {
         ? 'filters'
         : undefined;
   const primary = items.find((s) => s.slug === primarySpeciesSlug);
-  const tourHighlight = view.tour === undefined ? undefined : story.steps[view.tour - 1]?.highlight;
+  // A tour step past the end (an old or mistyped link) counts as no tour.
+  const tourNumber =
+    view.tour !== undefined && view.tour <= story.steps.length ? view.tour : undefined;
+  const tourHighlight =
+    tourNumber === undefined ? undefined : story.steps[tourNumber - 1]?.highlight;
   const highlighted = selected
     ? hidden
       ? undefined
       : selected.slug
     : // During the tour only the step's own species is highlighted (none on some steps).
-      view.tour !== undefined
+      tourNumber !== undefined
       ? tourHighlight
       : primarySpeciesSlug;
 
@@ -153,11 +157,25 @@ export default function TimelinePage() {
   // The window as of the last settle, for content that depends on what is in view.
   const [settledWindow, setSettledWindow] = useState<MaRange | undefined>(initialRange);
 
+  // When the tour closes, focus goes back to the button that starts it.
+  const startTourRef = useRef<HTMLButtonElement>(null);
+  const wasTouring = useRef(false);
+  useEffect(() => {
+    const touring = tourNumber !== undefined;
+    if (wasTouring.current && !touring) {
+      const active = document.activeElement;
+      if (!active || active === document.body) startTourRef.current?.focus();
+    }
+    wasTouring.current = touring;
+  }, [tourNumber]);
+
   // The guided tour (`?tour=N`): each step moves the timeline and may highlight a species.
-  const tourIndex = view.tour === undefined ? undefined : view.tour - 1;
+  const tourIndex = tourNumber === undefined ? undefined : tourNumber - 1;
   const tourStep = tourIndex === undefined ? undefined : story.steps[tourIndex];
   useEffect(() => {
     if (!tourStep) return;
+    // Back/Forward and shared links already carry the window to show; keep it.
+    if (navigationType === NavigationType.Pop && view.window) return;
     const range = windowForView(tourStep.view, windowAround, (s) =>
       items.find((it) => it.slug === s),
     );
@@ -285,6 +303,7 @@ export default function TimelinePage() {
         </h1>
         {tourIndex === undefined && (
           <button
+            ref={startTourRef}
             type="button"
             className="sc-button sc-button--primary"
             onClick={() => {
@@ -305,7 +324,8 @@ export default function TimelinePage() {
             writeView({ tour: n + 1 }, { push: true });
           }}
           onClose={() => {
-            writeView({ tour: null });
+            // A new entry, so Back after closing returns to the last step instead of an earlier one.
+            writeView({ tour: null }, { push: true });
           }}
         />
       )}

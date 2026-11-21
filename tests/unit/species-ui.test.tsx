@@ -172,7 +172,7 @@ describe('<SpeciesDrawer />', () => {
     const scene = within(dialog).getByRole('img', { name: 'Size compared with a person' });
     expect(scene).toHaveAccessibleDescription(/Sinosauropteryx, length 1\.1 m/);
     expect(within(dialog).getByTestId('size-comparison')).toHaveTextContent(
-      'generic small feathered dinosaur',
+      'generic small feathered theropod dinosaur',
     );
     const refs = within(dialog).getAllByRole('link', { name: /^Source \d+$/ });
     expect(refs.length).toBeGreaterThan(5);

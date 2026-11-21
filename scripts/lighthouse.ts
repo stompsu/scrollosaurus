@@ -19,10 +19,16 @@ const CATEGORIES = ['performance', 'accessibility', 'best-practices', 'seo'] as 
 const TARGET = 0.9;
 const DOC = join(import.meta.dirname, '..', 'docs', 'perf', 'lighthouse.md');
 
-const server = spawn('pnpm', ['exec', 'tsx', 'scripts/serve-pages.ts'], {
-  env: { ...process.env, PORT: String(PORT) },
-  stdio: ['ignore', 'pipe', 'inherit'],
-});
+// Spawn tsx itself (not through pnpm), so killing this process stops the server.
+const server = spawn(
+  join(import.meta.dirname, '..', 'node_modules', '.bin', 'tsx'),
+  ['scripts/serve-pages.ts'],
+  {
+    env: { ...process.env, PORT: String(PORT) },
+    stdio: ['ignore', 'pipe', 'inherit'],
+  },
+);
+process.on('exit', () => server.kill());
 await new Promise<void>((resolve, reject) => {
   server.stdout.on('data', (chunk: Buffer) => {
     if (chunk.toString().includes('Serving')) resolve();
@@ -32,10 +38,11 @@ await new Promise<void>((resolve, reject) => {
   });
 });
 
-const browser = await chromium.launch({ args: [`--remote-debugging-port=${String(DEBUG_PORT)}`] });
 const rows: string[] = [];
 let failed = false;
+let browser: Awaited<ReturnType<typeof chromium.launch>> | undefined;
 try {
+  browser = await chromium.launch({ args: [`--remote-debugging-port=${String(DEBUG_PORT)}`] });
   for (const page of PAGES) {
     const result = await lighthouse(`${BASE}${page}`, {
       port: DEBUG_PORT,
@@ -53,7 +60,7 @@ try {
     console.log(`/${page}: ${CATEGORIES.map((c, i) => `${c} ${String(scores[i])}`).join(', ')}`);
   }
 } finally {
-  await browser.close();
+  await browser?.close();
   server.kill();
 }
 
