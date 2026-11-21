@@ -35,9 +35,12 @@
   cursor: pointer;
 }
 
-.tl-button:hover {
-  border-color: var(--sc-accent);
-  color: var(--sc-accent);
+/* Hover only where it exists, so the style doesn't stick after a tap. */
+@media (hover: hover) {
+  .tl-button:hover {
+    border-color: var(--sc-accent);
+    color: var(--sc-accent);
+  }
 }
 
 .tl-window {
@@ -398,6 +401,11 @@
 
 .tl[data-orientation='vertical'] .tl-whisker--end {
   top: 100%;
+}
+
+/* Inset, so the ring isn't clipped when a marker is wider than the viewport or at a lane edge. */
+.tl-marker:focus-visible {
+  outline-offset: -3px;
 }
 
 /* The highlighted species: brighter bar with a ring, bold underlined label (not colour alone). */
