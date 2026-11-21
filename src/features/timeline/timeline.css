@@ -1,0 +1,444 @@
+/*
+ * Timeline layout. Positions along the time axis are written per frame by engine.ts (transforms
+ * and sizes); everything static lives here. Colours come from the tokens in src/styles/index.css.
+ */
+
+.tl {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  min-width: 0;
+}
+
+.tl-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1rem;
+}
+
+.tl-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.375rem;
+}
+
+.tl-button {
+  min-width: 2.5rem;
+  min-height: 2.25rem;
+  padding: 0.25rem 0.625rem;
+  border: 1px solid var(--sc-text-muted);
+  border-radius: 0.375rem;
+  background: var(--sc-surface);
+  color: var(--sc-text);
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+/* Hover only where it exists, so the style doesn't stick after a tap. */
+@media (hover: hover) {
+  .tl-button:hover {
+    border-color: var(--sc-accent);
+    color: var(--sc-accent);
+  }
+}
+
+.tl-window {
+  flex: 1 1 16rem;
+  margin: 0;
+  color: var(--sc-text-muted);
+  font-size: 0.875rem;
+}
+
+/* ---- Viewport ---- */
+
+.tl-viewport {
+  --tl-bands: 116px;
+  position: relative;
+  width: 100%;
+  height: clamp(22rem, calc(100dvh - 18rem), 46rem);
+  overflow: clip;
+  contain: strict;
+  border-radius: 0.5rem;
+  background: var(--sc-surface);
+  cursor: grab;
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.tl[data-orientation='vertical'] .tl-viewport {
+  --tl-bands: 138px;
+  height: clamp(20rem, calc(100dvh - 26rem), 60rem);
+}
+
+.tl-bands,
+.tl-lanes {
+  position: absolute;
+  overflow: clip;
+}
+
+.tl[data-orientation='horizontal'] .tl-bands {
+  inset: 0 0 auto 0;
+  height: var(--tl-bands);
+}
+
+.tl[data-orientation='horizontal'] .tl-lanes {
+  inset: var(--tl-bands) 0 0 0;
+}
+
+.tl[data-orientation='vertical'] .tl-bands {
+  inset: 0 auto 0 0;
+  width: var(--tl-bands);
+}
+
+.tl[data-orientation='vertical'] .tl-lanes {
+  inset: 0 0 0 var(--tl-bands);
+}
+
+.tl-time-layer,
+.tl-cross-layer {
+  position: absolute;
+  inset: 0;
+  will-change: transform;
+}
+
+/* ---- Bands ---- */
+
+.tl-band {
+  --tl-band-color: var(--sc-surface);
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  background: var(--tl-band-color);
+  color: var(--sc-on-band);
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.tl-band[data-period='triassic'] {
+  --tl-band-color: var(--sc-triassic);
+}
+
+.tl-band[data-period='jurassic'] {
+  --tl-band-color: var(--sc-jurassic);
+}
+
+.tl-band[data-period='cretaceous'] {
+  --tl-band-color: var(--sc-cretaceous);
+}
+
+/* Epochs and stages are darker shades of their period, which only raises the contrast with --sc-on-band. */
+.tl-band--epoch {
+  background: color-mix(in srgb, var(--tl-band-color) 82%, #000);
+}
+
+.tl-band--stage {
+  background: color-mix(in srgb, var(--tl-band-color) 70%, #000);
+}
+
+.tl-band--stage.tl-band--alt {
+  background: color-mix(in srgb, var(--tl-band-color) 58%, #000);
+}
+
+.tl-band--era {
+  background: color-mix(in srgb, var(--sc-text) 12%, var(--sc-bg));
+  color: var(--sc-text);
+}
+
+.tl-band-label {
+  display: inline-block;
+  padding: 0 6px;
+}
+
+.tl[data-orientation='horizontal'] .tl-band {
+  border-right: 1px solid var(--sc-bg);
+}
+
+.tl[data-orientation='horizontal'] .tl-band--era {
+  top: 0;
+  height: 20px;
+  line-height: 20px;
+}
+
+.tl[data-orientation='horizontal'] .tl-band--period {
+  top: 20px;
+  height: 28px;
+  line-height: 28px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.tl[data-orientation='horizontal'] .tl-band--epoch {
+  top: 48px;
+  height: 24px;
+  line-height: 24px;
+}
+
+.tl[data-orientation='horizontal'] .tl-band--stage {
+  top: 72px;
+  height: 24px;
+  line-height: 24px;
+}
+
+.tl[data-orientation='vertical'] .tl-band {
+  border-bottom: 1px solid var(--sc-bg);
+  writing-mode: vertical-rl;
+}
+
+.tl[data-orientation='vertical'] .tl-band--era {
+  left: 0;
+  width: 18px;
+  line-height: 18px;
+  font-size: 11px;
+}
+
+.tl[data-orientation='vertical'] .tl-band--period {
+  left: 18px;
+  width: 24px;
+  line-height: 24px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.tl[data-orientation='vertical'] .tl-band--epoch {
+  left: 42px;
+  width: 22px;
+  line-height: 22px;
+}
+
+.tl[data-orientation='vertical'] .tl-band--stage {
+  left: 64px;
+  width: 22px;
+  line-height: 22px;
+}
+
+.tl[data-orientation='vertical'] .tl-band-label {
+  padding: 6px 0;
+}
+
+/* ---- Boundary ticks and grid lines ---- */
+
+.tl-tick {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: var(--sc-text-muted);
+  font-size: 11px;
+  line-height: 14px;
+  white-space: nowrap;
+}
+
+.tl-tick > span {
+  position: absolute;
+}
+
+.tl[data-orientation='horizontal'] .tl-tick {
+  top: 98px;
+  height: 18px;
+}
+
+.tl[data-orientation='horizontal'] .tl-tick > span {
+  top: 2px;
+  transform: translateX(-50%);
+}
+
+.tl[data-orientation='horizontal'] .tl-tick--start > span {
+  transform: translateX(4px);
+}
+
+.tl[data-orientation='horizontal'] .tl-tick--end > span {
+  transform: translateX(calc(-100% - 4px));
+}
+
+.tl[data-orientation='vertical'] .tl-tick {
+  left: 88px;
+  width: 50px;
+}
+
+.tl[data-orientation='vertical'] .tl-tick > span {
+  left: 0;
+  width: 46px;
+  padding-left: 4px;
+  white-space: normal;
+  line-height: 13px;
+  transform: translateY(-50%);
+}
+
+.tl[data-orientation='vertical'] .tl-tick--start > span {
+  transform: translateY(4px);
+}
+
+.tl[data-orientation='vertical'] .tl-tick--end > span {
+  transform: translateY(calc(-100% - 4px));
+}
+
+.tl-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: color-mix(in srgb, var(--sc-text) 10%, transparent);
+}
+
+.tl-line--period {
+  background: color-mix(in srgb, var(--sc-text) 28%, transparent);
+}
+
+.tl[data-orientation='horizontal'] .tl-line {
+  bottom: 0;
+  width: 1px;
+}
+
+.tl[data-orientation='vertical'] .tl-line {
+  right: 0;
+  height: 1px;
+}
+
+/* ---- Markers ---- */
+
+.tl-marker {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 2px;
+  min-height: 24px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--sc-text);
+  font-size: 13px;
+  line-height: 16px;
+  text-align: left;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.tl[data-orientation='horizontal'] .tl-marker {
+  flex-direction: column;
+}
+
+/* Label anchored at the bar end: the engine places the element at the bar end. */
+.tl[data-orientation='horizontal'] .tl-marker--end {
+  align-items: flex-end;
+  translate: -100% 0;
+}
+
+.tl[data-orientation='vertical'] .tl-marker {
+  flex-direction: row;
+  gap: 5px;
+  width: 116px;
+  font-size: 12px;
+}
+
+.tl-label {
+  display: block;
+}
+
+.tl[data-orientation='vertical'] .tl-label {
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 18px;
+}
+
+.tl-marker--famous .tl-label {
+  font-weight: 600;
+}
+
+.tl-tag {
+  margin-left: 6px;
+  color: var(--sc-text-muted);
+  font-size: 11px;
+}
+
+.tl-bar {
+  position: relative;
+  flex: none;
+  border-radius: 2px;
+  background: var(--sc-accent);
+}
+
+.tl[data-orientation='horizontal'] .tl-bar {
+  height: 8px;
+}
+
+.tl[data-orientation='vertical'] .tl-bar {
+  order: -1;
+  width: 8px;
+}
+
+.tl-whisker {
+  position: absolute;
+  background: var(--sc-text-muted);
+}
+
+.tl[data-orientation='horizontal'] .tl-whisker {
+  top: 3px;
+  height: 2px;
+}
+
+.tl[data-orientation='horizontal'] .tl-whisker--start {
+  right: 100%;
+}
+
+.tl[data-orientation='horizontal'] .tl-whisker--end {
+  left: 100%;
+}
+
+.tl[data-orientation='vertical'] .tl-whisker {
+  left: 3px;
+  width: 2px;
+}
+
+.tl[data-orientation='vertical'] .tl-whisker--start {
+  bottom: 100%;
+}
+
+.tl[data-orientation='vertical'] .tl-whisker--end {
+  top: 100%;
+}
+
+/* Inset, so the ring isn't clipped when a marker is wider than the viewport or at a lane edge. */
+.tl-marker:focus-visible {
+  outline-offset: -3px;
+}
+
+/* The highlighted species: brighter bar with a ring, bold underlined label (not colour alone). */
+.tl-marker[aria-current='true'] .tl-label {
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+
+.tl-marker[aria-current='true'] .tl-bar {
+  background: var(--sc-focus);
+  outline: 2px solid var(--sc-text);
+  outline-offset: 1px;
+}
+
+/* ---- Help ---- */
+
+.tl-help {
+  color: var(--sc-text-muted);
+  font-size: 0.875rem;
+}
+
+.tl-help summary {
+  padding: 0.25rem 0;
+  color: var(--sc-text);
+  cursor: pointer;
+}
+
+.tl-help ul {
+  display: grid;
+  gap: 0.25rem;
+  margin-top: 0.25rem;
+  padding-left: 1.25rem;
+  list-style: disc;
+}

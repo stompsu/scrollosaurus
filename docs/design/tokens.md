@@ -24,6 +24,8 @@ Tokens are CSS custom properties on `:root` in `src/styles/index.css` with an `-
 | `--sc-jurassic`   | `#1e5b4f` | Fern green / teal           | 7.45:1 (AAA)                 |
 | `--sc-cretaceous` | `#7d3a53` | Warm floral (ash near K–Pg) | 7.63:1 (AAA)                 |
 
+Timeline epoch and stage bands (Phase 2) use darker shades of their period, mixed with black in CSS (`color-mix(in srgb, var(--sc-<period>) N%, #000)`): epochs 82%, stages 70% and 58% alternating. Darkening only raises contrast with `--sc-on-band` (8.9–12.8:1). The era band mixes 12% `--sc-text` into `--sc-bg` (12.1:1 with `--sc-text`). These are derived values, not new tokens; they live in `src/features/timeline/timeline.css`.
+
 Text contrast is checked by axe in the Playwright suite.
 
 ## Typography
