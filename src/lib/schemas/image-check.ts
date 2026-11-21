@@ -1,4 +1,4 @@
-import { classifyLicense } from '../image-credits.ts';
+import { classifyLicense, deedMatches } from '../image-credits.ts';
 import { IMAGE_FORMATS, type ImageManifest } from './images.ts';
 
 export interface ImageCheckInput {
@@ -28,6 +28,9 @@ export function checkImages({ listed, manifest, publicFiles }: ImageCheckInput):
     }
     if (classifyLicense(entry.license) !== entry.licenseFamily) {
       errors.push(`${at}: licence "${entry.license}" is not allowed or doesn't match its family`);
+    }
+    if (!deedMatches(entry.licenseFamily, entry.licenseUrl)) {
+      errors.push(`${at}: licence URL doesn't point to the ${entry.licenseFamily} deed`);
     }
     for (const w of entry.widths) {
       for (const format of IMAGE_FORMATS) {

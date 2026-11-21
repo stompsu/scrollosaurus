@@ -20,6 +20,8 @@ describe('licence policy (ADR-0002 §4)', () => {
     'CC BY-NC 4.0',
     'CC BY-NC-SA 3.0',
     'CC BY-ND 2.0',
+    'CC BY-NCSA',
+    'CC-BY-NC-ND-4.0',
     'GFDL',
     'Fair use',
     'All rights reserved',
@@ -35,6 +37,7 @@ describe('credit parsing', () => {
       htmlToText('<a href="//commons.wikimedia.org/wiki/User:X">Jane&nbsp;Doe</a> &amp; <b>Co</b>'),
     ).toBe('Jane Doe & Co');
     expect(htmlToText('Caf&#233; &#x41;')).toBe('Café A');
+    expect(htmlToText('bad &#x110000; ok')).toBe('bad &#x110000; ok');
   });
 
   it('drops contact details from author names', () => {
@@ -46,6 +49,7 @@ describe('credit parsing', () => {
       'Ripton Scott from Wimbledon, United Kingdom',
     );
     expect(cleanAuthor('Mark Witton (palaeoartist)')).toBe('Mark Witton (palaeoartist)');
+    expect(cleanAuthor('John Smith, j.smith@uni.edu.au')).toBe('John Smith');
   });
 
   it('reads author, licence and URL', () => {
@@ -73,6 +77,16 @@ describe('credit parsing', () => {
     expect(
       parseCredit({ Artist: { value: 'A' }, LicenseShortName: { value: 'CC BY 4.0' } }),
     ).toEqual({ error: 'no licence URL' });
+  });
+
+  it('refuses a licence URL that is not the deed for the licence', () => {
+    expect(
+      parseCredit({
+        Artist: { value: 'A' },
+        LicenseShortName: { value: 'CC BY 4.0' },
+        LicenseUrl: { value: 'https://creativecommons.org/licenses/by-nc/4.0' },
+      }),
+    ).toEqual({ error: expect.stringMatching(/doesn't match/) as unknown });
   });
 
   it('allows public domain without a licence URL', () => {

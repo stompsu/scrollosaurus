@@ -29,8 +29,9 @@ export default function CreditsPage() {
 
       <h2 className="font-display text-xl">Images</h2>
       <p>
-        All images come from Wikimedia Commons, under the licence shown with each one. They are
-        resized and converted for this site; the licence of each original applies to its copies.
+        All images come from Wikimedia Commons, under the licence shown with each one. For this site
+        they are resized, converted to AVIF and WebP, and placed on a dark background where the
+        original is transparent. The licence of each original applies to its copies.
       </p>
       <ul className="sc-credits-list" data-testid="image-credits">
         {credited.flatMap((s) =>

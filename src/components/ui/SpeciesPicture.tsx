@@ -50,7 +50,15 @@ export function SpeciesPicture({
   );
 }
 
-/** "Image: Jane Doe, CC BY-SA 4.0, via Wikimedia Commons", with the licence and source linked. */
+/** The work's title for attribution: the Commons file name without "File:" and the extension. */
+export function imageTitle(image: Pick<SpeciesImage, 'commonsFile'>): string {
+  return image.commonsFile.replace(/^File:/, '').replace(/\.[a-z0-9]+$/i, '');
+}
+
+/**
+ * "Image: “Title” by Jane Doe, CC BY-SA 4.0, via Wikimedia Commons", with the licence and source
+ * linked (title, author, licence and source, as CC licences ask). The compact form drops the title.
+ */
 export function ImageCredit({
   image,
   compact = false,
@@ -61,7 +69,8 @@ export function ImageCredit({
   const who = image.attribution ?? image.author;
   return (
     <span className={`sc-credit${compact ? ' sc-credit--compact' : ''}`} data-testid="image-credit">
-      Image: {who},{' '}
+      Image: {compact ? '' : `“${imageTitle(image)}” by `}
+      {who},{' '}
       {image.licenseUrl ? (
         <a href={image.licenseUrl} rel="license noreferrer">
           {image.license}

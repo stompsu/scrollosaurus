@@ -40,8 +40,13 @@ const PAUSE_MS = 500;
 const redownload = process.argv.includes('--redownload');
 const refresh = redownload || process.argv.includes('--refresh');
 
+/** A file the licence policy rejects; anything else (network, Commons errors) is retried later. */
+class PolicyError extends Error {}
+
 interface ImageInfo {
   url: string;
+  /** Content hash of the current revision; part of the cache key. */
+  sha1: string;
   thumburl?: string;
   width: number;
   height: number;
@@ -54,10 +59,24 @@ const sleep = (ms: number) =>
     setTimeout(resolve, ms);
   });
 
+const TIMEOUT_MS = 30_000;
+const RETRIES = 3;
+
+/** GET with a timeout, retrying when Wikimedia asks us to slow down (429/503 + Retry-After). */
 async function get(url: string): Promise<Response> {
-  const res = await fetch(url, { headers: { 'User-Agent': USER_AGENT } });
-  if (!res.ok) throw new Error(`${String(res.status)} ${res.statusText} for ${url}`);
-  return res;
+  for (let attempt = 1; ; attempt++) {
+    const res = await fetch(url, {
+      headers: { 'User-Agent': USER_AGENT },
+      signal: AbortSignal.timeout(TIMEOUT_MS),
+    });
+    if (res.ok) return res;
+    if ((res.status === 429 || res.status === 503) && attempt < RETRIES) {
+      const wait = Number(res.headers.get('retry-after'));
+      await sleep((Number.isFinite(wait) && wait > 0 ? wait : 5 * attempt) * 1000);
+      continue;
+    }
+    throw new Error(`${String(res.status)} ${res.statusText} for ${url}`);
+  }
 }
 
 async function imageInfo(file: string): Promise<ImageInfo> {
@@ -65,7 +84,7 @@ async function imageInfo(file: string): Promise<ImageInfo> {
     action: 'query',
     titles: file,
     prop: 'imageinfo',
-    iiprop: 'url|size|extmetadata',
+    iiprop: 'url|size|sha1|extmetadata',
     iiurlwidth: String(DOWNLOAD_WIDTH),
     format: 'json',
     formatversion: '2',
@@ -94,19 +113,24 @@ async function listedImages(): Promise<Map<string, string[]>> {
 }
 
 async function readManifest(): Promise<ImageManifest> {
+  let raw: string;
   try {
-    return imageManifestSchema.parse(JSON.parse(await readFile(MANIFEST, 'utf8')));
+    raw = await readFile(MANIFEST, 'utf8');
   } catch {
     return {};
   }
+  // A manifest that no longer parses must stop the run: treating it as empty would delete every
+  // committed image.
+  return imageManifestSchema.parse(JSON.parse(raw));
 }
 
 function hashOf(file: string): string {
   return createHash('sha256').update(file).digest('hex').slice(0, 12);
 }
 
-async function download(url: string, hash: string): Promise<Buffer> {
-  const cached = join(CACHE, hash);
+/** Cached by file and revision, so a new upload of the same file is downloaded again. */
+async function download(url: string, key: string): Promise<Buffer> {
+  const cached = join(CACHE, key);
   try {
     if (redownload) throw new Error('redownload');
     return await readFile(cached);
@@ -121,10 +145,10 @@ async function download(url: string, hash: string): Promise<Buffer> {
 async function buildEntry(file: string): Promise<ImageEntry> {
   const info = await imageInfo(file);
   const credit = parseCredit(info.extmetadata ?? {});
-  if ('error' in credit) throw new Error(`${file}: ${credit.error}`);
+  if ('error' in credit) throw new PolicyError(credit.error);
 
   const hash = hashOf(file);
-  const source = await download(info.thumburl ?? info.url, hash);
+  const source = await download(info.thumburl ?? info.url, `${hash}-${info.sha1}`);
   // Flatten transparency (SVG/PNG) onto the app's dark surface so it reads as intended.
   const base = sharp(source).rotate().flatten({ background: '#1d1a17' });
   const meta = await base.metadata();
@@ -135,6 +159,10 @@ async function buildEntry(file: string): Promise<ImageEntry> {
 
   const basename = `images/${hash}`;
   await mkdir(join(PUBLIC, 'images'), { recursive: true });
+  // Clear this image's old derivatives first: a narrower new revision writes fewer widths.
+  for (const name of await readdir(join(PUBLIC, 'images'))) {
+    if (name.startsWith(`${hash}-`)) await rm(join(PUBLIC, 'images', name));
+  }
   let largest = { width: 0, height: 0 };
   for (const w of unique) {
     const resized = base.clone().resize({ width: w, withoutEnlargement: true });
@@ -182,6 +210,9 @@ async function main(): Promise<void> {
       manifest[file] = await buildEntry(file);
       console.log(`✓ ${file} (${manifest[file].license}, ${manifest[file].author})`);
     } catch (e) {
+      // Only the licence policy removes an image. A network or Commons error keeps the entry
+      // and files from the last good run, so a failed --refresh never deletes good images.
+      if (kept && !(e instanceof PolicyError)) manifest[file] = kept;
       failures.push(
         `${file} [${(listed.get(file) ?? []).join(', ')}]: ${e instanceof Error ? e.message : String(e)}`,
       );

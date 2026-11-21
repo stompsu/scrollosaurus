@@ -587,6 +587,9 @@ body {
 .sc-drawer-figure .sc-picture {
   max-height: 22rem;
   object-fit: contain;
+  /* Match the image's own fit, so the blurred preview doesn't spill beside tall images. */
+  background-size: contain;
+  background-repeat: no-repeat;
   border-radius: 0.5rem;
 }
 .sc-credit {

@@ -27,7 +27,9 @@ test('/credits credits every image, and every image loads', async ({ page }) => 
   await expect(items).toHaveCount(listed);
   for (const item of await items.all()) {
     const credit = item.getByTestId('image-credit');
-    await expect(credit).toContainText(/^Image: .+, (Public domain|CC0|CC BY(-SA)? [\d.]+)/);
+    await expect(credit).toContainText(
+      /^Image: “.+” by .+, (Public domain|CC0|CC BY(-SA)? [\d.]+)/,
+    );
     await expect(credit.getByRole('link', { name: 'Wikimedia Commons' })).toHaveAttribute(
       'href',
       /^https:\/\/commons\.wikimedia\.org\/wiki\/File:/,
