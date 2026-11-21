@@ -29,13 +29,13 @@ Search, filtering and sorting run in the browser. Images are self-hosted in the 
 | ------------------ | ------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
 | Build / dev        | Vite + React + TypeScript (strict)                                                                            | Fast SPA tooling; the timeline is one big interactive island, so SSR/islands add little. |
 | Styling            | Tailwind CSS + CSS variables                                                                                  | Fast iteration; per-period themes via variables.                                         |
-| UI animation       | Motion                                                                                                        | Declarative UI transitions. Not used for timeline pan/zoom.                              |
+| UI animation       | Motion (not installed yet: the Phase 3 drawer uses a CSS transition; revisit in Phase 5)                      | Declarative UI transitions. Not used for timeline pan/zoom.                              |
 | Timeline maths     | `d3-scale`, `d3-zoom`, plus `d3-selection` (d3-zoom's own dependency, used to attach it; approved in Phase 2) | Proven Ma → px mapping and zoom/pan transforms without the whole of D3.                  |
 | Timeline rendering | DOM + SVG; Canvas only if profiling shows need (> ~500 visible items)                                         | Accessibility, styling, focusable markers.                                               |
 | Timeline updates   | `requestAnimationFrame` + CSS/SVG transforms; no React render per frame                                       | 60 fps target.                                                                           |
 | Virtualisation     | Render markers in viewport ± buffer                                                                           | Keeps the DOM small as data grows.                                                       |
-| State              | Zustand for UI state; URL query string is the source of truth for filters and selection                       | Shareable links, simple store.                                                           |
-| Search             | MiniSearch, index built at build time                                                                         | Fuzzy, small, runs offline.                                                              |
+| State              | URL is the source of truth (see §7); React state for the rest. Zustand only once shared UI state needs it     | Shareable links; no store was needed in Phase 3.                                         |
+| Search             | MiniSearch, index built in the browser from the species index (move to build time if the data grows)          | Fuzzy, small, runs offline.                                                              |
 | Routing            | React Router: `/`, `/species/:slug`, `/about`, `/credits`                                                     | Deep links to species.                                                                   |
 | i18n               | i18next / react-i18next (EN, PL)                                                                              | Mature; scientific names never translated.                                               |
 | Data validation    | Zod (shared between scripts and app)                                                                          | Bad data fails the build.                                                                |
@@ -60,7 +60,7 @@ Feature folders under `src/features/{timeline,species,filters}`, shared primitiv
 - Geologic time (`data/geologic-time.json`, with ICS chart version recorded) and a lightweight species index load up front.
 - The species index is **generated at build time** by a Vite plugin (`speciesIndexPlugin` in `vite.config.ts`) as the virtual module `virtual:species-index`, so dev, build, tests and typecheck all see the same index without a generated file or pre-step. Per species it holds only what the timeline, filters and search need: slug, name, group and its ancestors, `isDinosaur`, diet, time range, periods, continents, `famous` (size class and thumbnails are added in Phases 3–4). The search index will be built the same way. (Decided in Phase 1 after the schema review; implemented in Phase 2. This replaces the earlier plan of a `scripts/build-data.ts` writing to `src/generated/`.)
 - Full species records are **not** bundled eagerly: a non-eager `import.meta.glob('/data/species/*.json')` gives each record its own chunk, fetched when its detail view opens. An eager glob of 100+ records would spend most of the JS budget on JSON.
-- Size class is derived at build time from `size.massKg` (falling back to `lengthM`) with thresholds to be added to `data/site.json` (Phase 3); it is never stored per species, because it would be an unsourced fact.
+- Size class is derived at build time from `size.lengthM` only (mass is missing or disputed for too many species) and added to the species index; it is never stored per species, because it would be an unsourced fact. The classes are display buckets approved by the owner in Phase 3 and live in `src/lib/size-class.ts`: small < 2 m, medium 2–6 m, large 6–12 m, giant ≥ 12 m. A species counts in every class its length range touches; no length means "size unknown". (Supersedes the earlier mass-first plan with thresholds in `data/site.json`.)
 - The browser never runs Zod: data is validated by `pnpm validate:data` before every build.
 - Images load lazily with placeholders.
 - Initial JS budget: ≤ 200 KB gzipped.
@@ -78,6 +78,13 @@ No cookies, no accounts, no tracking analytics. Optional `localStorage` for them
 - E2E tests run against `scripts/serve-pages.ts`, a tiny static server that behaves like Pages (no SPA fallback, `404.html` with status 404), so a missing per-route file fails the tests.
 - Deploys run only after the CI workflow succeeds on `main` (`workflow_run`), building the exact commit CI tested.
 - No per-PR preview deployments. If needed later (e.g. Phase 6 content review), add a preview host alongside Pages; the output is plain static files.
+
+### 7. Shareable view state (Phase 3)
+
+- The selected species is in the path, `/species/:slug`; filters and the visible time window are in the query string, e.g. `/species/allosaurus?diet=carnivore&group=theropoda&from=201.4&to=143.1`. Opening that link restores the same view. `src/lib/view-state.ts` parses and writes it; unknown values are dropped, and lists are written in a fixed order so equal views have equal URLs.
+- The timeline reports its window only when the view settles, and the page writes it with `replace`, so panning doesn't fill the history. Opening and closing a species pushes history entries, so Back closes the drawer.
+- `/` and `/species/:slug` render one page component that stays mounted, so the timeline keeps its place when the drawer opens and closes. Old `/?species=x` links redirect to `/species/x`.
+- The drawer is a native modal `<dialog>`: focus stays inside, Esc closes it, and focus returns to what opened it.
 
 ## Rejected alternatives
 
