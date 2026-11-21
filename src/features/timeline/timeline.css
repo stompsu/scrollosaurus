@@ -442,3 +442,49 @@
   padding-left: 1.25rem;
   list-style: disc;
 }
+
+/*
+ * Parallax background (Phase 5): sediment strata and plant silhouettes behind the lanes, moved by
+ * the engine at a fraction of the pan speed. The SVGs are masks, so they take the theme's text
+ * colour at low opacity. Hidden entirely when the user prefers reduced motion.
+ */
+.tl-parallax {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  /* Tint the background towards the period in view (set on <html> by the page). */
+  background: color-mix(in srgb, var(--sc-era, transparent) 7%, transparent);
+}
+.tl-parallax > div {
+  position: absolute;
+  background-color: var(--sc-text);
+  will-change: transform;
+}
+.tl[data-orientation='horizontal'] .tl-parallax-strata {
+  inset: 0 auto 0 0;
+  width: calc(100% + 480px);
+  opacity: 0.05;
+  mask: url('./assets/strata.svg') repeat 0 0 / 480px 240px;
+}
+.tl[data-orientation='horizontal'] .tl-parallax-plants {
+  inset: auto auto 0 0;
+  width: calc(100% + 600px);
+  height: 140px;
+  opacity: 0.07;
+  mask: url('./assets/plants.svg') repeat-x 0 100% / 600px 140px;
+}
+.tl[data-orientation='vertical'] .tl-parallax-strata {
+  inset: 0 0 auto 0;
+  height: calc(100% + 480px);
+  opacity: 0.05;
+  mask: url('./assets/strata-v.svg') repeat 0 0 / 240px 480px;
+}
+.tl[data-orientation='vertical'] .tl-parallax-plants {
+  display: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .tl-parallax > div {
+    display: none;
+  }
+}
