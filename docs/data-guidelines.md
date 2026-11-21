@@ -60,8 +60,14 @@ is missing. Scientific names are never translated.
    Fun facts are optional and sourced. A note that names a study ("Qiu et al. 2025") cites it in
    the same field's `sourceIds`. `discovery.describedBy` holds surnames joined with " & "; naming
    history goes in `discovery.note`.
-9. **Images.** List only the Commons file, its kind and alt text. Credits are fetched from Commons in
-   Phase 4; never type them by hand.
+9. **Images.** List only the Commons file (`File:…`, exact title), its kind and alt text that
+   describes what the image shows. Then run `pnpm images`: it reads the credit from the Commons
+   API, rejects licences outside PD / CC0 / CC BY / CC BY-SA, writes resized copies to
+   `public/images/` and the credit to `data/generated/images.json`. Commit both. Never type a
+   credit by hand; `pnpm images --refresh` re-reads every credit.
+   If the image needs context to be honest (a related species, a contested pose), add
+   `note.en`: it is shown under the image. The image kind (fossil, mounted skeleton, skull, life
+   reconstruction) is always shown.
 10. **Set `lastReviewed`** to today and run `pnpm validate:data`. It prints errors, warnings and
     the list of fields flagged as uncertain.
 

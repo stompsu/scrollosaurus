@@ -67,7 +67,13 @@
     }
   ],
   "famous": false,
-  "images": [],
+  "images": [
+    {
+      "commonsFile": "File:Gallimimus 0495.JPG",
+      "kind": "skeleton-mount",
+      "alt": { "en": "Mounted skeleton of Gallimimus bullatus in a museum." }
+    }
+  ],
   "uncertain": [
     {
       "field": "diet",

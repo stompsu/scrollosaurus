@@ -1,11 +1,12 @@
 /// <reference types="vitest/config" />
-import { readdirSync, readFileSync } from 'node:fs';
+import { existsSync, readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { fileURLToPath, URL } from 'node:url';
 import tailwindcss from '@tailwindcss/vite';
 import react from '@vitejs/plugin-react';
 import { defineConfig, loadEnv, type Plugin } from 'vite';
 import type { Groups } from './src/lib/schemas/groups';
+import type { ImageManifest } from './src/lib/schemas/images';
 import type { Species } from './src/lib/schemas/species';
 import { buildSpeciesIndex } from './src/lib/species-index.ts';
 
@@ -61,9 +62,13 @@ function speciesIndexPlugin(): Plugin {
       const files = readdirSync(speciesDir).filter((f) => f.endsWith('.json'));
       for (const f of files) this.addWatchFile(join(speciesDir, f));
       this.addWatchFile(join(dataDir, 'groups.json'));
+      const manifestPath = join(dataDir, 'generated', 'images.json');
+      if (existsSync(manifestPath)) this.addWatchFile(manifestPath);
       const species = files.map((f) => readJson(join(speciesDir, f)) as Species);
       const groups = readJson(join(dataDir, 'groups.json')) as Groups;
-      return `export const speciesIndex = ${JSON.stringify(buildSpeciesIndex(species, groups))};`;
+      const manifest = existsSync(manifestPath) ? (readJson(manifestPath) as ImageManifest) : {};
+      const index = buildSpeciesIndex(species, groups, manifest);
+      return `export const speciesIndex = ${JSON.stringify(index)};`;
     },
   };
 }

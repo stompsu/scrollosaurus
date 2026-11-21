@@ -67,7 +67,13 @@
     }
   ],
   "famous": false,
-  "images": [],
+  "images": [
+    {
+      "commonsFile": "File:Eoraptor Lunensis 20250105.jpg",
+      "kind": "skeleton-mount",
+      "alt": { "en": "Skeleton of Eoraptor lunensis shown in a museum exhibition." }
+    }
+  ],
   "uncertain": [
     {
       "field": "group",

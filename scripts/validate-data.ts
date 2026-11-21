@@ -8,10 +8,13 @@ import type { z } from 'zod';
 import { crossCheck, type SpeciesFile } from '../src/lib/schemas/cross-check.ts';
 import { geologicTimeSchema } from '../src/lib/schemas/geologic-time.ts';
 import { groupsSchema } from '../src/lib/schemas/groups.ts';
+import { checkImages } from '../src/lib/schemas/image-check.ts';
+import { imageManifestSchema } from '../src/lib/schemas/images.ts';
 import { siteSchema } from '../src/lib/schemas/site.ts';
 import { speciesSchema } from '../src/lib/schemas/species.ts';
 
 const DATA_DIR = join(import.meta.dirname, '..', 'data');
+const PUBLIC_DIR = join(import.meta.dirname, '..', 'public');
 const errors: string[] = [];
 
 async function parseFile<T extends z.ZodType>(
@@ -66,6 +69,36 @@ async function main(): Promise<void> {
     const result = crossCheck({ geologicTime, groups, site, species });
     errors.push(...result.errors);
     for (const w of result.warnings) console.warn(`! ${w}`);
+  }
+
+  // Every listed image needs a generated credit and its files (ADR-0002 §4, §7).
+  const listed = new Map<string, string[]>();
+  for (const { data } of species) {
+    for (const img of data.images) {
+      listed.set(img.commonsFile, [...(listed.get(img.commonsFile) ?? []), data.slug]);
+    }
+  }
+  const withoutImage = species.filter(({ data }) => data.images.length === 0).map((s) => s.name);
+  if (listed.size > 0) {
+    const manifest = await parseFile(imageManifestSchema, join('generated', 'images.json'));
+    if (manifest) {
+      const publicFiles = new Set(
+        (await readdir(join(PUBLIC_DIR, 'images')).catch(() => [] as string[])).map(
+          (f) => `images/${f}`,
+        ),
+      );
+      const result = checkImages({ listed, manifest, publicFiles });
+      errors.push(...result.errors);
+      for (const w of result.warnings) console.warn(`! ${w}`);
+      if (result.errors.length === 0) {
+        console.log(`✓ images: ${String(listed.size)} credited, with all derivative files`);
+      }
+    }
+  }
+  if (withoutImage.length > 0) {
+    console.warn(
+      `! ${String(withoutImage.length)} species have no image: ${withoutImage.join(', ')}`,
+    );
   }
 
   // The fields curators flagged; this list feeds the phase uncertainties report.

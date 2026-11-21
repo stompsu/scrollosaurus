@@ -66,7 +66,15 @@
     }
   ],
   "famous": true,
-  "images": [],
+  "images": [
+    {
+      "commonsFile": "File:Brachiosaurus mount.jpg",
+      "kind": "skeleton-mount",
+      "alt": {
+        "en": "Mounted skeleton of Brachiosaurus altithorax standing outdoors outside a museum, with its long neck raised."
+      }
+    }
+  ],
   "sources": [
     {
       "id": "taylor-2009",

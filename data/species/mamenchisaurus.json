@@ -57,7 +57,18 @@
     }
   ],
   "famous": false,
-  "images": [],
+  "images": [
+    {
+      "commonsFile": "File:Mamenchisaurus hochuanensis skeleton in Melbourne.jpg",
+      "kind": "skeleton-mount",
+      "alt": {
+        "en": "Mounted skeleton of the long-necked sauropod Mamenchisaurus hochuanensis, a related species, in a museum exhibit with other dinosaur skeletons behind it."
+      },
+      "note": {
+        "en": "This is Mamenchisaurus hochuanensis, a related species: no freely licensed image of M. constructus was found."
+      }
+    }
+  ],
   "uncertain": [
     {
       "field": "size.lengthM",

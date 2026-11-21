@@ -66,7 +66,15 @@
     }
   ],
   "famous": true,
-  "images": [],
+  "images": [
+    {
+      "commonsFile": "File:Velociraptor mongoliensis AMNH 6515.jpg",
+      "kind": "skull",
+      "alt": {
+        "en": "Skull of Velociraptor mongoliensis, specimen AMNH 6515, at the American Museum of Natural History."
+      }
+    }
+  ],
   "sources": [
     {
       "id": "turner-2007",

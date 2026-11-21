@@ -66,7 +66,13 @@
     }
   ],
   "famous": false,
-  "images": [],
+  "images": [
+    {
+      "commonsFile": "File:Maiasaura MOR.jpg",
+      "kind": "skeleton-mount",
+      "alt": { "en": "Mounted skeleton of Maiasaura on display in a museum." }
+    }
+  ],
   "sources": [
     {
       "id": "nhm-maiasaura",

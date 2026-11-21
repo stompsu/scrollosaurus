@@ -80,7 +80,15 @@
     }
   ],
   "famous": false,
-  "images": [],
+  "images": [
+    {
+      "commonsFile": "File:M zhaoianus.png",
+      "kind": "life-reconstruction",
+      "alt": {
+        "en": "Life reconstruction of Microraptor zhaoianus, a small feathered dinosaur with long feathers on both its arms and legs."
+      }
+    }
+  ],
   "uncertain": [
     {
       "field": "taxonomy",

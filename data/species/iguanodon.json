@@ -84,7 +84,15 @@
     }
   ],
   "famous": false,
-  "images": [],
+  "images": [
+    {
+      "commonsFile": "File:Iguanodon de Bernissart IRSNB 01.JPG",
+      "kind": "fossil",
+      "alt": {
+        "en": "Fossil skeleton of Iguanodon bernissartensis from Bernissart, displayed in a four-legged pose in a museum."
+      }
+    }
+  ],
   "uncertain": [
     {
       "field": "timeRange",

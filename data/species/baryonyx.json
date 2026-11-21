@@ -67,7 +67,13 @@
     }
   ],
   "famous": false,
-  "images": [],
+  "images": [
+    {
+      "commonsFile": "File:Baryonyx NHM.jpg",
+      "kind": "skeleton-mount",
+      "alt": { "en": "Mounted skeleton of Baryonyx in a museum, seen from the side." }
+    }
+  ],
   "uncertain": [
     {
       "field": "locations",

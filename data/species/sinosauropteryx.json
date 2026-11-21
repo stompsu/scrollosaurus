@@ -76,7 +76,15 @@
     }
   ],
   "famous": false,
-  "images": [],
+  "images": [
+    {
+      "commonsFile": "File:Sinosauropteryx GMV 2124.jpg",
+      "kind": "fossil",
+      "alt": {
+        "en": "Cast of the Sinosauropteryx fossil GMV 2124 from the Yixian Formation of Liaoning, China, at the State Museum of Natural History Karlsruhe."
+      }
+    }
+  ],
   "uncertain": [
     {
       "field": "group",

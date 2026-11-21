@@ -58,7 +58,15 @@
     "sourceIds": ["nhm-parasaurolophus", "pbdb-occurrences"]
   },
   "famous": true,
-  "images": [],
+  "images": [
+    {
+      "commonsFile": "File:Parasaurolophus walkeri.jpg",
+      "kind": "fossil",
+      "alt": {
+        "en": "Incomplete type specimen of Parasaurolophus walkeri in the Royal Ontario Museum."
+      }
+    }
+  ],
   "uncertain": [
     {
       "field": "timeRange",

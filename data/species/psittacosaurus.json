@@ -67,7 +67,15 @@
     }
   ],
   "famous": false,
-  "images": [],
+  "images": [
+    {
+      "commonsFile": "File:Psittacosaurus mongoliensis AMNH 6253.jpg",
+      "kind": "fossil",
+      "alt": {
+        "en": "Fossil skeleton of Psittacosaurus mongoliensis, the holotype of the synonym Protiguanodon, with gastroliths in its stomach area."
+      }
+    }
+  ],
   "uncertain": [
     {
       "field": "timeRange",

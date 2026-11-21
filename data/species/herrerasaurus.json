@@ -61,7 +61,13 @@
     }
   ],
   "famous": true,
-  "images": [],
+  "images": [
+    {
+      "commonsFile": "File:FMNH Herrerasaurus skeleton.jpg",
+      "kind": "skeleton-mount",
+      "alt": { "en": "Mounted skeleton of Herrerasaurus in a museum." }
+    }
+  ],
   "uncertain": [
     {
       "field": "group",
