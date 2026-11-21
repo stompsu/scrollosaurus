@@ -9,6 +9,7 @@ import {
 } from 'react';
 import { Link } from 'react-router';
 import { DietBadge, NotADinosaurTag } from '@/components/ui/DietBadge';
+import { ImageCredit, SpeciesPicture } from '@/components/ui/SpeciesPicture';
 import { formatMa, formatMaWithUncertainty } from '@/lib/geologic-time';
 import { groupName } from '@/lib/groups';
 import { CONTINENT_LABELS, countryName, formatMass, formatRange } from '@/lib/labels';
@@ -172,10 +173,25 @@ export function SpeciesDrawer({
             </div>
           )}
 
-          <div className="sc-drawer-image" aria-hidden="true">
-            <span>{item.genus.charAt(0)}</span>
-          </div>
-          <p className="text-text-muted text-xs">No image yet.</p>
+          {item.images[0] ? (
+            <figure className="sc-drawer-figure">
+              <SpeciesPicture
+                image={item.images[0]}
+                sizes="(max-width: 40rem) 100vw, 34rem"
+                loading="eager"
+              />
+              <figcaption>
+                <ImageCredit image={item.images[0]} />
+              </figcaption>
+            </figure>
+          ) : (
+            <>
+              <div className="sc-drawer-image" aria-hidden="true">
+                <span>{item.genus.charAt(0)}</span>
+              </div>
+              <p className="text-text-muted text-xs">No image yet.</p>
+            </>
+          )}
 
           {load.status === 'loading' && (
             <p className="text-text-muted" role="status">

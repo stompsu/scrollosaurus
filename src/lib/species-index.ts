@@ -1,7 +1,28 @@
 import type { Groups } from './schemas/groups';
+import type { ImageManifest, LicenseFamily } from './schemas/images';
 import type { Continent, Diet, PeriodId, Species } from './schemas/species';
 // Runtime import with an extension: vite.config.ts loads this file through Node.
 import { sizeClassesFor, type SizeClass } from './size-class.ts';
+
+/** An image ready to show: alt text, derivative files and its full credit. */
+export interface SpeciesImage {
+  commonsFile: string;
+  kind: Species['images'][number]['kind'];
+  alt: string;
+  /** Path under the site root without width and extension, e.g. "images/1a2b3c4d5e6f". */
+  basename: string;
+  widths: number[];
+  /** Size of the largest derivative, px (for the aspect ratio). */
+  width: number;
+  height: number;
+  placeholder: string;
+  author: string;
+  attribution?: string;
+  license: string;
+  licenseFamily: LicenseFamily;
+  licenseUrl?: string;
+  sourceUrl: string;
+}
 
 /**
  * The compact per-species record the timeline, filters and search need. Built at build time from
@@ -33,6 +54,8 @@ export interface SpeciesIndexEntry {
   lengthM?: [number, number];
   /** Size classes the length range touches; empty when the length is unknown. */
   sizeClasses: SizeClass[];
+  /** Credited images, first one first; empty until one is chosen. */
+  images: SpeciesImage[];
 }
 
 export function groupPath(groups: Groups, id: string): string[] {
@@ -47,7 +70,11 @@ export function groupPath(groups: Groups, id: string): string[] {
 }
 
 /** Species sorted oldest first (then by name), so consumers get a stable order. */
-export function buildSpeciesIndex(species: Species[], groups: Groups): SpeciesIndexEntry[] {
+export function buildSpeciesIndex(
+  species: Species[],
+  groups: Groups,
+  manifest: ImageManifest = {},
+): SpeciesIndexEntry[] {
   return species
     .map((s): SpeciesIndexEntry => {
       const entry: SpeciesIndexEntry = {
@@ -66,6 +93,29 @@ export function buildSpeciesIndex(species: Species[], groups: Groups): SpeciesIn
         continents: [...new Set(s.locations.map((l) => l.continent))],
         famous: s.famous,
         sizeClasses: sizeClassesFor(s.size.lengthM?.value),
+        // Images without a credit are left out here; validate:data fails the build on them.
+        images: s.images.flatMap((img): SpeciesImage[] => {
+          const e = manifest[img.commonsFile];
+          if (!e) return [];
+          return [
+            {
+              commonsFile: img.commonsFile,
+              kind: img.kind,
+              alt: img.alt.en,
+              basename: e.basename,
+              widths: e.widths,
+              width: e.width,
+              height: e.height,
+              placeholder: e.placeholder,
+              author: e.author,
+              ...(e.attribution === undefined ? {} : { attribution: e.attribution }),
+              license: e.license,
+              licenseFamily: e.licenseFamily,
+              ...(e.licenseUrl === undefined ? {} : { licenseUrl: e.licenseUrl }),
+              sourceUrl: e.sourceUrl,
+            },
+          ];
+        }),
       };
       if (s.size.lengthM) entry.lengthM = s.size.lengthM.value;
       if (s.timeRange.startUncertaintyMa !== undefined) {

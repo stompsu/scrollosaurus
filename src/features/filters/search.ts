@@ -26,8 +26,20 @@ export function createSpeciesSearch(items: readonly SpeciesIndexEntry[]): Specie
   const index = new MiniSearch<SpeciesIndexEntry>({
     idField: 'slug',
     fields: ['genus', 'scientificName', 'nameMeaning', 'genusEndings'],
-    extractField: (doc, field) =>
-      field === 'genusEndings' ? genusEndings(doc.genus) : String(doc[field as keyof typeof doc]),
+    extractField: (doc, field) => {
+      switch (field) {
+        case 'genusEndings':
+          return genusEndings(doc.genus);
+        case 'genus':
+          return doc.genus;
+        case 'scientificName':
+          return doc.scientificName;
+        case 'nameMeaning':
+          return doc.nameMeaning;
+        default:
+          return doc.slug;
+      }
+    },
     searchOptions: {
       boost: { genus: 3, scientificName: 2, genusEndings: 0.5 },
       prefix: true,
