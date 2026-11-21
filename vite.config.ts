@@ -4,10 +4,10 @@ import { join } from 'node:path';
 import { fileURLToPath, URL } from 'node:url';
 import tailwindcss from '@tailwindcss/vite';
 import react from '@vitejs/plugin-react';
-import { defineConfig, type Plugin } from 'vite';
+import { defineConfig, loadEnv, type Plugin } from 'vite';
 import type { Groups } from './src/lib/schemas/groups';
 import type { Species } from './src/lib/schemas/species';
-import { buildSpeciesIndex } from './src/lib/species-index';
+import { buildSpeciesIndex } from './src/lib/species-index.ts';
 
 /** GitHub Pages serves the repo at /scrollosaurus/. Override with BASE_PATH (e.g. "/" for a custom domain). */
 const base = process.env.BASE_PATH ?? '/scrollosaurus/';
@@ -68,15 +68,32 @@ function speciesIndexPlugin(): Plugin {
   };
 }
 
-export default defineConfig({
-  base,
-  plugins: [react(), tailwindcss(), cspMeta(), speciesIndexPlugin()],
-  resolve: {
-    alias: { '@': fileURLToPath(new URL('./src', import.meta.url)) },
-  },
-  test: {
-    environment: 'jsdom',
-    include: ['tests/unit/**/*.test.{ts,tsx}'],
-    setupFiles: ['tests/unit/setup.ts'],
-  },
+/**
+ * The 300-item perf fixture must never ship: a build with VITE_PERF_FIXTURE set (from the shell or
+ * a .env file) fails unless it is the dedicated `--mode perf` build that `pnpm perf` runs.
+ */
+function assertNoPerfFixture(command: string, mode: string): void {
+  if (command !== 'build' || mode === 'perf') return;
+  if (loadEnv(mode, process.cwd(), 'VITE_PERF_FIXTURE').VITE_PERF_FIXTURE) {
+    throw new Error(
+      'VITE_PERF_FIXTURE is set: refusing to build the perf fixture into a normal build. ' +
+        'Unset it, or use `pnpm perf`.',
+    );
+  }
+}
+
+export default defineConfig(({ command, mode }) => {
+  assertNoPerfFixture(command, mode);
+  return {
+    base,
+    plugins: [react(), tailwindcss(), cspMeta(), speciesIndexPlugin()],
+    resolve: {
+      alias: { '@': fileURLToPath(new URL('./src', import.meta.url)) },
+    },
+    test: {
+      environment: 'jsdom',
+      include: ['tests/unit/**/*.test.{ts,tsx}'],
+      setupFiles: ['tests/unit/setup.ts'],
+    },
+  };
 });

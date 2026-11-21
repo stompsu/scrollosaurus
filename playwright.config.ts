@@ -31,7 +31,7 @@ export default defineConfig({
   // Builds the real static output and serves it the way GitHub Pages does (no SPA fallback).
   webServer: PERF
     ? {
-        command: `vite build --outDir ${PERF_DIST} --emptyOutDir && tsx scripts/serve-pages.ts`,
+        command: `vite build --mode perf --outDir ${PERF_DIST} --emptyOutDir && tsx scripts/serve-pages.ts`,
         url: `http://localhost:${PORT}${BASE_PATH}`,
         env: { PORT: String(PORT), BASE_PATH, DIST_DIR: PERF_DIST, VITE_PERF_FIXTURE: '1' },
         reuseExistingServer: false,
