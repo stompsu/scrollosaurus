@@ -28,7 +28,7 @@ Search, filtering and sorting run in the browser. Images are self-hosted in the 
 | ------------------ | ------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
 | Build / dev        | Vite + React + TypeScript (strict)                                                                            | Fast SPA tooling; the timeline is one big interactive island, so SSR/islands add little. |
 | Styling            | Tailwind CSS + CSS variables                                                                                  | Fast iteration; per-period themes via variables.                                         |
-| UI animation       | Motion (not installed yet: the Phase 3 drawer uses a CSS transition; revisit in Phase 5)                      | Declarative UI transitions. Not used for timeline pan/zoom.                              |
+| UI animation       | CSS transitions + React `<ViewTransition>`; **Motion not used** (decided in Phase 5)                          | Everything planned fits in CSS and the View Transitions API, with no added JS.           |
 | Timeline maths     | `d3-scale`, `d3-zoom`, plus `d3-selection` (d3-zoom's own dependency, used to attach it; approved in Phase 2) | Proven Ma → px mapping and zoom/pan transforms without the whole of D3.                  |
 | Timeline rendering | DOM + SVG; Canvas only if profiling shows need (> ~500 visible items)                                         | Accessibility, styling, focusable markers.                                               |
 | Timeline updates   | `requestAnimationFrame` + CSS/SVG transforms; no React render per frame                                       | 60 fps target.                                                                           |
@@ -80,10 +80,18 @@ No cookies, no accounts, no tracking analytics. Optional `localStorage` for them
 
 ### 7. Shareable view state (Phase 3)
 
+The guided tour's step is part of the view too: `?tour=N` (Phase 5). Each step is a separate history entry, so Back goes to the previous step.
+
 - The selected species is in the path, `/species/:slug`; filters and the visible time window are in the query string, e.g. `/species/allosaurus?diet=carnivore&group=theropoda&from=201.4&to=143.1`. Opening that link restores the same view. `src/lib/view-state.ts` parses and writes it; unknown values are dropped, and lists are written in a fixed order so equal views have equal URLs.
 - The timeline reports its window only when the view settles, and the page writes it with `replace`, so panning doesn't fill the history. Opening a species pushes a history entry, so Back closes the drawer; closing replaces that entry, so Back after closing doesn't reopen it. Back and Forward restore the window stored in each entry. Windows are clamped to the Mesozoic when read and written.
 - `/` and `/species/:slug` render one page component that stays mounted, so the timeline keeps its place when the drawer opens and closes. Old `/?species=x` links redirect to `/species/x`.
 - The drawer is a native modal `<dialog>`: focus stays inside, Esc closes it, and focus returns to what opened it.
+
+### 8. Phase 5 additions
+
+- **Fonts:** Fraunces and Atkinson Hyperlegible Next via `@fontsource-variable/*` (OFL), self-hosted and preloaded. Approved by the owner with the Phase 5 plan.
+- **Lighthouse:** `lighthouse` (dev dependency) runs from `scripts/lighthouse.ts` against the production build served like Pages, using Playwright's Chromium. `pnpm lighthouse` locally; a CI job fails if Performance is below 90 on `/`, a species page or `/credits` (owner decision: local and CI). Results in `docs/perf/lighthouse.md`.
+- **Story content:** `data/events.json`, `data/story.json` and `data/size-references.json`, validated with sources like species data; story views point at geologic units, unit boundaries or species, never hand-typed dates. The tour and the end-Cretaceous notes live in `src/features/story`.
 
 ## Rejected alternatives
 

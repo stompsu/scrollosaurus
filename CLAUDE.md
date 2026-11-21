@@ -37,7 +37,7 @@ Vite + React + TypeScript (strict), Tailwind CSS + CSS variables, Motion (UI onl
 ## Conventions
 
 - TypeScript `strict`; no `any` without a comment justifying it.
-- Feature folders: `src/features/{timeline,species,filters}`. Features don't import each other's internals; share via `src/lib` or `src/components/ui`.
+- Feature folders: `src/features/{timeline,species,filters,story}`. Features don't import each other's internals; share via `src/lib` or `src/components/ui`.
 - Named exports only. Default exports only for route components.
 - Timeline pan/zoom never re-renders React per frame: use `requestAnimationFrame` and CSS/SVG transforms.
 - Diet/group badges always pair icon + text, never colour alone. WCAG AA contrast.

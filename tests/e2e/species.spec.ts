@@ -196,7 +196,18 @@ test('Back and Forward restore the window stored in each entry', async ({ page }
       .toBeLessThan(0.15);
   };
   await page.goto('species/tyrannosaurus');
-  await expect(page).toHaveURL(/from=/);
+  await expect(drawer(page).getByRole('link', { name: 'Carnotaurus' })).toBeVisible();
+  // Wait until the stored window stops changing (fonts and layout settle after the first write).
+  let last = '';
+  await expect
+    .poll(async () => {
+      const now = JSON.stringify(urlWindow());
+      const stable = now === last;
+      last = now;
+      await page.waitForTimeout(300);
+      return stable;
+    })
+    .toBe(true);
   const trex = urlWindow();
   await drawer(page).getByRole('link', { name: 'Carnotaurus' }).click();
   // The settled window is written to the URL once the zoom to Carnotaurus finishes.
