@@ -34,6 +34,8 @@ export interface TimeWindow {
 export interface ViewState {
   filters: SpeciesFilters;
   window?: TimeWindow;
+  /** The guided tour's step, 1-based (`?tour=2`); absent when the tour is closed. */
+  tour?: number;
 }
 
 export const EMPTY_FILTERS: SpeciesFilters = {
@@ -86,11 +88,16 @@ export function parseViewState(params: URLSearchParams): ViewState {
   };
   const startMa = numberParam(params, 'from');
   const endMa = numberParam(params, 'to');
-  if (startMa !== undefined && endMa !== undefined) {
-    const window = clampWindow({ startMa, endMa });
-    if (window) return { filters, window };
-  }
-  return { filters };
+  const tourRaw = numberParam(params, 'tour');
+  const tour =
+    tourRaw !== undefined && Number.isInteger(tourRaw) && tourRaw >= 1 ? tourRaw : undefined;
+  const window =
+    startMa !== undefined && endMa !== undefined ? clampWindow({ startMa, endMa }) : undefined;
+  return {
+    filters,
+    ...(window ? { window } : {}),
+    ...(tour === undefined ? {} : { tour }),
+  };
 }
 
 const MESOZOIC = unitById('mesozoic');
@@ -108,7 +115,7 @@ function roundMa(ma: number): string {
 
 /** The query string for a view, in a fixed key order. Empty filters are left out. */
 export function serializeViewState(state: ViewState): URLSearchParams {
-  const { filters: f, window } = state;
+  const { filters: f, window, tour } = state;
   const params = new URLSearchParams();
   const list = (key: string, values: readonly string[]) => {
     if (values.length > 0) params.set(key, values.join(','));
@@ -120,6 +127,7 @@ export function serializeViewState(state: ViewState): URLSearchParams {
   list('continent', f.continents);
   if (f.famousOnly) params.set('famous', '1');
   if (f.nonDinosaurs) params.set('nondino', '1');
+  if (tour !== undefined) params.set('tour', String(tour));
   const clamped = window && clampWindow(window);
   if (clamped) {
     params.set('from', roundMa(clamped.startMa));

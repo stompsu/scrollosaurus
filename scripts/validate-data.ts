@@ -12,6 +12,12 @@ import { checkImages } from '../src/lib/schemas/image-check.ts';
 import { imageManifestSchema } from '../src/lib/schemas/images.ts';
 import { siteSchema } from '../src/lib/schemas/site.ts';
 import { speciesSchema } from '../src/lib/schemas/species.ts';
+import {
+  checkStories,
+  eventsSchema,
+  sizeReferencesSchema,
+  storySchema,
+} from '../src/lib/schemas/stories.ts';
 
 const DATA_DIR = join(import.meta.dirname, '..', 'data');
 const PUBLIC_DIR = join(import.meta.dirname, '..', 'public');
@@ -69,6 +75,26 @@ async function main(): Promise<void> {
     const result = crossCheck({ geologicTime, groups, site, species });
     errors.push(...result.errors);
     for (const w of result.warnings) console.warn(`! ${w}`);
+  }
+
+  // Timeline notes, the guided story and the size references (Phase 5).
+  const events = await parseFile(eventsSchema, 'events.json');
+  const story = await parseFile(storySchema, 'story.json');
+  const sizeReferences = await parseFile(sizeReferencesSchema, 'size-references.json');
+  if (geologicTime) {
+    const storyErrors = checkStories({
+      ...(events ? { events } : {}),
+      ...(story ? { story } : {}),
+      ...(sizeReferences ? { sizeReferences } : {}),
+      unitIds: new Set(geologicTime.units.map((u) => u.id)),
+      speciesSlugs: new Set(species.map((s) => s.data.slug)),
+    });
+    errors.push(...storyErrors);
+    if (events && story && sizeReferences && storyErrors.length === 0) {
+      console.log(
+        `✓ events (${String(events.events.length)}), story (${String(story.steps.length)} steps), size references (${String(sizeReferences.references.length)})`,
+      );
+    }
   }
 
   // Every listed image needs a generated credit and its files (ADR-0002 §4, §7).

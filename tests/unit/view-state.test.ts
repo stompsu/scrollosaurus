@@ -103,6 +103,13 @@ describe('view state in the URL', () => {
     expect(qs).toBe('?from=80&to=66');
   });
 
+  it('keeps the tour step, dropping nonsense', () => {
+    expect(parseViewState(new URLSearchParams('?tour=3')).tour).toBe(3);
+    expect(parseViewState(new URLSearchParams('?tour=0')).tour).toBeUndefined();
+    expect(parseViewState(new URLSearchParams('?tour=1.5')).tour).toBeUndefined();
+    expect(queryString(serializeViewState({ filters: EMPTY_FILTERS, tour: 2 }))).toBe('?tour=2');
+  });
+
   it('counts active filters, not the non-dinosaur layer', () => {
     expect(activeFilterCount(full.filters)).toBe(10);
     expect(activeFilterCount({ ...EMPTY_FILTERS, nonDinosaurs: true })).toBe(0);

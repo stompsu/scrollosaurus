@@ -45,6 +45,36 @@ function cspMeta(): Plugin {
 }
 
 /**
+ * Preloads the Latin subsets of the two self-hosted fonts, so text is laid out in its final font
+ * on first paint instead of shifting when the fonts swap in (layout shift, Lighthouse CLS).
+ * Build-only: the hashed font files exist only in the bundle.
+ */
+function preloadFonts(): Plugin {
+  const wanted = /(fraunces|atkinson-hyperlegible-next)-latin-wght-normal-.*\.woff2$/;
+  return {
+    name: 'scrollosaurus:preload-fonts',
+    apply: 'build',
+    transformIndexHtml: {
+      order: 'post',
+      handler: (_html, ctx) =>
+        Object.keys(ctx.bundle ?? {})
+          .filter((file) => wanted.test(file))
+          .map((file) => ({
+            tag: 'link',
+            attrs: {
+              rel: 'preload',
+              as: 'font',
+              type: 'font/woff2',
+              href: `${base}${file}`,
+              crossorigin: '',
+            },
+            injectTo: 'head' as const,
+          })),
+    },
+  };
+}
+
+/**
  * Serves `virtual:species-index`: the compact species index, built from data/ on every dev load and
  * build. The data is validated by `pnpm validate:data` before each build; this plugin only reshapes.
  */
@@ -91,7 +121,7 @@ export default defineConfig(({ command, mode }) => {
   assertNoPerfFixture(command, mode);
   return {
     base,
-    plugins: [react(), tailwindcss(), cspMeta(), speciesIndexPlugin()],
+    plugins: [react(), tailwindcss(), cspMeta(), preloadFonts(), speciesIndexPlugin()],
     resolve: {
       alias: { '@': fileURLToPath(new URL('./src', import.meta.url)) },
     },

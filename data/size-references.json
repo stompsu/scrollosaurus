@@ -1,0 +1,40 @@
+{
+  "references": [
+    {
+      "id": "person",
+      "label": { "en": "Adult human" },
+      "lengthM": 1.8,
+      "heightM": 1.8,
+      "basis": "reference",
+      "note": { "en": "A standard 1.8 m adult, used as a reference figure" }
+    },
+    {
+      "id": "school-bus",
+      "label": { "en": "School bus" },
+      "lengthM": 12.2,
+      "heightM": 3.25,
+      "basis": "sourced",
+      "note": {
+        "en": "Length: 40 ft (12.2 m), the maximum length allowed for a school bus in Pennsylvania (67 Pa. Code § 171.63); some states allow up to 45 ft. Height: 128 in (3.25 m), the top of the 122–128 in overall height Blue Bird gives for its full-size Vision Diesel bus."
+      },
+      "sourceIds": ["pa-code-171-63", "blue-bird-vision-diesel"]
+    }
+  ],
+  "sources": [
+    {
+      "id": "pa-code-171-63",
+      "title": "67 Pa. Code § 171.63. Overall length",
+      "publisher": "Commonwealth of Pennsylvania (Pennsylvania Code and Bulletin)",
+      "url": "https://www.pacodeandbulletin.gov/Display/pacode?file=/secure/pacode/data/067/chapter171/s171.63.html",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "blue-bird-vision-diesel",
+      "title": "Vision Diesel",
+      "publisher": "Blue Bird Corporation",
+      "url": "https://www.blue-bird.com/vision-diesel/",
+      "accessed": "2026-11-21"
+    }
+  ],
+  "lastReviewed": "2026-11-21"
+}

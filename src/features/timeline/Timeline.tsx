@@ -312,6 +312,7 @@ export function Timeline({
   const gridLayerRef = useRef<HTMLDivElement>(null);
   const crossLayerRef = useRef<HTMLDivElement>(null);
   const markerLayerRef = useRef<HTMLDivElement>(null);
+  const parallaxRef = useRef<HTMLDivElement>(null);
   const engineRef = useRef<TimelineEngine | null>(null);
 
   const [snap, setSnap] = useState<TimelineSnapshot>({
@@ -370,8 +371,17 @@ export function Timeline({
     if (!viewport || !laneArea || !bandLayer || !gridLayer || !crossLayer || !markerLayer) {
       return undefined;
     }
+    const parallaxLayers = [
+      ...(parallaxRef.current?.querySelectorAll<HTMLElement>('[data-factor]') ?? []),
+    ];
     const engine = new TimelineEngine(
-      { viewport, laneArea, timeLayers: [bandLayer, gridLayer, markerLayer], crossLayer },
+      {
+        viewport,
+        laneArea,
+        timeLayers: [bandLayer, gridLayer, markerLayer],
+        crossLayer,
+        parallaxLayers,
+      },
       { domain: DOMAIN, orientation: snap.orientation, onCommit: setSnap },
     );
     engineRef.current = engine;
@@ -643,6 +653,11 @@ export function Timeline({
           </div>
         </div>
         <div ref={laneAreaRef} className="tl-lanes">
+          {/* Decorative parallax: sediment strata and plants, slower than the timeline. */}
+          <div ref={parallaxRef} className="tl-parallax" aria-hidden="true">
+            <div className="tl-parallax-strata" data-factor="0.25" data-tile="480" />
+            <div className="tl-parallax-plants" data-factor="0.55" data-tile="600" />
+          </div>
           <div ref={gridLayerRef} className="tl-time-layer" aria-hidden="true">
             {ticks.map(({ boundary }) => (
               <div

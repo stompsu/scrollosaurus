@@ -1,5 +1,6 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, ViewTransition } from 'react';
 import { Link, NavLink, Outlet, useLocation } from 'react-router';
+import { ThemeToggle } from '@/components/ui/ThemeToggle';
 import { geologicTime } from '@/lib/geologic-time';
 
 const navClassFor = (active: boolean) =>
@@ -29,7 +30,8 @@ function useFocusMainOnNavigate() {
 export function Layout() {
   const { chart } = geologicTime;
   const mainRef = useFocusMainOnNavigate();
-  const onTimeline = pageOf(useLocation().pathname) === '/';
+  const page = pageOf(useLocation().pathname);
+  const onTimeline = page === '/';
   return (
     <div className="mx-auto flex min-h-screen max-w-7xl flex-col gap-6 px-4 py-6">
       <a
@@ -42,33 +44,39 @@ export function Layout() {
         <Link to="/" className="font-display py-1 text-3xl">
           Scrollosaurus
         </Link>
-        <nav aria-label="Main">
-          <ul className="flex gap-4 text-sm">
-            <li>
-              {/* A plain Link: NavLink drops aria-current when "/" isn't an exact match. */}
-              <Link
-                to="/"
-                className={navClassFor(onTimeline)}
-                aria-current={onTimeline ? 'page' : undefined}
-              >
-                Timeline
-              </Link>
-            </li>
-            <li>
-              <NavLink to="/about" className={navClass}>
-                About
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="/credits" className={navClass}>
-                Credits
-              </NavLink>
-            </li>
-          </ul>
-        </nav>
+        <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
+          <nav aria-label="Main">
+            <ul className="flex gap-4 text-sm">
+              <li>
+                {/* A plain Link: NavLink drops aria-current when "/" isn't an exact match. */}
+                <Link
+                  to="/"
+                  className={navClassFor(onTimeline)}
+                  aria-current={onTimeline ? 'page' : undefined}
+                >
+                  Timeline
+                </Link>
+              </li>
+              <li>
+                <NavLink to="/about" className={navClass}>
+                  About
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/credits" className={navClass}>
+                  Credits
+                </NavLink>
+              </li>
+            </ul>
+          </nav>
+          <ThemeToggle />
+        </div>
       </header>
       <main id="main" ref={mainRef} tabIndex={-1} className="flex-1 focus:outline-none">
-        <Outlet />
+        {/* Page changes cross-fade; updates within a page (the species drawer) don't. */}
+        <ViewTransition key={page} update="none">
+          <Outlet />
+        </ViewTransition>
       </main>
       <footer className="text-text-muted text-xs">
         Geological time: {chart.name} {chart.version}, {chart.publisher} ({chart.license}).

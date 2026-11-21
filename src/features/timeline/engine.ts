@@ -58,6 +58,12 @@ export interface EngineElements {
   timeLayers: HTMLElement[];
   /** Layer translated across the time axis to scroll lanes. */
   crossLayer: HTMLElement;
+  /**
+   * Decorative background layers that move at a fraction of the pan speed (parallax). Each has
+   * `data-factor` (0–1) and `data-tile` (the repeat length of its pattern, px), so it only ever
+   * moves within one tile. Hidden by CSS when the user prefers reduced motion.
+   */
+  parallaxLayers?: HTMLElement[];
 }
 
 interface MarkerNode {
@@ -149,6 +155,9 @@ export class TimelineEngine {
   /** An animated zoomTo/zoomBy is running; zoom-level commits wait for its final flush. */
   private tweening = false;
 
+  /** Parallax layers with their settings, read once from the data attributes. */
+  private readonly parallax: { el: HTMLElement; tile: number; factor: number }[];
+
   constructor(
     els: EngineElements,
     options: {
@@ -158,6 +167,11 @@ export class TimelineEngine {
     },
   ) {
     this.els = els;
+    this.parallax = (els.parallaxLayers ?? []).map((el) => ({
+      el,
+      tile: num(el.dataset.tile) || 1,
+      factor: num(el.dataset.factor),
+    }));
     this.domain = options.domain;
     this.orientation = options.orientation;
     this.onCommit = options.onCommit;
@@ -332,6 +346,10 @@ export class TimelineEngine {
     this.els.crossLayer.style.transform = h
       ? `translate3d(0,${-this.cross}px,0)`
       : `translate3d(${-this.cross}px,0,0)`;
+    for (const { el, tile, factor } of this.parallax) {
+      const shift = -(((-offset * factor) % tile) + tile) % tile;
+      el.style.transform = h ? `translate3d(${shift}px,0,0)` : `translate3d(0,${shift}px,0)`;
+    }
 
     // Panning only moves the layers above. Positions and sizes inside them change only with k.
     if (k !== this.appliedK || this.length !== this.appliedLength) {

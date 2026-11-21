@@ -82,3 +82,8 @@ is missing. Scientific names are never translated.
   in the filter, even if it has a wingspan or mass. Don't add a length just to fill the filter.
 - **Search** matches the genus (including any part of it), the full scientific name and
   `nameMeaning`, so keep `nameMeaning.text.en` a plain translation ("tyrant lizard").
+- **Tour, timeline notes and size references** live in `data/story.json`, `data/events.json` and
+  `data/size-references.json`. Every claim cites a source listed in the same file; a step's view
+  is a geologic unit, the boundary at a unit's base, or a species, never a typed date. The person
+  (1.8 m) is a reference figure (`basis: "reference"`); anything real-world, like the school bus,
+  needs sources and a note saying what the number is (here, a legal maximum length).

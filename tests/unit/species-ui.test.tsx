@@ -169,18 +169,20 @@ describe('<SpeciesDrawer />', () => {
     expect(dialog).toHaveTextContent('Ji & Ji, 1996');
     expect(dialog).toHaveTextContent('China (Asia), Yixian Formation');
     expect(dialog).toHaveTextContent('Uncertain:');
-    expect(
-      within(dialog).getByRole('img', { name: /Length of Sinosauropteryx, 1.1 m/ }),
-    ).toBeInTheDocument();
+    const scene = within(dialog).getByRole('img', { name: 'Size compared with a person' });
+    expect(scene).toHaveAccessibleDescription(/Sinosauropteryx, length 1\.1 m/);
+    expect(within(dialog).getByTestId('size-comparison')).toHaveTextContent(
+      'generic small feathered theropod dinosaur',
+    );
     const refs = within(dialog).getAllByRole('link', { name: /^Source \d+$/ });
     expect(refs.length).toBeGreaterThan(5);
     expect(within(dialog).getByRole('heading', { name: 'Sources' })).toBeInTheDocument();
   });
 
-  it('lists contemporaries as links, with the same-place caveat', () => {
+  it('lists contemporaries as links, with the same-place caveat', async () => {
     renderDrawer('tyrannosaurus');
     const dialog = screen.getByTestId('species-drawer');
-    expect(within(dialog).getByRole('link', { name: 'Triceratops' })).toHaveAttribute(
+    expect(await within(dialog).findByRole('link', { name: 'Triceratops' })).toHaveAttribute(
       'href',
       '/species/triceratops',
     );
