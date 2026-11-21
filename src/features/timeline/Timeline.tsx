@@ -1,4 +1,5 @@
 import {
+  memo,
   useId,
   useImperativeHandle,
   useLayoutEffect,
@@ -128,7 +129,14 @@ function layoutBands(kLevel: number, pxPerMa: number) {
       // Vertical bands use rotated text, so the room is the band's length either way.
       const size = (unit.baseMa - unit.topMa) * pxPerMa;
       const label = pickLabel(bandLabelCandidates(unit), size - 12, bandMeasure);
-      return { unit, rank, label, period: periodOf(unit), alt: i % 2 === 1 };
+      return {
+        unit,
+        rank,
+        label,
+        labelSize: label ? bandMeasure(label) + 12 : 0,
+        period: periodOf(unit),
+        alt: i % 2 === 1,
+      };
     }),
   );
 }
@@ -156,6 +164,62 @@ function clampToDomain(ma: number): number {
   return Math.min(DOMAIN.startMa, Math.max(DOMAIN.endMa, ma));
 }
 
+interface MarkerProps {
+  item: SpeciesIndexEntry;
+  /** Lane offset across the time axis, px. */
+  cross: number;
+  horizontal: boolean;
+  highlighted: boolean;
+  endAnchored: boolean;
+  tabbable: boolean;
+  onSelect: (slug: string) => void;
+}
+
+/**
+ * One species range marker. Memoised, so a commit only re-renders markers whose lane, highlight or
+ * tab stop changed. Its time-axis position and bar length are written by the engine, not React.
+ */
+const Marker = memo(function Marker({
+  item,
+  cross,
+  horizontal,
+  highlighted,
+  endAnchored,
+  tabbable,
+  onSelect,
+}: MarkerProps) {
+  return (
+    <button
+      type="button"
+      className={`tl-marker${item.famous ? ' tl-marker--famous' : ''}${
+        endAnchored ? ' tl-marker--end' : ''
+      }`}
+      tabIndex={tabbable ? 0 : -1}
+      style={horizontal ? { top: cross } : { left: cross }}
+      aria-label={markerName(item)}
+      aria-current={highlighted ? 'true' : undefined}
+      data-slug={item.slug}
+      data-anchor={endAnchored ? 'end' : undefined}
+      data-start-ma={item.startMa}
+      data-end-ma={item.endMa}
+      data-start-uncertainty-ma={item.startUncertaintyMa}
+      data-end-uncertainty-ma={item.endUncertaintyMa}
+      onClick={() => {
+        onSelect(item.slug);
+      }}
+    >
+      <span className="tl-label">
+        <i>{item.genus}</i>
+        {!item.isDinosaur && <span className="tl-tag">{NOT_A_DINOSAUR}</span>}
+      </span>
+      <span className="tl-bar">
+        {item.startUncertaintyMa !== undefined && <span className="tl-whisker tl-whisker--start" />}
+        {item.endUncertaintyMa !== undefined && <span className="tl-whisker tl-whisker--end" />}
+      </span>
+    </button>
+  );
+});
+
 /**
  * The interactive Mesozoic timeline: period, epoch and stage bands with species range markers,
  * zoomed and panned with d3-zoom. Pan and zoom frames are written straight to the DOM by
@@ -182,6 +246,7 @@ export function Timeline({ items, filters, onSelect, highlightedSlug, ref }: Tim
     offset: 0,
     length: 1000,
     crossLength: 0,
+    cross: 0,
     orientation,
   });
   const [focusedSlug, setFocusedSlug] = useState<string | null>(null);
@@ -278,9 +343,18 @@ export function Timeline({ items, filters, onSelect, highlightedSlug, ref }: Tim
   const laneSize = horizontal ? LANE_SIZE_PX.horizontal : LANE_SIZE_PX.vertical;
   const crossExtent = packing.laneCount * laneSize + 2 * LANE_PADDING_PX;
 
+  // Virtualised on both axes: the time window and the visible lanes, each ± one viewport.
   const buffered = bufferedWindow(win, 1);
+  const crossView = snap.crossLength > 0 ? snap.crossLength : 600;
+  const laneInView = (slug: string) => {
+    const start = LANE_PADDING_PX + (packing.laneOf.get(slug) ?? 0) * laneSize;
+    return start + laneSize >= snap.cross - crossView && start <= snap.cross + 2 * crossView;
+  };
   const rendered = shown.filter(
-    (it) => overlapsWindow(it, buffered) || it.slug === highlightedSlug || it.slug === focusedSlug,
+    (it) =>
+      (overlapsWindow(it, buffered) && laneInView(it.slug)) ||
+      it.slug === highlightedSlug ||
+      it.slug === focusedSlug,
   );
   const inView = shown.filter((it) => overlapsWindow(it, win));
 
@@ -383,7 +457,7 @@ export function Timeline({ items, filters, onSelect, highlightedSlug, ref }: Tim
       >
         <div className="tl-bands" aria-hidden="true">
           <div ref={bandLayerRef} className="tl-time-layer">
-            {bands.map(({ unit, rank, label, period, alt }) => (
+            {bands.map(({ unit, rank, label, labelSize, period, alt }) => (
               <div
                 key={unit.id}
                 className={`tl-band tl-band--${rank}${alt ? ' tl-band--alt' : ''}`}
@@ -391,6 +465,7 @@ export function Timeline({ items, filters, onSelect, highlightedSlug, ref }: Tim
                 data-testid={`band-${unit.id}`}
                 data-band-start-ma={unit.baseMa}
                 data-band-end-ma={unit.topMa}
+                data-label-size={labelSize}
               >
                 {label && <span className="tl-band-label">{label}</span>}
               </div>
@@ -421,49 +496,19 @@ export function Timeline({ items, filters, onSelect, highlightedSlug, ref }: Tim
           </div>
           <div ref={crossLayerRef} className="tl-cross-layer">
             <div ref={markerLayerRef} className="tl-time-layer" onFocus={onFocusMarker}>
-              {rendered.map((it) => {
-                const lane = packing.laneOf.get(it.slug) ?? 0;
-                const cross = LANE_PADDING_PX + lane * laneSize;
-                const highlighted = it.slug === highlightedSlug;
-                const endAnchored = packing.endAnchored.has(it.slug);
-                // Tab walks the markers in view; buffered off-screen ones are reachable by panning.
-                const tabbable = it.slug === focusedSlug || overlapsWindow(it, win);
-                return (
-                  <button
-                    key={it.slug}
-                    type="button"
-                    className={`tl-marker${it.famous ? ' tl-marker--famous' : ''}${
-                      endAnchored ? ' tl-marker--end' : ''
-                    }`}
-                    tabIndex={tabbable ? 0 : -1}
-                    data-anchor={endAnchored ? 'end' : undefined}
-                    style={horizontal ? { top: cross } : { left: cross }}
-                    aria-label={markerName(it)}
-                    aria-current={highlighted ? 'true' : undefined}
-                    data-slug={it.slug}
-                    data-start-ma={it.startMa}
-                    data-end-ma={it.endMa}
-                    data-start-uncertainty-ma={it.startUncertaintyMa}
-                    data-end-uncertainty-ma={it.endUncertaintyMa}
-                    onClick={() => {
-                      onSelect(it.slug);
-                    }}
-                  >
-                    <span className="tl-label">
-                      <i>{it.genus}</i>
-                      {!it.isDinosaur && <span className="tl-tag">{NOT_A_DINOSAUR}</span>}
-                    </span>
-                    <span className="tl-bar">
-                      {it.startUncertaintyMa !== undefined && (
-                        <span className="tl-whisker tl-whisker--start" />
-                      )}
-                      {it.endUncertaintyMa !== undefined && (
-                        <span className="tl-whisker tl-whisker--end" />
-                      )}
-                    </span>
-                  </button>
-                );
-              })}
+              {rendered.map((it) => (
+                <Marker
+                  key={it.slug}
+                  item={it}
+                  cross={LANE_PADDING_PX + (packing.laneOf.get(it.slug) ?? 0) * laneSize}
+                  horizontal={horizontal}
+                  highlighted={it.slug === highlightedSlug}
+                  endAnchored={packing.endAnchored.has(it.slug)}
+                  // Tab walks the markers in view; buffered off-screen ones are reached by panning.
+                  tabbable={it.slug === focusedSlug || overlapsWindow(it, win)}
+                  onSelect={onSelect}
+                />
+              ))}
             </div>
           </div>
         </div>

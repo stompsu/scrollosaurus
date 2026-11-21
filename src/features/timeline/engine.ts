@@ -39,6 +39,8 @@ export type Orientation = 'horizontal' | 'vertical';
 export interface TimelineSnapshot extends AxisTransform {
   length: number;
   crossLength: number;
+  /** How far the lanes are scrolled, px. */
+  cross: number;
   orientation: Orientation;
 }
 
@@ -208,6 +210,7 @@ export class TimelineEngine {
       offset: this.t.offset,
       length: this.length,
       crossLength: this.crossLength,
+      cross: this.cross,
       orientation: this.orientation,
     };
   }
@@ -275,7 +278,8 @@ export class TimelineEngine {
         this.bands.push({
           el,
           label,
-          labelSize: label ? (this.horizontal ? label.offsetWidth : label.offsetHeight) : 0,
+          // Measured with canvas at render time, so no layout read here.
+          labelSize: num(el.dataset.labelSize),
           shift: 0,
           s: s(num(el.dataset.bandStartMa)),
           e: s(num(el.dataset.bandEndMa)),
@@ -389,7 +393,11 @@ export class TimelineEngine {
     }
     const win = visibleWindow(this.scale, this.t, this.length);
     const centre = (win.startMa + win.endMa) / 2;
-    if (zoomLevel(this.t.k) !== c.level || Math.abs(centre - c.centre) > c.span / 2) {
+    if (
+      zoomLevel(this.t.k) !== c.level ||
+      Math.abs(centre - c.centre) > c.span / 2 ||
+      Math.abs(this.cross - c.snap.cross) > this.crossLength / 2
+    ) {
       this.commit();
     } else {
       this.scheduleTrailingCommit();
@@ -405,7 +413,9 @@ export class TimelineEngine {
         this.commit();
         return;
       }
-      if (c.k !== s.k || c.offset !== s.offset || c.length !== s.length) this.commit();
+      if (c.k !== s.k || c.offset !== s.offset || c.length !== s.length || c.cross !== s.cross) {
+        this.commit();
+      }
     }, COMMIT_DEBOUNCE_MS);
   }
 
