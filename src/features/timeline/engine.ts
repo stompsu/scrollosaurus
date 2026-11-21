@@ -41,6 +41,11 @@ export interface TimelineSnapshot extends AxisTransform {
   crossLength: number;
   /** How far the lanes are scrolled, px. */
   cross: number;
+  /**
+   * True when the view has come to rest (the trailing commit, or the end of a discrete move such
+   * as a jump). Announcements to assistive tech update only on settled commits.
+   */
+  settled: boolean;
   orientation: Orientation;
 }
 
@@ -141,6 +146,8 @@ export class TimelineEngine {
   } | null = null;
   private drag: { pos: number; cross: number } | null = null;
   private destroyed = false;
+  /** An animated zoomTo/zoomBy is running; zoom-level commits wait for its final flush. */
+  private tweening = false;
 
   constructor(
     els: EngineElements,
@@ -212,6 +219,7 @@ export class TimelineEngine {
       crossLength: this.crossLength,
       cross: this.cross,
       orientation: this.orientation,
+      settled: false,
     };
   }
 
@@ -312,7 +320,7 @@ export class TimelineEngine {
     cancelAnimationFrame(this.raf);
     this.raf = 0;
     this.apply();
-    this.commit();
+    this.commit(true);
   }
 
   private apply(): void {
@@ -368,10 +376,11 @@ export class TimelineEngine {
 
   // ---- React commits ------------------------------------------------------------------------
 
-  private commit(): void {
+  private commit(settled = false): void {
     clearTimeout(this.commitTimer);
+    if (this.destroyed) return;
     const win = visibleWindow(this.scale, this.t, this.length);
-    const snap = this.snapshot;
+    const snap = { ...this.snapshot, settled };
     this.committed = {
       level: zoomLevel(this.t.k),
       centre: (win.startMa + win.endMa) / 2,
@@ -383,6 +392,7 @@ export class TimelineEngine {
       w.__timelineCommits = (w.__timelineCommits ?? 0) + 1;
     }
     this.onCommit(snap);
+    if (!settled) this.scheduleTrailingCommit();
   }
 
   private maybeCommit(): void {
@@ -394,7 +404,7 @@ export class TimelineEngine {
     const win = visibleWindow(this.scale, this.t, this.length);
     const centre = (win.startMa + win.endMa) / 2;
     if (
-      zoomLevel(this.t.k) !== c.level ||
+      (!this.tweening && zoomLevel(this.t.k) !== c.level) ||
       Math.abs(centre - c.centre) > c.span / 2 ||
       Math.abs(this.cross - c.snap.cross) > this.crossLength / 2
     ) {
@@ -404,17 +414,22 @@ export class TimelineEngine {
     }
   }
 
+  /** Commits once the view has rested for COMMIT_DEBOUNCE_MS, marking the commit as settled. */
   private scheduleTrailingCommit(): void {
     clearTimeout(this.commitTimer);
+    if (this.destroyed) return;
     this.commitTimer = setTimeout(() => {
       const c = this.committed?.snap;
       const s = this.snapshot;
-      if (c === undefined) {
-        this.commit();
-        return;
-      }
-      if (c.k !== s.k || c.offset !== s.offset || c.length !== s.length || c.cross !== s.cross) {
-        this.commit();
+      if (
+        c === undefined ||
+        !c.settled ||
+        c.k !== s.k ||
+        c.offset !== s.offset ||
+        c.length !== s.length ||
+        c.cross !== s.cross
+      ) {
+        this.commit(true);
       }
     }, COMMIT_DEBOUNCE_MS);
   }
@@ -478,6 +493,7 @@ export class TimelineEngine {
   private cancelTween(): void {
     cancelAnimationFrame(this.tweenRaf);
     this.tweenRaf = 0;
+    this.tweening = false;
   }
 
   /** Moves to `target`, animated unless `animate` is false or the user prefers reduced motion. */
@@ -487,7 +503,7 @@ export class TimelineEngine {
       this.setTransform(target, immediate);
       return;
     }
-    const from = { k: this.t.k, centre: this.centreMa };
+    const from = { k: this.t.k, centre: pxToMa(this.scale, this.t, this.length / 2) };
     const to = {
       k: target.k,
       centre: pxToMa(this.scale, target, this.length / 2),
@@ -506,10 +522,12 @@ export class TimelineEngine {
         this.tweenRaf = requestAnimationFrame(step);
       } else {
         this.tweenRaf = 0;
+        this.tweening = false;
         this.zoom.transform(this.sel, this.toZoom(target));
         this.flush();
       }
     };
+    this.tweening = true;
     this.tweenRaf = requestAnimationFrame(step);
   }
 
@@ -609,11 +627,22 @@ export class TimelineEngine {
         return true;
       case 'Home':
         this.cancelTween();
-        this.setTransform({ k: this.t.k, offset: 0 });
+        this.setTransform({
+          k: this.t.k,
+          offset: clampOffset(0, this.t.k, this.length, PAN_MARGIN_PX),
+        });
         return true;
       case 'End':
         this.cancelTween();
-        this.setTransform({ k: this.t.k, offset: this.length - this.t.k * this.length });
+        this.setTransform({
+          k: this.t.k,
+          offset: clampOffset(
+            this.length - this.t.k * this.length,
+            this.t.k,
+            this.length,
+            PAN_MARGIN_PX,
+          ),
+        });
         return true;
       default:
         return false;

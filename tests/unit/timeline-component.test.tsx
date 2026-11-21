@@ -30,7 +30,9 @@ describe('<Timeline />', () => {
     );
     const marker = screen.getByRole('button', { name: /^Sinosauropteryx, / });
     expect(marker).toHaveAttribute('aria-current', 'true');
-    expect(screen.getByTestId('timeline-window')).toHaveTextContent(/Barremian/);
+    expect(screen.getByTestId('timeline-window')).toHaveTextContent(
+      /Early Cretaceous, Hauterivian to Aptian/,
+    );
   });
 
   it('names markers with the genus and range, and selects with click or keyboard', () => {

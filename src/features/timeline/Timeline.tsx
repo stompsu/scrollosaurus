@@ -1,5 +1,6 @@
 import {
   memo,
+  useEffect,
   useId,
   useImperativeHandle,
   useLayoutEffect,
@@ -32,7 +33,7 @@ import {
   thinLabels,
 } from './labels';
 import { markerInterval, packLanes } from './lanes';
-import { createTextMeasure } from './measure';
+import { createTextMeasure, onFontsReady, type TextMeasure } from './measure';
 import { createTimeScale, spanMa, visibleWindow, type MaRange } from './scale';
 import { levelScale, ranksForSpan, zoomLevel } from './semantic';
 import { useOrientation } from './useOrientation';
@@ -94,11 +95,24 @@ function periodOf(unit: GeologicUnit): string | undefined {
 
 const PERIOD_BOUNDARIES = new Set(boundariesOf(PERIODS).map((b) => b.ma));
 
-const bandMeasure = createTextMeasure('12px', 12);
-const tickMeasure = createTextMeasure('11px', 11);
-const labelMeasure = createTextMeasure('italic 13px', 13);
-const famousLabelMeasure = createTextMeasure('italic 600 13px', 13);
-const tagMeasure = createTextMeasure('11px', 11);
+/** Text measurers for the fonts in use. Recreated (and the cache cleared) when web fonts load. */
+interface Measures {
+  band: TextMeasure;
+  tick: TextMeasure;
+  label: TextMeasure;
+  famousLabel: TextMeasure;
+  tag: TextMeasure;
+}
+
+function createMeasures(): Measures {
+  return {
+    band: createTextMeasure('12px', 12),
+    tick: createTextMeasure('11px', 11),
+    label: createTextMeasure('italic 13px', 13),
+    famousLabel: createTextMeasure('italic 600 13px', 13),
+    tag: createTextMeasure('11px', 11),
+  };
+}
 
 const NOT_A_DINOSAUR = 'not a dinosaur';
 
@@ -107,9 +121,9 @@ function markerName(item: SpeciesIndexEntry): string {
   return `${item.genus}${tag}, ${formatMa(item.startMa)} to ${formatMa(item.endMa)} million years ago`;
 }
 
-function labelWidth(item: SpeciesIndexEntry): number {
-  const genus = (item.famous ? famousLabelMeasure : labelMeasure)(item.genus);
-  return genus + (item.isDinosaur ? 0 : 6 + tagMeasure(NOT_A_DINOSAUR));
+function labelWidth(item: SpeciesIndexEntry, m: Measures): number {
+  const genus = (item.famous ? m.famousLabel : m.label)(item.genus);
+  return genus + (item.isDinosaur ? 0 : 6 + m.tag(NOT_A_DINOSAUR));
 }
 
 /** The opening window around a species: its range (with whiskers) at about a fifth of the view. */
@@ -122,18 +136,18 @@ function windowAround(item: SpeciesIndexEntry): MaRange {
 }
 
 /** Bands for the ranks shown at zoom `kLevel`, each with the longest label that fits. */
-function layoutBands(kLevel: number, pxPerMa: number) {
+function layoutBands(kLevel: number, pxPerMa: number, m: Measures) {
   const ranks = ranksForSpan(DOMAIN_SPAN / kLevel);
   return RANKS.filter((r) => ranks.includes(r)).flatMap((rank) =>
     UNITS[rank].map((unit, i) => {
       // Vertical bands use rotated text, so the room is the band's length either way.
       const size = (unit.baseMa - unit.topMa) * pxPerMa;
-      const label = pickLabel(bandLabelCandidates(unit), size - 12, bandMeasure);
+      const label = pickLabel(bandLabelCandidates(unit), size - 12, m.band);
       return {
         unit,
         rank,
         label,
-        labelSize: label ? bandMeasure(label) + 12 : 0,
+        labelSize: label ? m.band(label) + 12 : 0,
         period: periodOf(unit),
         alt: i % 2 === 1,
       };
@@ -142,14 +156,14 @@ function layoutBands(kLevel: number, pxPerMa: number) {
 }
 
 /** Boundaries of the deepest rank shown, with labels thinned so they don't collide. */
-function layoutTicks(kLevel: number, pxPerMa: number, horizontal: boolean) {
+function layoutTicks(kLevel: number, pxPerMa: number, horizontal: boolean, m: Measures) {
   const ranks = ranksForSpan(DOMAIN_SPAN / kLevel);
   const deepest = ranks[ranks.length - 1] ?? 'period';
   const boundaries = boundariesOf(UNITS[deepest]);
   const texts = boundaries.map(formatBoundary);
   const positions = boundaries.map((b) => (DOMAIN.startMa - b.ma) * pxPerMa);
   // Vertical tick labels wrap the "±" part onto a second line.
-  const sizes = horizontal ? texts.map((t) => tickMeasure(t) + 4) : texts.map(() => 30);
+  const sizes = horizontal ? texts.map((t) => m.tick(t) + 4) : texts.map(() => 30);
   const keep = thinLabels(positions, sizes, 10);
   return boundaries.map((b, i) => ({
     boundary: b,
@@ -162,6 +176,46 @@ function layoutTicks(kLevel: number, pxPerMa: number, horizontal: boolean) {
 
 function clampToDomain(ma: number): number {
   return Math.min(DOMAIN.startMa, Math.max(DOMAIN.endMa, ma));
+}
+
+/**
+ * Names the units in view, coarsest first: "Triassic to Cretaceous", or "Cretaceous, Early
+ * Cretaceous, Barremian to Aptian". A finer rank is added only under a single coarser unit, and
+ * only when it doesn't just list all of that unit's children.
+ */
+export function windowContext(range: MaRange, ranks: readonly GeologicRank[]): string {
+  const start = clampToDomain(range.startMa);
+  const end = clampToDomain(range.endMa);
+  // Ignore slivers (rounding at exact boundaries, e.g. after a period jump).
+  const minOverlap = (start - end) * 0.002;
+  const parts: string[] = [];
+  let parent: GeologicUnit | undefined;
+  for (const rank of RANKS) {
+    if (rank === 'era' || !ranks.includes(rank)) continue;
+    if (parts.length > 0 && !parent) break;
+    const units = UNITS[rank].filter(
+      (u) => Math.min(u.baseMa, start) - Math.max(u.topMa, end) > minOverlap,
+    );
+    const first = units[0];
+    const last = units[units.length - 1];
+    if (!first || !last) break;
+    if (parent && units.length > 1) {
+      const parentId = parent.id;
+      const siblings = UNITS[rank].filter((u) => u.parent === parentId);
+      if (siblings.length === units.length) break;
+    }
+    parts.push(first === last ? first.name : `${first.name} to ${last.name}`);
+    parent = first === last ? first : undefined;
+  }
+  return parts.join(', ');
+}
+
+/** Whether the timeline shows `item` under `filters` (non-dinosaurs are hidden by default). */
+export function matchesFilters(item: SpeciesIndexEntry, filters?: TimelineFilters): boolean {
+  return (
+    (filters?.includeNonDinosaurs === true || item.isDinosaur) &&
+    (filters?.predicate === undefined || filters.predicate(item))
+  );
 }
 
 interface MarkerProps {
@@ -248,9 +302,19 @@ export function Timeline({ items, filters, onSelect, highlightedSlug, ref }: Tim
     crossLength: 0,
     cross: 0,
     orientation,
+    settled: false,
   });
   const [focusedSlug, setFocusedSlug] = useState<string | null>(null);
   const firstSnap = useRef(snap);
+  // Bumped when web fonts finish loading, so cached text widths are re-measured.
+  const [measures, setMeasures] = useState(createMeasures);
+  useEffect(
+    () =>
+      onFontsReady(() => {
+        setMeasures(createMeasures());
+      }),
+    [],
+  );
   const pendingReveal = useRef(true);
 
   const includeNonDinosaurs = filters?.includeNonDinosaurs ?? false;
@@ -258,14 +322,19 @@ export function Timeline({ items, filters, onSelect, highlightedSlug, ref }: Tim
   const shown = useMemo(
     () =>
       items
-        .filter((it) => (includeNonDinosaurs || it.isDinosaur) && (!predicate || predicate(it)))
+        .filter((it) =>
+          matchesFilters(it, {
+            includeNonDinosaurs,
+            ...(predicate === undefined ? {} : { predicate }),
+          }),
+        )
         .sort((a, b) => b.startMa - a.startMa || a.genus.localeCompare(b.genus)),
     [items, includeNonDinosaurs, predicate],
   );
 
   // The initial view, read once on mount.
   const [initialRange] = useState<MaRange>(() => {
-    const target = items.find((it) => it.slug === highlightedSlug);
+    const target = shown.find((it) => it.slug === highlightedSlug);
     return target ? windowAround(target) : DOMAIN;
   });
 
@@ -317,7 +386,7 @@ export function Timeline({ items, filters, onSelect, highlightedSlug, ref }: Tim
   const packing = useMemo(() => {
     const domainEndPx = DOMAIN_SPAN * pxPerMa;
     const anchors = shown.map((it) =>
-      horizontal && (DOMAIN.startMa - it.startMa) * pxPerMa + labelWidth(it) > domainEndPx
+      horizontal && (DOMAIN.startMa - it.startMa) * pxPerMa + labelWidth(it, measures) > domainEndPx
         ? 'end'
         : 'start',
     );
@@ -327,7 +396,7 @@ export function Timeline({ items, filters, onSelect, highlightedSlug, ref }: Tim
         endPx: (DOMAIN.startMa - it.endMa) * pxPerMa,
         startWhiskerPx: (it.startUncertaintyMa ?? 0) * pxPerMa,
         endWhiskerPx: (it.endUncertaintyMa ?? 0) * pxPerMa,
-        labelExtentPx: horizontal ? labelWidth(it) + 4 : VERTICAL_LABEL_EXTENT_PX,
+        labelExtentPx: horizontal ? labelWidth(it, measures) + 4 : VERTICAL_LABEL_EXTENT_PX,
         minBarPx: MIN_BAR_PX,
         anchor: anchors[i] ?? 'start',
       }),
@@ -338,7 +407,7 @@ export function Timeline({ items, filters, onSelect, highlightedSlug, ref }: Tim
       endAnchored: new Set(shown.filter((_, i) => anchors[i] === 'end').map((it) => it.slug)),
       laneCount,
     };
-  }, [shown, pxPerMa, horizontal]);
+  }, [shown, pxPerMa, horizontal, measures]);
 
   const laneSize = horizontal ? LANE_SIZE_PX.horizontal : LANE_SIZE_PX.vertical;
   const crossExtent = packing.laneCount * laneSize + 2 * LANE_PADDING_PX;
@@ -356,12 +425,16 @@ export function Timeline({ items, filters, onSelect, highlightedSlug, ref }: Tim
       it.slug === highlightedSlug ||
       it.slug === focusedSlug,
   );
-  const inView = shown.filter((it) => overlapsWindow(it, win));
+  const laneVisible = (slug: string) => {
+    const start = LANE_PADDING_PX + (packing.laneOf.get(slug) ?? 0) * laneSize;
+    return start + laneSize > snap.cross && start < snap.cross + crossView;
+  };
+  const inView = shown.filter((it) => overlapsWindow(it, win) && laneVisible(it.slug));
 
-  const bands = useMemo(() => layoutBands(kLevel, pxPerMa), [kLevel, pxPerMa]);
+  const bands = useMemo(() => layoutBands(kLevel, pxPerMa, measures), [kLevel, pxPerMa, measures]);
   const ticks = useMemo(
-    () => layoutTicks(kLevel, pxPerMa, horizontal),
-    [kLevel, pxPerMa, horizontal],
+    () => layoutTicks(kLevel, pxPerMa, horizontal, measures),
+    [kLevel, pxPerMa, horizontal, measures],
   );
 
   // Hand the freshly rendered nodes to the engine before the browser paints.
@@ -381,13 +454,13 @@ export function Timeline({ items, filters, onSelect, highlightedSlug, ref }: Tim
     }
   });
 
-  const centreMa = (win.startMa + win.endMa) / 2;
-  const context = RANKS.filter((r) => r !== 'era' && ranks.includes(r))
-    .map((r) => UNITS[r].find((u) => u.baseMa >= centreMa && u.topMa <= centreMa)?.name)
-    .filter((n): n is string => n !== undefined);
+  const context = windowContext(win, ranks);
   const windowLabel = `Showing ${formatMa(clampToDomain(win.startMa))} to ${formatMa(
     clampToDomain(win.endMa),
-  )} million years ago${context.length ? ` · ${context.join(', ')}` : ''}`;
+  )} million years ago${context ? ` · ${context}` : ''}`;
+  // Screen readers hear the window only once the view has settled, not on every commit.
+  const [liveLabel, setLiveLabel] = useState('');
+  if (snap.settled && liveLabel !== windowLabel) setLiveLabel(windowLabel);
 
   const onKeyDown = (event: KeyboardEvent<HTMLDivElement>) => {
     if (engineRef.current?.handleKey(event.nativeEvent)) event.preventDefault();
@@ -399,6 +472,11 @@ export function Timeline({ items, filters, onSelect, highlightedSlug, ref }: Tim
     if (slug === undefined) return;
     setFocusedSlug(slug);
     engineRef.current?.reveal(target);
+  };
+
+  const onBlurMarker = (event: FocusEvent<HTMLDivElement>) => {
+    const next = event.relatedTarget;
+    if (!(next instanceof Node) || !event.currentTarget.contains(next)) setFocusedSlug(null);
   };
 
   const zoomBy = (factor: number) => engineRef.current?.zoomBy(factor);
@@ -440,8 +518,11 @@ export function Timeline({ items, filters, onSelect, highlightedSlug, ref }: Tim
             Show whole {MESOZOIC.name}
           </button>
         </div>
-        <p className="tl-window" aria-live="polite" data-testid="timeline-window">
+        <p className="tl-window" data-testid="timeline-window">
           {windowLabel}
+        </p>
+        <p className="sr-only" aria-live="polite" data-testid="timeline-live">
+          {liveLabel}
         </p>
       </div>
 
@@ -495,7 +576,12 @@ export function Timeline({ items, filters, onSelect, highlightedSlug, ref }: Tim
             ))}
           </div>
           <div ref={crossLayerRef} className="tl-cross-layer">
-            <div ref={markerLayerRef} className="tl-time-layer" onFocus={onFocusMarker}>
+            <div
+              ref={markerLayerRef}
+              className="tl-time-layer"
+              onFocus={onFocusMarker}
+              onBlur={onBlurMarker}
+            >
               {rendered.map((it) => (
                 <Marker
                   key={it.slug}

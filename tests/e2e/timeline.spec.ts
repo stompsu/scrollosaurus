@@ -56,6 +56,18 @@ test('?species=tyrannosaurus highlights T. rex instead', async ({ page }) => {
   await expectInsideRegion(page, /^Tyrannosaurus, /);
 });
 
+test('a ?species= the timeline does not show (a pterosaur) falls back to the primary species', async ({
+  page,
+}) => {
+  await page.goto('./?species=pteranodon');
+  await expect(page.getByRole('button', { name: /^Sinosauropteryx, / })).toHaveAttribute(
+    'aria-current',
+    'true',
+  );
+  await expect(page.locator('[aria-current="true"]')).toHaveCount(1);
+  await expectInsideRegion(page, /^Sinosauropteryx, /);
+});
+
 test('an unknown ?species= falls back to the primary species', async ({ page }) => {
   await page.goto('./?species=no-such-dinosaur');
   await expect(page.getByRole('button', { name: /^Sinosauropteryx, / })).toHaveAttribute(
@@ -76,7 +88,52 @@ test('jump buttons move the view to each period and back to the whole Mesozoic',
   await jumps.getByRole('button', { name: 'Cretaceous' }).click();
   await expect(windowLabel(page)).toHaveText(/^Showing 143\.1 to 66 million years ago/);
   await jumps.getByRole('button', { name: 'Show whole Mesozoic' }).click();
-  await expect(windowLabel(page)).toHaveText(/^Showing 251\.9 to 66 million years ago/);
+  await expect(windowLabel(page)).toHaveText(
+    'Showing 251.9 to 66 million years ago · Triassic to Cretaceous',
+  );
+});
+
+test('the window label names both periods when the view straddles a boundary', async ({
+  page,
+  isMobile,
+}) => {
+  await page.goto('./');
+  await page.getByRole('button', { name: 'Cretaceous', exact: true }).click();
+  await expect(windowLabel(page)).toHaveText(
+    /^Showing 143\.1 to 66 million years ago · Cretaceous$/,
+  );
+  await region(page).focus();
+  await page.keyboard.press(isMobile ? 'ArrowUp' : 'ArrowLeft');
+  await expect(windowLabel(page)).toHaveText(/ · Jurassic to Cretaceous$/);
+});
+
+test('the live announcement waits until the view settles', async ({ page, isMobile }) => {
+  await page.goto('./');
+  const live = page.getByTestId('timeline-live');
+  await expect(live).toHaveText(/^Showing /);
+  await region(page).focus();
+  await page.evaluate(() => {
+    const el = document.querySelector('[data-testid="timeline-live"]');
+    const w = window as { __liveChanges?: string[] };
+    w.__liveChanges = [];
+    if (el) {
+      new MutationObserver(() => w.__liveChanges?.push(el.textContent)).observe(el, {
+        childList: true,
+        characterData: true,
+        subtree: true,
+      });
+    }
+  });
+  const forward = isMobile ? 'ArrowDown' : 'ArrowRight';
+  for (let i = 0; i < 6; i++) await page.keyboard.press('-');
+  for (let i = 0; i < 20; i++) await page.keyboard.press(forward);
+  // The announcement changes once, after the view settles, not on each commit.
+  await page.waitForTimeout(400);
+  const changes = await page.evaluate(
+    () => (window as { __liveChanges?: string[] }).__liveChanges ?? [],
+  );
+  expect(changes).toHaveLength(1);
+  await expect(live).toHaveText((await windowLabel(page).textContent()) ?? '');
 });
 
 test('the + and − buttons zoom', async ({ page }) => {
@@ -141,6 +198,28 @@ test('lays out horizontally on desktop and vertically on mobile', async ({ page,
   if (!older || !younger) throw new Error('markers not rendered');
   if (isMobile) expect(younger.y).toBeGreaterThan(older.y);
   else expect(younger.x).toBeGreaterThan(older.x);
+});
+
+test('resizing from desktop to phone width keeps the centre and the zoom', async ({
+  page,
+  isMobile,
+}) => {
+  test.skip(isMobile, 'starts at a desktop width');
+  await page.setViewportSize({ width: 1280, height: 800 });
+  await page.goto('./');
+  await expect(page.locator('.tl')).toHaveAttribute('data-orientation', 'horizontal');
+  const [olderBefore, youngerBefore] = await visibleWindow(page);
+  await page.setViewportSize({ width: 375, height: 800 });
+  await expect(page.locator('.tl')).toHaveAttribute('data-orientation', 'vertical');
+  await expect
+    .poll(async () => {
+      const [older, younger] = await visibleWindow(page);
+      return [(older + younger) / 2, older - younger];
+    })
+    .toEqual([
+      expect.closeTo((olderBefore + youngerBefore) / 2, 0),
+      expect.closeTo(olderBefore - youngerBefore, 0),
+    ]);
 });
 
 test('dragging pans the timeline', async ({ page, isMobile }) => {

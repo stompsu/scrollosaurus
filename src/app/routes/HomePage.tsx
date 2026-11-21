@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useSearchParams } from 'react-router';
-import { Timeline, usePerfFixture } from '@/features/timeline';
+import { matchesFilters, Timeline, usePerfFixture } from '@/features/timeline';
 import { formatMaRounded, unitById } from '@/lib/geologic-time';
 import { primarySpeciesSlug, species } from '@/lib/species';
 
@@ -10,9 +10,10 @@ export default function HomePage() {
   const [params] = useSearchParams();
   const [selected, setSelected] = useState<string | null>(null);
 
-  // A valid ?species= wins over the primary species. Full URL sync arrives in Phase 3.
+  // A valid ?species= wins over the primary species, but only if the timeline shows it (no
+  // non-dinosaurs by default). Full URL sync arrives in Phase 3.
   const requested = params.get('species');
-  const fromUrl = items.some((s) => s.slug === requested) ? requested : null;
+  const fromUrl = items.some((s) => s.slug === requested && matchesFilters(s)) ? requested : null;
   const highlighted = selected ?? fromUrl ?? primarySpeciesSlug;
   const selectedItem = items.find((s) => s.slug === selected);
 
