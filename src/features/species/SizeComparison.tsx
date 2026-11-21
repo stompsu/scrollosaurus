@@ -1,63 +1,156 @@
+import { useId } from 'react';
 import { formatRange } from '@/lib/labels';
 import type { Species } from '@/lib/schemas/species';
+import type { SizeReferences } from '@/lib/schemas/stories';
+import { bodyPlanFor, SILHOUETTES } from './silhouettes';
 
-/** Reference figure for the comparison: an adult human, as the project brief specifies. */
-const HUMAN_M = 1.8;
+type Reference = SizeReferences['references'][number];
 
-interface Bar {
-  label: string;
-  value: readonly [number, number];
-  reference?: boolean;
+/** The bus is only drawn next to animals at least this long, m; beside smaller ones it says little. */
+const BUS_FROM_M = 4;
+/** Gap between figures and the scene's side margins, in metres at the scene's scale. */
+const GAP_FRACTION = 0.06;
+
+interface SizeComparisonProps {
+  genus: string;
+  groupPath: readonly string[];
+  size: Species['size'];
+  references: SizeReferences;
 }
 
-/**
- * Length (or, for flying reptiles with no recorded length, wingspan) beside a 1.8 m adult human.
- * A range is drawn as a solid bar to the low value and a hatched extension to the high value.
- * Drawn silhouettes come in Phase 5.
- */
-export function SizeComparison({ genus, size }: { genus: string; size: Species['size'] }) {
-  const measure = size.lengthM
-    ? { what: 'Length', value: size.lengthM.value }
-    : size.wingspanM
-      ? { what: 'Wingspan', value: size.wingspanM.value }
-      : undefined;
-  if (!measure) return null;
+/** A standing person, facing right, in a 0–100 tall box (height = 1.8 m reference). */
+const PERSON =
+  'M50 0 a9 9 0 1 1 0.1 0 Z M38 22 h24 l8 34 h-7 l-5 -20 v64 h-9 v-38 h-2 v38 h-9 v-64 l-5 20 h-7 Z';
 
-  const bars: Bar[] = [
-    { label: genus, value: measure.value },
-    { label: 'Adult human', value: [HUMAN_M, HUMAN_M], reference: true },
+/**
+ * A side-on bus in a 100 × 26 box (length × height): body with window cut-outs (even-odd fill)
+ * and two wheels that reach the ground line at y = 26.
+ */
+const BUS =
+  'M0 2 Q0 0 2 0 H92 Q98 0 99 6 V21 H0 Z M5 4 V11 H17 V4 Z M21 4 V11 H33 V4 Z M37 4 V11 H49 V4 Z M53 4 V11 H65 V4 Z M69 4 V11 H81 V4 Z M86 4 V13 H95 V4 Z';
+const BUS_WHEELS =
+  'M15 21 a5 5 0 1 0 10 0 a5 5 0 1 0 -10 0 Z M75 21 a5 5 0 1 0 10 0 a5 5 0 1 0 -10 0 Z';
+
+/**
+ * Scale drawing: the species as a generic silhouette for its group, drawn at the top of its length
+ * (or wingspan) estimate, with the range marked on the ground; beside a 1.8 m person and, for
+ * larger animals, a school bus at its sourced length. Every figure shares one metre scale.
+ */
+export function SizeComparison({ genus, groupPath, size, references }: SizeComparisonProps) {
+  const titleId = useId();
+  const plan = SILHOUETTES[bodyPlanFor(groupPath)];
+  const measured = plan.measure === 'wingspan' ? size.wingspanM : size.lengthM;
+  if (!measured) return null;
+  const [lo, hi] = measured.value;
+
+  const person = references.references.find((r) => r.id === 'person');
+  const bus = references.references.find((r) => r.id === 'school-bus');
+  const figures: { key: string; widthM: number; heightM: number }[] = [
+    { key: 'species', widthM: hi, heightM: (hi * plan.height) / 100 },
   ];
-  const max = Math.max(measure.value[1], HUMAN_M);
-  const pct = (m: number) => `${String((m / max) * 100)}%`;
-  const what = measure.what.toLowerCase();
-  const description = `${measure.what} of ${genus}, ${formatRange(measure.value, 'm')}, compared with a ${String(HUMAN_M)} m adult human.`;
+  if (person)
+    figures.push({ key: 'person', widthM: person.heightM * 0.45, heightM: person.heightM });
+  const showBus = bus !== undefined && hi >= BUS_FROM_M;
+  if (bus && showBus) figures.push({ key: 'bus', widthM: bus.lengthM, heightM: bus.heightM });
+
+  const totalWidth = figures.reduce((sum, f) => sum + f.widthM, 0);
+  const gap = totalWidth * GAP_FRACTION;
+  const sceneW = totalWidth + gap * (figures.length + 1);
+  const sceneH = Math.max(...figures.map((f) => f.heightM)) * 1.15 + sceneW * 0.08;
+  const ground = sceneH - sceneW * 0.06;
+
+  let x = gap;
+  const placed = figures.map((f) => {
+    const at = x;
+    x += f.widthM + gap;
+    return { ...f, x: at };
+  });
+  const at = (key: string) => placed.find((p) => p.key === key);
+  const sp = at('species');
+  const pe = at('person');
+  const bu = at('bus');
+
+  const what = plan.measure === 'wingspan' ? 'wingspan' : 'length';
+  const refText = (r: Reference) => `${r.label.en.toLowerCase()} (${String(r.lengthM)} m)`;
+  const description = [
+    `${genus}, ${what} ${formatRange(measured.value, 'm')}`,
+    person ? `next to an adult person ${String(person.heightM)} m tall` : undefined,
+    bus && showBus ? `and a ${refText(bus)}` : undefined,
+  ]
+    .filter(Boolean)
+    .join(' ');
 
   return (
-    <figure className="sc-size">
-      <figcaption className="sc-drawer-h3">Size compared with a person</figcaption>
-      <div role="img" aria-label={description} className="sc-size-chart">
-        {bars.map((b) => (
-          <div key={b.label} className="sc-size-row">
-            <span className="sc-size-label">{b.reference ? b.label : <i>{b.label}</i>}</span>
-            <span className="sc-size-track">
-              <span
-                className={`sc-size-bar${b.reference ? ' sc-size-bar--ref' : ''}`}
-                style={{ width: pct(b.value[0]) }}
+    <figure className="sc-size" data-testid="size-comparison">
+      <figcaption id={titleId} className="sc-drawer-h3">
+        Size compared with a person{bus && showBus ? ' and a school bus' : ''}
+      </figcaption>
+      <svg
+        className="sc-size-scene"
+        viewBox={`0 0 ${String(sceneW)} ${String(sceneH)}`}
+        role="img"
+        aria-labelledby={titleId}
+        aria-describedby={`${titleId}-desc`}
+      >
+        <desc id={`${titleId}-desc`}>{description}.</desc>
+        <line className="sc-size-ground" x1={0} x2={sceneW} y1={ground} y2={ground} />
+        {sp && (
+          <g>
+            <path
+              className="sc-size-species"
+              d={plan.path}
+              transform={`translate(${String(sp.x)} ${String(ground - sp.heightM)}) scale(${String(sp.widthM / 100)})`}
+            />
+            {hi > lo && (
+              <rect
+                className="sc-size-range"
+                x={sp.x + sp.widthM * (lo / hi)}
+                width={sp.widthM * (1 - lo / hi)}
+                y={ground + sceneW * 0.008}
+                height={sceneW * 0.012}
               />
-              {b.value[1] > b.value[0] && (
-                <span
-                  className="sc-size-bar sc-size-bar--range"
-                  style={{ left: pct(b.value[0]), width: pct(b.value[1] - b.value[0]) }}
-                />
-              )}
-            </span>
-            <span className="sc-size-value">{formatRange(b.value, 'm')}</span>
-          </div>
-        ))}
-      </div>
+            )}
+            <rect
+              className="sc-size-ruler"
+              x={sp.x}
+              width={sp.widthM * (hi > lo ? lo / hi : 1)}
+              y={ground + sceneW * 0.008}
+              height={sceneW * 0.012}
+            />
+          </g>
+        )}
+        {pe && person && (
+          <path
+            className="sc-size-ref"
+            d={PERSON}
+            transform={`translate(${String(pe.x)} ${String(ground - pe.heightM)}) scale(${String(pe.heightM / 100)})`}
+          />
+        )}
+        {bu && bus && (
+          <g
+            className="sc-size-ref"
+            transform={`translate(${String(bu.x)} ${String(ground - bu.heightM)}) scale(${String(bu.widthM / 100)} ${String(bu.heightM / 26)})`}
+          >
+            <path fillRule="evenodd" d={BUS} />
+            <path d={BUS_WHEELS} />
+          </g>
+        )}
+      </svg>
+      <ul className="sc-size-legend">
+        <li>
+          <i>{genus}</i>: {formatRange(measured.value, 'm')}{' '}
+          {what === 'length' ? 'long' : 'wingspan'}
+          {hi > lo ? '; drawn at the upper estimate, the striped bar shows the range' : ''}.
+        </li>
+        {person && <li>Adult person: {String(person.heightM)} m tall (a reference figure).</li>}
+        {bus && showBus && (
+          <li>
+            {bus.label.en}: {String(bus.lengthM)} m long. {bus.note?.en}
+          </li>
+        )}
+      </ul>
       <p className="sc-note">
-        Bars show {what}; the person is {HUMAN_M} m tall.
-        {measure.value[1] > measure.value[0] && ' The lighter part spans the range of estimates.'}
+        The outline is a generic {plan.label}, not the exact shape of <i>{genus}</i>.
       </p>
     </figure>
   );

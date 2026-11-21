@@ -16,6 +16,7 @@ import { CONTINENT_LABELS, countryName, formatMass, formatRange } from '@/lib/la
 import { livedAlongside } from '@/lib/lived-alongside';
 import type { Species } from '@/lib/schemas/species';
 import { loadSpecies } from '@/lib/species';
+import { sizeReferences } from '@/lib/stories';
 import type { SpeciesIndexEntry } from '@/lib/species-index';
 import { SizeComparison } from './SizeComparison';
 import { formatLived } from './SpeciesCard';
@@ -204,7 +205,8 @@ export function SpeciesDrawer({
           )}
           {load.status === 'ready' && <RecordDetails record={load.record} item={item} />}
 
-          <LivedAlongside item={item} all={all} hrefFor={hrefFor} />
+          {/* Rendered with the record, below it, so nothing already on screen moves when it loads. */}
+          {load.status === 'ready' && <LivedAlongside item={item} all={all} hrefFor={hrefFor} />}
 
           {load.status === 'ready' && <SourceList record={load.record} />}
         </div>
@@ -369,7 +371,12 @@ function RecordDetails({ record, item }: { record: Species; item: SpeciesIndexEn
         </Fact>
       </dl>
 
-      <SizeComparison genus={item.genus} size={size} />
+      <SizeComparison
+        genus={item.genus}
+        groupPath={item.groupPath}
+        size={size}
+        references={sizeReferences}
+      />
 
       {record.funFacts && record.funFacts.length > 0 && (
         <>
