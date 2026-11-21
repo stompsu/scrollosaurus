@@ -32,7 +32,7 @@ const measuredSchema = z
   .object({
     value: rangeSchema,
     sourceIds: sourceIdsSchema,
-    note: z.string().trim().min(1).optional(),
+    note: localizedTextSchema.optional(),
   })
   .strict();
 
@@ -47,7 +47,7 @@ export const timeRangeSchema = z
     endMa: z.number().positive(),
     endUncertaintyMa: z.number().positive().optional(),
     sourceIds: sourceIdsSchema,
-    note: z.string().trim().min(1).optional(),
+    note: localizedTextSchema.optional(),
   })
   .strict()
   .refine((t) => t.startMa >= t.endMa, { message: 'startMa (older) must be >= endMa (younger)' });
@@ -84,7 +84,7 @@ export const speciesSchema = z
     taxonomy: z
       .object({
         status: z.enum(['valid', 'dubious', 'contested']),
-        note: z.string().trim().min(1).optional(),
+        note: localizedTextSchema.optional(),
         sourceIds: sourceIdsSchema.optional(),
       })
       .strict()
@@ -96,7 +96,7 @@ export const speciesSchema = z
         value: dietSchema,
         confidence: z.enum(['established', 'probable', 'debated']),
         sourceIds: sourceIdsSchema,
-        note: z.string().trim().min(1).optional(),
+        note: localizedTextSchema.optional(),
       })
       .strict()
       .refine((d) => d.confidence !== 'debated' || d.note !== undefined, {
@@ -137,7 +137,7 @@ export const speciesSchema = z
           .refine((v) => !/[()]/.test(v), { message: 'Put history in discovery.note' }),
         year: z.number().int().min(1800).max(2100),
         /** Naming history, e.g. the original genus the species was described in. */
-        note: z.string().trim().min(1).optional(),
+        note: localizedTextSchema.optional(),
         sourceIds: sourceIdsSchema,
       })
       .strict(),
@@ -158,7 +158,7 @@ export const speciesSchema = z
     images: z.array(imageSchema),
     /** Fields left empty or holding a disputed value. Listed in the phase uncertainties report. */
     uncertain: z
-      .array(z.object({ field: z.enum(UNCERTAIN_FIELDS), note: z.string().trim().min(1) }).strict())
+      .array(z.object({ field: z.enum(UNCERTAIN_FIELDS), note: localizedTextSchema }).strict())
       .optional(),
     sources: z.array(sourceSchema).min(1),
     lastReviewed: z.iso.date(),
