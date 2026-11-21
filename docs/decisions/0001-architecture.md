@@ -25,25 +25,25 @@ Search, filtering and sorting run in the browser. Images are self-hosted in the 
 
 ### 2. Frontend stack
 
-| Concern            | Choice                                                                                  | Reason                                                                                   |
-| ------------------ | --------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| Build / dev        | Vite + React + TypeScript (strict)                                                      | Fast SPA tooling; the timeline is one big interactive island, so SSR/islands add little. |
-| Styling            | Tailwind CSS + CSS variables                                                            | Fast iteration; per-period themes via variables.                                         |
-| UI animation       | Motion                                                                                  | Declarative UI transitions. Not used for timeline pan/zoom.                              |
-| Timeline maths     | `d3-scale`, `d3-zoom` only                                                              | Proven Ma → px mapping and zoom/pan transforms without the whole of D3.                  |
-| Timeline rendering | DOM + SVG; Canvas only if profiling shows need (> ~500 visible items)                   | Accessibility, styling, focusable markers.                                               |
-| Timeline updates   | `requestAnimationFrame` + CSS/SVG transforms; no React render per frame                 | 60 fps target.                                                                           |
-| Virtualisation     | Render markers in viewport ± buffer                                                     | Keeps the DOM small as data grows.                                                       |
-| State              | Zustand for UI state; URL query string is the source of truth for filters and selection | Shareable links, simple store.                                                           |
-| Search             | MiniSearch, index built at build time                                                   | Fuzzy, small, runs offline.                                                              |
-| Routing            | React Router: `/`, `/species/:slug`, `/about`, `/credits`                               | Deep links to species.                                                                   |
-| i18n               | i18next / react-i18next (EN, PL)                                                        | Mature; scientific names never translated.                                               |
-| Data validation    | Zod (shared between scripts and app)                                                    | Bad data fails the build.                                                                |
-| Images             | sharp build-time pipeline                                                               | AVIF/WebP, responsive, blur placeholders.                                                |
-| Testing            | Vitest + Testing Library; Playwright; axe-core                                          | Unit, E2E/visual, accessibility.                                                         |
-| Lint / format      | ESLint flat config + Prettier                                                           | Standard.                                                                                |
-| Package manager    | pnpm                                                                                    | Fast, strict dependency resolution.                                                      |
-| Hosting            | **GitHub Pages**, deployed by GitHub Actions (`actions/deploy-pages`)                   | Free, no external account; see §6.                                                       |
+| Concern            | Choice                                                                                                        | Reason                                                                                   |
+| ------------------ | ------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| Build / dev        | Vite + React + TypeScript (strict)                                                                            | Fast SPA tooling; the timeline is one big interactive island, so SSR/islands add little. |
+| Styling            | Tailwind CSS + CSS variables                                                                                  | Fast iteration; per-period themes via variables.                                         |
+| UI animation       | Motion                                                                                                        | Declarative UI transitions. Not used for timeline pan/zoom.                              |
+| Timeline maths     | `d3-scale`, `d3-zoom`, plus `d3-selection` (d3-zoom's own dependency, used to attach it; approved in Phase 2) | Proven Ma → px mapping and zoom/pan transforms without the whole of D3.                  |
+| Timeline rendering | DOM + SVG; Canvas only if profiling shows need (> ~500 visible items)                                         | Accessibility, styling, focusable markers.                                               |
+| Timeline updates   | `requestAnimationFrame` + CSS/SVG transforms; no React render per frame                                       | 60 fps target.                                                                           |
+| Virtualisation     | Render markers in viewport ± buffer                                                                           | Keeps the DOM small as data grows.                                                       |
+| State              | Zustand for UI state; URL query string is the source of truth for filters and selection                       | Shareable links, simple store.                                                           |
+| Search             | MiniSearch, index built at build time                                                                         | Fuzzy, small, runs offline.                                                              |
+| Routing            | React Router: `/`, `/species/:slug`, `/about`, `/credits`                                                     | Deep links to species.                                                                   |
+| i18n               | i18next / react-i18next (EN, PL)                                                                              | Mature; scientific names never translated.                                               |
+| Data validation    | Zod (shared between scripts and app)                                                                          | Bad data fails the build.                                                                |
+| Images             | sharp build-time pipeline                                                                                     | AVIF/WebP, responsive, blur placeholders.                                                |
+| Testing            | Vitest + Testing Library; Playwright; axe-core                                                                | Unit, E2E/visual, accessibility.                                                         |
+| Lint / format      | ESLint flat config + Prettier                                                                                 | Standard.                                                                                |
+| Package manager    | pnpm                                                                                                          | Fast, strict dependency resolution.                                                      |
+| Hosting            | **GitHub Pages**, deployed by GitHub Actions (`actions/deploy-pages`)                                         | Free, no external account; see §6.                                                       |
 
 All dependency versions are the latest stable at setup time, checked against the registry rather than assumed. Exception: **TypeScript is pinned to 6.0.x** because typescript-eslint 8.x supports `typescript <6.1.0`, so TypeScript 7 would break type-aware linting. Revisit when typescript-eslint supports TS 7.
 
