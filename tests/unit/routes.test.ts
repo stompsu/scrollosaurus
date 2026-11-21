@@ -4,7 +4,8 @@ import { STATIC_PATHS } from '@/app/static-paths';
 
 function collectPaths(list: typeof routes): string[] {
   return list.flatMap((r) => [
-    ...(r.path && r.path !== '*' ? [r.path] : []),
+    // Parametrised paths (species/:slug) get their pages from data, not from STATIC_PATHS.
+    ...(r.path && r.path !== '*' && !r.path.includes(':') ? [r.path] : []),
     ...(r.children ? collectPaths(r.children) : []),
   ]);
 }

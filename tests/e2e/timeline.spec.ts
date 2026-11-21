@@ -48,32 +48,21 @@ test('opens on Sinosauropteryx, highlighted and in view', async ({ page }) => {
   expect(older - younger).toBeLessThan(20);
 });
 
-test('?species=tyrannosaurus highlights T. rex instead', async ({ page }) => {
-  await page.goto('./?species=tyrannosaurus');
+test('/species/tyrannosaurus highlights T. rex instead', async ({ page }) => {
+  await page.goto('species/tyrannosaurus');
   const trex = page.getByRole('button', { name: 'Tyrannosaurus, 68 to 66 million years ago' });
   await expect(trex).toHaveAttribute('aria-current', 'true');
   await expect(page.locator('[aria-current="true"]')).toHaveCount(1);
   await expectInsideRegion(page, /^Tyrannosaurus, /);
 });
 
-test('a ?species= the timeline does not show (a pterosaur) falls back to the primary species', async ({
+test('a species the timeline does not show (a pterosaur) opens on the primary species view', async ({
   page,
 }) => {
-  await page.goto('./?species=pteranodon');
-  await expect(page.getByRole('button', { name: /^Sinosauropteryx, / })).toHaveAttribute(
-    'aria-current',
-    'true',
-  );
-  await expect(page.locator('[aria-current="true"]')).toHaveCount(1);
+  await page.goto('species/pteranodon');
+  await expect(page.getByTestId('species-drawer')).toContainText('hidden on the timeline');
+  await expect(page.locator('[aria-current="true"]')).toHaveCount(0);
   await expectInsideRegion(page, /^Sinosauropteryx, /);
-});
-
-test('an unknown ?species= falls back to the primary species', async ({ page }) => {
-  await page.goto('./?species=no-such-dinosaur');
-  await expect(page.getByRole('button', { name: /^Sinosauropteryx, / })).toHaveAttribute(
-    'aria-current',
-    'true',
-  );
 });
 
 test('jump buttons move the view to each period and back to the whole Mesozoic', async ({
@@ -154,7 +143,7 @@ test('keyboard: Tab reaches a marker, Enter selects it, arrows and Home/End pan'
   page,
   isMobile,
 }) => {
-  await page.goto('./?species=tyrannosaurus');
+  await page.goto('./');
   await region(page).focus();
   const before = await visibleWindow(page);
   await page.keyboard.press('Home');
@@ -171,9 +160,14 @@ test('keyboard: Tab reaches a marker, Enter selects it, arrows and Home/End pan'
   await expect(focused).toHaveCount(1);
   const name = (await focused.getAttribute('aria-label')) ?? '';
   const genus = name.split(',')[0] ?? '';
+  const slug = (await focused.getAttribute('data-slug')) ?? '';
   await page.keyboard.press('Enter');
-  await expect(page.getByRole('status')).toHaveText(`Selected ${genus}`);
-  await expect(focused).toHaveAttribute('aria-current', 'true');
+  const drawer = page.getByTestId('species-drawer');
+  await expect(drawer.getByRole('heading', { level: 2 })).toHaveText(genus);
+  await expect(page).toHaveURL(new RegExp(`/species/${slug}\\?`));
+  await page.keyboard.press('Escape');
+  await expect(drawer).toHaveCount(0);
+  await expect(page.locator(`[data-slug="${slug}"]`)).toBeFocused();
 });
 
 test('Tab order follows time, oldest first', async ({ page }) => {
@@ -260,7 +254,7 @@ test('no axe violations at the default view, the whole Mesozoic and with non-def
   await page.getByRole('button', { name: 'Show whole Mesozoic' }).click();
   await expect(windowLabel(page)).toHaveText(/^Showing 251\.9 to 66 /);
   expect((await new AxeBuilder({ page }).analyze()).violations).toEqual([]);
-  await page.goto('./?species=tyrannosaurus');
+  await page.goto('./?from=70&to=66');
   await region(page).focus();
   await page.keyboard.press('Tab');
   expect((await new AxeBuilder({ page }).analyze()).violations).toEqual([]);

@@ -1,4 +1,4 @@
-import { formatMa } from '@/lib/geologic-time';
+import { formatMa, formatUncertainty } from '@/lib/geologic-time';
 import type { GeologicUnit } from '@/lib/schemas/geologic-time';
 
 /** One edge between geologic units, with the chart's uncertainty or approximate flag. */
@@ -6,14 +6,6 @@ export interface Boundary {
   ma: number;
   uncertaintyMa?: number;
   approximate?: boolean;
-}
-
-/**
- * Formats an uncertainty with two significant figures, so 0.024 stays "0.024" instead of rounding
- * to 0 as `formatMa` would.
- */
-export function formatUncertainty(ma: number): string {
-  return String(Number(ma.toPrecision(2)));
 }
 
 /** "~237" for approximate boundaries, "201.4 ±0.2" where the chart gives an uncertainty. */

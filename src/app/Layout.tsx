@@ -2,13 +2,19 @@ import { useEffect, useRef } from 'react';
 import { Link, NavLink, Outlet, useLocation } from 'react-router';
 import { geologicTime } from '@/lib/geologic-time';
 
-const navClass = ({ isActive }: { isActive: boolean }) =>
-  `inline-block py-2 ${isActive ? 'text-accent underline underline-offset-4' : 'hover:text-accent'}`;
+const navClassFor = (active: boolean) =>
+  `inline-block py-2 ${active ? 'text-accent underline underline-offset-4' : 'hover:text-accent'}`;
+const navClass = ({ isActive }: { isActive: boolean }) => navClassFor(isActive);
+
+/** The timeline and its species drawer are one page; opening the drawer isn't a page change. */
+function pageOf(pathname: string): string {
+  return pathname === '/' || pathname.startsWith('/species/') ? '/' : pathname;
+}
 
 /** Moves focus to <main> after client-side navigation so keyboard and screen-reader users land on the new page. */
 function useFocusMainOnNavigate() {
   const mainRef = useRef<HTMLElement>(null);
-  const { pathname } = useLocation();
+  const page = pageOf(useLocation().pathname);
   const isFirstRender = useRef(true);
   useEffect(() => {
     if (isFirstRender.current) {
@@ -16,13 +22,14 @@ function useFocusMainOnNavigate() {
       return;
     }
     mainRef.current?.focus();
-  }, [pathname]);
+  }, [page]);
   return mainRef;
 }
 
 export function Layout() {
   const { chart } = geologicTime;
   const mainRef = useFocusMainOnNavigate();
+  const onTimeline = pageOf(useLocation().pathname) === '/';
   return (
     <div className="mx-auto flex min-h-screen max-w-7xl flex-col gap-6 px-4 py-6">
       <a
@@ -38,9 +45,14 @@ export function Layout() {
         <nav aria-label="Main">
           <ul className="flex gap-4 text-sm">
             <li>
-              <NavLink to="/" end className={navClass}>
+              {/* A plain Link: NavLink drops aria-current when "/" isn't an exact match. */}
+              <Link
+                to="/"
+                className={navClassFor(onTimeline)}
+                aria-current={onTimeline ? 'page' : undefined}
+              >
                 Timeline
-              </NavLink>
+              </Link>
             </li>
             <li>
               <NavLink to="/about" className={navClass}>
