@@ -1,0 +1,206 @@
+{
+  "steps": [
+    {
+      "id": "first-dinosaurs",
+      "title": { "en": "The first dinosaurs" },
+      "text": {
+        "en": "Some 230 million years ago, in the Late Triassic, some of the earliest known dinosaurs lived in what is now Argentina. Their fossils come from the Ischigualasto Formation. Eoraptor was small, about 1.7 metres long. Herrerasaurus was an agile hunter that ran on two legs. Dinosaurs were already the main meat-eaters there, but they would not dominate life on land for millions of years."
+      },
+      "view": { "species": "eoraptor" },
+      "highlight": "eoraptor",
+      "sourceIds": ["martinez-2011", "sereno-novas-1992", "nhm-eoraptor"]
+    },
+    {
+      "id": "triassic-jurassic-extinction",
+      "title": { "en": "Disaster at the end of the Triassic" },
+      "text": {
+        "en": "About 201 million years ago, the Triassic ended with a mass extinction on land and in the sea. It began at the same time as enormous volcanic eruptions, called the Central Atlantic Magmatic Province, as the supercontinent Pangaea started to break apart. With many other animals gone, dinosaurs filled the empty places and went on to dominate Earth for the next 136 million years."
+      },
+      "view": { "boundaryAtBaseOf": "jurassic" },
+      "sourceIds": ["blackburn-2013", "nps-extinction-events"]
+    },
+    {
+      "id": "age-of-giants",
+      "title": { "en": "The age of giants" },
+      "text": {
+        "en": "The rocks of the Morrison Formation, in the western USA, formed in the Late Jurassic, about 157 to 150 million years ago. They hold immense long-necked plant-eaters called sauropods, such as Diplodocus, Apatosaurus and Brachiosaurus. Diplodocus may have been one of the longest dinosaurs, partly thanks to its very long, whip-like tail. Brachiosaurus, with front legs longer than its back legs, reached leaves in tall trees."
+      },
+      "view": { "unit": "late-jurassic" },
+      "highlight": "diplodocus",
+      "sourceIds": [
+        "nps-morrison",
+        "nhm-diplodocus",
+        "nhm-brachiosaurus",
+        "pbdb-brachiosaurus-altithorax-occs"
+      ]
+    },
+    {
+      "id": "feathers",
+      "title": { "en": "Dinosaurs with feathers" },
+      "text": {
+        "en": "About 125 million years ago, a small meat-eater called Sinosauropteryx lived in what is now north-eastern China. Its fossils, from the Yixian Formation, show a covering of thin, hair-like primitive feathers. Named in 1996, it was the first feathered dinosaur discovered that was not directly related to birds. Later finds, like Microraptor with feathered wings on its arms and legs, showed that feathers evolved before birds."
+      },
+      "view": { "species": "sinosauropteryx" },
+      "highlight": "sinosauropteryx",
+      "sourceIds": [
+        "nhm-sinosauropteryx",
+        "chen-1998",
+        "zhong-2021",
+        "nhm-microraptor",
+        "nhm-first-birds"
+      ]
+    },
+    {
+      "id": "the-asteroid",
+      "title": { "en": "The asteroid" },
+      "text": {
+        "en": "Tyrannosaurus rex lived in what is now Canada and the USA about 68 to 66 million years ago, at the very end of the Cretaceous. Then, 66 million years ago, an asteroid hit Chicxulub, in Mexico. Dust and debris blocked out sunlight and cooled the planet. All the non-bird dinosaurs died out. Only birds carried the dinosaur story on."
+      },
+      "view": { "unit": "maastrichtian" },
+      "highlight": "tyrannosaurus",
+      "sourceIds": ["nhm-tyrannosaurus", "schulte-2010", "nhm-asteroid"]
+    }
+  ],
+  "sources": [
+    {
+      "id": "martinez-2011",
+      "title": "A basal dinosaur from the dawn of the dinosaur era in southwestern Pangaea",
+      "authors": "Martinez RN, Sereno PC, Alcober OA, Colombi CE, Renne PR, Montañez IP, Currie BS",
+      "year": 2011,
+      "publisher": "Science",
+      "doi": "10.1126/science.1198467",
+      "url": "https://doi.org/10.1126/science.1198467",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "sereno-novas-1992",
+      "title": "The complete skull and skeleton of an early dinosaur",
+      "authors": "Sereno PC, Novas FE",
+      "year": 1992,
+      "publisher": "Science",
+      "doi": "10.1126/science.258.5085.1137",
+      "url": "https://doi.org/10.1126/science.258.5085.1137",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "nhm-eoraptor",
+      "title": "Eoraptor | Dino Directory",
+      "publisher": "Natural History Museum, London",
+      "url": "https://www.nhm.ac.uk/discover/dino-directory/eoraptor.html",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "blackburn-2013",
+      "title": "Zircon U-Pb geochronology links the end-Triassic extinction with the Central Atlantic Magmatic Province",
+      "authors": "Blackburn TJ, Olsen PE, Bowring SA, McLean NM, Kent DV, Puffer J, McHone G, Rasbury ET, Et-Touhami M",
+      "year": 2013,
+      "publisher": "Science",
+      "doi": "10.1126/science.1234204",
+      "url": "https://doi.org/10.1126/science.1234204",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "nps-extinction-events",
+      "title": "Extinction Events",
+      "publisher": "U.S. National Park Service",
+      "url": "https://home.nps.gov/subjects/fossils/extinction-events.htm",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "nps-morrison",
+      "title": "The Morrison Formation",
+      "publisher": "U.S. National Park Service",
+      "url": "https://www.nps.gov/subjects/fossils/the-morrison-formation.htm",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "nhm-diplodocus",
+      "title": "Diplodocus | Dino Directory",
+      "publisher": "Natural History Museum, London",
+      "url": "https://www.nhm.ac.uk/discover/dino-directory/diplodocus.html",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "nhm-brachiosaurus",
+      "title": "Brachiosaurus | Dino Directory",
+      "publisher": "Natural History Museum, London",
+      "url": "https://www.nhm.ac.uk/discover/dino-directory/brachiosaurus.html",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "pbdb-brachiosaurus-altithorax-occs",
+      "title": "Brachiosaurus altithorax occurrences (stratigraphy and location)",
+      "publisher": "Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Brachiosaurus%20altithorax&show=strat,loc",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "nhm-sinosauropteryx",
+      "title": "Sinosauropteryx | Dino Directory",
+      "publisher": "Natural History Museum, London",
+      "url": "https://www.nhm.ac.uk/discover/dino-directory/sinosauropteryx.html",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "chen-1998",
+      "title": "An exceptionally well-preserved theropod dinosaur from the Yixian Formation of China",
+      "authors": "Chen P, Dong Z, Zhen S",
+      "year": 1998,
+      "publisher": "Nature",
+      "doi": "10.1038/34356",
+      "url": "https://doi.org/10.1038/34356",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "zhong-2021",
+      "title": "High-precision geochronological constraints on the duration of 'Dinosaur Pompeii' and the Yixian Formation",
+      "authors": "Zhong Y, Huyskens MH, Yin QZ, Wang Y, Ma Q, Xu YG",
+      "year": 2021,
+      "publisher": "National Science Review",
+      "doi": "10.1093/nsr/nwab063",
+      "url": "https://doi.org/10.1093/nsr/nwab063",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "nhm-microraptor",
+      "title": "Microraptor | Dino Directory",
+      "publisher": "Natural History Museum, London",
+      "url": "https://www.nhm.ac.uk/discover/dino-directory/microraptor.html",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "nhm-first-birds",
+      "title": "What were the first birds like?",
+      "authors": "Emma Caton",
+      "publisher": "Natural History Museum, London",
+      "url": "https://www.nhm.ac.uk/discover/what-were-the-first-birds-like.html",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "nhm-tyrannosaurus",
+      "title": "Tyrannosaurus | Dino Directory",
+      "publisher": "Natural History Museum, London",
+      "url": "https://www.nhm.ac.uk/discover/dino-directory/tyrannosaurus.html",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "schulte-2010",
+      "title": "The Chicxulub asteroid impact and mass extinction at the Cretaceous-Paleogene boundary",
+      "authors": "Schulte P, Alegret L, Arenillas I, et al.",
+      "year": 2010,
+      "publisher": "Science",
+      "doi": "10.1126/science.1177265",
+      "url": "https://doi.org/10.1126/science.1177265",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "nhm-asteroid",
+      "title": "How an asteroid ended the age of the dinosaurs",
+      "authors": "Emily Osterloff",
+      "publisher": "Natural History Museum, London",
+      "url": "https://www.nhm.ac.uk/discover/how-an-asteroid-caused-extinction-of-dinosaurs.html",
+      "accessed": "2026-11-21"
+    }
+  ],
+  "lastReviewed": "2026-11-21"
+}

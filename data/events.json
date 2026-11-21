@@ -1,0 +1,107 @@
+{
+  "events": [
+    {
+      "id": "kpg-extinction",
+      "atTopOf": "cretaceous",
+      "title": { "en": "The end-Cretaceous mass extinction" },
+      "text": {
+        "en": "About 66 million years ago, an asteroid struck Chicxulub, in what is now Mexico. Scientists conclude that this impact triggered one of the three largest mass extinctions of the past 500 million years. Dust and debris brought darkness and cooling. All non-bird dinosaurs died out, along with pterosaurs and sea reptiles such as mosasaurs and plesiosaurs. Around 75% of Earth's animals vanished."
+      },
+      "sourceIds": ["schulte-2010", "nhm-asteroid", "nps-extinction-events"]
+    },
+    {
+      "id": "birds-are-dinosaurs",
+      "atTopOf": "cretaceous",
+      "title": { "en": "Birds are living dinosaurs" },
+      "text": {
+        "en": "Birds evolved from theropod dinosaurs during the Jurassic, about 165 to 150 million years ago. Archaeopteryx is often called the first bird, and feathered non-bird dinosaurs such as Sinosauropteryx and Microraptor show how closely the two are related. Most early birds died in the extinction too, but a few small, ground-dwelling lineages survived. Their descendants, more than 10,000 species, are the dinosaurs still alive today."
+      },
+      "sourceIds": [
+        "brusatte-2015",
+        "field-2018",
+        "nhm-first-birds",
+        "nhm-only-surviving",
+        "nhm-sinosauropteryx",
+        "nhm-microraptor"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "schulte-2010",
+      "title": "The Chicxulub asteroid impact and mass extinction at the Cretaceous-Paleogene boundary",
+      "authors": "Schulte P, Alegret L, Arenillas I, et al.",
+      "year": 2010,
+      "publisher": "Science",
+      "doi": "10.1126/science.1177265",
+      "url": "https://doi.org/10.1126/science.1177265",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "nhm-asteroid",
+      "title": "How an asteroid ended the age of the dinosaurs",
+      "authors": "Emily Osterloff",
+      "publisher": "Natural History Museum, London",
+      "url": "https://www.nhm.ac.uk/discover/how-an-asteroid-caused-extinction-of-dinosaurs.html",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "nps-extinction-events",
+      "title": "Extinction Events",
+      "publisher": "U.S. National Park Service",
+      "url": "https://home.nps.gov/subjects/fossils/extinction-events.htm",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "brusatte-2015",
+      "title": "The origin and diversification of birds",
+      "authors": "Brusatte SL, O'Connor JK, Jarvis ED",
+      "year": 2015,
+      "publisher": "Current Biology",
+      "doi": "10.1016/j.cub.2015.08.003",
+      "url": "https://doi.org/10.1016/j.cub.2015.08.003",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "field-2018",
+      "title": "Early evolution of modern birds structured by global forest collapse at the end-Cretaceous mass extinction",
+      "authors": "Field DJ, Bercovici A, Berv JS, Dunn R, Fastovsky DE, Lyson TR, Vajda V, Gauthier JA",
+      "year": 2018,
+      "publisher": "Current Biology",
+      "doi": "10.1016/j.cub.2018.04.062",
+      "url": "https://doi.org/10.1016/j.cub.2018.04.062",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "nhm-first-birds",
+      "title": "What were the first birds like?",
+      "authors": "Emma Caton",
+      "publisher": "Natural History Museum, London",
+      "url": "https://www.nhm.ac.uk/discover/what-were-the-first-birds-like.html",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "nhm-only-surviving",
+      "title": "Why are birds the only surviving dinosaurs?",
+      "authors": "Lisa Hendry",
+      "publisher": "Natural History Museum, London",
+      "url": "https://www.nhm.ac.uk/discover/why-are-birds-the-only-surviving-dinosaurs.html",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "nhm-sinosauropteryx",
+      "title": "Sinosauropteryx | Dino Directory",
+      "publisher": "Natural History Museum, London",
+      "url": "https://www.nhm.ac.uk/discover/dino-directory/sinosauropteryx.html",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "nhm-microraptor",
+      "title": "Microraptor | Dino Directory",
+      "publisher": "Natural History Museum, London",
+      "url": "https://www.nhm.ac.uk/discover/dino-directory/microraptor.html",
+      "accessed": "2026-11-21"
+    }
+  ],
+  "lastReviewed": "2026-11-21"
+}

@@ -19,8 +19,11 @@ import {
   type TimelineFilters,
   type TimelineHandle,
 } from '@/features/timeline';
+import { EventNotes, StoryPanel } from '@/features/story';
+import { eraColor, eraThemeFor, reachesEndCretaceous } from '@/lib/era-theme';
 import { formatMaRounded, unitById } from '@/lib/geologic-time';
 import { primarySpeciesSlug, species } from '@/lib/species';
+import { events, story, windowForView } from '@/lib/stories';
 import {
   matchesAttributeFilters,
   matchesSpeciesFilters,
@@ -91,7 +94,15 @@ export default function TimelinePage() {
         ? 'filters'
         : undefined;
   const primary = items.find((s) => s.slug === primarySpeciesSlug);
-  const highlighted = selected ? (hidden ? undefined : selected.slug) : primarySpeciesSlug;
+  const tourHighlight = view.tour === undefined ? undefined : story.steps[view.tour - 1]?.highlight;
+  const highlighted = selected
+    ? hidden
+      ? undefined
+      : selected.slug
+    : // During the tour only the step's own species is highlighted (none on some steps).
+      view.tour !== undefined
+      ? tourHighlight
+      : primarySpeciesSlug;
 
   const timelineFilters = useMemo<TimelineFilters>(
     () => ({
@@ -118,26 +129,50 @@ export default function TimelinePage() {
 
   /** Writes filters and/or window into the query string, keeping the path. */
   const writeView = useCallback(
-    (update: { filters?: SpeciesFilters; window?: MaRange }) => {
+    (
+      update: { filters?: SpeciesFilters; window?: MaRange; tour?: number | null },
+      options: { push?: boolean } = {},
+    ) => {
       const current = parseViewState(new URLSearchParams(latestSearch.current));
+      const win = update.window ?? current.window;
+      const tour = update.tour === null ? undefined : (update.tour ?? current.tour);
       const next = queryString(
         serializeViewState({
           filters: update.filters ?? current.filters,
-          ...((update.window ?? current.window) ? { window: update.window ?? current.window } : {}),
+          ...(win ? { window: win } : {}),
+          ...(tour === undefined ? {} : { tour }),
         }),
       );
       if (next === latestSearch.current) return;
       latestSearch.current = next;
-      void navigate({ search: next }, { replace: true, preventScrollReset: true });
+      void navigate({ search: next }, { replace: options.push !== true, preventScrollReset: true });
     },
     [navigate],
   );
+
+  // The window as of the last settle, for content that depends on what is in view.
+  const [settledWindow, setSettledWindow] = useState<MaRange | undefined>(initialRange);
+
+  // The guided tour (`?tour=N`): each step moves the timeline and may highlight a species.
+  const tourIndex = view.tour === undefined ? undefined : view.tour - 1;
+  const tourStep = tourIndex === undefined ? undefined : story.steps[tourIndex];
+  useEffect(() => {
+    if (!tourStep) return;
+    const range = windowForView(tourStep.view, windowAround, (s) =>
+      items.find((it) => it.slug === s),
+    );
+    if (range) timelineRef.current?.zoomTo(range);
+    // Each step moves the timeline once, when it opens.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [tourStep?.id]);
 
   // The last window the timeline reported (or opened on), to tell Back/Forward moves apart.
   const shownWindow = useRef<MaRange | undefined>(initialRange);
   const onViewChange = useCallback(
     (range: MaRange) => {
       shownWindow.current = range;
+      setSettledWindow(range);
+      document.documentElement.style.setProperty('--sc-era', eraColor(eraThemeFor(range)));
       writeView({ window: range });
     },
     [writeView],
@@ -172,6 +207,14 @@ export default function TimelinePage() {
       timelineRef.current?.showSpecies(slug);
     }
   }, [slug, reveal, location.key, navigationType]);
+
+  // The period tint belongs to the timeline page; other pages show the plain background.
+  useEffect(
+    () => () => {
+      document.documentElement.style.removeProperty('--sc-era');
+    },
+    [],
+  );
 
   // Back and Forward restore the window stored in that history entry.
   useEffect(() => {
@@ -213,6 +256,8 @@ export default function TimelinePage() {
   }, [slug]);
 
   const [previewSlug, setPreviewSlug] = useState<string | null>(null);
+  // The end-Cretaceous notes appear once the view reaches the last stage before 66 Ma.
+  const showEventNotes = settledWindow !== undefined && reachesEndCretaceous(settledWindow);
   // The card under the timeline: the marker under the pointer or focus, else the highlighted
   // species if the filters show it.
   const previewed = items.find(
@@ -233,10 +278,37 @@ export default function TimelinePage() {
   return (
     <section aria-labelledby="home-title" className="flex flex-col gap-4">
       {!selected && <title>Scrollosaurus: dinosaurs on a timeline of the Mesozoic</title>}
-      <h1 id="home-title" className="font-display text-xl">
-        The {mesozoic.name}, {formatMaRounded(mesozoic.baseMa)} to {formatMaRounded(mesozoic.topMa)}{' '}
-        million years ago
-      </h1>
+      <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-2">
+        <h1 id="home-title" className="font-display text-xl">
+          The {mesozoic.name}, {formatMaRounded(mesozoic.baseMa)} to{' '}
+          {formatMaRounded(mesozoic.topMa)} million years ago
+        </h1>
+        {tourIndex === undefined && (
+          <button
+            type="button"
+            className="sc-button sc-button--primary"
+            onClick={() => {
+              writeView({ tour: 1 }, { push: true });
+            }}
+            data-testid="start-tour"
+          >
+            Take the tour
+          </button>
+        )}
+      </div>
+
+      {tourIndex !== undefined && tourStep && (
+        <StoryPanel
+          story={story}
+          step={tourIndex}
+          onStep={(n) => {
+            writeView({ tour: n + 1 }, { push: true });
+          }}
+          onClose={() => {
+            writeView({ tour: null });
+          }}
+        />
+      )}
 
       <div className="sc-controls">
         <SearchBox
@@ -266,6 +338,8 @@ export default function TimelinePage() {
         onViewChange={onViewChange}
         onPreview={setPreviewSlug}
       />
+
+      {showEventNotes && <EventNotes events={events} />}
 
       {previewed && (
         <section aria-label="Species preview" data-testid="species-preview">
