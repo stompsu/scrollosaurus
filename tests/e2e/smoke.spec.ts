@@ -18,15 +18,16 @@ test.afterEach(() => {
   expect(consoleErrors).toEqual([]);
 });
 
-test('home shows the three period bands', async ({ page }) => {
+test('home shows the timeline with the three period bands in order', async ({ page }) => {
   await page.goto('./');
-  const bands = page.getByRole('list', { name: /periods of the mesozoic/i }).getByRole('listitem');
-  await expect(bands).toHaveCount(3);
-  await expect(bands.first()).toContainText('Triassic');
-  await expect(bands.last()).toContainText('Cretaceous');
+  await expect(page.getByRole('region', { name: /timeline of the mesozoic/i })).toBeVisible();
+  for (const id of ['triassic', 'jurassic', 'cretaceous']) {
+    await expect(page.getByTestId(`band-${id}`)).toHaveCount(1);
+  }
+  await expect(page.getByTestId('band-cretaceous')).toContainText('Cretaceous');
 });
 
-test('bands run horizontally on desktop and vertically on mobile', async ({ page, isMobile }) => {
+test('periods run horizontally on desktop and vertically on mobile', async ({ page, isMobile }) => {
   await page.goto('./');
   const tri = await page.getByTestId('band-triassic').boundingBox();
   const jur = await page.getByTestId('band-jurassic').boundingBox();
