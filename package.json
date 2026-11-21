@@ -19,6 +19,7 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "test:e2e": "playwright test",
+    "perf": "PERF=1 playwright test",
     "validate:data": "tsx scripts/validate-data.ts",
     "images": "tsx scripts/images.ts"
   },

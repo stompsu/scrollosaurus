@@ -3,13 +3,16 @@
  * redirects directories without a trailing slash (301, as Pages does), resolves directories to
  * index.html, and answers unknown paths with 404.html and status 404.
  * Unlike `vite preview`, it has no SPA fallback, so missing per-route HTML shows up as a 404.
+ * DIST_DIR overrides the served directory (the perf build lives outside dist/).
  */
 import { createReadStream } from 'node:fs';
 import { stat } from 'node:fs/promises';
 import { createServer } from 'node:http';
-import { extname, join, normalize } from 'node:path';
+import { extname, join, normalize, resolve as resolvePath } from 'node:path';
 
-const DIST = join(import.meta.dirname, '..', 'dist');
+const DIST = process.env.DIST_DIR
+  ? resolvePath(process.env.DIST_DIR)
+  : join(import.meta.dirname, '..', 'dist');
 const BASE = process.env.BASE_PATH ?? '/scrollosaurus/';
 const PORT = Number(process.env.PORT ?? 4173);
 
@@ -66,5 +69,5 @@ createServer((req, res) => {
     createReadStream(path).pipe(res);
   });
 }).listen(PORT, () => {
-  console.log(`Serving dist/ like GitHub Pages at http://localhost:${PORT}${BASE}`);
+  console.log(`Serving ${DIST} like GitHub Pages at http://localhost:${PORT}${BASE}`);
 });
