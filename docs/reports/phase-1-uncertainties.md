@@ -2,7 +2,7 @@
 
 - **Date:** 2026-11-20
 - **Scope:** 34 seed records (30 dinosaurs, 4 non-dinosaurs), `data/groups.json`, ICS epochs and stages.
-- **Status:** awaiting owner review (Phase 1 exit criterion).
+- **Status:** reviewed by the owner on 2026-11-21 (decisions below).
 
 `pnpm validate:data` prints the live list of flagged fields; this report adds the judgement calls
 behind them and the points that need a decision.
@@ -17,23 +17,20 @@ behind them and the points that need a decision.
 - No Wikipedia sources are cited. Sources the curators could not open, or could only see the
   abstract of, are **not** cited for any value (listed at the end).
 
-## Decisions for you
+## Owner decisions (2026-11-21)
 
-1. **Herrerasaurus placement.** Studies disagree on whether herrerasaurids are early theropods
-   (Nesbitt et al. 2009; Martinez et al. 2011), near sauropodomorphs (Baron et al. 2017) or outside
-   both (PBDB). `Herrerasauridae` sits directly under Dinosauria and is offered in the group
-   filter. Alternative: put it under Theropoda.
-2. **Sinosauropteryx family (primary species).** Kept in `Compsognathidae`. Qiu et al. 2025 propose
-   `Sinosauropterygidae` (PBDB already uses it); Hendrickx 2025 disputes this. Renaming later only
-   changes one group id.
-3. **Wingspan for pterosaurs.** The schema has length, mass and height only. Pteranodon and
-   Quetzalcoatlus have no size at all, although wingspan (about 10 m for Quetzalcoatlus, Witton &
-   Naish 2008) is the measure people know. Proposal: add an optional `size.wingspanM` in Phase 2.
-4. **Size outliers to accept or drop:**
-   - _Iguanodon_ mass 4–15 t: NHM's 4 t vs 15 t from limb-bone scaling (Benson et al. 2014).
-   - _Pachycephalosaurus_ 3 m / 450 kg: the only verified figure (NHM); likely low.
-   - Many sizes come from the NHM Dino Directory alone (method not stated), stored as `[v, v]`
-     with a note.
+1. **Herrerasaurus → Theropoda.** `Herrerasauridae` now sits under Theropoda, following Sereno &
+   Novas 1992, Nesbitt et al. 2009 and Martinez et al. 2011. The record still flags the placement
+   as debated (Baron et al. 2017 and PBDB disagree).
+2. **Sinosauropteryx family:** kept as `Compsognathidae`, flagged as debated.
+3. **Wingspan:** added as an optional, sourced `size.wingspanM`. The owner proposed 7 m for
+   Pteranodon and 12 m for Quetzalcoatlus; the recorded values are what verified sources give:
+   - Pteranodon **5.5–7.25 m** (Field Museum 2018; Witton & Habib 2010, citing Bennett 2001). The
+     7 m figure is supported.
+   - Quetzalcoatlus **10–11.9 m** (Witton & Naish 2008; Witton & Habib 2010; NPS, 36–39 ft).
+     **12 m is not supported** as an estimate: it appears only as a span Langston assumed for mass
+     calculations, as reported by Witton & Naish 2008. The record's note says so.
+4. **Size outliers:** Iguanodon (4–15 t) and Pachycephalosaurus (450 kg) kept, flagged as uncertain.
 
 ## Flagged fields (43)
 
@@ -48,7 +45,7 @@ behind them and the points that need a decision.
 | Diplodocus         | taxonomy                  | _D. carnegii_ proposed as type species; no ICZN ruling verified.                 |
 | Eoraptor           | group                     | Described as a theropod; now usually a sauropodomorph (Martinez 2011).           |
 | Gallimimus         | diet                      | Herbivory, omnivory and filter-feeding all proposed.                             |
-| Herrerasaurus      | group, mass               | Placement unresolved (see above); no verified mass.                              |
+| Herrerasaurus      | group, mass               | Placed in Theropoda (owner decision); still debated. No verified mass.           |
 | Iguanodon          | timeRange, mass           | Older referrals excluded (Gasulla et al. 2022); mass 4–15 t depending on method. |
 | Mamenchisaurus     | length, mass              | Only genus-level figures exist; none for _M. constructus_.                       |
 | Microraptor        | taxonomy                  | Some diet studies used _M. gui_; synonymy not checked.                           |
@@ -59,8 +56,8 @@ behind them and the points that need a decision.
 | Plateosaurus       | mass                      | NHM's 4 t looks like an outlier; method-based estimate not verified.             |
 | Plesiosaurus       | length, mass              | No verified figures.                                                             |
 | Psittacosaurus     | timeRange, length, mass   | Type locality dated only "Early Cretaceous"; sizes genus-level.                  |
-| Pteranodon         | length, mass, time, group | Wingspan not modelled; stage-level ages; family not verified.                    |
-| Quetzalcoatlus     | length, mass, diet        | Wingspan not modelled; no species-specific mass; ground forager vs water prober. |
+| Pteranodon         | length, mass, time, group | No verified body length; stage-level ages; family not verified.                  |
+| Quetzalcoatlus     | length, mass, diet        | No verified body length or species mass; ground forager vs water prober.         |
 | Shuvuuia           | diet, mass                | Insectivory inferred from anatomy; no mass estimate.                             |
 | Sinosauropteryx    | group, length             | Family debate (see above); genus-level length only.                              |
 | Spinosaurus        | diet, length              | Underwater hunter vs wader; 14 m vs over 15 m reconstructions.                   |

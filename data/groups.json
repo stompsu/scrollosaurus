@@ -33,10 +33,10 @@
     {
       "id": "herrerasauridae",
       "name": "Herrerasauridae",
-      "parent": "dinosauria",
+      "parent": "theropoda",
       "isDinosaur": true,
       "filter": "subgroup",
-      "sourceIds": ["pbdb-herrerasauridae", "nesbitt-2009", "baron-2017"]
+      "sourceIds": ["pbdb-herrerasauridae", "nesbitt-2009"]
     },
     {
       "id": "coelophysoidea",

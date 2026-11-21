@@ -27,7 +27,13 @@
     "note": "PBDB occurrences: Santonian (Niobrara) to Early–Middle Campanian (Pierre Shale). Ages are ICS stage bounds (Santonian base 85.7 Ma, Campanian top 72.2 Ma), so the range is broader than the fossils themselves."
   },
   "periods": ["cretaceous"],
-  "size": {},
+  "size": {
+    "wingspanM": {
+      "value": [5.5, 7.25],
+      "sourceIds": ["field-museum-2018", "witton-habib-2010"],
+      "note": "Field Museum models have 18 ft (about 5.5 m) wingspans. Witton & Habib (2010), citing Bennett (2001), give about 7 m for the largest pteranodontids and about 7.25 m for the largest Pteranodon; these figures are for the genus, not specifically P. longiceps."
+    }
+  },
   "locations": [
     {
       "continent": "north-america",
@@ -49,16 +55,16 @@
   },
   "summary": {
     "text": {
-      "en": "Pteranodon was a flying reptile called a pterosaur, neither a dinosaur nor a bird. It had no teeth, and museum models give it wings about 5.5 metres (18 feet) across. It was common in North America in the Late Cretaceous, and its fossils come from Kansas, South Dakota and Wyoming. It probably ate fish."
+      "en": "Pteranodon was a flying reptile called a pterosaur, neither a dinosaur nor a bird. It had no teeth, and museum models give it wings about 5.5 metres (18 feet) across; the largest known Pteranodon reached about 7 metres. It was common in North America in the Late Cretaceous, and its fossils come from Kansas, South Dakota and Wyoming. It probably ate fish."
     },
-    "sourceIds": ["field-museum-2018", "pbdb-occurrences", "pbdb-taxon"]
+    "sourceIds": ["field-museum-2018", "witton-habib-2010", "pbdb-occurrences", "pbdb-taxon"]
   },
   "famous": true,
   "images": [],
   "uncertain": [
     {
       "field": "size.lengthM",
-      "note": "Wingspan, the usual size measure for pterosaurs, is not modelled in the schema; no verified body length found."
+      "note": "No verified body length found."
     },
     {
       "field": "size.massKg",
@@ -95,7 +101,17 @@
       "publisher": "Field Museum",
       "url": "https://fieldmuseum.org/blog/meet-pterosaur-flock",
       "accessed": "2026-11-20"
+    },
+    {
+      "id": "witton-habib-2010",
+      "title": "On the size and flight diversity of giant pterosaurs, the use of birds as pterosaur analogues and comments on pterosaur flightlessness",
+      "authors": "Witton MP, Habib MB",
+      "year": 2010,
+      "publisher": "PLoS ONE",
+      "doi": "10.1371/journal.pone.0013982",
+      "url": "https://doi.org/10.1371/journal.pone.0013982",
+      "accessed": "2026-11-21"
     }
   ],
-  "lastReviewed": "2026-11-20"
+  "lastReviewed": "2026-11-21"
 }

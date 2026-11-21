@@ -92,13 +92,17 @@ describe('schema edge cases', () => {
     const raw = speciesSchema.parse(Object.values(files)[0]);
     const bad = {
       ...raw,
-      size: { massKg: { value: [1, 2], sourceIds: ['nope'] } },
+      size: {
+        massKg: { value: [1, 2], sourceIds: ['nope'] },
+        wingspanM: { value: [5, 6], sourceIds: ['nope3'] },
+      },
       funFacts: [{ text: { en: 'x' }, sourceIds: ['nope2'] }],
     };
     const r = speciesSchema.safeParse(bad);
     const m = r.success ? [] : r.error.issues.map((i) => i.message);
     expect(m).toContainEqual(expect.stringMatching(/size.massKg cites unknown source "nope"/));
     expect(m).toContainEqual(expect.stringMatching(/funFacts.0 cites unknown source "nope2"/));
+    expect(m).toContainEqual(expect.stringMatching(/size.wingspanM cites unknown source "nope3"/));
   });
 
   it('rejects malformed site settings', () => {

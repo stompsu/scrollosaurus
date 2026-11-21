@@ -5,8 +5,7 @@ import { slugSchema, sourceIdsSchema, sourceSchema } from './common';
  * The group tree used for classification and filters. Names are scientific and never translated.
  * Roots are either `dinosauria` or a non-dinosaur group (pterosaurs, marine reptiles).
  * `filter` marks the nodes offered in the group filter: "clade" for top-level groups
- * (Theropoda, Sauropodomorpha, Ornithischia), "subgroup" for the ones nested under them, or for a
- * group attached straight to Dinosauria because its clade is unresolved (Herrerasauridae).
+ * (Theropoda, Sauropodomorpha, Ornithischia), "subgroup" for the ones nested under them.
  */
 export const groupNodeSchema = z
   .object({

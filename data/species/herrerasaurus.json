@@ -9,7 +9,7 @@
     "sourceIds": ["nhm"]
   },
   "group": "herrerasauridae",
-  "groupSourceIds": ["pbdb-taxon", "martinez-2011"],
+  "groupSourceIds": ["sereno-novas-1992", "martinez-2011", "pbdb-taxon"],
   "isDinosaur": true,
   "taxonomy": {
     "status": "valid"
@@ -65,7 +65,7 @@
   "uncertain": [
     {
       "field": "group",
-      "note": "Where herrerasaurids sit in the dinosaur tree is unresolved. Sereno & Novas (1992) and Martinez et al. (2011) recover Herrerasaurus as a basal theropod; here Herrerasauridae is placed directly under Dinosauria."
+      "note": "Placed in Theropoda, following Sereno & Novas (1992) and Martinez et al. (2011), which recover Herrerasaurus as a basal theropod. Other analyses place herrerasaurids near sauropodomorphs or outside both groups, so the placement is still debated."
     },
     {
       "field": "size.massKg",
@@ -115,5 +115,5 @@
       "accessed": "2026-11-20"
     }
   ],
-  "lastReviewed": "2026-11-20"
+  "lastReviewed": "2026-11-21"
 }

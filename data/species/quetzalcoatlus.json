@@ -27,7 +27,13 @@
     "note": "Maastrichtian (Javelina Formation). Ages are ICS Maastrichtian stage bounds from PBDB occurrences; popular sources give about 67 Ma (Field Museum) or about 70 Ma (UT News)."
   },
   "periods": ["cretaceous"],
-  "size": {},
+  "size": {
+    "wingspanM": {
+      "value": [10, 11.9],
+      "sourceIds": ["witton-naish-2008", "witton-habib-2010", "nps-big-bend"],
+      "note": "About 10 m (Witton & Naish 2008); 10–11 m (Witton & Habib 2010); 36–39 ft, about 11.0–11.9 m (NPS). Larger spans of 11–12 m and 15.5 m appear in Witton & Naish (2008) only as Langston's scenarios for mass estimates, not as measurements."
+    }
+  },
   "locations": [
     {
       "continent": "north-america",
@@ -60,7 +66,7 @@
   "uncertain": [
     {
       "field": "size.lengthM",
-      "note": "Wingspan is not modelled in the schema (about 10 m per Witton & Naish 2008; 36–39 ft per NPS); no verified body length found."
+      "note": "No verified body length found."
     },
     {
       "field": "size.massKg",
@@ -110,7 +116,17 @@
       "publisher": "University of Texas at Austin (UT News)",
       "url": "https://news.utexas.edu/2021/12/08/worlds-largest-pterosaur-leaped-aloft-to-fly",
       "accessed": "2026-11-20"
+    },
+    {
+      "id": "witton-habib-2010",
+      "title": "On the size and flight diversity of giant pterosaurs, the use of birds as pterosaur analogues and comments on pterosaur flightlessness",
+      "authors": "Witton MP, Habib MB",
+      "year": 2010,
+      "publisher": "PLoS ONE",
+      "doi": "10.1371/journal.pone.0013982",
+      "url": "https://doi.org/10.1371/journal.pone.0013982",
+      "accessed": "2026-11-21"
     }
   ],
-  "lastReviewed": "2026-11-20"
+  "lastReviewed": "2026-11-21"
 }

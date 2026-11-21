@@ -34,6 +34,7 @@ export const UNCERTAIN_FIELDS = [
   'size.lengthM',
   'size.massKg',
   'size.heightM',
+  'size.wingspanM',
   'diet',
   'locations',
   'discovery',
@@ -126,6 +127,8 @@ export const speciesSchema = z
         lengthM: measuredSchema.optional(),
         massKg: measuredSchema.optional(),
         heightM: measuredSchema.optional(),
+        /** Wing tip to wing tip, for flying animals (pterosaurs). */
+        wingspanM: measuredSchema.optional(),
       })
       .strict(),
     locations: z
@@ -234,6 +237,7 @@ export function citations(s: CitableSpecies): [string, readonly string[]][] {
     ['size.lengthM', s.size.lengthM?.sourceIds ?? []],
     ['size.massKg', s.size.massKg?.sourceIds ?? []],
     ['size.heightM', s.size.heightM?.sourceIds ?? []],
+    ['size.wingspanM', s.size.wingspanM?.sourceIds ?? []],
     ['summary', s.summary.sourceIds],
     ...(s.funFacts ?? []).map((f, i): [string, string[]] => [`funFacts.${String(i)}`, f.sourceIds]),
   ];

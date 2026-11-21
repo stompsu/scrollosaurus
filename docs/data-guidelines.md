@@ -27,18 +27,18 @@ is missing. Scientific names are never translated.
    Paleobiology Database. Wikipedia only points to them. Give each source a short local `id`.
 3. **Fill the record.** Every claim cites its sources by id:
 
-   | Field                                   | Cites with                             |
-   | --------------------------------------- | -------------------------------------- |
-   | `nameMeaning` (etymology)               | `nameMeaning.sourceIds`                |
-   | `group` (placement in `groups.json`)    | `groupSourceIds`                       |
-   | `taxonomy` when dubious or contested    | `taxonomy.sourceIds` + `note`          |
-   | `diet` + `confidence`                   | `diet.sourceIds` (+ `note` if debated) |
-   | `timeRange` (first/last appearance, Ma) | `timeRange.sourceIds`                  |
-   | `size.lengthM`, `massKg`, `heightM`     | each value's `sourceIds`               |
-   | each `locations[]` entry                | its own `sourceIds`                    |
-   | `discovery` (author, year)              | `discovery.sourceIds`                  |
-   | `summary` (every claim in it)           | `summary.sourceIds`                    |
-   | each `funFacts[]` entry                 | its own `sourceIds`                    |
+   | Field                                            | Cites with                             |
+   | ------------------------------------------------ | -------------------------------------- |
+   | `nameMeaning` (etymology)                        | `nameMeaning.sourceIds`                |
+   | `group` (placement in `groups.json`)             | `groupSourceIds`                       |
+   | `taxonomy` when dubious or contested             | `taxonomy.sourceIds` + `note`          |
+   | `diet` + `confidence`                            | `diet.sourceIds` (+ `note` if debated) |
+   | `timeRange` (first/last appearance, Ma)          | `timeRange.sourceIds`                  |
+   | `size.lengthM`, `massKg`, `heightM`, `wingspanM` | each value's `sourceIds`               |
+   | each `locations[]` entry                         | its own `sourceIds`                    |
+   | `discovery` (author, year)                       | `discovery.sourceIds`                  |
+   | `summary` (every claim in it)                    | `summary.sourceIds`                    |
+   | each `funFacts[]` entry                          | its own `sourceIds`                    |
 
 4. **Numbers.**
    - Sizes are `[min, max]` ranges. A single published value is `[v, v]`. An open-ended figure
