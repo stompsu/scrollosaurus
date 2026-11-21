@@ -8,6 +8,8 @@ interface StoryPanelProps {
   step: number;
   onStep: (step: number) => void;
   onClose: () => void;
+  /** Move focus to the step heading when the panel opens (later step changes always do). */
+  focusOnOpen?: boolean;
 }
 
 /**
@@ -15,13 +17,19 @@ interface StoryPanelProps {
  * stays usable, and each step moves it. Focus moves to the step's heading when the step changes, so
  * screen readers read the new step.
  */
-export function StoryPanel({ story, step, onStep, onClose }: StoryPanelProps) {
+export function StoryPanel({ story, step, onStep, onClose, focusOnOpen = true }: StoryPanelProps) {
   const current = story.steps[step];
   const headingRef = useRef<HTMLHeadingElement>(null);
   const total = story.steps.length;
 
+  const firstStep = useRef(true);
   useEffect(() => {
+    const opening = firstStep.current;
+    firstStep.current = false;
+    if (opening && !focusOnOpen) return;
     headingRef.current?.focus();
+    // Only when the step changes; focusOnOpen matters on the first run alone.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [step]);
 
   if (!current) return null;

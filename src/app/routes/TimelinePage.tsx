@@ -157,6 +157,15 @@ export default function TimelinePage() {
   // The window as of the last settle, for content that depends on what is in view.
   const [settledWindow, setSettledWindow] = useState<MaRange | undefined>(initialRange);
 
+  // Each tour step is its own history entry, stored with the window that step shows, so Back and
+  // Forward land on the right view even before the zoom to it has settled.
+  const goToStep = (index: number) => {
+    const target = story.steps[index];
+    const range =
+      target && windowForView(target.view, windowAround, (s) => items.find((it) => it.slug === s));
+    writeView({ tour: index + 1, ...(range ? { window: range } : {}) }, { push: true });
+  };
+
   // When the tour closes, focus goes back to the button that starts it.
   const startTourRef = useRef<HTMLButtonElement>(null);
   const wasTouring = useRef(false);
@@ -307,7 +316,7 @@ export default function TimelinePage() {
             type="button"
             className="sc-button sc-button--primary"
             onClick={() => {
-              writeView({ tour: 1 }, { push: true });
+              goToStep(0);
             }}
             data-testid="start-tour"
           >
@@ -318,10 +327,12 @@ export default function TimelinePage() {
 
       {tourIndex !== undefined && tourStep && (
         <StoryPanel
+          // A tour link opened from outside leaves focus where the page starts (the skip link).
+          focusOnOpen={navigationType !== NavigationType.Pop}
           story={story}
           step={tourIndex}
           onStep={(n) => {
-            writeView({ tour: n + 1 }, { push: true });
+            goToStep(n);
           }}
           onClose={() => {
             // A new entry, so Back after closing returns to the last step instead of an earlier one.

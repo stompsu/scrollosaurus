@@ -149,3 +149,15 @@ test('closing the tour returns focus to its button; Back reopens the last step',
   await page.goBack();
   await expect(panel).toContainText('step 3 of 5');
 });
+
+test('Back after quick tour clicks shows that step with its own window', async ({ page }) => {
+  await page.goto('./?tour=1');
+  const panel = page.getByTestId('story-panel');
+  await panel.getByRole('button', { name: 'Next' }).click();
+  await panel.getByRole('button', { name: 'Next' }).click();
+  await expect(panel).toContainText('step 3 of 5');
+  await page.goBack();
+  await expect(panel).toContainText('step 2 of 5');
+  // Step 2 is the Triassic–Jurassic boundary.
+  await expect(windowLabel(page)).toContainText('Triassic to Jurassic');
+});

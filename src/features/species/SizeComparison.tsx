@@ -141,7 +141,10 @@ export function SizeComparison({ genus, groupPath, size, references }: SizeCompa
         <li>
           <i>{genus}</i>: {formatRange(measured.value, 'm')}{' '}
           {what === 'length' ? 'long' : 'wingspan'}
-          {hi > lo ? '; drawn at the upper estimate, the striped bar shows the range' : ''}.
+          {hi > lo
+            ? '; drawn at the upper estimate, the lighter part of the bar shows the range'
+            : ''}
+          .
         </li>
         {person && <li>Adult person: {String(person.heightM)} m tall (a reference figure).</li>}
         {bus && showBus && (

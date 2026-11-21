@@ -9,8 +9,8 @@ on any page. The table below is rewritten by each local run.
 
 | Page                    | Performance | Accessibility | Best practices | SEO | LCP   | TBT   | CLS |
 | ----------------------- | ----------- | ------------- | -------------- | --- | ----- | ----- | --- |
-| /                       | 96          | 100           | 100            | 100 | 2.6 s | 80 ms | 0   |
-| /species/tyrannosaurus/ | 96          | 100           | 100            | 100 | 2.7 s | 50 ms | 0   |
+| /                       | 96          | 100           | 100            | 100 | 2.7 s | 80 ms | 0   |
+| /species/tyrannosaurus/ | 94          | 100           | 100            | 100 | 3.1 s | 50 ms | 0   |
 | /credits/               | 100         | 100           | 100            | 100 | 0.9 s | 0 ms  | 0   |
 
 <!-- lighthouse:end -->
