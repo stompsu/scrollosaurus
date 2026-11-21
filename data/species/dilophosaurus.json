@@ -4,7 +4,8 @@
   "genus": "Dilophosaurus",
   "nameMeaning": {
     "text": {
-      "en": "two-crested lizard"
+      "en": "two-crested lizard",
+      "pl": "jaszczur o dwóch grzebieniach"
     },
     "sourceIds": ["nhm"]
   },
@@ -23,19 +24,28 @@
     "startMa": 199.5,
     "endMa": 184.2,
     "sourceIds": ["marsh-rowe-2020", "pbdb-occs"],
-    "note": "Marsh & Rowe (2020) give the age as Sinemurian-Pliensbachian (Kayenta Formation); the Ma values are the ICS v2024/12 stage boundaries. Two PBDB records of cf. Dilophosaurus are dated Hettangian-Sinemurian."
+    "note": {
+      "en": "Marsh & Rowe (2020) give the age as Sinemurian-Pliensbachian (Kayenta Formation); the Ma values are the ICS v2024/12 stage boundaries. Two PBDB records of cf. Dilophosaurus are dated Hettangian-Sinemurian.",
+      "pl": "Marsh i Rowe (2020) podają wiek synemur–pliensbach (formacja Kayenta); wartości w mln lat to granice pięter według ICS v2024/12. Dwa rekordy cf. Dilophosaurus w PBDB są datowane na hettang–synemur."
+    }
   },
   "periods": ["jurassic"],
   "size": {
     "lengthM": {
       "value": [7, 7],
       "sourceIds": ["nhm"],
-      "note": "Single published figure (NHM Dino Directory)."
+      "note": {
+        "en": "Single published figure (NHM Dino Directory).",
+        "pl": "Jedyna opublikowana wartość (NHM Dino Directory)."
+      }
     },
     "massKg": {
       "value": [400, 400],
       "sourceIds": ["nhm"],
-      "note": "Single published estimate (NHM Dino Directory); method not stated."
+      "note": {
+        "en": "Single published estimate (NHM Dino Directory); method not stated.",
+        "pl": "Jedyne opublikowane oszacowanie (NHM Dino Directory); metody nie podano."
+      }
     }
   },
   "locations": [
@@ -53,20 +63,23 @@
   },
   "summary": {
     "text": {
-      "en": "Dilophosaurus was a meat-eating dinosaur about 7 metres long that lived in what is now Arizona in the Early Jurassic, roughly 200 to 184 million years ago. It is named for the pair of crests on top of its head, which probably helped it recognise its own kind or attract a mate, and were likely too weak for fighting. It was the largest land animal known from North America at that time."
+      "en": "Dilophosaurus was a meat-eating dinosaur about 7 metres long that lived in what is now Arizona in the Early Jurassic, roughly 200 to 184 million years ago. It is named for the pair of crests on top of its head, which probably helped it recognise its own kind or attract a mate, and were likely too weak for fighting. It was the largest land animal known from North America at that time.",
+      "pl": "Dilophosaurus był mięsożernym dinozaurem o długości około 7 metrów, który żył na terenie dzisiejszej Arizony we wczesnej jurze, mniej więcej 200–184 miliony lat temu. Jego nazwa pochodzi od pary grzebieni na szczycie głowy, które prawdopodobnie pomagały mu rozpoznawać osobniki własnego gatunku lub zwabiać partnera i były raczej zbyt słabe do walki. Był największym zwierzęciem lądowym znanym z Ameryki Północnej z tamtego okresu."
     },
     "sourceIds": ["nhm", "marsh-rowe-2020"]
   },
   "funFacts": [
     {
       "text": {
-        "en": "Its fossils were first thought to be a new species of Megalosaurus. Only after a skull with crests was found did it get its own name in 1970."
+        "en": "Its fossils were first thought to be a new species of Megalosaurus. Only after a skull with crests was found did it get its own name in 1970.",
+        "pl": "Jego skamieniałości początkowo uznano za nowy gatunek Megalosaurus. Dopiero gdy znaleziono czaszkę z grzebieniami, w 1970 roku otrzymał własną nazwę."
       },
       "sourceIds": ["nhm", "marsh-rowe-2020"]
     },
     {
       "text": {
-        "en": "It was the largest animal known to have lived on land in North America during the Early Jurassic."
+        "en": "It was the largest animal known to have lived on land in North America during the Early Jurassic.",
+        "pl": "Było to największe znane zwierzę żyjące na lądzie w Ameryce Północnej we wczesnej jurze."
       },
       "sourceIds": ["marsh-rowe-2020"]
     }
@@ -77,7 +90,8 @@
       "commonsFile": "File:Dilophosaurus 2020.jpg",
       "kind": "life-reconstruction",
       "alt": {
-        "en": "Life reconstruction of Dilophosaurus wetherilli, a two-legged predator with a pair of crests on its head."
+        "en": "Life reconstruction of Dilophosaurus wetherilli, a two-legged predator with a pair of crests on its head.",
+        "pl": "Rekonstrukcja przyżyciowa Dilophosaurus wetherilli – dwunożnego drapieżnika z parą grzebieni na głowie."
       }
     }
   ],

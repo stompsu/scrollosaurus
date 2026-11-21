@@ -3,7 +3,7 @@
   "scientificName": "Sinosauropteryx prima",
   "genus": "Sinosauropteryx",
   "nameMeaning": {
-    "text": { "en": "Chinese lizard wing" },
+    "text": { "en": "Chinese lizard wing", "pl": "chińskie jaszczurze skrzydło" },
     "sourceIds": ["nhm-sinosauropteryx"]
   },
   "group": "compsognathidae",
@@ -14,7 +14,10 @@
     "value": "carnivore",
     "confidence": "established",
     "sourceIds": ["chen-1998", "nhm-sinosauropteryx", "hendrickx-2025", "qiu-2025"],
-    "note": "Stomach contents are preserved in the larger of the two specimens described in 1998. Mammal jaws once reported inside a 'Sinosauropteryx' (NGMC/GMV 2124) are now attributed to a small tyrannosauroid (Qiu et al. 2025), so they are not used here."
+    "note": {
+      "en": "Stomach contents are preserved in the larger of the two specimens described in 1998. Mammal jaws once reported inside a 'Sinosauropteryx' (NGMC/GMV 2124) are now attributed to a small tyrannosauroid (Qiu et al. 2025), so they are not used here.",
+      "pl": "Zawartość żołądka zachowała się w większym z dwóch okazów opisanych w 1998 roku. Szczęki ssaków, o których niegdyś informowano, że znajdują się wewnątrz „Sinosauropteryx” (NGMC/GMV 2124), przypisuje się obecnie małemu tyranozauroidowi (Qiu i in. 2025), dlatego nie są tu brane pod uwagę."
+    }
   },
   "timeRange": {
     "startMa": 125.755,
@@ -22,19 +25,28 @@
     "endMa": 124.122,
     "endUncertaintyMa": 0.048,
     "sourceIds": ["zhong-2021", "pbdb-sinosauropteryx-prima-occs", "hendrickx-2025"],
-    "note": "S. prima comes from the Jianshangou bed of the Yixian Formation near Sihetun (PBDB). The range is the U-Pb bracket for the whole Yixian Formation in the Jin-Yang basin (Zhong et al. 2021); the Jianshangou unit lies inside it. PBDB's stage-based range is wider (125.77 to 119.57 Ma)."
+    "note": {
+      "en": "S. prima comes from the Jianshangou bed of the Yixian Formation near Sihetun (PBDB). The range is the U-Pb bracket for the whole Yixian Formation in the Jin-Yang basin (Zhong et al. 2021); the Jianshangou unit lies inside it. PBDB's stage-based range is wider (125.77 to 119.57 Ma).",
+      "pl": "S. prima pochodzi z warstwy Jianshangou formacji Yixian w pobliżu Sihetun (PBDB). Podany zakres to przedział datowania U-Pb dla całej formacji Yixian w basenie Jin-Yang (Zhong i in. 2021); jednostka Jianshangou mieści się w tym przedziale. Zakres w PBDB, oparty na piętrach, jest szerszy (od 125,77 do 119,57 mln lat temu)."
+    }
   },
   "periods": ["cretaceous"],
   "size": {
     "lengthM": {
       "value": [1.1, 1.1],
       "sourceIds": ["nhm-sinosauropteryx", "qiu-2025"],
-      "note": "Museum figure for the genus. The 1.2 m holotype of the second species, S. lingyuanensis, is described as the largest known Sinosauropteryx specimen (Qiu et al. 2025), so S. prima specimens are smaller."
+      "note": {
+        "en": "Museum figure for the genus. The 1.2 m holotype of the second species, S. lingyuanensis, is described as the largest known Sinosauropteryx specimen (Qiu et al. 2025), so S. prima specimens are smaller.",
+        "pl": "Wartość podawana przez muzeum dla całego rodzaju. Mierzący 1,2 m holotyp drugiego gatunku, S. lingyuanensis, opisano jako największy znany okaz Sinosauropteryx (Qiu i in. 2025), więc okazy S. prima są mniejsze."
+      }
     },
     "massKg": {
       "value": [0.99, 0.99],
       "sourceIds": ["benson-2014"],
-      "note": "Single estimate from limb-bone robustness scaling; standard error 0.135 log10(kg)."
+      "note": {
+        "en": "Single estimate from limb-bone robustness scaling; standard error 0.135 log10(kg).",
+        "pl": "Pojedyncze oszacowanie na podstawie skalowania masywności kości kończyn; błąd standardowy 0,135 log10(kg)."
+      }
     }
   },
   "locations": [
@@ -52,7 +64,8 @@
   },
   "summary": {
     "text": {
-      "en": "Sinosauropteryx was a small meat-eater, about a metre long, that lived around 125 million years ago in what is now north-eastern China. Its body was covered in thin, hair-like primitive feathers. Named in 1996, it was the first dinosaur other than a bird found with feathers. A tiny lizard was found in the stomach of one fossil. Fossil pigments suggest a dark back, pale belly, banded tail and a dark 'bandit mask' across its eyes."
+      "en": "Sinosauropteryx was a small meat-eater, about a metre long, that lived around 125 million years ago in what is now north-eastern China. Its body was covered in thin, hair-like primitive feathers. Named in 1996, it was the first dinosaur other than a bird found with feathers. A tiny lizard was found in the stomach of one fossil. Fossil pigments suggest a dark back, pale belly, banded tail and a dark 'bandit mask' across its eyes.",
+      "pl": "Sinosauropteryx był małym mięsożercą długości około metra, który żył mniej więcej 125 milionów lat temu na terenie dzisiejszych północno-wschodnich Chin. Jego ciało pokrywały cienkie, podobne do włosów prymitywne pióra. Nazwany w 1996 roku, był pierwszym znalezionym z piórami dinozaurem, który nie był ptakiem. W żołądku jednej ze skamieniałości znaleziono malutką jaszczurkę. Skamieniałe barwniki sugerują ciemny grzbiet, jasny brzuch, prążkowany ogon i ciemną „maskę bandyty” na oczach."
     },
     "sourceIds": [
       "nhm-sinosauropteryx",
@@ -64,13 +77,15 @@
   "funFacts": [
     {
       "text": {
-        "en": "Pigment traces on S. prima fossils show countershading (dark above, light below), a banded tail and a 'bandit mask' around the eyes, a pattern that suggests it lived in fairly open habitats."
+        "en": "Pigment traces on S. prima fossils show countershading (dark above, light below), a banded tail and a 'bandit mask' around the eyes, a pattern that suggests it lived in fairly open habitats.",
+        "pl": "Ślady barwników na skamieniałościach S. prima pokazują cieniowanie przeciwstawne (ciemny wierzch, jasny spód), prążkowany ogon i „maskę bandyty” wokół oczu – taki wzór sugeruje, że zwierzę żyło w dość otwartym środowisku."
       },
       "sourceIds": ["smithwick-2017"]
     },
     {
       "text": {
-        "en": "The famous reddish-brown colour reconstruction from 2010 was based on specimen IVPP V 14202. In 2025 that specimen became the holotype of a separate genus, Huadanosaurus."
+        "en": "The famous reddish-brown colour reconstruction from 2010 was based on specimen IVPP V 14202. In 2025 that specimen became the holotype of a separate genus, Huadanosaurus.",
+        "pl": "Słynna rudobrązowa rekonstrukcja ubarwienia z 2010 roku powstała na podstawie okazu IVPP V 14202. W 2025 roku okaz ten został holotypem osobnego rodzaju – Huadanosaurus."
       },
       "sourceIds": ["zhang-2010", "qiu-2025"]
     }
@@ -81,18 +96,25 @@
       "commonsFile": "File:Sinosauropteryx GMV 2124.jpg",
       "kind": "fossil",
       "alt": {
-        "en": "Cast of the Sinosauropteryx fossil GMV 2124 from the Yixian Formation of Liaoning, China, at the State Museum of Natural History Karlsruhe."
+        "en": "Cast of the Sinosauropteryx fossil GMV 2124 from the Yixian Formation of Liaoning, China, at the State Museum of Natural History Karlsruhe.",
+        "pl": "Odlew skamieniałości Sinosauropteryx GMV 2124 z formacji Yixian w prowincji Liaoning w Chinach, w Państwowym Muzeum Historii Naturalnej w Karlsruhe."
       }
     }
   ],
   "uncertain": [
     {
       "field": "group",
-      "note": "Kept in Compsognathidae, the traditional placement. Qiu et al. (2025) group the Jehol compsognathid-like theropods in a separate clade, Sinosauropterygidae, because Compsognathus falls outside it in one of their analyses; PBDB also lists Sinosauropterygidae. Hendrickx (2025) notes a 2024 study suggesting compsognathids may be an artificial group of juveniles of other theropods."
+      "note": {
+        "en": "Kept in Compsognathidae, the traditional placement. Qiu et al. (2025) group the Jehol compsognathid-like theropods in a separate clade, Sinosauropterygidae, because Compsognathus falls outside it in one of their analyses; PBDB also lists Sinosauropterygidae. Hendrickx (2025) notes a 2024 study suggesting compsognathids may be an artificial group of juveniles of other theropods.",
+        "pl": "Pozostawiony w Compsognathidae, zgodnie z tradycyjną klasyfikacją. Qiu i in. (2025) łączą podobne do kompsognatydów teropody z Jehol w osobny klad, Sinosauropterygidae, ponieważ w jednej z ich analiz Compsognathus znajduje się poza nim; PBDB również wymienia Sinosauropterygidae. Hendrickx (2025) wspomina o badaniu z 2024 roku, według którego kompsognatydy mogą być sztuczną grupą młodocianych osobników innych teropodów."
+      }
     },
     {
       "field": "size.lengthM",
-      "note": "No peer-reviewed length for S. prima specimens was verified; only a museum figure for the genus is given."
+      "note": {
+        "en": "No peer-reviewed length for S. prima specimens was verified; only a museum figure for the genus is given.",
+        "pl": "Nie udało się zweryfikować żadnej recenzowanej długości okazów S. prima; podano jedynie wartość muzealną dla całego rodzaju."
+      }
     }
   ],
   "sources": [

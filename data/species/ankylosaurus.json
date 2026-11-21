@@ -4,7 +4,8 @@
   "genus": "Ankylosaurus",
   "nameMeaning": {
     "text": {
-      "en": "Fused lizard"
+      "en": "Fused lizard",
+      "pl": "zrośnięty jaszczur"
     },
     "sourceIds": ["nhm-ankylosaurus"]
   },
@@ -23,19 +24,28 @@
     "startMa": 68,
     "endMa": 66,
     "sourceIds": ["nhm-ankylosaurus"],
-    "note": "NHM gives 68–66 Ma. All PBDB occurrences of A. magniventris are Maastrichtian (stage 72.2–66 Ma)."
+    "note": {
+      "en": "NHM gives 68–66 Ma. All PBDB occurrences of A. magniventris are Maastrichtian (stage 72.2–66 Ma).",
+      "pl": "NHM podaje 68–66 mln lat temu. Wszystkie występowania A. magniventris w PBDB pochodzą z mastrychtu (piętro 72,2–66 mln lat temu)."
+    }
   },
   "periods": ["cretaceous"],
   "size": {
     "lengthM": {
       "value": [8, 8],
       "sourceIds": ["nhm-ankylosaurus"],
-      "note": "Single museum estimate (NHM). Ankylosaurus is known from fragmentary remains, so length is extrapolated."
+      "note": {
+        "en": "Single museum estimate (NHM). Ankylosaurus is known from fragmentary remains, so length is extrapolated.",
+        "pl": "Jedyne oszacowanie muzealne (NHM). Ankylosaurus jest znany z fragmentarycznych szczątków, więc jego długość jest ekstrapolowana."
+      }
     },
     "massKg": {
       "value": [8000, 8000],
       "sourceIds": ["nhm-ankylosaurus"],
-      "note": "Single museum estimate (NHM); mass estimates vary widely between methods."
+      "note": {
+        "en": "Single museum estimate (NHM); mass estimates vary widely between methods.",
+        "pl": "Jedyne oszacowanie muzealne (NHM); szacunki masy bardzo się różnią w zależności od metody."
+      }
     }
   },
   "locations": [
@@ -65,7 +75,8 @@
   },
   "summary": {
     "text": {
-      "en": "Ankylosaurus was a plant-eater covered in bony armour plates, with a heavy club at the end of its tail that it probably swung from side to side to defend itself. It lived in western North America at the very end of the Cretaceous, about 68 to 66 million years ago. No complete skeleton has been found, and it is known from more fragmentary remains than some of its smaller relatives."
+      "en": "Ankylosaurus was a plant-eater covered in bony armour plates, with a heavy club at the end of its tail that it probably swung from side to side to defend itself. It lived in western North America at the very end of the Cretaceous, about 68 to 66 million years ago. No complete skeleton has been found, and it is known from more fragmentary remains than some of its smaller relatives.",
+      "pl": "Ankylosaurus był roślinożercą pokrytym kostnymi płytami pancerza, z ciężką buławą na końcu ogona, którą prawdopodobnie wymachiwał na boki, aby się bronić. Żył w zachodniej części Ameryki Północnej u samego schyłku kredy, około 68–66 milionów lat temu. Nie znaleziono kompletnego szkieletu, a znany jest z bardziej fragmentarycznych szczątków niż niektórzy z jego mniejszych krewnych."
     },
     "sourceIds": ["nhm-ankylosaurus", "pbdb-occurrences", "arbour-mallon-2017"]
   },
@@ -74,7 +85,10 @@
     {
       "commonsFile": "File:Ankylosaur head - cast - Custer County Montana - Museum of the Rockies - 2013-07-08.jpg",
       "kind": "skull",
-      "alt": { "en": "Cast of an Ankylosaurus skull on display in a museum." }
+      "alt": {
+        "en": "Cast of an Ankylosaurus skull on display in a museum.",
+        "pl": "Odlew czaszki Ankylosaurus wystawiony w muzeum."
+      }
     }
   ],
   "sources": [

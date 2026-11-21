@@ -4,7 +4,8 @@
   "genus": "Triceratops",
   "nameMeaning": {
     "text": {
-      "en": "Three-horned face"
+      "en": "Three-horned face",
+      "pl": "twarz z trzema rogami"
     },
     "sourceIds": ["nhm-triceratops"]
   },
@@ -23,19 +24,28 @@
     "startMa": 68,
     "endMa": 66,
     "sourceIds": ["nhm-triceratops"],
-    "note": "NHM gives 68–66 Ma. PBDB occurrences of T. horridus are almost all Maastrichtian (stage 72.2–66 Ma); one PBDB record dated Late Campanian is not used here."
+    "note": {
+      "en": "NHM gives 68–66 Ma. PBDB occurrences of T. horridus are almost all Maastrichtian (stage 72.2–66 Ma); one PBDB record dated Late Campanian is not used here.",
+      "pl": "NHM podaje 68–66 mln lat temu. Występowania T. horridus w PBDB pochodzą niemal wyłącznie z mastrychtu (piętro 72,2–66 mln lat temu); jednego rekordu PBDB datowanego na późny kampan tu nie uwzględniono."
+    }
   },
   "periods": ["cretaceous"],
   "size": {
     "lengthM": {
       "value": [9, 9],
       "sourceIds": ["nhm-triceratops"],
-      "note": "Single museum estimate (NHM)."
+      "note": {
+        "en": "Single museum estimate (NHM).",
+        "pl": "Jedyne oszacowanie muzealne (NHM)."
+      }
     },
     "massKg": {
       "value": [10000, 10000],
       "sourceIds": ["nhm-triceratops"],
-      "note": "Single museum estimate (NHM); mass estimates vary widely between methods."
+      "note": {
+        "en": "Single museum estimate (NHM); mass estimates vary widely between methods.",
+        "pl": "Jedyne oszacowanie muzealne (NHM); szacunki masy bardzo się różnią w zależności od metody."
+      }
     }
   },
   "locations": [
@@ -55,12 +65,16 @@
   "discovery": {
     "describedBy": "Marsh",
     "year": 1889,
-    "note": "Marsh first described the species as Ceratops horridus and moved it to his new genus Triceratops the same year.",
+    "note": {
+      "en": "Marsh first described the species as Ceratops horridus and moved it to his new genus Triceratops the same year.",
+      "pl": "Marsh najpierw opisał ten gatunek jako Ceratops horridus, a jeszcze w tym samym roku przeniósł go do swojego nowego rodzaju Triceratops."
+    },
     "sourceIds": ["pbdb-taxon", "nhm-triceratops"]
   },
   "summary": {
     "text": {
-      "en": "Triceratops was a huge plant eater with three horns, a parrot-like beak and a wide bony frill. About nine metres long, it lived in western North America about 68 to 66 million years ago, at the very end of the Cretaceous. It shared its world with Tyrannosaurus, and one fossil shows a horn that had been bitten off and later healed."
+      "en": "Triceratops was a huge plant eater with three horns, a parrot-like beak and a wide bony frill. About nine metres long, it lived in western North America about 68 to 66 million years ago, at the very end of the Cretaceous. It shared its world with Tyrannosaurus, and one fossil shows a horn that had been bitten off and later healed.",
+      "pl": "Triceratops był ogromnym roślinożercą z trzema rogami, dziobem przypominającym papuzi i szeroką kostną kryzą. Miał około dziewięciu metrów długości i żył w zachodniej części Ameryki Północnej około 68–66 milionów lat temu, u samego schyłku kredy. Dzielił swój świat z Tyrannosaurus, a jedna ze skamieniałości ma odgryziony róg, który później się zagoił."
     },
     "sourceIds": ["nhm-triceratops", "pbdb-occurrences"]
   },
@@ -70,7 +84,8 @@
       "commonsFile": "File:Triceratops horridus - Cleveland Museum of Natural History (34800619235).jpg",
       "kind": "skeleton-mount",
       "alt": {
-        "en": "Cast of a Triceratops horridus skeleton on exhibit at the Cleveland Museum of Natural History."
+        "en": "Cast of a Triceratops horridus skeleton on exhibit at the Cleveland Museum of Natural History.",
+        "pl": "Odlew szkieletu Triceratops horridus na wystawie w Cleveland Museum of Natural History."
       }
     }
   ],

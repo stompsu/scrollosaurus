@@ -3,7 +3,7 @@
   "scientificName": "Microraptor zhaoianus",
   "genus": "Microraptor",
   "nameMeaning": {
-    "text": { "en": "tiny plunderer" },
+    "text": { "en": "tiny plunderer", "pl": "malutki grabieżca" },
     "sourceIds": ["nhm-microraptor"]
   },
   "group": "dromaeosauridae",
@@ -11,32 +11,41 @@
   "isDinosaur": true,
   "taxonomy": {
     "status": "valid",
-    "note": "Cryptovolans pauli is now considered the same animal as Microraptor.",
+    "note": {
+      "en": "Cryptovolans pauli is now considered the same animal as Microraptor.",
+      "pl": "Cryptovolans pauli uważa się obecnie za to samo zwierzę co Microraptor."
+    },
     "sourceIds": ["nhm-microraptor"]
   },
   "diet": {
     "value": "carnivore",
     "confidence": "established",
     "sourceIds": ["oconnor-2019", "oconnor-2011", "xing-2013", "nhm-microraptor"],
-    "note": "An opportunistic generalist: gut contents include a lizard (in M. zhaoianus), and a bird, fish and mammal remains in other Microraptor specimens (two of those studies were on specimens identified as M. gui)."
+    "note": {
+      "en": "An opportunistic generalist: gut contents include a lizard (in M. zhaoianus), and a bird, fish and mammal remains in other Microraptor specimens (two of those studies were on specimens identified as M. gui).",
+      "pl": "Oportunistyczny generalista: zawartość przewodu pokarmowego obejmuje jaszczurkę (u M. zhaoianus) oraz ptaka, ryby i szczątki ssaków u innych okazów Microraptor (dwa z tych badań dotyczyły okazów oznaczonych jako M. gui)."
+    }
   },
   "timeRange": {
     "startMa": 121.4,
     "endMa": 113.2,
     "sourceIds": ["pbdb-microraptor-zhaoianus-occs", "xu-2000"],
-    "note": "Aptian, from PBDB occurrence ages for M. zhaoianus in the Jiufotang Formation of Liaoning (stage-level dates)."
+    "note": {
+      "en": "Aptian, from PBDB occurrence ages for M. zhaoianus in the Jiufotang Formation of Liaoning (stage-level dates).",
+      "pl": "Apt, według wieku występowań M. zhaoianus w formacji Jiufotang w prowincji Liaoning, podanego w PBDB (daty na poziomie pięter)."
+    }
   },
   "periods": ["cretaceous"],
   "size": {
     "lengthM": {
       "value": [0.8, 0.8],
       "sourceIds": ["nhm-microraptor"],
-      "note": "Museum figure."
+      "note": { "en": "Museum figure.", "pl": "Wartość muzealna." }
     },
     "massKg": {
       "value": [1, 1],
       "sourceIds": ["nhm-microraptor"],
-      "note": "Museum figure."
+      "note": { "en": "Museum figure.", "pl": "Wartość muzealna." }
     }
   },
   "locations": [
@@ -54,7 +63,8 @@
   },
   "summary": {
     "text": {
-      "en": "Microraptor was a crow-sized feathered dinosaur from the Early Cretaceous of north-eastern China, about 120 million years ago. It had wings on both its arms and its legs, and it could probably glide or even fly. Its feathers were black with a glossy, iridescent sheen. About 300 specimens are known, and some still hold their last meals: a bird, fish, a lizard and mammal bones."
+      "en": "Microraptor was a crow-sized feathered dinosaur from the Early Cretaceous of north-eastern China, about 120 million years ago. It had wings on both its arms and its legs, and it could probably glide or even fly. Its feathers were black with a glossy, iridescent sheen. About 300 specimens are known, and some still hold their last meals: a bird, fish, a lizard and mammal bones.",
+      "pl": "Microraptor był pierzastym dinozaurem wielkości wrony z wczesnej kredy północno-wschodnich Chin, sprzed około 120 milionów lat. Miał skrzydła zarówno na przednich, jak i na tylnych kończynach i prawdopodobnie potrafił szybować, a nawet latać. Jego pióra były czarne, z lśniącym, opalizującym połyskiem. Znanych jest około 300 okazów, a w niektórych wciąż zachowały się ostatnie posiłki: ptak, ryby, jaszczurka i kości ssaków."
     },
     "sourceIds": [
       "nhm-microraptor",
@@ -68,13 +78,15 @@
   "funFacts": [
     {
       "text": {
-        "en": "When it was named in 2000, Microraptor was the first fully grown non-bird dinosaur known to be smaller than Archaeopteryx."
+        "en": "When it was named in 2000, Microraptor was the first fully grown non-bird dinosaur known to be smaller than Archaeopteryx.",
+        "pl": "Gdy w 2000 roku nadano mu nazwę, Microraptor był pierwszym znanym w pełni dorosłym nieptasim dinozaurem mniejszym niż Archaeopteryx."
       },
       "sourceIds": ["xu-2000"]
     },
     {
       "text": {
-        "en": "Tiny pigment structures in a Microraptor fossil suggest its plumage was mostly iridescent, with a glossy sheen."
+        "en": "Tiny pigment structures in a Microraptor fossil suggest its plumage was mostly iridescent, with a glossy sheen.",
+        "pl": "Maleńkie struktury barwnikowe w skamieniałości Microraptor sugerują, że jego upierzenie było w większości opalizujące, z lśniącym połyskiem."
       },
       "sourceIds": ["li-2012"]
     }
@@ -85,14 +97,18 @@
       "commonsFile": "File:M zhaoianus.png",
       "kind": "life-reconstruction",
       "alt": {
-        "en": "Life reconstruction of Microraptor zhaoianus, a small feathered dinosaur with long feathers on both its arms and legs."
+        "en": "Life reconstruction of Microraptor zhaoianus, a small feathered dinosaur with long feathers on both its arms and legs.",
+        "pl": "Rekonstrukcja przyżyciowa Microraptor zhaoianus – małego pierzastego dinozaura z długimi piórami zarówno na przednich, jak i na tylnych kończynach."
       }
     }
   ],
   "uncertain": [
     {
       "field": "taxonomy",
-      "note": "Two of the diet studies cited here used specimens identified as Microraptor gui. Whether M. gui is a separate species from M. zhaoianus was not checked against a primary source for this record."
+      "note": {
+        "en": "Two of the diet studies cited here used specimens identified as Microraptor gui. Whether M. gui is a separate species from M. zhaoianus was not checked against a primary source for this record.",
+        "pl": "Dwa z cytowanych tu badań diety dotyczyły okazów oznaczonych jako Microraptor gui. Na potrzeby tego wpisu nie sprawdzono w źródle pierwotnym, czy M. gui jest gatunkiem odrębnym od M. zhaoianus."
+      }
     }
   ],
   "sources": [

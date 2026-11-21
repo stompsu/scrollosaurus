@@ -3,7 +3,7 @@
   "scientificName": "Iguanodon bernissartensis",
   "genus": "Iguanodon",
   "nameMeaning": {
-    "text": { "en": "iguana tooth" },
+    "text": { "en": "iguana tooth", "pl": "ząb legwana" },
     "sourceIds": ["nhm-iguanodon"]
   },
   "group": "ornithopoda",
@@ -19,19 +19,25 @@
     "startMa": 125.77,
     "endMa": 119.57,
     "sourceIds": ["pbdb-iguanodon-bernissartensis-occs", "gasulla-2022"],
-    "note": "Barremian to early Aptian, from PBDB occurrence ages of the best-dated finds: the Bernissart type locality in Belgium, the upper Barremian Arcillas de Morella Formation and the lower Aptian Capas Rojas in Spain, and Nehden in Germany. PBDB also lists older referrals (Hauterivian England, Berriasian Germany, late Tithonian France) that are left out here, because many assignments to this species need revision (Gasulla et al. 2022)."
+    "note": {
+      "en": "Barremian to early Aptian, from PBDB occurrence ages of the best-dated finds: the Bernissart type locality in Belgium, the upper Barremian Arcillas de Morella Formation and the lower Aptian Capas Rojas in Spain, and Nehden in Germany. PBDB also lists older referrals (Hauterivian England, Berriasian Germany, late Tithonian France) that are left out here, because many assignments to this species need revision (Gasulla et al. 2022).",
+      "pl": "Od barremu do wczesnego aptu, według wieku występowań najlepiej datowanych znalezisk w PBDB: miejsca typowego w Bernissart w Belgii, formacji Arcillas de Morella z górnego barremu i Capas Rojas z dolnego aptu w Hiszpanii oraz Nehden w Niemczech. PBDB wymienia też starsze przypisania (hoteryw w Anglii, berias w Niemczech, późny tyton we Francji), które tu pominięto, ponieważ wiele przypisań do tego gatunku wymaga rewizji (Gasulla i in. 2022)."
+    }
   },
   "periods": ["cretaceous"],
   "size": {
     "lengthM": {
       "value": [10, 10],
       "sourceIds": ["nhm-iguanodon"],
-      "note": "Museum figure."
+      "note": { "en": "Museum figure.", "pl": "Wartość muzealna." }
     },
     "massKg": {
       "value": [4000, 15000],
       "sourceIds": ["nhm-iguanodon", "benson-2014"],
-      "note": "Estimates differ widely by method: 4,000 kg (museum figure) versus 15,000 kg from limb-bone scaling (Benson et al. 2014)."
+      "note": {
+        "en": "Estimates differ widely by method: 4,000 kg (museum figure) versus 15,000 kg from limb-bone scaling (Benson et al. 2014).",
+        "pl": "Oszacowania bardzo się różnią w zależności od metody: 4000 kg (wartość muzealna) wobec 15 000 kg ze skalowania kości kończyn (Benson i in. 2014)."
+      }
     }
   },
   "locations": [
@@ -62,7 +68,10 @@
   "discovery": {
     "describedBy": "Boulenger",
     "year": 1881,
-    "note": "PBDB attributes the species to Boulenger (1881); the NHM Dino Directory credits Boulenger and van Beneden.",
+    "note": {
+      "en": "PBDB attributes the species to Boulenger (1881); the NHM Dino Directory credits Boulenger and van Beneden.",
+      "pl": "Według PBDB autorem gatunku jest Boulenger (1881); według Dino Directory muzeum NHM autorami są Boulenger i van Beneden."
+    },
     "sourceIds": [
       "nhm-iguanodon",
       "pbdb-iguanodon-bernissartensis-occs",
@@ -71,14 +80,16 @@
   },
   "summary": {
     "text": {
-      "en": "Iguanodon was a big plant-eater that lived in Europe in the Early Cretaceous, about 125 million years ago. It could probably walk on two legs or on all fours, and it had a large spike on each hand, probably for defence against predators. This species is named after Bernissart in Belgium, where it was first found in a coal seam. Fossils have also been found in Spain, England and Germany."
+      "en": "Iguanodon was a big plant-eater that lived in Europe in the Early Cretaceous, about 125 million years ago. It could probably walk on two legs or on all fours, and it had a large spike on each hand, probably for defence against predators. This species is named after Bernissart in Belgium, where it was first found in a coal seam. Fossils have also been found in Spain, England and Germany.",
+      "pl": "Iguanodon był dużym roślinożercą, który żył w Europie we wczesnej kredzie, około 125 milionów lat temu. Prawdopodobnie mógł chodzić na dwóch nogach lub na czterech, a na każdej dłoni miał duży kolec, służący prawdopodobnie do obrony przed drapieżnikami. Nazwa tego gatunku pochodzi od Bernissart w Belgii, gdzie po raz pierwszy znaleziono go w pokładzie węgla. Skamieniałości znaleziono także w Hiszpanii, Anglii i Niemczech."
     },
     "sourceIds": ["nhm-iguanodon", "pbdb-iguanodon-bernissartensis-occs", "gasulla-2022"]
   },
   "funFacts": [
     {
       "text": {
-        "en": "The way its head muscles were arranged suggests Iguanodon had a very long tongue."
+        "en": "The way its head muscles were arranged suggests Iguanodon had a very long tongue.",
+        "pl": "Układ mięśni głowy sugeruje, że Iguanodon miał bardzo długi język."
       },
       "sourceIds": ["nhm-iguanodon"]
     }
@@ -89,18 +100,25 @@
       "commonsFile": "File:Iguanodon de Bernissart IRSNB 01.JPG",
       "kind": "fossil",
       "alt": {
-        "en": "Fossil skeleton of Iguanodon bernissartensis from Bernissart, displayed in a four-legged pose in a museum."
+        "en": "Fossil skeleton of Iguanodon bernissartensis from Bernissart, displayed in a four-legged pose in a museum.",
+        "pl": "Skamieniały szkielet Iguanodon bernissartensis z Bernissart, ustawiony w muzeum w pozie czworonożnej."
       }
     }
   ],
   "uncertain": [
     {
       "field": "timeRange",
-      "note": "Many fossils have been referred to I. bernissartensis across Western Europe, some likely wrongly (Gasulla et al. 2022). The range uses only the Barremian to early Aptian records; including all PBDB referrals would push the start back to the late Tithonian."
+      "note": {
+        "en": "Many fossils have been referred to I. bernissartensis across Western Europe, some likely wrongly (Gasulla et al. 2022). The range uses only the Barremian to early Aptian records; including all PBDB referrals would push the start back to the late Tithonian.",
+        "pl": "Wiele skamieniałości z Europy Zachodniej przypisano do I. bernissartensis, niektóre zapewne błędnie (Gasulla i in. 2022). Zakres opiera się tylko na rekordach od barremu do wczesnego aptu; uwzględnienie wszystkich przypisań z PBDB przesunęłoby jego początek do późnego tytonu."
+      }
     },
     {
       "field": "size.massKg",
-      "note": "Estimates span 4 to 15 t depending on method: 4,000 kg (NHM museum figure) versus 15,000 kg from limb-bone scaling (Benson et al. 2014)."
+      "note": {
+        "en": "Estimates span 4 to 15 t depending on method: 4,000 kg (NHM museum figure) versus 15,000 kg from limb-bone scaling (Benson et al. 2014).",
+        "pl": "Oszacowania wahają się od 4 do 15 t w zależności od metody: 4000 kg (wartość muzealna NHM) wobec 15 000 kg ze skalowania kości kończyn (Benson i in. 2014)."
+      }
     }
   ],
   "sources": [

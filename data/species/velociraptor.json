@@ -4,7 +4,8 @@
   "genus": "Velociraptor",
   "nameMeaning": {
     "text": {
-      "en": "quick plunderer"
+      "en": "quick plunderer",
+      "pl": "szybki grabieżca"
     },
     "sourceIds": ["nhm"]
   },
@@ -23,19 +24,28 @@
     "startMa": 83.6,
     "endMa": 72.2,
     "sourceIds": ["pbdb-occs"],
-    "note": "PBDB dates nearly all V. mongoliensis occurrences (Djadokhta Formation, Mongolia) only to the Campanian; the Ma values are the ICS v2024/12 Campanian stage boundaries. Single outlying referrals from Kazakhstan (Coniacian-Santonian) and China are not used. NHM gives 74-70 Ma."
+    "note": {
+      "en": "PBDB dates nearly all V. mongoliensis occurrences (Djadokhta Formation, Mongolia) only to the Campanian; the Ma values are the ICS v2024/12 Campanian stage boundaries. Single outlying referrals from Kazakhstan (Coniacian-Santonian) and China are not used. NHM gives 74-70 Ma.",
+      "pl": "PBDB datuje niemal wszystkie występowania V. mongoliensis (formacja Djadokhta, Mongolia) jedynie na kampan; wartości w mln lat to granice piętra kampanu według ICS v2024/12. Pojedyncze odstające przypisania z Kazachstanu (koniak–santon) i z Chin nie zostały uwzględnione. NHM podaje 74–70 mln lat temu."
+    }
   },
   "periods": ["cretaceous"],
   "size": {
     "lengthM": {
       "value": [1.8, 1.8],
       "sourceIds": ["nhm"],
-      "note": "Single published figure (NHM Dino Directory)."
+      "note": {
+        "en": "Single published figure (NHM Dino Directory).",
+        "pl": "Jedyna opublikowana wartość (NHM Dino Directory)."
+      }
     },
     "massKg": {
       "value": [7, 7],
       "sourceIds": ["nhm"],
-      "note": "Single published estimate (NHM Dino Directory); method not stated."
+      "note": {
+        "en": "Single published estimate (NHM Dino Directory); method not stated.",
+        "pl": "Jedyne opublikowane oszacowanie (NHM Dino Directory); metody nie podano."
+      }
     }
   },
   "locations": [
@@ -53,14 +63,16 @@
   },
   "summary": {
     "text": {
-      "en": "Velociraptor was a small predator from Mongolia, living about 84 to 72 million years ago. It was only about 1.8 metres long; the Jurassic Park films showed it at twice its real size. Bumps on its arm bones show where large feathers were attached, so it had feathers even though it could not fly."
+      "en": "Velociraptor was a small predator from Mongolia, living about 84 to 72 million years ago. It was only about 1.8 metres long; the Jurassic Park films showed it at twice its real size. Bumps on its arm bones show where large feathers were attached, so it had feathers even though it could not fly.",
+      "pl": "Velociraptor był małym drapieżnikiem z Mongolii, żyjącym około 84–72 milionów lat temu. Miał tylko około 1,8 metra długości; w filmach z serii „Park Jurajski” pokazano go dwa razy większym, niż był naprawdę. Guzki na kościach jego przednich kończyn pokazują, gdzie były przyczepione duże pióra, więc miał pióra, chociaż nie umiał latać."
     },
     "sourceIds": ["nhm", "pbdb-occs", "turner-2007"]
   },
   "funFacts": [
     {
       "text": {
-        "en": "A Velociraptor forearm has small bumps called quill knobs, where big wing feathers attach in living birds. This shows Velociraptor had feathers even though it could not fly."
+        "en": "A Velociraptor forearm has small bumps called quill knobs, where big wing feathers attach in living birds. This shows Velociraptor had feathers even though it could not fly.",
+        "pl": "Na kości przedramienia Velociraptor znajdują się małe guzki zwane guzkami lotek – u żyjących ptaków przyczepiają się do nich duże pióra skrzydeł. To pokazuje, że Velociraptor miał pióra, chociaż nie umiał latać."
       },
       "sourceIds": ["turner-2007"]
     }
@@ -71,7 +83,8 @@
       "commonsFile": "File:Velociraptor mongoliensis AMNH 6515.jpg",
       "kind": "skull",
       "alt": {
-        "en": "Skull of Velociraptor mongoliensis, specimen AMNH 6515, at the American Museum of Natural History."
+        "en": "Skull of Velociraptor mongoliensis, specimen AMNH 6515, at the American Museum of Natural History.",
+        "pl": "Czaszka Velociraptor mongoliensis, okaz AMNH 6515, w American Museum of Natural History."
       }
     }
   ],

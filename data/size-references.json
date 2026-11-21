@@ -2,20 +2,24 @@
   "references": [
     {
       "id": "person",
-      "label": { "en": "Adult human" },
+      "label": { "en": "Adult human", "pl": "Dorosły człowiek" },
       "lengthM": 1.8,
       "heightM": 1.8,
       "basis": "reference",
-      "note": { "en": "A standard 1.8 m adult, used as a reference figure" }
+      "note": {
+        "en": "A standard 1.8 m adult, used as a reference figure",
+        "pl": "Standardowy dorosły człowiek o wzroście 1,8 m, używany jako punkt odniesienia"
+      }
     },
     {
       "id": "school-bus",
-      "label": { "en": "School bus" },
+      "label": { "en": "School bus", "pl": "Autobus szkolny" },
       "lengthM": 12.2,
       "heightM": 3.25,
       "basis": "sourced",
       "note": {
-        "en": "Length: 40 ft (12.2 m), the maximum length allowed for a school bus in Pennsylvania (67 Pa. Code § 171.63); some states allow up to 45 ft. Height: 128 in (3.25 m), the top of the 122–128 in overall height Blue Bird gives for its full-size Vision Diesel bus."
+        "en": "Length: 40 ft (12.2 m), the maximum length allowed for a school bus in Pennsylvania (67 Pa. Code § 171.63); some states allow up to 45 ft. Height: 128 in (3.25 m), the top of the 122–128 in overall height Blue Bird gives for its full-size Vision Diesel bus.",
+        "pl": "Długość: 40 stóp (12,2 m), maksymalna długość dopuszczalna dla autobusu szkolnego w Pensylwanii (67 Pa. Code § 171.63); niektóre stany dopuszczają do 45 stóp. Wysokość: 128 cali (3,25 m), czyli górna wartość podawanego przez firmę Blue Bird przedziału całkowitej wysokości 122–128 cali dla jej pełnowymiarowego autobusu Vision Diesel."
       },
       "sourceIds": ["pa-code-171-63", "blue-bird-vision-diesel"]
     }

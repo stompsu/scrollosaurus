@@ -3,18 +3,23 @@
     {
       "id": "kpg-extinction",
       "atTopOf": "cretaceous",
-      "title": { "en": "The end-Cretaceous mass extinction" },
+      "title": {
+        "en": "The end-Cretaceous mass extinction",
+        "pl": "Masowe wymieranie pod koniec kredy"
+      },
       "text": {
-        "en": "About 66 million years ago, an asteroid struck Chicxulub, in what is now Mexico. Scientists conclude that this impact triggered one of the three largest mass extinctions of the past 500 million years. Dust and debris brought darkness and cooling. All non-bird dinosaurs died out, along with pterosaurs and sea reptiles such as mosasaurs and plesiosaurs. Around 75% of Earth's animals vanished."
+        "en": "About 66 million years ago, an asteroid struck Chicxulub, in what is now Mexico. Scientists conclude that this impact triggered one of the three largest mass extinctions of the past 500 million years. Dust and debris brought darkness and cooling. All non-bird dinosaurs died out, along with pterosaurs and sea reptiles such as mosasaurs and plesiosaurs. Around 75% of Earth's animals vanished.",
+        "pl": "Około 66 milionów lat temu w Chicxulub, na terenie dzisiejszego Meksyku, uderzyła asteroida. Naukowcy stwierdzają, że to zderzenie wywołało jedno z trzech największych masowych wymierań ostatnich 500 milionów lat. Pył i szczątki przyniosły ciemność i ochłodzenie. Wymarły wszystkie nieptasie dinozaury, a wraz z nimi pterozaury i gady morskie, takie jak mozazaury i plezjozaury. Zniknęło około 75% zwierząt na Ziemi."
       },
       "sourceIds": ["schulte-2010", "nhm-asteroid", "nps-extinction-events"]
     },
     {
       "id": "birds-are-dinosaurs",
       "atTopOf": "cretaceous",
-      "title": { "en": "Birds are living dinosaurs" },
+      "title": { "en": "Birds are living dinosaurs", "pl": "Ptaki to żyjące dinozaury" },
       "text": {
-        "en": "Birds evolved from theropod dinosaurs during the Jurassic, about 165 to 150 million years ago. Archaeopteryx is often called the first bird, and feathered non-bird dinosaurs such as Sinosauropteryx and Microraptor show how closely the two are related. Most early birds died in the extinction too, but a few small, ground-dwelling lineages survived. Their descendants, more than 10,000 species, are the dinosaurs still alive today."
+        "en": "Birds evolved from theropod dinosaurs during the Jurassic, about 165 to 150 million years ago. Archaeopteryx is often called the first bird, and feathered non-bird dinosaurs such as Sinosauropteryx and Microraptor show how closely the two are related. Most early birds died in the extinction too, but a few small, ground-dwelling lineages survived. Their descendants, more than 10,000 species, are the dinosaurs still alive today.",
+        "pl": "Ptaki wyewoluowały z dinozaurów teropodów w jurze, około 165–150 milionów lat temu. Archaeopteryx często nazywa się pierwszym ptakiem, a pierzaste nieptasie dinozaury, takie jak Sinosauropteryx i Microraptor, pokazują, jak blisko obie grupy są spokrewnione. Większość wczesnych ptaków też zginęła podczas wymierania, ale przetrwało kilka linii małych ptaków żyjących na ziemi. Ich potomkowie – ponad 10 000 gatunków – to dinozaury, które żyją do dziś."
       },
       "sourceIds": [
         "brusatte-2015",

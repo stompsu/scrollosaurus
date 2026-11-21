@@ -4,7 +4,8 @@
   "genus": "Pachycephalosaurus",
   "nameMeaning": {
     "text": {
-      "en": "Thick-headed lizard"
+      "en": "Thick-headed lizard",
+      "pl": "grubogłowy jaszczur"
     },
     "sourceIds": ["nhm-pachycephalosaurus"]
   },
@@ -23,19 +24,28 @@
     "startMa": 69,
     "endMa": 66,
     "sourceIds": ["nhm-pachycephalosaurus"],
-    "note": "NHM gives 69–66 Ma. PBDB occurrences of P. wyomingensis are almost all Maastrichtian (stage 72.2–66 Ma)."
+    "note": {
+      "en": "NHM gives 69–66 Ma. PBDB occurrences of P. wyomingensis are almost all Maastrichtian (stage 72.2–66 Ma).",
+      "pl": "NHM podaje 69–66 mln lat temu. Występowania P. wyomingensis w PBDB pochodzą niemal wyłącznie z mastrychtu (piętro 72,2–66 mln lat temu)."
+    }
   },
   "periods": ["cretaceous"],
   "size": {
     "lengthM": {
       "value": [3, 3],
       "sourceIds": ["nhm-pachycephalosaurus"],
-      "note": "Single museum estimate (NHM); the skeleton is poorly known beyond the skull."
+      "note": {
+        "en": "Single museum estimate (NHM); the skeleton is poorly known beyond the skull.",
+        "pl": "Jedyne oszacowanie muzealne (NHM); szkielet poza czaszką jest słabo poznany."
+      }
     },
     "massKg": {
       "value": [450, 450],
       "sourceIds": ["nhm-pachycephalosaurus"],
-      "note": "Single museum estimate (NHM); mass estimates vary widely between methods."
+      "note": {
+        "en": "Single museum estimate (NHM); mass estimates vary widely between methods.",
+        "pl": "Jedyne oszacowanie muzealne (NHM); szacunki masy bardzo się różnią w zależności od metody."
+      }
     }
   },
   "locations": [
@@ -55,19 +65,24 @@
   "discovery": {
     "describedBy": "Gilmore",
     "year": 1931,
-    "note": "Gilmore described the species as Troodon wyomingensis. The genus Pachycephalosaurus was named by Brown & Schlaikjer in 1943, and the species now belongs to it.",
+    "note": {
+      "en": "Gilmore described the species as Troodon wyomingensis. The genus Pachycephalosaurus was named by Brown & Schlaikjer in 1943, and the species now belongs to it.",
+      "pl": "Gilmore opisał ten gatunek jako Troodon wyomingensis. Rodzaj Pachycephalosaurus nazwali Brown i Schlaikjer w 1943 roku i obecnie gatunek ten do niego należy."
+    },
     "sourceIds": ["pbdb-taxon", "nhm-pachycephalosaurus"]
   },
   "summary": {
     "text": {
-      "en": "Pachycephalosaurus was a two-legged plant eater with a large bony dome on its head, surrounded by spikes and bumps. Some scientists think it used the dome in head-butting contests, others that it was for display. It lived in North America about 69 to 66 million years ago, alongside Tyrannosaurus and Triceratops. Dracorex and Stygimoloch, once named as separate dinosaurs, may be its younger growth stages."
+      "en": "Pachycephalosaurus was a two-legged plant eater with a large bony dome on its head, surrounded by spikes and bumps. Some scientists think it used the dome in head-butting contests, others that it was for display. It lived in North America about 69 to 66 million years ago, alongside Tyrannosaurus and Triceratops. Dracorex and Stygimoloch, once named as separate dinosaurs, may be its younger growth stages.",
+      "pl": "Pachycephalosaurus był dwunożnym roślinożercą z dużą kostną kopułą na głowie, otoczoną kolcami i guzami. Niektórzy naukowcy uważają, że używał kopuły w pojedynkach na uderzenia głową, inni – że służyła do pokazów. Żył w Ameryce Północnej około 69–66 milionów lat temu, obok Tyrannosaurus i Triceratops. Dracorex i Stygimoloch, niegdyś opisane jako osobne dinozaury, mogą być jego młodszymi stadiami wzrostu."
     },
     "sourceIds": ["nhm-pachycephalosaurus", "horner-goodwin-2009"]
   },
   "funFacts": [
     {
       "text": {
-        "en": "Dracorex and Stygimoloch, once named as separate dinosaurs, may be younger growth stages of Pachycephalosaurus: its skull seems to have changed shape dramatically as it grew up."
+        "en": "Dracorex and Stygimoloch, once named as separate dinosaurs, may be younger growth stages of Pachycephalosaurus: its skull seems to have changed shape dramatically as it grew up.",
+        "pl": "Dracorex i Stygimoloch, niegdyś opisane jako osobne dinozaury, mogą być młodszymi stadiami wzrostu Pachycephalosaurus: wydaje się, że jego czaszka w miarę dorastania bardzo zmieniała kształt."
       },
       "sourceIds": ["horner-goodwin-2009"]
     }
@@ -78,14 +93,18 @@
       "commonsFile": "File:Pachycephalosaurus wyomingensis skeleton.JPG",
       "kind": "skeleton-mount",
       "alt": {
-        "en": "Cast skeleton of Pachycephalosaurus wyomingensis at the North American Museum of Ancient Life."
+        "en": "Cast skeleton of Pachycephalosaurus wyomingensis at the North American Museum of Ancient Life.",
+        "pl": "Odlew szkieletu Pachycephalosaurus wyomingensis w North American Museum of Ancient Life."
       }
     }
   ],
   "uncertain": [
     {
       "field": "size.massKg",
-      "note": "Only a single museum figure (NHM, 450 kg) was found; mass estimates vary widely between methods, so this figure may not be representative."
+      "note": {
+        "en": "Only a single museum figure (NHM, 450 kg) was found; mass estimates vary widely between methods, so this figure may not be representative.",
+        "pl": "Znaleziono tylko jedną wartość muzealną (NHM, 450 kg); szacunki masy bardzo się różnią w zależności od metody, więc ta wartość może nie być reprezentatywna."
+      }
     }
   ],
   "sources": [

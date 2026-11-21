@@ -4,7 +4,8 @@
   "genus": "Pteranodon",
   "nameMeaning": {
     "text": {
-      "en": "Winged and toothless"
+      "en": "Winged and toothless",
+      "pl": "skrzydlaty i bezzębny"
     },
     "sourceIds": ["field-museum-2018"]
   },
@@ -18,20 +19,29 @@
     "value": "piscivore",
     "confidence": "probable",
     "sourceIds": ["pbdb-taxon"],
-    "note": "Based on the PBDB ecology entry for the genus."
+    "note": {
+      "en": "Based on the PBDB ecology entry for the genus.",
+      "pl": "Na podstawie wpisu PBDB dotyczącego ekologii rodzaju."
+    }
   },
   "timeRange": {
     "startMa": 85.7,
     "endMa": 72.2,
     "sourceIds": ["pbdb-occurrences"],
-    "note": "PBDB occurrences: Santonian (Niobrara) to Early–Middle Campanian (Pierre Shale). Ages are ICS stage bounds (Santonian base 85.7 Ma, Campanian top 72.2 Ma), so the range is broader than the fossils themselves."
+    "note": {
+      "en": "PBDB occurrences: Santonian (Niobrara) to Early–Middle Campanian (Pierre Shale). Ages are ICS stage bounds (Santonian base 85.7 Ma, Campanian top 72.2 Ma), so the range is broader than the fossils themselves.",
+      "pl": "Występowania w PBDB: od santonu (Niobrara) do wczesnego–środkowego kampanu (Pierre Shale). Wiek podano według granic pięter ICS (dolna granica santonu 85,7 mln lat temu, górna granica kampanu 72,2 mln lat temu), więc zakres jest szerszy niż wiek samych skamieniałości."
+    }
   },
   "periods": ["cretaceous"],
   "size": {
     "wingspanM": {
       "value": [5.5, 7.25],
       "sourceIds": ["field-museum-2018", "witton-habib-2010"],
-      "note": "Field Museum models have 18 ft (about 5.5 m) wingspans. Witton & Habib (2010), citing Bennett (2001), give about 7 m for the largest pteranodontids and about 7.25 m for the largest Pteranodon; these figures are for the genus, not specifically P. longiceps."
+      "note": {
+        "en": "Field Museum models have 18 ft (about 5.5 m) wingspans. Witton & Habib (2010), citing Bennett (2001), give about 7 m for the largest pteranodontids and about 7.25 m for the largest Pteranodon; these figures are for the genus, not specifically P. longiceps.",
+        "pl": "Modele w Field Museum mają rozpiętość skrzydeł 18 stóp (około 5,5 m). Witton i Habib (2010), za Bennett (2001), podają około 7 m dla największych pteranodontydów i około 7,25 m dla największego Pteranodon; wartości te dotyczą rodzaju, a nie konkretnie P. longiceps."
+      }
     }
   },
   "locations": [
@@ -55,7 +65,8 @@
   },
   "summary": {
     "text": {
-      "en": "Pteranodon was a flying reptile called a pterosaur, neither a dinosaur nor a bird. It had no teeth, and museum models give it wings about 5.5 metres (18 feet) across; the largest known Pteranodon reached about 7 metres. It was common in North America in the Late Cretaceous, and its fossils come from Kansas, South Dakota and Wyoming. It probably ate fish."
+      "en": "Pteranodon was a flying reptile called a pterosaur, neither a dinosaur nor a bird. It had no teeth, and museum models give it wings about 5.5 metres (18 feet) across; the largest known Pteranodon reached about 7 metres. It was common in North America in the Late Cretaceous, and its fossils come from Kansas, South Dakota and Wyoming. It probably ate fish.",
+      "pl": "Pteranodon był latającym gadem z grupy pterozaurów – ani dinozaurem, ani ptakiem. Nie miał zębów, a muzealne modele przedstawiają go ze skrzydłami o rozpiętości około 5,5 metra (18 stóp); największy znany Pteranodon osiągał około 7 metrów. Był pospolity w Ameryce Północnej w późnej kredzie, a jego skamieniałości pochodzą z Kansas, Dakoty Południowej i Wyoming. Prawdopodobnie jadł ryby."
     },
     "sourceIds": ["field-museum-2018", "witton-habib-2010", "pbdb-occurrences", "pbdb-taxon"]
   },
@@ -65,26 +76,39 @@
       "commonsFile": "File:Pteranodon longiceps female.jpg",
       "kind": "fossil",
       "alt": {
-        "en": "Fossil of a female Pteranodon longiceps on display at the Sternberg Museum of Natural History in Hays, Kansas."
+        "en": "Fossil of a female Pteranodon longiceps on display at the Sternberg Museum of Natural History in Hays, Kansas.",
+        "pl": "Skamieniałość samicy Pteranodon longiceps wystawiona w Sternberg Museum of Natural History w Hays w stanie Kansas."
       }
     }
   ],
   "uncertain": [
     {
       "field": "size.lengthM",
-      "note": "No verified body length found."
+      "note": {
+        "en": "No verified body length found.",
+        "pl": "Nie znaleziono zweryfikowanej długości ciała."
+      }
     },
     {
       "field": "size.massKg",
-      "note": "No verified mass estimate found."
+      "note": {
+        "en": "No verified mass estimate found.",
+        "pl": "Nie znaleziono zweryfikowanego oszacowania masy."
+      }
     },
     {
       "field": "timeRange",
-      "note": "Only stage-level ages available (PBDB); the end bound uses the top of the Campanian although records are labelled Early–Middle Campanian."
+      "note": {
+        "en": "Only stage-level ages available (PBDB); the end bound uses the top of the Campanian although records are labelled Early–Middle Campanian.",
+        "pl": "Dostępny jest tylko wiek na poziomie pięter (PBDB); górna granica zakresu to koniec kampanu, choć rekordy są opisane jako wczesny–środkowy kampan."
+      }
     },
     {
       "field": "group",
-      "note": "PBDB places Pteranodon in Pteranodontia without naming a family; no verified source for Pteranodontidae was opened."
+      "note": {
+        "en": "PBDB places Pteranodon in Pteranodontia without naming a family; no verified source for Pteranodontidae was opened.",
+        "pl": "PBDB umieszcza Pteranodon w Pteranodontia bez podania rodziny; nie sprawdzono żadnego zweryfikowanego źródła dla Pteranodontidae."
+      }
     }
   ],
   "sources": [

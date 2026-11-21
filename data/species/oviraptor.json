@@ -4,7 +4,8 @@
   "genus": "Oviraptor",
   "nameMeaning": {
     "text": {
-      "en": "egg thief"
+      "en": "egg thief",
+      "pl": "złodziej jaj"
     },
     "sourceIds": ["nhm"]
   },
@@ -18,25 +19,37 @@
     "value": "uncertain",
     "confidence": "debated",
     "sourceIds": ["nhm", "zanno-makovicky-2011", "norell-1994", "pbdb-taxon"],
-    "note": "Its toothless, beaked jaws give no clear answer. Suggestions include eggs, hard fruits, shellfish and other plant or animal food (NHM; PBDB lists it as an omnivore). Zanno & Makovicky 2011 infer herbivory for oviraptorosaurs as a group. The old idea that it was stealing eggs was overturned when the eggs it was found with turned out to be oviraptorid eggs (Norell et al. 1994)."
+    "note": {
+      "en": "Its toothless, beaked jaws give no clear answer. Suggestions include eggs, hard fruits, shellfish and other plant or animal food (NHM; PBDB lists it as an omnivore). Zanno & Makovicky 2011 infer herbivory for oviraptorosaurs as a group. The old idea that it was stealing eggs was overturned when the eggs it was found with turned out to be oviraptorid eggs (Norell et al. 1994).",
+      "pl": "Jego bezzębne szczęki zakończone dziobem nie dają jednoznacznej odpowiedzi. Wśród propozycji są jaja, twarde owoce, mięczaki i skorupiaki oraz inny pokarm roślinny lub zwierzęcy (NHM; PBDB uznaje go za wszystkożercę). Zanno i Makovicky 2011 wnioskują o roślinożerności owiraptorozaurów jako grupy. Dawny pogląd, że kradł jaja, upadł, gdy okazało się, że jaja, przy których go znaleziono, były jajami owiraptorydów (Norell i in. 1994)."
+    }
   },
   "timeRange": {
     "startMa": 83.6,
     "endMa": 72.2,
     "sourceIds": ["pbdb-occs"],
-    "note": "PBDB dates the O. philoceratops occurrence (Djadokhta Formation, Mongolia) only to the Campanian; the Ma values are the ICS v2024/12 Campanian stage boundaries. A genus-level PBDB record from Kazakhstan (Coniacian-Santonian) is not used. NHM gives 85-75 Ma."
+    "note": {
+      "en": "PBDB dates the O. philoceratops occurrence (Djadokhta Formation, Mongolia) only to the Campanian; the Ma values are the ICS v2024/12 Campanian stage boundaries. A genus-level PBDB record from Kazakhstan (Coniacian-Santonian) is not used. NHM gives 85-75 Ma.",
+      "pl": "PBDB datuje występowanie O. philoceratops (formacja Djadokhta, Mongolia) jedynie na kampan; wartości w mln lat to granice piętra kampanu według ICS v2024/12. Rekord PBDB na poziomie rodzaju z Kazachstanu (koniak–santon) nie został uwzględniony. NHM podaje 85–75 mln lat temu."
+    }
   },
   "periods": ["cretaceous"],
   "size": {
     "lengthM": {
       "value": [2, 2],
       "sourceIds": ["nhm"],
-      "note": "Single published figure (NHM Dino Directory)."
+      "note": {
+        "en": "Single published figure (NHM Dino Directory).",
+        "pl": "Jedyna opublikowana wartość (NHM Dino Directory)."
+      }
     },
     "massKg": {
       "value": [20, 20],
       "sourceIds": ["nhm"],
-      "note": "Single published estimate (NHM Dino Directory); method not stated."
+      "note": {
+        "en": "Single published estimate (NHM Dino Directory); method not stated.",
+        "pl": "Jedyne opublikowane oszacowanie (NHM Dino Directory); metody nie podano."
+      }
     }
   },
   "locations": [
@@ -54,14 +67,16 @@
   },
   "summary": {
     "text": {
-      "en": "Oviraptor was a toothless, beaked dinosaur about 2 metres long that lived in Mongolia around 84 to 72 million years ago. Its name means 'egg thief'. The first skeleton, found in 1923, lay on top of a nest of eggs. Decades later, an embryo inside the same kind of egg turned out to be an oviraptorid, so the adult may have been brooding its own nest. What it actually ate is still unclear."
+      "en": "Oviraptor was a toothless, beaked dinosaur about 2 metres long that lived in Mongolia around 84 to 72 million years ago. Its name means 'egg thief'. The first skeleton, found in 1923, lay on top of a nest of eggs. Decades later, an embryo inside the same kind of egg turned out to be an oviraptorid, so the adult may have been brooding its own nest. What it actually ate is still unclear.",
+      "pl": "Oviraptor był bezzębnym dinozaurem z dziobem, o długości około 2 metrów, który żył w Mongolii około 84–72 milionów lat temu. Jego nazwa oznacza „złodziej jaj”. Pierwszy szkielet, znaleziony w 1923 roku, leżał na gnieździe z jajami. Kilkadziesiąt lat później okazało się, że zarodek w takim samym jaju był owiraptorydem, więc dorosły osobnik mógł wysiadywać własne gniazdo. Wciąż nie wiadomo, czym właściwie się żywił."
     },
     "sourceIds": ["nhm", "pbdb-occs", "norell-1994", "zanno-makovicky-2011"]
   },
   "funFacts": [
     {
       "text": {
-        "en": "In 1923 the first Oviraptor was found lying on a nest of eggs. Seventy years later, an embryo inside the same kind of egg showed the eggs belonged to an oviraptorid, so the adult may have been guarding its nest."
+        "en": "In 1923 the first Oviraptor was found lying on a nest of eggs. Seventy years later, an embryo inside the same kind of egg showed the eggs belonged to an oviraptorid, so the adult may have been guarding its nest.",
+        "pl": "W 1923 roku pierwszy Oviraptor został znaleziony na gnieździe z jajami. Siedemdziesiąt lat później zarodek w takim samym jaju pokazał, że jaja należały do owiraptoryda, więc dorosły osobnik mógł strzec swojego gniazda."
       },
       "sourceIds": ["norell-1994"]
     }
@@ -72,14 +87,18 @@
       "commonsFile": "File:Oviraptor Restoration.png",
       "kind": "life-reconstruction",
       "alt": {
-        "en": "Life restoration of Oviraptor, a Late Cretaceous oviraptorid dinosaur from the Djadokhta Formation."
+        "en": "Life restoration of Oviraptor, a Late Cretaceous oviraptorid dinosaur from the Djadokhta Formation.",
+        "pl": "Rekonstrukcja przyżyciowa Oviraptor, późnokredowego dinozaura z grupy owiraptorydów, z formacji Djadokhta."
       }
     }
   ],
   "uncertain": [
     {
       "field": "diet",
-      "note": "No direct evidence (gut contents) for Oviraptor's diet; proposals range from eggs and shellfish to plants (NHM; Zanno & Makovicky 2011)."
+      "note": {
+        "en": "No direct evidence (gut contents) for Oviraptor's diet; proposals range from eggs and shellfish to plants (NHM; Zanno & Makovicky 2011).",
+        "pl": "Brak bezpośrednich dowodów (zawartości przewodu pokarmowego) na dietę Oviraptor; propozycje sięgają od jaj, mięczaków i skorupiaków po rośliny (NHM; Zanno i Makovicky 2011)."
+      }
     }
   ],
   "sources": [

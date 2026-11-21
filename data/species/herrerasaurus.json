@@ -4,7 +4,8 @@
   "genus": "Herrerasaurus",
   "nameMeaning": {
     "text": {
-      "en": "Herrera's lizard"
+      "en": "Herrera's lizard",
+      "pl": "jaszczur Herrery"
     },
     "sourceIds": ["nhm"]
   },
@@ -23,14 +24,20 @@
     "startMa": 231.5,
     "endMa": 229,
     "sourceIds": ["martinez-2011", "pbdb-occs"],
-    "note": "Ischigualasto dinosaurs come from the Scaphonyx-Exaeretodon-Herrerasaurus biozone, dated by Martinez et al. (2011) to 231.5-229 Ma (late Carnian). PBDB places all occurrences in the Carnian."
+    "note": {
+      "en": "Ischigualasto dinosaurs come from the Scaphonyx-Exaeretodon-Herrerasaurus biozone, dated by Martinez et al. (2011) to 231.5-229 Ma (late Carnian). PBDB places all occurrences in the Carnian.",
+      "pl": "Dinozaury z Ischigualasto pochodzą z biozony Scaphonyx-Exaeretodon-Herrerasaurus, datowanej przez Martinez i in. (2011) na 231,5–229 mln lat temu (późny karnik). PBDB umieszcza wszystkie występowania w karniku."
+    }
   },
   "periods": ["triassic"],
   "size": {
     "lengthM": {
       "value": [3, 3],
       "sourceIds": ["nhm"],
-      "note": "Single published figure (NHM Dino Directory); specimens vary in size."
+      "note": {
+        "en": "Single published figure (NHM Dino Directory); specimens vary in size.",
+        "pl": "Jedyna opublikowana wartość (NHM Dino Directory); okazy różnią się wielkością."
+      }
     }
   },
   "locations": [
@@ -48,14 +55,16 @@
   },
   "summary": {
     "text": {
-      "en": "Herrerasaurus was one of the earliest dinosaurs, a meat eater about 3 metres long. It lived in what is now Argentina about 231 to 229 million years ago. It was an agile hunter that ran on two legs and used short arms built for grasping and raking prey. A complete skull and skeleton, described in 1992, helped scientists picture the common ancestor of all dinosaurs."
+      "en": "Herrerasaurus was one of the earliest dinosaurs, a meat eater about 3 metres long. It lived in what is now Argentina about 231 to 229 million years ago. It was an agile hunter that ran on two legs and used short arms built for grasping and raking prey. A complete skull and skeleton, described in 1992, helped scientists picture the common ancestor of all dinosaurs.",
+      "pl": "Herrerasaurus był jednym z najwcześniejszych dinozaurów – mięsożercą o długości około 3 metrów. Żył na terenie dzisiejszej Argentyny około 231–229 milionów lat temu. Był zwinnym myśliwym, który biegał na dwóch nogach i używał krótkich przednich kończyn przystosowanych do chwytania i rozdrapywania ofiar. Kompletna czaszka i szkielet, opisane w 1992 roku, pomogły naukowcom wyobrazić sobie wspólnego przodka wszystkich dinozaurów."
     },
     "sourceIds": ["nhm", "martinez-2011", "sereno-novas-1992"]
   },
   "funFacts": [
     {
       "text": {
-        "en": "A complete skull and skeleton show Herrerasaurus was an agile two-legged predator with short arms built for grasping and raking."
+        "en": "A complete skull and skeleton show Herrerasaurus was an agile two-legged predator with short arms built for grasping and raking.",
+        "pl": "Kompletna czaszka i szkielet pokazują, że Herrerasaurus był zwinnym dwunożnym drapieżnikiem z krótkimi przednimi kończynami przystosowanymi do chwytania i rozdrapywania."
       },
       "sourceIds": ["sereno-novas-1992"]
     }
@@ -65,17 +74,26 @@
     {
       "commonsFile": "File:FMNH Herrerasaurus skeleton.jpg",
       "kind": "skeleton-mount",
-      "alt": { "en": "Mounted skeleton of Herrerasaurus in a museum." }
+      "alt": {
+        "en": "Mounted skeleton of Herrerasaurus in a museum.",
+        "pl": "Zmontowany szkielet Herrerasaurus w muzeum."
+      }
     }
   ],
   "uncertain": [
     {
       "field": "group",
-      "note": "Placed in Theropoda, following Sereno & Novas (1992) and Martinez et al. (2011), which recover Herrerasaurus as a basal theropod. Other analyses place herrerasaurids near sauropodomorphs or outside both groups, so the placement is still debated."
+      "note": {
+        "en": "Placed in Theropoda, following Sereno & Novas (1992) and Martinez et al. (2011), which recover Herrerasaurus as a basal theropod. Other analyses place herrerasaurids near sauropodomorphs or outside both groups, so the placement is still debated.",
+        "pl": "Umieszczony w Theropoda, za Sereno i Novas (1992) oraz Martinez i in. (2011), według których Herrerasaurus jest bazalnym teropodem. Inne analizy umieszczają herrerazaurydy blisko zauropodomorfów lub poza obiema grupami, więc jego pozycja wciąż jest przedmiotem sporu."
+      }
     },
     {
       "field": "size.massKg",
-      "note": "No mass estimate found in a source we could verify."
+      "note": {
+        "en": "No mass estimate found in a source we could verify.",
+        "pl": "Nie znaleziono oszacowania masy w źródle, które moglibyśmy zweryfikować."
+      }
     }
   ],
   "sources": [

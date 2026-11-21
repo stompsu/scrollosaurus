@@ -3,7 +3,7 @@
   "scientificName": "Archaeopteryx lithographica",
   "genus": "Archaeopteryx",
   "nameMeaning": {
-    "text": { "en": "ancient wing" },
+    "text": { "en": "ancient wing", "pl": "starożytne skrzydło" },
     "sourceIds": ["nhm-archaeopteryx"]
   },
   "group": "avialae",
@@ -14,25 +14,34 @@
     "value": "carnivore",
     "confidence": "probable",
     "sourceIds": ["nhm-archaeopteryx"],
-    "note": "No preserved stomach contents; diet inferred. It may have eaten small reptiles, mammals or insects."
+    "note": {
+      "en": "No preserved stomach contents; diet inferred. It may have eaten small reptiles, mammals or insects.",
+      "pl": "Nie zachowała się zawartość żołądka; dietę wywnioskowano pośrednio. Mógł jeść małe gady, ssaki lub owady."
+    }
   },
   "timeRange": {
     "startMa": 149.2,
     "endMa": 145.06,
     "sourceIds": ["pbdb-archaeopteryx-lithographica-occs", "rauhut-2018"],
-    "note": "Early Tithonian, from PBDB occurrence ages for A. lithographica. All Archaeopteryx specimens come from the Altmühltal, Mörnsheim and Painten formations of Bavaria; the oldest, from the earliest Tithonian Painten Formation, is referred only to the genus (Rauhut et al. 2018)."
+    "note": {
+      "en": "Early Tithonian, from PBDB occurrence ages for A. lithographica. All Archaeopteryx specimens come from the Altmühltal, Mörnsheim and Painten formations of Bavaria; the oldest, from the earliest Tithonian Painten Formation, is referred only to the genus (Rauhut et al. 2018).",
+      "pl": "Wczesny tyton, według wieku występowań A. lithographica w PBDB. Wszystkie okazy Archaeopteryx pochodzą z formacji Altmühltal, Mörnsheim i Painten w Bawarii; najstarszy, z formacji Painten z samego początku tytonu, przypisano jedynie do rodzaju (Rauhut i in. 2018)."
+    }
   },
   "periods": ["jurassic"],
   "size": {
     "lengthM": {
       "value": [0.5, 0.5],
       "sourceIds": ["nhm-archaeopteryx"],
-      "note": "Museum figure."
+      "note": { "en": "Museum figure.", "pl": "Wartość muzealna." }
     },
     "massKg": {
       "value": [0.2, 0.93],
       "sourceIds": ["erickson-2009"],
-      "note": "Earlier estimates for known specimens range from 200 to 600 g; Erickson et al. (2009) estimate an adult (asymptotic) mass of about 895 to 928 g, because none of the known specimens appears fully grown."
+      "note": {
+        "en": "Earlier estimates for known specimens range from 200 to 600 g; Erickson et al. (2009) estimate an adult (asymptotic) mass of about 895 to 928 g, because none of the known specimens appears fully grown.",
+        "pl": "Wcześniejsze oszacowania dla znanych okazów wynoszą od 200 do 600 g; Erickson i in. (2009) szacują masę dorosłego osobnika (asymptotyczną) na około 895–928 g, ponieważ żaden ze znanych okazów nie wydaje się w pełni dorosły."
+      }
     }
   },
   "locations": [
@@ -50,20 +59,23 @@
   },
   "summary": {
     "text": {
-      "en": "Archaeopteryx is a famous bird-like dinosaur from the Late Jurassic of southern Germany, about 149 to 145 million years ago. About the size of a magpie, it had broad feathered wings, but unlike modern birds it also had sharp teeth and a long bony tail. Its fossils come from limestone that formed in a lagoon. Found in 1861, two years after Darwin's On the Origin of Species, it seemed to support the idea that birds evolved from dinosaurs."
+      "en": "Archaeopteryx is a famous bird-like dinosaur from the Late Jurassic of southern Germany, about 149 to 145 million years ago. About the size of a magpie, it had broad feathered wings, but unlike modern birds it also had sharp teeth and a long bony tail. Its fossils come from limestone that formed in a lagoon. Found in 1861, two years after Darwin's On the Origin of Species, it seemed to support the idea that birds evolved from dinosaurs.",
+      "pl": "Archaeopteryx to słynny ptakopodobny dinozaur z późnej jury południowych Niemiec, sprzed około 149–145 milionów lat. Był mniej więcej wielkości sroki i miał szerokie, opierzone skrzydła, ale w przeciwieństwie do współczesnych ptaków miał też ostre zęby i długi kostny ogon. Jego skamieniałości pochodzą z wapieni powstałych w lagunie. Znaleziony w 1861 roku, dwa lata po ukazaniu się dzieła Darwina „O powstawaniu gatunków”, zdawał się potwierdzać, że ptaki wyewoluowały z dinozaurów."
     },
     "sourceIds": ["nhm-archaeopteryx", "pbdb-archaeopteryx-lithographica-occs"]
   },
   "funFacts": [
     {
       "text": {
-        "en": "Fossil pigment structures in an isolated Archaeopteryx feather suggest it was black, with 95% probability."
+        "en": "Fossil pigment structures in an isolated Archaeopteryx feather suggest it was black, with 95% probability.",
+        "pl": "Skamieniałe struktury barwnikowe w znalezionym osobno piórze Archaeopteryx wskazują, z prawdopodobieństwem 95%, że było ono czarne."
       },
       "sourceIds": ["carney-2012"]
     },
     {
       "text": {
-        "en": "Archaeopteryx grew slowly: its bones suggest it took about two to three years to reach adult size, about three times slower than living precocial birds."
+        "en": "Archaeopteryx grew slowly: its bones suggest it took about two to three years to reach adult size, about three times slower than living precocial birds.",
+        "pl": "Archaeopteryx rósł powoli: jego kości wskazują, że osiągnięcie dorosłych rozmiarów zajmowało mu około dwóch do trzech lat – mniej więcej trzy razy wolniej niż u żyjących dziś ptaków zagniazdowników."
       },
       "sourceIds": ["erickson-2009"]
     }
@@ -74,18 +86,25 @@
       "commonsFile": "File:Berlin Archaeopteryx.jpg",
       "kind": "fossil",
       "alt": {
-        "en": "The original Berlin specimen of Archaeopteryx lithographica, a fossil skeleton with feather impressions in a limestone slab."
+        "en": "The original Berlin specimen of Archaeopteryx lithographica, a fossil skeleton with feather impressions in a limestone slab.",
+        "pl": "Oryginalny berliński okaz Archaeopteryx lithographica – skamieniały szkielet z odciskami piór w płycie wapienia."
       }
     }
   ],
   "uncertain": [
     {
       "field": "group",
-      "note": "Archaeopteryx is usually placed at the base of Avialae, but one analysis (Xu et al. 2011) moved it into Deinonychosauria, with only weak support."
+      "note": {
+        "en": "Archaeopteryx is usually placed at the base of Avialae, but one analysis (Xu et al. 2011) moved it into Deinonychosauria, with only weak support.",
+        "pl": "Archaeopteryx jest zwykle umieszczany u podstawy Avialae, ale jedna analiza (Xu i in. 2011) przeniosła go do Deinonychosauria, przy jedynie słabym poparciu."
+      }
     },
     {
       "field": "taxonomy",
-      "note": "Archaeopteryx specimens vary a lot in limb proportions and teeth; Rauhut et al. (2018) discuss whether they belong to one species or a 'species flock', so not every specimen may be A. lithographica."
+      "note": {
+        "en": "Archaeopteryx specimens vary a lot in limb proportions and teeth; Rauhut et al. (2018) discuss whether they belong to one species or a 'species flock', so not every specimen may be A. lithographica.",
+        "pl": "Okazy Archaeopteryx bardzo różnią się proporcjami kończyn i uzębieniem; Rauhut i in. (2018) rozważają, czy należą one do jednego gatunku, czy do „stada gatunków”, więc możliwe, że nie każdy okaz to A. lithographica."
+      }
     }
   ],
   "sources": [

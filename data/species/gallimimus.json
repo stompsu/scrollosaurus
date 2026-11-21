@@ -4,7 +4,8 @@
   "genus": "Gallimimus",
   "nameMeaning": {
     "text": {
-      "en": "chicken mimic"
+      "en": "chicken mimic",
+      "pl": "naśladowca kury"
     },
     "sourceIds": ["nhm"]
   },
@@ -18,25 +19,37 @@
     "value": "omnivore",
     "confidence": "debated",
     "sourceIds": ["nhm", "pbdb-taxon", "zanno-makovicky-2011", "norell-2001"],
-    "note": "Gallimimus had a toothless beak, and its diet is disputed. NHM lists it as omnivorous and PBDB as herbivore or omnivore; Zanno & Makovicky 2011 infer herbivory for ornithomimosaurs from skull features; Norell et al. 2001 suggested that ornithomimids with preserved beak tissue strained food from sediment in water."
+    "note": {
+      "en": "Gallimimus had a toothless beak, and its diet is disputed. NHM lists it as omnivorous and PBDB as herbivore or omnivore; Zanno & Makovicky 2011 infer herbivory for ornithomimosaurs from skull features; Norell et al. 2001 suggested that ornithomimids with preserved beak tissue strained food from sediment in water.",
+      "pl": "Gallimimus miał bezzębny dziób, a jego dieta jest sporna. NHM uznaje go za wszystkożercę, a PBDB za roślinożercę lub wszystkożercę; Zanno i Makovicky 2011 wnioskują o roślinożerności ornitomimozaurów na podstawie cech czaszki; Norell i in. 2001 sugerowali, że ornitomimidy z zachowaną tkanką dzioba odcedzały pokarm z osadów w wodzie."
+    }
   },
   "timeRange": {
     "startMa": 72.2,
     "endMa": 66.0,
     "sourceIds": ["pbdb-occs", "zanno-makovicky-2013"],
-    "note": "PBDB dates G. bullatus occurrences (Nemegt Formation, Mongolia) to the Maastrichtian; the Ma values are the ICS v2024/12 Maastrichtian stage boundaries. The Nemegt Formation is not precisely dated (Zanno & Makovicky 2013 cite about 69 and 68 Ma). Genus-level PBDB records from the Baruungoyot Formation and Uzbekistan are not used."
+    "note": {
+      "en": "PBDB dates G. bullatus occurrences (Nemegt Formation, Mongolia) to the Maastrichtian; the Ma values are the ICS v2024/12 Maastrichtian stage boundaries. The Nemegt Formation is not precisely dated (Zanno & Makovicky 2013 cite about 69 and 68 Ma). Genus-level PBDB records from the Baruungoyot Formation and Uzbekistan are not used.",
+      "pl": "PBDB datuje występowania G. bullatus (formacja Nemegt, Mongolia) na mastrycht; wartości w mln lat to granice piętra mastrychtu według ICS v2024/12. Formacja Nemegt nie jest dokładnie datowana (Zanno i Makovicky 2013 przytaczają około 69 i 68 mln lat temu). Rekordy PBDB na poziomie rodzaju z formacji Baruungoyot i z Uzbekistanu nie zostały uwzględnione."
+    }
   },
   "periods": ["cretaceous"],
   "size": {
     "lengthM": {
       "value": [6, 6],
       "sourceIds": ["nhm"],
-      "note": "Single published figure (NHM Dino Directory)."
+      "note": {
+        "en": "Single published figure (NHM Dino Directory).",
+        "pl": "Jedyna opublikowana wartość (NHM Dino Directory)."
+      }
     },
     "massKg": {
       "value": [490, 490],
       "sourceIds": ["nhm"],
-      "note": "Single published estimate (NHM Dino Directory); method not stated."
+      "note": {
+        "en": "Single published estimate (NHM Dino Directory); method not stated.",
+        "pl": "Jedyne opublikowane oszacowanie (NHM Dino Directory); metody nie podano."
+      }
     }
   },
   "locations": [
@@ -54,14 +67,16 @@
   },
   "summary": {
     "text": {
-      "en": "Gallimimus was an 'ostrich dinosaur' from Mongolia, living near the very end of the Age of Dinosaurs. About 6 metres long, it was a fast runner with a toothless beak. Its name means 'chicken mimic' because its neck bones resemble a chicken's. Scientists still debate what it ate: plants, small animals, food strained from water, or a mix."
+      "en": "Gallimimus was an 'ostrich dinosaur' from Mongolia, living near the very end of the Age of Dinosaurs. About 6 metres long, it was a fast runner with a toothless beak. Its name means 'chicken mimic' because its neck bones resemble a chicken's. Scientists still debate what it ate: plants, small animals, food strained from water, or a mix.",
+      "pl": "Gallimimus był „strusim dinozaurem” z Mongolii, żyjącym niemal u samego końca ery dinozaurów. Miał około 6 metrów długości, szybko biegał i miał bezzębny dziób. Jego nazwa oznacza „naśladowca kury”, ponieważ kości jego szyi przypominają kurze. Naukowcy wciąż spierają się, czym się żywił: roślinami, małymi zwierzętami, pokarmem odcedzanym z wody, czy wszystkim po trochu."
     },
     "sourceIds": ["nhm", "pbdb-occs", "zanno-makovicky-2011", "norell-2001"]
   },
   "funFacts": [
     {
       "text": {
-        "en": "Experts estimate that Gallimimus could run at 47 to 55 kilometres per hour, more than twice as fast as a fit human."
+        "en": "Experts estimate that Gallimimus could run at 47 to 55 kilometres per hour, more than twice as fast as a fit human.",
+        "pl": "Eksperci szacują, że Gallimimus mógł biegać z prędkością od 47 do 55 kilometrów na godzinę – ponad dwa razy szybciej niż wysportowany człowiek."
       },
       "sourceIds": ["nhm"]
     }
@@ -71,13 +86,19 @@
     {
       "commonsFile": "File:Gallimimus 0495.JPG",
       "kind": "skeleton-mount",
-      "alt": { "en": "Mounted skeleton of Gallimimus bullatus in a museum." }
+      "alt": {
+        "en": "Mounted skeleton of Gallimimus bullatus in a museum.",
+        "pl": "Zmontowany szkielet Gallimimus bullatus w muzeum."
+      }
     }
   ],
   "uncertain": [
     {
       "field": "diet",
-      "note": "Herbivory, omnivory and filter-feeding have all been proposed for ornithomimids (NHM; Zanno & Makovicky 2011; Norell et al. 2001)."
+      "note": {
+        "en": "Herbivory, omnivory and filter-feeding have all been proposed for ornithomimids (NHM; Zanno & Makovicky 2011; Norell et al. 2001).",
+        "pl": "Dla ornitomimidów proponowano zarówno roślinożerność, wszystkożerność, jak i odżywianie się przez filtrowanie (NHM; Zanno i Makovicky 2011; Norell i in. 2001)."
+      }
     }
   ],
   "sources": [

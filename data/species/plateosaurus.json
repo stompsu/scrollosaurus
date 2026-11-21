@@ -4,7 +4,8 @@
   "genus": "Plateosaurus",
   "nameMeaning": {
     "text": {
-      "en": "flat lizard"
+      "en": "flat lizard",
+      "pl": "płaski jaszczur"
     },
     "sourceIds": ["nhm"]
   },
@@ -13,7 +14,10 @@
   "isDinosaur": true,
   "taxonomy": {
     "status": "valid",
-    "note": "The original type species, P. engelhardti Meyer, 1837, rests on fragmentary, non-diagnostic bones, and the name was long disputed. In 2019 the ICZN (Opinion 2435) set aside earlier fixations and made P. trossingensis Fraas, 1913 the type species. Older literature, including Hofmann & Sander (2014) and the NHM Dino Directory, uses P. engelhardti for the same material.",
+    "note": {
+      "en": "The original type species, P. engelhardti Meyer, 1837, rests on fragmentary, non-diagnostic bones, and the name was long disputed. In 2019 the ICZN (Opinion 2435) set aside earlier fixations and made P. trossingensis Fraas, 1913 the type species. Older literature, including Hofmann & Sander (2014) and the NHM Dino Directory, uses P. engelhardti for the same material.",
+      "pl": "Pierwotny gatunek typowy, P. engelhardti Meyer, 1837, opiera się na fragmentarycznych kościach bez cech diagnostycznych, a ta nazwa długo była przedmiotem sporu. W 2019 roku ICZN (Opinia 2435) uchyliła wcześniejsze ustalenia i uczyniła gatunkiem typowym P. trossingensis Fraas, 1913. Starsza literatura, w tym Hofmann i Sander (2014) oraz Dino Directory muzeum NHM, używa dla tego samego materiału nazwy P. engelhardti."
+    },
     "sourceIds": ["iczn-2435", "hofmann-sander-2014"]
   },
   "diet": {
@@ -25,14 +29,20 @@
     "startMa": 227.3,
     "endMa": 205.7,
     "sourceIds": ["hofmann-sander-2014", "pbdb-occs"],
-    "note": "Plateosaurus remains come from the Norian stage (Hofmann & Sander 2014; all PBDB P. trossingensis occurrences are Norian). The Ma values are the ICS v2024/12 Norian boundaries. PBDB also lists Rhaetian and one Hettangian 'Plateosaurus sp.' record not used here."
+    "note": {
+      "en": "Plateosaurus remains come from the Norian stage (Hofmann & Sander 2014; all PBDB P. trossingensis occurrences are Norian). The Ma values are the ICS v2024/12 Norian boundaries. PBDB also lists Rhaetian and one Hettangian 'Plateosaurus sp.' record not used here.",
+      "pl": "Szczątki Plateosaurus pochodzą z piętra noryku (Hofmann i Sander 2014; wszystkie występowania P. trossingensis w PBDB pochodzą z noryku). Wartości w mln lat to granice noryku według ICS v2024/12. PBDB wymienia też rekordy „Plateosaurus sp.” z retyku i jeden z hettangu, których tu nie uwzględniono."
+    }
   },
   "periods": ["triassic"],
   "size": {
     "lengthM": {
       "value": [4.8, 10],
       "sourceIds": ["bonn-2005"],
-      "note": "Fully grown individuals ranged from 4.8 m to about 10 m (University of Bonn report on Sander & Klein 2005). The NHM Dino Directory gives 7 m."
+      "note": {
+        "en": "Fully grown individuals ranged from 4.8 m to about 10 m (University of Bonn report on Sander & Klein 2005). The NHM Dino Directory gives 7 m.",
+        "pl": "W pełni dorosłe osobniki miały od 4,8 m do około 10 m długości (komunikat Uniwersytetu w Bonn o pracy Sander i Klein 2005). Dino Directory muzeum NHM podaje 7 m."
+      }
     }
   },
   "locations": [
@@ -56,14 +66,16 @@
   },
   "summary": {
     "text": {
-      "en": "Plateosaurus was a large plant eater that lived in Europe in the Late Triassic, about 227 to 206 million years ago. Grown animals were roughly 5 to 10 metres long, and adults varied a lot in size. It had five-fingered hands with a large thumb claw, perhaps used for defence or gathering food. Its fossils come from Germany and Switzerland, and finds in Germany suggest it may have lived in herds."
+      "en": "Plateosaurus was a large plant eater that lived in Europe in the Late Triassic, about 227 to 206 million years ago. Grown animals were roughly 5 to 10 metres long, and adults varied a lot in size. It had five-fingered hands with a large thumb claw, perhaps used for defence or gathering food. Its fossils come from Germany and Switzerland, and finds in Germany suggest it may have lived in herds.",
+      "pl": "Plateosaurus był dużym roślinożercą, który żył w Europie w późnym triasie, około 227–206 milionów lat temu. Dorosłe zwierzęta miały mniej więcej od 5 do 10 metrów długości i bardzo różniły się wielkością. Miał pięciopalczaste dłonie z dużym pazurem na kciuku, używanym być może do obrony lub zdobywania pokarmu. Jego skamieniałości pochodzą z Niemiec i Szwajcarii, a znaleziska z Niemiec sugerują, że mógł żyć w stadach."
     },
     "sourceIds": ["nhm", "bonn-2005", "pbdb-occs", "hofmann-sander-2014"]
   },
   "funFacts": [
     {
       "text": {
-        "en": "Adult Plateosaurus varied a lot in size: some were less than half as long as others, a sign that growth depended on living conditions."
+        "en": "Adult Plateosaurus varied a lot in size: some were less than half as long as others, a sign that growth depended on living conditions.",
+        "pl": "Dorosłe osobniki Plateosaurus bardzo różniły się wielkością: niektóre nie osiągały nawet połowy długości innych, co wskazuje, że wzrost zależał od warunków życia."
       },
       "sourceIds": ["bonn-2005"]
     }
@@ -74,14 +86,18 @@
       "commonsFile": "File:Plateosaurus Skelett 1.jpg",
       "kind": "skeleton-mount",
       "alt": {
-        "en": "Nearly complete Plateosaurus skeleton from Trossingen, Germany, mounted in the museum of the Institute for Geosciences at the University of Tübingen."
+        "en": "Nearly complete Plateosaurus skeleton from Trossingen, Germany, mounted in the museum of the Institute for Geosciences at the University of Tübingen.",
+        "pl": "Niemal kompletny szkielet Plateosaurus z Trossingen w Niemczech, zmontowany w muzeum Instytutu Nauk o Ziemi Uniwersytetu w Tybindze."
       }
     }
   ],
   "uncertain": [
     {
       "field": "size.massKg",
-      "note": "Published mass estimates differ widely; the NHM Dino Directory lists 4000 kg, but we could not verify a method-based range, so the field is left empty."
+      "note": {
+        "en": "Published mass estimates differ widely; the NHM Dino Directory lists 4000 kg, but we could not verify a method-based range, so the field is left empty.",
+        "pl": "Opublikowane oszacowania masy bardzo się różnią; Dino Directory muzeum NHM podaje 4000 kg, ale nie udało nam się zweryfikować zakresu opartego na konkretnej metodzie, więc pole pozostawiono puste."
+      }
     }
   ],
   "sources": [

@@ -3,7 +3,7 @@
   "scientificName": "Brachiosaurus altithorax",
   "genus": "Brachiosaurus",
   "nameMeaning": {
-    "text": { "en": "arm lizard" },
+    "text": { "en": "arm lizard", "pl": "jaszczur ramienny" },
     "sourceIds": ["nhm-brachiosaurus"]
   },
   "group": "brachiosauridae",
@@ -11,7 +11,10 @@
   "isDinosaur": true,
   "taxonomy": {
     "status": "valid",
-    "note": "The African species once called Brachiosaurus brancai differs in at least 26 characters and is now a separate genus, Giraffatitan. Most classic full-body reconstructions of 'Brachiosaurus' are really based on Giraffatitan.",
+    "note": {
+      "en": "The African species once called Brachiosaurus brancai differs in at least 26 characters and is now a separate genus, Giraffatitan. Most classic full-body reconstructions of 'Brachiosaurus' are really based on Giraffatitan.",
+      "pl": "Afrykański gatunek nazywany niegdyś Brachiosaurus brancai różni się co najmniej 26 cechami i jest obecnie osobnym rodzajem – Giraffatitan. Większość klasycznych rekonstrukcji całego ciała „Brachiosaurus” w rzeczywistości opiera się na Giraffatitan."
+    },
     "sourceIds": ["taylor-2009", "nhm-brachiosaurus"]
   },
   "diet": {
@@ -23,19 +26,28 @@
     "startMa": 154.8,
     "endMa": 143.1,
     "sourceIds": ["pbdb-brachiosaurus-altithorax-occs"],
-    "note": "Stage-level PBDB occurrence ages for B. altithorax in the Brushy Basin Member of the Morrison Formation (Kimmeridgian to Tithonian). Only a few specimens are known, so the true range is poorly constrained."
+    "note": {
+      "en": "Stage-level PBDB occurrence ages for B. altithorax in the Brushy Basin Member of the Morrison Formation (Kimmeridgian to Tithonian). Only a few specimens are known, so the true range is poorly constrained.",
+      "pl": "Wiek występowań B. altithorax w PBDB na poziomie pięter, w ogniwie Brushy Basin formacji Morrison (od kimerydu do tytonu). Znanych jest tylko kilka okazów, więc rzeczywisty zakres jest słabo określony."
+    }
   },
   "periods": ["jurassic"],
   "size": {
     "lengthM": {
       "value": [22, 22],
       "sourceIds": ["nhm-brachiosaurus"],
-      "note": "Museum figure. The holotype was probably not fully grown, so adults may have been larger."
+      "note": {
+        "en": "Museum figure. The holotype was probably not fully grown, so adults may have been larger.",
+        "pl": "Wartość muzealna. Holotyp prawdopodobnie nie był w pełni dorosły, więc dorosłe osobniki mogły być większe."
+      }
     },
     "massKg": {
       "value": [46900, 56000],
       "sourceIds": ["nhm-brachiosaurus", "benson-2014"],
-      "note": "Museum figure (46,900 kg) and a limb-bone scaling estimate (56,000 kg); methods differ."
+      "note": {
+        "en": "Museum figure (46,900 kg) and a limb-bone scaling estimate (56,000 kg); methods differ.",
+        "pl": "Wartość muzealna (46 900 kg) i oszacowanie ze skalowania kości kończyn (56 000 kg); metody się różnią."
+      }
     }
   },
   "locations": [
@@ -53,14 +65,16 @@
   },
   "summary": {
     "text": {
-      "en": "Brachiosaurus was a giant long-necked plant-eater from the Late Jurassic of western North America, about 150 million years ago. Its front legs were longer than its back legs, so its body tilted upwards, letting it feed on leaves high in tall trees. It was much taller than Brontosaurus, which ate plants near the ground. No complete skeleton is known, and the first remains, found in Colorado in 1900, may have come from an animal that was not fully grown."
+      "en": "Brachiosaurus was a giant long-necked plant-eater from the Late Jurassic of western North America, about 150 million years ago. Its front legs were longer than its back legs, so its body tilted upwards, letting it feed on leaves high in tall trees. It was much taller than Brontosaurus, which ate plants near the ground. No complete skeleton is known, and the first remains, found in Colorado in 1900, may have come from an animal that was not fully grown.",
+      "pl": "Brachiosaurus był olbrzymim długoszyim roślinożercą z późnej jury zachodniej części Ameryki Północnej, sprzed około 150 milionów lat. Jego przednie nogi były dłuższe od tylnych, więc tułów był pochylony ku górze, co pozwalało mu jeść liście wysoko na drzewach. Był znacznie wyższy niż Brontosaurus, który jadł rośliny przy ziemi. Nie jest znany kompletny szkielet, a pierwsze szczątki, znalezione w Kolorado w 1900 roku, mogły należeć do zwierzęcia, które nie było w pełni dorosłe."
     },
     "sourceIds": ["nhm-brachiosaurus", "pbdb-brachiosaurus-altithorax-occs"]
   },
   "funFacts": [
     {
       "text": {
-        "en": "Most classic pictures of Brachiosaurus are really based on a different African dinosaur, Giraffatitan. The American Brachiosaurus had a longer, deeper body and probably a longer tail."
+        "en": "Most classic pictures of Brachiosaurus are really based on a different African dinosaur, Giraffatitan. The American Brachiosaurus had a longer, deeper body and probably a longer tail.",
+        "pl": "Większość klasycznych wizerunków Brachiosaurus w rzeczywistości opiera się na innym, afrykańskim dinozaurze – Giraffatitan. Amerykański Brachiosaurus miał dłuższy i głębszy tułów oraz prawdopodobnie dłuższy ogon."
       },
       "sourceIds": ["taylor-2009"]
     }
@@ -71,7 +85,8 @@
       "commonsFile": "File:Brachiosaurus mount.jpg",
       "kind": "skeleton-mount",
       "alt": {
-        "en": "Mounted skeleton of Brachiosaurus altithorax standing outdoors outside a museum, with its long neck raised."
+        "en": "Mounted skeleton of Brachiosaurus altithorax standing outdoors outside a museum, with its long neck raised.",
+        "pl": "Zmontowany szkielet Brachiosaurus altithorax stojący na zewnątrz przed muzeum, z uniesioną długą szyją."
       }
     }
   ],

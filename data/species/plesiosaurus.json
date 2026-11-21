@@ -4,7 +4,8 @@
   "genus": "Plesiosaurus",
   "nameMeaning": {
     "text": {
-      "en": "near lizard"
+      "en": "near lizard",
+      "pl": "bliski jaszczur"
     },
     "sourceIds": ["smith-directory"]
   },
@@ -13,20 +14,29 @@
   "isDinosaur": false,
   "taxonomy": {
     "status": "valid",
-    "note": "For a long time Plesiosaurus was a wastebasket genus. After revision it contains only one valid species, the type species P. dolichodeirus.",
+    "note": {
+      "en": "For a long time Plesiosaurus was a wastebasket genus. After revision it contains only one valid species, the type species P. dolichodeirus.",
+      "pl": "Przez długi czas Plesiosaurus był „rodzajem-śmietnikiem”. Po rewizji obejmuje tylko jeden ważny gatunek – gatunek typowy P. dolichodeirus."
+    },
     "sourceIds": ["smith-directory"]
   },
   "diet": {
     "value": "piscivore",
     "confidence": "probable",
     "sourceIds": ["smith-directory-diet"],
-    "note": "Inferred from tooth form: plesiosauroid teeth pierced small soft-bodied prey such as fish and cephalopods."
+    "note": {
+      "en": "Inferred from tooth form: plesiosauroid teeth pierced small soft-bodied prey such as fish and cephalopods.",
+      "pl": "Wywnioskowane z kształtu zębów: zęby plezjozauroidów przebijały małe ofiary o miękkim ciele, takie jak ryby i głowonogi."
+    }
   },
   "timeRange": {
     "startMa": 199.5,
     "endMa": 192.9,
     "sourceIds": ["smith-directory", "pbdb-occs"],
-    "note": "The holotype comes from the late Sinemurian (Charmouth Mudstone). The Ma values are the ICS v2024/12 Sinemurian boundaries. PBDB also has two loosely dated records (Hettangian to Pliensbachian) not used here."
+    "note": {
+      "en": "The holotype comes from the late Sinemurian (Charmouth Mudstone). The Ma values are the ICS v2024/12 Sinemurian boundaries. PBDB also has two loosely dated records (Hettangian to Pliensbachian) not used here.",
+      "pl": "Holotyp pochodzi z późnego synemuru (Charmouth Mudstone). Wartości w mln lat to granice synemuru według ICS v2024/12. PBDB ma też dwa luźno datowane rekordy (od hettangu do pliensbachu), których tu nie uwzględniono."
+    }
   },
   "periods": ["jurassic"],
   "size": {},
@@ -41,25 +51,31 @@
   "discovery": {
     "describedBy": "Conybeare",
     "year": 1824,
-    "note": "The genus Plesiosaurus was named by De la Beche & Conybeare in 1821; Conybeare named the species P. dolichodeirus in 1824.",
+    "note": {
+      "en": "The genus Plesiosaurus was named by De la Beche & Conybeare in 1821; Conybeare named the species P. dolichodeirus in 1824.",
+      "pl": "Rodzaj Plesiosaurus nazwali De la Beche i Conybeare w 1821 roku; Conybeare nazwał gatunek P. dolichodeirus w 1824 roku."
+    },
     "sourceIds": ["smith-directory", "pbdb-taxon"]
   },
   "summary": {
     "text": {
-      "en": "Plesiosaurus was not a dinosaur but a marine reptile that swam in the seas over what is now southern England in the Early Jurassic. It had a long neck, and its pointed teeth were good for piercing small, soft prey such as fish and squid-like animals. Mary Anning found the complete skeleton that defines the species at Lyme Regis."
+      "en": "Plesiosaurus was not a dinosaur but a marine reptile that swam in the seas over what is now southern England in the Early Jurassic. It had a long neck, and its pointed teeth were good for piercing small, soft prey such as fish and squid-like animals. Mary Anning found the complete skeleton that defines the species at Lyme Regis.",
+      "pl": "Plesiosaurus nie był dinozaurem, lecz gadem morskim, który we wczesnej jurze pływał w morzach nad terenem dzisiejszej południowej Anglii. Miał długą szyję, a jego spiczaste zęby dobrze nadawały się do przebijania małych, miękkich ofiar, takich jak ryby i zwierzęta podobne do kałamarnic. Mary Anning znalazła w Lyme Regis kompletny szkielet, który jest wzorcem tego gatunku."
     },
     "sourceIds": ["smith-directory", "smith-directory-diet", "nhm-anning", "pbdb-taxon"]
   },
   "funFacts": [
     {
       "text": {
-        "en": "Its species name dolichodeirus comes from Greek words for 'long' and 'neck'."
+        "en": "Its species name dolichodeirus comes from Greek words for 'long' and 'neck'.",
+        "pl": "Jego nazwa gatunkowa dolichodeirus pochodzi od greckich słów oznaczających „długi” i „szyja”."
       },
       "sourceIds": ["nhm-anning"]
     },
     {
       "text": {
-        "en": "The complete skeleton that defines the species was discovered and collected by Mary Anning."
+        "en": "The complete skeleton that defines the species was discovered and collected by Mary Anning.",
+        "pl": "Kompletny szkielet, który jest wzorcem tego gatunku, odkryła i wydobyła Mary Anning."
       },
       "sourceIds": ["smith-directory", "nhm-anning"]
     }
@@ -69,17 +85,26 @@
     {
       "commonsFile": "File:Plesiosaurus dolichodeirus 65.jpg",
       "kind": "fossil",
-      "alt": { "en": "Fossil skeleton of Plesiosaurus at Teylers Museum in Haarlem." }
+      "alt": {
+        "en": "Fossil skeleton of Plesiosaurus at Teylers Museum in Haarlem.",
+        "pl": "Skamieniały szkielet Plesiosaurus w Teylers Museum w Haarlemie."
+      }
     }
   ],
   "uncertain": [
     {
       "field": "size.lengthM",
-      "note": "No total length found in a source we could verify."
+      "note": {
+        "en": "No total length found in a source we could verify.",
+        "pl": "Nie znaleziono całkowitej długości w źródle, które moglibyśmy zweryfikować."
+      }
     },
     {
       "field": "size.massKg",
-      "note": "No mass estimate found in a source we could verify."
+      "note": {
+        "en": "No mass estimate found in a source we could verify.",
+        "pl": "Nie znaleziono oszacowania masy w źródle, które moglibyśmy zweryfikować."
+      }
     }
   ],
   "sources": [

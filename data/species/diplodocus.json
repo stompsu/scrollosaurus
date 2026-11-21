@@ -3,7 +3,7 @@
   "scientificName": "Diplodocus carnegii",
   "genus": "Diplodocus",
   "nameMeaning": {
-    "text": { "en": "double beam" },
+    "text": { "en": "double beam", "pl": "podwójna belka" },
     "sourceIds": ["nhm-diplodocus"]
   },
   "group": "diplodocidae",
@@ -11,7 +11,10 @@
   "isDinosaur": true,
   "taxonomy": {
     "status": "valid",
-    "note": "This record uses D. carnegii, known from the nearly complete holotype CM 84. The original type species, D. longus, is based on scrappy tail bones and was judged a nomen dubium by Tschopp et al. (2015), who proposed that the ICZN make D. carnegii the type species.",
+    "note": {
+      "en": "This record uses D. carnegii, known from the nearly complete holotype CM 84. The original type species, D. longus, is based on scrappy tail bones and was judged a nomen dubium by Tschopp et al. (2015), who proposed that the ICZN make D. carnegii the type species.",
+      "pl": "Ten wpis dotyczy D. carnegii, znanego z niemal kompletnego holotypu CM 84. Pierwotny gatunek typowy, D. longus, opiera się na fragmentarycznych kościach ogona; Tschopp i in. (2015) uznali go za nomen dubium i zaproponowali, aby ICZN uczyniła D. carnegii gatunkiem typowym."
+    },
     "sourceIds": ["tschopp-2015"]
   },
   "diet": {
@@ -23,19 +26,28 @@
     "startMa": 154.8,
     "endMa": 143.1,
     "sourceIds": ["pbdb-diplodocus-carnegii-occs"],
-    "note": "Stage-level PBDB occurrence ages for D. carnegii in the Morrison Formation (Kimmeridgian to Tithonian)."
+    "note": {
+      "en": "Stage-level PBDB occurrence ages for D. carnegii in the Morrison Formation (Kimmeridgian to Tithonian).",
+      "pl": "Wiek występowań D. carnegii w PBDB na poziomie pięter, w formacji Morrison (od kimerydu do tytonu)."
+    }
   },
   "periods": ["jurassic"],
   "size": {
     "lengthM": {
       "value": [26, 26],
       "sourceIds": ["nhm-diplodocus"],
-      "note": "Museum figure for the genus."
+      "note": {
+        "en": "Museum figure for the genus.",
+        "pl": "Wartość muzealna dla całego rodzaju."
+      }
     },
     "massKg": {
       "value": [15000, 15000],
       "sourceIds": ["nhm-diplodocus"],
-      "note": "Museum figure for the genus; no species-level peer-reviewed estimate was verified."
+      "note": {
+        "en": "Museum figure for the genus; no species-level peer-reviewed estimate was verified.",
+        "pl": "Wartość muzealna dla całego rodzaju; nie zweryfikowano recenzowanego oszacowania na poziomie gatunku."
+      }
     }
   },
   "locations": [
@@ -53,14 +65,16 @@
   },
   "summary": {
     "text": {
-      "en": "Diplodocus was one of the longest dinosaurs, a plant-eater from the Late Jurassic of western North America, about 150 million years ago. Its very long, whip-like tail made up much of that length. It used its long neck to reach plants at different heights and to drink. Its name, 'double beam', refers to the two-pronged bones under its tail. All known fossils come from the Morrison Formation in the USA."
+      "en": "Diplodocus was one of the longest dinosaurs, a plant-eater from the Late Jurassic of western North America, about 150 million years ago. Its very long, whip-like tail made up much of that length. It used its long neck to reach plants at different heights and to drink. Its name, 'double beam', refers to the two-pronged bones under its tail. All known fossils come from the Morrison Formation in the USA.",
+      "pl": "Diplodocus był jednym z najdłuższych dinozaurów – roślinożercą z późnej jury zachodniej części Ameryki Północnej, sprzed około 150 milionów lat. Dużą część tej długości stanowił bardzo długi ogon przypominający bicz. Długiej szyi używał, by sięgać roślin na różnych wysokościach i by pić. Jego nazwa, „podwójna belka”, odnosi się do dwudzielnych kości pod ogonem. Wszystkie znane skamieniałości pochodzą z formacji Morrison w USA."
     },
     "sourceIds": ["nhm-diplodocus", "pbdb-diplodocus-carnegii-occs"]
   },
   "funFacts": [
     {
       "text": {
-        "en": "'Dippy', the Natural History Museum's famous Diplodocus cast, was a gift from Andrew Carnegie in 1905."
+        "en": "'Dippy', the Natural History Museum's famous Diplodocus cast, was a gift from Andrew Carnegie in 1905.",
+        "pl": "„Dippy”, słynny odlew Diplodocus z Natural History Museum, był darem od Andrew Carnegiego z 1905 roku."
       },
       "sourceIds": ["nhm-diplodocus"]
     }
@@ -71,14 +85,18 @@
       "commonsFile": "File:Diplodocus carnegii sauropod dinosaur (Morrison Formation, Upper Jurassic; Sheep Creek, Albany County, southeastern Wyoming, USA) 1 (15396317462).jpg",
       "kind": "skeleton-mount",
       "alt": {
-        "en": "Mounted holotype skeleton of Diplodocus carnegii on public display in a museum."
+        "en": "Mounted holotype skeleton of Diplodocus carnegii on public display in a museum.",
+        "pl": "Zmontowany szkielet holotypu Diplodocus carnegii wystawiony publicznie w muzeum."
       }
     }
   ],
   "uncertain": [
     {
       "field": "taxonomy",
-      "note": "D. longus is still the formal type species unless the ICZN has ruled on the Tschopp et al. (2015) proposal; no ruling was verified for this record."
+      "note": {
+        "en": "D. longus is still the formal type species unless the ICZN has ruled on the Tschopp et al. (2015) proposal; no ruling was verified for this record.",
+        "pl": "D. longus pozostaje formalnie gatunkiem typowym, chyba że ICZN rozstrzygnęła wniosek Tschopp i in. (2015); dla tego wpisu nie zweryfikowano żadnego orzeczenia."
+      }
     }
   ],
   "sources": [

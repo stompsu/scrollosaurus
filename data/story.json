@@ -2,9 +2,10 @@
   "steps": [
     {
       "id": "first-dinosaurs",
-      "title": { "en": "The first dinosaurs" },
+      "title": { "en": "The first dinosaurs", "pl": "Pierwsze dinozaury" },
       "text": {
-        "en": "Some 230 million years ago, in the Late Triassic, some of the earliest known dinosaurs lived in what is now Argentina. Their fossils come from the Ischigualasto Formation. Eoraptor was small, less than 2 metres long. Herrerasaurus was an agile hunter that ran on two legs. Dinosaurs would not dominate life on land for millions of years."
+        "en": "Some 230 million years ago, in the Late Triassic, some of the earliest known dinosaurs lived in what is now Argentina. Their fossils come from the Ischigualasto Formation. Eoraptor was small, less than 2 metres long. Herrerasaurus was an agile hunter that ran on two legs. Dinosaurs would not dominate life on land for millions of years.",
+        "pl": "Około 230 milionów lat temu, w późnym triasie, na terenie dzisiejszej Argentyny żyły jedne z najwcześniejszych znanych dinozaurów. Ich skamieniałości pochodzą z formacji Ischigualasto. Eoraptor był mały – miał mniej niż 2 metry długości. Herrerasaurus był zwinnym myśliwym, który biegał na dwóch nogach. Dinozaury miały zdominować życie na lądzie dopiero po milionach lat."
       },
       "view": { "species": "eoraptor" },
       "highlight": "eoraptor",
@@ -12,18 +13,23 @@
     },
     {
       "id": "triassic-jurassic-extinction",
-      "title": { "en": "Disaster at the end of the Triassic" },
+      "title": {
+        "en": "Disaster at the end of the Triassic",
+        "pl": "Katastrofa na końcu triasu"
+      },
       "text": {
-        "en": "About 201 million years ago, the Triassic ended with a mass extinction on land and in the sea. It began at the same time as enormous volcanic eruptions, called the Central Atlantic Magmatic Province, as the supercontinent Pangaea started to break apart. With many other animals gone, dinosaurs filled the empty places and went on to dominate life on land for the rest of the Mesozoic."
+        "en": "About 201 million years ago, the Triassic ended with a mass extinction on land and in the sea. It began at the same time as enormous volcanic eruptions, called the Central Atlantic Magmatic Province, as the supercontinent Pangaea started to break apart. With many other animals gone, dinosaurs filled the empty places and went on to dominate life on land for the rest of the Mesozoic.",
+        "pl": "Około 201 milionów lat temu trias zakończył się masowym wymieraniem na lądzie i w morzu. Zaczęło się ono w tym samym czasie co ogromne erupcje wulkaniczne, zwane Środkowoatlantycką Prowincją Magmową, gdy superkontynent Pangea zaczął się rozpadać. Po zniknięciu wielu innych zwierząt dinozaury zajęły puste miejsca i przez resztę mezozoiku dominowały na lądzie."
       },
       "view": { "boundaryAtBaseOf": "jurassic" },
       "sourceIds": ["blackburn-2013", "nps-extinction-events"]
     },
     {
       "id": "age-of-giants",
-      "title": { "en": "The age of giants" },
+      "title": { "en": "The age of giants", "pl": "Czasy olbrzymów" },
       "text": {
-        "en": "The rocks of the Morrison Formation, in the western USA, formed in the Late Jurassic, about 157 to 150 million years ago. They hold immense long-necked plant-eaters called sauropods, such as Diplodocus, Apatosaurus and Brachiosaurus. Diplodocus may have been one of the longest dinosaurs, partly thanks to its very long, whip-like tail. Brachiosaurus, with front legs longer than its back legs, reached leaves in tall trees."
+        "en": "The rocks of the Morrison Formation, in the western USA, formed in the Late Jurassic, about 157 to 150 million years ago. They hold immense long-necked plant-eaters called sauropods, such as Diplodocus, Apatosaurus and Brachiosaurus. Diplodocus may have been one of the longest dinosaurs, partly thanks to its very long, whip-like tail. Brachiosaurus, with front legs longer than its back legs, reached leaves in tall trees.",
+        "pl": "Skały formacji Morrison w zachodniej części USA powstały w późnej jurze, około 157–150 milionów lat temu. Kryją ogromne długoszyje roślinożerne dinozaury zwane zauropodami, takie jak Diplodocus, Apatosaurus i Brachiosaurus. Diplodocus mógł być jednym z najdłuższych dinozaurów, częściowo dzięki bardzo długiemu ogonowi przypominającemu bicz. Brachiosaurus, którego przednie nogi były dłuższe od tylnych, sięgał liści na wysokich drzewach."
       },
       "view": { "unit": "late-jurassic" },
       "highlight": "diplodocus",
@@ -36,9 +42,10 @@
     },
     {
       "id": "feathers",
-      "title": { "en": "Dinosaurs with feathers" },
+      "title": { "en": "Dinosaurs with feathers", "pl": "Dinozaury z piórami" },
       "text": {
-        "en": "About 125 million years ago, a small meat-eater called Sinosauropteryx lived in what is now north-eastern China. Its fossils, from the Yixian Formation, show a covering of thin, hair-like primitive feathers. Named in 1996, it was the first dinosaur other than a bird found with feathers. Later finds, like Microraptor with feathered wings on its arms and legs, showed that feathers evolved before birds."
+        "en": "About 125 million years ago, a small meat-eater called Sinosauropteryx lived in what is now north-eastern China. Its fossils, from the Yixian Formation, show a covering of thin, hair-like primitive feathers. Named in 1996, it was the first dinosaur other than a bird found with feathers. Later finds, like Microraptor with feathered wings on its arms and legs, showed that feathers evolved before birds.",
+        "pl": "Około 125 milionów lat temu na terenie dzisiejszych północno-wschodnich Chin żył mały mięsożerca zwany Sinosauropteryx. Jego skamieniałości z formacji Yixian pokazują okrycie z cienkich, podobnych do włosów prymitywnych piór. Nazwany w 1996 roku, był pierwszym znalezionym z piórami dinozaurem, który nie był ptakiem. Późniejsze odkrycia, takie jak Microraptor z opierzonymi skrzydłami na przednich i tylnych kończynach, pokazały, że pióra wyewoluowały wcześniej niż ptaki."
       },
       "view": { "species": "sinosauropteryx" },
       "highlight": "sinosauropteryx",
@@ -52,9 +59,10 @@
     },
     {
       "id": "the-asteroid",
-      "title": { "en": "The asteroid" },
+      "title": { "en": "The asteroid", "pl": "Asteroida" },
       "text": {
-        "en": "Tyrannosaurus rex lived in what is now Canada and the USA about 68 to 66 million years ago, at the very end of the Cretaceous. Then, 66 million years ago, an asteroid hit Chicxulub, in Mexico. Dust and debris blocked out sunlight and cooled the planet. All the non-bird dinosaurs died out. Only birds carried the dinosaur story on."
+        "en": "Tyrannosaurus rex lived in what is now Canada and the USA about 68 to 66 million years ago, at the very end of the Cretaceous. Then, 66 million years ago, an asteroid hit Chicxulub, in Mexico. Dust and debris blocked out sunlight and cooled the planet. All the non-bird dinosaurs died out. Only birds carried the dinosaur story on.",
+        "pl": "Tyrannosaurus rex żył na terenie dzisiejszej Kanady i USA około 68–66 milionów lat temu, u samego schyłku kredy. Potem, 66 milionów lat temu, w Chicxulub w Meksyku uderzyła asteroida. Pył i szczątki przesłoniły światło słoneczne i ochłodziły planetę. Wszystkie nieptasie dinozaury wymarły. Historię dinozaurów kontynuowały tylko ptaki."
       },
       "view": { "unit": "maastrichtian" },
       "highlight": "tyrannosaurus",

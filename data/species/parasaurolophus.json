@@ -4,7 +4,8 @@
   "genus": "Parasaurolophus",
   "nameMeaning": {
     "text": {
-      "en": "Like Saurolophus"
+      "en": "Like Saurolophus",
+      "pl": "podobny do Saurolophus"
     },
     "sourceIds": ["nhm-parasaurolophus"]
   },
@@ -23,19 +24,28 @@
     "startMa": 77,
     "endMa": 73,
     "sourceIds": ["nhm-parasaurolophus"],
-    "note": "NHM gives 77–73 Ma for the genus. P. walkeri itself is known in PBDB only from the Dinosaur Park Formation (Late Campanian)."
+    "note": {
+      "en": "NHM gives 77–73 Ma for the genus. P. walkeri itself is known in PBDB only from the Dinosaur Park Formation (Late Campanian).",
+      "pl": "NHM podaje dla rodzaju 77–73 mln lat temu. Sam P. walkeri jest znany w PBDB tylko z formacji Dinosaur Park (późny kampan)."
+    }
   },
   "periods": ["cretaceous"],
   "size": {
     "lengthM": {
       "value": [9, 9],
       "sourceIds": ["nhm-parasaurolophus"],
-      "note": "Single museum estimate (NHM)."
+      "note": {
+        "en": "Single museum estimate (NHM).",
+        "pl": "Jedyne oszacowanie muzealne (NHM)."
+      }
     },
     "massKg": {
       "value": [5000, 5000],
       "sourceIds": ["nhm-parasaurolophus"],
-      "note": "Single museum estimate (NHM); mass estimates vary widely between methods."
+      "note": {
+        "en": "Single museum estimate (NHM); mass estimates vary widely between methods.",
+        "pl": "Jedyne oszacowanie muzealne (NHM); szacunki masy bardzo się różnią w zależności od metody."
+      }
     }
   },
   "locations": [
@@ -53,7 +63,8 @@
   },
   "summary": {
     "text": {
-      "en": "Parasaurolophus was a duck-billed dinosaur with a long, hollow crest on its head. A tube ran from its nostrils up through the crest and back, and the crest may have helped it make sounds, recognise others or control its temperature. It ate plants and could walk on two or four legs. The type species, P. walkeri, comes from the Dinosaur Park Formation of Alberta, Canada."
+      "en": "Parasaurolophus was a duck-billed dinosaur with a long, hollow crest on its head. A tube ran from its nostrils up through the crest and back, and the crest may have helped it make sounds, recognise others or control its temperature. It ate plants and could walk on two or four legs. The type species, P. walkeri, comes from the Dinosaur Park Formation of Alberta, Canada.",
+      "pl": "Parasaurolophus był kaczodziobym dinozaurem z długim, pustym w środku grzebieniem na głowie. Od nozdrzy w górę przez grzebień i z powrotem biegła rurka, a grzebień mógł pomagać mu wydawać dźwięki, rozpoznawać inne osobniki lub regulować temperaturę ciała. Jadł rośliny i mógł chodzić na dwóch lub czterech nogach. Gatunek typowy, P. walkeri, pochodzi z formacji Dinosaur Park w prowincji Alberta w Kanadzie."
     },
     "sourceIds": ["nhm-parasaurolophus", "pbdb-occurrences"]
   },
@@ -63,14 +74,18 @@
       "commonsFile": "File:Parasaurolophus walkeri.jpg",
       "kind": "fossil",
       "alt": {
-        "en": "Incomplete type specimen of Parasaurolophus walkeri in the Royal Ontario Museum."
+        "en": "Incomplete type specimen of Parasaurolophus walkeri in the Royal Ontario Museum.",
+        "pl": "Niekompletny okaz typowy Parasaurolophus walkeri w Royal Ontario Museum."
       }
     }
   ],
   "uncertain": [
     {
       "field": "timeRange",
-      "note": "The 77–73 Ma range is the NHM figure for the whole genus; no verified radiometric range for P. walkeri alone was found."
+      "note": {
+        "en": "The 77–73 Ma range is the NHM figure for the whole genus; no verified radiometric range for P. walkeri alone was found.",
+        "pl": "Zakres 77–73 mln lat temu to wartość NHM dla całego rodzaju; nie znaleziono zweryfikowanego zakresu radiometrycznego dla samego P. walkeri."
+      }
     }
   ],
   "sources": [
