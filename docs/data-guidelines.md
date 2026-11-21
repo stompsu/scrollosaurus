@@ -70,3 +70,9 @@ is missing. Scientific names are never translated.
 - **Primary species: _Sinosauropteryx_.** When the page loads with no species or filter in the URL,
   the timeline highlights _Sinosauropteryx_ first. Its slug is `primarySpecies` in
   `data/site.json`; the build fails if that species file is missing.
+- **Size classes** for the size filter come from `size.lengthM` (see ADR-0001 §4): small under
+  2 m, medium 2–6 m, large 6–12 m, giant 12 m or more. A range counts in every class it touches
+  (Plateosaurus, 4.8–10 m, is medium and large). Without a length, a species is "size unknown"
+  in the filter, even if it has a wingspan or mass. Don't add a length just to fill the filter.
+- **Search** matches the genus (including any part of it), the full scientific name and
+  `nameMeaning`, so keep `nameMeaning.text.en` a plain translation ("tyrant lizard").

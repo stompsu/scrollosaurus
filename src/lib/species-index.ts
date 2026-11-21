@@ -1,5 +1,7 @@
 import type { Groups } from './schemas/groups';
 import type { Continent, Diet, PeriodId, Species } from './schemas/species';
+// Runtime import with an extension: vite.config.ts loads this file through Node.
+import { sizeClassesFor, type SizeClass } from './size-class.ts';
 
 /**
  * The compact per-species record the timeline, filters and search need. Built at build time from
@@ -9,6 +11,8 @@ export interface SpeciesIndexEntry {
   slug: string;
   scientificName: string;
   genus: string;
+  /** What the name means, in English (e.g. "tyrant lizard king"). */
+  nameMeaning: string;
   /** Most specific group id. */
   group: string;
   /** Group ids from the root down to `group`, e.g. ["dinosauria", "theropoda", …]. */
@@ -25,6 +29,10 @@ export interface SpeciesIndexEntry {
   periods: PeriodId[];
   continents: Continent[];
   famous: boolean;
+  /** Body length range [min, max] in m, when recorded. */
+  lengthM?: [number, number];
+  /** Size classes the length range touches; empty when the length is unknown. */
+  sizeClasses: SizeClass[];
 }
 
 export function groupPath(groups: Groups, id: string): string[] {
@@ -46,6 +54,7 @@ export function buildSpeciesIndex(species: Species[], groups: Groups): SpeciesIn
         slug: s.slug,
         scientificName: s.scientificName,
         genus: s.genus,
+        nameMeaning: s.nameMeaning.text.en,
         group: s.group,
         groupPath: groupPath(groups, s.group),
         isDinosaur: s.isDinosaur,
@@ -56,7 +65,9 @@ export function buildSpeciesIndex(species: Species[], groups: Groups): SpeciesIn
         periods: s.periods,
         continents: [...new Set(s.locations.map((l) => l.continent))],
         famous: s.famous,
+        sizeClasses: sizeClassesFor(s.size.lengthM?.value),
       };
+      if (s.size.lengthM) entry.lengthM = s.size.lengthM.value;
       if (s.timeRange.startUncertaintyMa !== undefined) {
         entry.startUncertaintyMa = s.timeRange.startUncertaintyMa;
       }
