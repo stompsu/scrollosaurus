@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { classifyLicense, htmlToText, parseCredit } from '@/lib/image-credits';
+import { classifyLicense, cleanAuthor, htmlToText, parseCredit } from '@/lib/image-credits';
 import { checkImages } from '@/lib/schemas/image-check';
 import { imageEntrySchema, type ImageEntry } from '@/lib/schemas/images';
 
@@ -35,6 +35,17 @@ describe('credit parsing', () => {
       htmlToText('<a href="//commons.wikimedia.org/wiki/User:X">Jane&nbsp;Doe</a> &amp; <b>Co</b>'),
     ).toBe('Jane Doe & Co');
     expect(htmlToText('Caf&#233; &#x41;')).toBe('Café A');
+  });
+
+  it('drops contact details from author names', () => {
+    expect(cleanAuthor('Emily Willoughby (emily.a.willoughby@gmail.com)')).toBe('Emily Willoughby');
+    expect(cleanAuthor('Petr Menshikov (https://twitter.com/x; https://vk.com/y)')).toBe(
+      'Petr Menshikov',
+    );
+    expect(cleanAuthor('Ripton Scott from Wimbledon, United Kingdom')).toBe(
+      'Ripton Scott from Wimbledon, United Kingdom',
+    );
+    expect(cleanAuthor('Mark Witton (palaeoartist)')).toBe('Mark Witton (palaeoartist)');
   });
 
   it('reads author, licence and URL', () => {

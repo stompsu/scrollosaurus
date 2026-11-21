@@ -10,7 +10,8 @@
  * to Commons for new images. Images no species lists any more are removed.
  *
  *   pnpm images             # add new images
- *   pnpm images --refresh   # re-read every credit and rebuild every derivative
+ *   pnpm images --refresh     # re-read every credit and rebuild every derivative (cached files)
+ *   pnpm images --redownload  # same, downloading the files again
  */
 import { createHash } from 'node:crypto';
 import { mkdir, readdir, readFile, rm, writeFile } from 'node:fs/promises';
@@ -36,7 +37,8 @@ const USER_AGENT = 'Scrollosaurus image pipeline (https://github.com/stompsu/scr
 const DOWNLOAD_WIDTH = Math.max(...IMAGE_WIDTHS);
 const PAUSE_MS = 500;
 
-const refresh = process.argv.includes('--refresh');
+const redownload = process.argv.includes('--redownload');
+const refresh = redownload || process.argv.includes('--refresh');
 
 interface ImageInfo {
   url: string;
@@ -106,7 +108,7 @@ function hashOf(file: string): string {
 async function download(url: string, hash: string): Promise<Buffer> {
   const cached = join(CACHE, hash);
   try {
-    if (refresh) throw new Error('refresh');
+    if (redownload) throw new Error('redownload');
     return await readFile(cached);
   } catch {
     const data = Buffer.from(await (await get(url)).arrayBuffer());

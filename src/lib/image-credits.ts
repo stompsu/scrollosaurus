@@ -42,6 +42,25 @@ export function htmlToText(html: string): string {
     .trim();
 }
 
+/**
+ * Author name for display: contact details some uploaders add to their name (an email address,
+ * links in brackets) are dropped. The Commons page, which the credit links, keeps them.
+ */
+export function cleanAuthor(author: string): string {
+  return author
+    .replace(/\(([^()]*)\)/g, (m, inner: string) =>
+      /^[\s;,]*((https?:\/\/|www\.)\S+|[\w.+-]+@[\w-]+\.[\w.]+)([\s;,]+((https?:\/\/|www\.)\S+|[\w.+-]+@[\w-]+\.[\w.]+))*[\s;,]*$/.test(
+        inner,
+      )
+        ? ''
+        : m,
+    )
+    .replace(/[\w.+-]+@[\w-]+\.[\w.]+/g, '')
+    .replace(/\s+/g, ' ')
+    .replace(/\s+([,;])/g, '$1')
+    .trim();
+}
+
 /** The fields of Commons `extmetadata` the pipeline reads. Each is `{ value: string }`. */
 export interface CommonsExtMetadata {
   Artist?: { value: string };
@@ -64,7 +83,7 @@ export function parseCredit(meta: CommonsExtMetadata): ParsedCredit | { error: s
   if (!license) return { error: 'no licence' };
   const licenseFamily = classifyLicense(license);
   if (!licenseFamily) return { error: `licence "${license}" is not allowed` };
-  const author = htmlToText(meta.Artist?.value ?? '');
+  const author = cleanAuthor(htmlToText(meta.Artist?.value ?? ''));
   if (!author) return { error: 'no author' };
   const rawUrl = (meta.LicenseUrl?.value ?? '').trim().replace(/^http:\/\//, 'https://');
   const licenseUrl = rawUrl.startsWith('//') ? `https:${rawUrl}` : rawUrl;
