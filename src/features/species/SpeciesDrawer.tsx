@@ -211,22 +211,28 @@ function Refs({ record, ids }: { record: Species; ids: readonly string[] }) {
   if (ids.length === 0) return null;
   return (
     <span className="sc-refs">
-      {ids.map((id) => {
-        const n = record.sources.findIndex((s) => s.id === id) + 1;
-        if (n === 0) return null;
-        return (
-          <a
-            key={id}
-            href={`#${sourceAnchor(record.slug, id)}`}
-            onClick={(e) => {
-              onClick(e, id);
-            }}
-            aria-label={`Source ${String(n)}`}
-          >
-            [{n}]
-          </a>
-        );
-      })}
+      {[...ids]
+        .sort(
+          (a, b) =>
+            record.sources.findIndex((s) => s.id === a) -
+            record.sources.findIndex((s) => s.id === b),
+        )
+        .map((id) => {
+          const n = record.sources.findIndex((s) => s.id === id) + 1;
+          if (n === 0) return null;
+          return (
+            <a
+              key={id}
+              href={`#${sourceAnchor(record.slug, id)}`}
+              onClick={(e) => {
+                onClick(e, id);
+              }}
+              aria-label={`Source ${String(n)}`}
+            >
+              [{n}]
+            </a>
+          );
+        })}
     </span>
   );
 }

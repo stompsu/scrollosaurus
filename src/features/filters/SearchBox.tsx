@@ -22,6 +22,7 @@ export function SearchBox({ items, onPick }: SearchBoxProps) {
   const [active, setActive] = useState(-1);
   const inputId = useId();
   const listId = useId();
+  const hintId = useId();
   const optionId = (i: number) => `${listId}-opt-${String(i)}`;
 
   const results = useMemo(() => engine.search(query), [engine, query]);
@@ -71,7 +72,7 @@ export function SearchBox({ items, onPick }: SearchBoxProps) {
     ? ''
     : results.length === 0
       ? 'No species found'
-      : `${String(results.length)} species found. Use the up and down arrows to choose.`;
+      : `${String(results.length)} species found`;
 
   return (
     <div className="sc-search" role="search">
@@ -87,7 +88,8 @@ export function SearchBox({ items, onPick }: SearchBoxProps) {
         autoComplete="off"
         spellCheck={false}
         aria-autocomplete="list"
-        aria-expanded={expanded}
+        aria-expanded={expanded && results.length > 0}
+        aria-describedby={hintId}
         aria-controls={listId}
         aria-activedescendant={expanded && active >= 0 ? optionId(active) : undefined}
         value={query}
@@ -137,6 +139,9 @@ export function SearchBox({ items, onPick }: SearchBoxProps) {
           </li>
         ))}
       </ul>
+      <p id={hintId} className="sr-only">
+        Use the up and down arrows to choose a result and Enter to open it.
+      </p>
       <p className="sr-only" aria-live="polite">
         {status}
       </p>

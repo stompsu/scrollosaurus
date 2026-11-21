@@ -1,12 +1,6 @@
+import { unitById } from './geologic-time';
 import { groupFilterOptions } from './groups';
-import {
-  CONTINENTS,
-  DIETS,
-  PERIOD_IDS,
-  type Continent,
-  type Diet,
-  type PeriodId,
-} from './schemas/species';
+import { CONTINENTS, DIETS, PERIOD_IDS, type Continent, type Diet, type PeriodId } from './enums';
 import { SIZE_CLASSES, SIZE_UNKNOWN, type SizeFilter } from './size-class';
 import type { SpeciesIndexEntry } from './species-index';
 
@@ -92,10 +86,20 @@ export function parseViewState(params: URLSearchParams): ViewState {
   };
   const startMa = numberParam(params, 'from');
   const endMa = numberParam(params, 'to');
-  if (startMa !== undefined && endMa !== undefined && startMa > endMa && endMa >= 0) {
-    return { filters, window: { startMa, endMa } };
+  if (startMa !== undefined && endMa !== undefined) {
+    const window = clampWindow({ startMa, endMa });
+    if (window) return { filters, window };
   }
   return { filters };
+}
+
+const MESOZOIC = unitById('mesozoic');
+
+/** The window limited to the Mesozoic; undefined if nothing of it is left or it's inverted. */
+export function clampWindow(w: TimeWindow): TimeWindow | undefined {
+  const startMa = Math.min(w.startMa, MESOZOIC.baseMa);
+  const endMa = Math.max(w.endMa, MESOZOIC.topMa);
+  return startMa > endMa ? { startMa, endMa } : undefined;
 }
 
 function roundMa(ma: number): string {
@@ -116,9 +120,10 @@ export function serializeViewState(state: ViewState): URLSearchParams {
   list('continent', f.continents);
   if (f.famousOnly) params.set('famous', '1');
   if (f.nonDinosaurs) params.set('nondino', '1');
-  if (window) {
-    params.set('from', roundMa(window.startMa));
-    params.set('to', roundMa(window.endMa));
+  const clamped = window && clampWindow(window);
+  if (clamped) {
+    params.set('from', roundMa(clamped.startMa));
+    params.set('to', roundMa(clamped.endMa));
   }
   return params;
 }

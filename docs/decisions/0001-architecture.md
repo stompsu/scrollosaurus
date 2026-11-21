@@ -61,7 +61,7 @@ Feature folders under `src/features/{timeline,species,filters}`, shared primitiv
 - The species index is **generated at build time** by a Vite plugin (`speciesIndexPlugin` in `vite.config.ts`) as the virtual module `virtual:species-index`, so dev, build, tests and typecheck all see the same index without a generated file or pre-step. Per species it holds only what the timeline, filters and search need: slug, name, group and its ancestors, `isDinosaur`, diet, time range, periods, continents, `famous` (size class and thumbnails are added in Phases 3–4). The search index will be built the same way. (Decided in Phase 1 after the schema review; implemented in Phase 2. This replaces the earlier plan of a `scripts/build-data.ts` writing to `src/generated/`.)
 - Full species records are **not** bundled eagerly: a non-eager `import.meta.glob('/data/species/*.json')` gives each record its own chunk, fetched when its detail view opens. An eager glob of 100+ records would spend most of the JS budget on JSON.
 - Size class is derived at build time from `size.lengthM` only (mass is missing or disputed for too many species) and added to the species index; it is never stored per species, because it would be an unsourced fact. The classes are display buckets approved by the owner in Phase 3 and live in `src/lib/size-class.ts`: small < 2 m, medium 2–6 m, large 6–12 m, giant ≥ 12 m. A species counts in every class its length range touches; no length means "size unknown". (Supersedes the earlier mass-first plan with thresholds in `data/site.json`.)
-- The browser never runs Zod: data is validated by `pnpm validate:data` before every build.
+- The browser never runs Zod: data is validated by `pnpm validate:data` before every build. Enum lists the UI needs live in the Zod-free `src/lib/enums.ts`, and an e2e check fails if the entry bundle contains Zod.
 - Images load lazily with placeholders.
 - Initial JS budget: ≤ 200 KB gzipped.
 
@@ -82,7 +82,7 @@ No cookies, no accounts, no tracking analytics. Optional `localStorage` for them
 ### 7. Shareable view state (Phase 3)
 
 - The selected species is in the path, `/species/:slug`; filters and the visible time window are in the query string, e.g. `/species/allosaurus?diet=carnivore&group=theropoda&from=201.4&to=143.1`. Opening that link restores the same view. `src/lib/view-state.ts` parses and writes it; unknown values are dropped, and lists are written in a fixed order so equal views have equal URLs.
-- The timeline reports its window only when the view settles, and the page writes it with `replace`, so panning doesn't fill the history. Opening and closing a species pushes history entries, so Back closes the drawer.
+- The timeline reports its window only when the view settles, and the page writes it with `replace`, so panning doesn't fill the history. Opening a species pushes a history entry, so Back closes the drawer; closing replaces that entry, so Back after closing doesn't reopen it. Back and Forward restore the window stored in each entry. Windows are clamped to the Mesozoic when read and written.
 - `/` and `/species/:slug` render one page component that stays mounted, so the timeline keeps its place when the drawer opens and closes. Old `/?species=x` links redirect to `/species/x`.
 - The drawer is a native modal `<dialog>`: focus stays inside, Esc closes it, and focus returns to what opened it.
 

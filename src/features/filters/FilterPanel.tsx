@@ -2,7 +2,7 @@ import { useId, useState, type ReactNode } from 'react';
 import { DietIcon } from '@/components/ui/DietBadge';
 import { groupFilterOptions } from '@/lib/groups';
 import { CONTINENT_LABELS, DIET_LABELS, PERIOD_LABELS } from '@/lib/labels';
-import { CONTINENTS, DIETS, PERIOD_IDS } from '@/lib/schemas/species';
+import { CONTINENTS, DIETS, PERIOD_IDS } from '@/lib/enums';
 import { SIZE_CLASSES, SIZE_UNKNOWN, type SizeFilter } from '@/lib/size-class';
 import { activeFilterCount, EMPTY_FILTERS, type SpeciesFilters } from '@/lib/view-state';
 

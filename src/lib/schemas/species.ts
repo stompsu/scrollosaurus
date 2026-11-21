@@ -1,32 +1,13 @@
 import { z } from 'zod';
+import { CONTINENTS, DIETS, PERIOD_IDS } from '../enums';
 import { localizedTextSchema, slugSchema, sourceIdsSchema, sourceSchema } from './common';
 
-export const DIETS = [
-  'carnivore',
-  'herbivore',
-  'omnivore',
-  'piscivore',
-  'insectivore',
-  'uncertain',
-] as const;
+export { CONTINENTS, DIETS, PERIOD_IDS } from '../enums';
+export type { Continent, Diet, PeriodId } from '../enums';
+
 export const dietSchema = z.enum(DIETS);
-export type Diet = z.infer<typeof dietSchema>;
-
-export const CONTINENTS = [
-  'africa',
-  'antarctica',
-  'asia',
-  'australia',
-  'europe',
-  'north-america',
-  'south-america',
-] as const;
 export const continentSchema = z.enum(CONTINENTS);
-export type Continent = z.infer<typeof continentSchema>;
-
-export const PERIOD_IDS = ['triassic', 'jurassic', 'cretaceous'] as const;
 export const periodIdSchema = z.enum(PERIOD_IDS);
-export type PeriodId = z.infer<typeof periodIdSchema>;
 
 /** Fields that can be flagged in `uncertain`. Keep in sync with the record shape below. */
 export const UNCERTAIN_FIELDS = [

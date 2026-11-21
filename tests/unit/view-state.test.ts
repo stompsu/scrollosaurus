@@ -89,6 +89,18 @@ describe('view state in the URL', () => {
     expect(v.filters.groups).toEqual([]);
     expect(v.window).toBeUndefined();
     expect(parseViewState(new URLSearchParams('?from=abc&to=1')).window).toBeUndefined();
+    expect(parseViewState(new URLSearchParams('?from=30&to=10')).window).toBeUndefined();
+  });
+
+  it('clamps windows to the Mesozoic when reading and writing', () => {
+    expect(parseViewState(new URLSearchParams('?from=999&to=-50')).window).toEqual({
+      startMa: 251.902,
+      endMa: 66,
+    });
+    const qs = queryString(
+      serializeViewState({ filters: EMPTY_FILTERS, window: { startMa: 80, endMa: 61.23 } }),
+    );
+    expect(qs).toBe('?from=80&to=66');
   });
 
   it('counts active filters, not the non-dinosaur layer', () => {

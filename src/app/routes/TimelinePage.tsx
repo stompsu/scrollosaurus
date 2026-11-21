@@ -158,8 +158,10 @@ export default function TimelinePage() {
     [openSpecies],
   );
 
+  // Closing replaces the species entry, so Back after closing leaves the page instead of
+  // reopening the drawer.
   const closeDrawer = useCallback(() => {
-    void navigate(`/${latestSearch.current}`);
+    void navigate(`/${latestSearch.current}`, { replace: true });
   }, [navigate]);
 
   // Search and "Lived alongside" move the timeline to the species they open.
@@ -173,7 +175,11 @@ export default function TimelinePage() {
 
   // Back and Forward restore the window stored in that history entry.
   useEffect(() => {
-    if (navigationType !== NavigationType.Pop || !view.window || sameWindow(view.window, shownWindow.current)) {
+    if (
+      navigationType !== NavigationType.Pop ||
+      !view.window ||
+      sameWindow(view.window, shownWindow.current)
+    ) {
       return;
     }
     shownWindow.current = view.window;
