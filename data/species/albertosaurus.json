@@ -1,0 +1,136 @@
+{
+  "slug": "albertosaurus",
+  "scientificName": "Albertosaurus sarcophagus",
+  "genus": "Albertosaurus",
+  "nameMeaning": {
+    "text": { "en": "Alberta lizard", "pl": "jaszczur z Alberty" },
+    "sourceIds": ["nhm-albertosaurus"]
+  },
+  "group": "tyrannosauridae",
+  "groupSourceIds": ["pbdb-albertosaurus-sarcophagus", "nhm-albertosaurus"],
+  "isDinosaur": true,
+  "taxonomy": {
+    "status": "valid"
+  },
+  "diet": {
+    "value": "carnivore",
+    "confidence": "established",
+    "sourceIds": ["nhm-albertosaurus"]
+  },
+  "timeRange": {
+    "startMa": 73.1,
+    "endMa": 68,
+    "sourceIds": ["eberth-kamo-2020", "pbdb-albertosaurus-sarcophagus-occs"],
+    "note": {
+      "en": "Almost all A. sarcophagus fossils come from the Horseshoe Canyon Formation, which U-Pb zircon dates place at 73.1-68.0 Ma in its type area (Eberth & Kamo 2020). Single PBDB records from the Oldman (Campanian) and Scollard (late Maastrichtian) formations are not used. The NHM Dino Directory gives 76-74 Ma.",
+      "pl": "Niemal wszystkie skamieniałości A. sarcophagus pochodzą z formacji Horseshoe Canyon, którą datowanie U-Pb cyrkonów umieszcza na obszarze typowym w przedziale 73,1–68,0 mln lat temu (Eberth i Kamo 2020). Pojedynczych rekordów PBDB z formacji Oldman (kampan) i Scollard (późny mastrycht) nie uwzględniono. Katalog Dino Directory muzeum NHM podaje 76–74 mln lat temu."
+    }
+  },
+  "periods": ["cretaceous"],
+  "size": {
+    "lengthM": {
+      "value": [9, 9],
+      "sourceIds": ["nhm-albertosaurus"],
+      "note": {
+        "en": "Single museum figure (NHM Dino Directory). The same page gives a type species and author that differ from PBDB, so it is unclear which fossils the figure is based on.",
+        "pl": "Jedyna wartość muzealna (NHM Dino Directory). Ta sama strona podaje gatunek typowy i autora niezgodnych z PBDB, więc nie wiadomo, na jakich skamieniałościach opiera się ta wartość."
+      }
+    },
+    "massKg": {
+      "value": [1500, 1500],
+      "sourceIds": ["nhm-albertosaurus"],
+      "note": {
+        "en": "Single museum figure (NHM Dino Directory); method not stated.",
+        "pl": "Jedyna wartość muzealna (NHM Dino Directory); metody nie podano."
+      }
+    }
+  },
+  "locations": [
+    {
+      "continent": "north-america",
+      "countryCode": "CA",
+      "formation": "Horseshoe Canyon",
+      "sourceIds": ["pbdb-albertosaurus-sarcophagus-occs", "eberth-kamo-2020"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "Osborn",
+    "year": 1905,
+    "note": {
+      "en": "The NHM Dino Directory gives a different type species (libratus) and author (Lambe, 1914); this record follows PBDB.",
+      "pl": "Katalog Dino Directory muzeum NHM podaje inny gatunek typowy (libratus) i autora (Lambe, 1914); ten wpis opiera się na PBDB."
+    },
+    "sourceIds": ["pbdb-albertosaurus-sarcophagus", "nhm-albertosaurus"]
+  },
+  "summary": {
+    "text": {
+      "en": "Albertosaurus was a large meat-eating dinosaur, about 9 metres long. It was a close relative of Tyrannosaurus, but smaller and less heavily built, with saw-edged teeth for slicing flesh. It lived in what is now Alberta, Canada, about 73 to 68 million years ago. One site holds at least 12 Albertosaurus that died together, though scientists cannot yet tell how much they lived in groups.",
+      "pl": "Albertosaurus był dużym mięsożernym dinozaurem o długości około 9 metrów. Był bliskim krewnym Tyrannosaurus, ale mniejszym i lżej zbudowanym, z piłkowanymi zębami do cięcia mięsa. Żył na terenie dzisiejszej Alberty w Kanadzie, około 73–68 milionów lat temu. W jednym stanowisku zachowały się szczątki co najmniej 12 osobników Albertosaurus, które zginęły razem, choć naukowcy nie potrafią jeszcze ocenić, w jakim stopniu żyły one w grupach."
+    },
+    "sourceIds": ["nhm-albertosaurus", "eberth-kamo-2020", "eberth-currie-2010"]
+  },
+  "funFacts": [
+    {
+      "text": {
+        "en": "The Albertosaurus bonebed has been dated, using crystals from volcanic ash layers, to about 70.1 million years ago.",
+        "pl": "Złoże kości Albertosaurus wydatowano na podstawie kryształów z warstw popiołu wulkanicznego na około 70,1 miliona lat."
+      },
+      "sourceIds": ["eberth-kamo-2020"]
+    }
+  ],
+  "famous": false,
+  "images": [
+    {
+      "commonsFile": "File:Albertosaurus at Science Center of Iowa.jpg",
+      "kind": "skeleton-mount",
+      "alt": {
+        "en": "Skeleton mount of Albertosaurus sarcophagus at the Science Center of Iowa during the exhibition “Tyrannosaurs: Meet the Family”.",
+        "pl": "Zmontowany szkielet Albertosaurus sarcophagus w Science Center of Iowa podczas wystawy „Tyrannosaurs: Meet the Family”."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "eberth-kamo-2020",
+      "title": "High-precision U–Pb CA–ID–TIMS dating and chronostratigraphy of the dinosaur-rich Horseshoe Canyon Formation (Upper Cretaceous, Campanian–Maastrichtian), Red Deer River valley, Alberta, Canada",
+      "authors": "Eberth D.A., Kamo S.L.",
+      "year": 2020,
+      "publisher": "Canadian Journal of Earth Sciences 57: 1220-1237",
+      "doi": "10.1139/cjes-2019-0019",
+      "url": "https://doi.org/10.1139/cjes-2019-0019",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "eberth-currie-2010",
+      "title": "Stratigraphy, sedimentology, and taphonomy of the Albertosaurus bonebed (upper Horseshoe Canyon Formation; Maastrichtian), southern Alberta, Canada",
+      "authors": "Eberth D.A., Currie P.J.",
+      "year": 2010,
+      "publisher": "Canadian Journal of Earth Sciences 47: 1119-1143",
+      "doi": "10.1139/e10-045",
+      "url": "https://doi.org/10.1139/e10-045",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "nhm-albertosaurus",
+      "title": "Albertosaurus | Dino Directory",
+      "publisher": "Natural History Museum, London",
+      "url": "https://www.nhm.ac.uk/discover/dino-directory/albertosaurus.html",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "pbdb-albertosaurus-sarcophagus",
+      "title": "Albertosaurus sarcophagus (taxon 56319)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/single.json?name=Albertosaurus%20sarcophagus&show=attr,app,parent,class",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-albertosaurus-sarcophagus-occs",
+      "title": "Occurrences of Albertosaurus sarcophagus (stratigraphy and location)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Albertosaurus%20sarcophagus&show=strat,loc",
+      "accessed": "2026-11-21"
+    }
+  ],
+  "lastReviewed": "2026-11-22"
+}

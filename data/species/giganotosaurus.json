@@ -1,0 +1,145 @@
+{
+  "slug": "giganotosaurus",
+  "scientificName": "Giganotosaurus carolinii",
+  "genus": "Giganotosaurus",
+  "nameMeaning": {
+    "text": { "en": "giant southern lizard", "pl": "olbrzymi południowy jaszczur" },
+    "sourceIds": ["nhm-giganotosaurus"]
+  },
+  "group": "allosauroidea",
+  "groupSourceIds": ["canale-2022", "pbdb-giganotosaurus-carolinii", "nhm-giganotosaurus"],
+  "isDinosaur": true,
+  "taxonomy": {
+    "status": "valid"
+  },
+  "diet": {
+    "value": "carnivore",
+    "confidence": "established",
+    "sourceIds": ["nhm-giganotosaurus"]
+  },
+  "timeRange": {
+    "startMa": 100,
+    "endMa": 95,
+    "sourceIds": ["nhm-giganotosaurus", "canale-2022", "pbdb-giganotosaurus-carolinii"],
+    "note": {
+      "en": "NHM gives about 100-95 Ma (early Late Cretaceous). Canale et al. (2022) place Giganotosaurus in the Candeleros Formation, just below the Huincul Formation. PBDB instead dates its occurrences to the Albian (113.2-106.3 Ma), in the Early Cretaceous.",
+      "pl": "NHM podaje około 100–95 mln lat temu (początek późnej kredy). Canale i in. (2022) umieszczają Giganotosaurus w formacji Candeleros, tuż poniżej formacji Huincul. PBDB natomiast datuje jego występowania na alb (113,2–106,3 mln lat temu), czyli na wczesną kredę."
+    }
+  },
+  "periods": ["cretaceous"],
+  "size": {
+    "lengthM": {
+      "value": [13, 13],
+      "sourceIds": ["nhm-giganotosaurus"],
+      "note": {
+        "en": "Single museum figure (NHM Dino Directory). No complete skeleton is known, so the length is an estimate.",
+        "pl": "Jedyna wartość muzealna (NHM Dino Directory). Nie jest znany kompletny szkielet, więc długość jest szacunkowa."
+      }
+    },
+    "massKg": {
+      "value": [13800, 13800],
+      "sourceIds": ["nhm-giganotosaurus"],
+      "note": {
+        "en": "Single museum figure (NHM Dino Directory); method not stated. Mass estimates for large theropods vary widely between methods.",
+        "pl": "Jedyna wartość muzealna (NHM Dino Directory); metody nie podano. Szacunki masy dużych teropodów bardzo się różnią w zależności od metody."
+      }
+    }
+  },
+  "locations": [
+    {
+      "continent": "south-america",
+      "countryCode": "AR",
+      "formation": "Candeleros",
+      "sourceIds": ["pbdb-giganotosaurus-occs", "canale-2022"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "Coria & Salgado",
+    "year": 1995,
+    "note": {
+      "en": "First discovered in Patagonia in 1993.",
+      "pl": "Pierwsze szczątki odkryto w Patagonii w 1993 roku."
+    },
+    "sourceIds": ["coria-salgado-1995", "pbdb-giganotosaurus-carolinii", "nhm-giganotosaurus"]
+  },
+  "summary": {
+    "text": {
+      "en": "Giganotosaurus was a giant meat-eating dinosaur from Patagonia, in what is now Argentina, and lived roughly 100 million years ago. It may have been about 13 metres long. Its skull, about 1.6 metres long, is one of the largest theropod skulls ever found. Its long, blade-like teeth had serrated edges for slicing flesh. No complete skeleton has been found, so parts of its body are still unknown.",
+      "pl": "Giganotosaurus był olbrzymim mięsożernym dinozaurem z Patagonii, na terenie dzisiejszej Argentyny, żyjącym około 100 milionów lat temu. Mógł mieć około 13 metrów długości. Jego czaszka, długa na około 1,6 metra, jest jedną z największych znanych czaszek teropodów. Długie zęby w kształcie ostrzy miały piłkowane krawędzie do cięcia mięsa. Nie znaleziono kompletnego szkieletu, więc części jego ciała wciąż nie znamy."
+    },
+    "sourceIds": ["nhm-giganotosaurus", "canale-2022"]
+  },
+  "funFacts": [
+    {
+      "text": {
+        "en": "Earlier estimates of its skull length ranged from 1.56 to 1.80 metres; a 2022 study narrowed it to about 1.63 metres.",
+        "pl": "Wcześniejsze szacunki długości jego czaszki wahały się od 1,56 do 1,80 metra; badanie z 2022 roku zawęziło je do około 1,63 metra."
+      },
+      "sourceIds": ["canale-2022"]
+    }
+  ],
+  "famous": false,
+  "images": [
+    {
+      "commonsFile": "File:Giganotosaurus skeleton mount.jpg",
+      "kind": "skeleton-mount",
+      "alt": {
+        "en": "Mounted skeleton of Giganotosaurus carolinii at the travelling exhibition “Dinosaurios más allá de la extinción” in Coquimbo.",
+        "pl": "Zmontowany szkielet Giganotosaurus carolinii na wystawie objazdowej „Dinosaurios más allá de la extinción” w Coquimbo."
+      }
+    }
+  ],
+  "uncertain": [
+    {
+      "field": "timeRange",
+      "note": {
+        "en": "Sources disagree on the age of the Candeleros Formation fossils: NHM gives 100-95 Ma (Cenomanian), PBDB gives Albian ages (113.2-106.3 Ma). The NHM range is used until a radiometric date for the Giganotosaurus level is verified.",
+        "pl": "Źródła nie zgadzają się co do wieku skamieniałości z formacji Candeleros: NHM podaje 100–95 mln lat temu (cenoman), PBDB – wiek albski (113,2–106,3 mln lat temu). Do czasu zweryfikowania datowania radiometrycznego poziomu z Giganotosaurus używany jest zakres NHM."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "coria-salgado-1995",
+      "title": "A new giant carnivorous dinosaur from the Cretaceous of Patagonia",
+      "authors": "Coria R.A., Salgado L.",
+      "year": 1995,
+      "publisher": "Nature 377: 224-226",
+      "doi": "10.1038/377224a0",
+      "url": "https://doi.org/10.1038/377224a0",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "canale-2022",
+      "title": "New giant carnivorous dinosaur reveals convergent evolutionary trends in theropod arm reduction",
+      "authors": "Canale J.I., Apesteguía S., Gallina P.A., Mitchell J., Smith N.D., Cullen T.M., Shinya A., Haluza A., Gianechini F.A., Makovicky P.J.",
+      "year": 2022,
+      "publisher": "Current Biology 32",
+      "doi": "10.1016/j.cub.2022.05.057",
+      "url": "https://par.nsf.gov/servlets/purl/10393025",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "nhm-giganotosaurus",
+      "title": "Giganotosaurus | Dino Directory",
+      "publisher": "Natural History Museum, London",
+      "url": "https://www.nhm.ac.uk/discover/dino-directory/giganotosaurus.html",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "pbdb-giganotosaurus-carolinii",
+      "title": "Giganotosaurus carolinii (taxon 54541)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/single.json?name=Giganotosaurus%20carolinii&show=attr,app,parent,class",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-giganotosaurus-occs",
+      "title": "Occurrences of Giganotosaurus (stratigraphy and location)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Giganotosaurus&show=strat,loc",
+      "accessed": "2026-11-21"
+    }
+  ],
+  "lastReviewed": "2026-11-22"
+}

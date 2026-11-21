@@ -1,0 +1,175 @@
+{
+  "slug": "edmontosaurus",
+  "scientificName": "Edmontosaurus regalis",
+  "genus": "Edmontosaurus",
+  "nameMeaning": {
+    "text": {
+      "en": "Edmonton lizard",
+      "pl": "jaszczur z Edmonton"
+    },
+    "sourceIds": ["nhm-edmontosaurus"]
+  },
+  "group": "hadrosauridae",
+  "groupSourceIds": ["nhm-edmontosaurus", "pbdb-taxon"],
+  "isDinosaur": true,
+  "taxonomy": {
+    "status": "valid",
+    "note": {
+      "en": "Campione and Evans (2011) recognise two species: E. regalis, the type species, from Alberta, and the younger E. annectens from the latest Maastrichtian of western North America. This record uses the type species; many well-known skeletons from the Hell Creek and Lance formations are E. annectens.",
+      "pl": "Campione i Evans (2011) uznają dwa gatunki: E. regalis, gatunek typowy z Alberty, oraz młodszy E. annectens z najpóźniejszego mastrychtu zachodniej części Ameryki Północnej. Ten wpis dotyczy gatunku typowego; wiele znanych szkieletów z formacji Hell Creek i Lance należy do E. annectens."
+    },
+    "sourceIds": ["campione-evans-2011"]
+  },
+  "diet": {
+    "value": "herbivore",
+    "confidence": "established",
+    "sourceIds": ["nhm-edmontosaurus"]
+  },
+  "timeRange": {
+    "startMa": 73.1,
+    "endMa": 71.5,
+    "sourceIds": ["eberth-kamo-2020", "campione-evans-2011"],
+    "note": {
+      "en": "Age of the Edmontosaurus regalis–Pachyrhinosaurus canadensis assemblage zone of the Horseshoe Canyon Formation, from U–Pb dating (Eberth and Kamo 2020). Campione and Evans (2011) place definite E. regalis fossils in latest Campanian rocks of Alberta. NHM gives 76–66 Ma for the whole genus, including the younger E. annectens.",
+      "pl": "Wiek strefy zespołu Edmontosaurus regalis–Pachyrhinosaurus canadensis w formacji Horseshoe Canyon, według datowania U–Pb (Eberth i Kamo 2020). Campione i Evans (2011) umieszczają pewne skamieniałości E. regalis w skałach najpóźniejszego kampanu w Albercie. NHM podaje 76–66 mln lat temu dla całego rodzaju, łącznie z młodszym E. annectens."
+    }
+  },
+  "periods": ["cretaceous"],
+  "size": {
+    "lengthM": {
+      "value": [13, 13],
+      "sourceIds": ["nhm-edmontosaurus"],
+      "note": {
+        "en": "Single museum estimate (NHM) for the genus, not specifically for E. regalis.",
+        "pl": "Jedyne oszacowanie muzealne (NHM) dla rodzaju, a nie konkretnie dla E. regalis."
+      }
+    },
+    "massKg": {
+      "value": [3400, 3400],
+      "sourceIds": ["nhm-edmontosaurus"],
+      "note": {
+        "en": "Single museum estimate (NHM) for the genus; mass estimates vary widely between methods.",
+        "pl": "Jedyne oszacowanie muzealne (NHM) dla rodzaju; szacunki masy bardzo się różnią w zależności od metody."
+      }
+    }
+  },
+  "locations": [
+    {
+      "continent": "north-america",
+      "countryCode": "CA",
+      "formation": "Horseshoe Canyon",
+      "sourceIds": ["pbdb-occurrences", "campione-evans-2011"]
+    },
+    {
+      "continent": "north-america",
+      "countryCode": "CA",
+      "formation": "Wapiti",
+      "sourceIds": ["bell-2014"]
+    },
+    {
+      "continent": "north-america",
+      "countryCode": "CA",
+      "formation": "St. Mary River",
+      "sourceIds": ["pbdb-occurrences"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "Lambe",
+    "year": 1917,
+    "sourceIds": ["nhm-edmontosaurus", "pbdb-taxon", "campione-evans-2011"]
+  },
+  "summary": {
+    "text": {
+      "en": "Edmontosaurus was a large duck-billed dinosaur with a horny beak and about a thousand grinding cheek teeth for chewing tough plants such as pine needles and twigs. It could walk on two or four legs. Its type species, E. regalis, lived in what is now Alberta, Canada, about 73 to 71.5 million years ago. A rare 'mummy' found there showed that it had a fleshy crest on its head, like a rooster's comb.",
+      "pl": "Edmontosaurus był dużym kaczodziobym dinozaurem z rogowym dziobem i około tysiącem zębów policzkowych, którymi rozcierał twarde rośliny, takie jak igły sosen i gałązki. Mógł chodzić na dwóch lub czterech nogach. Jego gatunek typowy, E. regalis, żył na terenie dzisiejszej Alberty w Kanadzie około 73–71,5 miliona lat temu. Rzadka „mumia” znaleziona w tej prowincji pokazała, że miał na głowie mięsisty grzebień, podobny do koguciego."
+    },
+    "sourceIds": ["nhm-edmontosaurus", "campione-evans-2011", "eberth-kamo-2020", "bell-2014"]
+  },
+  "funFacts": [
+    {
+      "text": {
+        "en": "The 'giant duckbill' Anatotitan copei is no longer a separate species: a 2011 study of skull growth found that its features are explained by the size and variation of Edmontosaurus.",
+        "pl": "„Olbrzymi kaczodziób” Anatotitan copei nie jest już osobnym gatunkiem: badanie wzrostu czaszki z 2011 roku wykazało, że jego cechy wynikają z rozmiarów i zmienności Edmontosaurus."
+      },
+      "sourceIds": ["campione-evans-2011"]
+    }
+  ],
+  "famous": false,
+  "images": [
+    {
+      "commonsFile": "File:Edmontosaurus annectens skeleton 02.jpg",
+      "kind": "skeleton-mount",
+      "note": {
+        "en": "This skeleton is Edmontosaurus annectens, another species of the same genus.",
+        "pl": "Ten szkielet to Edmontosaurus annectens, inny gatunek z tego samego rodzaju."
+      },
+      "alt": {
+        "en": "Mounted skeleton of Edmontosaurus annectens in the collections of the Ulster Museum.",
+        "pl": "Zmontowany szkielet Edmontosaurus annectens w zbiorach Ulster Museum."
+      }
+    }
+  ],
+  "uncertain": [
+    {
+      "field": "timeRange",
+      "note": {
+        "en": "The range is the dated assemblage zone in the Horseshoe Canyon Formation; E. regalis from other formations (Wapiti, St. Mary River) is not separately dated here.",
+        "pl": "Zakres to datowana strefa zespołu w formacji Horseshoe Canyon; E. regalis z innych formacji (Wapiti, St. Mary River) nie zostały tu osobno datowane."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "nhm-edmontosaurus",
+      "title": "Edmontosaurus | Dino Directory",
+      "publisher": "Natural History Museum, London",
+      "url": "https://www.nhm.ac.uk/discover/dino-directory/edmontosaurus.html",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "pbdb-taxon",
+      "title": "Edmontosaurus regalis (taxon 63254)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=63254",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "pbdb-occurrences",
+      "title": "Fossil occurrences of Edmontosaurus",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Edmontosaurus&show=strat,loc",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "campione-evans-2011",
+      "title": "Cranial growth and variation in edmontosaurs (Dinosauria: Hadrosauridae): implications for latest Cretaceous megaherbivore diversity in North America",
+      "authors": "Campione, N. E.; Evans, D. C.",
+      "year": 2011,
+      "publisher": "PLoS ONE",
+      "doi": "10.1371/journal.pone.0025186",
+      "url": "https://doi.org/10.1371/journal.pone.0025186",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "eberth-kamo-2020",
+      "title": "High-precision U–Pb CA–ID–TIMS dating and chronostratigraphy of the dinosaur-rich Horseshoe Canyon Formation (Upper Cretaceous, Campanian–Maastrichtian), Red Deer River valley, Alberta, Canada",
+      "authors": "Eberth, D. A.; Kamo, S. L.",
+      "year": 2020,
+      "publisher": "Canadian Journal of Earth Sciences",
+      "doi": "10.1139/cjes-2019-0019",
+      "url": "https://doi.org/10.1139/cjes-2019-0019",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "bell-2014",
+      "title": "A mummified duck-billed dinosaur with a soft-tissue cock's comb",
+      "authors": "Bell, P. R.; Fanti, F.; Currie, P. J.; Arbour, V. M.",
+      "year": 2014,
+      "publisher": "Current Biology",
+      "doi": "10.1016/j.cub.2013.11.008",
+      "url": "https://doi.org/10.1016/j.cub.2013.11.008",
+      "accessed": "2026-11-21"
+    }
+  ],
+  "lastReviewed": "2026-11-21"
+}

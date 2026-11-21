@@ -5,19 +5,20 @@
 
 ## Where things live
 
-| What                                        | Where                              |
-| ------------------------------------------- | ---------------------------------- |
-| One species                                 | `data/species/<slug>.json`         |
-| Geological time (ICS chart)                 | `data/geologic-time.json`          |
-| Group tree (clades, subgroups)              | `data/groups.json`                 |
-| Site settings (primary species)             | `data/site.json`                   |
-| Image credits (generated from Commons)      | `data/generated/` (Phase 4)        |
-| Schemas and cross-file checks               | `src/lib/schemas/`                 |
-| Optimised images (generated, not committed) | `public/images/species/` (Phase 4) |
+| What                                    | Where                        |
+| --------------------------------------- | ---------------------------- |
+| One species                             | `data/species/<slug>.json`   |
+| Geological time (ICS chart)             | `data/geologic-time.json`    |
+| Group tree (clades, subgroups)          | `data/groups.json`           |
+| Site settings (primary species)         | `data/site.json`             |
+| Image credits (generated from Commons)  | `data/generated/images.json` |
+| Schemas and cross-file checks           | `src/lib/schemas/`           |
+| Optimised images (generated, committed) | `public/images/`             |
 
-Translatable text sits inline in each record as `{ "en": "…", "pl": "…" }`. **Polish is deferred to
-Phase 6**: `en` is required, `pl` is optional, and `pnpm validate:data` prints one warning while it
-is missing. Scientific names are never translated.
+Translatable text sits inline in each record as `{ "en": "…", "pl": "…" }`, notes included. **Both
+languages are required** since Phase 6: `pnpm validate:data` fails on any text without Polish.
+Translations are faithful (nothing added, dropped, strengthened or softened). Scientific names are
+never translated; genus names stay uninflected Latin in Polish sentences.
 
 ## Steps
 
@@ -66,7 +67,7 @@ is missing. Scientific names are never translated.
    `public/images/` and the credit to `data/generated/images.json`. Commit both. Never type a
    credit by hand; `pnpm images --refresh` re-reads every credit.
    If the image needs context to be honest (a related species, a contested pose), add
-   `note.en`: it is shown under the image. The image kind (fossil, mounted skeleton, skull, life
+   `note` (`{ en, pl }`): it is shown under the image. The image kind (fossil, mounted skeleton, skull, life
    reconstruction) is always shown.
 10. **Set `lastReviewed`** to today and run `pnpm validate:data`. It prints errors, warnings and
     the list of fields flagged as uncertain.

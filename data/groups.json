@@ -303,6 +303,12 @@
       "name": "Mosasauridae",
       "isDinosaur": false,
       "sourceIds": ["pbdb-mosasauridae"]
+    },
+    {
+      "id": "ichthyosauria",
+      "name": "Ichthyosauria",
+      "isDinosaur": false,
+      "sourceIds": ["pbdb-ichthyosauria"]
     }
   ],
   "sources": [
@@ -587,6 +593,13 @@
       "accessed": "2026-11-20"
     },
     {
+      "id": "pbdb-ichthyosauria",
+      "title": "Ichthyosauria (taxon 36543)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/single.json?name=Ichthyosauria&show=attr,app,parent",
+      "accessed": "2026-11-21"
+    },
+    {
       "id": "baron-2017",
       "title": "A new hypothesis of dinosaur relationships and early dinosaur evolution",
       "authors": "Baron, M. G.; Norman, D. B.; Barrett, P. M.",
@@ -657,5 +670,5 @@
       "accessed": "2026-11-20"
     }
   ],
-  "lastReviewed": "2026-11-20"
+  "lastReviewed": "2026-11-21"
 }

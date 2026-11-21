@@ -42,7 +42,7 @@ export function createSpeciesSearch(items: readonly SpeciesIndexEntry[]): Specie
       }
     },
     searchOptions: {
-      boost: { genus: 3, scientificName: 2, genusEndings: 0.5 },
+      boost: { genus: 6, scientificName: 2, genusEndings: 0.25 },
       prefix: true,
       fuzzy: 0.2,
       combineWith: 'AND',

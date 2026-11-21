@@ -1,0 +1,152 @@
+{
+  "slug": "giraffatitan",
+  "scientificName": "Giraffatitan brancai",
+  "genus": "Giraffatitan",
+  "nameMeaning": {
+    "text": { "en": "giraffe titan", "pl": "żyrafi tytan" },
+    "sourceIds": ["nhm-giraffatitan"]
+  },
+  "group": "brachiosauridae",
+  "groupSourceIds": ["taylor-2009", "pbdb-giraffatitan-brancai", "nhm-giraffatitan"],
+  "isDinosaur": true,
+  "taxonomy": {
+    "status": "valid",
+    "note": {
+      "en": "Janensch named it Brachiosaurus brancai in 1914. It is now usually placed in its own genus, Giraffatitan, separate from the North American Brachiosaurus, although not every scientist agrees.",
+      "pl": "Janensch nazwał go w 1914 roku Brachiosaurus brancai. Obecnie zwykle umieszcza się go w osobnym rodzaju, Giraffatitan, odrębnym od północnoamerykańskiego Brachiosaurus, choć nie wszyscy naukowcy się z tym zgadzają."
+    },
+    "sourceIds": ["taylor-2009", "pbdb-giraffatitan-occs", "nhm-giraffatitan"]
+  },
+  "diet": {
+    "value": "herbivore",
+    "confidence": "established",
+    "sourceIds": ["nhm-giraffatitan"]
+  },
+  "timeRange": {
+    "startMa": 161.5,
+    "endMa": 143.1,
+    "sourceIds": ["pbdb-giraffatitan-brancai", "pbdb-giraffatitan-occs"],
+    "note": {
+      "en": "Stage-level PBDB occurrence ages in the Tendaguru Formation; the Ma values are the ICS v2024/12 stage boundaries. Most occurrences are from the Middle and Upper Dinosaur members (late Kimmeridgian to Tithonian); two from the Lower Dinosaur Member are dated Oxfordian. The NHM Dino Directory gives 154-142 Ma.",
+      "pl": "Wiek występowań w formacji Tendaguru na poziomie pięter, według PBDB; wartości w mln lat to granice pięter według ICS v2024/12. Większość występowań pochodzi ze środkowego i górnego ogniwa dinozaurowego (od późnego kimerydu do tytonu); dwa z dolnego ogniwa dinozaurowego są datowane na oksford. Katalog Dino Directory muzeum NHM podaje 154–142 mln lat temu."
+    }
+  },
+  "periods": ["jurassic"],
+  "size": {
+    "lengthM": {
+      "value": [23, 23],
+      "sourceIds": ["nhm-giraffatitan"],
+      "note": {
+        "en": "Single museum figure (NHM Dino Directory).",
+        "pl": "Jedyna wartość muzealna (NHM Dino Directory)."
+      }
+    },
+    "massKg": {
+      "value": [23200, 23200],
+      "sourceIds": ["sellers-2012"],
+      "note": {
+        "en": "Convex-hull estimate from the mounted skeleton in Berlin: 23,200 ± 2,200 kg. Sellers et al. (2012) note that another volumetric estimate gives a very similar 23,337 kg.",
+        "pl": "Oszacowanie metodą otoczki wypukłej na podstawie zmontowanego szkieletu w Berlinie: 23 200 ± 2200 kg. Sellers i in. (2012) zauważają, że inne oszacowanie objętościowe daje bardzo zbliżoną wartość 23 337 kg."
+      }
+    }
+  },
+  "locations": [
+    {
+      "continent": "africa",
+      "countryCode": "TZ",
+      "formation": "Tendaguru",
+      "sourceIds": ["pbdb-giraffatitan-occs", "nhm-giraffatitan", "mfn-dinosaurs"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "Janensch",
+    "year": 1914,
+    "note": {
+      "en": "Described as Brachiosaurus brancai and later moved to its own genus, Giraffatitan.",
+      "pl": "Opisany jako Brachiosaurus brancai, a później przeniesiony do osobnego rodzaju Giraffatitan."
+    },
+    "sourceIds": ["pbdb-giraffatitan-brancai", "taylor-2009", "nhm-giraffatitan"]
+  },
+  "summary": {
+    "text": {
+      "en": "Giraffatitan was a giant long-necked plant eater from the Late Jurassic of Tanzania, in East Africa. It was about 23 metres long and weighed around 23 tonnes. It was once thought to be an African species of Brachiosaurus but is now usually treated as a separate genus. It is known from fossils of several individuals, and its skeleton in Berlin comes from finds of the Tendaguru Expedition of 1909 to 1913.",
+      "pl": "Giraffatitan był olbrzymim długoszyim roślinożercą z późnej jury Tanzanii w Afryce Wschodniej. Miał około 23 metrów długości i ważył około 23 ton. Niegdyś uważano go za afrykański gatunek Brachiosaurus, ale obecnie zwykle traktuje się go jako odrębny rodzaj. Jest znany ze skamieniałości kilku osobników, a jego szkielet w Berlinie pochodzi ze znalezisk ekspedycji na Tendaguru z lat 1909–1913."
+    },
+    "sourceIds": ["nhm-giraffatitan", "sellers-2012", "taylor-2009", "mfn-dinosaurs"]
+  },
+  "funFacts": [
+    {
+      "text": {
+        "en": "Its mounted skeleton at the Museum für Naturkunde in Berlin is the largest mounted dinosaur skeleton in the world, according to Guinness World Records.",
+        "pl": "Jego zmontowany szkielet w Museum für Naturkunde w Berlinie jest według Księgi rekordów Guinnessa największym zmontowanym szkieletem dinozaura na świecie."
+      },
+      "sourceIds": ["mfn-dinosaurs"]
+    }
+  ],
+  "famous": false,
+  "images": [
+    {
+      "commonsFile": "File:Giraffatitan skeleton in Museum für Naturkunde Berlin 0817.jpg",
+      "kind": "skeleton-mount",
+      "alt": {
+        "en": "Mounted skeleton of Giraffatitan at the Museum für Naturkunde in Berlin.",
+        "pl": "Zmontowany szkielet Giraffatitan w Museum für Naturkunde w Berlinie."
+      },
+      "note": {
+        "en": "Shown under its earlier name: the museum notice calls this skeleton Brachiosaurus.",
+        "pl": "Pokazany pod dawną nazwą: tabliczka muzealna nazywa ten szkielet Brachiosaurus."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "taylor-2009",
+      "title": "A re-evaluation of Brachiosaurus altithorax Riggs 1903 (Dinosauria, Sauropoda) and its generic separation from Giraffatitan brancai (Janensch 1914)",
+      "authors": "Taylor M.P.",
+      "year": 2009,
+      "publisher": "Journal of Vertebrate Paleontology 29: 787-806",
+      "doi": "10.1671/039.029.0309",
+      "url": "https://doi.org/10.1671/039.029.0309",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "sellers-2012",
+      "title": "Minimum convex hull mass estimations of complete mounted skeletons",
+      "authors": "Sellers W.I., Hepworth-Bell J., Falkingham P.L., Bates K.T., Brassey C.A., Egerton V.M., Manning P.L.",
+      "year": 2012,
+      "publisher": "Biology Letters 8: 842-845",
+      "doi": "10.1098/rsbl.2012.0263",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3440966/",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "mfn-dinosaurs",
+      "title": "The World of Dinosaurs (exhibition)",
+      "publisher": "Museum für Naturkunde Berlin",
+      "url": "https://www.museumfuernaturkunde.berlin/en/plan-your-visit/exhibition/the-world-of-dinosaurs/",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "nhm-giraffatitan",
+      "title": "Giraffatitan | Dino Directory",
+      "publisher": "Natural History Museum, London",
+      "url": "https://www.nhm.ac.uk/discover/dino-directory/giraffatitan.html",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "pbdb-giraffatitan-brancai",
+      "title": "Giraffatitan brancai (taxon 64501)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/single.json?name=Giraffatitan%20brancai&show=attr,app,parent,class",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-giraffatitan-occs",
+      "title": "Occurrences of Giraffatitan (stratigraphy and location)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Giraffatitan&show=strat,loc",
+      "accessed": "2026-11-21"
+    }
+  ],
+  "lastReviewed": "2026-11-22"
+}

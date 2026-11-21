@@ -1,0 +1,136 @@
+{
+  "slug": "kentrosaurus",
+  "scientificName": "Kentrosaurus aethiopicus",
+  "genus": "Kentrosaurus",
+  "nameMeaning": {
+    "text": {
+      "en": "Spiky lizard",
+      "pl": "kolczasty jaszczur"
+    },
+    "sourceIds": ["nhm-kentrosaurus"]
+  },
+  "group": "stegosauria",
+  "groupSourceIds": ["nhm-kentrosaurus", "pbdb-taxon"],
+  "isDinosaur": true,
+  "taxonomy": {
+    "status": "valid"
+  },
+  "diet": {
+    "value": "herbivore",
+    "confidence": "established",
+    "sourceIds": ["nhm-kentrosaurus"]
+  },
+  "timeRange": {
+    "startMa": 154.8,
+    "endMa": 143.1,
+    "sourceIds": ["pbdb-occurrences"],
+    "note": {
+      "en": "Stage-based: PBDB dates K. aethiopicus from the Middle Dinosaur Member (late Kimmeridgian) and Upper Dinosaur Member (Tithonian) of the Tendaguru Formation. ICS has no late-Kimmeridgian boundary, so the start uses the base of the Kimmeridgian (154.8 Ma) and the end the top of the Tithonian (143.1 Ma). One PBDB record from the Lower Dinosaur Member (Oxfordian) is not used. NHM gives 155–150 Ma.",
+      "pl": "Na podstawie pięter: PBDB datuje K. aethiopicus ze środkowego ogniwa dinozaurowego (późny kimeryd) i górnego ogniwa dinozaurowego (tyton) formacji Tendaguru. ICS nie wyznacza granicy późnego kimerydu, więc początek zakresu opiera się na dolnej granicy kimerydu (154,8 mln lat temu), a koniec na górnej granicy tytonu (143,1 mln lat temu). Jednego rekordu PBDB z dolnego ogniwa dinozaurowego (oksford) nie uwzględniono. NHM podaje 155–150 mln lat temu."
+    }
+  },
+  "periods": ["jurassic"],
+  "size": {
+    "lengthM": {
+      "value": [5, 5],
+      "sourceIds": ["nhm-kentrosaurus"],
+      "note": {
+        "en": "Single museum estimate (NHM).",
+        "pl": "Jedyne oszacowanie muzealne (NHM)."
+      }
+    }
+  },
+  "locations": [
+    {
+      "continent": "africa",
+      "countryCode": "TZ",
+      "formation": "Tendaguru",
+      "sourceIds": ["pbdb-occurrences", "mallison-2011"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "Hennig",
+    "year": 1915,
+    "note": {
+      "en": "Some older records use the spelling Kentrurosaurus; PBDB treats these as the same species.",
+      "pl": "W niektórych starszych rekordach występuje pisownia Kentrurosaurus; PBDB traktuje je jako ten sam gatunek."
+    },
+    "sourceIds": ["nhm-kentrosaurus", "pbdb-taxon", "pbdb-occurrences"]
+  },
+  "summary": {
+    "text": {
+      "en": "Kentrosaurus was a spiky, plant-eating stegosaur about five metres long. It lived in the Late Jurassic in what is now Tanzania, in East Africa, and its fossils come from the Tendaguru Formation. Stegosaurs were not built for running fast, so Kentrosaurus probably defended itself by swinging its spiked tail, a weapon that could wound even large meat-eating dinosaurs.",
+      "pl": "Kentrosaurus był kolczastym, roślinożernym stegozaurem o długości około pięciu metrów. Żył w późnej jurze na terenie dzisiejszej Tanzanii w Afryce Wschodniej, a jego skamieniałości pochodzą z formacji Tendaguru. Stegozaury nie były zbudowane do szybkiego biegu, więc Kentrosaurus prawdopodobnie bronił się, wymachując kolczastym ogonem – bronią, która mogła zranić nawet duże drapieżne dinozaury."
+    },
+    "sourceIds": ["nhm-kentrosaurus", "pbdb-occurrences", "mallison-2011"]
+  },
+  "funFacts": [
+    {
+      "text": {
+        "en": "A 2011 study suggests that fast swings of its tail could cut skin and break an attacker's ribs, and well-aimed strikes might even have broken heavy limb bones.",
+        "pl": "Badanie z 2011 roku sugeruje, że szybkie uderzenia ogonem mogły rozcinać skórę i łamać napastnikowi żebra, a celne ciosy mogły nawet złamać masywne kości kończyn."
+      },
+      "sourceIds": ["mallison-2011"]
+    }
+  ],
+  "famous": false,
+  "images": [
+    {
+      "commonsFile": "File:Kentrosaurus skeleton in Museum für Naturkunde Berlin 0874 01.jpg",
+      "kind": "skeleton-mount",
+      "alt": {
+        "en": "Mounted skeleton of Kentrosaurus at the Museum für Naturkunde in Berlin, showing its row of bony plates and spikes.",
+        "pl": "Zmontowany szkielet Kentrosaurus w Museum für Naturkunde w Berlinie, z rzędem płyt kostnych i kolców."
+      }
+    }
+  ],
+  "uncertain": [
+    {
+      "field": "size.massKg",
+      "note": {
+        "en": "No mass estimate found in a source we could verify.",
+        "pl": "Nie znaleziono oszacowania masy w źródle, które moglibyśmy zweryfikować."
+      }
+    },
+    {
+      "field": "timeRange",
+      "note": {
+        "en": "The range is stage-based (PBDB) and does not match the NHM figure of 155–150 Ma; no verified radiometric age for the Tendaguru beds was used.",
+        "pl": "Zakres opiera się na piętrach (PBDB) i nie zgadza się z wartością NHM 155–150 mln lat temu; nie wykorzystano zweryfikowanego datowania radiometrycznego warstw Tendaguru."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "nhm-kentrosaurus",
+      "title": "Kentrosaurus | Dino Directory",
+      "publisher": "Natural History Museum, London",
+      "url": "https://www.nhm.ac.uk/discover/dino-directory/kentrosaurus.html",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "pbdb-taxon",
+      "title": "Kentrosaurus aethiopicus (taxon 56490)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=56490",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "pbdb-occurrences",
+      "title": "Fossil occurrences of Kentrosaurus",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Kentrosaurus&show=strat,loc",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "mallison-2011",
+      "title": "Defense capabilities of Kentrosaurus aethiopicus Hennig, 1915",
+      "authors": "Mallison, H.",
+      "year": 2011,
+      "publisher": "Palaeontologia Electronica",
+      "url": "https://palaeo-electronica.org/2011_2/255/index.html",
+      "accessed": "2026-11-21"
+    }
+  ],
+  "lastReviewed": "2026-11-21"
+}

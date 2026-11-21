@@ -1,0 +1,134 @@
+{
+  "slug": "muttaburrasaurus",
+  "scientificName": "Muttaburrasaurus langdoni",
+  "genus": "Muttaburrasaurus",
+  "nameMeaning": {
+    "text": {
+      "en": "Muttaburra lizard",
+      "pl": "jaszczur z Muttaburry"
+    },
+    "sourceIds": ["nhm-muttaburrasaurus", "qld-fossil-emblem"]
+  },
+  "group": "ornithopoda",
+  "groupSourceIds": ["nhm-muttaburrasaurus"],
+  "isDinosaur": true,
+  "taxonomy": {
+    "status": "valid"
+  },
+  "diet": {
+    "value": "herbivore",
+    "confidence": "established",
+    "sourceIds": ["nhm-muttaburrasaurus", "qld-fossil-emblem"]
+  },
+  "timeRange": {
+    "startMa": 110,
+    "endMa": 100,
+    "sourceIds": ["nhm-muttaburrasaurus", "pbdb-occurrences"],
+    "note": {
+      "en": "NHM gives 110–100 Ma. PBDB dates the type occurrence (Mackunda Formation) more broadly, to the late Albian–early Cenomanian; the Queensland Government gives about 100 million years ago.",
+      "pl": "NHM podaje 110–100 mln lat temu. PBDB datuje stanowisko okazu typowego (formacja Mackunda) szerzej, na późny alb–wczesny cenoman; rząd Queenslandu podaje około 100 mln lat temu."
+    }
+  },
+  "periods": ["cretaceous"],
+  "size": {
+    "lengthM": {
+      "value": [7, 8],
+      "sourceIds": ["nhm-muttaburrasaurus", "qld-fossil-emblem"],
+      "note": {
+        "en": "NHM gives 7 m; the Queensland Government gives roughly 7–8 m.",
+        "pl": "NHM podaje 7 m; rząd Queenslandu podaje około 7–8 m."
+      }
+    }
+  },
+  "locations": [
+    {
+      "continent": "australia",
+      "countryCode": "AU",
+      "formation": "Mackunda",
+      "sourceIds": ["pbdb-occurrences"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "Bartholomai & Molnar",
+    "year": 1981,
+    "note": {
+      "en": "The bones were found in 1963 by a local grazier, Doug Langdon, near Muttaburra in central Queensland. The species name honours him.",
+      "pl": "Kości znalazł w 1963 roku miejscowy hodowca bydła Doug Langdon w pobliżu Muttaburry w środkowym Queenslandzie. Nazwa gatunkowa upamiętnia właśnie jego."
+    },
+    "sourceIds": ["nhm-muttaburrasaurus", "pbdb-taxon", "qld-fossil-emblem"]
+  },
+  "summary": {
+    "text": {
+      "en": "Muttaburrasaurus was a large plant-eating ornithopod, about seven to eight metres long, from Queensland in Australia. It lived in the Early Cretaceous, about 110 to 100 million years ago, and fed on plants such as ferns, seed ferns and conifers. A grazier, Doug Langdon, found its bones in 1963 while mustering cattle near the town of Muttaburra, and the dinosaur was named after both.",
+      "pl": "Muttaburrasaurus był dużym roślinożernym ornitopodem o długości około siedmiu–ośmiu metrów, żyjącym na terenie Queenslandu w Australii. Żył we wczesnej kredzie, około 110–100 milionów lat temu, i jadł rośliny takie jak paprocie, paprocie nasienne i drzewa iglaste. Hodowca bydła Doug Langdon znalazł jego kości w 1963 roku, spędzając stado w pobliżu miasteczka Muttaburra, a dinozaura nazwano na cześć ich obu."
+    },
+    "sourceIds": ["nhm-muttaburrasaurus", "qld-fossil-emblem"]
+  },
+  "funFacts": [
+    {
+      "text": {
+        "en": "Muttaburrasaurus has been chosen as Queensland's official fossil emblem.",
+        "pl": "Muttaburrasaurus został wybrany na oficjalny emblemat kopalny stanu Queensland."
+      },
+      "sourceIds": ["qld-fossil-emblem"]
+    }
+  ],
+  "famous": false,
+  "images": [
+    {
+      "commonsFile": "File:Muttaburrasaurus mount.jpg",
+      "kind": "skeleton-mount",
+      "alt": {
+        "en": "Mounted skeleton of Muttaburrasaurus in a museum exhibit about Cretaceous Australia.",
+        "pl": "Zmontowany szkielet Muttaburrasaurus na wystawie muzealnej poświęconej kredowej Australii."
+      }
+    }
+  ],
+  "uncertain": [
+    {
+      "field": "size.massKg",
+      "note": {
+        "en": "No mass estimate found in a source we could verify.",
+        "pl": "Nie znaleziono oszacowania masy w źródle, które moglibyśmy zweryfikować."
+      }
+    },
+    {
+      "field": "timeRange",
+      "note": {
+        "en": "The 110–100 Ma range is the NHM figure; PBDB's stage dating reaches into the early Cenomanian (Late Cretaceous).",
+        "pl": "Zakres 110–100 mln lat temu to wartość NHM; datowanie piętrowe w PBDB sięga wczesnego cenomanu (późna kreda)."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "nhm-muttaburrasaurus",
+      "title": "Muttaburrasaurus | Dino Directory",
+      "publisher": "Natural History Museum, London",
+      "url": "https://www.nhm.ac.uk/discover/dino-directory/muttaburrasaurus.html",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "pbdb-taxon",
+      "title": "Muttaburrasaurus langdoni (taxon 64271)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=64271",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "pbdb-occurrences",
+      "title": "Fossil occurrences of Muttaburrasaurus",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Muttaburrasaurus&show=strat,loc",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "qld-fossil-emblem",
+      "title": "Muttaburrasaurus langdoni | Queensland's fossil emblem",
+      "publisher": "Queensland Government",
+      "url": "https://campaigns.premiers.qld.gov.au/fossilemblem/muttaburrasaurus-langdoni.aspx",
+      "accessed": "2026-11-22"
+    }
+  ],
+  "lastReviewed": "2026-11-21"
+}
