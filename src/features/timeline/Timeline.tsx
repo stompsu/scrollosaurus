@@ -58,6 +58,11 @@ export interface TimelineHandle {
    * in which case it jumps.
    */
   zoomTo(range: MaRange, options?: { animate?: boolean }): void;
+  /**
+   * Zooms to a species' range (animated, as `zoomTo`) and scrolls its lane into view. Does
+   * nothing if the species isn't shown under the current filters.
+   */
+  showSpecies(slug: string, options?: { animate?: boolean }): void;
 }
 
 export interface TimelineProps {
@@ -71,6 +76,12 @@ export interface TimelineProps {
    * only move the highlight.
    */
   highlightedSlug?: string;
+  /** The opening window, read on mount. Defaults to the window around `highlightedSlug`. */
+  initialRange?: MaRange;
+  /** Called with the visible window each time the view settles after moving. */
+  onViewChange?: (range: MaRange) => void;
+  /** Called with the slug of the marker under the pointer or keyboard focus, or null. */
+  onPreview?: (slug: string | null) => void;
   /** `zoomTo` lives on this handle: `ref.current.zoomTo({ startMa, endMa })`. */
   ref?: Ref<TimelineHandle>;
 }
@@ -127,7 +138,7 @@ function labelWidth(item: SpeciesIndexEntry, m: Measures): number {
 }
 
 /** The opening window around a species: its range (with whiskers) at about a fifth of the view. */
-function windowAround(item: SpeciesIndexEntry): MaRange {
+export function windowAround(item: SpeciesIndexEntry): MaRange {
   const older = item.startMa + (item.startUncertaintyMa ?? 0);
   const younger = item.endMa - (item.endUncertaintyMa ?? 0);
   const span = Math.max(MIN_VISIBLE_SPAN_MA * 2, (older - younger) * 6);
@@ -281,7 +292,16 @@ const Marker = memo(function Marker({
  *
  * `zoomTo` is an imperative handle: pass a `ref` and call `ref.current.zoomTo({ startMa, endMa })`.
  */
-export function Timeline({ items, filters, onSelect, highlightedSlug, ref }: TimelineProps) {
+export function Timeline({
+  items,
+  filters,
+  onSelect,
+  highlightedSlug,
+  initialRange: initialRangeProp,
+  onViewChange,
+  onPreview,
+  ref,
+}: TimelineProps) {
   const orientation = useOrientation();
   const horizontal = orientation === 'horizontal';
   const helpId = useId();
@@ -316,6 +336,8 @@ export function Timeline({ items, filters, onSelect, highlightedSlug, ref }: Tim
     [],
   );
   const pendingReveal = useRef(true);
+  /** A marker to scroll into view across the lanes once it has rendered (after showSpecies). */
+  const revealSlug = useRef<string | null>(null);
 
   const includeNonDinosaurs = filters?.includeNonDinosaurs ?? false;
   const predicate = filters?.predicate;
@@ -334,6 +356,7 @@ export function Timeline({ items, filters, onSelect, highlightedSlug, ref }: Tim
 
   // The initial view, read once on mount.
   const [initialRange] = useState<MaRange>(() => {
+    if (initialRangeProp) return initialRangeProp;
     const target = shown.find((it) => it.slug === highlightedSlug);
     return target ? windowAround(target) : DOMAIN;
   });
@@ -366,10 +389,23 @@ export function Timeline({ items, filters, onSelect, highlightedSlug, ref }: Tim
     engineRef.current?.setOrientation(orientation);
   }, [orientation]);
 
+  // Read by the imperative handle, which is created once.
+  const shownRef = useRef(shown);
+  useLayoutEffect(() => {
+    shownRef.current = shown;
+  });
+
   useImperativeHandle(
     ref,
     () => ({
       zoomTo: (range, options) => engineRef.current?.zoomTo(range, options?.animate ?? true),
+      showSpecies: (slug, options) => {
+        const item = shownRef.current.find((it) => it.slug === slug);
+        const engine = engineRef.current;
+        if (!item || !engine) return;
+        revealSlug.current = slug;
+        engine.zoomTo(windowAround(item), options?.animate ?? true);
+      },
     }),
     [],
   );
@@ -452,6 +488,15 @@ export function Timeline({ items, filters, onSelect, highlightedSlug, ref }: Tim
       const current = markerLayer.querySelector<HTMLElement>('[aria-current="true"]');
       if (current) engine.reveal(current, false);
     }
+    if (revealSlug.current !== null) {
+      const el = markerLayer.querySelector<HTMLElement>(
+        `[data-slug="${CSS.escape(revealSlug.current)}"]`,
+      );
+      if (el) {
+        revealSlug.current = null;
+        engine.reveal(el, false);
+      }
+    }
   });
 
   const context = windowContext(win, ranks);
@@ -462,6 +507,33 @@ export function Timeline({ items, filters, onSelect, highlightedSlug, ref }: Tim
   const [liveLabel, setLiveLabel] = useState('');
   if (snap.settled && liveLabel !== windowLabel) setLiveLabel(windowLabel);
 
+  // Report settled windows (not every frame) so the page can keep the URL in step.
+  const onViewChangeRef = useRef(onViewChange);
+  useLayoutEffect(() => {
+    onViewChangeRef.current = onViewChange;
+  });
+  const settledStart = snap.settled ? win.startMa : undefined;
+  const settledEnd = snap.settled ? win.endMa : undefined;
+  useEffect(() => {
+    if (settledStart === undefined || settledEnd === undefined) return;
+    onViewChangeRef.current?.({ startMa: settledStart, endMa: settledEnd });
+  }, [settledStart, settledEnd]);
+
+  const onPreviewRef = useRef(onPreview);
+  useLayoutEffect(() => {
+    onPreviewRef.current = onPreview;
+  });
+  const previewSlug = useRef<string | null>(null);
+  const preview = (slug: string | null) => {
+    if (previewSlug.current === slug) return;
+    previewSlug.current = slug;
+    onPreviewRef.current?.(slug);
+  };
+  const markerSlug = (target: EventTarget | null): string | null =>
+    target instanceof Element
+      ? (target.closest<HTMLElement>('[data-slug]')?.dataset.slug ?? null)
+      : null;
+
   const onKeyDown = (event: KeyboardEvent<HTMLDivElement>) => {
     if (engineRef.current?.handleKey(event.nativeEvent)) event.preventDefault();
   };
@@ -471,12 +543,18 @@ export function Timeline({ items, filters, onSelect, highlightedSlug, ref }: Tim
     const slug = target.dataset.slug;
     if (slug === undefined) return;
     setFocusedSlug(slug);
-    engineRef.current?.reveal(target);
+    preview(slug);
+    // Only keyboard focus scrolls the marker into view. A mouse or touch press also focuses it,
+    // and moving it then would pull the button out from under the pointer before the click lands.
+    if (target.matches(':focus-visible')) engineRef.current?.reveal(target);
   };
 
   const onBlurMarker = (event: FocusEvent<HTMLDivElement>) => {
     const next = event.relatedTarget;
-    if (!(next instanceof Node) || !event.currentTarget.contains(next)) setFocusedSlug(null);
+    if (!(next instanceof Node) || !event.currentTarget.contains(next)) {
+      setFocusedSlug(null);
+      preview(null);
+    }
   };
 
   const zoomBy = (factor: number) => engineRef.current?.zoomBy(factor);
@@ -581,6 +659,12 @@ export function Timeline({ items, filters, onSelect, highlightedSlug, ref }: Tim
               className="tl-time-layer"
               onFocus={onFocusMarker}
               onBlur={onBlurMarker}
+              onPointerOver={(e) => {
+                if (e.pointerType === 'mouse') preview(markerSlug(e.target));
+              }}
+              onPointerLeave={(e) => {
+                if (e.pointerType === 'mouse') preview(focusedSlug);
+              }}
             >
               {rendered.map((it) => (
                 <Marker
