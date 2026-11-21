@@ -31,7 +31,7 @@ describe('boundary labels', () => {
   it('reads boundaries and their flags from the geologic-time data', () => {
     const triassicEpochs = unitsByRank('epoch').filter((u) => u.parent === 'triassic');
     const labels = boundariesOf(triassicEpochs).map(formatBoundary);
-    expect(labels).toEqual(['251.9 ±0.024', '247', '~237', '201.4 ±0.2']);
+    expect(labels).toEqual(['251.9 ±0.024', '246.7', '~237', '201.4 ±0.2']);
     const periods = boundariesOf(unitsByRank('period'));
     expect(periods.map((b) => b.ma)).toEqual([251.902, 201.4, 143.1, 66]);
   });

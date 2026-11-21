@@ -6,7 +6,7 @@
     "url": "https://stratigraphy.org/chart",
     "citation": "Cohen K, Harper D, Gibbard P, Car N. The ICS international chronostratigraphic chart this decade. Episodes 2025;48:105-115. https://doi.org/10.18814/epiiugs/2025/025001",
     "license": "CC BY 4.0",
-    "accessed": "2026-11-20"
+    "accessed": "2026-11-21"
   },
   "units": [
     {
@@ -53,14 +53,14 @@
       "parent": "triassic",
       "baseMa": 251.902,
       "baseUncertaintyMa": 0.024,
-      "topMa": 247.0
+      "topMa": 246.7
     },
     {
       "id": "middle-triassic",
       "name": "Middle Triassic",
       "rank": "epoch",
       "parent": "triassic",
-      "baseMa": 247.0,
+      "baseMa": 246.7,
       "topMa": 237,
       "topApproximate": true
     },
@@ -130,22 +130,22 @@
       "parent": "early-triassic",
       "baseMa": 251.902,
       "baseUncertaintyMa": 0.024,
-      "topMa": 250.8
+      "topMa": 249.9
     },
     {
       "id": "olenekian",
       "name": "Olenekian",
       "rank": "stage",
       "parent": "early-triassic",
-      "baseMa": 250.8,
-      "topMa": 247.0
+      "baseMa": 249.9,
+      "topMa": 246.7
     },
     {
       "id": "anisian",
       "name": "Anisian",
       "rank": "stage",
       "parent": "middle-triassic",
-      "baseMa": 247.0,
+      "baseMa": 246.7,
       "topMa": 241.464,
       "topUncertaintyMa": 0.28
     },

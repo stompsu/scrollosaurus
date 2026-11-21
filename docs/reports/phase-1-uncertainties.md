@@ -100,9 +100,12 @@ the curators checked every claim against them:
   Stegosaurus (Opinion 2320), Allosaurus (neotype proposal).
 - **Famous flag** follows the kickoff list (plus Archaeopteryx, Pteranodon and Mosasaurus).
   Sinosauropteryx is `famous: false`; it is highlighted as the primary species independently.
-- **ICS chart:** the chart page shows the Triassic–Jurassic boundary as "~201.4 ± 0.2". It is
-  recorded as 201.4 ± 0.2 without the approximate flag, as in Phase 0. The "~" may only reflect
-  how the chart page renders the Rhaetian row; to confirm against the chart PDF.
+- **ICS chart (resolved 2026-11-21):** the chart web page shows the Triassic–Jurassic boundary as
+  "~201.4 ± 0.2". The v2024/12 chart PDF gives "201.4 ±0.2" with no "~", so the record stays
+  exact. Checking every Mesozoic boundary against the PDF found two outdated values, now fixed:
+  the Anisian base (Early/Middle Triassic) is 246.7 Ma, not 247.0, and the Olenekian base is
+  249.9 Ma, not 250.8. Neither is marked approximate on the chart. All other Mesozoic boundaries
+  match.
 
 ## Sources not used because they could not be verified
 
