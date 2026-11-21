@@ -45,13 +45,14 @@ export function Layout() {
         <nav aria-label="Main">
           <ul className="flex gap-4 text-sm">
             <li>
-              <NavLink
+              {/* A plain Link: NavLink drops aria-current when "/" isn't an exact match. */}
+              <Link
                 to="/"
                 className={navClassFor(onTimeline)}
                 aria-current={onTimeline ? 'page' : undefined}
               >
                 Timeline
-              </NavLink>
+              </Link>
             </li>
             <li>
               <NavLink to="/about" className={navClass}>

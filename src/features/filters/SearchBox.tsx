@@ -1,6 +1,7 @@
 import { useId, useMemo, useState, type KeyboardEvent } from 'react';
 import { DietIcon, NotADinosaurTag } from '@/components/ui/DietBadge';
 import { formatMa } from '@/lib/geologic-time';
+import { DIET_LABELS } from '@/lib/labels';
 import type { SpeciesIndexEntry } from '@/lib/species-index';
 import { createSpeciesSearch } from './search';
 
@@ -129,7 +130,8 @@ export function SearchBox({ items, onPick }: SearchBoxProps) {
               <i>{item.genus}</i>
               {!item.isDinosaur && <NotADinosaurTag />}
               <span className="sc-search-meta">
-                “{item.nameMeaning}” · {formatMa(item.startMa)}–{formatMa(item.endMa)} Ma
+                {DIET_LABELS[item.diet].label} · “{item.nameMeaning}” · {formatMa(item.startMa)}–
+                {formatMa(item.endMa)} Ma
               </span>
             </span>
           </li>

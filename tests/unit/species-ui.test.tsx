@@ -1,7 +1,8 @@
 import { fireEvent, render, screen, waitFor, within } from '@testing-library/react';
 import { MemoryRouter } from 'react-router';
 import { describe, expect, it, vi } from 'vitest';
-import { createSpeciesSearch, FilterPanel, SearchBox } from '@/features/filters';
+import { FilterPanel, SearchBox } from '@/features/filters';
+import { createSpeciesSearch } from '@/features/filters/search';
 import { SpeciesCard, SpeciesDrawer } from '@/features/species';
 import { formatMaWithUncertainty } from '@/lib/geologic-time';
 import { groupFilterOptions } from '@/lib/groups';

@@ -77,25 +77,33 @@ export function SpeciesDrawer({
   const titleId = useId();
   const load = useSpeciesRecord(item.slug);
 
+  /** Set once the drawer has moved on to another species ("Lived alongside"). */
+  const movedOn = useRef(false);
+
   // A layout effect, so the cleanup runs while the dialog is still in the page: closing it there
   // lets focus go back to whatever opened the drawer (a marker, the search box, a card link).
+  // If the drawer has since moved to another species, the opener belongs to the first one, so
+  // focus is left for the page to put on the current species' marker.
   useLayoutEffect(() => {
     const dialog = dialogRef.current;
     const opener = document.activeElement;
     if (dialog && !dialog.open) dialog.showModal();
     return () => {
       dialog?.close();
-      if (opener instanceof HTMLElement && opener !== document.body && opener.isConnected) {
+      if (movedOn.current) {
+        if (document.activeElement instanceof HTMLElement) document.activeElement.blur();
+      } else if (opener instanceof HTMLElement && opener !== document.body && opener.isConnected) {
         opener.focus();
       }
     };
   }, []);
 
   // A new species in the same drawer starts at the top, with focus on the heading.
-  const firstSlug = useRef(item.slug);
+  const previousSlug = useRef(item.slug);
   useEffect(() => {
-    if (item.slug === firstSlug.current) return;
-    firstSlug.current = '';
+    if (item.slug === previousSlug.current) return;
+    previousSlug.current = item.slug;
+    movedOn.current = true;
     bodyRef.current?.scrollTo({ top: 0 });
     document.getElementById(titleId)?.focus();
   }, [item.slug, titleId]);
@@ -378,8 +386,8 @@ function LivedAlongside({
       ) : (
         <>
           <p className="sc-note">
-            Species whose time ranges overlap, longest shared time first. Living at the same time
-            does not mean living in the same place.
+            Species whose recorded time ranges overlap, longest shared time first. Ranges are
+            approximate, and living at the same time does not mean living in the same place.
           </p>
           <ul className="sc-alongside">
             {contemporaries.map(({ item: other, overlapMa }) => (
@@ -389,7 +397,10 @@ function LivedAlongside({
                 </Link>
                 {!other.isDinosaur && <NotADinosaurTag />}{' '}
                 <span className="text-text-muted text-sm">
-                  {formatLived(other)}; shared about {formatMa(overlapMa)} million years
+                  {formatLived(other)}; shared{' '}
+                  {overlapMa < 0.1
+                    ? 'less than 0.1 million years'
+                    : `about ${formatMa(overlapMa)} million years`}
                 </span>
               </li>
             ))}

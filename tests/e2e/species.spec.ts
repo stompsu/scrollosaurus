@@ -166,3 +166,47 @@ test('the drawer is a bottom sheet on phones and fits the width', async ({ page 
   );
   expect(overflow).toBeLessThanOrEqual(0);
 });
+
+test('Back after showing non-dinosaurs from the drawer matches its URL', async ({ page }) => {
+  await page.goto('./');
+  await page.getByRole('combobox', { name: 'Find a species' }).fill('pteranodon');
+  await page.getByRole('option').first().click();
+  await expect(page).toHaveURL(/\/species\/pteranodon/);
+  await drawer(page).getByRole('button', { name: 'Show animals that weren’t dinosaurs' }).click();
+  await expect(page).toHaveURL(/nondino=1/);
+  await page.goBack();
+  await expect(page).not.toHaveURL(/nondino=1/);
+  await expect(page.getByTestId('non-dinosaur-switch')).not.toBeChecked();
+  await expect(page.locator('[data-slug="pteranodon"]')).toHaveCount(0);
+});
+
+test('Back and Forward restore the window stored in each entry', async ({ page }) => {
+  /** The window in the URL, [from, to] in Ma (stored to 0.01 Ma). */
+  const urlWindow = () => {
+    const p = new URL(page.url()).searchParams;
+    return [Number(p.get('from')), Number(p.get('to'))];
+  };
+  const expectWindow = async (expected: number[]) => {
+    await expect
+      .poll(async () => {
+        const text = (await windowLabel(page).textContent()) ?? '';
+        const m = /Showing ([\d.]+) to ([\d.]+)/.exec(text);
+        return m ? Math.abs(Number(m[1]) - Math.min(expected[0] ?? 0, 251.902)) : Infinity;
+      })
+      .toBeLessThan(0.15);
+  };
+  await page.goto('species/tyrannosaurus');
+  await expect(page).toHaveURL(/from=/);
+  const trex = urlWindow();
+  await drawer(page).getByRole('link', { name: 'Carnotaurus' }).click();
+  // The settled window is written to the URL once the zoom to Carnotaurus finishes.
+  await expect.poll(() => urlWindow()[0]).not.toBe(trex[0]);
+  await expect(page).toHaveURL(/\/species\/carnotaurus\?from=/);
+  const other = urlWindow();
+  await page.goBack();
+  await expect(drawer(page).getByRole('heading', { level: 2 })).toHaveText('Tyrannosaurus');
+  await expectWindow(trex);
+  await page.goForward();
+  await expect(drawer(page).getByRole('heading', { level: 2 })).toHaveText('Carnotaurus');
+  await expectWindow(other);
+});

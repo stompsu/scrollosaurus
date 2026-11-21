@@ -1,4 +1,4 @@
-import { DIET_CONFIDENCE_LABELS, DIET_LABELS } from '@/lib/labels';
+import { DIET_CONFIDENCE_LABELS, DIET_LABELS, NOT_A_DINOSAUR } from '@/lib/labels';
 import type { Diet, Species } from '@/lib/schemas/species';
 
 /** Simple 16 px line icons; the badge always pairs one with text, never colour alone. */
@@ -85,5 +85,5 @@ export function DietBadge({ diet, confidence }: DietBadgeProps) {
 
 /** The "not a dinosaur" tag on pterosaurs and marine reptiles. */
 export function NotADinosaurTag() {
-  return <span className="sc-tag">not a dinosaur</span>;
+  return <span className="sc-tag">{NOT_A_DINOSAUR}</span>;
 }

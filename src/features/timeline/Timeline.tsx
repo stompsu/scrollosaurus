@@ -12,6 +12,7 @@ import {
   type Ref,
 } from 'react';
 import { formatMa, unitById, unitsByRank } from '@/lib/geologic-time';
+import { NOT_A_DINOSAUR } from '@/lib/labels';
 import type { GeologicRank, GeologicUnit } from '@/lib/schemas/geologic-time';
 import type { SpeciesIndexEntry } from '@/lib/species-index';
 import {
@@ -124,8 +125,6 @@ function createMeasures(): Measures {
     tag: createTextMeasure('11px', 11),
   };
 }
-
-const NOT_A_DINOSAUR = 'not a dinosaur';
 
 function markerName(item: SpeciesIndexEntry): string {
   const tag = item.isDinosaur ? '' : `, ${NOT_A_DINOSAUR}`;
@@ -660,7 +659,8 @@ export function Timeline({
               onFocus={onFocusMarker}
               onBlur={onBlurMarker}
               onPointerOver={(e) => {
-                if (e.pointerType === 'mouse') preview(markerSlug(e.target));
+                // Not while a button is held: a drag-pan would re-render for every marker it crosses.
+                if (e.pointerType === 'mouse' && e.buttons === 0) preview(markerSlug(e.target));
               }}
               onPointerLeave={(e) => {
                 if (e.pointerType === 'mouse') preview(focusedSlug);
