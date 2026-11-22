@@ -1,6 +1,6 @@
-import { fireEvent, render, screen } from '@testing-library/react';
+import { act, fireEvent, render, screen } from '@testing-library/react';
 import { createRef } from 'react';
-import { describe, expect, it, vi } from 'vitest';
+import { afterEach, describe, expect, it, vi } from 'vitest';
 import { Timeline, type TimelineHandle } from '@/features/timeline';
 import { primarySpeciesSlug, species } from '@/lib/species';
 
@@ -85,5 +85,69 @@ describe('<Timeline />', () => {
         }, 0);
       });
     });
+  });
+});
+
+describe('<Timeline /> settling', () => {
+  afterEach(() => {
+    vi.useRealTimers();
+    vi.restoreAllMocks();
+  });
+
+  it('reports a window as settled only once an animated zoom ends, even with slow frames', () => {
+    // Frames run only when the test says so, to simulate a busy main thread.
+    let frames: FrameRequestCallback[] = [];
+    vi.spyOn(window, 'requestAnimationFrame').mockImplementation((cb) => {
+      frames.push(cb);
+      return frames.length;
+    });
+    vi.spyOn(window, 'cancelAnimationFrame').mockImplementation(() => undefined);
+    vi.useFakeTimers({ toFake: ['setTimeout', 'clearTimeout', 'performance', 'Date'] });
+    const runFrames = () => {
+      act(() => {
+        const due = frames;
+        frames = [];
+        for (const cb of due) cb(performance.now());
+      });
+    };
+    const onViewChange = vi.fn();
+    const ref = createRef<TimelineHandle>();
+    render(
+      <Timeline items={species} onSelect={() => undefined} onViewChange={onViewChange} ref={ref} />,
+    );
+    runFrames();
+    act(() => {
+      vi.advanceTimersByTime(1000);
+    });
+    onViewChange.mockClear();
+
+    act(() => {
+      ref.current?.zoomTo({ startMa: 201.4, endMa: 143.1 });
+    });
+    // Two frames into the zoom (the view has moved, and the commit debounce is armed)...
+    for (let i = 0; i < 2; i++) {
+      act(() => {
+        vi.advanceTimersByTime(16);
+      });
+      runFrames();
+    }
+    // ...then a 200 ms stall: longer than the commit debounce, shorter than the zoom.
+    act(() => {
+      vi.advanceTimersByTime(200);
+    });
+    expect(onViewChange).not.toHaveBeenCalled();
+
+    act(() => {
+      vi.advanceTimersByTime(100);
+    });
+    runFrames();
+    runFrames();
+    act(() => {
+      vi.advanceTimersByTime(500);
+    });
+    expect(onViewChange).toHaveBeenCalledTimes(1);
+    const [range] = onViewChange.mock.calls[0] as [{ startMa: number; endMa: number }];
+    expect(range.startMa).toBeCloseTo(201.4, 0);
+    expect(range.endMa).toBeCloseTo(143.1, 0);
   });
 });

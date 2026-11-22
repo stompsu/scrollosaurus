@@ -197,25 +197,31 @@ test('Back and Forward restore the window stored in each entry', async ({ page }
       })
       .toBeLessThan(0.15);
   };
+  /** Waits until the stored window stops changing, then returns it. */
+  const stableUrlWindow = async () => {
+    let last = '';
+    await expect
+      .poll(async () => {
+        const now = JSON.stringify(urlWindow());
+        const stable = now === last;
+        last = now;
+        await page.waitForTimeout(300);
+        return stable;
+      })
+      .toBe(true);
+    return urlWindow();
+  };
   await page.goto('species/tyrannosaurus');
   await expect(drawer(page).getByRole('link', { name: 'Carnotaurus' })).toBeVisible();
-  // Wait until the stored window stops changing (fonts and layout settle after the first write).
-  let last = '';
-  await expect
-    .poll(async () => {
-      const now = JSON.stringify(urlWindow());
-      const stable = now === last;
-      last = now;
-      await page.waitForTimeout(300);
-      return stable;
-    })
-    .toBe(true);
-  const trex = urlWindow();
+  // Fonts and layout settle after the first write.
+  const trex = await stableUrlWindow();
   await drawer(page).getByRole('link', { name: 'Carnotaurus' }).click();
-  // The settled window is written to the URL once the zoom to Carnotaurus finishes.
+  // The settled window is written to the URL once the zoom to Carnotaurus finishes. (A busy main
+  // thread used to report a mid-zoom window as settled first, then the final one: the engine now
+  // never settles during an animated zoom.)
   await expect.poll(() => urlWindow()[0]).not.toBe(trex[0]);
   await expect(page).toHaveURL(/\/species\/carnotaurus\?from=/);
-  const other = urlWindow();
+  const other = await stableUrlWindow();
   await page.goBack();
   await expect(drawer(page).getByRole('heading', { level: 2 })).toHaveText('Tyrannosaurus');
   await expectWindow(trex);
