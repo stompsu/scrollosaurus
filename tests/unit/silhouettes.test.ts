@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { bodyPlanFor, SILHOUETTES } from '@/features/species/silhouettes';
+import { bodyPlanFor, SILHOUETTES } from '@/components/ui/silhouettes';
 import { species } from '@/lib/species';
 
 describe('bodyPlanFor', () => {

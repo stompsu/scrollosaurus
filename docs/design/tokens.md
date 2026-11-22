@@ -54,7 +54,7 @@ Both are SIL Open Font License fonts from the `@fontsource-variable/*` packages,
 
 `src/features/timeline/assets/` holds two original tiling SVGs (sediment strata, and fern/cycad/conifer silhouettes) used as CSS masks over `--sc-text`, at 5–7% opacity, so they follow the theme. The timeline engine moves them at 25% and 55% of the pan speed. They are hidden under reduced motion; the vertical (phone) layout shows only the strata.
 
-Size silhouettes (`src/features/species/silhouettes.ts`) are original, generic shapes per body plan, labelled as such in the UI.
+Size silhouettes (`src/components/ui/silhouettes.ts`) are original, generic shapes per body plan, labelled as such in the UI. The same shapes appear as small icons on the timeline markers, next to the diet icon.
 
 ## Motion
 

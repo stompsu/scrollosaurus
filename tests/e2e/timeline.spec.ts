@@ -50,7 +50,9 @@ test('opens on Sinosauropteryx, highlighted and in view', async ({ page }) => {
 
 test('/species/tyrannosaurus highlights T. rex instead', async ({ page }) => {
   await page.goto('species/tyrannosaurus');
-  const trex = page.getByRole('button', { name: 'Tyrannosaurus, 68 to 66 million years ago' });
+  const trex = page.getByRole('button', {
+    name: 'Tyrannosaurus, carnivore, 68 to 66 million years ago',
+  });
   await expect(trex).toHaveAttribute('aria-current', 'true');
   await expect(page.locator('[aria-current="true"]')).toHaveCount(1);
   await expectInsideRegion(page, /^Tyrannosaurus, /);

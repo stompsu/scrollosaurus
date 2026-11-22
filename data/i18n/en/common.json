@@ -37,7 +37,7 @@
     "showing": "Showing {{start}} to {{end}} million years ago",
     "unitRange": "{{first}} to {{last}}",
     "notADinosaur": "not a dinosaur",
-    "marker": "{{genus}}{{tag}}, {{start}} to {{end}} million years ago",
+    "marker": "{{genus}}{{tag}}, {{diet}}, {{start}} to {{end}} million years ago",
     "help": "Timeline controls",
     "helpPointer": "Drag, or scroll with a mouse wheel or trackpad, to move through time. Pinch, or hold Ctrl and scroll, to zoom. Drag across the time axis, or hold Alt and scroll, to see more lanes.",
     "helpTouch": "On touch screens, drag to move and pinch to zoom.",

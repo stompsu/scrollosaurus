@@ -37,7 +37,7 @@
     "showing": "Widok: od {{start}} do {{end}} mln lat temu",
     "unitRange": "{{first}} – {{last}}",
     "notADinosaur": "nie dinozaur",
-    "marker": "{{genus}}{{tag}}, od {{start}} do {{end}} mln lat temu",
+    "marker": "{{genus}}{{tag}}, {{diet}}, od {{start}} do {{end}} mln lat temu",
     "help": "Sterowanie osią czasu",
     "helpPointer": "Przeciągaj albo przewijaj kółkiem myszy lub gładzikiem, by przesuwać się w czasie. Rozsuń palce albo przytrzymaj Ctrl i przewijaj, by powiększyć. Przeciągnij w poprzek osi czasu albo przytrzymaj Alt i przewijaj, by zobaczyć więcej pasów.",
     "helpTouch": "Na ekranach dotykowych przeciągaj, by przesuwać, i rozsuwaj palce, by powiększać.",

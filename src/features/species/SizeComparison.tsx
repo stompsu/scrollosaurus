@@ -4,7 +4,7 @@ import { formatRange } from '@/lib/labels';
 import { formatNumber, localize } from '@/lib/locale';
 import type { Species } from '@/lib/schemas/species';
 import type { SizeReferences } from '@/lib/schemas/stories';
-import { bodyPlanFor, SILHOUETTES } from './silhouettes';
+import { bodyPlanFor, SILHOUETTES } from '@/components/ui/silhouettes';
 
 /** The bus is only drawn next to animals at least this long, m; beside smaller ones it says little. */
 const BUS_FROM_M = 4;

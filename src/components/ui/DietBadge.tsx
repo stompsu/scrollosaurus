@@ -44,13 +44,13 @@ function DietIconPaths({ diet }: { diet: Diet }) {
   }
 }
 
-export function DietIcon({ diet }: { diet: Diet }) {
+export function DietIcon({ diet, size = 16 }: { diet: Diet; size?: number }) {
   return (
     <svg
       className="sc-diet-icon"
       viewBox="0 0 16 16"
-      width="16"
-      height="16"
+      width={size}
+      height={size}
       fill="none"
       stroke="currentColor"
       strokeWidth="1.5"

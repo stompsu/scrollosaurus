@@ -11,6 +11,9 @@ import {
   type KeyboardEvent,
   type Ref,
 } from 'react';
+import { BodyPlanIcon } from '@/components/ui/BodyPlanIcon';
+import { DietIcon } from '@/components/ui/DietBadge';
+import { bodyPlanFor } from '@/components/ui/silhouettes';
 import { formatMa, unitById, unitName, unitsByRank } from '@/lib/geologic-time';
 import { tr } from '@/lib/i18n';
 import type { GeologicRank, GeologicUnit } from '@/lib/schemas/geologic-time';
@@ -19,6 +22,9 @@ import {
   LANE_GAP_PX,
   LANE_PADDING_PX,
   LANE_SIZE_PX,
+  MARKER_BODY_ICON_PX,
+  MARKER_DIET_ICON_PX,
+  MARKER_ICONS_PX,
   MIN_BAR_PX,
   MIN_VISIBLE_SPAN_MA,
   VERTICAL_LABEL_EXTENT_PX,
@@ -131,6 +137,7 @@ function markerName(item: SpeciesIndexEntry): string {
   return tr('timeline.marker', {
     genus: item.genus,
     tag,
+    diet: tr(`diet.${item.diet}`).toLowerCase(),
     start: formatMa(item.startMa),
     end: formatMa(item.endMa),
   });
@@ -138,7 +145,7 @@ function markerName(item: SpeciesIndexEntry): string {
 
 function labelWidth(item: SpeciesIndexEntry, m: Measures): number {
   const genus = (item.famous ? m.famousLabel : m.label)(item.genus);
-  return genus + (item.isDinosaur ? 0 : 6 + m.tag(tr('timeline.notADinosaur')));
+  return MARKER_ICONS_PX + genus + (item.isDinosaur ? 0 : 6 + m.tag(tr('timeline.notADinosaur')));
 }
 
 /** The opening window around a species: its range (with whiskers) at about a fifth of the view. */
@@ -282,6 +289,15 @@ const Marker = memo(function Marker({
       }}
     >
       <span className="tl-label">
+        {/* Diet and body plan at a glance; the marker's accessible name says the diet in words. */}
+        <span className="tl-icons">
+          <DietIcon diet={item.diet} size={MARKER_DIET_ICON_PX} />
+          <BodyPlanIcon
+            plan={bodyPlanFor(item.groupPath)}
+            width={MARKER_BODY_ICON_PX.width}
+            height={MARKER_BODY_ICON_PX.height}
+          />
+        </span>
         <i>{item.genus}</i>
         {!item.isDinosaur && <span className="tl-tag">{tr('timeline.notADinosaur')}</span>}
       </span>
