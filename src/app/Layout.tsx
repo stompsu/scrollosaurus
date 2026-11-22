@@ -139,7 +139,7 @@ function Shell() {
 /**
  * The site layout for one language: `/…` is English and `/pl/…` Polish (ADR-0001 §9). It provides
  * the language to the pages below, sets the formatting locale and the document's `lang`, and on
- * the first English page of a visit follows a Polish choice remembered from the switch.
+ * a bare visit to the English home page follows a Polish choice remembered from the switch.
  */
 export function Layout({ lang = 'en' }: { lang?: Lang }) {
   // Set before the pages render, so number formatting below uses this language.
@@ -155,8 +155,10 @@ export function Layout({ lang = 'en' }: { lang?: Lang }) {
   useEffect(() => {
     if (checkedStored.current) return;
     checkedStored.current = true;
-    if (lang === 'en' && readStoredLang() === 'pl') {
-      void navigate(`${langPath(splitLangPath(pathname).path, 'pl')}${search}`, { replace: true });
+    // Only a bare visit to the home page follows the stored choice: any other English address
+    // (a shared link, a bookmark) opens in the language it was copied in (ADR-0001 §9).
+    if (lang === 'en' && pathname === '/' && search === '' && readStoredLang() === 'pl') {
+      void navigate(langPath('/', 'pl'), { replace: true });
     }
     // Once per visit, on the first page.
     // eslint-disable-next-line react-hooks/exhaustive-deps

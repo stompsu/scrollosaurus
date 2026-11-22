@@ -95,8 +95,8 @@ The guided tour's step is part of the view too: `?tour=N` (Phase 5). Each step i
 
 ### 9. Languages (Phase 6)
 
-- **English and Polish, chosen by the URL:** `/…` is English, `/pl/…` Polish (owner decision). Every route exists in both, and `scripts/emit-route-html.ts` writes static pages for both, the Polish ones with `<html lang="pl">`. Shared links open in the language they were copied in.
-- **No browser-language detection.** The header switch links to the same page and query in the other language and stores the choice in `localStorage` (`scrollosaurus:lang`); an unprefixed address on the first page of a later visit follows that stored choice.
+- **English and Polish, chosen by the URL:** `/…` is English, `/pl/…` Polish (owner decision). Every route exists in both, and `scripts/emit-route-html.ts` writes static pages for both, the Polish ones with `<html lang="pl">`. Shared links open in the language they were copied in. GitHub Pages serves a single `404.html`, so a mistyped `/pl/…` address first shows the English not-found page (the in-app router then renders it in Polish only if the path matches a Polish route).
+- **No browser-language detection.** The header switch links to the same page and query in the other language and stores the choice in `localStorage` (`scrollosaurus:lang`); a later visit that starts at the bare home page (`/`, no query) follows that stored choice. Any other English address, such as a shared link, opens in English as copied.
 - **i18next + react-i18next** (in the stack) with one instance per language; interface strings in `data/i18n/{en,pl}/common.json`, Polish names of geologic units in `data/i18n/pl/geology.json`. Content text stays inline in the data as `{ en, pl }` (ADR-0002 §5), including every note (made bilingual in Phase 6).
 - **Formatting follows the language:** numbers through `Intl` (`1,1 m`, `77,7`), country names through `Intl.DisplayNames`. The language layout sets the formatting locale before its pages render; switching language changes the route branch, so pages re-render in the new language. Scientific names are never translated.
 

@@ -13,9 +13,11 @@ import {
 } from 'react';
 import { BodyPlanIcon } from '@/components/ui/BodyPlanIcon';
 import { DietIcon } from '@/components/ui/DietBadge';
+import { DIETS } from '@/lib/enums';
 import { bodyPlanFor } from '@/components/ui/silhouettes';
 import { formatMa, unitById, unitName, unitsByRank } from '@/lib/geologic-time';
 import { tr } from '@/lib/i18n';
+import { useLang } from '@/lib/lang';
 import type { GeologicRank, GeologicUnit } from '@/lib/schemas/geologic-time';
 import type { SpeciesIndexEntry } from '@/lib/species-index';
 import {
@@ -369,6 +371,12 @@ export function Timeline({
 
   const includeNonDinosaurs = filters?.includeNonDinosaurs ?? false;
   const predicate = filters?.predicate;
+  const lang = useLang();
+  /** Diets that appear among the items, in the usual order, for the icon legend. */
+  const legendDiets = useMemo(
+    () => DIETS.filter((d) => items.some((it) => it.diet === d)),
+    [items],
+  );
   const shown = useMemo(
     () =>
       items
@@ -480,7 +488,10 @@ export function Timeline({
       endAnchored: new Set(shown.filter((_, i) => anchors[i] === 'end').map((it) => it.slug)),
       laneCount,
     };
-  }, [shown, pxPerMa, horizontal, measures]);
+    // Label widths depend on the language (the "not a dinosaur" tag), read from the module locale,
+    // so repack when it changes.
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- `lang` is read via the module locale
+  }, [shown, pxPerMa, horizontal, measures, lang]);
 
   const laneSize = horizontal ? LANE_SIZE_PX.horizontal : LANE_SIZE_PX.vertical;
   const crossExtent = packing.laneCount * laneSize + 2 * LANE_PADDING_PX;
@@ -504,10 +515,16 @@ export function Timeline({
   };
   const inView = shown.filter((it) => overlapsWindow(it, win) && laneVisible(it.slug));
 
-  const bands = useMemo(() => layoutBands(kLevel, pxPerMa, measures), [kLevel, pxPerMa, measures]);
+  // Band and tick labels are text in the current language: recompute when it changes.
+  const bands = useMemo(
+    () => layoutBands(kLevel, pxPerMa, measures),
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- `lang` is read via the module locale
+    [kLevel, pxPerMa, measures, lang],
+  );
   const ticks = useMemo(
     () => layoutTicks(kLevel, pxPerMa, horizontal, measures),
-    [kLevel, pxPerMa, horizontal, measures],
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- `lang` is read via the module locale
+    [kLevel, pxPerMa, horizontal, measures, lang],
   );
 
   // Hand the freshly rendered nodes to the engine before the browser paints.
@@ -731,6 +748,19 @@ export function Timeline({
             </div>
           </div>
         </div>
+      </div>
+
+      {/* The marker icons in words: each diet icon with its name (icon + text, never icon alone). */}
+      <div className="tl-legend">
+        <span>{tr('timeline.legend')}</span>
+        <ul role="list">
+          {legendDiets.map((d) => (
+            <li key={d}>
+              <DietIcon diet={d} size={MARKER_DIET_ICON_PX} />
+              {tr(`diet.${d}`)}
+            </li>
+          ))}
+        </ul>
       </div>
 
       <details className="tl-help">

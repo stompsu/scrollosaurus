@@ -46,10 +46,17 @@ test('the switch keeps the page and its view, and the choice is remembered', asy
   await page.getByTestId('language-switch').click();
   await expect(page).toHaveURL(/\/pl\?diet=carnivore/);
   await expect(page.locator('html')).toHaveAttribute('lang', 'pl');
-  // A later visit to an English address follows the remembered choice.
+  // A later visit to the bare home page follows the remembered choice…
+  await page.goto('./');
+  await expect(page).toHaveURL(/\/pl\/?(\?|$)/);
+  await expect(page.locator('html')).toHaveAttribute('lang', 'pl');
+  // …but a shared English link opens in English, as copied.
   await page.goto('about/');
+  await expect(page).toHaveURL(/\/about\/?$/);
+  await expect(page.getByRole('heading', { level: 1 })).toHaveText('About');
+  // Switching back to English is remembered too.
+  await page.getByTestId('language-switch').click();
   await expect(page).toHaveURL(/\/pl\/about/);
-  await expect(page.getByRole('heading', { level: 1 })).toHaveText('O projekcie');
   await page.getByTestId('language-switch').click();
   await expect(page).toHaveURL(/\/about\/?$/);
   await page.goto('./');
@@ -78,4 +85,38 @@ test('no axe violations in Polish', async ({ page }) => {
     await expect(page.locator('html')).toHaveAttribute('lang', 'pl');
     expect((await new AxeBuilder({ page }).analyze()).violations).toEqual([]);
   }
+});
+
+test('no axe violations in Polish: about, filters open, light theme', async ({ page }) => {
+  await page.goto('pl/about/');
+  expect((await new AxeBuilder({ page }).analyze()).violations).toEqual([]);
+  await page.goto('pl/');
+  await page.getByTestId('filters-toggle').click();
+  expect((await new AxeBuilder({ page }).analyze()).violations).toEqual([]);
+  await page.evaluate(() => {
+    document.documentElement.dataset.theme = 'light';
+  });
+  expect((await new AxeBuilder({ page }).analyze()).violations).toEqual([]);
+});
+
+test('marker names include the diet, in the page language', async ({ page }) => {
+  await page.goto('species/tyrannosaurus/');
+  const en = await page
+    .locator('button.tl-marker[data-slug="tyrannosaurus"]')
+    .getAttribute('aria-label');
+  expect(en).toMatch(/carnivore.*million years ago/i);
+  await page.goto('pl/species/tyrannosaurus/');
+  const pl = await page
+    .locator('button.tl-marker[data-slug="tyrannosaurus"]')
+    .getAttribute('aria-label');
+  expect(pl).toMatch(/mięsożerc.*mln lat temu/i);
+});
+
+test('switching language relabels the timeline bands at once', async ({ page }) => {
+  await page.goto('./?from=170&to=140');
+  await expect(page.locator('.tl-band-label').filter({ hasText: /^Jurassic$/ })).toHaveCount(1);
+  await page.getByTestId('language-switch').click();
+  await expect(page).toHaveURL(/\/pl\?/);
+  await expect(page.locator('.tl-band-label').filter({ hasText: /^Jura$/ })).toHaveCount(1);
+  await expect(page.locator('.tl-band-label').filter({ hasText: /^Jurassic$/ })).toHaveCount(0);
 });

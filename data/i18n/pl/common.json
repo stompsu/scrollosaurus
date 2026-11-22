@@ -43,7 +43,8 @@
     "helpTouch": "Na ekranach dotykowych przeciągaj, by przesuwać, i rozsuwaj palce, by powiększać.",
     "helpKeyboard": "Klawiatura: zaznacz oś czasu, potem przesuwaj ją strzałkami (z Shift o większe kroki), powiększaj klawiszami + i −, a Home i End przenoszą na najstarszy lub najmłodszy koniec. Tab przechodzi przez widoczne gatunki od najstarszego; Enter lub spacja wybiera gatunek.",
     "listInView": "Lista widocznych gatunków",
-    "boundariesInView": "Widoczne granice, w milionach lat temu:"
+    "boundariesInView": "Widoczne granice, w milionach lat temu:",
+    "legend": "Przed każdą nazwą: czym się żywił, potem kształt ciała."
   },
   "diet": {
     "carnivore": "Mięsożerca",

@@ -43,7 +43,8 @@
     "helpTouch": "On touch screens, drag to move and pinch to zoom.",
     "helpKeyboard": "Keyboard: focus the timeline, then use the arrow keys to move (hold Shift for bigger steps), + and − to zoom, and Home or End for the oldest or newest end. Tab moves through the species in view, oldest first; Enter or Space selects one.",
     "listInView": "List of species in view",
-    "boundariesInView": "Boundaries in view, million years ago:"
+    "boundariesInView": "Boundaries in view, million years ago:",
+    "legend": "Before each name: what it ate, then its body shape."
   },
   "diet": {
     "carnivore": "Carnivore",
