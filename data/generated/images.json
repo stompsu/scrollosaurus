@@ -1,4 +1,21 @@
 {
+  "File:AMNH 1696 Pachycephalosaurus.jpg": {
+    "author": "Skye McDavid",
+    "license": "CC BY-SA 4.0",
+    "licenseFamily": "cc-by-sa",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:AMNH_1696_Pachycephalosaurus.jpg",
+    "width": 1280,
+    "height": 961,
+    "widths": [
+      320,
+      640,
+      1280
+    ],
+    "basename": "images/0f7096cb4fa6",
+    "placeholder": "data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAAAwAgCdASoQAAwAA4BaJZgCdAEPEBoGW3U+AAD+mWYlCelOBd4vKPS+FRSHM4r1tnUYbN+EaY21xc2Rhfse+AAA",
+    "fetched": "2026-11-22"
+  },
   "File:Albertosaurus at Science Center of Iowa.jpg": {
     "author": "Jonathan Chen",
     "license": "CC BY-SA 4.0",
@@ -1171,23 +1188,6 @@
     ],
     "basename": "images/7f508b9f1ccd",
     "placeholder": "data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAADwAQCdASoQAAsAA4BaJZwAApIvg5bohAAA/uJNEsMbZMlHKlTy2ghau0vHHYsadOr1n8wJPK285Z3nMQhVwgAA",
-    "fetched": "2026-11-21"
-  },
-  "File:Pachycephalosaurus wyomingensis skeleton.JPG": {
-    "author": "Ninjatacoshell",
-    "license": "CC BY-SA 3.0",
-    "licenseFamily": "cc-by-sa",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pachycephalosaurus_wyomingensis_skeleton.JPG",
-    "width": 1280,
-    "height": 960,
-    "widths": [
-      320,
-      640,
-      1280
-    ],
-    "basename": "images/fd0592f28aca",
-    "placeholder": "data:image/webp;base64,UklGRkIAAABXRUJQVlA4IDYAAADwAQCdASoQAAwAA4BaJZACdAEf1NpxfgAA/qoT0tDfjpoflSFxV9rkwQ1BxhNJOjakLRrgAAA=",
     "fetched": "2026-11-21"
   },
   "File:Pachyrhinosaurus Royal Tyrrell 1.jpg": {
