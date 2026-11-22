@@ -54,8 +54,11 @@ export function cleanAuthor(author: string): string {
   return (
     author
       // "Photographer: A. Name Source: Some Museum" → "A. Name, Some Museum".
+      .replace(
+        /^\s*(?:photographer|photo|author|artist)\s*:\s*(.*?)\s+source\s*:\s*(.+)$/i,
+        '$1, $2',
+      )
       .replace(/^\s*(?:photographer|photo|author|artist)\s*:\s*/i, '')
-      .replace(/\s+source\s*:\s*/i, ', ')
       .replace(/\(([^()]*)\)/g, (m, inner: string) =>
         /^[\s;,]*((https?:\/\/|www\.)\S+|[\w.+-]+@[\w-]+\.[\w.]+)([\s;,]+((https?:\/\/|www\.)\S+|[\w.+-]+@[\w-]+\.[\w.]+))*[\s;,]*$/.test(
           inner,
