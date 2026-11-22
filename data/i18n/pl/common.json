@@ -116,7 +116,7 @@
     "toggle": "Filtry",
     "toggleCount": "Filtry ({{count}})",
     "nonDinosaurs": "Pokaż zwierzęta, które nie były dinozaurami",
-    "nonDinosaursHint": "(pterozaury, gady morskie)",
+    "nonDinosaursHint": "(pterozaury, gady morskie i inne)",
     "showingDinosaurs": "Widać {{shown}} z {{total}} dinozaurów",
     "showingSpecies": "Widać {{shown}} z {{total}} gatunków",
     "diet": "Dieta",
@@ -190,7 +190,10 @@
     "ankylosaur": "opancerzony roślinożerny dinozaur",
     "pterosaur": "latający gad z rozpostartymi skrzydłami",
     "mosasaur": "gad morski",
-    "plesiosaur": "długoszyi gad morski"
+    "plesiosaur": "długoszyi gad morski",
+    "ichthyosaur": "gad morski o kształcie delfina",
+    "silesaurid": "smukły, czworonożny krewny dinozaurów",
+    "dicynodont": "dziobaty krewny ssaków z kłami"
   },
   "tour": {
     "progress": "Wycieczka: krok {{step}} z {{total}}",

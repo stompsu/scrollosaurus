@@ -16,7 +16,10 @@ export type BodyPlan =
   | 'ankylosaur'
   | 'pterosaur'
   | 'mosasaur'
-  | 'plesiosaur';
+  | 'plesiosaur'
+  | 'ichthyosaur'
+  | 'silesaurid'
+  | 'dicynodont';
 
 export interface Silhouette {
   /** Height of the drawing box in the same units as the 100-unit length. */
@@ -82,6 +85,21 @@ export const SILHOUETTES: Record<BodyPlan, Silhouette> = {
     measure: 'length',
     path: 'M0 10 Q10 9 22 8 Q35 4 50 6 Q62 6 70 5 Q82 3 92 3 L100 4 L98 6 L90 6 Q78 7 70 9 L66 12 L72 17 L64 15 L58 12 L44 13 L36 17 L30 13 Q14 12 0 11 Z',
   },
+  ichthyosaur: {
+    height: 21,
+    measure: 'length',
+    path: 'M0 0 L11 9 Q24 7 38 5 L44 0 L48 5 Q62 4 74 7 L84 9 L100 10 L84 12 Q76 15 66 16 L63 21 L58 16 Q46 16 34 14 L31 18 L27 13 Q18 12 11 11 L1 21 L6 10 Z',
+  },
+  silesaurid: {
+    height: 30,
+    measure: 'length',
+    path: 'M0 14 Q20 12 40 10 Q55 8 66 10 L74 9 L82 6 L90 5 L100 8 L97 10 L88 10 L80 12 L74 16 L72 18 L73 30 L69 30 L68 19 L60 19 L54 20 L52 30 L48 30 L48 21 L46 21 L44 30 L40 30 L40 20 Q30 17 20 16 L0 15 Z',
+  },
+  dicynodont: {
+    height: 44,
+    measure: 'length',
+    path: 'M0 20 L10 15 Q24 9 42 8 Q60 7 71 11 L77 14 Q84 9 92 10 L99 15 L100 20 L96 23 L92 22 L90 28 L87 22 L82 22 L77 25 L76 44 L69 44 L68 30 L56 31 L34 31 L32 44 L25 44 L23 29 Q14 26 9 22 L0 21 Z',
+  },
 };
 
 /** The body plan for a species, from its group ancestry (most specific match wins). */
@@ -90,6 +108,9 @@ export function bodyPlanFor(groupPath: readonly string[]): BodyPlan {
   if (has('pterosauria')) return 'pterosaur';
   if (has('mosasauridae')) return 'mosasaur';
   if (has('plesiosauria')) return 'plesiosaur';
+  if (has('ichthyosauria')) return 'ichthyosaur';
+  if (has('silesauridae')) return 'silesaurid';
+  if (has('dicynodontia')) return 'dicynodont';
   if (has('ceratopsia')) return 'ceratopsian';
   if (has('stegosauria')) return 'stegosaur';
   if (has('ankylosauria')) return 'ankylosaur';

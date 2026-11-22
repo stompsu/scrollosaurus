@@ -3,7 +3,7 @@ import { slugSchema, sourceIdsSchema, sourceSchema } from './common';
 
 /**
  * The group tree used for classification and filters. Names are scientific and never translated.
- * Roots are either `dinosauria` or a non-dinosaur group (pterosaurs, marine reptiles).
+ * Roots are either `dinosauria` or a non-dinosaur group (pterosaurs, marine reptiles, dinosaur relatives, dicynodonts).
  * `filter` marks the nodes offered in the group filter: "clade" for top-level groups
  * (Theropoda, Sauropodomorpha, Ornithischia), "subgroup" for the ones nested under them.
  */

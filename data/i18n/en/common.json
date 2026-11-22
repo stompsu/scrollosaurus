@@ -114,7 +114,7 @@
     "toggle": "Filters",
     "toggleCount": "Filters ({{count}})",
     "nonDinosaurs": "Show animals that weren’t dinosaurs",
-    "nonDinosaursHint": "(pterosaurs, marine reptiles)",
+    "nonDinosaursHint": "(pterosaurs, marine reptiles and others)",
     "showingDinosaurs": "Showing {{shown}} of {{total}} dinosaurs",
     "showingSpecies": "Showing {{shown}} of {{total}} species",
     "diet": "Diet",
@@ -188,7 +188,10 @@
     "ankylosaur": "armoured plant-eating dinosaur",
     "pterosaur": "flying reptile, wings spread",
     "mosasaur": "marine reptile",
-    "plesiosaur": "long-necked marine reptile"
+    "plesiosaur": "long-necked marine reptile",
+    "ichthyosaur": "dolphin-shaped marine reptile",
+    "silesaurid": "slender four-legged dinosaur relative",
+    "dicynodont": "beaked, tusked relative of mammals"
   },
   "tour": {
     "progress": "Tour: step {{step}} of {{total}}",

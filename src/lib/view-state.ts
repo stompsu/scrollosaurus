@@ -20,7 +20,7 @@ export interface SpeciesFilters {
   sizes: SizeFilter[];
   continents: Continent[];
   famousOnly: boolean;
-  /** Show pterosaurs and marine reptiles, labelled "not a dinosaur". Off by default. */
+  /** Show pterosaurs, marine reptiles and other non-dinosaurs, labelled "not a dinosaur". Off by default. */
   nonDinosaurs: boolean;
 }
 

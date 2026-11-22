@@ -85,7 +85,7 @@ export function DietBadge({ diet, confidence }: DietBadgeProps) {
   );
 }
 
-/** The "not a dinosaur" tag on pterosaurs and marine reptiles. */
+/** The "not a dinosaur" tag on pterosaurs, marine reptiles and other non-dinosaurs. */
 export function NotADinosaurTag() {
   const { t } = useTranslation();
   return <span className="sc-tag">{t('timeline.notADinosaur')}</span>;
