@@ -1,0 +1,154 @@
+{
+  "slug": "eudimorphodon",
+  "scientificName": "Eudimorphodon ranzii",
+  "genus": "Eudimorphodon",
+  "nameMeaning": {
+    "text": {
+      "en": "Two truly different forms of teeth",
+      "pl": "dwie naprawdę różne formy zębów"
+    },
+    "sourceIds": ["pteros"]
+  },
+  "group": "pterosauria",
+  "groupSourceIds": ["pbdb-taxon", "nesbitt-2011"],
+  "isDinosaur": false,
+  "taxonomy": {
+    "status": "valid",
+    "note": {
+      "en": "Several fossils once placed in Eudimorphodon now belong to other genera (Kellner 2015): E. rosenfeldi is Carniadactylus, E. cromptonellus became Arcticodactylus, and the 'Milano specimen', once thought a juvenile E. ranzii, became Bergamodactylus wildi. PBDB still lists genus-level Eudimorphodon records from Switzerland, Luxembourg and France, which are not used here.",
+      "pl": "Kilka skamieniałości zaliczanych niegdyś do Eudimorphodon należy dziś do innych rodzajów (Kellner 2015): E. rosenfeldi to Carniadactylus, E. cromptonellus stał się Arcticodactylus, a „okaz mediolański”, uważany kiedyś za młodego E. ranzii, stał się Bergamodactylus wildi. PBDB nadal wymienia rekordy Eudimorphodon oznaczone do rodzaju ze Szwajcarii, Luksemburga i Francji, których tu nie uwzględniono."
+    },
+    "sourceIds": ["kellner-2015", "pbdb-occs"]
+  },
+  "diet": {
+    "value": "piscivore",
+    "confidence": "probable",
+    "sourceIds": ["pbdb-ecology"],
+    "note": {
+      "en": "Based on the PBDB ecology entry for the genus; not checked against a dedicated diet study.",
+      "pl": "Na podstawie wpisu PBDB dotyczącego ekologii rodzaju; nie sprawdzono tego w pracy poświęconej diecie."
+    }
+  },
+  "timeRange": {
+    "startMa": 227.3,
+    "endMa": 205.7,
+    "sourceIds": ["nesbitt-2011", "kellner-2015", "pbdb-occs"],
+    "note": {
+      "en": "Stage-based: Nesbitt (2011) gives a mid–late Norian age for the holotype from the uppermost Calcare di Zorzino near Cene, Kellner (2015) a late Norian age, and PBDB dates the E. ranzii records to the Alaunian–Sevatian (Norian substages). ICS v2024/12 does not divide the Norian, so the Ma values are the Norian boundaries and the range is broader than the fossils themselves.",
+      "pl": "Na podstawie pięter: Nesbitt (2011) podaje środkowy–późny noryk jako wiek holotypu z najwyższej części formacji Calcare di Zorzino koło Cene, Kellner (2015) późny noryk, a PBDB datuje rekordy E. ranzii na alaun–sewat (podpiętra noryku). ICS v2024/12 nie dzieli noryku, więc wartości w mln lat to granice noryku, a zakres jest szerszy niż wiek samych skamieniałości."
+    }
+  },
+  "periods": ["triassic"],
+  "size": {},
+  "locations": [
+    {
+      "continent": "europe",
+      "countryCode": "IT",
+      "formation": "Zorzino Limestone",
+      "sourceIds": ["pbdb-occs", "nesbitt-2011"]
+    },
+    {
+      "continent": "europe",
+      "countryCode": "IT",
+      "formation": "Argilliti di Riva di Solto",
+      "sourceIds": ["pbdb-occs"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "Zambelli",
+    "year": 1973,
+    "sourceIds": ["pbdb-taxon", "nesbitt-2011"]
+  },
+  "summary": {
+    "text": {
+      "en": "Eudimorphodon was a pterosaur, a flying reptile, not a dinosaur. It lived in the Late Triassic, in the Norian Age, and its fossils come from rocks near Cene in Lombardy, northern Italy. It was the first pterosaur to be described from the Triassic. Its jaws held teeth with several points, and it probably ate fish. Several fossils once thought to be Eudimorphodon now belong to other genera.",
+      "pl": "Eudimorphodon był pterozaurem, czyli latającym gadem, a nie dinozaurem. Żył w późnym triasie, w noryku, a jego skamieniałości pochodzą ze skał koło Cene w Lombardii w północnych Włoszech. Był pierwszym opisanym pterozaurem z triasu. W jego szczękach tkwiły zęby z kilkoma wierzchołkami i prawdopodobnie jadł ryby. Kilka skamieniałości uważanych niegdyś za Eudimorphodon należy dziś do innych rodzajów."
+    },
+    "sourceIds": ["nesbitt-2011", "kellner-2015", "pbdb-occs", "pbdb-ecology"]
+  },
+  "famous": false,
+  "images": [
+    {
+      "commonsFile": "File:Eudimorphodon.jpg",
+      "kind": "fossil",
+      "alt": {
+        "en": "Holotype specimen of the early pterosaur Eudimorphodon ranzii, from the Upper Triassic of the Italian Alps, in the Museo civico di scienze naturali di Bergamo.",
+        "pl": "Holotyp wczesnego pterozaura Eudimorphodon ranzii z górnego triasu włoskich Alp w Museo civico di scienze naturali di Bergamo."
+      }
+    }
+  ],
+  "uncertain": [
+    {
+      "field": "size.wingspanM",
+      "note": {
+        "en": "Kellner (2015) gives a humerus length of 47 mm for the holotype but no wingspan; no wingspan was found in a source we could verify.",
+        "pl": "Kellner (2015) podaje długość kości ramiennej holotypu, 47 mm, ale nie rozpiętość skrzydeł; nie znaleziono jej w źródle, które moglibyśmy zweryfikować."
+      }
+    },
+    {
+      "field": "size.lengthM",
+      "note": {
+        "en": "No verified body length found.",
+        "pl": "Nie znaleziono zweryfikowanej długości ciała."
+      }
+    },
+    {
+      "field": "size.massKg",
+      "note": {
+        "en": "No verified mass estimate found.",
+        "pl": "Nie znaleziono zweryfikowanego oszacowania masy."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "pbdb-taxon",
+      "title": "Eudimorphodon (taxon 38467)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/single.json?name=Eudimorphodon&show=attr,parent,class",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-ecology",
+      "title": "Eudimorphodon (taxon 38467): ecology",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/single.json?name=Eudimorphodon&show=ecospace",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-occs",
+      "title": "Occurrences of Eudimorphodon (stratigraphy and location)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Eudimorphodon&show=strat,loc",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "nesbitt-2011",
+      "title": "The early evolution of archosaurs: relationships and the origin of major clades",
+      "authors": "Nesbitt, S. J.",
+      "year": 2011,
+      "publisher": "Bulletin of the American Museum of Natural History",
+      "doi": "10.1206/352.1",
+      "url": "https://tb.plazi.org/GgServer/xml/357D771BFF80FF8BEF9DFED3FE5EFB72",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "kellner-2015",
+      "title": "Comments on Triassic pterosaurs with discussion about ontogeny and description of new taxa",
+      "authors": "Kellner, A. W. A.",
+      "year": 2015,
+      "publisher": "Anais da Academia Brasileira de Ciências",
+      "doi": "10.1590/0001-3765201520150307",
+      "url": "http://www.scielo.br/scielo.php?script=sci_arttext&pid=S0001-37652015000200669&lng=en&tlng=en",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pteros",
+      "title": "Eudimorphodon | Pteros",
+      "publisher": "Pteros (Paleo Network)",
+      "url": "https://pteros.com/pterosaurs/eudimorphodon.html",
+      "accessed": "2026-11-22"
+    }
+  ],
+  "lastReviewed": "2026-11-22"
+}

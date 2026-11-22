@@ -1,0 +1,216 @@
+{
+  "slug": "rhamphorhynchus",
+  "scientificName": "Rhamphorhynchus muensteri",
+  "genus": "Rhamphorhynchus",
+  "nameMeaning": {
+    "text": {
+      "en": "beak snout",
+      "pl": "dziobaty pysk"
+    },
+    "sourceIds": ["field-museum-2018"]
+  },
+  "group": "pterosauria",
+  "groupSourceIds": ["pbdb-taxon"],
+  "isDinosaur": false,
+  "taxonomy": {
+    "status": "valid",
+    "note": {
+      "en": "Fossils from the Solnhofen Limestone were once split into several Rhamphorhynchus species. Bennett (1995) showed that they differ in size and growth stage, not species, and assigned them all to R. muensteri; PBDB lists R. longicaudus, R. gemmingi and R. longiceps as its synonyms.",
+      "pl": "Skamieniałości z wapieni solnhofeńskich dzielono kiedyś na kilka gatunków Rhamphorhynchus. Bennett (1995) wykazał, że różnią się one wielkością i stadium wzrostu, a nie gatunkiem, i zaliczył je wszystkie do R. muensteri; PBDB podaje R. longicaudus, R. gemmingi i R. longiceps jako jego synonimy."
+    },
+    "sourceIds": ["bennett-1995", "pbdb-genus-species"]
+  },
+  "diet": {
+    "value": "piscivore",
+    "confidence": "probable",
+    "sourceIds": ["frey-tischlinger-2012", "field-museum-2018", "pbdb-ecospace"],
+    "note": {
+      "en": "A specimen with a small fish still in its gullet shows that it caught fish, probably by grabbing or skimming them from the water (Frey & Tischlinger 2012). The Field Museum adds cephalopods as likely prey; PBDB lists it as a fish-eater.",
+      "pl": "Okaz z małą rybą wciąż tkwiącą w przełyku pokazuje, że łowił ryby, prawdopodobnie chwytając je lub zgarniając z powierzchni wody (Frey i Tischlinger 2012). Field Museum wymienia też głowonogi jako prawdopodobną zdobycz; PBDB klasyfikuje go jako rybożercę."
+    }
+  },
+  "timeRange": {
+    "startMa": 152.21,
+    "endMa": 145.06,
+    "sourceIds": ["pbdb-occs", "frey-tischlinger-2012"],
+    "note": {
+      "en": "PBDB occurrences of R. muensteri range from the Late Kimmeridgian (Painten, Nusplingen) to the Early Tithonian (Solnhofen); Frey & Tischlinger (2012) also place the Solnhofen specimens in the Tithonian. The Ma values are PBDB's estimates for those parts of the stages, which fall inside the ICS v2024/12 Kimmeridgian–Tithonian (154.8–143.1 Ma). The Field Museum gives about 160 Ma, older than any dated record.",
+      "pl": "Występowania R. muensteri w PBDB sięgają od późnego kimerydu (Painten, Nusplingen) do wczesnego tytonu (Solnhofen); Frey i Tischlinger (2012) również umieszczają okazy z Solnhofen w tytonie. Wartości w mln lat to oszacowania PBDB dla tych części pięter, mieszczące się w kimerydzie–tytonie według ICS v2024/12 (154,8–143,1 mln lat temu). Field Museum podaje około 160 mln lat temu, czyli więcej niż wiek któregokolwiek datowanego znaleziska."
+    }
+  },
+  "periods": ["jurassic"],
+  "size": {
+    "wingspanM": {
+      "value": [0.3, 1.49],
+      "sourceIds": ["prondvai-2012"],
+      "note": {
+        "en": "Range of the specimens in a bone-histology study, from a very young individual (about 0.3 m, estimated from the thigh bone) to the largest one studied (1.49 m, measured from the wing bones).",
+        "pl": "Zakres okazów z badania histologii kości: od bardzo młodego osobnika (około 0,3 m, oszacowane na podstawie kości udowej) do największego zbadanego (1,49 m, zmierzone na podstawie kości skrzydeł)."
+      }
+    }
+  },
+  "locations": [
+    {
+      "continent": "europe",
+      "countryCode": "DE",
+      "formation": "Solnhofen",
+      "sourceIds": ["pbdb-occs", "frey-tischlinger-2012", "bennett-1995"]
+    },
+    {
+      "continent": "europe",
+      "countryCode": "DE",
+      "formation": "Nusplingen Limestone",
+      "sourceIds": ["pbdb-occs"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "Goldfuss",
+    "year": 1831,
+    "note": {
+      "en": "Goldfuss named the species in 1831 in a different genus; Meyer named the genus Rhamphorhynchus in 1847.",
+      "pl": "Goldfuss nazwał ten gatunek w 1831 roku w innym rodzaju; Meyer nazwał rodzaj Rhamphorhynchus w 1847 roku."
+    },
+    "sourceIds": ["pbdb-taxon", "pbdb-genus-species"]
+  },
+  "summary": {
+    "text": {
+      "en": "Rhamphorhynchus was not a dinosaur but a pterosaur, a flying reptile. It lived in the Late Jurassic, roughly 150 million years ago, around a salty lagoon in what is now Germany. Its jaws held sharp, forward-pointing teeth, and it most likely hunted fish: one fossil still has a small fish stuck in its throat. The largest individuals studied had wings about 1.5 metres across.",
+      "pl": "Rhamphorhynchus nie był dinozaurem, lecz pterozaurem – latającym gadem. Żył w późnej jurze, mniej więcej 150 milionów lat temu, nad słoną laguną na terenie dzisiejszych Niemiec. W szczękach miał ostre zęby skierowane do przodu i najpewniej polował na ryby: w gardle jednej ze skamieniałości wciąż tkwi mała ryba. Największe zbadane osobniki miały skrzydła o rozpiętości około 1,5 metra."
+    },
+    "sourceIds": [
+      "pbdb-taxon",
+      "pbdb-occs",
+      "nmi-2024",
+      "field-museum-2018",
+      "frey-tischlinger-2012",
+      "prondvai-2012"
+    ]
+  },
+  "funFacts": [
+    {
+      "text": {
+        "en": "Several Rhamphorhynchus fossils lie right next to the jaws of a large predatory fish, Aspidorhynchus. In one, the fish seems to have grabbed the pterosaur just after the pterosaur had caught a fish of its own.",
+        "pl": "Kilka skamieniałości Rhamphorhynchus leży tuż obok szczęk dużej drapieżnej ryby Aspidorhynchus. W jednym przypadku ryba najwyraźniej schwytała pterozaura tuż po tym, jak on sam złowił rybę."
+      },
+      "sourceIds": ["frey-tischlinger-2012"]
+    },
+    {
+      "text": {
+        "en": "Some individuals had a diamond-shaped vane at the end of the tail, which may have steadied them in flight, like the tail of a kite.",
+        "pl": "Niektóre osobniki miały na końcu ogona rombowatą „chorągiewkę”, która mogła stabilizować lot, jak ogon latawca."
+      },
+      "sourceIds": ["field-museum-2018"]
+    }
+  ],
+  "famous": false,
+  "images": [
+    {
+      "commonsFile": "File:Rhamphorhynchus YPM.jpg",
+      "kind": "fossil",
+      "alt": {
+        "en": "The Marsh specimen of Rhamphorhynchus muensteri at the Yale Peabody Museum, with wing membranes and tail vane preserved as soft tissue.",
+        "pl": "Okaz Marsha Rhamphorhynchus muensteri w Yale Peabody Museum, z zachowanymi w postaci tkanek miękkich błonami skrzydeł i sterem na ogonie."
+      }
+    }
+  ],
+  "uncertain": [
+    {
+      "field": "size.lengthM",
+      "note": {
+        "en": "No body length found in a source we could verify.",
+        "pl": "Nie znaleziono długości ciała w źródle, które moglibyśmy zweryfikować."
+      }
+    },
+    {
+      "field": "size.massKg",
+      "note": {
+        "en": "No mass estimate found in a source we could verify.",
+        "pl": "Nie znaleziono oszacowania masy w źródle, które moglibyśmy zweryfikować."
+      }
+    },
+    {
+      "field": "timeRange",
+      "note": {
+        "en": "Only stage-level ages are available (PBDB sub-stage estimates for Late Kimmeridgian to Early Tithonian); the Field Museum's figure of about 160 Ma disagrees.",
+        "pl": "Dostępny jest tylko wiek na poziomie pięter (oszacowania PBDB dla późnego kimerydu–wczesnego tytonu); wartość Field Museum, około 160 mln lat temu, jest z nimi sprzeczna."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "pbdb-taxon",
+      "title": "Rhamphorhynchus muensteri (taxon 95812)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/single.json?name=Rhamphorhynchus%20muensteri&show=attr,class",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-genus-species",
+      "title": "Rhamphorhynchus (taxon 38476) and its species, with synonyms",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/list.json?name=Rhamphorhynchus&rel=all_children&show=attr&taxon_status=all",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-occs",
+      "title": "Occurrences of Rhamphorhynchus muensteri (stratigraphy and location)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Rhamphorhynchus%20muensteri&show=strat,loc",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-ecospace",
+      "title": "Ecology (ecospace) entries for Rhamphorhynchus and other genera",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/list.json?name=Ouranosaurus,Amargasaurus,Pachyrhinosaurus,Tarbosaurus,Majungasaurus,Elasmosaurus,Rhamphorhynchus,Nigersaurus,Suchomimus,Australovenator&show=attr,ecospace",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "bennett-1995",
+      "title": "A statistical study of Rhamphorhynchus from the Solnhofen Limestone of Germany: year-classes of a single large species",
+      "authors": "Bennett, S. C.",
+      "year": 1995,
+      "publisher": "Journal of Paleontology 69(3): 569-580",
+      "doi": "10.1017/S0022336000034946",
+      "url": "https://doi.org/10.1017/S0022336000034946",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "frey-tischlinger-2012",
+      "title": "The Late Jurassic pterosaur Rhamphorhynchus, a frequent victim of the ganoid fish Aspidorhynchus?",
+      "authors": "Frey, E.; Tischlinger, H.",
+      "year": 2012,
+      "publisher": "PLoS ONE 7(3): e31945",
+      "doi": "10.1371/journal.pone.0031945",
+      "url": "https://doi.org/10.1371/journal.pone.0031945",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "prondvai-2012",
+      "title": "Life history of Rhamphorhynchus inferred from bone histology and the diversity of pterosaurian growth strategies",
+      "authors": "Prondvai, E.; Stein, K.; Ősi, A.; Sander, M. P.",
+      "year": 2012,
+      "publisher": "PLoS ONE 7(2): e31392",
+      "doi": "10.1371/journal.pone.0031392",
+      "url": "https://doi.org/10.1371/journal.pone.0031392",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "field-museum-2018",
+      "title": "Meet the Pterosaur Flock",
+      "year": 2018,
+      "publisher": "Field Museum",
+      "url": "https://fieldmuseum.org/blog/meet-pterosaur-flock",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "nmi-2024",
+      "title": "A Flying Reptile in the National Museum of Ireland",
+      "authors": "Ó Gogáin, A.",
+      "publisher": "National Museum of Ireland",
+      "url": "https://source.museum.ie/en-IE/Collections-Research/Registration-Department/Registration-Blog/A-Flying-Reptile-in-the-National-Museum-of-Ireland",
+      "accessed": "2026-11-22"
+    }
+  ],
+  "lastReviewed": "2026-11-22"
+}

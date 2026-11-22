@@ -1,0 +1,134 @@
+{
+  "slug": "heterodontosaurus",
+  "scientificName": "Heterodontosaurus tucki",
+  "genus": "Heterodontosaurus",
+  "nameMeaning": {
+    "text": {
+      "en": "Different-teeth lizard",
+      "pl": "jaszczur o różnych zębach"
+    },
+    "sourceIds": ["nhm"]
+  },
+  "group": "ornithischia",
+  "groupSourceIds": ["pbdb-taxon", "nhm", "sereno-2012"],
+  "isDinosaur": true,
+  "taxonomy": {
+    "status": "valid"
+  },
+  "diet": {
+    "value": "herbivore",
+    "confidence": "probable",
+    "sourceIds": ["sereno-2012", "nhm"],
+    "note": {
+      "en": "Sereno (2012) concludes from extensive tooth wear and other evidence that all heterodontosaurids were predominantly or exclusively herbivores.",
+      "pl": "Sereno (2012) na podstawie silnego starcia zębów i innych przesłanek stwierdza, że wszystkie heterodontozaury były przeważnie lub wyłącznie roślinożerne."
+    }
+  },
+  "timeRange": {
+    "startMa": 201.4,
+    "endMa": 192.9,
+    "sourceIds": ["sereno-2012", "pbdb-occs", "nhm"],
+    "note": {
+      "en": "Stage-based: Sereno (2012) dates the Upper Elliot and Clarens formations that yielded H. tucki to the Hettangian–Sinemurian (about 200–190 Ma), and PBDB dates the H. tucki records to the same interval. The Ma values are ICS v2024/12 stage boundaries. The NHM Dino Directory gives 205 Ma, which would be Late Triassic, and is not used. A Pliensbachian PBDB record from Mexico identified only as Heterodontosaurus is not used.",
+      "pl": "Na podstawie pięter: Sereno (2012) datuje formacje Upper Elliot i Clarens, z których pochodzi H. tucki, na hettang–synemur (około 200–190 mln lat temu), a PBDB datuje rekordy H. tucki na ten sam przedział. Wartości w mln lat to granice pięter według ICS v2024/12. Dino Directory muzeum NHM podaje 205 mln lat temu, co przypadałoby na późny trias, więc tej wartości nie użyto. Nie uwzględniono też rekordu PBDB z pliensbachu w Meksyku, oznaczonego tylko jako Heterodontosaurus."
+    }
+  },
+  "periods": ["jurassic"],
+  "size": {
+    "lengthM": {
+      "value": [1.08, 1.2],
+      "sourceIds": ["sereno-2012", "nhm"],
+      "note": {
+        "en": "Sereno (2012) estimates about 1.08 m for the nearly complete skeleton SAM-PK-K1332; the NHM Dino Directory gives 1.2 m.",
+        "pl": "Sereno (2012) szacuje długość niemal kompletnego szkieletu SAM-PK-K1332 na około 1,08 m; Dino Directory muzeum NHM podaje 1,2 m."
+      }
+    }
+  },
+  "locations": [
+    {
+      "continent": "africa",
+      "countryCode": "ZA",
+      "formation": "Elliot",
+      "sourceIds": ["pbdb-occs", "sereno-2012"]
+    },
+    {
+      "continent": "africa",
+      "countryCode": "ZA",
+      "formation": "Clarens",
+      "sourceIds": ["pbdb-occs", "sereno-2012"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "Crompton & Charig",
+    "year": 1962,
+    "sourceIds": ["pbdb-taxon", "nhm"]
+  },
+  "summary": {
+    "text": {
+      "en": "Heterodontosaurus was a small dinosaur, only about 1.1 to 1.2 metres long, that lived in what is now South Africa in the Early Jurassic, about 200 to 190 million years ago. Its name means 'different-teeth lizard': its jaws held more than one kind of tooth, including canine-like teeth. Heavy wear on its teeth suggests that it ate mainly or only plants.",
+      "pl": "Heterodontosaurus był małym dinozaurem o długości zaledwie około 1,1–1,2 metra, żyjącym na terenie dzisiejszej Republiki Południowej Afryki we wczesnej jurze, około 200–190 milionów lat temu. Jego nazwa oznacza „jaszczur o różnych zębach”: w jego szczękach tkwiły zęby więcej niż jednego rodzaju, w tym zęby przypominające kły. Silne starcie zębów wskazuje, że jadł głównie lub wyłącznie rośliny."
+    },
+    "sourceIds": ["nhm", "sereno-2012", "pbdb-occs"]
+  },
+  "famous": false,
+  "images": [
+    {
+      "commonsFile": "File:Heterodontosaurus skeleton.jpg",
+      "kind": "skeleton-mount",
+      "alt": {
+        "en": "Mounted skeleton of the small ornithischian Heterodontosaurus.",
+        "pl": "Zmontowany szkielet małego dinozaura ptasiomiednicznego Heterodontosaurus."
+      }
+    }
+  ],
+  "uncertain": [
+    {
+      "field": "size.massKg",
+      "note": {
+        "en": "No mass estimate found in a source we could verify.",
+        "pl": "Nie znaleziono oszacowania masy w źródle, które moglibyśmy zweryfikować."
+      }
+    },
+    {
+      "field": "locations",
+      "note": {
+        "en": "The NHM Dino Directory also lists Lesotho, but no Lesotho specimen of H. tucki was found in Sereno (2012) or PBDB, so it is not listed.",
+        "pl": "Dino Directory muzeum NHM wymienia też Lesotho, ale ani u Serena (2012), ani w PBDB nie znaleziono okazu H. tucki z Lesotho, więc go nie podano."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "pbdb-taxon",
+      "title": "Heterodontosaurus (taxon 38725)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/single.json?name=Heterodontosaurus&show=attr,parent,class",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-occs",
+      "title": "Occurrences of Heterodontosaurus (stratigraphy and location)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Heterodontosaurus&show=strat,loc",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "nhm",
+      "title": "Heterodontosaurus | Dino Directory",
+      "publisher": "Natural History Museum, London",
+      "url": "https://www.nhm.ac.uk/discover/dino-directory/heterodontosaurus.html",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "sereno-2012",
+      "title": "Taxonomy, morphology, masticatory function and phylogeny of heterodontosaurid dinosaurs",
+      "authors": "Sereno, P. C.",
+      "year": 2012,
+      "publisher": "ZooKeys",
+      "doi": "10.3897/zookeys.226.2840",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3491919",
+      "accessed": "2026-11-22"
+    }
+  ],
+  "lastReviewed": "2026-11-22"
+}

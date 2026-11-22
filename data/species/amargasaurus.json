@@ -1,0 +1,163 @@
+{
+  "slug": "amargasaurus",
+  "scientificName": "Amargasaurus cazaui",
+  "genus": "Amargasaurus",
+  "nameMeaning": {
+    "text": {
+      "en": "Amarga lizard",
+      "pl": "jaszczur z Amargi"
+    },
+    "sourceIds": ["nhm"]
+  },
+  "group": "sauropoda",
+  "groupSourceIds": ["pbdb-taxon", "gallina-2019"],
+  "isDinosaur": true,
+  "taxonomy": {
+    "status": "valid",
+    "note": {
+      "en": "Amargasaurus is a dicraeosaurid, a member of a family of diplodocoid sauropods (PBDB; Gallina et al. 2019). It is filed here under Sauropoda because the group tree has no separate dicraeosaurid node.",
+      "pl": "Amargasaurus jest dikreozaurydem – należy do rodziny zauropodów z grupy Diplodocoidea (PBDB; Gallina i in. 2019). Zaliczono go tu do zauropodów, ponieważ drzewo grup nie ma osobnej gałęzi dla dikreozaurydów."
+    },
+    "sourceIds": ["pbdb-taxon", "gallina-2019"]
+  },
+  "diet": {
+    "value": "herbivore",
+    "confidence": "established",
+    "sourceIds": ["nhm", "pbdb-ecospace"]
+  },
+  "timeRange": {
+    "startMa": 125.77,
+    "endMa": 121.4,
+    "sourceIds": ["pbdb-occs", "apesteguia-2007", "nhm"],
+    "note": {
+      "en": "PBDB places the holotype in the Puesto Antigual Member of the La Amarga Formation and dates it to the Barremian; Apesteguía (2007) also treats the formation as Barremian. The Ma values are the ICS v2024/12 Barremian boundaries. NHM gives an older range, 132–127 Ma.",
+      "pl": "PBDB umieszcza holotyp w ogniwie Puesto Antigual formacji La Amarga i datuje go na barrem; Apesteguía (2007) również uznaje tę formację za barremską. Wartości w mln lat to granice barremu według ICS v2024/12. NHM podaje starszy zakres: 132–127 mln lat temu."
+    }
+  },
+  "periods": ["cretaceous"],
+  "size": {
+    "lengthM": {
+      "value": [12, 12],
+      "sourceIds": ["nhm"],
+      "note": {
+        "en": "Single museum figure (NHM Dino Directory); method not stated.",
+        "pl": "Jedyna wartość muzealna (NHM Dino Directory); metody nie podano."
+      }
+    },
+    "massKg": {
+      "value": [9000, 9000],
+      "sourceIds": ["nhm"],
+      "note": {
+        "en": "Single museum figure (NHM Dino Directory); method not stated. No peer-reviewed mass estimate was found to check it against.",
+        "pl": "Jedyna wartość muzealna (NHM Dino Directory); metody nie podano. Nie znaleziono recenzowanego oszacowania masy, z którym można by ją porównać."
+      }
+    }
+  },
+  "locations": [
+    {
+      "continent": "south-america",
+      "countryCode": "AR",
+      "formation": "La Amarga",
+      "sourceIds": ["pbdb-occs", "nhm"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "Salgado & Bonaparte",
+    "year": 1991,
+    "sourceIds": ["pbdb-taxon", "nhm"]
+  },
+  "summary": {
+    "text": {
+      "en": "Amargasaurus was a sauropod, a long-necked plant-eater, about 12 metres long, from Argentina. It lived in the Early Cretaceous, roughly 126 to 121 million years ago. Its neck carried extremely long spines, which may have been covered by sheaths of horn even longer than the bone. Scientists still argue about what the spines were for: holding up a sail, showing off, or defence against predators.",
+      "pl": "Amargasaurus był zauropodem – długoszyim roślinożercą o długości około 12 metrów – z terenu dzisiejszej Argentyny. Żył we wczesnej kredzie, mniej więcej 126–121 milionów lat temu. Na szyi miał niezwykle długie kolce, które mogły być pokryte rogowymi pochwami dłuższymi niż sama kość. Naukowcy wciąż spierają się, do czego służyły: do podtrzymywania żagla, do pokazów czy do obrony przed drapieżnikami."
+    },
+    "sourceIds": ["nhm", "pbdb-occs", "gallina-2019"]
+  },
+  "funFacts": [
+    {
+      "text": {
+        "en": "Bajadasaurus, a relative from Patagonia that lived about 15 million years earlier, had similar long neck spines. The scientists who described it think such spines served mainly for passive defence.",
+        "pl": "Bajadasaurus, krewny z Patagonii żyjący około 15 milionów lat wcześniej, miał podobne długie kolce na szyi. Naukowcy, którzy go opisali, uważają, że takie kolce służyły głównie do biernej obrony."
+      },
+      "sourceIds": ["gallina-2019"]
+    }
+  ],
+  "famous": false,
+  "images": [
+    {
+      "commonsFile": "File:Amargasaurus, MEF Trelew 02.JPG",
+      "kind": "skeleton-mount",
+      "alt": {
+        "en": "Mounted skeleton of Amargasaurus at the Museo Paleontológico Egidio Feruglio in Trelew.",
+        "pl": "Zmontowany szkielet Amargasaurus w Museo Paleontológico Egidio Feruglio w Trelew."
+      }
+    }
+  ],
+  "uncertain": [
+    {
+      "field": "timeRange",
+      "note": {
+        "en": "Sources disagree: PBDB and Apesteguía (2007) give a Barremian age (125.77–121.4 Ma), NHM gives 132–127 Ma. Only stage-level dating was found.",
+        "pl": "Źródła nie są zgodne: PBDB i Apesteguía (2007) podają wiek barremski (125,77–121,4 mln lat temu), NHM – 132–127 mln lat temu. Znaleziono tylko datowanie na poziomie pięter."
+      }
+    },
+    {
+      "field": "size.massKg",
+      "note": {
+        "en": "The mass is a single museum figure that could not be checked against a peer-reviewed estimate.",
+        "pl": "Masa to jedyna wartość muzealna, której nie udało się porównać z recenzowanym oszacowaniem."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "nhm",
+      "title": "Amargasaurus | Dino Directory",
+      "publisher": "Natural History Museum, London",
+      "url": "https://www.nhm.ac.uk/discover/dino-directory/amargasaurus.html",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "gallina-2019",
+      "title": "A new long-spined dinosaur from Patagonia sheds light on sauropod defense system",
+      "authors": "Gallina, P. A.; Apesteguía, S.; Canale, J. I.; Haluza, A.",
+      "year": 2019,
+      "publisher": "Scientific Reports 9: 1392",
+      "doi": "10.1038/s41598-018-37943-3",
+      "url": "https://europepmc.org/articles/PMC6362061",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "apesteguia-2007",
+      "title": "The sauropod diversity of the La Amarga Formation (Barremian), Neuquén (Argentina)",
+      "authors": "Apesteguía, S.",
+      "year": 2007,
+      "publisher": "Gondwana Research 12(4): 533-546",
+      "doi": "10.1016/j.gr.2007.04.007",
+      "url": "https://doi.org/10.1016/j.gr.2007.04.007",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-taxon",
+      "title": "Amargasaurus cazaui (taxon 53962)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/single.json?name=Amargasaurus%20cazaui&show=attr,class",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-occs",
+      "title": "Occurrences of Amargasaurus (stratigraphy and location)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Amargasaurus&show=strat,loc",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-ecospace",
+      "title": "Ecology (ecospace) entries for Amargasaurus and other genera",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/list.json?name=Ouranosaurus,Amargasaurus,Pachyrhinosaurus,Tarbosaurus,Majungasaurus,Elasmosaurus,Rhamphorhynchus,Nigersaurus,Suchomimus,Australovenator&show=attr,ecospace",
+      "accessed": "2026-11-22"
+    }
+  ],
+  "lastReviewed": "2026-11-22"
+}

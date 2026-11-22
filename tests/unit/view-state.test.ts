@@ -139,10 +139,15 @@ describe('filter matching', () => {
   });
 
   it('matches "size unknown" only for species with no length', () => {
-    expect(shown({ sizes: ['unknown'] })).toEqual(['mamenchisaurus']);
-    expect(shown({ sizes: ['unknown'], nonDinosaurs: true }).sort()).toEqual(
-      ['mamenchisaurus', 'plesiosaurus', 'pteranodon', 'quetzalcoatlus'].sort(),
-    );
+    const noLength = (dinosaursOnly: boolean) =>
+      species
+        .filter((s) => !s.lengthM && (s.isDinosaur || !dinosaursOnly))
+        .map((s) => s.slug)
+        .sort();
+    expect(noLength(true)).toContain('mamenchisaurus');
+    expect(noLength(false)).toContain('pteranodon');
+    expect(shown({ sizes: ['unknown'] }).sort()).toEqual(noLength(true));
+    expect(shown({ sizes: ['unknown'], nonDinosaurs: true }).sort()).toEqual(noLength(false));
     expect(shown({ sizes: ['medium'] })).toContain('plateosaurus');
     expect(shown({ sizes: ['large'] })).toContain('plateosaurus');
   });

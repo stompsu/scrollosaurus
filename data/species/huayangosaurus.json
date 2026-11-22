@@ -1,0 +1,124 @@
+{
+  "slug": "huayangosaurus",
+  "scientificName": "Huayangosaurus taibaii",
+  "genus": "Huayangosaurus",
+  "nameMeaning": {
+    "text": {
+      "en": "Huayang lizard",
+      "pl": "jaszczur z Huayang"
+    },
+    "sourceIds": ["nhm"]
+  },
+  "group": "stegosauria",
+  "groupSourceIds": ["maidment-2006", "pbdb-taxon", "nhm"],
+  "isDinosaur": true,
+  "taxonomy": {
+    "status": "valid"
+  },
+  "diet": {
+    "value": "herbivore",
+    "confidence": "established",
+    "sourceIds": ["nhm"]
+  },
+  "timeRange": {
+    "startMa": 170.9,
+    "endMa": 154.8,
+    "sourceIds": ["pbdb-occs", "maidment-2006", "nhm"],
+    "note": {
+      "en": "Stage-based: PBDB dates the only Huayangosaurus occurrence, in the Lower Shaximiao Formation of Sichuan, to the Bajocian–Oxfordian; the Ma values are the ICS v2024/12 boundaries of those stages. Maidment et al. (2006) call it Middle Jurassic, and the NHM Dino Directory gives 170–160 Ma.",
+      "pl": "Na podstawie pięter: PBDB datuje jedyne występowanie Huayangosaurus, w dolnej części formacji Shaximiao w Syczuanie, na bajos–oksford; wartości w mln lat to granice tych pięter według ICS v2024/12. Maidment i in. (2006) określają go jako środkowojurajski, a Dino Directory muzeum NHM podaje 170–160 mln lat temu."
+    }
+  },
+  "periods": ["jurassic"],
+  "size": {
+    "lengthM": {
+      "value": [4.5, 4.5],
+      "sourceIds": ["nhm"],
+      "note": {
+        "en": "Single value from the NHM Dino Directory.",
+        "pl": "Pojedyncza wartość z Dino Directory muzeum NHM."
+      }
+    }
+  },
+  "locations": [
+    {
+      "continent": "asia",
+      "countryCode": "CN",
+      "formation": "Shaximiao",
+      "sourceIds": ["pbdb-occs"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "Dong, Tang & Zhou",
+    "year": 1982,
+    "sourceIds": ["nhm", "pbdb-taxon"]
+  },
+  "summary": {
+    "text": {
+      "en": "Huayangosaurus was a plant-eating armoured dinosaur about 4.5 metres long from the Middle Jurassic of Sichuan, China. It is a primitive stegosaur, an early relative of Stegosaurus. Scientists use it to define the stegosaur family Stegosauridae: all stegosaurs more closely related to Stegosaurus than to Huayangosaurus.",
+      "pl": "Huayangosaurus był roślinożernym opancerzonym dinozaurem o długości około 4,5 metra, żyjącym w środkowej jurze na terenie Syczuanu w Chinach. Jest prymitywnym stegozaurem, wczesnym krewnym Stegosaurus. Naukowcy używają go do zdefiniowania rodziny Stegosauridae: należą do niej wszystkie stegozaury bliżej spokrewnione ze Stegosaurus niż z Huayangosaurus."
+    },
+    "sourceIds": ["nhm", "maidment-2006", "pbdb-occs"]
+  },
+  "famous": false,
+  "images": [
+    {
+      "commonsFile": "File:Huayangosaurus taibaii.jpg",
+      "kind": "skeleton-mount",
+      "alt": {
+        "en": "Skeleton of the stegosaur Huayangosaurus taibaii from the Beijing Museum, shown at the Miami Museum of Science.",
+        "pl": "Szkielet stegozaura Huayangosaurus taibaii z muzeum w Pekinie, prezentowany w Miami Museum of Science."
+      }
+    }
+  ],
+  "uncertain": [
+    {
+      "field": "size.massKg",
+      "note": {
+        "en": "No mass estimate found in a source we could verify.",
+        "pl": "Nie znaleziono oszacowania masy w źródle, które moglibyśmy zweryfikować."
+      }
+    },
+    {
+      "field": "timeRange",
+      "note": {
+        "en": "Only a stage-level age (Bajocian–Oxfordian, PBDB) was found; no radiometric date for the Huayangosaurus beds was verified.",
+        "pl": "Znaleziono tylko wiek na poziomie pięter (bajos–oksford, PBDB); nie zweryfikowano żadnej datacji radiometrycznej warstw z Huayangosaurus."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "pbdb-taxon",
+      "title": "Huayangosaurus (taxon 38810)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/single.json?name=Huayangosaurus&show=attr,parent,class",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-occs",
+      "title": "Occurrences of Huayangosaurus (stratigraphy and location)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Huayangosaurus&show=strat,loc",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "nhm",
+      "title": "Huayangosaurus | Dino Directory",
+      "publisher": "Natural History Museum, London",
+      "url": "https://www.nhm.ac.uk/discover/dino-directory/huayangosaurus.html",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "maidment-2006",
+      "title": "Re-description of the postcranial skeleton of the Middle Jurassic stegosaur Huayangosaurus taibaii",
+      "authors": "Maidment, S. C. R.; Wei, G.; Norman, D. B.",
+      "year": 2006,
+      "publisher": "Journal of Vertebrate Paleontology",
+      "doi": "10.1671/0272-4634(2006)26[944:ROTPSO]2.0.CO;2",
+      "url": "https://bioone.org/journals/journal-of-vertebrate-paleontology/volume-26/issue-4/0272-4634(2006)26[944:ROTPSO]2.0.CO;2/RE-DESCRIPTION-OF-THE-POSTCRANIAL-SKELETON-OF-THE-MIDDLE-JURASSIC-STEGOSAUR/10.1671/0272-4634(2006)26[944:ROTPSO]2.0.CO;2.full",
+      "accessed": "2026-11-22"
+    }
+  ],
+  "lastReviewed": "2026-11-22"
+}
