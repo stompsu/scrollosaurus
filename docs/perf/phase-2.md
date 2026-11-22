@@ -31,14 +31,14 @@ Each cell is the range across the last three `pnpm perf` runs (min–max, or one
 
 <!-- perf:desktop:start -->
 
-Desktop Chrome (1280×720). Apple M1, 8 GB RAM, Chromium 159.0.8154.6, headless. Range over the last 3 run(s), latest 2026-11-21.
+Desktop Chrome (1280×720). Apple M1, 8 GB RAM, Chromium 159.0.8154.6, headless. Range over the last 3 run(s), latest 2026-11-22.
 
 | Scenario                |  Frames | Median frame (ms) | p95 frame (ms) | Frames > 16.7 ms | Frames > 25 ms | `apply()` p95 (ms) | React commits |
 | ----------------------- | ------: | ----------------: | -------------: | ---------------: | -------------: | -----------------: | ------------: |
-| Wheel pan               | 240–241 |              16.7 |           16.7 |      62.1%–64.3% |           0.0% |                0.1 |             2 |
-| Ctrl + wheel zoom       | 240–242 |              16.7 |      16.7–16.8 |      60.7%–63.6% |           0.0% |            0.2–0.3 |         18–23 |
-| Mouse drag pan          | 238–240 |              16.7 |           16.7 |      62.6%–63.3% |           0.0% |                0.1 |             0 |
-| Keyboard arrows and +/− | 237–239 |              16.7 |      16.7–16.8 |      60.3%–63.2% |      0.0%–0.4% |                0.2 |         87–89 |
+| Wheel pan               |     241 |              16.7 |      16.7–16.8 |      59.8%–62.7% |           0.0% |            0.1–0.2 |             2 |
+| Ctrl + wheel zoom       | 239–241 |              16.7 |      16.7–16.8 |      61.8%–62.7% |      0.0%–1.3% |            0.3–0.5 |         17–18 |
+| Mouse drag pan          | 238–239 |              16.7 |           16.7 |      61.5%–62.6% |           0.0% |                0.1 |             0 |
+| Keyboard arrows and +/− | 238–239 |              16.7 |           16.7 |      63.2%–63.9% |      0.0%–0.4% |            0.2–0.3 |         74–99 |
 
 <!-- perf:desktop:end -->
 
@@ -46,13 +46,13 @@ Desktop Chrome (1280×720). Apple M1, 8 GB RAM, Chromium 159.0.8154.6, headless.
 
 <!-- perf:mobile:start -->
 
-Pixel 7 emulation (412×839, touch), CPU throttled 4× via CDP. Apple M1, 8 GB RAM, Chromium 159.0.8154.6, headless. Range over the last 3 run(s), latest 2026-11-21.
+Pixel 7 emulation (412×839, touch), CPU throttled 4× via CDP. Apple M1, 8 GB RAM, Chromium 159.0.8154.6, headless. Range over the last 3 run(s), latest 2026-11-22.
 
 | Scenario                 |  Frames | Median frame (ms) | p95 frame (ms) | Frames > 16.7 ms | Frames > 25 ms | `apply()` p95 (ms) | React commits |
 | ------------------------ | ------: | ----------------: | -------------: | ---------------: | -------------: | -----------------: | ------------: |
-| Touch pan (one finger)   | 241–243 |              16.7 |      16.7–16.8 |      60.1%–63.9% |           0.0% |            0.1–0.5 |             0 |
-| Pinch zoom (two fingers) | 240–244 |              16.7 |      16.7–16.8 |      60.7%–63.5% |      0.0%–0.8% |            0.9–1.0 |          9–10 |
-| Keyboard arrows and +/−  | 214–222 |              16.7 |           33.3 |      64.4%–65.9% |     6.8%–10.7% |            0.8–0.9 |         72–74 |
+| Touch pan (one finger)   | 244–247 |              16.7 |           16.7 |      61.9%–62.3% |           0.0% |            0.1–0.6 |             0 |
+| Pinch zoom (two fingers) |     241 |              16.7 |           16.7 |      61.4%–62.2% |      0.0%–0.4% |            0.6–0.8 |          0–10 |
+| Keyboard arrows and +/−  | 183–223 |              16.7 |      33.2–50.0 |      64.6%–71.0% |     5.8%–23.0% |            0.8–0.9 |         54–75 |
 
 <!-- perf:mobile:end -->
 
