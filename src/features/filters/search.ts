@@ -43,6 +43,8 @@ export function createSpeciesSearch(items: readonly SpeciesIndexEntry[]): Specie
     },
     searchOptions: {
       boost: { genus: 6, scientificName: 2, genusEndings: 0.25 },
+      // Between near-equal matches ("stego"), the well-known species comes first.
+      boostDocument: (id) => (bySlug.get(String(id))?.famous ? 1.3 : 1),
       prefix: true,
       fuzzy: 0.2,
       combineWith: 'AND',
