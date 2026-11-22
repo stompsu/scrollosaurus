@@ -45,11 +45,11 @@
       }
     },
     "massKg": {
-      "value": [3400, 3400],
-      "sourceIds": ["nhm-edmontosaurus"],
+      "value": [3400, 7600],
+      "sourceIds": ["nhm-edmontosaurus", "benson-2014"],
       "note": {
-        "en": "Single museum estimate (NHM) for the genus; mass estimates vary widely between methods.",
-        "pl": "Jedyne oszacowanie muzealne (NHM) dla rodzaju; szacunki masy bardzo się różnią w zależności od metody."
+        "en": "7,600 kg is the peer-reviewed estimate of Benson et al. (2014) for E. regalis, scaled from the thickness (circumference) of the upper arm and thigh bones; its standard error is 0.135 log10(kg). 3,400 kg is the NHM Dino Directory figure for the whole genus, whose basis the page does not give.",
+        "pl": "7600 kg to recenzowane oszacowanie Bensona i in. (2014) dla E. regalis, wyliczone na podstawie grubości (obwodu) kości ramienia i uda; jego błąd standardowy wynosi 0,135 log10(kg). 3400 kg to wartość z Dino Directory NHM dla całego rodzaju, której podstawy strona nie podaje."
       }
     }
   },
@@ -116,6 +116,13 @@
         "en": "The range is the dated assemblage zone in the Horseshoe Canyon Formation; E. regalis from other formations (Wapiti, St. Mary River) is not separately dated here.",
         "pl": "Zakres to datowana strefa zespołu w formacji Horseshoe Canyon; E. regalis z innych formacji (Wapiti, St. Mary River) nie zostały tu osobno datowane."
       }
+    },
+    {
+      "field": "size.massKg",
+      "note": {
+        "en": "The two estimates differ by a factor of about 2.2: 7,600 kg for E. regalis from limb-bone scaling (Benson et al. 2014) and 3,400 kg for the genus from the NHM, which does not state its method.",
+        "pl": "Oba oszacowania różnią się mniej więcej 2,2-krotnie: 7600 kg dla E. regalis na podstawie skalowania kości kończyn (Benson i in. 2014) oraz 3400 kg dla całego rodzaju według NHM, które nie podaje metody."
+      }
     }
   ],
   "sources": [
@@ -169,7 +176,17 @@
       "doi": "10.1016/j.cub.2013.11.008",
       "url": "https://doi.org/10.1016/j.cub.2013.11.008",
       "accessed": "2026-11-21"
+    },
+    {
+      "id": "benson-2014",
+      "title": "Rates of dinosaur body mass evolution indicate 170 million years of sustained ecological innovation on the avian stem lineage",
+      "authors": "Benson R.B.J., Campione N.E., Carrano M.T., Mannion P.D., Sullivan C., Upchurch P., Evans D.C.",
+      "year": 2014,
+      "publisher": "PLOS Biology 12(5): e1001853",
+      "doi": "10.1371/journal.pbio.1001853",
+      "url": "https://doi.org/10.1371/journal.pbio.1001853",
+      "accessed": "2026-11-22"
     }
   ],
-  "lastReviewed": "2026-11-21"
+  "lastReviewed": "2026-11-22"
 }

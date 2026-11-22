@@ -47,6 +47,14 @@
         "en": "Single museum figure (NHM Dino Directory); method not stated.",
         "pl": "Jedyna wartość muzealna (NHM Dino Directory); metody nie podano."
       }
+    },
+    "massKg": {
+      "value": [16, 16],
+      "sourceIds": ["benson-2014"],
+      "note": {
+        "en": "Single peer-reviewed estimate (Benson et al. 2014), scaled from the thickness (circumference) of the upper arm and thigh bones; its standard error is 0.135 log10(kg).",
+        "pl": "Jedyne recenzowane oszacowanie (Benson i in. 2014), wyliczone na podstawie grubości (obwodu) kości ramienia i uda; jego błąd standardowy wynosi 0,135 log10(kg)."
+      }
     }
   },
   "locations": [
@@ -93,16 +101,17 @@
       }
     }
   ],
-  "uncertain": [
-    {
-      "field": "size.massKg",
-      "note": {
-        "en": "No mass estimate found in a source we could verify.",
-        "pl": "Nie znaleziono oszacowania masy w źródle, które moglibyśmy zweryfikować."
-      }
-    }
-  ],
   "sources": [
+    {
+      "id": "benson-2014",
+      "title": "Rates of dinosaur body mass evolution indicate 170 million years of sustained ecological innovation on the avian stem lineage",
+      "authors": "Benson R.B.J., Campione N.E., Carrano M.T., Mannion P.D., Sullivan C., Upchurch P., Evans D.C.",
+      "year": 2014,
+      "publisher": "PLOS Biology 12(5): e1001853",
+      "doi": "10.1371/journal.pbio.1001853",
+      "url": "https://doi.org/10.1371/journal.pbio.1001853",
+      "accessed": "2026-11-22"
+    },
     {
       "id": "nhm",
       "title": "Stegoceras | Dino Directory",

@@ -40,11 +40,11 @@
       }
     },
     "massKg": {
-      "value": [10000, 10000],
-      "sourceIds": ["nhm-triceratops"],
+      "value": [10000, 14000],
+      "sourceIds": ["nhm-triceratops", "benson-2014"],
       "note": {
-        "en": "Single museum estimate (NHM); mass estimates vary widely between methods.",
-        "pl": "Jedyne oszacowanie muzealne (NHM); szacunki masy bardzo się różnią w zależności od metody."
+        "en": "14,000 kg is the peer-reviewed estimate of Benson et al. (2014), scaled from the thickness (circumference) of the upper arm and thigh bones; its standard error is 0.135 log10(kg). 10,000 kg is the NHM Dino Directory figure, whose basis the page does not give.",
+        "pl": "14 000 kg to recenzowane oszacowanie Bensona i in. (2014), wyliczone na podstawie grubości (obwodu) kości ramienia i uda; jego błąd standardowy wynosi 0,135 log10(kg). 10 000 kg to wartość z Dino Directory NHM, której podstawy strona nie podaje."
       }
     }
   },
@@ -110,7 +110,17 @@
       "publisher": "The Paleobiology Database",
       "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Triceratops+horridus&idreso=species&show=strat%2Cloc",
       "accessed": "2026-11-20"
+    },
+    {
+      "id": "benson-2014",
+      "title": "Rates of dinosaur body mass evolution indicate 170 million years of sustained ecological innovation on the avian stem lineage",
+      "authors": "Benson R.B.J., Campione N.E., Carrano M.T., Mannion P.D., Sullivan C., Upchurch P., Evans D.C.",
+      "year": 2014,
+      "publisher": "PLOS Biology 12(5): e1001853",
+      "doi": "10.1371/journal.pbio.1001853",
+      "url": "https://doi.org/10.1371/journal.pbio.1001853",
+      "accessed": "2026-11-22"
     }
   ],
-  "lastReviewed": "2026-11-20"
+  "lastReviewed": "2026-11-22"
 }

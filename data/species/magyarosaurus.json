@@ -45,11 +45,11 @@
       }
     },
     "massKg": {
-      "value": [900, 900],
-      "sourceIds": ["stein-2010"],
+      "value": [750, 900],
+      "sourceIds": ["benson-2014", "stein-2010"],
       "note": {
-        "en": "Adult mass estimated by Stein et al. (2010) from humerus and femur circumference.",
-        "pl": "Masa dorosłego osobnika oszacowana przez Steina i in. (2010) na podstawie obwodu kości ramiennej i udowej."
+        "en": "Both figures come from the circumference of the upper arm and thigh bones: 900 kg for an adult (Stein et al. 2010) and 750 kg (Benson et al. 2014, standard error 0.135 log10(kg)). The papers do not necessarily use the same specimens.",
+        "pl": "Obie wartości oparto na obwodzie kości ramiennej i udowej: 900 kg dla dorosłego osobnika (Stein i in. 2010) oraz 750 kg (Benson i in. 2014, błąd standardowy 0,135 log10(kg)). Prace te nie muszą opierać się na tych samych okazach."
       }
     }
   },
@@ -78,10 +78,10 @@
   },
   "summary": {
     "text": {
-      "en": "Magyarosaurus was a titanosaur, a plant-eating sauropod, but a small one: adults weighed about 900 kilograms, while other titanosaurs were around ten times heavier. It lived on Hațeg Island, in what is now Romania, near the end of the Cretaceous. Its bones show that even small specimens were fully grown, so it was a dwarf, probably as an adaptation to island life.",
-      "pl": "Magyarosaurus był tytanozaurem – roślinożernym zauropodem – ale niewielkim: dorosłe osobniki ważyły około 900 kilogramów, podczas gdy inne tytanozaury były mniej więcej dziesięć razy cięższe. Żył na wyspie Hațeg, na terenie dzisiejszej Rumunii, pod koniec kredy. Jego kości pokazują, że nawet małe okazy były w pełni dorosłe, więc był to karzeł – prawdopodobnie w wyniku przystosowania do życia na wyspie."
+      "en": "Magyarosaurus was a titanosaur, a plant-eating sauropod, but a small one: adults weighed about 750 to 900 kilograms, while other titanosaurs were around ten times heavier. It lived on Hațeg Island, in what is now Romania, near the end of the Cretaceous. Its bones show that even small specimens were fully grown, so it was a dwarf, probably as an adaptation to island life.",
+      "pl": "Magyarosaurus był tytanozaurem – roślinożernym zauropodem – ale niewielkim: dorosłe osobniki ważyły około 750–900 kilogramów, podczas gdy inne tytanozaury były mniej więcej dziesięć razy cięższe. Żył na wyspie Hațeg, na terenie dzisiejszej Rumunii, pod koniec kredy. Jego kości pokazują, że nawet małe okazy były w pełni dorosłe, więc był to karzeł – prawdopodobnie w wyniku przystosowania do życia na wyspie."
     },
-    "sourceIds": ["stein-2010", "diez-diaz-2025", "nhm"]
+    "sourceIds": ["stein-2010", "benson-2014", "diez-diaz-2025", "nhm"]
   },
   "funFacts": [
     {
@@ -119,6 +119,16 @@
       "publisher": "Proceedings of the National Academy of Sciences 107(20): 9258-9263",
       "doi": "10.1073/pnas.1000781107",
       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2889090/",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "benson-2014",
+      "title": "Rates of dinosaur body mass evolution indicate 170 million years of sustained ecological innovation on the avian stem lineage",
+      "authors": "Benson R.B.J., Campione N.E., Carrano M.T., Mannion P.D., Sullivan C., Upchurch P., Evans D.C.",
+      "year": 2014,
+      "publisher": "PLOS Biology 12(5): e1001853",
+      "doi": "10.1371/journal.pbio.1001853",
+      "url": "https://doi.org/10.1371/journal.pbio.1001853",
       "accessed": "2026-11-22"
     },
     {

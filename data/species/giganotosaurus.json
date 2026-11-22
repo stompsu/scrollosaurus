@@ -37,11 +37,11 @@
       }
     },
     "massKg": {
-      "value": [13800, 13800],
-      "sourceIds": ["nhm-giganotosaurus"],
+      "value": [6100, 13800],
+      "sourceIds": ["benson-2014", "nhm-giganotosaurus"],
       "note": {
-        "en": "Single museum figure (NHM Dino Directory); method not stated. Mass estimates for large theropods vary widely between methods.",
-        "pl": "Jedyna wartość muzealna (NHM Dino Directory); metody nie podano. Szacunki masy dużych teropodów bardzo się różnią w zależności od metody."
+        "en": "6,100 kg is the peer-reviewed estimate of Benson et al. (2014), scaled from the thickness (circumference) of the upper arm and thigh bones; its standard error is 0.135 log10(kg). 13,800 kg is the NHM Dino Directory figure, whose basis the page does not give.",
+        "pl": "6100 kg to recenzowane oszacowanie Bensona i in. (2014), wyliczone na podstawie grubości (obwodu) kości ramienia i uda; jego błąd standardowy wynosi 0,135 log10(kg). 13 800 kg to wartość z Dino Directory NHM, której podstawy strona nie podaje."
       }
     }
   },
@@ -96,6 +96,13 @@
         "en": "Sources disagree on the age of the Candeleros Formation fossils: NHM gives 100-95 Ma (Cenomanian), PBDB gives Albian ages (113.2-106.3 Ma). The NHM range is used until a radiometric date for the Giganotosaurus level is verified.",
         "pl": "Źródła nie zgadzają się co do wieku skamieniałości z formacji Candeleros: NHM podaje 100–95 mln lat temu (cenoman), PBDB – wiek albski (113,2–106,3 mln lat temu). Do czasu zweryfikowania datowania radiometrycznego poziomu z Giganotosaurus używany jest zakres NHM."
       }
+    },
+    {
+      "field": "size.massKg",
+      "note": {
+        "en": "The two estimates differ by more than a factor of two: 6,100 kg from limb-bone scaling (Benson et al. 2014) and 13,800 kg from the NHM, which does not state its method.",
+        "pl": "Oba oszacowania różnią się ponad dwukrotnie: 6100 kg na podstawie skalowania kości kończyn (Benson i in. 2014) oraz 13 800 kg według NHM, które nie podaje metody."
+      }
     }
   ],
   "sources": [
@@ -139,6 +146,16 @@
       "publisher": "The Paleobiology Database",
       "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Giganotosaurus&show=strat,loc",
       "accessed": "2026-11-21"
+    },
+    {
+      "id": "benson-2014",
+      "title": "Rates of dinosaur body mass evolution indicate 170 million years of sustained ecological innovation on the avian stem lineage",
+      "authors": "Benson R.B.J., Campione N.E., Carrano M.T., Mannion P.D., Sullivan C., Upchurch P., Evans D.C.",
+      "year": 2014,
+      "publisher": "PLOS Biology 12(5): e1001853",
+      "doi": "10.1371/journal.pbio.1001853",
+      "url": "https://doi.org/10.1371/journal.pbio.1001853",
+      "accessed": "2026-11-22"
     }
   ],
   "lastReviewed": "2026-11-22"

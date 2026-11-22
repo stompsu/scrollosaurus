@@ -41,10 +41,10 @@
     },
     "massKg": {
       "value": [6000, 9500],
-      "sourceIds": ["hutchinson-2011", "nhm-tyrannosaurus"],
+      "sourceIds": ["hutchinson-2011", "nhm-tyrannosaurus", "benson-2014"],
       "note": {
-        "en": "Hutchinson et al. (2011): adults around 6,000–8,000 kg, the largest specimen ('Sue') perhaps about 9,500 kg; their maximal models give much higher values they consider implausible. NHM gives 7,000 kg.",
-        "pl": "Hutchinson i in. (2011): dorosłe osobniki około 6000–8000 kg, największy okaz („Sue”) być może około 9500 kg; ich modele maksymalne dają znacznie wyższe wartości, które autorzy uznają za nieprawdopodobne. NHM podaje 7000 kg."
+        "en": "Hutchinson et al. (2011): adults around 6,000–8,000 kg, the largest specimen ('Sue') perhaps about 9,500 kg; their maximal models give much higher values they consider implausible. NHM gives 7,000 kg. Benson et al. (2014) estimate 7,700 kg from the circumference of the upper arm and thigh bones, within this range.",
+        "pl": "Hutchinson i in. (2011): dorosłe osobniki około 6000–8000 kg, największy okaz („Sue”) być może około 9500 kg; ich modele maksymalne dają znacznie wyższe wartości, które autorzy uznają za nieprawdopodobne. NHM podaje 7000 kg. Benson i in. (2014) szacują masę na 7700 kg na podstawie obwodu kości ramiennej i udowej, co mieści się w tym zakresie."
       }
     }
   },
@@ -122,7 +122,17 @@
       "doi": "10.1371/journal.pone.0026037",
       "url": "https://doi.org/10.1371/journal.pone.0026037",
       "accessed": "2026-11-20"
+    },
+    {
+      "id": "benson-2014",
+      "title": "Rates of dinosaur body mass evolution indicate 170 million years of sustained ecological innovation on the avian stem lineage",
+      "authors": "Benson R.B.J., Campione N.E., Carrano M.T., Mannion P.D., Sullivan C., Upchurch P., Evans D.C.",
+      "year": 2014,
+      "publisher": "PLOS Biology 12(5): e1001853",
+      "doi": "10.1371/journal.pbio.1001853",
+      "url": "https://doi.org/10.1371/journal.pbio.1001853",
+      "accessed": "2026-11-22"
     }
   ],
-  "lastReviewed": "2026-11-20"
+  "lastReviewed": "2026-11-22"
 }

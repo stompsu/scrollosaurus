@@ -40,11 +40,11 @@
       }
     },
     "massKg": {
-      "value": [60000, 88000],
-      "sourceIds": ["mazzetta-2004", "sellers-2013", "carballido-2017"],
+      "value": [60000, 90000],
+      "sourceIds": ["mazzetta-2004", "sellers-2013", "carballido-2017", "benson-2014"],
       "note": {
-        "en": "Limb-bone regressions give 60-88 t, with 73 t preferred (Mazzetta et al. 2004); a volumetric model of the mounted reconstruction gives about 83 t (Sellers et al. 2013); Carballido et al. 2017 call estimates above 60 t rough. Earlier guesses of 90-100 t are reported by Mazzetta et al. 2004.",
-        "pl": "Regresje oparte na kościach kończyn dają 60–88 t, z preferowaną wartością 73 t (Mazzetta i in. 2004); model objętościowy zmontowanej rekonstrukcji daje około 83 t (Sellers i in. 2013); Carballido i in. 2017 uznają oszacowania powyżej 60 t za zgrubne. Wcześniejsze przypuszczenia rzędu 90–100 t przytaczają Mazzetta i in. 2004."
+        "en": "Limb-bone regressions give 60-88 t, with 73 t preferred (Mazzetta et al. 2004); a volumetric model of the mounted reconstruction gives about 83 t (Sellers et al. 2013); Carballido et al. 2017 call estimates above 60 t rough. Earlier guesses of 90-100 t are reported by Mazzetta et al. 2004. Benson et al. (2014) estimate 90 t from limb-bone circumference; since only a femur is known, they first estimated the upper arm bone from it, giving a 95% prediction interval of 67.4-124 t.",
+        "pl": "Regresje oparte na kościach kończyn dają 60–88 t, z preferowaną wartością 73 t (Mazzetta i in. 2004); model objętościowy zmontowanej rekonstrukcji daje około 83 t (Sellers i in. 2013); Carballido i in. 2017 uznają oszacowania powyżej 60 t za zgrubne. Wcześniejsze przypuszczenia rzędu 90–100 t przytaczają Mazzetta i in. 2004. Benson i in. (2014) szacują masę na 90 t na podstawie obwodu kości kończyn; ponieważ znana jest tylko kość udowa, najpierw oszacowali na jej podstawie obwód kości ramiennej, co daje 95-procentowy przedział predykcji 67,4–124 t."
       }
     }
   },
@@ -63,10 +63,10 @@
   },
   "summary": {
     "text": {
-      "en": "Argentinosaurus was a gigantic long-necked plant eater from Argentina, one of the largest land animals ever found. It lived in the Late Cretaceous, roughly 100 to 90 million years ago. It is known only from fragmentary bones, including vertebrae and a leg bone, so its size is hard to pin down: estimates range from about 60 to 88 tonnes and around 35 to 40 metres long.",
-      "pl": "Argentinosaurus był gigantycznym długoszyim roślinożercą z Argentyny, jednym z największych zwierząt lądowych, jakie kiedykolwiek znaleziono. Żył w późnej kredzie, mniej więcej 100–90 milionów lat temu. Znany jest tylko z fragmentarycznych kości, w tym kręgów i kości nogi, więc trudno ustalić jego rozmiary: szacunki wahają się od około 60 do 88 ton i od około 35 do 40 metrów długości."
+      "en": "Argentinosaurus was a gigantic long-necked plant eater from Argentina, one of the largest land animals ever found. It lived in the Late Cretaceous, roughly 100 to 90 million years ago. It is known only from fragmentary bones, including vertebrae and a leg bone, so its size is hard to pin down: estimates range from about 60 to 90 tonnes and around 35 to 40 metres long.",
+      "pl": "Argentinosaurus był gigantycznym długoszyim roślinożercą z Argentyny, jednym z największych zwierząt lądowych, jakie kiedykolwiek znaleziono. Żył w późnej kredzie, mniej więcej 100–90 milionów lat temu. Znany jest tylko z fragmentarycznych kości, w tym kręgów i kości nogi, więc trudno ustalić jego rozmiary: szacunki wahają się od około 60 do 90 ton i od około 35 do 40 metrów długości."
     },
-    "sourceIds": ["nhm", "garrido-2010", "sellers-2013", "mazzetta-2004"]
+    "sourceIds": ["nhm", "garrido-2010", "sellers-2013", "mazzetta-2004", "benson-2014"]
   },
   "funFacts": [
     {
@@ -99,8 +99,8 @@
     {
       "field": "size.massKg",
       "note": {
-        "en": "Estimates vary widely with method, from about 60 to 88 t (Mazzetta et al. 2004; Sellers et al. 2013).",
-        "pl": "Oszacowania bardzo się różnią w zależności od metody: od około 60 do 88 t (Mazzetta i in. 2004; Sellers i in. 2013)."
+        "en": "Estimates vary widely with method, from about 60 to 90 t (Mazzetta et al. 2004; Sellers et al. 2013; Benson et al. 2014). The 90 t figure rests on a single femur, with a 95% prediction interval of 67.4-124 t.",
+        "pl": "Oszacowania bardzo się różnią w zależności od metody: od około 60 do 90 t (Mazzetta i in. 2004; Sellers i in. 2013; Benson i in. 2014). Wartość 90 t opiera się na jednej kości udowej, a jej 95-procentowy przedział predykcji wynosi 67,4–124 t."
       }
     },
     {
@@ -143,6 +143,16 @@
       "accessed": "2026-11-20"
     },
     {
+      "id": "benson-2014",
+      "title": "Rates of dinosaur body mass evolution indicate 170 million years of sustained ecological innovation on the avian stem lineage",
+      "authors": "Benson R.B.J., Campione N.E., Carrano M.T., Mannion P.D., Sullivan C., Upchurch P., Evans D.C.",
+      "year": 2014,
+      "publisher": "PLOS Biology 12(5): e1001853",
+      "doi": "10.1371/journal.pbio.1001853",
+      "url": "https://doi.org/10.1371/journal.pbio.1001853",
+      "accessed": "2026-11-22"
+    },
+    {
       "id": "garrido-2010",
       "title": "Estratigrafía del Grupo Neuquén, Cretácico Superior de la Cuenca Neuquina (Argentina): nueva propuesta de ordenamiento litoestratigráfico",
       "authors": "Garrido, A. C.",
@@ -173,5 +183,5 @@
       "accessed": "2026-11-20"
     }
   ],
-  "lastReviewed": "2026-11-20"
+  "lastReviewed": "2026-11-22"
 }
