@@ -7,10 +7,12 @@ on any page. The table below is rewritten by each local run.
 
 <!-- lighthouse:start -->
 
-| Page                    | Performance | Accessibility | Best practices | SEO | LCP   | TBT   | CLS |
-| ----------------------- | ----------- | ------------- | -------------- | --- | ----- | ----- | --- |
-| /                       | 96          | 100           | 100            | 100 | 2.8 s | 70 ms | 0   |
-| /species/tyrannosaurus/ | 95          | 100           | 100            | 100 | 2.9 s | 70 ms | 0   |
-| /credits/               | 100         | 100           | 100            | 100 | 0.9 s | 40 ms | 0   |
+| Page                       | Performance | Accessibility | Best practices | SEO | LCP   | TBT   | CLS |
+| -------------------------- | ----------- | ------------- | -------------- | --- | ----- | ----- | --- |
+| /                          | 95          | 100           | 100            | 100 | 2.8 s | 90 ms | 0   |
+| /species/tyrannosaurus/    | 95          | 100           | 100            | 100 | 2.9 s | 80 ms | 0   |
+| /credits/                  | 100         | 100           | 100            | 100 | 0.9 s | 40 ms | 0   |
+| /pl/                       | 96          | 100           | 100            | 100 | 2.8 s | 30 ms | 0   |
+| /pl/species/tyrannosaurus/ | 92          | 100           | 100            | 100 | 3.3 s | 70 ms | 0   |
 
 <!-- lighthouse:end -->

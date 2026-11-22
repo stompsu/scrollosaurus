@@ -10,11 +10,13 @@ import { readFile, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
 import { chromium } from '@playwright/test';
 import lighthouse from 'lighthouse';
+import { format, resolveConfig } from 'prettier';
 
 const PORT = 4176;
 const DEBUG_PORT = 9333;
 const BASE = `http://localhost:${String(PORT)}/scrollosaurus/`;
-const PAGES = ['', 'species/tyrannosaurus/', 'credits/'];
+/** English pages, then Polish ones (which also load the Polish strings chunk). */
+const PAGES = ['', 'species/tyrannosaurus/', 'credits/', 'pl/', 'pl/species/tyrannosaurus/'];
 const CATEGORIES = ['performance', 'accessibility', 'best-practices', 'seo'] as const;
 const TARGET = 0.9;
 const DOC = join(import.meta.dirname, '..', 'docs', 'perf', 'lighthouse.md');
@@ -72,7 +74,9 @@ const table = [
 const doc = await readFile(DOC, 'utf8').catch(() => '');
 const marked = /<!-- lighthouse:start -->[\s\S]*<!-- lighthouse:end -->/;
 const block = `<!-- lighthouse:start -->\n${table}\n<!-- lighthouse:end -->`;
-await writeFile(DOC, marked.test(doc) ? doc.replace(marked, block) : `${doc}\n${block}\n`);
+const updated = marked.test(doc) ? doc.replace(marked, block) : `${doc}\n${block}\n`;
+// Formatted like the rest of docs/, so `pnpm lint` stays green after a run.
+await writeFile(DOC, await format(updated, { ...(await resolveConfig(DOC)), filepath: DOC }));
 
 if (failed) {
   console.error(`\n✗ Performance below ${String(TARGET * 100)} on at least one page`);
