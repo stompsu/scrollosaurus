@@ -73,6 +73,41 @@ test('the switch keeps the page and its view, and the choice is remembered', asy
   await expect(page.locator('html')).toHaveAttribute('lang', 'en');
 });
 
+test('Back from the Polish page reached by the switch returns to the English home page', async ({
+  page,
+}) => {
+  await page.goto('./');
+  await page.getByTestId('language-switch').click();
+  await expect(page.locator('html')).toHaveAttribute('lang', 'pl');
+  await page.goBack();
+  // The stored Polish choice applies to a fresh visit only, not to Back.
+  await expect(page.locator('html')).toHaveAttribute('lang', 'en');
+  await expect(page.getByRole('heading', { level: 1 })).toHaveText(/^The Mesozoic, /);
+  await expect(page).not.toHaveURL(/\/pl/);
+});
+
+test('if the Polish strings fail to load, the page says so and offers a retry', async ({
+  page,
+}) => {
+  let requests = 0;
+  await page.route('**/assets/i18n-pl-*.js', (route) => {
+    requests += 1;
+    return route.abort();
+  });
+  await page.goto('pl/about/');
+  await expect(page.getByRole('heading', { level: 1 })).toHaveText('This page couldn’t load');
+  await expect(page.getByRole('button', { name: 'Try again' })).toBeVisible();
+  await expect(page.getByRole('link', { name: 'Open the English page' })).toHaveAttribute(
+    'href',
+    /\/about\/?$/,
+  );
+  // One failed request (the preload, which the import then reuses or repeats once), not a loop.
+  await page.waitForTimeout(500);
+  expect(requests).toBeLessThanOrEqual(3);
+  // The failed chunk is reported in the console; that is expected here.
+  consoleErrors = [];
+});
+
 test('links inside a Polish page stay in Polish', async ({ page }) => {
   await page.goto('pl/species/tyrannosaurus');
   await page.getByTestId('species-drawer').getByRole('link', { name: 'Triceratops' }).click();

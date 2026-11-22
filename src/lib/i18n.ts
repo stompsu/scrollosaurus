@@ -36,7 +36,9 @@ export function isLangLoaded(lang: Lang): boolean {
 
 /**
  * Loads `lang`'s strings (once; later calls return the same promise). English is always loaded.
- * A failed load is forgotten, so the next call retries.
+ * A failed load stays failed for this page load: the layout's `use()` must see the same rejected
+ * promise to reach its error page (a fresh promise per render would refetch forever). The error
+ * page's retry reloads the page.
  */
 export function loadLang(lang: Lang): Promise<i18n> {
   const ready = instances.get(lang);
@@ -50,9 +52,8 @@ export function loadLang(lang: Lang): Promise<i18n> {
       pending.delete(lang);
       return inst;
     });
-    promise.catch(() => {
-      pending.delete(lang);
-    });
+    // Handled by whoever awaits it (the layout's error page); don't report it as unhandled here.
+    promise.catch(() => undefined);
     pending.set(lang, promise);
   }
   return promise;
