@@ -42,6 +42,11 @@ describe('credit parsing', () => {
 
   it('drops contact details from author names', () => {
     expect(cleanAuthor('Emily Willoughby (emily.a.willoughby@gmail.com)')).toBe('Emily Willoughby');
+    expect(cleanAuthor('Photographer: Benjamin Healley Source: Museums Victoria')).toBe(
+      'Benjamin Healley, Museums Victoria',
+    );
+    // "Source:" elsewhere in a name is left alone.
+    expect(cleanAuthor('Open Source: Fossil Project')).toBe('Open Source: Fossil Project');
     expect(cleanAuthor('Petr Menshikov (https://twitter.com/x; https://vk.com/y)')).toBe(
       'Petr Menshikov',
     );

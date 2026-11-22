@@ -1,0 +1,159 @@
+{
+  "slug": "liliensternus",
+  "scientificName": "Liliensternus liliensterni",
+  "genus": "Liliensternus",
+  "nameMeaning": {
+    "text": {
+      "en": "For Lilienstern",
+      "pl": "na cześć Liliensterna"
+    },
+    "sourceIds": ["nhm"]
+  },
+  "group": "coelophysoidea",
+  "groupSourceIds": ["martill-2016", "ezcurra-cuny-2007", "pbdb-taxon", "nhm"],
+  "isDinosaur": true,
+  "taxonomy": {
+    "status": "valid",
+    "note": {
+      "en": "A second species from Normandy, France, 'Liliensternus' airelensis, was moved to its own genus, Lophostropheus, by Ezcurra & Cuny (2007). The NHM Dino Directory still lists France for Liliensternus.",
+      "pl": "Drugi gatunek, z Normandii we Francji, „Liliensternus” airelensis, został przeniesiony do osobnego rodzaju Lophostropheus przez Ezcurrę i Cuny’ego (2007). Dino Directory muzeum NHM nadal wymienia Francję jako miejsce występowania Liliensternus."
+    },
+    "sourceIds": ["ezcurra-cuny-2007", "nhm"]
+  },
+  "diet": {
+    "value": "carnivore",
+    "confidence": "established",
+    "sourceIds": ["nhm"]
+  },
+  "timeRange": {
+    "startMa": 227.3,
+    "endMa": 205.7,
+    "sourceIds": ["rauhut-2003", "pbdb-occs", "nhm"],
+    "note": {
+      "en": "Stage-based: Rauhut (2003) gives a Norian age for the type material from the Knollenmergel of Thuringia, and PBDB dates the L. liliensterni record and most genus records to the Norian. The Ma values are the ICS v2024/12 Norian boundaries. PBDB also lists one Rhaetian record identified only to genus, not used here. The NHM Dino Directory gives 205–202 Ma (Rhaetian), which disagrees with these sources and is not used.",
+      "pl": "Na podstawie pięter: Rauhut (2003) podaje noryk jako wiek materiału typowego z Knollenmergel w Turyngii, a PBDB datuje rekord L. liliensterni i większość rekordów rodzaju na noryk. Wartości w mln lat to granice noryku według ICS v2024/12. PBDB wymienia też jeden rekord z retyku oznaczony tylko do rodzaju, którego tu nie uwzględniono. Dino Directory muzeum NHM podaje 205–202 mln lat temu (retyk), co nie zgadza się z tymi źródłami, więc tej wartości nie użyto."
+    }
+  },
+  "periods": ["triassic"],
+  "size": {
+    "lengthM": {
+      "value": [5, 5],
+      "sourceIds": ["nhm"],
+      "note": {
+        "en": "Single value from the NHM Dino Directory.",
+        "pl": "Pojedyncza wartość z Dino Directory muzeum NHM."
+      }
+    }
+  },
+  "locations": [
+    {
+      "continent": "europe",
+      "countryCode": "DE",
+      "formation": "Trossingen",
+      "sourceIds": ["pbdb-occs", "rauhut-2003"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "Huene",
+    "year": 1934,
+    "note": {
+      "en": "Huene (1934) described the species as Halticosaurus liliensterni. According to Rauhut (2003), Welles (1984) showed it could not be referred to Halticosaurus and placed it in the new genus Liliensternus.",
+      "pl": "Huene (1934) opisał ten gatunek jako Halticosaurus liliensterni. Według Rauhuta (2003) Welles (1984) wykazał, że nie można go zaliczyć do Halticosaurus, i umieścił go w nowym rodzaju Liliensternus."
+    },
+    "sourceIds": ["rauhut-2003", "pbdb-taxon", "nhm"]
+  },
+  "summary": {
+    "text": {
+      "en": "Liliensternus was a meat-eating theropod dinosaur about 5 metres long. It lived in what is now Germany in the Late Triassic, during the Norian Age, roughly 227 to 206 million years ago. It is the best-represented Triassic theropod from Europe. It was first named Halticosaurus liliensterni in 1934 and got its own genus, Liliensternus, in 1984. Its exact place in the theropod family tree is still debated.",
+      "pl": "Liliensternus był mięsożernym dinozaurem z grupy teropodów o długości około 5 metrów. Żył na terenie dzisiejszych Niemiec w późnym triasie, w noryku, mniej więcej 227–206 milionów lat temu. Jest najlepiej poznanym na podstawie skamieniałości triasowym teropodem z Europy. W 1934 roku nazwano go Halticosaurus liliensterni, a w 1984 roku otrzymał własny rodzaj, Liliensternus. Jego dokładne miejsce w drzewie rodowym teropodów wciąż jest przedmiotem dyskusji."
+    },
+    "sourceIds": ["nhm", "rauhut-2003", "pbdb-occs", "martill-2016"]
+  },
+  "famous": false,
+  "images": [
+    {
+      "commonsFile": "File:Liliensternus liliensterni.JPG",
+      "kind": "fossil",
+      "alt": {
+        "en": "Fossil of the early theropod Liliensternus on display in a museum.",
+        "pl": "Skamieniałość wczesnego teropoda Liliensternus na wystawie muzealnej."
+      }
+    }
+  ],
+  "uncertain": [
+    {
+      "field": "group",
+      "note": {
+        "en": "Traditionally treated as a coelophysoid; Martill et al. (2016) put the word in quotes and recover it just outside crown-group neotheropods. PBDB and the NHM Dino Directory place it only in Neotheropoda. Coelophysoidea is used as the closest existing group.",
+        "pl": "Tradycyjnie uznawany za celofyzoida; Martill i in. (2016) ujmują to określenie w cudzysłów i w swojej analizie umieszczają go tuż poza grupą koronną neoteropodów. PBDB i Dino Directory muzeum NHM zaliczają go jedynie do Neotheropoda. Użyto Coelophysoidea jako najbliższej istniejącej grupy."
+      }
+    },
+    {
+      "field": "size.massKg",
+      "note": {
+        "en": "No mass estimate found in a source we could verify.",
+        "pl": "Nie znaleziono oszacowania masy w źródle, które moglibyśmy zweryfikować."
+      }
+    },
+    {
+      "field": "locations",
+      "note": {
+        "en": "Rauhut (2003) lists Frick, Switzerland, only with a question mark, and PBDB's Swiss record is identified only to genus, so Switzerland is not listed. France (NHM) refers to the species now called Lophostropheus.",
+        "pl": "Rauhut (2003) wymienia Frick w Szwajcarii tylko ze znakiem zapytania, a szwajcarski rekord w PBDB jest oznaczony jedynie do rodzaju, więc Szwajcarii nie podano. Francja (NHM) dotyczy gatunku nazywanego obecnie Lophostropheus."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "pbdb-taxon",
+      "title": "Liliensternus (taxon 55542)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/single.json?name=Liliensternus&show=attr,parent,class",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-occs",
+      "title": "Occurrences of Liliensternus (stratigraphy and location)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Liliensternus&show=strat,loc",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "nhm",
+      "title": "Liliensternus | Dino Directory",
+      "publisher": "Natural History Museum, London",
+      "url": "https://www.nhm.ac.uk/discover/dino-directory/liliensternus.html",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "rauhut-2003",
+      "title": "The interrelationships and evolution of basal theropod dinosaurs",
+      "authors": "Rauhut, O. W. M.",
+      "year": 2003,
+      "publisher": "Special Papers in Palaeontology",
+      "url": "https://tb.plazi.org/GgServer/xml/77323C29FFC8B421FF2C9BE2FBC8FCE7",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "martill-2016",
+      "title": "The oldest Jurassic dinosaur: a basal neotheropod from the Hettangian of Great Britain",
+      "authors": "Martill, D. M.; Vidovic, S. U.; Howells, C.; Nudds, J. R.",
+      "year": 2016,
+      "publisher": "PLOS ONE",
+      "doi": "10.1371/journal.pone.0145713",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0145713",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "ezcurra-cuny-2007",
+      "title": "The coelophysoid Lophostropheus airelensis, gen. nov.: a review of the systematics of 'Liliensternus' airelensis from the Triassic–Jurassic outcrops of Normandy (France)",
+      "authors": "Ezcurra, M. D.; Cuny, G.",
+      "year": 2007,
+      "publisher": "Journal of Vertebrate Paleontology",
+      "doi": "10.1671/0272-4634(2007)27[73:TCLAGN]2.0.CO;2",
+      "url": "https://api.crossref.org/works/10.1671/0272-4634(2007)27[73:TCLAGN]2.0.CO;2",
+      "accessed": "2026-11-22"
+    }
+  ],
+  "lastReviewed": "2026-11-22"
+}

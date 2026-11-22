@@ -1,0 +1,210 @@
+{
+  "slug": "ichthyosaurus",
+  "scientificName": "Ichthyosaurus communis",
+  "genus": "Ichthyosaurus",
+  "nameMeaning": {
+    "text": {
+      "en": "Fish lizard",
+      "pl": "rybi jaszczur"
+    },
+    "sourceIds": ["ucmp-ichthyosauria", "hull-ichthyosaur"]
+  },
+  "group": "ichthyosauria",
+  "groupSourceIds": ["pbdb-taxon", "ucmp-ichthyosauria"],
+  "isDinosaur": false,
+  "taxonomy": {
+    "status": "valid",
+    "note": {
+      "en": "I. communis is the type species. Massare and Lomax (2018) treat I. intermedius as the same species. The original specimen of I. communis is lost, so a neotype from Lyme Regis (NHMUK PV R1162) now defines the species.",
+      "pl": "I. communis to gatunek typowy. Massare i Lomax (2018) traktują I. intermedius jako ten sam gatunek. Pierwotny okaz I. communis zaginął, więc gatunek wyznacza dziś neotyp z Lyme Regis (NHMUK PV R1162)."
+    },
+    "sourceIds": ["massare-lomax-2018", "manchester-2017"]
+  },
+  "diet": {
+    "value": "carnivore",
+    "confidence": "established",
+    "sourceIds": ["lomax-2017", "manchester-neonate-2017", "hull-ichthyosaur"],
+    "note": {
+      "en": "A newborn I. communis has tiny hooks from squid arms preserved between its ribs; ichthyosaurs in general ate mainly fish and cephalopods.",
+      "pl": "U noworodka I. communis między żebrami zachowały się drobne haczyki z ramion kałamarnic; ichtiozaury na ogół jadły głównie ryby i głowonogi."
+    }
+  },
+  "timeRange": {
+    "startMa": 201.4,
+    "endMa": 192.9,
+    "sourceIds": ["massare-lomax-2018", "pbdb-occurrences"],
+    "note": {
+      "en": "Massare and Lomax (2018) give a species range of at least lower Hettangian to lower Sinemurian and have seen no I. communis from the Rhaetian. ICS has no lower-Sinemurian boundary, so the end uses the top of the Sinemurian (192.9 Ma); the true last appearance is older. PBDB also has one Early Pliensbachian record, not used here.",
+      "pl": "Massare i Lomax (2018) podają zasięg gatunku co najmniej od dolnego hettangu do dolnego synemuru i nie znają okazów I. communis z retyku. ICS nie wyznacza granicy dolnego synemuru, więc koniec zakresu opiera się na górnej granicy synemuru (192,9 mln lat temu); rzeczywiste ostatnie pojawienie się jest starsze. PBDB ma też jeden rekord z wczesnego pliensbachu, którego tu nie uwzględniono."
+    }
+  },
+  "periods": ["jurassic"],
+  "size": {
+    "lengthM": {
+      "value": [2, 2],
+      "sourceIds": ["lomax-sachs-2017"],
+      "note": {
+        "en": "Probable total length of around 2 m (Lomax and Sachs 2017, summarising Massare and Lomax).",
+        "pl": "Prawdopodobna długość całkowita około 2 m (Lomax i Sachs 2017, podsumowując pracę Massare i Lomaxa)."
+      }
+    }
+  },
+  "locations": [
+    {
+      "continent": "europe",
+      "countryCode": "GB",
+      "formation": "Blue Lias",
+      "sourceIds": ["massare-lomax-2018", "pbdb-occurrences"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "De la Beche & Conybeare",
+    "year": 1821,
+    "note": {
+      "en": "PBDB attributes the species to Conybeare (1821) and the genus name Ichthyosaurus to Koenig (1818).",
+      "pl": "PBDB przypisuje gatunek Conybeare'owi (1821), a nazwę rodzajową Ichthyosaurus – Koenigowi (1818)."
+    },
+    "sourceIds": ["massare-lomax-2018", "manchester-2017", "pbdb-taxon", "pbdb-genus"]
+  },
+  "summary": {
+    "text": {
+      "en": "Ichthyosaurus was not a dinosaur but an ichthyosaur, a marine reptile whose name means 'fish lizard'. I. communis, the first ichthyosaur species to be described, in 1821, swam in the seas over what is now England in the Early Jurassic. It was probably about two metres long. Ichthyosaurs gave birth to live young at sea, and a newborn I. communis was found with remains of squid in its stomach.",
+      "pl": "Ichthyosaurus nie był dinozaurem, lecz ichtiozaurem – gadem morskim, którego nazwa oznacza „rybi jaszczur”. I. communis, pierwszy opisany gatunek ichtiozaura (w 1821 roku), pływał we wczesnej jurze w morzach nad terenem dzisiejszej Anglii. Miał prawdopodobnie około dwóch metrów długości. Ichtiozaury rodziły żywe młode w morzu, a w żołądku noworodka I. communis znaleziono szczątki kałamarnicy."
+    },
+    "sourceIds": [
+      "ucmp-ichthyosauria",
+      "manchester-2017",
+      "massare-lomax-2018",
+      "lomax-sachs-2017",
+      "lomax-2017",
+      "manchester-neonate-2017"
+    ]
+  },
+  "funFacts": [
+    {
+      "text": {
+        "en": "The smallest and youngest I. communis on record is a newborn only about 70 cm long, rediscovered in the collections of the Lapworth Museum of Geology in Birmingham.",
+        "pl": "Najmniejszy i najmłodszy znany I. communis to noworodek o długości zaledwie około 70 cm, odnaleziony ponownie w zbiorach Lapworth Museum of Geology w Birmingham."
+      },
+      "sourceIds": ["manchester-neonate-2017", "lomax-2017"]
+    },
+    {
+      "text": {
+        "en": "The largest certain Ichthyosaurus, a 3–3.3 m I. somersetensis, has an embryo inside it, only the third embryo known for the genus.",
+        "pl": "Największy pewny okaz Ichthyosaurus, mierzący 3–3,3 m I. somersetensis, ma w sobie zarodek – dopiero trzeci znany zarodek tego rodzaju."
+      },
+      "sourceIds": ["lomax-sachs-2017"]
+    }
+  ],
+  "famous": false,
+  "images": [
+    {
+      "commonsFile": "File:Ichthyosaurus sp. fossils in Natural History Museum.jpg",
+      "kind": "fossil",
+      "alt": {
+        "en": "Ichthyosaurus fossils on display at the Natural History Museum in London.",
+        "pl": "Skamieliny Ichthyosaurus na wystawie w Natural History Museum w Londynie."
+      }
+    }
+  ],
+  "uncertain": [
+    {
+      "field": "size.massKg",
+      "note": {
+        "en": "No mass estimate found in a source we could verify.",
+        "pl": "Nie znaleziono oszacowania masy w źródle, które moglibyśmy zweryfikować."
+      }
+    },
+    {
+      "field": "locations",
+      "note": {
+        "en": "Massare and Lomax (2018) mention reported records from Portugal, Lorraine (Belgium) and Frick (Switzerland); these are not listed until confirmed.",
+        "pl": "Massare i Lomax (2018) wspominają o zgłoszonych okazach z Portugalii, Lotaryngii (Belgia) i Frick (Szwajcaria); nie podajemy ich, dopóki nie zostaną potwierdzone."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "pbdb-taxon",
+      "title": "Ichthyosaurus communis (taxon 95786)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=95786",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "pbdb-genus",
+      "title": "Ichthyosaurus (taxon 36558)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=36558",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "pbdb-occurrences",
+      "title": "Fossil occurrences of Ichthyosaurus communis",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Ichthyosaurus%20communis&show=strat,loc",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "massare-lomax-2018",
+      "title": "A taxonomic reassessment of Ichthyosaurus communis and I. intermedius and a revised diagnosis for the genus",
+      "authors": "Massare, J. A.; Lomax, D. R.",
+      "year": 2018,
+      "publisher": "Journal of Systematic Palaeontology",
+      "doi": "10.1080/14772019.2017.1291116",
+      "url": "https://tb.plazi.org/GgServer/xml/845787D66552FF80FC0A1CC9FC751AD6",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "lomax-sachs-2017",
+      "title": "On the largest Ichthyosaurus: A new specimen of Ichthyosaurus somersetensis containing an embryo",
+      "authors": "Lomax, D. R.; Sachs, S.",
+      "year": 2017,
+      "publisher": "Acta Palaeontologica Polonica",
+      "doi": "10.4202/app.00376.2017",
+      "url": "https://app.pan.pl/archive/published/app62/app003762017.html",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "lomax-2017",
+      "title": "The first known neonate Ichthyosaurus communis skeleton: a rediscovered specimen from the Lower Jurassic, UK",
+      "authors": "Lomax, D. R.; Larkin, N. R.; Boomer, I.; Dey, S.; Copestake, P.",
+      "year": 2017,
+      "publisher": "Historical Biology",
+      "doi": "10.1080/08912963.2017.1382488",
+      "url": "https://doi.org/10.1080/08912963.2017.1382488",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "manchester-2017",
+      "title": "Ancient reptile mystery solved",
+      "publisher": "The University of Manchester",
+      "year": 2017,
+      "url": "https://www.manchester.ac.uk/about/news/ancient-reptile-mystery-solved/",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "manchester-neonate-2017",
+      "title": "Prehistoric squid was last meal of ichthyosaur 200 million years ago",
+      "publisher": "The University of Manchester",
+      "year": 2017,
+      "url": "https://www.manchester.ac.uk/about/news/prehistoric-squid-was-last-meal-of-ichthyosaur-200-million-years-ago/",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "ucmp-ichthyosauria",
+      "title": "Introduction to the Ichthyosauria",
+      "publisher": "University of California Museum of Paleontology",
+      "url": "https://ucmp.berkeley.edu/diapsids/ichthyosauria.html",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "hull-ichthyosaur",
+      "title": "A fossil of an ichthyosaur",
+      "publisher": "Hull Museums",
+      "url": "https://www.hullmuseums.co.uk/ichthyosaur-fossil",
+      "accessed": "2026-11-21"
+    }
+  ],
+  "lastReviewed": "2026-11-21"
+}

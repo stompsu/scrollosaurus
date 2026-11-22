@@ -1,0 +1,132 @@
+{
+  "slug": "rajasaurus",
+  "scientificName": "Rajasaurus narmadensis",
+  "genus": "Rajasaurus",
+  "nameMeaning": {
+    "text": {
+      "en": "princely lizard; narmadensis refers to the Narmada region of India",
+      "pl": "książęcy jaszczur; narmadensis odnosi się do regionu Narmada w Indiach"
+    },
+    "sourceIds": ["nhm", "uchicago-2003"]
+  },
+  "group": "abelisauridae",
+  "groupSourceIds": ["pbdb-taxa", "nhm"],
+  "isDinosaur": true,
+  "taxonomy": {
+    "status": "valid"
+  },
+  "diet": {
+    "value": "carnivore",
+    "confidence": "established",
+    "sourceIds": ["nhm", "pbdb-taxa", "uchicago-2003"],
+    "note": {
+      "en": "NHM describes it as a likely ambush predator that may also have scavenged; little is known about its prey.",
+      "pl": "NHM opisuje go jako prawdopodobnego drapieżnika polującego z zasadzki, który mógł też żywić się padliną; o jego ofiarach wiadomo niewiele."
+    }
+  },
+  "timeRange": {
+    "startMa": 72.2,
+    "endMa": 66,
+    "sourceIds": ["pbdb-occs", "nhm", "uchicago-2003"],
+    "note": {
+      "en": "Stage-based: PBDB dates the Lameta Formation occurrence to the Maastrichtian. The Ma values are the ICS v2024/12 Maastrichtian boundaries, so the range is broader than the fossils themselves. NHM gives 72–66 Ma; the 2003 University of Chicago release called the bones 65 million years old.",
+      "pl": "Na podstawie pięter: PBDB datuje występowanie z formacji Lameta na mastrycht. Wartości w mln lat to granice mastrychtu według ICS v2024/12, więc zakres jest szerszy niż wiek samych skamieniałości. NHM podaje 72–66 mln lat temu; komunikat Uniwersytetu Chicagowskiego z 2003 roku podawał, że kości mają 65 milionów lat."
+    }
+  },
+  "periods": ["cretaceous"],
+  "size": {
+    "lengthM": {
+      "value": [6.6, 9],
+      "sourceIds": ["nhm", "uchicago-2003"],
+      "note": {
+        "en": "NHM gives 6.6 m; the 2003 University of Chicago release describes it as 30 feet (about 9 m) long. Only parts of the skeleton are known.",
+        "pl": "NHM podaje 6,6 m; komunikat Uniwersytetu Chicagowskiego z 2003 roku opisuje go jako zwierzę o długości 30 stóp (około 9 m). Znane są tylko części szkieletu."
+      }
+    }
+  },
+  "locations": [
+    {
+      "continent": "asia",
+      "countryCode": "IN",
+      "formation": "Lameta",
+      "sourceIds": ["pbdb-occs", "nhm"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "Wilson et al.",
+    "year": 2003,
+    "note": {
+      "en": "The bones were collected in 1983 in the Narmada region by an expedition led by Sahni and Srivastava; Sereno and Wilson later recognised a new meat-eater among them.",
+      "pl": "Kości zebrała w 1983 roku w regionie Narmada wyprawa kierowana przez Sahniego i Srivastavę; Sereno i Wilson rozpoznali później wśród nich nowego drapieżnika."
+    },
+    "sourceIds": ["pbdb-taxa", "nhm", "uchicago-2003"]
+  },
+  "summary": {
+    "text": {
+      "en": "Rajasaurus, the 'princely lizard', was an abelisaurid: a large meat-eating theropod from India at the end of the Cretaceous. It had a single short horn on top of its head, perhaps for display or head-butting. Its bones were dug up in 1983 near the Narmada River. It was related to predators from mainland Africa, Madagascar and South America.",
+      "pl": "Rajasaurus, czyli „książęcy jaszczur”, był abelizaurem – dużym mięsożernym teropodem z Indii z końca kredy. Na czubku głowy miał pojedynczy krótki róg, być może służący do popisów lub uderzania głową. Jego kości wykopano w 1983 roku w pobliżu rzeki Narmada. Był spokrewniony z drapieżnikami z kontynentalnej Afryki, Madagaskaru i Ameryki Południowej."
+    },
+    "sourceIds": ["nhm", "uchicago-2003", "pbdb-occs"]
+  },
+  "funFacts": [
+    {
+      "text": {
+        "en": "When it was announced in 2003, its skull was the first skull of any dinosaur ever assembled in India.",
+        "pl": "Gdy ogłoszono jego odkrycie w 2003 roku, jego czaszka była pierwszą czaszką jakiegokolwiek dinozaura złożoną w Indiach."
+      },
+      "sourceIds": ["uchicago-2003"]
+    }
+  ],
+  "famous": false,
+  "images": [
+    {
+      "commonsFile": "File:Skull Replica of Rajasaurus narmadensis 01.jpg",
+      "kind": "skull",
+      "alt": {
+        "en": "Replica of the skull of Rajasaurus narmadensis.",
+        "pl": "Replika czaszki Rajasaurus narmadensis."
+      }
+    }
+  ],
+  "uncertain": [
+    {
+      "field": "size.massKg",
+      "note": {
+        "en": "No mass estimate found in a source we could verify.",
+        "pl": "Nie znaleziono oszacowania masy w źródle, które moglibyśmy zweryfikować."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "nhm",
+      "title": "Rajasaurus | Dino Directory",
+      "publisher": "Natural History Museum, London",
+      "url": "https://www.nhm.ac.uk/discover/dino-directory/rajasaurus.html",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "uchicago-2003",
+      "title": "New Dinosaur Rises From Fossil Bones In India",
+      "year": 2003,
+      "publisher": "University of Chicago, via ScienceDaily",
+      "url": "https://www.sciencedaily.com/releases/2003/08/030815074441.htm",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-taxa",
+      "title": "Taxon records with classification and ecospace for Rajasaurus and other genera",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/list.json?name=Rapetosaurus,Rajasaurus,Antarctopelta,Hypsilophodon,Magyarosaurus,Hatzegopteryx,Centrosaurus,Chasmosaurus,Stegoceras,Borealopelta&show=attr,class,ecospace",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-occs",
+      "title": "Occurrences of Rajasaurus and other genera (stratigraphy and location)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Rapetosaurus,Rajasaurus,Antarctopelta,Magyarosaurus,Hatzegopteryx&show=strat,loc",
+      "accessed": "2026-11-22"
+    }
+  ],
+  "lastReviewed": "2026-11-22"
+}

@@ -4,7 +4,8 @@
   "genus": "Spinosaurus",
   "nameMeaning": {
     "text": {
-      "en": "spine lizard"
+      "en": "spine lizard",
+      "pl": "kolczasty jaszczur"
     },
     "sourceIds": ["nhm"]
   },
@@ -13,7 +14,10 @@
   "isDinosaur": true,
   "taxonomy": {
     "status": "valid",
-    "note": "The holotype from Egypt, described by Stromer, was destroyed in the Second World War; a partial skeleton from the Kem Kem Group of Morocco (FSAC-KK 11888) was designated as the neotype.",
+    "note": {
+      "en": "The holotype from Egypt, described by Stromer, was destroyed in the Second World War; a partial skeleton from the Kem Kem Group of Morocco (FSAC-KK 11888) was designated as the neotype.",
+      "pl": "Holotyp z Egiptu, który opisał Stromer, został zniszczony podczas II wojny światowej; neotypem wyznaczono niekompletny szkielet z grupy Kem Kem w Maroku (FSAC-KK 11888)."
+    },
     "sourceIds": ["sereno-2022", "nhm"]
   },
   "diet": {
@@ -27,25 +31,37 @@
       "sereno-2022",
       "nhm"
     ],
-    "note": "Fish-eating is widely accepted, and it may also have eaten other animals. How it caught fish is disputed: one team argues it was a semi-aquatic or aquatic animal that swam with its tail and hunted underwater (Ibrahim et al. 2014, 2020; Fabbri et al. 2022); others argue it was buoyant, could not dive, walked on two legs on land and fed by wading in shallow water (Henderson 2018; Sereno et al. 2022). Posture is debated with it: the aquatic hypothesis implies a quadrupedal stance on land, while Sereno et al. 2022 found it was bipedal."
+    "note": {
+      "en": "Fish-eating is widely accepted, and it may also have eaten other animals. How it caught fish is disputed: one team argues it was a semi-aquatic or aquatic animal that swam with its tail and hunted underwater (Ibrahim et al. 2014, 2020; Fabbri et al. 2022); others argue it was buoyant, could not dive, walked on two legs on land and fed by wading in shallow water (Henderson 2018; Sereno et al. 2022). Posture is debated with it: the aquatic hypothesis implies a quadrupedal stance on land, while Sereno et al. 2022 found it was bipedal.",
+      "pl": "To, że jadł ryby, jest powszechnie przyjmowane; mógł też jeść inne zwierzęta. Sposób łowienia ryb jest sporny: jeden zespół twierdzi, że było to zwierzę półwodne lub wodne, które pływało za pomocą ogona i polowało pod wodą (Ibrahim i in. 2014, 2020; Fabbri i in. 2022); inni twierdzą, że łatwo unosił się na wodzie, nie mógł nurkować, chodził na lądzie na dwóch nogach i żerował, brodząc w płytkiej wodzie (Henderson 2018; Sereno i in. 2022). Wraz z tym sporna jest postawa: hipoteza wodna zakłada czworonożną postawę na lądzie, natomiast Sereno i in. 2022 stwierdzili, że był dwunożny."
+    }
   },
   "timeRange": {
     "startMa": 100.5,
     "endMa": 93.9,
     "sourceIds": ["pbdb-occs", "sereno-2022"],
-    "note": "Sereno et al. 2022 place S. aegyptiacus in the Cenomanian (about 95 Ma); the Ma values are the ICS v2024/12 Cenomanian stage boundaries. Some PBDB occurrences from Morocco are only dated to Late Albian-Early Cenomanian, and a few Tunisian and Algerian referrals extend to the Aptian-Albian; these are not used here. NHM gives 99-94 Ma."
+    "note": {
+      "en": "Sereno et al. 2022 place S. aegyptiacus in the Cenomanian (about 95 Ma); the Ma values are the ICS v2024/12 Cenomanian stage boundaries. Some PBDB occurrences from Morocco are only dated to Late Albian-Early Cenomanian, and a few Tunisian and Algerian referrals extend to the Aptian-Albian; these are not used here. NHM gives 99-94 Ma.",
+      "pl": "Sereno i in. 2022 umieszczają S. aegyptiacus w cenomanie (około 95 mln lat temu); wartości w mln lat to granice piętra cenomanu według ICS v2024/12. Niektóre występowania z Maroka w PBDB są datowane tylko na późny alb–wczesny cenoman, a kilka przypisań z Tunezji i Algierii sięga aptu–albu; nie zostały one tu uwzględnione. NHM podaje 99–94 mln lat temu."
+    }
   },
   "periods": ["cretaceous"],
   "size": {
     "lengthM": {
       "value": [14, 15.55],
       "sourceIds": ["sereno-2022", "henderson-2018", "ibrahim-2014"],
-      "note": "Sereno et al. 2022 reconstruct an adult at just under 14 m; Henderson 2018 built a 15.55 m model following the Ibrahim et al. 2014 reconstruction, which those authors described as over 15 m long."
+      "note": {
+        "en": "Sereno et al. 2022 reconstruct an adult at just under 14 m; Henderson 2018 built a 15.55 m model following the Ibrahim et al. 2014 reconstruction, which those authors described as over 15 m long.",
+        "pl": "Sereno i in. 2022 rekonstruują dorosłego osobnika o długości nieco poniżej 14 m; Henderson 2018 zbudował model o długości 15,55 m według rekonstrukcji Ibrahim i in. 2014, którą jej autorzy opisali jako mającą ponad 15 m długości."
+      }
     },
     "massKg": {
       "value": [6500, 7390],
       "sourceIds": ["henderson-2018", "sereno-2022"],
-      "note": "Volumetric (digital model) estimates: 6,500 kg (Henderson 2018) and 7,390 kg (Sereno et al. 2022, with bird-like air spaces; up to about 8,000 kg with less air space). Estimates depend on the reconstruction used."
+      "note": {
+        "en": "Volumetric (digital model) estimates: 6,500 kg (Henderson 2018) and 7,390 kg (Sereno et al. 2022, with bird-like air spaces; up to about 8,000 kg with less air space). Estimates depend on the reconstruction used.",
+        "pl": "Oszacowania objętościowe (model cyfrowy): 6500 kg (Henderson 2018) i 7390 kg (Sereno i in. 2022, z przestrzeniami powietrznymi jak u ptaków; do około 8000 kg przy mniejszej ilości powietrza). Oszacowania zależą od przyjętej rekonstrukcji."
+      }
     }
   },
   "locations": [
@@ -69,14 +85,16 @@
   },
   "summary": {
     "text": {
-      "en": "Spinosaurus was one of the longest meat-eating dinosaurs known, about 14 to 15 metres long, living in North Africa roughly 100 to 94 million years ago. It had a long, narrow snout with cone-shaped teeth for catching fish, and a tall sail on its back. Scientists still argue about how it lived: was it a swimmer that chased fish underwater, or a wader that stood in the shallows and ambushed them?"
+      "en": "Spinosaurus was one of the longest meat-eating dinosaurs known, about 14 to 15 metres long, living in North Africa roughly 100 to 94 million years ago. It had a long, narrow snout with cone-shaped teeth for catching fish, and a tall sail on its back. Scientists still argue about how it lived: was it a swimmer that chased fish underwater, or a wader that stood in the shallows and ambushed them?",
+      "pl": "Spinosaurus był jednym z najdłuższych znanych dinozaurów mięsożernych – miał około 14–15 metrów długości i żył w Afryce Północnej mniej więcej 100–94 miliony lat temu. Miał długi, wąski pysk ze stożkowatymi zębami do chwytania ryb i wysoki żagiel na grzbiecie. Naukowcy wciąż spierają się o to, jak żył: czy pływał i ścigał ryby pod wodą, czy brodził, stojąc na płyciźnie i czatując na nie?"
     },
     "sourceIds": ["nhm", "sereno-2022", "henderson-2018", "ibrahim-2020", "pbdb-occs"]
   },
   "funFacts": [
     {
       "text": {
-        "en": "The first Spinosaurus bones, found in Egypt in 1912, were destroyed during the Second World War. For decades scientists had only drawings and photographs to study."
+        "en": "The first Spinosaurus bones, found in Egypt in 1912, were destroyed during the Second World War. For decades scientists had only drawings and photographs to study.",
+        "pl": "Pierwsze kości Spinosaurus, znalezione w Egipcie w 1912 roku, zostały zniszczone podczas II wojny światowej. Przez dziesięciolecia naukowcy mogli badać tylko rysunki i fotografie."
       },
       "sourceIds": ["nhm"]
     }
@@ -87,21 +105,29 @@
       "commonsFile": "File:FSAC-KK-11888.jpg",
       "kind": "skeleton-mount",
       "alt": {
-        "en": "Cast of the Spinosaurus specimen FSAC-KK-11888 at the Field Museum in Chicago, mounted in a swimming posture that reflects one debated view of how it lived."
+        "en": "Cast of the Spinosaurus specimen FSAC-KK-11888 at the Field Museum in Chicago, mounted in a swimming posture that reflects one debated view of how it lived.",
+        "pl": "Odlew okazu Spinosaurus FSAC-KK-11888 w Field Museum w Chicago, zmontowany w pozie pływającej, która odzwierciedla jeden ze spornych poglądów na jego tryb życia."
       },
       "note": {
-        "en": "The swimming pose follows one reconstruction of how Spinosaurus lived; scientists still debate it."
+        "en": "The swimming pose follows one reconstruction of how Spinosaurus lived; scientists still debate it.",
+        "pl": "Pływająca poza odpowiada jednej z rekonstrukcji trybu życia Spinosaurus; naukowcy wciąż się o nią spierają."
       }
     }
   ],
   "uncertain": [
     {
       "field": "diet",
-      "note": "Fish-eating is agreed, but whether Spinosaurus hunted underwater or waded is disputed (Ibrahim et al. 2014, 2020; Fabbri et al. 2022 vs Henderson 2018; Sereno et al. 2022)."
+      "note": {
+        "en": "Fish-eating is agreed, but whether Spinosaurus hunted underwater or waded is disputed (Ibrahim et al. 2014, 2020; Fabbri et al. 2022 vs Henderson 2018; Sereno et al. 2022).",
+        "pl": "Co do jedzenia ryb panuje zgoda, ale to, czy Spinosaurus polował pod wodą, czy brodził, jest sporne (Ibrahim i in. 2014, 2020; Fabbri i in. 2022 wobec Henderson 2018; Sereno i in. 2022)."
+      }
     },
     {
       "field": "size.lengthM",
-      "note": "Length depends on the reconstruction: just under 14 m (Sereno et al. 2022) versus over 15 m (Ibrahim et al. 2014, as modelled by Henderson 2018)."
+      "note": {
+        "en": "Length depends on the reconstruction: just under 14 m (Sereno et al. 2022) versus over 15 m (Ibrahim et al. 2014, as modelled by Henderson 2018).",
+        "pl": "Długość zależy od rekonstrukcji: nieco poniżej 14 m (Sereno i in. 2022) wobec ponad 15 m (Ibrahim i in. 2014, według modelu Henderson 2018)."
+      }
     }
   ],
   "sources": [

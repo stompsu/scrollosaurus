@@ -4,7 +4,8 @@
   "genus": "Mosasaurus",
   "nameMeaning": {
     "text": {
-      "en": "Lizard of the Meuse (Latin Mosa), the river at Maastricht"
+      "en": "Lizard of the Meuse (Latin Mosa), the river at Maastricht",
+      "pl": "jaszczur znad Mozy (łac. Mosa), rzeki w Maastricht"
     },
     "sourceIds": ["street-caldwell-2017", "pbdb-genus"]
   },
@@ -23,14 +24,20 @@
     "startMa": 83.6,
     "endMa": 66,
     "sourceIds": ["harrell-martin-2015"],
-    "note": "Harrell and Martin (2015) give upper Campanian to uppermost Maastrichtian, just below the K/Pg boundary. ICS has no upper-Campanian boundary, so the start uses the base of the Campanian (83.6 Ma); the true first appearance is younger."
+    "note": {
+      "en": "Harrell and Martin (2015) give upper Campanian to uppermost Maastrichtian, just below the K/Pg boundary. ICS has no upper-Campanian boundary, so the start uses the base of the Campanian (83.6 Ma); the true first appearance is younger.",
+      "pl": "Harrell i Martin (2015) podają zakres od górnego kampanu do najwyższego mastrychtu, tuż poniżej granicy K/Pg. ICS nie wyznacza granicy górnego kampanu, więc początek zakresu opiera się na dolnej granicy kampanu (83,6 mln lat temu); rzeczywiste pierwsze pojawienie się jest młodsze."
+    }
   },
   "periods": ["cretaceous"],
   "size": {
     "lengthM": {
       "value": [17, 17],
       "sourceIds": ["grigoriev-2014"],
-      "note": "Estimate of about 17 m for one exceptionally large individual from Penza, Russia, based on a partial skull; most individuals were smaller."
+      "note": {
+        "en": "Estimate of about 17 m for one exceptionally large individual from Penza, Russia, based on a partial skull; most individuals were smaller.",
+        "pl": "Oszacowanie około 17 m dla jednego wyjątkowo dużego osobnika z Penzy w Rosji, oparte na niekompletnej czaszce; większość osobników była mniejsza."
+      }
     }
   },
   "locations": [
@@ -70,12 +77,16 @@
   "discovery": {
     "describedBy": "Mantell",
     "year": 1829,
-    "note": "Mantell named the species in 1829; PBDB dates the genus name Mosasaurus to 1822.",
+    "note": {
+      "en": "Mantell named the species in 1829; PBDB dates the genus name Mosasaurus to 1822.",
+      "pl": "Mantell nazwał gatunek w 1829 roku; PBDB datuje nazwę rodzajową Mosasaurus na 1822 rok."
+    },
     "sourceIds": ["pbdb-taxon", "harrell-martin-2015", "pbdb-genus"]
   },
   "summary": {
     "text": {
-      "en": "Mosasaurus was a huge sea-going reptile, not a dinosaur, that hunted in the seas of the Late Cretaceous. It had a powerfully built lower jaw. Its fossils come from Europe, Africa, Asia and North America. One giant from Penza in Russia, known from a partial skull, is estimated at about 17 metres long, one of the largest mosasaurs ever found. Mosasaurus survived until just before the mass extinction 66 million years ago."
+      "en": "Mosasaurus was a huge sea-going reptile, not a dinosaur, that hunted in the seas of the Late Cretaceous. It had a powerfully built lower jaw. Its fossils come from Europe, Africa, Asia and North America. One giant from Penza in Russia, known from a partial skull, is estimated at about 17 metres long, one of the largest mosasaurs ever found. Mosasaurus survived until just before the mass extinction 66 million years ago.",
+      "pl": "Mosasaurus był ogromnym gadem morskim – nie dinozaurem – który polował w morzach późnej kredy. Miał potężnie zbudowaną żuchwę. Jego skamieniałości pochodzą z Europy, Afryki, Azji i Ameryki Północnej. Jeden olbrzym z Penzy w Rosji, znany z niekompletnej czaszki, miał według szacunków około 17 metrów długości – to jeden z największych mozazaurów, jakie kiedykolwiek znaleziono. Mosasaurus przetrwał prawie do masowego wymierania 66 milionów lat temu."
     },
     "sourceIds": ["pbdb-genus", "grigoriev-2014", "harrell-martin-2015"]
   },
@@ -85,18 +96,25 @@
       "commonsFile": "File:Mosasaurus hoffmannii - skeleton.jpg",
       "kind": "skeleton-mount",
       "alt": {
-        "en": "Reconstructed skeleton of the Bemelen Mosasaurus on display at the Natural History Museum of Maastricht."
+        "en": "Reconstructed skeleton of the Bemelen Mosasaurus on display at the Natural History Museum of Maastricht.",
+        "pl": "Zrekonstruowany szkielet Mosasaurus z Bemelen wystawiony w Muzeum Historii Naturalnej w Maastricht."
       }
     }
   ],
   "uncertain": [
     {
       "field": "size.massKg",
-      "note": "No verified mass estimate found."
+      "note": {
+        "en": "No verified mass estimate found.",
+        "pl": "Nie znaleziono zweryfikowanego oszacowania masy."
+      }
     },
     {
       "field": "timeRange",
-      "note": "The Campanian start depends on North American 'Mosasaurus maximus' records, which Harrell and Martin (2015) treat as M. hoffmannii; Polish Upper Campanian material is an uncertain identification."
+      "note": {
+        "en": "The Campanian start depends on North American 'Mosasaurus maximus' records, which Harrell and Martin (2015) treat as M. hoffmannii; Polish Upper Campanian material is an uncertain identification.",
+        "pl": "Początek w kampanie zależy od północnoamerykańskich rekordów „Mosasaurus maximus”, które Harrell i Martin (2015) traktują jako M. hoffmannii; identyfikacja polskiego materiału z górnego kampanu jest niepewna."
+      }
     }
   ],
   "sources": [

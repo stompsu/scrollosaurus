@@ -1,0 +1,145 @@
+{
+  "slug": "megalosaurus",
+  "scientificName": "Megalosaurus bucklandii",
+  "genus": "Megalosaurus",
+  "nameMeaning": {
+    "text": { "en": "big lizard", "pl": "wielki jaszczur" },
+    "sourceIds": ["nhm-megalosaurus"]
+  },
+  "group": "tetanurae",
+  "groupSourceIds": ["benson-2010", "pbdb-megalosaurus-bucklandii", "nhm-megalosaurus"],
+  "isDinosaur": true,
+  "taxonomy": {
+    "status": "valid",
+    "note": {
+      "en": "For a long time, fragmentary fossils of many ages and places, from the Late Triassic to the end of the Cretaceous and from Europe to Asia, were referred to Megalosaurus. Benson (2010) confirms M. bucklandii as a valid species from the Bathonian of England, and it is the only species of Megalosaurus now recognised.",
+      "pl": "Przez długi czas do Megalosaurus zaliczano fragmentaryczne skamieniałości z wielu epok i miejsc, od późnego triasu po koniec kredy i od Europy po Azję. Benson (2010) potwierdza, że M. bucklandii jest ważnym gatunkiem z batonu Anglii; jest to jedyny obecnie uznawany gatunek Megalosaurus."
+    },
+    "sourceIds": ["benson-2010", "pbdb-megalosaurus-occs", "nhm-megalosaurus"]
+  },
+  "diet": {
+    "value": "carnivore",
+    "confidence": "established",
+    "sourceIds": ["nhm-megalosaurus"]
+  },
+  "timeRange": {
+    "startMa": 168.2,
+    "endMa": 165.3,
+    "sourceIds": ["benson-2010", "nhm-megalosaurus"],
+    "note": {
+      "en": "Benson (2010) describes M. bucklandii from the Bathonian of England; the Ma values are the ICS v2024/12 Bathonian boundaries. NHM gives about 166 Ma. PBDB still lists older identifications of M. bucklandii from the Bajocian to the Aptian, which are not used here.",
+      "pl": "Benson (2010) opisuje M. bucklandii z batonu Anglii; wartości w mln lat to granice batonu według ICS v2024/12. NHM podaje około 166 mln lat temu. PBDB wciąż wymienia dawniejsze oznaczenia M. bucklandii od bajosu do aptu, których tu nie uwzględniono."
+    }
+  },
+  "periods": ["jurassic"],
+  "size": {
+    "lengthM": {
+      "value": [6, 6],
+      "sourceIds": ["nhm-megalosaurus"],
+      "note": {
+        "en": "Single published figure (NHM Dino Directory). Victorian estimates were much larger: Richard Owen proposed 9 m in 1842.",
+        "pl": "Jedyna opublikowana wartość (NHM Dino Directory). Szacunki z epoki wiktoriańskiej były znacznie większe: Richard Owen zaproponował w 1842 roku 9 m."
+      }
+    }
+  },
+  "locations": [
+    {
+      "continent": "europe",
+      "countryCode": "GB",
+      "formation": "Taynton Limestone",
+      "sourceIds": ["pbdb-megalosaurus-occs", "nhm-megalosaurus"]
+    },
+    {
+      "continent": "europe",
+      "countryCode": "GB",
+      "formation": "Forest Marble",
+      "sourceIds": ["pbdb-megalosaurus-occs"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "Mantell",
+    "year": 1827,
+    "note": {
+      "en": "William Buckland described Megalosaurus in 1824, from fossils found around Oxfordshire; Mantell gave the species its name, bucklandii, in 1827. PBDB attributes the genus name to Parkinson (1822).",
+      "pl": "William Buckland opisał Megalosaurus w 1824 roku na podstawie skamieniałości z hrabstwa Oxfordshire; Mantell nadał gatunkowi nazwę bucklandii w 1827 roku. PBDB przypisuje nazwę rodzajową Parkinsonowi (1822)."
+    },
+    "sourceIds": ["nhm-megalosaurus", "pbdb-megalosaurus-bucklandii", "pbdb-megalosaurus"]
+  },
+  "summary": {
+    "text": {
+      "en": "Megalosaurus was a large meat-eating dinosaur, about 6 metres long, that lived in what is now England in the Middle Jurassic, about 166 million years ago. Described in 1824, it was one of the first dinosaurs ever named, years before the word 'dinosaur' was invented in 1842. William Buckland first thought it walked on four legs, but soon decided it stood upright on straight legs. No complete skeleton has ever been found.",
+      "pl": "Megalosaurus był dużym mięsożernym dinozaurem o długości około 6 metrów, który żył na terenie dzisiejszej Anglii w środkowej jurze, około 166 milionów lat temu. Opisany w 1824 roku, był jednym z pierwszych dinozaurów, jakie w ogóle nazwano – na wiele lat przed powstaniem słowa „dinozaur” w 1842 roku. William Buckland początkowo sądził, że chodził na czterech nogach, ale wkrótce uznał, że stał wyprostowany na prostych kończynach. Nigdy nie znaleziono kompletnego szkieletu."
+    },
+    "sourceIds": ["nhm-megalosaurus", "benson-2010"]
+  },
+  "funFacts": [
+    {
+      "text": {
+        "en": "Megalosaurus is mentioned in Charles Dickens's novel Bleak House, and it is one of the Victorian dinosaur statues at Crystal Palace in London.",
+        "pl": "Megalosaurus pojawia się w powieści Karola Dickensa „Samotnia”, a jego posąg należy do wiktoriańskich rzeźb dinozaurów w Crystal Palace w Londynie."
+      },
+      "sourceIds": ["nhm-megalosaurus"]
+    }
+  ],
+  "famous": false,
+  "images": [
+    {
+      "commonsFile": "File:Megalosaurus, World Museum Liverpool (1).JPG",
+      "kind": "skeleton-mount",
+      "alt": {
+        "en": "Skeleton of Megalosaurus at the World Museum Liverpool, England; the animal was found in southern England.",
+        "pl": "Szkielet Megalosaurus w World Museum Liverpool w Anglii; zwierzę znaleziono w południowej Anglii."
+      }
+    }
+  ],
+  "uncertain": [
+    {
+      "field": "size.massKg",
+      "note": {
+        "en": "No mass estimate found in a source we could verify.",
+        "pl": "Nie znaleziono oszacowania masy w źródle, które moglibyśmy zweryfikować."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "benson-2010",
+      "title": "A description of Megalosaurus bucklandii (Dinosauria: Theropoda) from the Bathonian of the UK and the relationships of Middle Jurassic theropods",
+      "authors": "Benson R.B.J.",
+      "year": 2010,
+      "publisher": "Zoological Journal of the Linnean Society 158: 882-935",
+      "doi": "10.1111/j.1096-3642.2009.00569.x",
+      "url": "https://doi.org/10.1111/j.1096-3642.2009.00569.x",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "nhm-megalosaurus",
+      "title": "Megalosaurus | Dino Directory",
+      "publisher": "Natural History Museum, London",
+      "url": "https://www.nhm.ac.uk/discover/dino-directory/megalosaurus.html",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "pbdb-megalosaurus",
+      "title": "Megalosaurus (taxon 38583)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/single.json?name=Megalosaurus&show=attr,app,parent,class",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "pbdb-megalosaurus-bucklandii",
+      "title": "Megalosaurus bucklandii (taxon 53025)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/single.json?name=Megalosaurus%20bucklandii&show=attr,app,parent,class",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "pbdb-megalosaurus-occs",
+      "title": "Occurrences of Megalosaurus (stratigraphy and location)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Megalosaurus&show=strat,loc",
+      "accessed": "2026-11-21"
+    }
+  ],
+  "lastReviewed": "2026-11-22"
+}

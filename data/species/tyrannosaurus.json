@@ -4,7 +4,8 @@
   "genus": "Tyrannosaurus",
   "nameMeaning": {
     "text": {
-      "en": "Tyrant lizard"
+      "en": "Tyrant lizard",
+      "pl": "tyran jaszczur"
     },
     "sourceIds": ["nhm-tyrannosaurus"]
   },
@@ -23,19 +24,28 @@
     "startMa": 68,
     "endMa": 66,
     "sourceIds": ["nhm-tyrannosaurus"],
-    "note": "NHM gives 68–66 Ma. PBDB occurrences of T. rex are almost all Maastrichtian (stage 72.2–66 Ma); two PBDB records dated Late Campanian are not used here."
+    "note": {
+      "en": "NHM gives 68–66 Ma. PBDB occurrences of T. rex are almost all Maastrichtian (stage 72.2–66 Ma); two PBDB records dated Late Campanian are not used here.",
+      "pl": "NHM podaje 68–66 mln lat temu. Występowania T. rex w PBDB pochodzą niemal wyłącznie z mastrychtu (piętro 72,2–66 mln lat temu); dwóch rekordów PBDB datowanych na późny kampan tu nie uwzględniono."
+    }
   },
   "periods": ["cretaceous"],
   "size": {
     "lengthM": {
       "value": [11, 12],
       "sourceIds": ["hutchinson-2011", "nhm-tyrannosaurus"],
-      "note": "Hutchinson et al. (2011) give body lengths of 11–12 m for four large adults; NHM gives 12 m."
+      "note": {
+        "en": "Hutchinson et al. (2011) give body lengths of 11–12 m for four large adults; NHM gives 12 m.",
+        "pl": "Hutchinson i in. (2011) podają długość ciała 11–12 m dla czterech dużych dorosłych osobników; NHM podaje 12 m."
+      }
     },
     "massKg": {
       "value": [6000, 9500],
-      "sourceIds": ["hutchinson-2011", "nhm-tyrannosaurus"],
-      "note": "Hutchinson et al. (2011): adults around 6,000–8,000 kg, the largest specimen ('Sue') perhaps about 9,500 kg; their maximal models give much higher values they consider implausible. NHM gives 7,000 kg."
+      "sourceIds": ["hutchinson-2011", "nhm-tyrannosaurus", "benson-2014"],
+      "note": {
+        "en": "Hutchinson et al. (2011): adults around 6,000–8,000 kg, the largest specimen ('Sue') perhaps about 9,500 kg; their maximal models give much higher values they consider implausible. NHM gives 7,000 kg. Benson et al. (2014) estimate 7,700 kg from the circumference of the upper arm and thigh bones, within this range.",
+        "pl": "Hutchinson i in. (2011): dorosłe osobniki około 6000–8000 kg, największy okaz („Sue”) być może około 9500 kg; ich modele maksymalne dają znacznie wyższe wartości, które autorzy uznają za nieprawdopodobne. NHM podaje 7000 kg. Benson i in. (2014) szacują masę na 7700 kg na podstawie obwodu kości ramiennej i udowej, co mieści się w tym zakresie."
+      }
     }
   },
   "locations": [
@@ -65,7 +75,8 @@
   },
   "summary": {
     "text": {
-      "en": "Tyrannosaurus rex was a huge, ferocious meat-eating dinosaur. Adults were 11 to 12 metres long and weighed around 6 to 8 tonnes, and its bite was stronger than that of any other known land animal. Its arms were small for its body. It lived in what is now Canada and the USA about 68 to 66 million years ago, at the very end of the Cretaceous."
+      "en": "Tyrannosaurus rex was a huge, ferocious meat-eating dinosaur. Adults were 11 to 12 metres long and weighed around 6 to 8 tonnes, and its bite was stronger than that of any other known land animal. Its arms were small for its body. It lived in what is now Canada and the USA about 68 to 66 million years ago, at the very end of the Cretaceous.",
+      "pl": "Tyrannosaurus rex był ogromnym, groźnym mięsożernym dinozaurem. Dorosłe osobniki miały 11–12 metrów długości i ważyły około 6–8 ton, a jego ugryzienie było silniejsze niż u jakiegokolwiek innego znanego zwierzęcia lądowego. Jego przednie kończyny były małe w stosunku do ciała. Żył na terenie dzisiejszej Kanady i USA około 68–66 milionów lat temu, u samego schyłku kredy."
     },
     "sourceIds": ["hutchinson-2011", "nhm-tyrannosaurus"]
   },
@@ -75,7 +86,8 @@
       "commonsFile": "File:Tyrannosaurus rex skeleton (cast of specimen MOR 555) at Cleveland Museum of Natural History.jpg",
       "kind": "skeleton-mount",
       "alt": {
-        "en": "Cast of the Tyrannosaurus rex skeleton MOR 555, the “Wankel rex”, at the Cleveland Museum of Natural History."
+        "en": "Cast of the Tyrannosaurus rex skeleton MOR 555, the “Wankel rex”, at the Cleveland Museum of Natural History.",
+        "pl": "Odlew szkieletu Tyrannosaurus rex MOR 555, zwanego „Wankel rex”, w Cleveland Museum of Natural History."
       }
     }
   ],
@@ -110,7 +122,17 @@
       "doi": "10.1371/journal.pone.0026037",
       "url": "https://doi.org/10.1371/journal.pone.0026037",
       "accessed": "2026-11-20"
+    },
+    {
+      "id": "benson-2014",
+      "title": "Rates of dinosaur body mass evolution indicate 170 million years of sustained ecological innovation on the avian stem lineage",
+      "authors": "Benson R.B.J., Campione N.E., Carrano M.T., Mannion P.D., Sullivan C., Upchurch P., Evans D.C.",
+      "year": 2014,
+      "publisher": "PLOS Biology 12(5): e1001853",
+      "doi": "10.1371/journal.pbio.1001853",
+      "url": "https://doi.org/10.1371/journal.pbio.1001853",
+      "accessed": "2026-11-22"
     }
   ],
-  "lastReviewed": "2026-11-20"
+  "lastReviewed": "2026-11-22"
 }

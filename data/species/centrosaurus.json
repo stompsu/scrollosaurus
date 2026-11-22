@@ -1,0 +1,182 @@
+{
+  "slug": "centrosaurus",
+  "scientificName": "Centrosaurus apertus",
+  "genus": "Centrosaurus",
+  "nameMeaning": {
+    "text": {
+      "en": "sharp pointed lizard",
+      "pl": "ostro zakończony jaszczur"
+    },
+    "sourceIds": ["nhm"]
+  },
+  "group": "ceratopsia",
+  "groupSourceIds": ["pbdb-taxa", "nhm"],
+  "isDinosaur": true,
+  "taxonomy": {
+    "status": "valid",
+    "note": {
+      "en": "PBDB treats several names as junior synonyms of C. apertus, including Monoclonius dawsoni, M. flexus, M. cutleri and Centrosaurus longirostris.",
+      "pl": "PBDB traktuje kilka nazw jako młodsze synonimy C. apertus, w tym Monoclonius dawsoni, M. flexus, M. cutleri i Centrosaurus longirostris."
+    },
+    "sourceIds": ["pbdb-synonyms"]
+  },
+  "diet": {
+    "value": "herbivore",
+    "confidence": "established",
+    "sourceIds": ["nhm", "pbdb-taxa"]
+  },
+  "timeRange": {
+    "startMa": 76.47,
+    "endMa": 74.44,
+    "sourceIds": ["ramezani-2022", "eberth-hilda", "pbdb-occs", "pbdb-opinions", "nhm"],
+    "note": {
+      "en": "Formation-dated: the Ma values are the U–Pb-dated base and top of the Dinosaur Park Formation (Ramezani et al. 2022), which yields most C. apertus fossils, so the range is broader than the species itself; the Hilda mega-bonebed, for example, lies in the lower 25 m of the formation (Eberth). PBDB also lists records from the upper Oldman Formation, which would be slightly older. NHM gives 76–74 Ma.",
+      "pl": "Na podstawie datowania formacji: wartości w mln lat to datowane metodą U–Pb spąg i strop formacji Dinosaur Park (Ramezani i in. 2022), z której pochodzi większość skamieniałości C. apertus, więc zakres jest szerszy niż czas istnienia samego gatunku; na przykład megazłoże kości koło Hildy leży w dolnych 25 m formacji (Eberth). PBDB wymienia też rekordy z górnej części formacji Oldman, które byłyby nieco starsze. NHM podaje 76–74 mln lat temu."
+    }
+  },
+  "periods": ["cretaceous"],
+  "size": {
+    "lengthM": {
+      "value": [6, 6],
+      "sourceIds": ["nhm"],
+      "note": {
+        "en": "Single museum figure (NHM Dino Directory); method not stated.",
+        "pl": "Jedyna wartość muzealna (NHM Dino Directory); metody nie podano."
+      }
+    },
+    "massKg": {
+      "value": [1000, 2500],
+      "sourceIds": ["nhm", "benson-2014"],
+      "note": {
+        "en": "2,500 kg is the peer-reviewed estimate of Benson et al. (2014), scaled from the thickness (circumference) of the upper arm and thigh bones; its standard error is 0.135 log10(kg). 1,000 kg is the NHM Dino Directory figure, whose basis the page does not give.",
+        "pl": "2500 kg to recenzowane oszacowanie Bensona i in. (2014), wyliczone na podstawie grubości (obwodu) kości ramienia i uda; jego błąd standardowy wynosi 0,135 log10(kg). 1000 kg to wartość z Dino Directory NHM, której podstawy strona nie podaje."
+      }
+    }
+  },
+  "locations": [
+    {
+      "continent": "north-america",
+      "countryCode": "CA",
+      "formation": "Dinosaur Park",
+      "sourceIds": ["pbdb-occs", "eberth-hilda"]
+    },
+    {
+      "continent": "north-america",
+      "countryCode": "CA",
+      "formation": "Oldman",
+      "sourceIds": ["pbdb-occs"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "Lambe",
+    "year": 1905,
+    "note": {
+      "en": "PBDB gives the authority as Lambe 1905, for his paper on the frill bones of Centrosaurus apertus and Monoclonius canadensis. PBDB records of Centrosaurus sp. from Montana and Colorado are not referred to C. apertus and are not used here.",
+      "pl": "PBDB podaje jako autora Lambe’a (1905), za jego pracą o kościach kryzy Centrosaurus apertus i Monoclonius canadensis. Rekordy Centrosaurus sp. z Montany i Kolorado w PBDB nie są przypisane do C. apertus i nie zostały tu uwzględnione."
+    },
+    "sourceIds": ["pbdb-synonyms", "pbdb-opinions", "pbdb-occs"]
+  },
+  "summary": {
+    "text": {
+      "en": "Centrosaurus, the 'sharp pointed lizard', was a plant-eating horned dinosaur (ceratopsian) about 6 metres long. It had one horn on its snout and spines around the back of its neck frill. It lived in Alberta, Canada, about 76 to 74 million years ago. Near the town of Hilda, rocks hold the bones of a few thousand Centrosaurus, probably a huge herd overwhelmed by a flood.",
+      "pl": "Centrosaurus, czyli „ostro zakończony jaszczur”, był roślinożernym dinozaurem rogatym (ceratopsem) o długości około 6 metrów. Miał jeden róg na pysku i kolce wokół tylnej krawędzi kryzy. Żył w Albercie w Kanadzie, około 76–74 milionów lat temu. W pobliżu miejscowości Hilda skały kryją kości kilku tysięcy osobników Centrosaurus – prawdopodobnie ogromnego stada, które zginęło w powodzi."
+    },
+    "sourceIds": ["nhm", "ramezani-2022", "eberth-hilda"]
+  },
+  "funFacts": [
+    {
+      "text": {
+        "en": "The Hilda mega-bonebed is made of at least 14 bonebeds spread over at least 2.3 square kilometres. It shows that Centrosaurus lived in herds, perhaps thousands strong.",
+        "pl": "Megazłoże kości koło Hildy składa się z co najmniej 14 złóż kostnych rozciągniętych na obszarze co najmniej 2,3 kilometra kwadratowego. Pokazuje ono, że Centrosaurus żył w stadach, być może liczących tysiące osobników."
+      },
+      "sourceIds": ["eberth-hilda"]
+    }
+  ],
+  "famous": false,
+  "images": [
+    {
+      "commonsFile": "File:Centrosaurus.png",
+      "kind": "life-reconstruction",
+      "alt": {
+        "en": "Life reconstruction of Centrosaurus.",
+        "pl": "Rekonstrukcja przyżyciowa Centrosaurus."
+      }
+    }
+  ],
+  "uncertain": [
+    {
+      "field": "size.massKg",
+      "note": {
+        "en": "The two estimates differ by a factor of 2.5: 2,500 kg from limb-bone scaling (Benson et al. 2014) and 1,000 kg from the NHM, which does not state its method.",
+        "pl": "Oba oszacowania różnią się 2,5-krotnie: 2500 kg na podstawie skalowania kości kończyn (Benson i in. 2014) oraz 1000 kg według NHM, które nie podaje metody."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "nhm",
+      "title": "Centrosaurus | Dino Directory",
+      "publisher": "Natural History Museum, London",
+      "url": "https://www.nhm.ac.uk/discover/dino-directory/centrosaurus.html",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "ramezani-2022",
+      "title": "Calibrating the zenith of dinosaur diversity in the Campanian of the Western Interior Basin by CA-ID-TIMS U–Pb geochronology",
+      "authors": "Ramezani, J.; Beveridge, T. L.; Rogers, R. R.; Eberth, D. A.; Roberts, E. M.",
+      "year": 2022,
+      "publisher": "Scientific Reports 12: 16026",
+      "doi": "10.1038/s41598-022-19896-w",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9512893/",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "eberth-hilda",
+      "title": "Alberta Hilda Dinosaur Mega-Bonebed",
+      "authors": "Eberth, D. A.",
+      "year": 2011,
+      "publisher": "The Canadian Encyclopedia",
+      "url": "https://thecanadianencyclopedia.ca/en/article/alberta-hilda-dinosaur-mega-bonebed",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "benson-2014",
+      "title": "Rates of dinosaur body mass evolution indicate 170 million years of sustained ecological innovation on the avian stem lineage",
+      "authors": "Benson R.B.J., Campione N.E., Carrano M.T., Mannion P.D., Sullivan C., Upchurch P., Evans D.C.",
+      "year": 2014,
+      "publisher": "PLOS Biology 12(5): e1001853",
+      "doi": "10.1371/journal.pbio.1001853",
+      "url": "https://doi.org/10.1371/journal.pbio.1001853",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-synonyms",
+      "title": "Centrosaurus apertus (taxon 63911) and its synonyms",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/list.json?name=Centrosaurus%20apertus&rel=synonyms&show=attr,ref",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-opinions",
+      "title": "Taxonomic opinions on Centrosaurus apertus",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/opinions.json?name=Centrosaurus%20apertus&show=basis,ref",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-taxa",
+      "title": "Taxon records with classification and ecospace for Centrosaurus and other genera",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/list.json?name=Rapetosaurus,Rajasaurus,Antarctopelta,Hypsilophodon,Magyarosaurus,Hatzegopteryx,Centrosaurus,Chasmosaurus,Stegoceras,Borealopelta&show=attr,class,ecospace",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-occs",
+      "title": "Occurrences of Centrosaurus, Chasmosaurus and Stegoceras (stratigraphy and location)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Centrosaurus,Chasmosaurus,Stegoceras&show=strat,loc",
+      "accessed": "2026-11-22"
+    }
+  ],
+  "lastReviewed": "2026-11-22"
+}

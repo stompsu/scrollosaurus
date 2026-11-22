@@ -1,0 +1,143 @@
+{
+  "slug": "euoplocephalus",
+  "scientificName": "Euoplocephalus tutus",
+  "genus": "Euoplocephalus",
+  "nameMeaning": {
+    "text": {
+      "en": "Well-armoured head",
+      "pl": "dobrze opancerzona głowa"
+    },
+    "sourceIds": ["nhm-euoplocephalus"]
+  },
+  "group": "ankylosauria",
+  "groupSourceIds": ["nhm-euoplocephalus", "pbdb-taxon", "arbour-currie-2013"],
+  "isDinosaur": true,
+  "taxonomy": {
+    "status": "valid",
+    "note": {
+      "en": "Arbour and Currie (2013) split material long referred to E. tutus: Anodontosaurus lambei (mainly Horseshoe Canyon Formation), Scolosaurus cutleri (mainly Two Medicine Formation, Montana) and Dyoplosaurus acutosquameus are again separate. Revised Euoplocephalus is mainly from the Dinosaur Park Formation of Alberta.",
+      "pl": "Arbour i Currie (2013) podzielili materiał przez długi czas przypisywany E. tutus: Anodontosaurus lambei (głównie formacja Horseshoe Canyon), Scolosaurus cutleri (głównie formacja Two Medicine w Montanie) i Dyoplosaurus acutosquameus znów są osobnymi taksonami. Euoplocephalus w nowym ujęciu pochodzi głównie z formacji Dinosaur Park w Albercie."
+    },
+    "sourceIds": ["arbour-currie-2013"]
+  },
+  "diet": {
+    "value": "herbivore",
+    "confidence": "established",
+    "sourceIds": ["nhm-euoplocephalus"]
+  },
+  "timeRange": {
+    "startMa": 76,
+    "endMa": 72.2,
+    "sourceIds": ["nhm-euoplocephalus", "arbour-currie-2013", "pbdb-occurrences"],
+    "note": {
+      "en": "The start (about 76 Ma) is given by both NHM and Arbour and Currie (2013). The end is the ICS top of the Campanian (72.2 Ma), because after the 2013 revision E. tutus is known from Campanian rocks only (Dinosaur Park Formation); PBDB dates all E. tutus records to the Campanian. NHM's end of 70 Ma and the older 76–67 Ma range include material now referred to other genera.",
+      "pl": "Początek (około 76 mln lat temu) podają zarówno NHM, jak i Arbour i Currie (2013). Koniec to górna granica kampanu według ICS (72,2 mln lat temu), bo po rewizji z 2013 roku E. tutus jest znany tylko ze skał kampanu (formacja Dinosaur Park); PBDB datuje wszystkie rekordy E. tutus na kampan. Koniec według NHM (70 mln lat temu) i starszy zakres 76–67 mln lat temu obejmują materiał przypisany dziś innym rodzajom."
+    }
+  },
+  "periods": ["cretaceous"],
+  "size": {
+    "lengthM": {
+      "value": [7, 7],
+      "sourceIds": ["nhm-euoplocephalus"],
+      "note": {
+        "en": "Single museum estimate (NHM).",
+        "pl": "Jedyne oszacowanie muzealne (NHM)."
+      }
+    },
+    "massKg": {
+      "value": [2000, 2000],
+      "sourceIds": ["nhm-euoplocephalus"],
+      "note": {
+        "en": "Single museum estimate (NHM); mass estimates vary widely between methods.",
+        "pl": "Jedyne oszacowanie muzealne (NHM); szacunki masy bardzo się różnią w zależności od metody."
+      }
+    }
+  },
+  "locations": [
+    {
+      "continent": "north-america",
+      "countryCode": "CA",
+      "formation": "Dinosaur Park",
+      "sourceIds": ["arbour-currie-2013", "pbdb-occurrences"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "Lambe",
+    "year": 1902,
+    "note": {
+      "en": "Lambe first named the species Stereocephalus tutus in 1902; the genus was later renamed Euoplocephalus.",
+      "pl": "Lambe nazwał ten gatunek najpierw Stereocephalus tutus w 1902 roku; rodzaj otrzymał później nową nazwę Euoplocephalus."
+    },
+    "sourceIds": ["pbdb-taxon", "pbdb-occurrences"]
+  },
+  "summary": {
+    "text": {
+      "en": "Euoplocephalus was an ankylosaur, a heavily armoured plant eater about seven metres long that walked on four legs. Bony spikes and armour plates covered its back, and it had a bony club at the end of its tail for defence. It lived in the Late Cretaceous, and after a 2013 review of its fossils it is known mainly from the Dinosaur Park Formation of Alberta, Canada.",
+      "pl": "Euoplocephalus był ankylozaurem – silnie opancerzonym roślinożercą o długości około siedmiu metrów, który chodził na czterech nogach. Jego grzbiet pokrywały kostne kolce i płyty pancerza, a na końcu ogona miał kostną buławę do obrony. Żył w późnej kredzie, a po przeglądzie jego skamieniałości z 2013 roku wiadomo, że pochodzi głównie z formacji Dinosaur Park w Albercie w Kanadzie."
+    },
+    "sourceIds": ["nhm-euoplocephalus", "arbour-currie-2013"]
+  },
+  "funFacts": [
+    {
+      "text": {
+        "en": "Ankylosaur fossils from Alberta and Montana that were once all called Euoplocephalus are now split among four genera, after a 2013 study.",
+        "pl": "Skamieniałości ankylozaurów z Alberty i Montany, które niegdyś w całości nazywano Euoplocephalus, po badaniu z 2013 roku podzielono między cztery rodzaje."
+      },
+      "sourceIds": ["arbour-currie-2013"]
+    }
+  ],
+  "famous": false,
+  "images": [
+    {
+      "commonsFile": "File:Euoplocephalus tutus pelvis at American Museum of Natural History.jpg",
+      "kind": "fossil",
+      "alt": {
+        "en": "Fossil pelvis of Euoplocephalus tutus on display at the American Museum of Natural History.",
+        "pl": "Skamieniała miednica Euoplocephalus tutus na wystawie w American Museum of Natural History."
+      }
+    }
+  ],
+  "uncertain": [
+    {
+      "field": "timeRange",
+      "note": {
+        "en": "No dated range for revised E. tutus was found; the end uses the top of the Campanian, so the true last appearance may be older.",
+        "pl": "Nie znaleziono datowanego zakresu dla E. tutus w nowym ujęciu; koniec zakresu opiera się na górnej granicy kampanu, więc rzeczywiste ostatnie pojawienie się może być starsze."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "nhm-euoplocephalus",
+      "title": "Euoplocephalus | Dino Directory",
+      "publisher": "Natural History Museum, London",
+      "url": "https://www.nhm.ac.uk/discover/dino-directory/euoplocephalus.html",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "pbdb-taxon",
+      "title": "Euoplocephalus tutus (taxon 52912)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=52912",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "pbdb-occurrences",
+      "title": "Fossil occurrences of Euoplocephalus",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Euoplocephalus&show=strat,loc",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "arbour-currie-2013",
+      "title": "Euoplocephalus tutus and the diversity of ankylosaurid dinosaurs in the Late Cretaceous of Alberta, Canada, and Montana, USA",
+      "authors": "Arbour, V. M.; Currie, P. J.",
+      "year": 2013,
+      "publisher": "PLoS ONE",
+      "doi": "10.1371/journal.pone.0062421",
+      "url": "https://doi.org/10.1371/journal.pone.0062421",
+      "accessed": "2026-11-21"
+    }
+  ],
+  "lastReviewed": "2026-11-21"
+}

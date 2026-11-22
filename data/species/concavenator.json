@@ -1,0 +1,164 @@
+{
+  "slug": "concavenator",
+  "scientificName": "Concavenator corcovatus",
+  "genus": "Concavenator",
+  "nameMeaning": {
+    "text": {
+      "en": "hunter from Cuenca",
+      "pl": "łowca z Cuenki"
+    },
+    "sourceIds": ["nhm-concavenator"]
+  },
+  "group": "allosauroidea",
+  "groupSourceIds": ["ortega-2010", "pbdb-concavenator-corcovatus", "kellermann-2025"],
+  "isDinosaur": true,
+  "taxonomy": {
+    "status": "valid"
+  },
+  "diet": {
+    "value": "carnivore",
+    "confidence": "established",
+    "sourceIds": ["nhm-concavenator", "pbdb-concavenator-corcovatus"]
+  },
+  "timeRange": {
+    "startMa": 125.77,
+    "endMa": 121.4,
+    "sourceIds": ["pbdb-concavenator-occs", "herrera-castillo-2022", "nhm-concavenator"],
+    "note": {
+      "en": "Las Hoyas is upper Barremian. The bounds are the ICS Barremian stage ages used by PBDB (125.77-121.4 Ma). Herrera-Castillo et al. (2022) cite a microfossil-based date of 129-127 Ma for the Las Hoyas basin, and NHM gives 130-125 Ma; both are older than the Barremian on the current ICS chart.",
+      "pl": "Stanowisko Las Hoyas pochodzi z górnego barremu. Granice to wiek piętra barrem według ICS, używany przez PBDB (125,77–121,4 mln lat temu). Herrera-Castillo i in. (2022) przytaczają datowanie basenu Las Hoyas na podstawie mikroskamieniałości na 129–127 mln lat temu, a NHM podaje 130–125 mln lat temu; obie wartości są starsze niż barrem w obecnej tabeli ICS."
+    }
+  },
+  "periods": ["cretaceous"],
+  "size": {
+    "lengthM": {
+      "value": [6, 6],
+      "sourceIds": ["ortega-2010", "nhm-concavenator"],
+      "note": {
+        "en": "About six metres, from the description of the nearly complete holotype (abstract) and NHM.",
+        "pl": "Około sześciu metrów według opisu niemal kompletnego holotypu (streszczenie) i NHM."
+      }
+    }
+  },
+  "locations": [
+    {
+      "continent": "europe",
+      "countryCode": "ES",
+      "formation": "La Huérguina",
+      "sourceIds": ["pbdb-concavenator-occs", "herrera-castillo-2022"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "Ortega, Escaso & Sanz",
+    "year": 2010,
+    "note": {
+      "en": "Known from a nearly complete skeleton from the Las Hoyas site in Cuenca, Spain.",
+      "pl": "Znany z niemal kompletnego szkieletu ze stanowiska Las Hoyas w prowincji Cuenca w Hiszpanii."
+    },
+    "sourceIds": ["ortega-2010", "pbdb-concavenator-corcovatus", "nhm-concavenator"]
+  },
+  "summary": {
+    "text": {
+      "en": "Concavenator was a six-metre meat-eating dinosaur from Las Hoyas in Cuenca, Spain, in the Early Cretaceous. Two very tall spines on its back, near the hips, formed a hump, and nobody knows what it was for. Its nearly complete skeleton shows it was an early member of the carcharodontosaur group. Small bumps on its forearm bone may be quill knobs, where feathers attach, but some scientists think they are muscle scars.",
+      "pl": "Concavenator był sześciometrowym mięsożernym dinozaurem z Las Hoyas w prowincji Cuenca w Hiszpanii, żyjącym we wczesnej kredzie. Dwa bardzo wysokie wyrostki kręgów na grzbiecie, blisko bioder, tworzyły garb, którego przeznaczenia nikt nie zna. Jego niemal kompletny szkielet pokazuje, że był wczesnym przedstawicielem karcharodontozaurów. Drobne guzki na kości przedramienia mogą być brodawkami lotkowymi, do których przyczepiają się pióra, ale niektórzy naukowcy uważają je za ślady przyczepów mięśni."
+    },
+    "sourceIds": ["ortega-2010", "nhm-concavenator", "herrera-castillo-2022"]
+  },
+  "funFacts": [
+    {
+      "text": {
+        "en": "Experts do not know whether its tall back spines held up a fleshy hump or a thin sail.",
+        "pl": "Specjaliści nie wiedzą, czy wysokie wyrostki na jego grzbiecie podtrzymywały mięsisty garb, czy cienki żagiel."
+      },
+      "sourceIds": ["nhm-concavenator"]
+    },
+    {
+      "text": {
+        "en": "Fossil evidence suggests that parts of its body were covered in scaly skin.",
+        "pl": "Skamieniałości wskazują, że część jego ciała pokrywała łuskowata skóra."
+      },
+      "sourceIds": ["nhm-concavenator"]
+    }
+  ],
+  "famous": false,
+  "images": [
+    {
+      "commonsFile": "File:Concavenator display Japan.jpg",
+      "kind": "skeleton-mount",
+      "alt": {
+        "en": "Mounted skeleton of Concavenator.",
+        "pl": "Zmontowany szkielet Concavenator."
+      }
+    }
+  ],
+  "uncertain": [
+    {
+      "field": "size.massKg",
+      "note": {
+        "en": "No verified mass estimate found.",
+        "pl": "Nie znaleziono zweryfikowanego oszacowania masy."
+      }
+    },
+    {
+      "field": "timeRange",
+      "note": {
+        "en": "Sources disagree: ICS Barremian bounds (125.77-121.4 Ma, used here), a 129-127 Ma microfossil date for Las Hoyas, and NHM's 130-125 Ma. No radiometric date was found.",
+        "pl": "Źródła się różnią: granice barremu według ICS (125,77–121,4 mln lat temu, użyte tutaj), datowanie Las Hoyas na podstawie mikroskamieniałości na 129–127 mln lat temu oraz 130–125 mln lat temu według NHM. Nie znaleziono datowania radiometrycznego."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "ortega-2010",
+      "title": "A bizarre, humped Carcharodontosauria (Theropoda) from the Lower Cretaceous of Spain",
+      "authors": "Ortega F., Escaso F., Sanz J.L.",
+      "year": 2010,
+      "publisher": "Nature 467: 203-206",
+      "doi": "10.1038/nature09181",
+      "url": "https://doi.org/10.1038/nature09181",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "herrera-castillo-2022",
+      "title": "A theropod trackway providing evidence of a pathological foot from the exceptional locality of Las Hoyas (upper Barremian, Serranía de Cuenca, Spain)",
+      "authors": "Herrera-Castillo C.M., Moratalla J.J., Belaústegui Z., Marugán-Lobón J., Martín-Abad H., Nebreda S.M., López-Archilla A.I., Buscalioni A.D.",
+      "year": 2022,
+      "publisher": "PLOS ONE e0264406",
+      "doi": "10.1371/journal.pone.0264406",
+      "url": "https://doi.org/10.1371/journal.pone.0264406",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "kellermann-2025",
+      "title": "Re-evaluation of the Bahariya Formation carcharodontosaurid (Dinosauria: Theropoda) and its implications for allosauroid phylogeny",
+      "authors": "Kellermann M., Cuesta E., Rauhut O.W.M.",
+      "year": 2025,
+      "publisher": "PLOS ONE 20(1): e0311096",
+      "doi": "10.1371/journal.pone.0311096",
+      "url": "https://doi.org/10.1371/journal.pone.0311096",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "nhm-concavenator",
+      "title": "Concavenator | Dino Directory",
+      "publisher": "Natural History Museum, London",
+      "url": "https://www.nhm.ac.uk/discover/dino-directory/Concavenator.html",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-concavenator-corcovatus",
+      "title": "Concavenator corcovatus (taxon 170754)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/single.json?name=Concavenator%20corcovatus&show=attr,parent",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-concavenator-occs",
+      "title": "Occurrences of Concavenator (stratigraphy and location)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Concavenator&show=strat,loc",
+      "accessed": "2026-11-22"
+    }
+  ],
+  "lastReviewed": "2026-11-22"
+}

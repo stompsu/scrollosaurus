@@ -1,0 +1,152 @@
+{
+  "slug": "corythosaurus",
+  "scientificName": "Corythosaurus casuarius",
+  "genus": "Corythosaurus",
+  "nameMeaning": {
+    "text": {
+      "en": "Corinthian helmet lizard",
+      "pl": "jaszczur w hełmie korynckim"
+    },
+    "sourceIds": ["nhm-corythosaurus"]
+  },
+  "group": "hadrosauridae",
+  "groupSourceIds": ["nhm-corythosaurus", "pbdb-taxon"],
+  "isDinosaur": true,
+  "taxonomy": {
+    "status": "valid",
+    "note": {
+      "en": "PBDB treats several names once given to separate species, such as Corythosaurus bicristatus, C. brevicristatus, C. excavatus and Tetragonosaurus cranibrevis, as C. casuarius.",
+      "pl": "PBDB traktuje kilka nazw nadanych niegdyś osobnym gatunkom, takich jak Corythosaurus bicristatus, C. brevicristatus, C. excavatus i Tetragonosaurus cranibrevis, jako C. casuarius."
+    },
+    "sourceIds": ["pbdb-occurrences"]
+  },
+  "diet": {
+    "value": "herbivore",
+    "confidence": "established",
+    "sourceIds": ["nhm-corythosaurus"]
+  },
+  "timeRange": {
+    "startMa": 76,
+    "endMa": 74,
+    "sourceIds": ["nhm-corythosaurus", "pbdb-occurrences"],
+    "note": {
+      "en": "NHM gives 76–74 Ma. PBDB dates the occurrences of C. casuarius only to the Campanian, mostly the Late Campanian (stage 83.6–72.2 Ma).",
+      "pl": "NHM podaje 76–74 mln lat temu. PBDB datuje występowania C. casuarius tylko na kampan, głównie późny kampan (piętro 83,6–72,2 mln lat temu)."
+    }
+  },
+  "periods": ["cretaceous"],
+  "size": {
+    "lengthM": {
+      "value": [10, 10],
+      "sourceIds": ["nhm-corythosaurus"],
+      "note": {
+        "en": "Single museum estimate (NHM).",
+        "pl": "Jedyne oszacowanie muzealne (NHM)."
+      }
+    }
+  },
+  "locations": [
+    {
+      "continent": "north-america",
+      "countryCode": "CA",
+      "formation": "Dinosaur Park",
+      "sourceIds": ["pbdb-occurrences"]
+    },
+    {
+      "continent": "north-america",
+      "countryCode": "CA",
+      "formation": "Oldman",
+      "sourceIds": ["pbdb-occurrences"]
+    },
+    {
+      "continent": "north-america",
+      "countryCode": "US",
+      "formation": "Two Medicine",
+      "sourceIds": ["pbdb-occurrences", "nhm-corythosaurus"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "Brown",
+    "year": 1914,
+    "sourceIds": ["nhm-corythosaurus", "pbdb-taxon"]
+  },
+  "summary": {
+    "text": {
+      "en": "Corythosaurus was a duck-billed dinosaur about ten metres long. Its name means 'Corinthian helmet lizard'. It ate plants and lived about 76 to 74 million years ago, in the Late Cretaceous, in what is now Alberta, Canada, and Montana, USA. It was a lambeosaurine, one of the hadrosaurs with greatly enlarged nasal passages in their crests, which scientists have suggested worked as echo chambers for calls.",
+      "pl": "Corythosaurus był dinozaurem kaczodziobym o długości około dziesięciu metrów. Jego nazwa oznacza „jaszczur w hełmie korynckim”. Jadł rośliny i żył około 76–74 milionów lat temu, w późnej kredzie, na terenie dzisiejszej Alberty w Kanadzie i Montany w USA. Był lambeozaurem – jednym z hadrozaurów z bardzo powiększonymi przewodami nosowymi w grzebieniach, które według naukowców mogły służyć jako komory rezonansowe do wydawania odgłosów."
+    },
+    "sourceIds": ["nhm-corythosaurus", "pbdb-occurrences", "bell-2014"]
+  },
+  "famous": false,
+  "images": [
+    {
+      "commonsFile": "File:Corythosaurus intermedius ROM.jpg",
+      "kind": "skeleton-mount",
+      "note": {
+        "en": "This skeleton is Corythosaurus intermedius, another species of the same genus.",
+        "pl": "Ten szkielet to Corythosaurus intermedius, inny gatunek z tego samego rodzaju."
+      },
+      "alt": {
+        "en": "Skeleton of Corythosaurus intermedius with a growth series of Corythosaurus skulls at the Royal Ontario Museum.",
+        "pl": "Szkielet Corythosaurus intermedius wraz z serią wzrostową czaszek Corythosaurus w Royal Ontario Museum."
+      }
+    }
+  ],
+  "uncertain": [
+    {
+      "field": "size.massKg",
+      "note": {
+        "en": "No mass estimate found in a source we could verify.",
+        "pl": "Nie znaleziono oszacowania masy w źródle, które moglibyśmy zweryfikować."
+      }
+    },
+    {
+      "field": "timeRange",
+      "note": {
+        "en": "The 76–74 Ma range is the NHM figure; no verified radiometric range for C. casuarius alone was found.",
+        "pl": "Zakres 76–74 mln lat temu to wartość NHM; nie znaleziono zweryfikowanego zakresu radiometrycznego dla samego C. casuarius."
+      }
+    },
+    {
+      "field": "locations",
+      "note": {
+        "en": "The only Montana record of C. casuarius in PBDB is a specimen first named Procheneosaurus erectofrons and later referred to this species; other Montana records are identified only to the genus.",
+        "pl": "Jedyny rekord C. casuarius z Montany w PBDB to okaz pierwotnie nazwany Procheneosaurus erectofrons i później przypisany do tego gatunku; pozostałe rekordy z Montany oznaczono tylko do rodzaju."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "nhm-corythosaurus",
+      "title": "Corythosaurus | Dino Directory",
+      "publisher": "Natural History Museum, London",
+      "url": "https://www.nhm.ac.uk/discover/dino-directory/corythosaurus.html",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "pbdb-taxon",
+      "title": "Corythosaurus casuarius (taxon 56403)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=56403",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "pbdb-occurrences",
+      "title": "Fossil occurrences of Corythosaurus",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Corythosaurus&show=strat,loc",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "bell-2014",
+      "title": "A mummified duck-billed dinosaur with a soft-tissue cock's comb",
+      "authors": "Bell, P. R.; Fanti, F.; Currie, P. J.; Arbour, V. M.",
+      "year": 2014,
+      "publisher": "Current Biology",
+      "doi": "10.1016/j.cub.2013.11.008",
+      "url": "https://doi.org/10.1016/j.cub.2013.11.008",
+      "accessed": "2026-11-21"
+    }
+  ],
+  "lastReviewed": "2026-11-21"
+}

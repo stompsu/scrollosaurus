@@ -1,0 +1,175 @@
+{
+  "slug": "ouranosaurus",
+  "scientificName": "Ouranosaurus nigeriensis",
+  "genus": "Ouranosaurus",
+  "nameMeaning": {
+    "text": {
+      "en": "brave lizard",
+      "pl": "dzielny jaszczur"
+    },
+    "sourceIds": ["taquet-1976"]
+  },
+  "group": "ornithopoda",
+  "groupSourceIds": ["taquet-1976", "bertozzo-2017", "pbdb-taxon"],
+  "isDinosaur": true,
+  "taxonomy": {
+    "status": "valid",
+    "note": {
+      "en": "Taquet (1976) described it as an iguanodontid. Bertozzo et al. (2017) classify it in Iguanodontia (Styracosterna) and note that it is no longer considered an iguanodontid.",
+      "pl": "Taquet (1976) opisał go jako iguanodontyda. Bertozzo i in. (2017) zaliczają go do Iguanodontia (Styracosterna) i zaznaczają, że nie jest już uznawany za iguanodontyda."
+    },
+    "sourceIds": ["taquet-1976", "bertozzo-2017"]
+  },
+  "diet": {
+    "value": "herbivore",
+    "confidence": "established",
+    "sourceIds": ["pbdb-ecospace", "taquet-1976"]
+  },
+  "timeRange": {
+    "startMa": 115,
+    "endMa": 105,
+    "sourceIds": ["sereno-1999", "taquet-1976", "bertozzo-2017", "pbdb-occs"],
+    "note": {
+      "en": "Taquet (1976) placed the skeletons in level GAD 5, the upper Elrhaz Formation, and dated it to the Aptian. Sereno et al. (1999) give about 115–105 Ma (Aptian–Albian) for these Gadoufaoua horizons, whose fauna includes Ouranosaurus. Bertozzo et al. (2017) list the age as Aptian, Aptian–Albian or possibly Barremian, and PBDB records span the Aptian–Albian (121.4–100.5 Ma).",
+      "pl": "Taquet (1976) umieścił szkielety na poziomie GAD 5, w górnej części formacji Elrhaz, i datował go na apt. Sereno i in. (1999) podają około 115–105 mln lat temu (apt–alb) dla tych poziomów w Gadoufaoua, których fauna obejmuje Ouranosaurus. Bertozzo i in. (2017) określają wiek jako apt, apt–alb lub być może barrem, a rekordy PBDB obejmują apt–alb (121,4–100,5 mln lat temu)."
+    }
+  },
+  "periods": ["cretaceous"],
+  "size": {
+    "lengthM": {
+      "value": [7, 7],
+      "sourceIds": ["taquet-1976", "bertozzo-2017"],
+      "note": {
+        "en": "Taquet (1976) gave a length of 7 m for the holotype. Bertozzo et al. (2017) point out that the length of a fully grown adult is unknown; the subadult skeleton mounted in Venice measures about 6.5 m to its last preserved tail vertebra.",
+        "pl": "Taquet (1976) podał dla holotypu długość 7 m. Bertozzo i in. (2017) zwracają uwagę, że długość w pełni dorosłego osobnika nie jest znana; niedorosły szkielet zmontowany w Wenecji mierzy około 6,5 m do ostatniego zachowanego kręgu ogonowego."
+      }
+    }
+  },
+  "locations": [
+    {
+      "continent": "africa",
+      "countryCode": "NE",
+      "formation": "Elrhaz",
+      "sourceIds": ["taquet-1976", "pbdb-occs"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "Taquet",
+    "year": 1976,
+    "note": {
+      "en": "Taquet found the first skeleton near Gadoufaoua in January 1965, and it was collected in 1966. He used the name publicly from 1972, without a description (PBDB dates the name to 1972); the formal description followed in 1976.",
+      "pl": "Taquet znalazł pierwszy szkielet w pobliżu Gadoufaoua w styczniu 1965 roku, a wydobyto go w 1966 roku. Nazwy używał publicznie od 1972 roku, bez opisu (PBDB datuje nazwę na 1972 rok); formalny opis ukazał się w 1976 roku."
+    },
+    "sourceIds": ["taquet-1976", "bertozzo-2017", "pbdb-taxon"]
+  },
+  "summary": {
+    "text": {
+      "en": "Ouranosaurus was a plant-eating ornithopod about 7 metres long that lived in what is now Niger, in the Sahara, roughly 115 to 105 million years ago. Its long, low skull ended in a duck-like bill. The spines on its back were extremely tall, up to about 63 centimetres, and may have held up a sail or a hump. Scientists think it was most likely used for display.",
+      "pl": "Ouranosaurus był roślinożernym ornitopodem o długości około 7 metrów, który żył na terenie dzisiejszego Nigru, na Saharze, mniej więcej 115–105 milionów lat temu. Jego długa, niska czaszka kończyła się dziobem przypominającym kaczy. Wyrostki na grzbiecie były niezwykle wysokie, do około 63 centymetrów, i mogły podtrzymywać żagiel albo garb. Naukowcy uważają, że najprawdopodobniej służył on do pokazów."
+    },
+    "sourceIds": ["taquet-1976", "bertozzo-2017", "sereno-1999", "pbdb-ecospace"]
+  },
+  "funFacts": [
+    {
+      "text": {
+        "en": "Its name comes from 'ourane', an Arabic word meaning courage or recklessness, which the Tuareg of Niger use for the sand monitor lizard.",
+        "pl": "Jego nazwa pochodzi od słowa „ourane” – arabskiego wyrazu oznaczającego odwagę lub brawurę, którym Tuaregowie z Nigru nazywają warana pustynnego."
+      },
+      "sourceIds": ["taquet-1976"]
+    },
+    {
+      "text": {
+        "en": "Its back spines were up to 3.9 times as tall as the vertebrae they grew from, the greatest stretch then known in any ornithopod.",
+        "pl": "Wyrostki na jego grzbiecie były do 3,9 raza wyższe niż trzony kręgów, z których wyrastały – najbardziej wydłużone spośród znanych wówczas u ornitopodów."
+      },
+      "sourceIds": ["taquet-1976"]
+    }
+  ],
+  "famous": false,
+  "images": [
+    {
+      "commonsFile": "File:Ouranosaurus - Museo di Storia Naturale di Venezia.jpg",
+      "kind": "skeleton-mount",
+      "alt": {
+        "en": "Mounted skeleton of Ouranosaurus nigeriensis in the Museo di Storia Naturale di Venezia.",
+        "pl": "Zmontowany szkielet Ouranosaurus nigeriensis w Museo di Storia Naturale di Venezia."
+      }
+    }
+  ],
+  "uncertain": [
+    {
+      "field": "size.massKg",
+      "note": {
+        "en": "No mass estimate found in a source we could verify.",
+        "pl": "Nie znaleziono oszacowania masy w źródle, które moglibyśmy zweryfikować."
+      }
+    },
+    {
+      "field": "timeRange",
+      "note": {
+        "en": "The age of the Elrhaz Formation is not radiometrically fixed in the sources used: estimates range from Aptian to Aptian–Albian, possibly Barremian.",
+        "pl": "Wiek formacji Elrhaz nie jest w wykorzystanych źródłach ustalony radiometrycznie: oszacowania wahają się od aptu do aptu–albu, być może barremu."
+      }
+    },
+    {
+      "field": "locations",
+      "note": {
+        "en": "PBDB also lists cf. Ouranosaurus from Cameroon and Sudan and an Ouranosaurus nigeriensis record from Tunisia. These referrals were not verified and are left out.",
+        "pl": "PBDB wymienia też cf. Ouranosaurus z Kamerunu i Sudanu oraz rekord Ouranosaurus nigeriensis z Tunezji. Tych przypisań nie zweryfikowano i zostały pominięte."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "taquet-1976",
+      "title": "Géologie et paléontologie du gisement de Gadoufaoua (Aptien du Niger), chapter III: Ostéologie d'Ouranosaurus nigeriensis (partial English translation by P. J. Adds, 2002)",
+      "authors": "Taquet, P.",
+      "year": 1976,
+      "publisher": "Cahiers de Paléontologie, CNRS, Paris; translation hosted by the Smithsonian National Museum of Natural History",
+      "url": "https://naturalhistory.si.edu/sites/default/files/media/translated_publications/Taquet_76.pdf",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "bertozzo-2017",
+      "title": "The Venice specimen of Ouranosaurus nigeriensis (Dinosauria, Ornithopoda)",
+      "authors": "Bertozzo, F.; Dalla Vecchia, F. M.; Fabbri, M.",
+      "year": 2017,
+      "publisher": "PeerJ 5: e3403",
+      "doi": "10.7717/peerj.3403",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5480399/",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "sereno-1999",
+      "title": "Cretaceous sauropods from the Sahara and the uneven rate of skeletal evolution among dinosaurs",
+      "authors": "Sereno, P. C.; Beck, A. L.; Dutheil, D. B.; Larsson, H. C. E.; Lyon, G. H.; Moussa, B.; Sadleir, R. W.; Sidor, C. A.; Varricchio, D. J.; Wilson, G. P.; Wilson, J. A.",
+      "year": 1999,
+      "publisher": "Science 286: 1342-1347",
+      "doi": "10.1126/science.286.5443.1342",
+      "url": "https://doi.org/10.1126/science.286.5443.1342",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-taxon",
+      "title": "Ouranosaurus nigeriensis (taxon 52877)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/single.json?name=Ouranosaurus%20nigeriensis&show=attr,class",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-occs",
+      "title": "Occurrences of Ouranosaurus (stratigraphy and location)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Ouranosaurus&show=strat,loc",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-ecospace",
+      "title": "Ecology (ecospace) entries for Ouranosaurus and other genera",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/list.json?name=Ouranosaurus,Amargasaurus,Pachyrhinosaurus,Tarbosaurus,Majungasaurus,Elasmosaurus,Rhamphorhynchus,Nigersaurus,Suchomimus,Australovenator&show=attr,ecospace",
+      "accessed": "2026-11-22"
+    }
+  ],
+  "lastReviewed": "2026-11-22"
+}

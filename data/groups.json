@@ -303,6 +303,24 @@
       "name": "Mosasauridae",
       "isDinosaur": false,
       "sourceIds": ["pbdb-mosasauridae"]
+    },
+    {
+      "id": "ichthyosauria",
+      "name": "Ichthyosauria",
+      "isDinosaur": false,
+      "sourceIds": ["pbdb-ichthyosauria"]
+    },
+    {
+      "id": "silesauridae",
+      "name": "Silesauridae",
+      "isDinosaur": false,
+      "sourceIds": ["pbdb-silesauridae", "nesbitt-2010"]
+    },
+    {
+      "id": "dicynodontia",
+      "name": "Dicynodontia",
+      "isDinosaur": false,
+      "sourceIds": ["pbdb-dicynodontia", "sulej-niedzwiedzki-2019"]
     }
   ],
   "sources": [
@@ -587,6 +605,47 @@
       "accessed": "2026-11-20"
     },
     {
+      "id": "pbdb-ichthyosauria",
+      "title": "Ichthyosauria (taxon 36543)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/single.json?name=Ichthyosauria&show=attr,app,parent",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "pbdb-silesauridae",
+      "title": "Silesauridae (taxon 163003)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/single.json?name=Silesauridae&show=attr,app,parent",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-dicynodontia",
+      "title": "Dicynodontia (taxon 38996)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/single.json?name=Dicynodontia&show=attr,app,parent",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "nesbitt-2010",
+      "title": "Ecologically distinct dinosaurian sister group shows early diversification of Ornithodira",
+      "authors": "Nesbitt, S. J.; Sidor, C. A.; Irmis, R. B.; Angielczyk, K. D.; Smith, R. M. H.; Tsuji, L. A.",
+      "year": 2010,
+      "publisher": "Nature",
+      "doi": "10.1038/nature08718",
+      "url": "https://doi.org/10.1038/nature08718",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "sulej-niedzwiedzki-2019",
+      "title": "An elephant-sized Late Triassic synapsid with erect limbs",
+      "authors": "Sulej, T.; Niedźwiedzki, G.",
+      "year": 2019,
+      "publisher": "Science",
+      "doi": "10.1126/science.aal4853",
+      "url": "https://doi.org/10.1126/science.aal4853",
+      "accessed": "2026-11-22"
+    },
+    {
       "id": "baron-2017",
       "title": "A new hypothesis of dinosaur relationships and early dinosaur evolution",
       "authors": "Baron, M. G.; Norman, D. B.; Barrett, P. M.",
@@ -657,5 +716,5 @@
       "accessed": "2026-11-20"
     }
   ],
-  "lastReviewed": "2026-11-20"
+  "lastReviewed": "2026-11-22"
 }

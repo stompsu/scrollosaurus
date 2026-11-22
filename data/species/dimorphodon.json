@@ -1,0 +1,198 @@
+{
+  "slug": "dimorphodon",
+  "scientificName": "Dimorphodon macronyx",
+  "genus": "Dimorphodon",
+  "nameMeaning": {
+    "text": {
+      "en": "two kinds of teeth",
+      "pl": "dwa rodzaje zębów"
+    },
+    "sourceIds": ["padian-1983"]
+  },
+  "group": "pterosauria",
+  "groupSourceIds": ["pbdb-dimorphodon-macronyx", "witton-2015"],
+  "isDinosaur": false,
+  "taxonomy": {
+    "status": "valid"
+  },
+  "diet": {
+    "value": "carnivore",
+    "confidence": "debated",
+    "sourceIds": ["bestwick-2020", "bestwick-2018", "witton-2015", "pbdb-dimorphodon-macronyx"],
+    "note": {
+      "en": "Its diet has been read as insects (Buckland 1829), fish or small land vertebrates. Tooth microwear (Bestwick et al. 2020) suggests it ate mostly vertebrates, though some soft invertebrates cannot be ruled out. PBDB lists it as a piscivore.",
+      "pl": "Jego dietę interpretowano jako owady (Buckland 1829), ryby lub małe kręgowce lądowe. Mikroślady zużycia zębów (Bestwick i in. 2020) wskazują, że jadł głównie kręgowce, choć nie można wykluczyć pewnej ilości miękkich bezkręgowców. PBDB klasyfikuje go jako rybożercę."
+    }
+  },
+  "timeRange": {
+    "startMa": 201.4,
+    "endMa": 192.9,
+    "sourceIds": ["pbdb-dimorphodon-occs", "padian-1983", "witton-2015", "geolsoc-dimorphodon"],
+    "note": {
+      "en": "PBDB dates the holotype record from the Blue Lias to the Hettangian-early Sinemurian; the bounds are ICS stage ages (base of the Hettangian 201.4 Ma, top of the Sinemurian 192.9 Ma). Padian (1983) gives a Hettangian age, Witton (2015) calls it Sinemurian, and the Geological Society gives about 200 million years.",
+      "pl": "PBDB datuje okaz holotypowy z formacji Blue Lias na hettang–wczesny synemur; granice to wiek pięter według ICS (dolna granica hettangu 201,4 mln lat temu, górna granica synemuru 192,9 mln lat temu). Padian (1983) podaje wiek hettangu, Witton (2015) – synemuru, a Geological Society – około 200 mln lat."
+    }
+  },
+  "periods": ["jurassic"],
+  "size": {
+    "wingspanM": {
+      "value": [1.4, 1.45],
+      "sourceIds": ["geolsoc-dimorphodon", "padian-1983"],
+      "note": {
+        "en": "The Geological Society gives about 1.4 m; Padian (1983) estimates almost 1.45 m for the largest Natural History Museum specimen. Juveniles at Yale had wingspans of about 0.96-1.2 m.",
+        "pl": "Geological Society podaje około 1,4 m; Padian (1983) szacuje prawie 1,45 m dla największego okazu z Natural History Museum. Młode osobniki z Yale miały rozpiętość skrzydeł około 0,96–1,2 m."
+      }
+    }
+  },
+  "locations": [
+    {
+      "continent": "europe",
+      "countryCode": "GB",
+      "formation": "Blue Lias",
+      "sourceIds": ["pbdb-dimorphodon-occs", "geolsoc-dimorphodon"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "Buckland",
+    "year": 1829,
+    "note": {
+      "en": "Mary Anning dug up the first skeleton, without its head, at Lyme Regis in December 1828. Buckland named it Pterodactylus macronyx in 1829. After a skull was found in 1858, Owen gave it its own genus, Dimorphodon (dated 1859 in PBDB).",
+      "pl": "Mary Anning wydobyła pierwszy szkielet, bez głowy, w Lyme Regis w grudniu 1828 roku. Buckland nazwał go w 1829 roku Pterodactylus macronyx. Po znalezieniu czaszki w 1858 roku Owen utworzył dla niego osobny rodzaj Dimorphodon (według PBDB w 1859 roku)."
+    },
+    "sourceIds": ["geolsoc-dimorphodon", "padian-1983", "pbdb-dimorphodon-macronyx"]
+  },
+  "summary": {
+    "text": {
+      "en": "Dimorphodon was a flying reptile called a pterosaur, not a dinosaur. It lived in what is now England about 200 million years ago, early in the Jurassic. Its wings spanned about 1.4 metres, and its name refers to the two kinds of teeth in its lower jaw. Mary Anning dug up the first skeleton at Lyme Regis in 1828. Its worn teeth suggest it mostly hunted small animals with backbones.",
+      "pl": "Dimorphodon był latającym gadem z grupy pterozaurów, a nie dinozaurem. Żył na terenie dzisiejszej Anglii około 200 mln lat temu, we wczesnej jurze. Rozpiętość jego skrzydeł wynosiła około 1,4 metra, a nazwa nawiązuje do dwóch rodzajów zębów w żuchwie. Pierwszy szkielet wydobyła Mary Anning w Lyme Regis w 1828 roku. Ślady zużycia na zębach wskazują, że polował głównie na małe kręgowce."
+    },
+    "sourceIds": ["geolsoc-dimorphodon", "padian-1983", "bestwick-2020"]
+  },
+  "funFacts": [
+    {
+      "text": {
+        "en": "The earliest pterosaurs had disproportionately large heads: an adult Dimorphodon skull was about 20 centimetres long, on an animal with wings under 1.5 metres across.",
+        "pl": "Najwcześniejsze pterozaury miały nieproporcjonalnie duże głowy: czaszka dorosłego Dimorphodon miała około 20 centymetrów długości, a rozpiętość skrzydeł zwierzęcia nie przekraczała 1,5 metra."
+      },
+      "sourceIds": ["bestwick-2018", "padian-1983"]
+    },
+    {
+      "text": {
+        "en": "Its deep, rounded snout has been compared with the beak of the Atlantic puffin.",
+        "pl": "Jego wysoki, zaokrąglony pysk porównywano do dzioba maskonura."
+      },
+      "sourceIds": ["bestwick-2018"]
+    },
+    {
+      "text": {
+        "en": "It was probably good on the ground too: a 2015 study describes it as able to run, walk and climb as well as fly.",
+        "pl": "Prawdopodobnie dobrze radził sobie też na ziemi: badanie z 2015 roku opisuje go jako zwierzę zdolne do biegania, chodzenia i wspinania się, a także do lotu."
+      },
+      "sourceIds": ["witton-2015"]
+    }
+  ],
+  "famous": false,
+  "images": [
+    {
+      "commonsFile": "File:Dimorphodon mount white background.jpg",
+      "kind": "skeleton-mount",
+      "alt": {
+        "en": "Mounted skeleton of the Early Jurassic pterosaur Dimorphodon.",
+        "pl": "Zmontowany szkielet pterozaura Dimorphodon z wczesnej jury."
+      }
+    }
+  ],
+  "uncertain": [
+    {
+      "field": "size.lengthM",
+      "note": {
+        "en": "No verified body length found.",
+        "pl": "Nie znaleziono zweryfikowanej długości ciała."
+      }
+    },
+    {
+      "field": "size.massKg",
+      "note": {
+        "en": "No verified mass estimate for Dimorphodon found; Witton (2015) gives only a general range for early pterosaurs.",
+        "pl": "Nie znaleziono zweryfikowanego oszacowania masy dla Dimorphodon; Witton (2015) podaje jedynie ogólny przedział dla wczesnych pterozaurów."
+      }
+    },
+    {
+      "field": "diet",
+      "note": {
+        "en": "Insects, fish and small vertebrates have all been proposed; the most recent tooth-wear study favours vertebrates.",
+        "pl": "Proponowano owady, ryby i małe kręgowce; najnowsze badanie zużycia zębów wskazuje na kręgowce."
+      }
+    },
+    {
+      "field": "timeRange",
+      "note": {
+        "en": "Only stage-level ages are available, and sources differ between Hettangian and Sinemurian.",
+        "pl": "Dostępny jest tylko wiek na poziomie pięter, a źródła wahają się między hettangiem a synemurem."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "padian-1983",
+      "title": "Osteology and functional morphology of Dimorphodon macronyx (Buckland) (Pterosauria: Rhamphorhynchoidea) based on new material in the Yale Peabody Museum",
+      "authors": "Padian K.",
+      "year": 1983,
+      "publisher": "Postilla 189, Peabody Museum of Natural History, Yale University",
+      "url": "https://elischolar.library.yale.edu/peabody_museum_natural_history_postilla/189",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "witton-2015",
+      "title": "Were early pterosaurs inept terrestrial locomotors?",
+      "authors": "Witton M.P.",
+      "year": 2015,
+      "publisher": "PeerJ 3: e1018",
+      "doi": "10.7717/peerj.1018",
+      "url": "https://doi.org/10.7717/peerj.1018",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "bestwick-2018",
+      "title": "Pterosaur dietary hypotheses: a review of ideas and approaches",
+      "authors": "Bestwick J., Unwin D.M., Butler R.J., Henderson D.M., Purnell M.A.",
+      "year": 2018,
+      "publisher": "Biological Reviews 93(4): 2021-2048",
+      "doi": "10.1111/brv.12431",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6849529/",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "bestwick-2020",
+      "title": "Dietary diversity and evolution of the earliest flying vertebrates revealed by dental microwear texture analysis",
+      "authors": "Bestwick J., Unwin D.M., Butler R.J., Purnell M.A.",
+      "year": 2020,
+      "publisher": "Nature Communications 11: 5293",
+      "doi": "10.1038/s41467-020-19022-2",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7595196/",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "geolsoc-dimorphodon",
+      "title": "Dimorphodon macronyx",
+      "publisher": "The Geological Society of London",
+      "url": "https://geolsoc.org.uk/the-library/online-exhibitions/mary-anning-and-the-geological-society/pterosaurs-coprolites-and-sepia/dimorphodon-macronyx",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-dimorphodon-macronyx",
+      "title": "Dimorphodon macronyx (taxon 95809)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/single.json?name=Dimorphodon%20macronyx&show=attr,parent",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-dimorphodon-occs",
+      "title": "Occurrences of Dimorphodon macronyx (stratigraphy and location)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Dimorphodon%20macronyx&show=strat,loc",
+      "accessed": "2026-11-22"
+    }
+  ],
+  "lastReviewed": "2026-11-22"
+}

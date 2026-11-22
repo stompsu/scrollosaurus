@@ -1,4 +1,4 @@
-import { DIET_CONFIDENCE_LABELS, DIET_LABELS, NOT_A_DINOSAUR } from '@/lib/labels';
+import { useTranslation } from 'react-i18next';
 import type { Diet, Species } from '@/lib/schemas/species';
 
 /** Simple 16 px line icons; the badge always pairs one with text, never colour alone. */
@@ -44,13 +44,13 @@ function DietIconPaths({ diet }: { diet: Diet }) {
   }
 }
 
-export function DietIcon({ diet }: { diet: Diet }) {
+export function DietIcon({ diet, size = 16 }: { diet: Diet; size?: number }) {
   return (
     <svg
       className="sc-diet-icon"
       viewBox="0 0 16 16"
-      width="16"
-      height="16"
+      width={size}
+      height={size}
       fill="none"
       stroke="currentColor"
       strokeWidth="1.5"
@@ -71,19 +71,22 @@ interface DietBadgeProps {
 
 /** Diet badge: icon, label and (when not established) the confidence, e.g. "Piscivore (debated)". */
 export function DietBadge({ diet, confidence }: DietBadgeProps) {
-  const qualifier = confidence === undefined ? undefined : DIET_CONFIDENCE_LABELS[confidence];
+  const { t } = useTranslation();
+  const qualifier =
+    confidence === undefined || confidence === 'established' ? undefined : t(`diet.${confidence}`);
   return (
     <span className="sc-badge" data-diet={diet}>
       <DietIcon diet={diet} />
       <span>
-        {DIET_LABELS[diet].label}
+        {t(`diet.${diet}`)}
         {qualifier && <span className="text-text-muted"> ({qualifier})</span>}
       </span>
     </span>
   );
 }
 
-/** The "not a dinosaur" tag on pterosaurs and marine reptiles. */
+/** The "not a dinosaur" tag on pterosaurs, marine reptiles and other non-dinosaurs. */
 export function NotADinosaurTag() {
-  return <span className="sc-tag">{NOT_A_DINOSAUR}</span>;
+  const { t } = useTranslation();
+  return <span className="sc-tag">{t('timeline.notADinosaur')}</span>;
 }

@@ -1,0 +1,176 @@
+{
+  "slug": "caudipteryx",
+  "scientificName": "Caudipteryx zoui",
+  "genus": "Caudipteryx",
+  "nameMeaning": {
+    "text": {
+      "en": "tail feather",
+      "pl": "pióro ogonowe"
+    },
+    "sourceIds": ["nhm-caudipteryx"]
+  },
+  "group": "oviraptorosauria",
+  "groupSourceIds": ["pbdb-genera", "nhm-caudipteryx"],
+  "isDinosaur": true,
+  "taxonomy": {
+    "status": "valid",
+    "note": {
+      "en": "C. zoui is the type species. PBDB lists a second species, C. dongi, also from the Yixian Formation of Liaoning. NHM places the genus in Caudipterygidae, within Oviraptorosauria.",
+      "pl": "C. zoui to gatunek typowy. PBDB wymienia drugi gatunek, C. dongi, również z formacji Yixian w prowincji Liaoning. NHM umieszcza rodzaj w rodzinie Caudipterygidae, w obrębie Oviraptorosauria."
+    },
+    "sourceIds": ["pbdb-occs", "nhm-caudipteryx"]
+  },
+  "diet": {
+    "value": "omnivore",
+    "confidence": "debated",
+    "sourceIds": ["nhm-caudipteryx", "zanno-makovicky-2011", "pbdb-genera"],
+    "note": {
+      "en": "It had small, weak teeth and has been found with gizzard stones; NHM suggests it probably ate insects and maybe plants, and PBDB lists it as an omnivore. Zanno and Makovicky (2011) find a succession of increasing specialisation towards plant-eating in oviraptorosaurs.",
+      "pl": "Miał małe, słabe zęby i znaleziono go z gastrolitami (kamieniami żołądkowymi); według NHM jadł prawdopodobnie owady i być może rośliny, a PBDB wymienia go jako wszystkożercę. Zanno i Makovicky (2011) stwierdzają u owiraptorozaurów stopniowo rosnącą specjalizację w kierunku roślinożerności."
+    }
+  },
+  "timeRange": {
+    "startMa": 125.755,
+    "startUncertaintyMa": 0.061,
+    "endMa": 124.122,
+    "endUncertaintyMa": 0.048,
+    "sourceIds": ["zhong-2021", "pbdb-occs", "nhm-caudipteryx"],
+    "note": {
+      "en": "PBDB places C. zoui in the Yixian Formation of Liaoning. The range is the U-Pb bracket for the whole Yixian Formation in the Jin-Yang basin (Zhong et al. 2021). PBDB's stage-based range is wider (125.77–119.57 Ma); NHM gives 125–122 Ma.",
+      "pl": "PBDB umieszcza C. zoui w formacji Yixian w prowincji Liaoning. Podany zakres to przedział datowania U-Pb dla całej formacji Yixian w basenie Jin-Yang (Zhong i in. 2021). Zakres w PBDB, oparty na piętrach, jest szerszy (125,77–119,57 mln lat temu); NHM podaje 125–122 mln lat temu."
+    }
+  },
+  "periods": ["cretaceous"],
+  "size": {
+    "lengthM": {
+      "value": [1, 1],
+      "sourceIds": ["nhm-caudipteryx"],
+      "note": {
+        "en": "Museum figure.",
+        "pl": "Wartość muzealna."
+      }
+    },
+    "massKg": {
+      "value": [2, 2],
+      "sourceIds": ["nhm-caudipteryx"],
+      "note": {
+        "en": "Museum figure.",
+        "pl": "Wartość muzealna."
+      }
+    }
+  },
+  "locations": [
+    {
+      "continent": "asia",
+      "countryCode": "CN",
+      "formation": "Yixian",
+      "sourceIds": ["pbdb-occs"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "Ji, Currie, Norell & Ji",
+    "year": 1998,
+    "note": {
+      "en": "Named in a 1998 paper describing two feathered dinosaurs from north-eastern China.",
+      "pl": "Nazwany w pracy z 1998 roku, opisującej dwa pierzaste dinozaury z północno-wschodnich Chin."
+    },
+    "sourceIds": ["ji-1998", "pbdb-genera"]
+  },
+  "summary": {
+    "text": {
+      "en": "Caudipteryx was a small, bird-like feathered dinosaur about a metre long that lived about 125 million years ago in what is now north-eastern China. Its name means 'tail feather': it had a fan of feathers at the end of its tail. It had small, weak teeth and swallowed small stones, perhaps to help digest its food. It probably ate insects and maybe plants as well.",
+      "pl": "Caudipteryx był małym, podobnym do ptaka pierzastym dinozaurem długości około metra, który żył około 125 milionów lat temu na terenie dzisiejszych północno-wschodnich Chin. Jego nazwa oznacza „pióro ogonowe”: na końcu ogona miał wachlarz piór. Miał małe, słabe zęby i połykał drobne kamienie, być może ułatwiające trawienie pokarmu. Prawdopodobnie jadł owady, a może także rośliny."
+    },
+    "sourceIds": ["nhm-caudipteryx", "zhong-2021", "pbdb-occs"]
+  },
+  "funFacts": [
+    {
+      "text": {
+        "en": "Although Caudipteryx looked very bird-like, it lived later than Archaeopteryx.",
+        "pl": "Choć Caudipteryx bardzo przypominał ptaka, żył później niż Archaeopteryx."
+      },
+      "sourceIds": ["nhm-caudipteryx"]
+    }
+  ],
+  "famous": false,
+  "images": [
+    {
+      "commonsFile": "File:Caudipteryx zoui 443.jpg",
+      "kind": "fossil",
+      "alt": {
+        "en": "Fossil of Caudipteryx zoui at the Jura-Museum in Eichstätt.",
+        "pl": "Skamieniałość Caudipteryx zoui w Jura-Museum w Eichstätt."
+      }
+    }
+  ],
+  "uncertain": [
+    {
+      "field": "diet",
+      "note": {
+        "en": "Gizzard stones and weak teeth are read as signs of insects and perhaps plants (NHM); how much of each it ate is uncertain.",
+        "pl": "Gastrolity i słabe zęby uznaje się za oznaki jedzenia owadów i być może roślin (NHM); nie wiadomo, w jakich proporcjach."
+      }
+    },
+    {
+      "field": "timeRange",
+      "note": {
+        "en": "The U-Pb bracket is for the Yixian Formation in the Jin-Yang basin; the exact bed of the C. zoui specimens was not verified.",
+        "pl": "Przedział U-Pb dotyczy formacji Yixian w basenie Jin-Yang; nie zweryfikowano dokładnej warstwy, z której pochodzą okazy C. zoui."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "ji-1998",
+      "title": "Two feathered dinosaurs from northeastern China",
+      "authors": "Ji, Q.; Currie, P. J.; Norell, M. A.; Ji, S.-A.",
+      "year": 1998,
+      "publisher": "Nature 393: 753-761",
+      "doi": "10.1038/31635",
+      "url": "https://doi.org/10.1038/31635",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "zanno-makovicky-2011",
+      "title": "Herbivorous ecomorphology and specialization patterns in theropod dinosaur evolution",
+      "authors": "Zanno, L. E.; Makovicky, P. J.",
+      "year": 2011,
+      "publisher": "PNAS 108(1): 232-237",
+      "doi": "10.1073/pnas.1011924108",
+      "url": "https://doi.org/10.1073/pnas.1011924108",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "zhong-2021",
+      "title": "High-precision geochronological constraints on the duration of 'Dinosaur Pompeii' and the Yixian Formation",
+      "authors": "Zhong, Y.; Huyskens, M. H.; Yin, Q.-Z.; Wang, Y.; Ma, Q.; Xu, Y.-G.",
+      "year": 2021,
+      "publisher": "National Science Review 8(6): nwab063",
+      "doi": "10.1093/nsr/nwab063",
+      "url": "https://doi.org/10.1093/nsr/nwab063",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "nhm-caudipteryx",
+      "title": "Caudipteryx | Dino Directory",
+      "publisher": "Natural History Museum, London",
+      "url": "https://www.nhm.ac.uk/discover/dino-directory/caudipteryx.html",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-genera",
+      "title": "Taxon entries for Caudipteryx (taxon 66065) and other genera",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/list.json?name=Saturnalia,Silesaurus,Lisowicia,Anchiornis,Yutyrannus,Caudipteryx,Citipati,Deinocheirus,Opisthocoelicaudia,Saltasaurus,Patagotitan&show=attr,app,parent,class,ecospace",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-occs",
+      "title": "Occurrences of Caudipteryx and other genera (stratigraphy and location)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Saturnalia,Silesaurus,Lisowicia,Anchiornis,Yutyrannus,Caudipteryx&show=strat,loc",
+      "accessed": "2026-11-22"
+    }
+  ],
+  "lastReviewed": "2026-11-22"
+}

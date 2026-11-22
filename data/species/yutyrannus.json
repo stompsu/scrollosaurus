@@ -1,0 +1,169 @@
+{
+  "slug": "yutyrannus",
+  "scientificName": "Yutyrannus huali",
+  "genus": "Yutyrannus",
+  "nameMeaning": {
+    "text": {
+      "en": "beautiful feathered tyrant",
+      "pl": "piękny pierzasty tyran"
+    },
+    "sourceIds": ["ausmus-yutyrannus", "nhm-yutyrannus"]
+  },
+  "group": "coelurosauria",
+  "groupSourceIds": ["xu-2012", "pbdb-genera", "nhm-yutyrannus"],
+  "isDinosaur": true,
+  "taxonomy": {
+    "status": "valid",
+    "note": {
+      "en": "An early (basal) tyrannosauroid (Xu et al. 2012); PBDB places it in Proceratosauridae. It is filed under Coelurosauria because the group tree has no tyrannosauroid node outside Tyrannosauridae. The Australian Museum lists it in Tyrannosauridae, which disagrees with the describers.",
+      "pl": "Wczesny (bazalny) tyranozauroid (Xu i in. 2012); PBDB umieszcza go w rodzinie Proceratosauridae. Zaliczono go tu do celurozaurów, ponieważ drzewo grup nie ma gałęzi dla tyranozauroidów spoza Tyrannosauridae. Australian Museum zalicza go do Tyrannosauridae, co jest niezgodne z opinią autorów opisu."
+    },
+    "sourceIds": ["xu-2012", "pbdb-genera", "ausmus-yutyrannus"]
+  },
+  "diet": {
+    "value": "carnivore",
+    "confidence": "established",
+    "sourceIds": ["nhm-yutyrannus", "ausmus-yutyrannus", "pbdb-genera"]
+  },
+  "timeRange": {
+    "startMa": 125.755,
+    "startUncertaintyMa": 0.061,
+    "endMa": 124.122,
+    "endUncertaintyMa": 0.048,
+    "sourceIds": ["zhong-2021", "xu-2012", "pbdb-occs", "ausmus-yutyrannus"],
+    "note": {
+      "en": "Yutyrannus comes from the Yixian Formation of Liaoning (Xu et al. 2012; PBDB). The range is the U-Pb bracket for the whole Yixian Formation in the Jin-Yang basin (Zhong et al. 2021). PBDB's stage-based range is wider (125.77–119.57 Ma); the Australian Museum gives about 125 Ma for the fossil layer.",
+      "pl": "Yutyrannus pochodzi z formacji Yixian w prowincji Liaoning (Xu i in. 2012; PBDB). Podany zakres to przedział datowania U-Pb dla całej formacji Yixian w basenie Jin-Yang (Zhong i in. 2021). Zakres w PBDB, oparty na piętrach, jest szerszy (125,77–119,57 mln lat temu); Australian Museum podaje około 125 mln lat dla warstwy ze skamieniałościami."
+    }
+  },
+  "periods": ["cretaceous"],
+  "size": {
+    "lengthM": {
+      "value": [7.5, 9],
+      "sourceIds": ["nhm-yutyrannus", "ausmus-yutyrannus"],
+      "note": {
+        "en": "NHM gives 7.5 m; the Australian Museum gives 9 m. The figures in the original paper could not be checked.",
+        "pl": "NHM podaje 7,5 m, a Australian Museum – 9 m. Wartości z pierwotnej publikacji nie dało się sprawdzić."
+      }
+    },
+    "massKg": {
+      "value": [1100, 1400],
+      "sourceIds": ["nhm-yutyrannus", "ausmus-yutyrannus"],
+      "note": {
+        "en": "NHM gives 1,100 kg; the Australian Museum gives about 1,400 kg. The figures in the original paper could not be checked.",
+        "pl": "NHM podaje 1100 kg, a Australian Museum – około 1400 kg. Wartości z pierwotnej publikacji nie dało się sprawdzić."
+      }
+    }
+  },
+  "locations": [
+    {
+      "continent": "asia",
+      "countryCode": "CN",
+      "formation": "Yixian",
+      "sourceIds": ["pbdb-occs", "xu-2012"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "Xu et al.",
+    "year": 2012,
+    "note": {
+      "en": "Described by Xu Xing and eight co-authors from three nearly complete skeletons representing two growth stages.",
+      "pl": "Opisany przez Xu Xinga i ośmiu współautorów na podstawie trzech niemal kompletnych szkieletów, reprezentujących dwa stadia wzrostu."
+    },
+    "sourceIds": ["xu-2012", "pbdb-genera"]
+  },
+  "summary": {
+    "text": {
+      "en": "Yutyrannus was an early relative of Tyrannosaurus that lived about 125 million years ago in what is now north-eastern China. Up to about 9 metres long and weighing more than a tonne, it is the largest dinosaur known with direct evidence of feathers. Long, simple filaments, up to 20 centimetres long, covered its body. Unlike later tyrannosaurs, it had longer arms and three fingers on each hand.",
+      "pl": "Yutyrannus był wczesnym krewnym Tyrannosaurus, który żył około 125 milionów lat temu na terenie dzisiejszych północno-wschodnich Chin. Mierzył do około 9 metrów długości i ważył ponad tonę – to największy dinozaur, u którego znamy bezpośrednie dowody na obecność piór. Jego ciało pokrywały długie, proste włókna o długości do 20 centymetrów. W przeciwieństwie do późniejszych tyranozaurów miał dłuższe przednie kończyny i po trzy palce w każdej dłoni."
+    },
+    "sourceIds": ["xu-2012", "nhm-yutyrannus", "ausmus-yutyrannus", "zhong-2021", "pbdb-occs"]
+  },
+  "funFacts": [
+    {
+      "text": {
+        "en": "Yutyrannus was about 40 times heavier than Beipiaosaurus, the previous record holder among feathered dinosaurs.",
+        "pl": "Yutyrannus był około 40 razy cięższy od Beipiaosaurus, poprzedniego rekordzisty wśród pierzastych dinozaurów."
+      },
+      "sourceIds": ["ausmus-yutyrannus"]
+    },
+    {
+      "text": {
+        "en": "It had a shallow crest along the top of its head and two short horns near its eyes.",
+        "pl": "Wzdłuż wierzchu głowy miał niski grzebień, a w pobliżu oczu dwa krótkie rogi."
+      },
+      "sourceIds": ["nhm-yutyrannus"]
+    }
+  ],
+  "famous": false,
+  "images": [
+    {
+      "commonsFile": "File:Yutyrannus huali.png",
+      "kind": "life-reconstruction",
+      "alt": {
+        "en": "Life reconstruction of Yutyrannus huali by Tom Parker (2016).",
+        "pl": "Rekonstrukcja przyżyciowa Yutyrannus huali autorstwa Toma Parkera (2016)."
+      }
+    }
+  ],
+  "uncertain": [
+    {
+      "field": "timeRange",
+      "note": {
+        "en": "The U-Pb bracket is for the Yixian Formation in the Jin-Yang basin; we did not verify where in the formation the Yutyrannus quarry lies.",
+        "pl": "Przedział U-Pb dotyczy formacji Yixian w basenie Jin-Yang; nie sprawdziliśmy, w której części formacji leży kamieniołom z Yutyrannus."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "xu-2012",
+      "title": "A gigantic feathered dinosaur from the Lower Cretaceous of China",
+      "authors": "Xu, X.; Wang, K.; Zhang, K.; Ma, Q.; Xing, L.; Sullivan, C.; Hu, D.; Cheng, S.; Wang, S.",
+      "year": 2012,
+      "publisher": "Nature 484: 92-95",
+      "doi": "10.1038/nature10906",
+      "url": "https://doi.org/10.1038/nature10906",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "zhong-2021",
+      "title": "High-precision geochronological constraints on the duration of 'Dinosaur Pompeii' and the Yixian Formation",
+      "authors": "Zhong, Y.; Huyskens, M. H.; Yin, Q.-Z.; Wang, Y.; Ma, Q.; Xu, Y.-G.",
+      "year": 2021,
+      "publisher": "National Science Review 8(6): nwab063",
+      "doi": "10.1093/nsr/nwab063",
+      "url": "https://doi.org/10.1093/nsr/nwab063",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "nhm-yutyrannus",
+      "title": "Yutyrannus | Dino Directory",
+      "publisher": "Natural History Museum, London",
+      "url": "https://www.nhm.ac.uk/discover/dino-directory/yutyrannus.html",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "ausmus-yutyrannus",
+      "title": "Yutyrannus huali",
+      "publisher": "Australian Museum",
+      "url": "https://australian.museum/learn/dinosaurs/fact-sheets/yutyrannus-huali/",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-genera",
+      "title": "Taxon entries for Yutyrannus (taxon 230946) and other genera",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/list.json?name=Saturnalia,Silesaurus,Lisowicia,Anchiornis,Yutyrannus,Caudipteryx,Citipati,Deinocheirus,Opisthocoelicaudia,Saltasaurus,Patagotitan&show=attr,app,parent,class,ecospace",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-occs",
+      "title": "Occurrences of Yutyrannus and other genera (stratigraphy and location)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Saturnalia,Silesaurus,Lisowicia,Anchiornis,Yutyrannus,Caudipteryx&show=strat,loc",
+      "accessed": "2026-11-22"
+    }
+  ],
+  "lastReviewed": "2026-11-22"
+}

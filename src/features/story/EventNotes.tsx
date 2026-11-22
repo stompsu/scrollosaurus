@@ -1,4 +1,6 @@
 import { formatMaRounded, unitById } from '@/lib/geologic-time';
+import { tr } from '@/lib/i18n';
+import { localize } from '@/lib/locale';
 import type { Events } from '@/lib/schemas/stories';
 import { SourceNotes } from './SourceNotes';
 
@@ -9,14 +11,14 @@ import { SourceNotes } from './SourceNotes';
 export function EventNotes({ events }: { events: Events }) {
   const first = events.events[0];
   const label = first
-    ? `${formatMaRounded(unitById(first.atTopOf).topMa)} million years ago`
-    : 'Timeline notes';
+    ? tr('time.ago', { value: formatMaRounded(unitById(first.atTopOf).topMa) })
+    : '';
   return (
     <section className="sc-events" aria-label={label} data-testid="event-notes">
       {events.events.map((e) => (
         <article key={e.id} className="sc-event" data-event={e.id}>
-          <h2 className="sc-event-title">{e.title.en}</h2>
-          <p>{e.text.en}</p>
+          <h2 className="sc-event-title">{localize(e.title)}</h2>
+          <p>{localize(e.text)}</p>
           <SourceNotes sources={events.sources.filter((s) => e.sourceIds.includes(s.id))} />
         </article>
       ))}

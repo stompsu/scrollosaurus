@@ -1,0 +1,155 @@
+{
+  "slug": "protoceratops",
+  "scientificName": "Protoceratops andrewsi",
+  "genus": "Protoceratops",
+  "nameMeaning": {
+    "text": {
+      "en": "First horned face",
+      "pl": "pierwsza rogata twarz"
+    },
+    "sourceIds": ["nhm-protoceratops"]
+  },
+  "group": "ceratopsia",
+  "groupSourceIds": ["nhm-protoceratops", "pbdb-taxon"],
+  "isDinosaur": true,
+  "taxonomy": {
+    "status": "valid"
+  },
+  "diet": {
+    "value": "herbivore",
+    "confidence": "established",
+    "sourceIds": ["nhm-protoceratops"]
+  },
+  "timeRange": {
+    "startMa": 74,
+    "endMa": 70,
+    "sourceIds": ["nhm-protoceratops", "pbdb-occurrences"],
+    "note": {
+      "en": "NHM gives 74–70 Ma. PBDB dates the occurrences of P. andrewsi (Djadokhta and Baruungoyot formations) only to the Campanian, mostly the Late Campanian (stage 83.6–72.2 Ma).",
+      "pl": "NHM podaje 74–70 mln lat temu. PBDB datuje występowania P. andrewsi (formacje Djadokhta i Baruungoyot) tylko na kampan, głównie późny kampan (piętro 83,6–72,2 mln lat temu)."
+    }
+  },
+  "periods": ["cretaceous"],
+  "size": {
+    "lengthM": {
+      "value": [1.8, 1.8],
+      "sourceIds": ["nhm-protoceratops"],
+      "note": {
+        "en": "Single museum estimate (NHM).",
+        "pl": "Jedyne oszacowanie muzealne (NHM)."
+      }
+    },
+    "massKg": {
+      "value": [400, 400],
+      "sourceIds": ["nhm-protoceratops"],
+      "note": {
+        "en": "Single museum estimate (NHM); mass estimates vary widely between methods.",
+        "pl": "Jedyne oszacowanie muzealne (NHM); szacunki masy bardzo się różnią w zależności od metody."
+      }
+    }
+  },
+  "locations": [
+    {
+      "continent": "asia",
+      "countryCode": "MN",
+      "formation": "Djadokhta",
+      "sourceIds": ["pbdb-occurrences"]
+    },
+    {
+      "continent": "asia",
+      "countryCode": "MN",
+      "formation": "Baruungoyot",
+      "sourceIds": ["pbdb-occurrences"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "Granger & Gregory",
+    "year": 1923,
+    "sourceIds": ["nhm-protoceratops", "pbdb-taxon"]
+  },
+  "summary": {
+    "text": {
+      "en": "Protoceratops was a small, four-legged horned dinosaur, about 1.8 metres long, with a horny beak and shearing teeth for eating plants. It lived in what is now Mongolia about 74 to 70 million years ago, in the Late Cretaceous. One famous fossil preserves a Protoceratops being attacked by a Velociraptor. Studies of its fossil eggs, some with embryos inside, showed that they had soft, leathery shells.",
+      "pl": "Protoceratops był małym, czworonożnym dinozaurem rogatym o długości około 1,8 metra, z rogowym dziobem i tnącymi zębami do jedzenia roślin. Żył na terenie dzisiejszej Mongolii około 74–70 milionów lat temu, w późnej kredzie. Jedna słynna skamieniałość przedstawia Protoceratops atakowanego przez Velociraptor. Badania jego skamieniałych jaj, niektórych z zarodkami w środku, wykazały, że miały miękkie, skórzaste skorupki."
+    },
+    "sourceIds": ["nhm-protoceratops", "pbdb-occurrences", "yale-2020", "norell-2020"]
+  },
+  "funFacts": [
+    {
+      "text": {
+        "en": "The Protoceratops eggs studied in 2020 were the first eggs ever discovered for a horned dinosaur.",
+        "pl": "Jaja Protoceratops zbadane w 2020 roku były pierwszymi jajami dinozaura rogatego, jakie kiedykolwiek odkryto."
+      },
+      "sourceIds": ["yale-2020"]
+    }
+  ],
+  "famous": false,
+  "images": [
+    {
+      "commonsFile": "File:Protoceratops andrewsi skeleton front.JPG",
+      "kind": "fossil",
+      "alt": {
+        "en": "Fossil skeleton of Protoceratops andrewsi seen from the front, photographed at Dinosaurium in Prague.",
+        "pl": "Szkielet kopalny Protoceratops andrewsi widziany z przodu, sfotografowany w Dinosaurium w Pradze."
+      }
+    }
+  ],
+  "uncertain": [
+    {
+      "field": "timeRange",
+      "note": {
+        "en": "The 74–70 Ma range is the NHM figure; PBDB's stage dating of P. andrewsi does not reach the Maastrichtian, so the end may be too young.",
+        "pl": "Zakres 74–70 mln lat temu to wartość NHM; datowanie piętrowe P. andrewsi w PBDB nie sięga mastrychtu, więc koniec zakresu może być zbyt młody."
+      }
+    },
+    {
+      "field": "locations",
+      "note": {
+        "en": "NHM also lists China, but the Chinese Protoceratops records in PBDB belong to a different species, P. hellenikorhinus.",
+        "pl": "NHM wymienia też Chiny, ale chińskie rekordy Protoceratops w PBDB należą do innego gatunku, P. hellenikorhinus."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "nhm-protoceratops",
+      "title": "Protoceratops | Dino Directory",
+      "publisher": "Natural History Museum, London",
+      "url": "https://www.nhm.ac.uk/discover/dino-directory/protoceratops.html",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "pbdb-taxon",
+      "title": "Protoceratops andrewsi (taxon 52824)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=52824",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "pbdb-occurrences",
+      "title": "Fossil occurrences of Protoceratops",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Protoceratops&show=strat,loc",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "norell-2020",
+      "title": "The first dinosaur egg was soft",
+      "authors": "Norell, M. A.; Wiemann, J.; Fabbri, M.; Yu, C.; Marsicano, C. A.; Moore-Nall, A.; Varricchio, D. J.; Pol, D.; Zelenitsky, D. K.",
+      "year": 2020,
+      "publisher": "Nature",
+      "doi": "10.1038/s41586-020-2412-8",
+      "url": "https://doi.org/10.1038/s41586-020-2412-8",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "yale-2020",
+      "title": "Hard news: Early dinosaur eggs were soft, scientists say",
+      "publisher": "Yale University",
+      "year": 2020,
+      "url": "https://news.yale.edu/2020/06/17/hard-news-early-dinosaur-eggs-were-soft-scientists-say",
+      "accessed": "2026-11-21"
+    }
+  ],
+  "lastReviewed": "2026-11-21"
+}

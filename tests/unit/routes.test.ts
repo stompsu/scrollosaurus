@@ -11,7 +11,10 @@ function collectPaths(list: typeof routes): string[] {
 }
 
 describe('static paths', () => {
-  it('lists every named route, so each gets an index.html on GitHub Pages', () => {
-    expect([...collectPaths(routes)].sort()).toEqual([...STATIC_PATHS].sort());
+  it('lists every named route in each language, so each gets an index.html on GitHub Pages', () => {
+    const [polish, english] = routes;
+    expect(polish?.path).toBe('pl');
+    expect([...collectPaths(polish?.children ?? [])].sort()).toEqual([...STATIC_PATHS].sort());
+    expect([...collectPaths(english?.children ?? [])].sort()).toEqual([...STATIC_PATHS].sort());
   });
 });

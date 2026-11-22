@@ -1,0 +1,171 @@
+{
+  "slug": "australovenator",
+  "scientificName": "Australovenator wintonensis",
+  "genus": "Australovenator",
+  "nameMeaning": {
+    "text": {
+      "en": "southern hunter",
+      "pl": "południowy łowca"
+    },
+    "sourceIds": ["hocknull-2009"]
+  },
+  "group": "tetanurae",
+  "groupSourceIds": ["hocknull-2009", "white-2013", "wa-museum", "pbdb-taxon"],
+  "isDinosaur": true,
+  "taxonomy": {
+    "status": "valid"
+  },
+  "diet": {
+    "value": "carnivore",
+    "confidence": "established",
+    "sourceIds": ["hocknull-2009", "wa-museum", "pbdb-ecospace"]
+  },
+  "timeRange": {
+    "startMa": 95,
+    "endMa": 93,
+    "sourceIds": ["white-2013", "tucker-2013", "wa-museum", "hocknull-2009", "pbdb-occs"],
+    "note": {
+      "en": "White et al. (2013) give a Cenomanian age of about 95 Ma for the type site, from zircon dating. Tucker et al. (2013) found that the fossil-rich upper Winton Formation was laid down near or after the Cenomanian–Turonian boundary (93.9 Ma), and the Western Australian Museum gives about 93 Ma. The original description called the beds latest Albian, and PBDB uses Middle Cenomanian–Early Turonian (100.5–89.8 Ma). PBDB also links older Early Cretaceous records from the Wonthaggi and Eumeralla formations to Australovenator; those referrals were not verified and are not used.",
+      "pl": "White i in. (2013) podają dla miejsca znalezienia holotypu wiek cenomański, około 95 mln lat temu, na podstawie datowania cyrkonów. Tucker i in. (2013) ustalili, że bogata w skamieniałości górna część formacji Winton powstała w pobliżu granicy cenomanu i turonu (93,9 mln lat temu) lub później, a Western Australian Museum podaje około 93 mln lat temu. Pierwotny opis określał te warstwy jako najpóźniejszy alb, a PBDB przyjmuje środkowy cenoman–wczesny turon (100,5–89,8 mln lat temu). PBDB łączy z Australovenator także starsze, wczesnokredowe znaleziska z formacji Wonthaggi i Eumeralla; tych przypisań nie zweryfikowano i nie zostały uwzględnione."
+    }
+  },
+  "periods": ["cretaceous"],
+  "size": {
+    "lengthM": {
+      "value": [5, 6],
+      "sourceIds": ["wa-museum"],
+      "note": {
+        "en": "Museum figure (Western Australian Museum); method not stated. The skeleton is incomplete, so the length is an estimate.",
+        "pl": "Wartość muzealna (Western Australian Museum); metody nie podano. Szkielet jest niekompletny, więc długość jest szacunkowa."
+      }
+    }
+  },
+  "locations": [
+    {
+      "continent": "australia",
+      "countryCode": "AU",
+      "formation": "Winton",
+      "sourceIds": ["hocknull-2009", "pbdb-occs"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "Hocknull et al.",
+    "year": 2009,
+    "note": {
+      "en": "Described by Scott Hocknull and six co-authors. The holotype comes from the 'Matilda Site' on Elderslie Station, about 60 km north-west of Winton in central Queensland.",
+      "pl": "Opisany przez Scotta Hocknulla i sześciu współautorów. Holotyp pochodzi ze stanowiska „Matilda” na farmie Elderslie, około 60 km na północny zachód od Winton w środkowym Queenslandzie."
+    },
+    "sourceIds": ["hocknull-2009", "pbdb-taxon"]
+  },
+  "summary": {
+    "text": {
+      "en": "Australovenator, the 'southern hunter', was a swift meat-eating dinosaur about 5 to 6 metres long. It lived in what is now central Queensland, Australia, around 95 to 93 million years ago, and its bones were found in clay at the bottom of an ancient billabong, a kind of pond. It belongs to the megaraptors, large-clawed meat-eaters whose exact place in the dinosaur family tree is still unclear.",
+      "pl": "Australovenator, czyli „południowy łowca”, był szybkim mięsożernym dinozaurem o długości około 5–6 metrów. Żył na terenie dzisiejszego środkowego Queenslandu w Australii, około 95–93 milionów lat temu, a jego kości znaleziono w glinie na dnie dawnego starorzecza. Należy do megaraptorów – mięsożerców z dużymi pazurami, których dokładne miejsce na drzewie rodowym dinozaurów wciąż nie jest jasne."
+    },
+    "sourceIds": ["hocknull-2009", "wa-museum", "white-2013", "tucker-2013"]
+  },
+  "funFacts": [
+    {
+      "text": {
+        "en": "Extra leg bones found later with the original skeleton made its leg the most complete known for its group, the neovenatorids, as White et al. (2013) classify it.",
+        "pl": "Dodatkowe kości nóg, znalezione później razem z pierwotnym szkieletem, sprawiły, że jego noga jest najpełniej znaną w jego grupie – neowenatorydów, do których zaliczają go White i in. (2013)."
+      },
+      "sourceIds": ["white-2013"]
+    }
+  ],
+  "famous": false,
+  "images": [
+    {
+      "commonsFile": "File:Australovenator reconstruction.jpg",
+      "kind": "life-reconstruction",
+      "alt": {
+        "en": "Life restoration of Australovenator wintonensis, an Early Cretaceous theropod of Australia.",
+        "pl": "Rekonstrukcja przyżyciowa Australovenator wintonensis, teropoda z wczesnej kredy Australii."
+      }
+    }
+  ],
+  "uncertain": [
+    {
+      "field": "group",
+      "note": {
+        "en": "Placement is debated. The original description put it among allosauroids near Carcharodontosauridae, White et al. (2013) place it in Neovenatoridae, and the Western Australian Museum notes that megaraptors are hard to place in the family tree. It is filed under Tetanurae, which covers these options.",
+        "pl": "Przynależność jest sporna. Pierwotny opis umieszczał go wśród allozauroidów w pobliżu karcharodontozaurów, White i in. (2013) zaliczają go do Neovenatoridae, a Western Australian Museum zaznacza, że megaraptory trudno umieścić na drzewie rodowym. Zaliczono go do tetanurów, które obejmują wszystkie te możliwości."
+      }
+    },
+    {
+      "field": "timeRange",
+      "note": {
+        "en": "Estimates for the type site range from latest Albian to about 93 Ma; the range used follows the zircon-based dates (about 95 Ma; near or after 93.9 Ma).",
+        "pl": "Oszacowania wieku miejsca znalezienia holotypu wahają się od najpóźniejszego albu do około 93 mln lat temu; przyjęty zakres opiera się na datowaniach cyrkonów (około 95 mln lat temu; w pobliżu 93,9 mln lat temu lub później)."
+      }
+    },
+    {
+      "field": "size.massKg",
+      "note": {
+        "en": "No mass estimate found in a source we could verify.",
+        "pl": "Nie znaleziono oszacowania masy w źródle, które moglibyśmy zweryfikować."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "hocknull-2009",
+      "title": "New mid-Cretaceous (latest Albian) dinosaurs from Winton, Queensland, Australia",
+      "authors": "Hocknull, S. A.; White, M. A.; Tischler, T. R.; Cook, A. G.; Calleja, N. D.; Sloan, T.; Elliott, D. A.",
+      "year": 2009,
+      "publisher": "PLoS ONE 4(7): e6190",
+      "doi": "10.1371/journal.pone.0006190",
+      "url": "https://doi.org/10.1371/journal.pone.0006190",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "white-2013",
+      "title": "New Australovenator hind limb elements pertaining to the holotype reveal the most complete neovenatorid leg",
+      "authors": "White, M. A.; Benson, R. B. J.; Tischler, T. R.; Hocknull, S. A.; Cook, A. G.; Barnes, D. G.; Poropat, S. F.; Wooldridge, S. J.; Sloan, T.; Sinapius, G. H. K.; Elliott, D. A.",
+      "year": 2013,
+      "publisher": "PLoS ONE 8(7): e68649",
+      "doi": "10.1371/journal.pone.0068649",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3722220",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "tucker-2013",
+      "title": "Detrital zircon age constraints for the Winton Formation, Queensland: contextualizing Australia's Late Cretaceous dinosaur faunas",
+      "authors": "Tucker, R. T.; Roberts, E. M.; Hu, Y.; Kemp, A. I. S.; Salisbury, S. W.",
+      "year": 2013,
+      "publisher": "Gondwana Research 24(2): 767-779",
+      "doi": "10.1016/j.gr.2012.12.009",
+      "url": "https://researchonline.jcu.edu.au/29182/",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "wa-museum",
+      "title": "Australovenator | Dinosaur Discovery",
+      "publisher": "Western Australian Museum",
+      "url": "https://museum.wa.gov.au/explore/dinosaur-discovery/australovenator/",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-taxon",
+      "title": "Australovenator wintonensis (taxon 148973)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/single.json?name=Australovenator%20wintonensis&show=attr,class",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-occs",
+      "title": "Occurrences of Australovenator (stratigraphy and location)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Australovenator&show=strat,loc",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-ecospace",
+      "title": "Ecology (ecospace) entries for Australovenator and other genera",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/list.json?name=Ouranosaurus,Amargasaurus,Pachyrhinosaurus,Tarbosaurus,Majungasaurus,Elasmosaurus,Rhamphorhynchus,Nigersaurus,Suchomimus,Australovenator&show=attr,ecospace",
+      "accessed": "2026-11-22"
+    }
+  ],
+  "lastReviewed": "2026-11-22"
+}

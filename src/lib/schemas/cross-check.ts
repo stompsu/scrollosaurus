@@ -99,23 +99,32 @@ export function crossCheck({
       warnings.push(`${at}: sources not cited by any field: ${uncited.join(', ')}`);
     }
 
-    const texts = [
-      s.nameMeaning.text,
-      s.summary.text,
-      ...(s.funFacts ?? []).map((f) => f.text),
-      ...s.images.map((img) => img.alt),
-    ];
-    if (texts.some((t) => t.pl === undefined)) missingPolish.push(s.slug);
+    for (const path of untranslated(s)) missingPolish.push(`${at}: no Polish text at ${path}`);
   }
 
-  // Polish is planned for Phase 6, so missing translations are one summary warning, not errors.
-  if (missingPolish.length > 0) {
-    warnings.push(`${String(missingPolish.length)} species have no Polish text yet (Phase 6)`);
-  }
+  // Every text is bilingual since Phase 6: a missing Polish translation fails the build.
+  errors.push(...missingPolish);
 
   if (!slugs.has(site.primarySpecies)) {
     errors.push(`site.json: primarySpecies "${site.primarySpecies}" has no species file`);
   }
 
   return { errors, warnings };
+}
+
+/**
+ * Paths of `{ en, pl }` texts that have no Polish, anywhere in a data value (species records,
+ * story, notes…). Used by validate:data, which fails the build on any.
+ */
+export function untranslated(value: unknown, path = ''): string[] {
+  if (Array.isArray(value)) {
+    return value.flatMap((v, i) => untranslated(v, `${path}[${String(i)}]`));
+  }
+  if (value === null || typeof value !== 'object') return [];
+  const obj = value as Record<string, unknown>;
+  const own = typeof obj.en === 'string' && typeof obj.pl !== 'string' ? [path || '(root)'] : [];
+  return [
+    ...own,
+    ...Object.entries(obj).flatMap(([k, v]) => untranslated(v, path ? `${path}.${k}` : k)),
+  ];
 }

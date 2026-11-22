@@ -1,60 +1,40 @@
-import type { Continent, Diet, PeriodId, Species } from './schemas/species';
+import { getLocale, intlLocale } from './locale';
+import type { Diet } from './schemas/species';
 
-/** English UI labels for data enums. Polish arrives with i18next in Phase 6. */
-export const DIET_LABELS: Record<Diet, { label: string; hint?: string }> = {
-  carnivore: { label: 'Carnivore', hint: 'predator' },
-  herbivore: { label: 'Herbivore', hint: 'plant-eater' },
-  omnivore: { label: 'Omnivore', hint: 'plants and animals' },
-  piscivore: { label: 'Piscivore', hint: 'fish-eater' },
-  insectivore: { label: 'Insectivore', hint: 'insect-eater' },
-  uncertain: { label: 'Diet uncertain' },
-};
+/**
+ * Formatting helpers for data values in the current language. UI words (diet names, continents,
+ * image kinds…) are translation keys in data/i18n/{en,pl}/common.json, read with `t()`.
+ */
 
-export const DIET_CONFIDENCE_LABELS: Record<Species['diet']['confidence'], string | undefined> = {
-  established: undefined,
-  probable: 'probable',
-  debated: 'debated',
-};
+/** Diets whose label has a short explanation, e.g. "Piscivore (fish-eater)". */
+export const DIETS_WITH_HINT: ReadonlySet<Diet> = new Set([
+  'carnivore',
+  'herbivore',
+  'omnivore',
+  'piscivore',
+  'insectivore',
+]);
 
-export const CONTINENT_LABELS: Record<Continent, string> = {
-  africa: 'Africa',
-  antarctica: 'Antarctica',
-  asia: 'Asia',
-  australia: 'Australia',
-  europe: 'Europe',
-  'north-america': 'North America',
-  'south-america': 'South America',
-};
+const regionNames = new Map<string, Intl.DisplayNames | undefined>();
 
-export const PERIOD_LABELS: Record<PeriodId, string> = {
-  triassic: 'Triassic',
-  jurassic: 'Jurassic',
-  cretaceous: 'Cretaceous',
-};
-
-export const NOT_A_DINOSAUR = 'not a dinosaur';
-
-/** What an image shows, as labelled under it. */
-export const IMAGE_KIND_LABELS: Record<Species['images'][number]['kind'], string> = {
-  fossil: 'Fossil',
-  'skeleton-mount': 'Mounted skeleton',
-  skull: 'Skull',
-  'life-reconstruction': 'Life reconstruction (an artist’s interpretation)',
-};
-
-const regionNames =
-  typeof Intl.DisplayNames === 'function'
-    ? new Intl.DisplayNames(['en'], { type: 'region' })
-    : undefined;
-
-/** Country name from an ISO 3166-1 alpha-2 code, e.g. "CN" → "China". */
+/** Country name from an ISO 3166-1 alpha-2 code in the current language: "CN" → "China" / "Chiny". */
 export function countryName(code: string): string {
-  return regionNames?.of(code) ?? code;
+  const locale = intlLocale();
+  if (!regionNames.has(locale)) {
+    regionNames.set(
+      locale,
+      typeof Intl.DisplayNames === 'function'
+        ? new Intl.DisplayNames([locale], { type: 'region' })
+        : undefined,
+    );
+  }
+  return regionNames.get(locale)?.of(code) ?? code;
 }
 
-/** "1.1 m", "4.8–10 m": a [min, max] range with a unit. */
+/** "1.1 m", "4.8–10 m" ("1,1 m" in Polish): a [min, max] range with a unit. */
 export function formatRange(value: readonly [number, number], unit: string): string {
-  const fmt = (n: number) => n.toLocaleString('en', { maximumFractionDigits: 2 });
+  const fmt = (n: number) =>
+    n.toLocaleString(intlLocale(getLocale()), { maximumFractionDigits: 2 });
   const [lo, hi] = value;
   return lo === hi ? `${fmt(lo)} ${unit}` : `${fmt(lo)}–${fmt(hi)} ${unit}`;
 }

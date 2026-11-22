@@ -1,0 +1,163 @@
+{
+  "slug": "pachyrhinosaurus",
+  "scientificName": "Pachyrhinosaurus canadensis",
+  "genus": "Pachyrhinosaurus",
+  "nameMeaning": {
+    "text": {
+      "en": "thick-nosed lizard",
+      "pl": "jaszczur o grubym nosie"
+    },
+    "sourceIds": ["nhm"]
+  },
+  "group": "ceratopsia",
+  "groupSourceIds": ["pbdb-taxon", "fiorillo-tykoski-2012"],
+  "isDinosaur": true,
+  "taxonomy": {
+    "status": "valid",
+    "note": {
+      "en": "Three species are named: the type species P. canadensis, P. lakustai from the Wapiti Formation of Alberta, and P. perotorum from Alaska (Fiorillo & Tykoski 2012). This record covers the type species; the museum size figures refer to the genus.",
+      "pl": "Nazwano trzy gatunki: gatunek typowy P. canadensis, P. lakustai z formacji Wapiti w Albercie oraz P. perotorum z Alaski (Fiorillo i Tykoski 2012). Ten wpis dotyczy gatunku typowego; muzealne dane o wielkości odnoszą się do rodzaju."
+    },
+    "sourceIds": ["fiorillo-tykoski-2012", "nhm"]
+  },
+  "diet": {
+    "value": "herbivore",
+    "confidence": "established",
+    "sourceIds": ["nhm", "pbdb-ecospace"]
+  },
+  "timeRange": {
+    "startMa": 74,
+    "endMa": 72.5,
+    "sourceIds": ["fiorillo-tykoski-2012", "nhm", "pbdb-occs"],
+    "note": {
+      "en": "Fiorillo & Tykoski (2012), citing Sampson & Loewen (2010), give 72.5–74 Ma for P. canadensis and P. lakustai together; the Alaskan P. perotorum is younger (70–69 Ma). NHM gives 74–68 Ma for the genus, and PBDB records of P. canadensis are labelled Late Campanian–Early Maastrichtian.",
+      "pl": "Fiorillo i Tykoski (2012), powołując się na Sampsona i Loewena (2010), podają 72,5–74 mln lat temu łącznie dla P. canadensis i P. lakustai; alaskański P. perotorum jest młodszy (70–69 mln lat temu). NHM podaje dla rodzaju 74–68 mln lat temu, a rekordy P. canadensis w PBDB opisano jako późny kampan–wczesny mastrycht."
+    }
+  },
+  "periods": ["cretaceous"],
+  "size": {
+    "lengthM": {
+      "value": [8, 8],
+      "sourceIds": ["nhm"],
+      "note": {
+        "en": "Single museum figure for the genus (NHM Dino Directory); method not stated.",
+        "pl": "Jedyna wartość muzealna dla rodzaju (NHM Dino Directory); metody nie podano."
+      }
+    },
+    "massKg": {
+      "value": [4000, 4000],
+      "sourceIds": ["nhm"],
+      "note": {
+        "en": "Single museum figure for the genus (NHM Dino Directory); method not stated.",
+        "pl": "Jedyna wartość muzealna dla rodzaju (NHM Dino Directory); metody nie podano."
+      }
+    }
+  },
+  "locations": [
+    {
+      "continent": "north-america",
+      "countryCode": "CA",
+      "formation": "St. Mary River",
+      "sourceIds": ["pbdb-occs", "fiorillo-tykoski-2012"]
+    },
+    {
+      "continent": "north-america",
+      "countryCode": "CA",
+      "formation": "Horseshoe Canyon",
+      "sourceIds": ["pbdb-occs"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "Sternberg",
+    "year": 1950,
+    "note": {
+      "en": "The type specimen comes from the north side of the Little Bow River in southern Alberta.",
+      "pl": "Okaz typowy pochodzi z północnego brzegu rzeki Little Bow w południowej Albercie."
+    },
+    "sourceIds": ["pbdb-taxon", "fiorillo-tykoski-2012", "nhm"]
+  },
+  "summary": {
+    "text": {
+      "en": "Pachyrhinosaurus, the 'thick-nosed lizard', was a plant-eating horned dinosaur (ceratopsian) about 8 metres long from Alberta, Canada. Instead of horns over its nose and eyes, it had huge, rough, pitted bony lumps called bosses. A pair of large horns curved out sideways from its frill. It lived near the end of the Cretaceous, roughly 74 to 72.5 million years ago.",
+      "pl": "Pachyrhinosaurus, czyli „jaszczur o grubym nosie”, był roślinożernym dinozaurem rogatym (ceratopsem) o długości około 8 metrów z Alberty w Kanadzie. Zamiast rogów nad nosem i oczami miał ogromne, chropowate, pokryte dołkami kostne zgrubienia zwane guzami. Z jego kryzy wyrastała na boki para dużych rogów. Żył pod koniec kredy, mniej więcej 74–72,5 miliona lat temu."
+    },
+    "sourceIds": ["nhm", "fiorillo-tykoski-2012", "pbdb-occs"]
+  },
+  "funFacts": [
+    {
+      "text": {
+        "en": "When Sternberg described it in 1950, it seemed so unlike other horned dinosaurs that he created a family just for it.",
+        "pl": "Gdy Sternberg opisał go w 1950 roku, wydawał się tak niepodobny do innych dinozaurów rogatych, że utworzył dla niego osobną rodzinę."
+      },
+      "sourceIds": ["fiorillo-tykoski-2012"]
+    },
+    {
+      "text": {
+        "en": "A later relative, Pachyrhinosaurus perotorum, lived in Arctic Alaska, close to the farthest north that any horned dinosaur has been found.",
+        "pl": "Późniejszy krewny, Pachyrhinosaurus perotorum, żył w arktycznej części Alaski, blisko najdalej na północ położonego miejsca, w którym znaleziono dinozaury rogate."
+      },
+      "sourceIds": ["fiorillo-tykoski-2012"]
+    }
+  ],
+  "famous": false,
+  "images": [
+    {
+      "commonsFile": "File:Pachyrhinosaurus Royal Tyrrell 1.jpg",
+      "kind": "skeleton-mount",
+      "alt": {
+        "en": "Mounted skeleton of Pachyrhinosaurus at the Royal Tyrrell Museum, Alberta.",
+        "pl": "Zmontowany szkielet Pachyrhinosaurus w Royal Tyrrell Museum w Albercie."
+      }
+    }
+  ],
+  "uncertain": [
+    {
+      "field": "timeRange",
+      "note": {
+        "en": "The 74–72.5 Ma range is given for P. canadensis and P. lakustai together, not for P. canadensis alone; PBDB and NHM give broader ranges.",
+        "pl": "Zakres 74–72,5 mln lat temu podano łącznie dla P. canadensis i P. lakustai, a nie dla samego P. canadensis; PBDB i NHM podają szersze zakresy."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "fiorillo-tykoski-2012",
+      "title": "A new Maastrichtian species of the centrosaurine ceratopsid Pachyrhinosaurus from the North Slope of Alaska",
+      "authors": "Fiorillo, A. R.; Tykoski, R. S.",
+      "year": 2012,
+      "publisher": "Acta Palaeontologica Polonica 57(3): 561-573",
+      "doi": "10.4202/app.2011.0033",
+      "url": "https://www.app.pan.pl/archive/published/app57/app20110033.pdf",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "nhm",
+      "title": "Pachyrhinosaurus | Dino Directory",
+      "publisher": "Natural History Museum, London",
+      "url": "https://www.nhm.ac.uk/discover/dino-directory/pachyrhinosaurus.html",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-taxon",
+      "title": "Pachyrhinosaurus canadensis (taxon 66023)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/single.json?name=Pachyrhinosaurus%20canadensis&show=attr,class",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-occs",
+      "title": "Occurrences of Pachyrhinosaurus (stratigraphy and location)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Pachyrhinosaurus&show=strat,loc",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-ecospace",
+      "title": "Ecology (ecospace) entries for Pachyrhinosaurus and other genera",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/list.json?name=Ouranosaurus,Amargasaurus,Pachyrhinosaurus,Tarbosaurus,Majungasaurus,Elasmosaurus,Rhamphorhynchus,Nigersaurus,Suchomimus,Australovenator&show=attr,ecospace",
+      "accessed": "2026-11-22"
+    }
+  ],
+  "lastReviewed": "2026-11-22"
+}

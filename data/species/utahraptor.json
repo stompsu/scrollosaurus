@@ -1,0 +1,126 @@
+{
+  "slug": "utahraptor",
+  "scientificName": "Utahraptor ostrommaysi",
+  "genus": "Utahraptor",
+  "nameMeaning": {
+    "text": { "en": "Utah plunderer", "pl": "grabieżca z Utah" },
+    "sourceIds": ["nhm-utahraptor"]
+  },
+  "group": "dromaeosauridae",
+  "groupSourceIds": ["pbdb-utahraptor-ostrommaysi", "nhm-utahraptor"],
+  "isDinosaur": true,
+  "taxonomy": {
+    "status": "valid"
+  },
+  "diet": {
+    "value": "carnivore",
+    "confidence": "established",
+    "sourceIds": ["nhm-utahraptor"]
+  },
+  "timeRange": {
+    "startMa": 137.05,
+    "endMa": 132.6,
+    "sourceIds": ["pbdb-utahraptor-ostrommaysi", "pbdb-utahraptor-occs", "nhm-utahraptor"],
+    "note": {
+      "en": "PBDB dates all occurrences, from the Yellow Cat Member of the Cedar Mountain Formation, to the Valanginian; the Ma values are the ICS v2024/12 stage boundaries. The NHM Dino Directory gives 139-135 Ma. No radiometric date for the Utahraptor sites was verified.",
+      "pl": "PBDB datuje wszystkie występowania, pochodzące z ogniwa Yellow Cat formacji Cedar Mountain, na walanżyn; wartości w mln lat to granice pięter według ICS v2024/12. Katalog Dino Directory muzeum NHM podaje 139–135 mln lat temu. Nie zweryfikowano datowania radiometrycznego stanowisk z Utahraptor."
+    }
+  },
+  "periods": ["cretaceous"],
+  "size": {
+    "lengthM": {
+      "value": [5.5, 5.5],
+      "sourceIds": ["nhm-utahraptor"],
+      "note": {
+        "en": "Single published figure (NHM Dino Directory).",
+        "pl": "Jedyna opublikowana wartość (NHM Dino Directory)."
+      }
+    },
+    "massKg": {
+      "value": [350, 350],
+      "sourceIds": ["nhm-utahraptor"],
+      "note": {
+        "en": "Single published estimate (NHM Dino Directory); method not stated.",
+        "pl": "Jedyne opublikowane oszacowanie (NHM Dino Directory); metody nie podano."
+      }
+    }
+  },
+  "locations": [
+    {
+      "continent": "north-america",
+      "countryCode": "US",
+      "formation": "Cedar Mountain",
+      "sourceIds": ["pbdb-utahraptor-occs", "kirkland-2016", "nhm-utahraptor"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "Kirkland & Gaston & Burge",
+    "year": 1993,
+    "note": {
+      "en": "The American scientist Jim Jensen found the first Utahraptor remains in 1975.",
+      "pl": "Pierwsze szczątki Utahraptor znalazł w 1975 roku amerykański naukowiec Jim Jensen."
+    },
+    "sourceIds": ["nhm-utahraptor", "pbdb-utahraptor-ostrommaysi"]
+  },
+  "summary": {
+    "text": {
+      "en": "Utahraptor is the largest known dromaeosaur, a group of meat-eating dinosaurs that were probably all covered in feathers. It was about 5.5 metres long and heavily built, not slender like its smaller relatives, and it may have hunted by ambush rather than by chasing prey. It lived in what is now Utah, USA, in the Early Cretaceous, about 135 million years ago, and is Utah's state dinosaur.",
+      "pl": "Utahraptor jest największym znanym dromeozaurem – przedstawicielem grupy mięsożernych dinozaurów, które prawdopodobnie wszystkie były pokryte piórami. Miał około 5,5 metra długości i masywną budowę, nie tak smukłą jak jego mniejsi krewni, a polował być może z zasadzki, a nie w pościgu. Żył na terenie dzisiejszego stanu Utah w USA we wczesnej kredzie, około 135 milionów lat temu, i jest oficjalnym dinozaurem tego stanu."
+    },
+    "sourceIds": ["nhm-utahraptor", "pbdb-utahraptor-occs"]
+  },
+  "funFacts": [
+    {
+      "text": {
+        "en": "Rock from the Stikes Quarry in Utah holds several Utahraptor skeletons, from young to adult, with at least two plant-eating dinosaurs. They seem to have been trapped, killed and buried by sand stirred up by a natural spring.",
+        "pl": "W skale z kamieniołomu Stikes w Utah zachowało się kilka szkieletów Utahraptor, od młodych po dorosłe, oraz co najmniej dwa roślinożerne dinozaury. Wygląda na to, że uwięził je, zabił i pogrzebał piasek poruszony przez naturalne źródło."
+      },
+      "sourceIds": ["kirkland-2016"]
+    }
+  ],
+  "famous": false,
+  "images": [
+    {
+      "commonsFile": "File:BYU Utahraptor skeletal mount.jpg",
+      "kind": "skeleton-mount",
+      "alt": {
+        "en": "Utahraptor skeleton cast made from bones in the collection of Brigham Young University's Museum of Paleontology.",
+        "pl": "Odlew szkieletu Utahraptor wykonany z kości ze zbiorów Museum of Paleontology na Brigham Young University."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "kirkland-2016",
+      "title": "Depositional constraints on the Lower Cretaceous Stikes Quarry dinosaur site: upper Yellow Cat Member, Cedar Mountain Formation, Utah",
+      "authors": "Kirkland J.I., Simpson E.L., DeBlieux D.D., Madsen S.K., Bogner E., Tibert N.E.",
+      "year": 2016,
+      "publisher": "Palaios 31: 421-439",
+      "doi": "10.2110/palo.2016.041",
+      "url": "https://doi.org/10.2110/palo.2016.041",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "nhm-utahraptor",
+      "title": "Utahraptor | Dino Directory",
+      "publisher": "Natural History Museum, London",
+      "url": "https://www.nhm.ac.uk/discover/dino-directory/utahraptor.html",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-utahraptor-ostrommaysi",
+      "title": "Utahraptor ostrommaysi (taxon 66450)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/single.json?name=Utahraptor%20ostrommaysi&show=attr,app,parent,class",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-utahraptor-occs",
+      "title": "Occurrences of Utahraptor (stratigraphy and location)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Utahraptor&show=strat,loc",
+      "accessed": "2026-11-21"
+    }
+  ],
+  "lastReviewed": "2026-11-22"
+}

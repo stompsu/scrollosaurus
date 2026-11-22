@@ -4,7 +4,8 @@
   "genus": "Quetzalcoatlus",
   "nameMeaning": {
     "text": {
-      "en": "Named after Quetzalcoatl, the feathered-serpent god of the Aztecs; northropi honours aircraft designer Jack Northrop"
+      "en": "Named after Quetzalcoatl, the feathered-serpent god of the Aztecs; northropi honours aircraft designer Jack Northrop",
+      "pl": "nazwany na cześć Quetzalcoatla, boga Azteków w postaci pierzastego węża; northropi upamiętnia konstruktora samolotów Jacka Northropa"
     },
     "sourceIds": ["nps-big-bend", "ut-news-2021"]
   },
@@ -18,20 +19,29 @@
     "value": "carnivore",
     "confidence": "debated",
     "sourceIds": ["witton-naish-2008", "ut-news-2021", "nps-big-bend"],
-    "note": "Witton and Naish (2008) argue azhdarchids were stork-like ground foragers eating small animals and carrion; Lehman (reported by UT News 2021) and the NPS describe it probing water and mud for invertebrates."
+    "note": {
+      "en": "Witton and Naish (2008) argue azhdarchids were stork-like ground foragers eating small animals and carrion; Lehman (reported by UT News 2021) and the NPS describe it probing water and mud for invertebrates.",
+      "pl": "Witton i Naish (2008) twierdzą, że azdarchidy były podobnymi do bocianów zwierzętami żerującymi na ziemi, które jadły małe zwierzęta i padlinę; Lehman (według UT News 2021) i NPS opisują go jako zwierzę przeszukujące wodę i muł w poszukiwaniu bezkręgowców."
+    }
   },
   "timeRange": {
     "startMa": 72.2,
     "endMa": 66,
     "sourceIds": ["pbdb-occurrences", "witton-naish-2008"],
-    "note": "Maastrichtian (Javelina Formation). Ages are ICS Maastrichtian stage bounds from PBDB occurrences; popular sources give about 67 Ma (Field Museum) or about 70 Ma (UT News)."
+    "note": {
+      "en": "Maastrichtian (Javelina Formation). Ages are ICS Maastrichtian stage bounds from PBDB occurrences; popular sources give about 67 Ma (Field Museum) or about 70 Ma (UT News).",
+      "pl": "Mastrycht (formacja Javelina). Wiek podano według granic piętra mastrychtu ICS na podstawie występowań w PBDB; źródła popularne podają około 67 mln lat temu (Field Museum) lub około 70 mln lat temu (UT News)."
+    }
   },
   "periods": ["cretaceous"],
   "size": {
     "wingspanM": {
       "value": [10, 11.9],
       "sourceIds": ["witton-naish-2008", "witton-habib-2010", "nps-big-bend"],
-      "note": "About 10 m (Witton & Naish 2008); 10–11 m (Witton & Habib 2010); 36–39 ft, about 11.0–11.9 m (NPS). Larger spans of 11–12 m and 15.5 m appear in Witton & Naish (2008) only as Langston's scenarios for mass estimates, not as measurements."
+      "note": {
+        "en": "About 10 m (Witton & Naish 2008); 10–11 m (Witton & Habib 2010); 36–39 ft, about 11.0–11.9 m (NPS). Larger spans of 11–12 m and 15.5 m appear in Witton & Naish (2008) only as Langston's scenarios for mass estimates, not as measurements.",
+        "pl": "Około 10 m (Witton i Naish 2008); 10–11 m (Witton i Habib 2010); 36–39 stóp, czyli około 11,0–11,9 m (NPS). Większe rozpiętości, 11–12 m i 15,5 m, pojawiają się u Witton i Naish (2008) jedynie jako scenariusze, które Langston przyjął do szacowania masy, a nie jako pomiary."
+      }
     }
   },
   "locations": [
@@ -49,14 +59,16 @@
   },
   "summary": {
     "text": {
-      "en": "Quetzalcoatlus was a giant pterosaur, a flying reptile, not a dinosaur. With wings about 10 metres across, it was among the largest animals ever known to fly. Its fossils come from Big Bend National Park in Texas, from the very end of the Cretaceous. Scientists still debate how it fed: stalking small animals on land, or probing for crabs and worms in shallow water."
+      "en": "Quetzalcoatlus was a giant pterosaur, a flying reptile, not a dinosaur. With wings about 10 metres across, it was among the largest animals ever known to fly. Its fossils come from Big Bend National Park in Texas, from the very end of the Cretaceous. Scientists still debate how it fed: stalking small animals on land, or probing for crabs and worms in shallow water.",
+      "pl": "Quetzalcoatlus był olbrzymim pterozaurem – latającym gadem, a nie dinozaurem. Miał skrzydła o rozpiętości około 10 metrów i należał do największych znanych zwierząt, jakie kiedykolwiek latały. Jego skamieniałości pochodzą z Parku Narodowego Big Bend w Teksasie, z samego końca kredy. Naukowcy wciąż spierają się, jak zdobywał pożywienie: czy podchodził małe zwierzęta na lądzie, czy szukał krabów i robaków w płytkiej wodzie."
     },
     "sourceIds": ["pbdb-taxon", "witton-naish-2008", "ut-news-2021", "nps-big-bend"]
   },
   "funFacts": [
     {
       "text": {
-        "en": "The first fossil, a wing bone, was found in 1971 in Big Bend National Park, Texas, by Douglas Lawson, then a University of Texas student."
+        "en": "The first fossil, a wing bone, was found in 1971 in Big Bend National Park, Texas, by Douglas Lawson, then a University of Texas student.",
+        "pl": "Pierwszą skamieniałość, kość skrzydła, znalazł w 1971 roku w Parku Narodowym Big Bend w Teksasie Douglas Lawson, wówczas student Uniwersytetu Teksasu."
       },
       "sourceIds": ["nps-big-bend"]
     }
@@ -67,22 +79,32 @@
       "commonsFile": "File:Life restoration of a group of giant azhdarchids, Quetzalcoatlus northropi, foraging on a Cretaceous fern prairie.png",
       "kind": "life-reconstruction",
       "alt": {
-        "en": "Life restoration of a group of Quetzalcoatlus northropi foraging on a Cretaceous fern prairie, one of them holding a juvenile titanosaur."
+        "en": "Life restoration of a group of Quetzalcoatlus northropi foraging on a Cretaceous fern prairie, one of them holding a juvenile titanosaur.",
+        "pl": "Rekonstrukcja przyżyciowa grupy Quetzalcoatlus northropi żerujących na kredowej prerii paprociowej; jeden z nich trzyma młodego tytanozaura."
       }
     }
   ],
   "uncertain": [
     {
       "field": "size.lengthM",
-      "note": "No verified body length found."
+      "note": {
+        "en": "No verified body length found.",
+        "pl": "Nie znaleziono zweryfikowanej długości ciała."
+      }
     },
     {
       "field": "size.massKg",
-      "note": "No verified mass estimate specific to Q. northropi; Witton & Naish (2008) cite earlier estimates of 86–136 kg and give about 250 kg for a generic 10 m azhdarchid."
+      "note": {
+        "en": "No verified mass estimate specific to Q. northropi; Witton & Naish (2008) cite earlier estimates of 86–136 kg and give about 250 kg for a generic 10 m azhdarchid.",
+        "pl": "Brak zweryfikowanego oszacowania masy dla samego Q. northropi; Witton i Naish (2008) przytaczają wcześniejsze oszacowania 86–136 kg i podają około 250 kg dla modelowego 10-metrowego azdarchida."
+      }
     },
     {
       "field": "diet",
-      "note": "How azhdarchids fed is debated: stork-like ground foraging (Witton & Naish 2008) versus probing water and mud for invertebrates (Lehman, reported by UT News 2021; NPS)."
+      "note": {
+        "en": "How azhdarchids fed is debated: stork-like ground foraging (Witton & Naish 2008) versus probing water and mud for invertebrates (Lehman, reported by UT News 2021; NPS).",
+        "pl": "Sposób odżywiania azdarchidów jest przedmiotem sporu: żerowanie na ziemi na wzór bocianów (Witton i Naish 2008) czy przeszukiwanie wody i mułu w poszukiwaniu bezkręgowców (Lehman, według UT News 2021; NPS)."
+      }
     }
   ],
   "sources": [

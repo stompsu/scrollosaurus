@@ -1,0 +1,159 @@
+{
+  "slug": "massospondylus",
+  "scientificName": "Massospondylus carinatus",
+  "genus": "Massospondylus",
+  "nameMeaning": {
+    "text": {
+      "en": "Massive vertebrae",
+      "pl": "masywne kręgi"
+    },
+    "sourceIds": ["nhm"]
+  },
+  "group": "sauropodomorpha",
+  "groupSourceIds": ["pbdb-taxon", "reisz-2012", "nhm"],
+  "isDinosaur": true,
+  "taxonomy": {
+    "status": "valid"
+  },
+  "diet": {
+    "value": "omnivore",
+    "confidence": "probable",
+    "sourceIds": ["nhm"],
+    "note": {
+      "en": "The NHM Dino Directory lists it as omnivorous, with tough plant material as its food. No dedicated diet study was checked.",
+      "pl": "Dino Directory muzeum NHM podaje, że był wszystkożerny, a jego pokarmem był twardy materiał roślinny. Nie sprawdzono żadnej pracy poświęconej jego diecie."
+    }
+  },
+  "timeRange": {
+    "startMa": 201.4,
+    "endMa": 184.2,
+    "sourceIds": ["pbdb-occs", "reisz-2012", "nhm"],
+    "note": {
+      "en": "Stage-based: PBDB dates most M. carinatus records from the Upper Elliot and Forest Sandstone formations to the Hettangian–Sinemurian and those from the Clarens Formation to the Pliensbachian; Reisz et al. (2012) place the nesting site in the Lower Jurassic Upper Elliot Formation. The Ma values are ICS v2024/12 stage boundaries. PBDB records identified only as Massospondylus from Triassic rocks are not used. The NHM Dino Directory's 208–204 Ma would fall in the Triassic and is not used.",
+      "pl": "Na podstawie pięter: PBDB datuje większość rekordów M. carinatus z formacji Upper Elliot i Forest Sandstone na hettang–synemur, a te z formacji Clarens na pliensbach; Reisz i in. (2012) umieszczają stanowisko gniazd we wczesnojurajskiej formacji Upper Elliot. Wartości w mln lat to granice pięter według ICS v2024/12. Rekordów PBDB oznaczonych tylko jako Massospondylus ze skał triasowych nie uwzględniono. Podawane przez Dino Directory muzeum NHM 208–204 mln lat temu przypadałoby na trias, więc tej wartości nie użyto."
+    }
+  },
+  "periods": ["jurassic"],
+  "size": {
+    "lengthM": {
+      "value": [4, 4],
+      "sourceIds": ["nhm"],
+      "note": {
+        "en": "Single value from the NHM Dino Directory.",
+        "pl": "Pojedyncza wartość z Dino Directory muzeum NHM."
+      }
+    }
+  },
+  "locations": [
+    {
+      "continent": "africa",
+      "countryCode": "ZA",
+      "formation": "Elliot",
+      "sourceIds": ["pbdb-occs", "reisz-2012"]
+    },
+    {
+      "continent": "africa",
+      "countryCode": "ZA",
+      "formation": "Clarens",
+      "sourceIds": ["pbdb-occs"]
+    },
+    {
+      "continent": "africa",
+      "countryCode": "ZW",
+      "formation": "Forest Sandstone",
+      "sourceIds": ["pbdb-occs"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "Owen",
+    "year": 1854,
+    "sourceIds": ["pbdb-taxon", "nhm"]
+  },
+  "summary": {
+    "text": {
+      "en": "Massospondylus was an early relative of the long-necked sauropods, about 4 metres long, that lived in southern Africa in the Early Jurassic. It is thought to have been an omnivore that fed on tough plants. In South Africa, scientists found its nesting ground, the oldest known for any dinosaur: clutches of eggs with embryos inside, laid by animals that returned to nest together. Tiny tracks show that the hatchlings stayed at the nest for a while.",
+      "pl": "Massospondylus był wczesnym krewnym długoszyich zauropodów o długości około 4 metrów, żyjącym w południowej Afryce we wczesnej jurze. Uważa się, że był wszystkożercą, który jadł twarde rośliny. W Republice Południowej Afryki naukowcy odkryli jego lęgowisko, najstarsze znane u dinozaurów: gniazda z jajami zawierającymi zarodki, złożonymi przez zwierzęta, które wracały, by gniazdować razem. Drobne tropy pokazują, że młode po wykluciu pozostawały przez pewien czas przy gnieździe."
+    },
+    "sourceIds": ["nhm", "reisz-2012", "pbdb-occs"]
+  },
+  "funFacts": [
+    {
+      "text": {
+        "en": "Growth rings in the thigh bones of 20 Massospondylus, from embryos to adults, show that animals of the same age could reach very different body masses.",
+        "pl": "Linie przyrostowe w kościach udowych 20 osobników Massospondylus, od zarodków po dorosłe, pokazują, że zwierzęta w tym samym wieku mogły osiągać bardzo różną masę ciała."
+      },
+      "sourceIds": ["chapelle-2021"]
+    }
+  ],
+  "famous": false,
+  "images": [
+    {
+      "commonsFile": "File:Massospondylus NHM.JPG",
+      "kind": "skeleton-mount",
+      "alt": {
+        "en": "Mounted skeleton of Massospondylus in the Natural History Museum, London.",
+        "pl": "Zmontowany szkielet Massospondylus w Natural History Museum w Londynie."
+      }
+    }
+  ],
+  "uncertain": [
+    {
+      "field": "size.massKg",
+      "note": {
+        "en": "The NHM Dino Directory gives 70 kg, but bone growth studies show that individuals of the same age differed widely in mass, and no method-based adult range could be verified, so the field is left empty.",
+        "pl": "Dino Directory muzeum NHM podaje 70 kg, ale badania wzrostu kości pokazują, że osobniki w tym samym wieku bardzo różniły się masą, a nie udało się zweryfikować zakresu dla dorosłych opartego na konkretnej metodzie, więc pole pozostawiono puste."
+      }
+    },
+    {
+      "field": "locations",
+      "note": {
+        "en": "The NHM Dino Directory lists Lesotho, and PBDB has Lesotho and Namibia records identified only as Massospondylus; these are not listed because they are not referred to M. carinatus.",
+        "pl": "Dino Directory muzeum NHM wymienia Lesotho, a PBDB ma rekordy z Lesotho i Namibii oznaczone tylko jako Massospondylus; nie podano ich, bo nie są przypisane do M. carinatus."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "pbdb-taxon",
+      "title": "Massospondylus (taxon 38642)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/single.json?name=Massospondylus&show=attr,parent,class",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-occs",
+      "title": "Occurrences of Massospondylus (stratigraphy and location)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Massospondylus&show=strat,loc",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "nhm",
+      "title": "Massospondylus | Dino Directory",
+      "publisher": "Natural History Museum, London",
+      "url": "https://www.nhm.ac.uk/discover/dino-directory/massospondylus.html",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "reisz-2012",
+      "title": "Oldest known dinosaurian nesting site and reproductive biology of the Early Jurassic sauropodomorph Massospondylus",
+      "authors": "Reisz, R. R.; Evans, D. C.; Roberts, E. M.; Sues, H.-D.; Yates, A. M.",
+      "year": 2012,
+      "publisher": "Proceedings of the National Academy of Sciences",
+      "doi": "10.1073/pnas.1109385109",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3289328",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "chapelle-2021",
+      "title": "Extreme growth plasticity in the early branching sauropodomorph Massospondylus carinatus",
+      "authors": "Chapelle, K. E. J.; Botha, J.; Choiniere, J. N.",
+      "year": 2021,
+      "publisher": "Biology Letters",
+      "doi": "10.1098/rsbl.2020.0843",
+      "url": "https://doi.org/10.1098/rsbl.2020.0843",
+      "accessed": "2026-11-22"
+    }
+  ],
+  "lastReviewed": "2026-11-22"
+}

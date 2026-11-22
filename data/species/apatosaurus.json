@@ -1,0 +1,132 @@
+{
+  "slug": "apatosaurus",
+  "scientificName": "Apatosaurus ajax",
+  "genus": "Apatosaurus",
+  "nameMeaning": {
+    "text": { "en": "deceptive lizard", "pl": "zwodniczy jaszczur" },
+    "sourceIds": ["nhm-apatosaurus"]
+  },
+  "group": "diplodocidae",
+  "groupSourceIds": ["tschopp-2015", "pbdb-apatosaurus-ajax", "nhm-apatosaurus"],
+  "isDinosaur": true,
+  "taxonomy": {
+    "status": "valid",
+    "note": {
+      "en": "Brontosaurus was long treated as the same animal as Apatosaurus. Based on a 2015 study of diplodocid relationships, experts now consider them separate, though closely related, genera.",
+      "pl": "Brontosaurus przez długi czas uważano za to samo zwierzę co Apatosaurus. Na podstawie badania pokrewieństw diplodoków z 2015 roku specjaliści uznają je dziś za odrębne, choć blisko spokrewnione rodzaje."
+    },
+    "sourceIds": ["nhm-apatosaurus", "tschopp-2015"]
+  },
+  "diet": {
+    "value": "herbivore",
+    "confidence": "established",
+    "sourceIds": ["nhm-apatosaurus"]
+  },
+  "timeRange": {
+    "startMa": 154.8,
+    "endMa": 143.1,
+    "sourceIds": ["pbdb-apatosaurus-ajax", "pbdb-apatosaurus-ajax-occs"],
+    "note": {
+      "en": "Kimmeridgian to Tithonian, from PBDB occurrence ages for A. ajax in the Brushy Basin Member of the Morrison Formation (stage-level dates); the Ma values are the ICS v2024/12 stage boundaries. The NHM Dino Directory gives 152-145 Ma.",
+      "pl": "Od kimerydu do tytonu, według wieku występowań A. ajax w ogniwie Brushy Basin formacji Morrison podanego w PBDB (daty na poziomie pięter); wartości w mln lat to granice pięter według ICS v2024/12. Katalog Dino Directory muzeum NHM podaje 152–145 mln lat temu."
+    }
+  },
+  "periods": ["jurassic"],
+  "size": {
+    "lengthM": {
+      "value": [21, 21],
+      "sourceIds": ["nhm-apatosaurus"],
+      "note": {
+        "en": "Single museum figure for the genus (NHM Dino Directory).",
+        "pl": "Jedyna wartość muzealna dla rodzaju (NHM Dino Directory)."
+      }
+    }
+  },
+  "locations": [
+    {
+      "continent": "north-america",
+      "countryCode": "US",
+      "formation": "Morrison",
+      "sourceIds": ["pbdb-apatosaurus-ajax-occs", "nhm-apatosaurus"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "Marsh",
+    "year": 1877,
+    "sourceIds": ["pbdb-apatosaurus-ajax", "nhm-apatosaurus"]
+  },
+  "summary": {
+    "text": {
+      "en": "Apatosaurus was a giant long-necked plant eater, about 21 metres long, that lived in western North America in the Late Jurassic, about 152 to 145 million years ago. Its long, narrow tail may have worked like a whip, and living in herds gave extra protection from predators. Young Apatosaurus took around 10 years to reach full adult size. It was a close relative of Brontosaurus.",
+      "pl": "Apatosaurus był olbrzymim długoszyim roślinożercą o długości około 21 metrów, który żył w zachodniej części Ameryki Północnej w późnej jurze, około 152–145 milionów lat temu. Długi, wąski ogon mógł mu służyć jak bicz, a życie w stadach zapewniało dodatkową ochronę przed drapieżnikami. Młode Apatosaurus osiągały pełne rozmiary dorosłego po około 10 latach. Był bliskim krewnym Brontosaurus."
+    },
+    "sourceIds": ["nhm-apatosaurus"]
+  },
+  "funFacts": [
+    {
+      "text": {
+        "en": "Othniel Charles Marsh named it 'deceptive lizard' because some of its bones seemed to resemble those of a sea reptile.",
+        "pl": "Othniel Charles Marsh nazwał go „zwodniczym jaszczurem”, ponieważ niektóre jego kości przypominały kości morskiego gada."
+      },
+      "sourceIds": ["nhm-apatosaurus"]
+    }
+  ],
+  "famous": false,
+  "images": [
+    {
+      "commonsFile": "File:Apatosaurus louisae - CM.jpg",
+      "kind": "skeleton-mount",
+      "note": {
+        "en": "This skeleton is Apatosaurus louisae, another species of the same genus.",
+        "pl": "Ten szkielet to Apatosaurus louisae, inny gatunek z tego samego rodzaju."
+      },
+      "alt": {
+        "en": "Mounted fossil skeleton of Apatosaurus louisae (CM 3018) at the Carnegie Museum of Natural History in Pittsburgh.",
+        "pl": "Zmontowany szkielet kopalny Apatosaurus louisae (CM 3018) w Carnegie Museum of Natural History w Pittsburghu."
+      }
+    }
+  ],
+  "uncertain": [
+    {
+      "field": "size.massKg",
+      "note": {
+        "en": "No mass estimate found in a source we could verify; the NHM Dino Directory gives none.",
+        "pl": "Nie znaleziono oszacowania masy w źródle, które moglibyśmy zweryfikować; katalog Dino Directory muzeum NHM go nie podaje."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "tschopp-2015",
+      "title": "A specimen-level phylogenetic analysis and taxonomic revision of Diplodocidae (Dinosauria, Sauropoda)",
+      "authors": "Tschopp E., Mateus O., Benson R.B.J.",
+      "year": 2015,
+      "publisher": "PeerJ 3: e857",
+      "doi": "10.7717/peerj.857",
+      "url": "https://doi.org/10.7717/peerj.857",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "nhm-apatosaurus",
+      "title": "Apatosaurus | Dino Directory",
+      "publisher": "Natural History Museum, London",
+      "url": "https://www.nhm.ac.uk/discover/dino-directory/apatosaurus.html",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-apatosaurus-ajax",
+      "title": "Apatosaurus ajax (taxon 52958)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/single.json?name=Apatosaurus%20ajax&show=attr,app,parent,class",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-apatosaurus-ajax-occs",
+      "title": "Occurrences of Apatosaurus ajax (stratigraphy and location)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Apatosaurus%20ajax&show=strat,loc",
+      "accessed": "2026-11-21"
+    }
+  ],
+  "lastReviewed": "2026-11-22"
+}

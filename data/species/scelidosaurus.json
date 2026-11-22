@@ -1,0 +1,121 @@
+{
+  "slug": "scelidosaurus",
+  "scientificName": "Scelidosaurus harrisonii",
+  "genus": "Scelidosaurus",
+  "nameMeaning": {
+    "text": {
+      "en": "Limb lizard",
+      "pl": "jaszczur kończynowy"
+    },
+    "sourceIds": ["nhm-scelidosaurus"]
+  },
+  "group": "thyreophora",
+  "groupSourceIds": ["nhm-scelidosaurus", "pbdb-taxon"],
+  "isDinosaur": true,
+  "taxonomy": {
+    "status": "valid"
+  },
+  "diet": {
+    "value": "herbivore",
+    "confidence": "established",
+    "sourceIds": ["nhm-scelidosaurus"]
+  },
+  "timeRange": {
+    "startMa": 199.5,
+    "endMa": 192.9,
+    "sourceIds": ["norman-2020", "pbdb-occurrences"],
+    "note": {
+      "en": "Stage-based: the lectotype comes from the Upper Sinemurian Black Ven Marl Member of the Charmouth Mudstone Formation (Norman 2020), and PBDB dates all S. harrisonii records to the Sinemurian. The Ma values are the ICS v2024/12 Sinemurian boundaries. NHM gives 208–194 Ma, which would reach into the Triassic and is not used.",
+      "pl": "Na podstawie pięter: lektotyp pochodzi z ogniwa Black Ven Marl formacji Charmouth Mudstone z górnego synemuru (Norman 2020), a PBDB datuje wszystkie rekordy S. harrisonii na synemur. Wartości w mln lat to granice synemuru według ICS v2024/12. NHM podaje 208–194 mln lat temu, co sięgałoby triasu, więc tej wartości nie użyto."
+    }
+  },
+  "periods": ["jurassic"],
+  "size": {
+    "lengthM": {
+      "value": [4, 4.4],
+      "sourceIds": ["nhm-scelidosaurus", "norman-2020"],
+      "note": {
+        "en": "NHM gives 4 m; Norman (2020) describes it as about 4.4 m long.",
+        "pl": "NHM podaje 4 m; Norman (2020) opisuje go jako zwierzę o długości około 4,4 m."
+      }
+    }
+  },
+  "locations": [
+    {
+      "continent": "europe",
+      "countryCode": "GB",
+      "formation": "Charmouth Mudstone",
+      "sourceIds": ["norman-2020", "pbdb-occurrences"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "Owen",
+    "year": 1861,
+    "note": {
+      "en": "PBDB and Norman (2020) date the species name to 1861; the NHM Dino Directory gives 1868.",
+      "pl": "PBDB i Norman (2020) datują nazwę gatunkową na 1861 rok; Dino Directory NHM podaje 1868 rok."
+    },
+    "sourceIds": ["pbdb-taxon", "norman-2020", "nhm-scelidosaurus"]
+  },
+  "summary": {
+    "text": {
+      "en": "Scelidosaurus was a medium-sized armoured dinosaur, about four metres long, that ate plants. It lived in the Early Jurassic, in the Sinemurian Age, about 199 to 193 million years ago. Its fossils come from the sea cliffs between Charmouth and Lyme Regis in Dorset, England. It belongs to the Thyreophora, the group of armoured dinosaurs, and its name means 'limb lizard'.",
+      "pl": "Scelidosaurus był średniej wielkości opancerzonym dinozaurem o długości około czterech metrów, który jadł rośliny. Żył we wczesnej jurze, w synemurze, około 199–193 milionów lat temu. Jego skamieniałości pochodzą z nadmorskich klifów między Charmouth a Lyme Regis w hrabstwie Dorset w Anglii. Należy do tyreoforów – grupy dinozaurów opancerzonych – a jego nazwa oznacza „jaszczur kończynowy”."
+    },
+    "sourceIds": ["nhm-scelidosaurus", "norman-2020", "pbdb-occurrences"]
+  },
+  "famous": false,
+  "images": [
+    {
+      "commonsFile": "File:Juvenile Scelidosaurus \"skin\" specimen.jpg",
+      "kind": "fossil",
+      "alt": {
+        "en": "Fossil of a juvenile Scelidosaurus preserving a small section of fossilised skin, at the Bristol City Museum.",
+        "pl": "Skamielina młodego Scelidosaurus z zachowanym niewielkim fragmentem skamieniałej skóry, w Bristol City Museum."
+      }
+    }
+  ],
+  "uncertain": [
+    {
+      "field": "size.massKg",
+      "note": {
+        "en": "No mass estimate found in a source we could verify.",
+        "pl": "Nie znaleziono oszacowania masy w źródle, które moglibyśmy zweryfikować."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "nhm-scelidosaurus",
+      "title": "Scelidosaurus | Dino Directory",
+      "publisher": "Natural History Museum, London",
+      "url": "https://www.nhm.ac.uk/discover/dino-directory/scelidosaurus.html",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "pbdb-taxon",
+      "title": "Scelidosaurus harrisonii (taxon 53042)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=53042",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "pbdb-occurrences",
+      "title": "Fossil occurrences of Scelidosaurus",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Scelidosaurus&show=strat,loc",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "norman-2020",
+      "title": "Scelidosaurus harrisonii from the Early Jurassic of Dorset, England: cranial anatomy",
+      "authors": "Norman, D. B.",
+      "year": 2020,
+      "publisher": "Zoological Journal of the Linnean Society",
+      "doi": "10.1093/zoolinnean/zlz078",
+      "url": "https://tb.plazi.org/GgServer/xml/03D587C9FF9CFF97FC62FAFDDF909655",
+      "accessed": "2026-11-22"
+    }
+  ],
+  "lastReviewed": "2026-11-21"
+}

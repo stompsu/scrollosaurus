@@ -1,0 +1,112 @@
+{
+  "slug": "camarasaurus",
+  "scientificName": "Camarasaurus supremus",
+  "genus": "Camarasaurus",
+  "nameMeaning": {
+    "text": { "en": "chambered lizard", "pl": "jaszczur komorowy" },
+    "sourceIds": ["nhm-camarasaurus"]
+  },
+  "group": "sauropoda",
+  "groupSourceIds": ["pbdb-camarasaurus-supremus", "nhm-camarasaurus"],
+  "isDinosaur": true,
+  "taxonomy": {
+    "status": "valid",
+    "note": {
+      "en": "C. supremus is the type species. PBDB treats Camarasaurus leptodirus and Amphicoelias latus, both named from Morrison Formation fossils, as the same species.",
+      "pl": "C. supremus jest gatunkiem typowym. PBDB traktuje Camarasaurus leptodirus i Amphicoelias latus, opisane na podstawie skamieniałości z formacji Morrison, jako ten sam gatunek."
+    },
+    "sourceIds": ["nhm-camarasaurus", "pbdb-camarasaurus-supremus-occs"]
+  },
+  "diet": {
+    "value": "herbivore",
+    "confidence": "established",
+    "sourceIds": ["nhm-camarasaurus"]
+  },
+  "timeRange": {
+    "startMa": 154.8,
+    "endMa": 143.1,
+    "sourceIds": ["pbdb-camarasaurus-supremus", "pbdb-camarasaurus-supremus-occs"],
+    "note": {
+      "en": "Kimmeridgian to Tithonian, from PBDB occurrence ages for C. supremus in the Salt Wash and Brushy Basin members of the Morrison Formation in Colorado (stage-level dates); the Ma values are the ICS v2024/12 stage boundaries. The NHM Dino Directory gives 150-140 Ma for the genus.",
+      "pl": "Od kimerydu do tytonu, według wieku występowań C. supremus w ogniwach Salt Wash i Brushy Basin formacji Morrison w Kolorado podanego w PBDB (daty na poziomie pięter); wartości w mln lat to granice pięter według ICS v2024/12. Katalog Dino Directory muzeum NHM podaje dla rodzaju 150–140 mln lat temu."
+    }
+  },
+  "periods": ["jurassic"],
+  "size": {
+    "lengthM": {
+      "value": [23, 23],
+      "sourceIds": ["nhm-camarasaurus"],
+      "note": {
+        "en": "Single museum figure for the genus (NHM Dino Directory).",
+        "pl": "Jedyna wartość muzealna dla rodzaju (NHM Dino Directory)."
+      }
+    },
+    "massKg": {
+      "value": [20000, 20000],
+      "sourceIds": ["nhm-camarasaurus"],
+      "note": {
+        "en": "Single museum figure for the genus (NHM Dino Directory); method not stated.",
+        "pl": "Jedyna wartość muzealna dla rodzaju (NHM Dino Directory); metody nie podano."
+      }
+    }
+  },
+  "locations": [
+    {
+      "continent": "north-america",
+      "countryCode": "US",
+      "formation": "Morrison",
+      "sourceIds": ["pbdb-camarasaurus-supremus-occs", "nhm-camarasaurus"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "Cope",
+    "year": 1877,
+    "sourceIds": ["pbdb-camarasaurus-supremus", "nhm-camarasaurus"]
+  },
+  "summary": {
+    "text": {
+      "en": "Camarasaurus was a large long-necked plant eater from the Late Jurassic of western North America. It was about 23 metres long, weighed around 20 tonnes and walked on four legs. Its rows of close-set, chisel-like teeth were good for snipping tough plant material, and it used them to strip leaves from trees and shrubs.",
+      "pl": "Camarasaurus był dużym długoszyim roślinożercą z późnej jury zachodniej części Ameryki Północnej. Miał około 23 metrów długości, ważył około 20 ton i chodził na czterech nogach. Rzędy gęsto osadzonych zębów w kształcie dłuta dobrze nadawały się do odcinania twardych części roślin, a używał ich do obrywania liści z drzew i krzewów."
+    },
+    "sourceIds": ["nhm-camarasaurus", "pbdb-camarasaurus-supremus-occs"]
+  },
+  "famous": false,
+  "images": [
+    {
+      "commonsFile": "File:Camarasaurus lentus USNM.jpg",
+      "kind": "skeleton-mount",
+      "note": {
+        "en": "This skeleton is Camarasaurus lentus, another species of the same genus.",
+        "pl": "Ten szkielet to Camarasaurus lentus, inny gatunek z tego samego rodzaju."
+      },
+      "alt": {
+        "en": "Skeleton of Camarasaurus lentus from Dinosaur National Monument, mounted at the National Museum of Natural History in Washington, D.C. (photo from before 2019).",
+        "pl": "Szkielet Camarasaurus lentus z Dinosaur National Monument, zmontowany w National Museum of Natural History w Waszyngtonie (zdjęcie sprzed 2019 roku)."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "nhm-camarasaurus",
+      "title": "Camarasaurus | Dino Directory",
+      "publisher": "Natural History Museum, London",
+      "url": "https://www.nhm.ac.uk/discover/dino-directory/camarasaurus.html",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "pbdb-camarasaurus-supremus",
+      "title": "Camarasaurus supremus (taxon 54168)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/single.json?name=Camarasaurus%20supremus&show=attr,app,parent,class",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-camarasaurus-supremus-occs",
+      "title": "Occurrences of Camarasaurus supremus (stratigraphy and location)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Camarasaurus%20supremus&show=strat,loc",
+      "accessed": "2026-11-21"
+    }
+  ],
+  "lastReviewed": "2026-11-22"
+}

@@ -1,0 +1,173 @@
+{
+  "slug": "suchomimus",
+  "scientificName": "Suchomimus tenerensis",
+  "genus": "Suchomimus",
+  "nameMeaning": {
+    "text": {
+      "en": "crocodile mimic",
+      "pl": "naśladowca krokodyla"
+    },
+    "sourceIds": ["sereno-1998"]
+  },
+  "group": "spinosauridae",
+  "groupSourceIds": ["sereno-1998", "pbdb-taxon"],
+  "isDinosaur": true,
+  "taxonomy": {
+    "status": "contested",
+    "note": {
+      "en": "Most studies treat Suchomimus as a valid genus, closely related to Baryonyx. PBDB records two opinions that move the species into Baryonyx, as Baryonyx tenerensis (Sues et al. 2002; Candeiro et al. 2006). Cristatusaurus lapparenti, named shortly before from the same beds in Niger, may be the same animal: Sereno et al. (1998) regarded it as a nomen dubium, while Sales & Schultz (2017) left the possible synonymy open.",
+      "pl": "Większość badań uznaje Suchomimus za ważny rodzaj, blisko spokrewniony z Baryonyx. PBDB odnotowuje dwie opinie przenoszące ten gatunek do rodzaju Baryonyx jako Baryonyx tenerensis (Sues i in. 2002; Candeiro i in. 2006). Cristatusaurus lapparenti, nazwany nieco wcześniej na podstawie skamieniałości z tych samych warstw w Nigrze, może być tym samym zwierzęciem: Sereno i in. (1998) uznali go za nomen dubium, natomiast Sales i Schultz (2017) pozostawili kwestię synonimii otwartą."
+    },
+    "sourceIds": ["pbdb-opinions", "sereno-1998", "sales-schultz-2017"]
+  },
+  "diet": {
+    "value": "piscivore",
+    "confidence": "probable",
+    "sourceIds": ["sereno-1998", "pbdb-ecospace"],
+    "note": {
+      "en": "Inferred from the long, narrow snout and other fish-eating adaptations of the jaws described by Sereno et al. (1998). PBDB lists the genus more broadly as a carnivore.",
+      "pl": "Wywnioskowane z długiego, wąskiego pyska i innych przystosowań szczęk do jedzenia ryb, opisanych przez Sereno i in. (1998). PBDB klasyfikuje ten rodzaj ogólniej jako mięsożercę."
+    }
+  },
+  "timeRange": {
+    "startMa": 115,
+    "endMa": 105,
+    "sourceIds": ["sereno-1999", "sereno-1998", "pbdb-occs"],
+    "note": {
+      "en": "Sereno et al. (1998) describe the fossil beds as Aptian. Sereno et al. (1999) give about 115–105 Ma (Aptian–Albian) for the Gadoufaoua horizons of the Tegama Group, whose fauna includes Suchomimus. PBDB dates the occurrences to the Aptian–Albian (121.4–100.5 Ma).",
+      "pl": "Sereno i in. (1998) określają warstwy z tymi skamieniałościami jako aptyjskie. Sereno i in. (1999) podają około 115–105 mln lat temu (apt–alb) dla poziomów grupy Tegama w Gadoufaoua, których fauna obejmuje Suchomimus. PBDB datuje występowania na apt–alb (121,4–100,5 mln lat temu)."
+    }
+  },
+  "periods": ["cretaceous"],
+  "size": {
+    "lengthM": {
+      "value": [11, 11],
+      "sourceIds": ["sereno-1998"],
+      "note": {
+        "en": "About 11 m, the total length of the skeletal reconstruction based on the holotype (Sereno et al. 1998).",
+        "pl": "Około 11 m – całkowita długość rekonstrukcji szkieletu opartej na holotypie (Sereno i in. 1998)."
+      }
+    }
+  },
+  "locations": [
+    {
+      "continent": "africa",
+      "countryCode": "NE",
+      "formation": "Elrhaz",
+      "sourceIds": ["pbdb-occs", "sereno-1998"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "Sereno et al.",
+    "year": 1998,
+    "note": {
+      "en": "Described by Paul Sereno and twelve co-authors from fossils found in the Ténéré Desert of central Niger.",
+      "pl": "Opisany przez Paula Sereno i dwunastu współautorów na podstawie skamieniałości znalezionych na pustyni Ténéré w środkowym Nigrze."
+    },
+    "sourceIds": ["sereno-1998", "pbdb-taxon"]
+  },
+  "summary": {
+    "text": {
+      "en": "Suchomimus, the 'crocodile mimic', was a spinosaurid with a long, low and narrow snout and slightly curved, cone-shaped teeth. It lived in what is now Niger, in the Sahara, roughly 115 to 105 million years ago. It was about 11 metres long and had a big thumb claw, and blade-shaped spines on its back formed a low sail over its hips. Its jaws were adapted for catching fish.",
+      "pl": "Suchomimus, czyli „naśladowca krokodyla”, był spinozaurem o długim, niskim i wąskim pysku oraz lekko zakrzywionych, stożkowatych zębach. Żył na terenie dzisiejszego Nigru, na Saharze, mniej więcej 115–105 milionów lat temu. Miał około 11 metrów długości i duży pazur na kciuku, a ostrzowate wyrostki na grzbiecie tworzyły niski żagiel nad biodrami. Jego szczęki były przystosowane do chwytania ryb."
+    },
+    "sourceIds": ["sereno-1998", "sereno-1999"]
+  },
+  "funFacts": [
+    {
+      "text": {
+        "en": "Its closest known relative was Baryonyx from Europe, not Spinosaurus from Africa. Its discoverers took this as a sign that its ancestors crossed the Tethys sea between Europe and Africa in the Early Cretaceous.",
+        "pl": "Jego najbliższym znanym krewnym był europejski Baryonyx, a nie afrykański Spinosaurus. Odkrywcy uznali to za znak, że jego przodkowie przedostali się przez morze Tetydy między Europą a Afryką we wczesnej kredzie."
+      },
+      "sourceIds": ["sereno-1998"]
+    }
+  ],
+  "famous": false,
+  "images": [
+    {
+      "commonsFile": "File:CCM Suchomimus 2018.jpg",
+      "kind": "skeleton-mount",
+      "alt": {
+        "en": "Mounted skeleton of Suchomimus at the Chicago Children's Museum.",
+        "pl": "Zmontowany szkielet Suchomimus w Chicago Children's Museum."
+      }
+    }
+  ],
+  "uncertain": [
+    {
+      "field": "taxonomy",
+      "note": {
+        "en": "Possible synonymy with Cristatusaurus lapparenti is unresolved, and a minority of authors place the species in Baryonyx.",
+        "pl": "Możliwa synonimia z Cristatusaurus lapparenti pozostaje nierozstrzygnięta, a część autorów umieszcza ten gatunek w rodzaju Baryonyx."
+      }
+    },
+    {
+      "field": "size.massKg",
+      "note": {
+        "en": "No mass estimate found in a source we could verify.",
+        "pl": "Nie znaleziono oszacowania masy w źródle, które moglibyśmy zweryfikować."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "sereno-1998",
+      "title": "A long-snouted predatory dinosaur from Africa and the evolution of spinosaurids",
+      "authors": "Sereno, P. C.; Beck, A. L.; Dutheil, D. B.; Gado, B.; Larsson, H. C. E.; Lyon, G. H.; Marcot, J. D.; Rauhut, O. W. M.; Sadleir, R. W.; Sidor, C. A.; Varricchio, D. D.; Wilson, G. P.; Wilson, J. A.",
+      "year": 1998,
+      "publisher": "Science 282: 1298-1302",
+      "doi": "10.1126/science.282.5392.1298",
+      "url": "https://doi.org/10.1126/science.282.5392.1298",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "sereno-1999",
+      "title": "Cretaceous sauropods from the Sahara and the uneven rate of skeletal evolution among dinosaurs",
+      "authors": "Sereno, P. C.; Beck, A. L.; Dutheil, D. B.; Larsson, H. C. E.; Lyon, G. H.; Moussa, B.; Sadleir, R. W.; Sidor, C. A.; Varricchio, D. J.; Wilson, G. P.; Wilson, J. A.",
+      "year": 1999,
+      "publisher": "Science 286: 1342-1347",
+      "doi": "10.1126/science.286.5443.1342",
+      "url": "https://doi.org/10.1126/science.286.5443.1342",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "sales-schultz-2017",
+      "title": "Spinosaur taxonomy and evolution of craniodental features: evidence from Brazil",
+      "authors": "Sales, M. A. F.; Schultz, C. L.",
+      "year": 2017,
+      "publisher": "PLoS ONE 12(11): e0187070",
+      "doi": "10.1371/journal.pone.0187070",
+      "url": "https://doi.org/10.1371/journal.pone.0187070",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-taxon",
+      "title": "Suchomimus tenerensis (taxon 53368)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/single.json?name=Suchomimus%20tenerensis&show=attr,class",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-opinions",
+      "title": "Taxonomic opinions on Suchomimus tenerensis",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/opinions.json?name=Suchomimus%20tenerensis&op_type=all&show=basis,ref",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-occs",
+      "title": "Occurrences of Suchomimus (stratigraphy and location)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Suchomimus&show=strat,loc",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-ecospace",
+      "title": "Ecology (ecospace) entries for Suchomimus and other genera",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/list.json?name=Ouranosaurus,Amargasaurus,Pachyrhinosaurus,Tarbosaurus,Majungasaurus,Elasmosaurus,Rhamphorhynchus,Nigersaurus,Suchomimus,Australovenator&show=attr,ecospace",
+      "accessed": "2026-11-22"
+    }
+  ],
+  "lastReviewed": "2026-11-22"
+}

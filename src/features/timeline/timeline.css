@@ -335,7 +335,37 @@
 }
 
 .tl-label {
-  display: block;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+/* Diet icon and body-plan silhouette before the name (horizontal) or on a line below (vertical). */
+.tl-icons {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  gap: 2px;
+  margin-right: 5px;
+  color: var(--sc-text-muted);
+}
+
+.tl[data-orientation='vertical'] .tl-label {
+  flex-wrap: wrap;
+}
+
+.tl[data-orientation='vertical'] .tl-label > i {
+  min-width: 0;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tl[data-orientation='vertical'] .tl-icons {
+  order: 2;
+  flex-basis: 100%;
+  height: 18px;
+  margin-right: 0;
 }
 
 .tl[data-orientation='vertical'] .tl-label {
@@ -423,6 +453,27 @@
 }
 
 /* ---- Help ---- */
+
+.tl-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 0.75rem;
+  align-items: center;
+  color: var(--sc-text-muted);
+  font-size: 0.875rem;
+}
+
+.tl-legend ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 0.75rem;
+}
+
+.tl-legend li {
+  display: inline-flex;
+  gap: 0.3rem;
+  align-items: center;
+}
 
 .tl-help {
   color: var(--sc-text-muted);

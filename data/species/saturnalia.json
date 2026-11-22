@@ -1,0 +1,185 @@
+{
+  "slug": "saturnalia",
+  "scientificName": "Saturnalia tupiniquim",
+  "genus": "Saturnalia",
+  "nameMeaning": {
+    "text": {
+      "en": "Saturnalia, a Roman festival",
+      "pl": "Saturnalia, rzymskie święto"
+    },
+    "sourceIds": ["britannica-saturnalia"]
+  },
+  "group": "sauropodomorpha",
+  "groupSourceIds": ["langer-1999", "damke-2024", "pbdb-genera"],
+  "isDinosaur": true,
+  "taxonomy": {
+    "status": "valid",
+    "note": {
+      "en": "Saturnalia tupiniquim is the only species in the genus. Damke et al. (2024) describe it as the first Carnian sauropodomorph to be named (1999) and refer a new association of at least three individuals from its type locality to it. PBDB places it in Saturnaliidae.",
+      "pl": "Saturnalia tupiniquim to jedyny gatunek w rodzaju. Damke i in. (2024) opisują go jako pierwszego nazwanego (w 1999 roku) zauropodomorfa z karniku i przypisują mu nowe znalezisko co najmniej trzech osobników z jego miejsca typowego. PBDB umieszcza go w rodzinie Saturnaliidae."
+    },
+    "sourceIds": ["damke-2024", "pbdb-genera"]
+  },
+  "diet": {
+    "value": "carnivore",
+    "confidence": "probable",
+    "sourceIds": ["bronzati-2019", "damke-2024"],
+    "note": {
+      "en": "Bronzati et al. (2019) link its reduced skull to fast head movements for catching small, elusive prey and suggest an at least partly faunivorous (animal-eating) diet, without ruling out omnivory. Damke et al. (2024) call it faunivorous.",
+      "pl": "Bronzati i in. (2019) wiążą jego zredukowaną czaszkę z szybkimi ruchami głowy podczas chwytania małej, zwinnej zdobyczy i sugerują dietę przynajmniej częściowo mięsożerną, nie wykluczając wszystkożerności. Damke i in. (2024) określają go jako mięsożercę."
+    }
+  },
+  "timeRange": {
+    "startMa": 233.23,
+    "startUncertaintyMa": 0.73,
+    "endMa": 233.23,
+    "endUncertaintyMa": 0.73,
+    "sourceIds": ["damke-2024", "langer-2018", "bronzati-2019", "pbdb-occs"],
+    "note": {
+      "en": "Damke et al. (2024) give a maximum depositional age of 233.23 ± 0.73 Ma for the Cerro da Alemoa (Waldsanga) type locality in the Santa Maria Formation, from U-Pb zircon dating by Langer et al. (2018). As a maximum age, the fossils may be slightly younger. Bronzati et al. (2019) give c. 233 Ma (Carnian). PBDB dates the occurrences only to the Carnian–Norian (237–205.7 Ma).",
+      "pl": "Damke i in. (2024) podają maksymalny wiek depozycji 233,23 ± 0,73 mln lat dla miejsca typowego Cerro da Alemoa (Waldsanga) w formacji Santa Maria, na podstawie datowania U-Pb cyrkonów wykonanego przez Langera i in. (2018). Jest to wiek maksymalny, więc skamieniałości mogą być nieco młodsze. Bronzati i in. (2019) podają około 233 mln lat temu (karnik). PBDB datuje występowania jedynie na karnik–noryk (237–205,7 mln lat temu)."
+    }
+  },
+  "periods": ["triassic"],
+  "size": {
+    "massKg": {
+      "value": [6.5, 6.5],
+      "sourceIds": ["delcourt-2012"],
+      "note": {
+        "en": "Estimate from femur dimensions using a regression built on theropods; the authors treat it as an approximation for this early sauropodomorph.",
+        "pl": "Oszacowanie na podstawie wymiarów kości udowej, z użyciem równania regresji opracowanego dla teropodów; autorzy traktują je jako przybliżenie dla tego wczesnego zauropodomorfa."
+      }
+    }
+  },
+  "locations": [
+    {
+      "continent": "south-america",
+      "countryCode": "BR",
+      "formation": "Santa Maria",
+      "sourceIds": ["pbdb-occs", "damke-2024"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "Langer, Abdala, Richter & Benton",
+    "year": 1999,
+    "sourceIds": ["langer-1999", "pbdb-genera"]
+  },
+  "summary": {
+    "text": {
+      "en": "Saturnalia was a small early dinosaur from southern Brazil, about 233 million years old. Described in 1999, it was the first sauropodomorph known from the Carnian, one of the oldest ages with true dinosaurs. It weighed roughly 6.5 kilograms and had a small, short skull. Scientists think this let it move its head fast to snatch small, quick prey, so it probably ate animals at least some of the time.",
+      "pl": "Saturnalia był małym wczesnym dinozaurem z południowej Brazylii, sprzed około 233 milionów lat. Opisany w 1999 roku, był pierwszym znanym zauropodomorfem z karniku – jednego z najstarszych pięter, z których znamy prawdziwe dinozaury. Ważył około 6,5 kilograma i miał małą, krótką czaszkę. Naukowcy uważają, że pozwalało mu to szybko poruszać głową i chwytać małą, zwinną zdobycz, więc prawdopodobnie przynajmniej czasami jadł zwierzęta."
+    },
+    "sourceIds": ["damke-2024", "langer-2018", "delcourt-2012", "bronzati-2019"]
+  },
+  "funFacts": [
+    {
+      "text": {
+        "en": "A find described in 2024 from its type locality preserves the first known snout of Saturnalia, and it is proportionally short compared with those of other sauropodomorphs of the same age.",
+        "pl": "Znalezisko z miejsca typowego, opisane w 2024 roku, zachowało pierwszy znany pysk Saturnalia – proporcjonalnie krótki w porównaniu z pyskami innych zauropodomorfów z tego samego czasu."
+      },
+      "sourceIds": ["damke-2024"]
+    }
+  ],
+  "famous": false,
+  "images": [
+    {
+      "commonsFile": "File:Saturnalia tupiniquim.jpg",
+      "kind": "life-reconstruction",
+      "alt": {
+        "en": "Life restoration of Saturnalia tupiniquim.",
+        "pl": "Rekonstrukcja przyżyciowa Saturnalia tupiniquim."
+      }
+    }
+  ],
+  "uncertain": [
+    {
+      "field": "size.lengthM",
+      "note": {
+        "en": "No body length was found in a source we could verify; the lengths we saw came from non-peer-reviewed websites.",
+        "pl": "Nie znaleziono długości ciała w źródle, które moglibyśmy zweryfikować; napotkane wartości pochodziły ze stron internetowych bez recenzji naukowej."
+      }
+    },
+    {
+      "field": "locations",
+      "note": {
+        "en": "PBDB also lists a 'cf. Saturnalia sp.' from the Pebbly Arkose Formation of Zimbabwe; this tentative genus-level referral is not used here.",
+        "pl": "PBDB wymienia też okaz „cf. Saturnalia sp.” z formacji Pebbly Arkose w Zimbabwe; tego niepewnego przypisania na poziomie rodzaju tu nie uwzględniono."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "langer-1999",
+      "title": "A sauropodomorph dinosaur from the Upper Triassic (Carnian) of southern Brazil",
+      "authors": "Langer, M. C.; Abdala, F.; Richter, M.; Benton, M. J.",
+      "year": 1999,
+      "publisher": "Comptes Rendus de l'Académie des Sciences, Series IIA 329(7): 511-517",
+      "doi": "10.1016/S1251-8050(00)80025-7",
+      "url": "https://doi.org/10.1016/S1251-8050(00)80025-7",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "langer-2018",
+      "title": "U-Pb age constraints on dinosaur rise from south Brazil",
+      "authors": "Langer, M. C.; Ramezani, J.; Da Rosa, Á. A. S.",
+      "year": 2018,
+      "publisher": "Gondwana Research 57: 133-140",
+      "doi": "10.1016/j.gr.2018.01.005",
+      "url": "https://bv.fapesp.br/en/publicacao/150065/u-pb-age-constraints-on-dinosaur-rise-from-south-brazil",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "bronzati-2019",
+      "title": "Skull remains of the dinosaur Saturnalia tupiniquim (Late Triassic, Brazil): With comments on the early evolution of sauropodomorph feeding behaviour",
+      "authors": "Bronzati, M.; Müller, R. T.; Langer, M. C.",
+      "year": 2019,
+      "publisher": "PLOS ONE 14(9): e0221387",
+      "doi": "10.1371/journal.pone.0221387",
+      "url": "https://doi.org/10.1371/journal.pone.0221387",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "damke-2024",
+      "title": "New specimens of Saturnalia tupiniquim (Dinosauria: Sauropodomorpha): insights into intraspecific variation, rostral anatomy, and skull size",
+      "authors": "Damke, L. V. S.; Langer, M. C.; Da-Rosa, Á. A. S.; Müller, R. T.",
+      "year": 2024,
+      "publisher": "Zoological Journal of the Linnean Society 202(4): zlae156",
+      "doi": "10.1093/zoolinnean/zlae156",
+      "url": "https://academic.oup.com/zoolinnean/article/202/4/zlae156/7909637",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "delcourt-2012",
+      "title": "Biomechanical comments about Triassic dinosaurs from Brazil",
+      "authors": "Delcourt, R.; Azevedo, S. A. K.; Grillo, O. N.; Deantoni, F. O.",
+      "year": 2012,
+      "publisher": "Papéis Avulsos de Zoologia 52(29)",
+      "doi": "10.1590/S0031-10492012002900001",
+      "url": "https://www.scielo.br/j/paz/a/z9zB9PVg4M5PrX98Wm4nQrP/?lang=en",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-genera",
+      "title": "Taxon entries for Saturnalia (taxon 68123) and other genera",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/list.json?name=Saturnalia,Silesaurus,Lisowicia,Anchiornis,Yutyrannus,Caudipteryx,Citipati,Deinocheirus,Opisthocoelicaudia,Saltasaurus,Patagotitan&show=attr,app,parent,class,ecospace",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-occs",
+      "title": "Occurrences of Saturnalia and other genera (stratigraphy and location)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Saturnalia,Silesaurus,Lisowicia,Anchiornis,Yutyrannus,Caudipteryx&show=strat,loc",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "britannica-saturnalia",
+      "title": "Saturnalia",
+      "authors": "Britannica Editors",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/topic/Saturnalia-Roman-festival",
+      "accessed": "2026-11-22"
+    }
+  ],
+  "lastReviewed": "2026-11-22"
+}

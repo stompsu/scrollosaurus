@@ -1,0 +1,189 @@
+{
+  "slug": "carcharodontosaurus",
+  "scientificName": "Carcharodontosaurus saharicus",
+  "genus": "Carcharodontosaurus",
+  "nameMeaning": {
+    "text": {
+      "en": "Carcharodon lizard",
+      "pl": "jaszczur Carcharodon"
+    },
+    "sourceIds": ["nhm-carcharodontosaurus"]
+  },
+  "group": "allosauroidea",
+  "groupSourceIds": [
+    "kellermann-2025",
+    "pbdb-carcharodontosaurus-saharicus",
+    "nhm-carcharodontosaurus"
+  ],
+  "isDinosaur": true,
+  "taxonomy": {
+    "status": "valid",
+    "note": {
+      "en": "Stromer's original skeleton from the Bahariya Formation of Egypt was destroyed in Munich in 1944. In 2007 a skull from the Kem Kem Group of Morocco (SGM-Din 1) was proposed as the neotype, the new name-bearing specimen. Kellermann et al. (2025) found that the lost Egyptian skeleton differs from the Moroccan neotype in many features and named it Tameryraptor markgrafi.",
+      "pl": "Pierwotny szkielet opisany przez Stromera, pochodzący z formacji Bahariya w Egipcie, został zniszczony w Monachium w 1944 roku. W 2007 roku czaszkę z grupy Kem Kem w Maroku (SGM-Din 1) zaproponowano jako neotyp, czyli nowy okaz nazwotwórczy. Kellermann i in. (2025) stwierdzili, że utracony szkielet egipski różni się od marokańskiego neotypu wieloma cechami, i nazwali go Tameryraptor markgrafi."
+    },
+    "sourceIds": ["kellermann-2025"]
+  },
+  "diet": {
+    "value": "carnivore",
+    "confidence": "established",
+    "sourceIds": ["nhm-carcharodontosaurus"]
+  },
+  "timeRange": {
+    "startMa": 100.5,
+    "endMa": 93.9,
+    "sourceIds": ["pbdb-carcharodontosaurus-occs", "ibrahim-2020", "nhm-carcharodontosaurus"],
+    "note": {
+      "en": "Based on the Moroccan fossils, including the neotype region: PBDB dates the Kem Kem records to the (early) Cenomanian and Ibrahim et al. (2020) describe the Kem Kem Group as Cenomanian. The bounds are ICS Cenomanian stage ages (100.5-93.9 Ma), not radiometric dates. NHM gives 99-94 Ma.",
+      "pl": "Na podstawie skamieniałości z Maroka, skąd pochodzi neotyp: PBDB datuje okazy z Kem Kem na (wczesny) cenoman, a Ibrahim i in. (2020) określają grupę Kem Kem jako cenomańską. Granice to wiek piętra cenoman według ICS (100,5–93,9 mln lat temu), a nie daty radiometryczne. NHM podaje 99–94 mln lat temu."
+    }
+  },
+  "periods": ["cretaceous"],
+  "size": {
+    "lengthM": {
+      "value": [12, 13],
+      "sourceIds": ["candeiro-2018", "nhm-carcharodontosaurus"],
+      "note": {
+        "en": "Candeiro et al. (2018) give an estimated 12-13 m without citing a method; NHM gives 12.5 m. No complete skeleton is known.",
+        "pl": "Candeiro i in. (2018) podają szacunkowo 12–13 m bez wskazania metody; NHM podaje 12,5 m. Nie jest znany kompletny szkielet."
+      }
+    }
+  },
+  "locations": [
+    {
+      "continent": "africa",
+      "countryCode": "MA",
+      "formation": "Douira",
+      "sourceIds": ["pbdb-carcharodontosaurus-occs", "ibrahim-2020"]
+    },
+    {
+      "continent": "africa",
+      "countryCode": "MA",
+      "formation": "Ifezouane",
+      "sourceIds": ["pbdb-carcharodontosaurus-occs"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "Stromer",
+    "year": 1931,
+    "note": {
+      "en": "The species was first named Megalosaurus saharicus from teeth found in Algeria; PBDB credits Depéret & Savornin 1925, while Candeiro et al. (2018) give 1927. Stromer (1931) created the genus Carcharodontosaurus for it, based on a partial skeleton from Egypt.",
+      "pl": "Gatunek nazwano najpierw Megalosaurus saharicus na podstawie zębów znalezionych w Algierii; PBDB przypisuje nazwę Depéretowi i Savorninowi (1925), a Candeiro i in. (2018) podają rok 1927. Stromer (1931) utworzył dla niego rodzaj Carcharodontosaurus na podstawie niekompletnego szkieletu z Egiptu."
+    },
+    "sourceIds": [
+      "pbdb-carcharodontosaurus-saharicus",
+      "candeiro-2018",
+      "kellermann-2025",
+      "nhm-carcharodontosaurus"
+    ]
+  },
+  "summary": {
+    "text": {
+      "en": "Carcharodontosaurus was a huge meat-eating dinosaur from North Africa that lived roughly 100 to 94 million years ago. Its teeth look a lot like shark teeth. It was probably 12 to 13 metres long. The first skeleton, found in Egypt, was destroyed during the Second World War, and a 2025 study says it belonged to a different dinosaur. Today the species rests on a large skull from Morocco.",
+      "pl": "Carcharodontosaurus był ogromnym mięsożernym dinozaurem z Afryki Północnej, żyjącym około 100–94 mln lat temu. Jego zęby bardzo przypominają zęby rekina. Miał prawdopodobnie 12–13 metrów długości. Pierwszy szkielet, znaleziony w Egipcie, zniszczono podczas II wojny światowej, a badanie z 2025 roku wskazuje, że należał on do innego dinozaura. Dziś podstawą gatunku jest duża czaszka z Maroka."
+    },
+    "sourceIds": [
+      "nhm-carcharodontosaurus",
+      "candeiro-2018",
+      "kellermann-2025",
+      "pbdb-carcharodontosaurus-occs"
+    ]
+  },
+  "funFacts": [
+    {
+      "text": {
+        "en": "The upper jaw bone (maxilla) of the Moroccan neotype skull is about 90 centimetres long.",
+        "pl": "Kość szczękowa (szczęka górna) marokańskiej czaszki neotypu ma około 90 centymetrów długości."
+      },
+      "sourceIds": ["kellermann-2025"]
+    }
+  ],
+  "famous": false,
+  "images": [
+    {
+      "commonsFile": "File:Carcharodontosaurus ROM-IMG 7497.jpg",
+      "kind": "skull",
+      "alt": {
+        "en": "Skull of a Carcharodontosaurus.",
+        "pl": "Czaszka Carcharodontosaurus."
+      }
+    }
+  ],
+  "uncertain": [
+    {
+      "field": "size.massKg",
+      "note": {
+        "en": "No mass estimate could be checked against its primary source, so the field is left empty.",
+        "pl": "Żadnego oszacowania masy nie udało się sprawdzić w źródle pierwotnym, więc pole pozostaje puste."
+      }
+    },
+    {
+      "field": "locations",
+      "note": {
+        "en": "Only the Moroccan Kem Kem records are listed. PBDB also refers teeth and bones from Algeria, Niger, Tunisia and Egypt to C. saharicus, and NHM lists Algeria and Egypt; the Egyptian skeleton is now Tameryraptor, and the other referrals were not checked.",
+        "pl": "Wymieniono tylko okazy z Kem Kem w Maroku. PBDB przypisuje C. saharicus także zęby i kości z Algierii, Nigru, Tunezji i Egiptu, a NHM wymienia Algierię i Egipt; szkielet egipski to obecnie Tameryraptor, a pozostałych przypisań nie zweryfikowano."
+      }
+    },
+    {
+      "field": "timeRange",
+      "note": {
+        "en": "PBDB also lists older referred fossils (Aptian-Albian teeth from Algeria, Niger and Tunisia). If they belong to the species, its range would start earlier.",
+        "pl": "PBDB wymienia też starsze przypisane skamieniałości (zęby z aptu–albu z Algierii, Nigru i Tunezji). Jeśli należą do tego gatunku, jego zasięg zaczynałby się wcześniej."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "kellermann-2025",
+      "title": "Re-evaluation of the Bahariya Formation carcharodontosaurid (Dinosauria: Theropoda) and its implications for allosauroid phylogeny",
+      "authors": "Kellermann M., Cuesta E., Rauhut O.W.M.",
+      "year": 2025,
+      "publisher": "PLOS ONE 20(1): e0311096",
+      "doi": "10.1371/journal.pone.0311096",
+      "url": "https://doi.org/10.1371/journal.pone.0311096",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "candeiro-2018",
+      "title": "Paleobiogeographic evolution and distribution of Carcharodontosauridae (Dinosauria, Theropoda) during the middle Cretaceous of North Africa",
+      "authors": "Candeiro C.R.A., Brusatte S.L., Vidal L., Pereira P.V.L.G.C.",
+      "year": 2018,
+      "publisher": "Papéis Avulsos de Zoologia 58",
+      "doi": "10.11606/1807-0205/2018.58.29",
+      "url": "https://www.scielo.br/j/paz/a/H8rTsTK5cF8Lqyz664GxgTP/?lang=en",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "ibrahim-2020",
+      "title": "Geology and paleontology of the Upper Cretaceous Kem Kem Group of eastern Morocco",
+      "authors": "Ibrahim N., Sereno P.C., Varricchio D.J., Martill D.M., Dutheil D.B., Unwin D.M., Baidder L., Larsson H.C.E., Zouhri S., Kaoukaya A.",
+      "year": 2020,
+      "publisher": "ZooKeys 928: 1-216",
+      "doi": "10.3897/zookeys.928.47517",
+      "url": "https://doi.org/10.3897/zookeys.928.47517",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "nhm-carcharodontosaurus",
+      "title": "Carcharodontosaurus | Dino Directory",
+      "publisher": "Natural History Museum, London",
+      "url": "https://www.nhm.ac.uk/discover/dino-directory/carcharodontosaurus.html",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-carcharodontosaurus-saharicus",
+      "title": "Carcharodontosaurus saharicus (taxon 65364)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/single.json?name=Carcharodontosaurus%20saharicus&show=attr,parent",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-carcharodontosaurus-occs",
+      "title": "Occurrences of Carcharodontosaurus saharicus (stratigraphy and location)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Carcharodontosaurus%20saharicus&show=strat,loc&idreso=species",
+      "accessed": "2026-11-22"
+    }
+  ],
+  "lastReviewed": "2026-11-22"
+}

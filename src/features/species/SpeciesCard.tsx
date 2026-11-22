@@ -3,11 +3,13 @@ import { DietBadge, NotADinosaurTag } from '@/components/ui/DietBadge';
 import { ImageCredit, SpeciesPicture } from '@/components/ui/SpeciesPicture';
 import { formatMa } from '@/lib/geologic-time';
 import { groupName } from '@/lib/groups';
+import { tr } from '@/lib/i18n';
 import { formatRange } from '@/lib/labels';
+import { localize } from '@/lib/locale';
 import type { SpeciesIndexEntry } from '@/lib/species-index';
 
 export function formatLived(item: Pick<SpeciesIndexEntry, 'startMa' | 'endMa'>): string {
-  return `${formatMa(item.startMa)} to ${formatMa(item.endMa)} million years ago`;
+  return tr('time.range', { start: formatMa(item.startMa), end: formatMa(item.endMa) });
 }
 
 interface SpeciesCardProps {
@@ -42,13 +44,16 @@ export function SpeciesCard({ item, headingLevel = 2, action }: SpeciesCardProps
           {!item.isDinosaur && <NotADinosaurTag />}
         </Heading>
         <p className="sc-card-meaning">
-          <span className="sr-only">Name means </span>“{item.nameMeaning}”
+          <span className="sr-only">{tr('card.nameMeans')}</span>
+          {tr('card.quoted', { text: localize(item.nameMeaning) })}
         </p>
         <div className="sc-card-facts">
           <DietBadge diet={item.diet} confidence={item.dietConfidence} />
           <span>{groupName(item.group)}</span>
           <span>{formatLived(item)}</span>
-          {item.lengthM && <span>{formatRange(item.lengthM, 'm')} long</span>}
+          {item.lengthM && (
+            <span>{tr('size.long', { value: formatRange(item.lengthM, 'm') })}</span>
+          )}
         </div>
         {image && <ImageCredit image={image} compact />}
         {action}

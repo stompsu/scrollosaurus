@@ -4,7 +4,8 @@
   "genus": "Allosaurus",
   "nameMeaning": {
     "text": {
-      "en": "different lizard"
+      "en": "different lizard",
+      "pl": "inny jaszczur"
     },
     "sourceIds": ["nhm"]
   },
@@ -13,7 +14,10 @@
   "isDinosaur": true,
   "taxonomy": {
     "status": "valid",
-    "note": "The holotype of A. fragilis is not diagnostic, and a neotype has been proposed to the ICZN (Case 3506) to conserve the name. A second species, A. jimmadseni, was named in 2020 from the lower Morrison Formation.",
+    "note": {
+      "en": "The holotype of A. fragilis is not diagnostic, and a neotype has been proposed to the ICZN (Case 3506) to conserve the name. A second species, A. jimmadseni, was named in 2020 from the lower Morrison Formation.",
+      "pl": "Holotyp A. fragilis nie ma cech diagnostycznych, dlatego Międzynarodowej Komisji Nomenklatury Zoologicznej (ICZN, sprawa 3506) zaproponowano neotyp, aby zachować tę nazwę. Drugi gatunek, A. jimmadseni, nazwano w 2020 roku na podstawie znalezisk z dolnej części formacji Morrison."
+    },
     "sourceIds": ["chure-loewen-2020"]
   },
   "diet": {
@@ -25,19 +29,28 @@
     "startMa": 154.8,
     "endMa": 143.1,
     "sourceIds": ["pbdb-occs"],
-    "note": "PBDB dates A. fragilis occurrences in the Morrison Formation to the Kimmeridgian-Tithonian; the Ma values are the ICS v2024/12 stage boundaries. The NHM Dino Directory gives 152-145 Ma."
+    "note": {
+      "en": "PBDB dates A. fragilis occurrences in the Morrison Formation to the Kimmeridgian-Tithonian; the Ma values are the ICS v2024/12 stage boundaries. The NHM Dino Directory gives 152-145 Ma.",
+      "pl": "PBDB datuje występowania A. fragilis w formacji Morrison na kimeryd–tyton; wartości w mln lat to granice pięter według ICS v2024/12. Katalog Dino Directory muzeum NHM podaje 152–145 mln lat temu."
+    }
   },
   "periods": ["jurassic"],
   "size": {
     "lengthM": {
       "value": [9.7, 9.7],
       "sourceIds": ["nhm"],
-      "note": "Single published figure (NHM Dino Directory)."
+      "note": {
+        "en": "Single published figure (NHM Dino Directory).",
+        "pl": "Jedyna opublikowana wartość (NHM Dino Directory)."
+      }
     },
     "massKg": {
       "value": [2700, 2700],
       "sourceIds": ["nhm"],
-      "note": "Single published estimate (NHM Dino Directory); method not stated. Mass estimates for large theropods vary widely between methods."
+      "note": {
+        "en": "Single published estimate (NHM Dino Directory); method not stated. Mass estimates for large theropods vary widely between methods.",
+        "pl": "Jedyne opublikowane oszacowanie (NHM Dino Directory); metody nie podano. Szacunki masy dużych teropodów bardzo się różnią w zależności od metody."
+      }
     }
   },
   "locations": [
@@ -55,14 +68,16 @@
   },
   "summary": {
     "text": {
-      "en": "Allosaurus was a large predator of Late Jurassic North America, about 155 to 143 million years ago. It walked on two legs and had three-fingered hands, serrated teeth and small horns above its eyes. It hunted plant eaters such as Stegosaurus. Several skeletons have been found together in bone beds, which hints at pack hunting, but this is unconfirmed. Possible bite marks from other Allosaurus suggest they also fought each other."
+      "en": "Allosaurus was a large predator of Late Jurassic North America, about 155 to 143 million years ago. It walked on two legs and had three-fingered hands, serrated teeth and small horns above its eyes. It hunted plant eaters such as Stegosaurus. Several skeletons have been found together in bone beds, which hints at pack hunting, but this is unconfirmed. Possible bite marks from other Allosaurus suggest they also fought each other.",
+      "pl": "Allosaurus był dużym drapieżnikiem z późnej jury Ameryki Północnej, żyjącym około 155–143 milionów lat temu. Chodził na dwóch nogach, miał trójpalczaste dłonie, piłkowane zęby i małe rogi nad oczami. Polował na roślinożerców, takich jak Stegosaurus. Kilka szkieletów znaleziono razem w złożach kości, co nasuwa myśl o polowaniu w stadach, ale nie zostało to potwierdzone. Możliwe ślady ugryzień zadanych przez inne osobniki Allosaurus sugerują, że walczyły one też między sobą."
     },
     "sourceIds": ["nhm", "pbdb-occs"]
   },
   "funFacts": [
     {
       "text": {
-        "en": "Several Allosaurus have been found in the same bone beds, and some bones carry bite marks from other Allosaurus."
+        "en": "Several Allosaurus have been found in the same bone beds, and some bones carry bite marks from other Allosaurus.",
+        "pl": "Kilka osobników Allosaurus znaleziono w tych samych złożach kości, a na niektórych kościach widać ślady ugryzień zadanych przez inne osobniki Allosaurus."
       },
       "sourceIds": ["nhm"]
     }
@@ -73,7 +88,8 @@
       "commonsFile": "File:Allosaurus fragilis moulage MNHN paleontologie 1.JPG",
       "kind": "skeleton-mount",
       "alt": {
-        "en": "Cast of an Allosaurus fragilis skeleton mounted in a museum palaeontology hall."
+        "en": "Cast of an Allosaurus fragilis skeleton mounted in a museum palaeontology hall.",
+        "pl": "Odlew szkieletu Allosaurus fragilis zmontowany w muzealnej sali paleontologicznej."
       }
     }
   ],

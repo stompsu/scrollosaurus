@@ -1,0 +1,145 @@
+{
+  "slug": "cryolophosaurus",
+  "scientificName": "Cryolophosaurus ellioti",
+  "genus": "Cryolophosaurus",
+  "nameMeaning": {
+    "text": { "en": "frozen crested lizard", "pl": "zamarznięty jaszczur z grzebieniem" },
+    "sourceIds": ["nhm-cryolophosaurus"]
+  },
+  "group": "theropoda",
+  "groupSourceIds": ["smith-2007", "nhm-cryolophosaurus"],
+  "isDinosaur": true,
+  "taxonomy": {
+    "status": "valid"
+  },
+  "diet": {
+    "value": "carnivore",
+    "confidence": "established",
+    "sourceIds": ["nhm-cryolophosaurus", "smith-2007"]
+  },
+  "timeRange": {
+    "startMa": 199.5,
+    "endMa": 184.2,
+    "sourceIds": ["pbdb-cryolophosaurus-ellioti", "pbdb-cryolophosaurus-occs", "smith-2007"],
+    "note": {
+      "en": "PBDB dates the only occurrence to the Sinemurian-Pliensbachian; the Ma values are the ICS v2024/12 stage boundaries. Smith et al. (2007) give only 'Early Jurassic': the Hanson Formation has no direct radiometric date for the bone beds. The NHM Dino Directory's 170 Ma is not used.",
+      "pl": "PBDB datuje jedyne występowanie na synemur–pliensbach; wartości w mln lat to granice pięter według ICS v2024/12. Smith i in. (2007) podają jedynie „wczesna jura”: warstwy z kośćmi w formacji Hanson nie mają bezpośredniej daty radiometrycznej. Wartość 170 mln lat z katalogu Dino Directory muzeum NHM nie została tu użyta."
+    }
+  },
+  "periods": ["jurassic"],
+  "size": {
+    "lengthM": {
+      "value": [6.5, 8],
+      "sourceIds": ["smith-2007", "nhm-cryolophosaurus"],
+      "note": {
+        "en": "Smith et al. (2007) estimate the holotype at 6.5 m; an unfused sacral vertebra suggests it may not have been fully grown. NHM gives 8 m.",
+        "pl": "Smith i in. (2007) szacują długość holotypu na 6,5 m; niezrośnięty kręg krzyżowy sugeruje, że osobnik mógł nie być w pełni dorosły. NHM podaje 8 m."
+      }
+    },
+    "massKg": {
+      "value": [465, 500],
+      "sourceIds": ["smith-2007", "nhm-cryolophosaurus"],
+      "note": {
+        "en": "Smith et al. (2007): 465 kg for the holotype; NHM: 500 kg. Neither source explains the method.",
+        "pl": "Smith i in. (2007): 465 kg dla holotypu; NHM: 500 kg. Żadne ze źródeł nie wyjaśnia metody."
+      }
+    }
+  },
+  "locations": [
+    {
+      "continent": "antarctica",
+      "countryCode": "AQ",
+      "formation": "Hanson",
+      "sourceIds": ["smith-2007", "pbdb-cryolophosaurus-occs"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "Hammer & Hickerson",
+    "year": 1994,
+    "note": {
+      "en": "Hammer & Hickerson (1994) reported the rocks as the Falla Formation; Smith et al. (2007) refer them to the Hanson Formation.",
+      "pl": "Hammer i Hickerson (1994) opisali skały jako formację Falla; Smith i in. (2007) zaliczają je do formacji Hanson."
+    },
+    "sourceIds": ["hammer-hickerson-1994", "smith-2007", "pbdb-cryolophosaurus-ellioti"]
+  },
+  "summary": {
+    "text": {
+      "en": "Cryolophosaurus was a meat-eating dinosaur that lived in Antarctica in the Early Jurassic, when the climate there was mild. At about 6.5 metres long, it is the largest known theropod of the Early Jurassic. On top of its head it had a thin, curved bony crest, which was probably too fragile to be used for fighting.",
+      "pl": "Cryolophosaurus był mięsożernym dinozaurem, który żył na Antarktydzie we wczesnej jurze, gdy panował tam łagodny klimat. Miał około 6,5 metra długości i jest największym znanym teropodem z wczesnej jury. Na szczycie głowy nosił cienki, zakrzywiony kostny grzebień, który był prawdopodobnie zbyt delikatny, by służyć do walki."
+    },
+    "sourceIds": ["smith-2007", "hammer-hickerson-1994", "nhm-cryolophosaurus"]
+  },
+  "funFacts": [
+    {
+      "text": {
+        "en": "Found with it were bones of a long-necked plant-eating dinosaur, teeth of scavenging theropods, a pterosaur bone and a tooth of a tritylodont, a relative of mammals.",
+        "pl": "Razem z nim znaleziono kości długoszyjego roślinożernego dinozaura, zęby teropodów-padlinożerców, kość pterozaura oraz ząb trytylodonta – krewnego ssaków."
+      },
+      "sourceIds": ["hammer-hickerson-1994"]
+    }
+  ],
+  "famous": false,
+  "images": [
+    {
+      "commonsFile": "File:Cryolophosaurus ellioti at Orton Hall.jpg",
+      "kind": "skeleton-mount",
+      "alt": {
+        "en": "Replica cast of the Cryolophosaurus ellioti skeleton, discovered in Antarctica in 1991, on display at Orton Hall.",
+        "pl": "Odlew szkieletu Cryolophosaurus ellioti, odkrytego na Antarktydzie w 1991 roku, na wystawie w Orton Hall."
+      }
+    }
+  ],
+  "uncertain": [
+    {
+      "field": "group",
+      "note": {
+        "en": "Placed in Theropoda only. Smith et al. (2007) find it with Dilophosaurus in a group outside Tetanurae, while the NHM Dino Directory lists it in Tetanurae (Carnosauria). There is no node for the Dilophosaurus group in groups.json.",
+        "pl": "Umieszczony tylko w Theropoda. Smith i in. (2007) łączą go z Dilophosaurus w grupę leżącą poza Tetanurae, natomiast katalog Dino Directory muzeum NHM zalicza go do Tetanurae (Carnosauria). W groups.json nie ma węzła dla grupy Dilophosaurus."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "smith-2007",
+      "title": "Osteology of Cryolophosaurus ellioti (Dinosauria: Theropoda) from the Early Jurassic of Antarctica and implications for early theropod evolution",
+      "authors": "Smith N.D., Makovicky P.J., Hammer W.R., Currie P.J.",
+      "year": 2007,
+      "publisher": "Zoological Journal of the Linnean Society 151: 377-421",
+      "doi": "10.1111/j.1096-3642.2007.00325.x",
+      "url": "https://doi.org/10.1111/j.1096-3642.2007.00325.x",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "hammer-hickerson-1994",
+      "title": "A crested theropod dinosaur from Antarctica",
+      "authors": "Hammer W.R., Hickerson W.J.",
+      "year": 1994,
+      "publisher": "Science 264: 828-830",
+      "doi": "10.1126/science.264.5160.828",
+      "url": "https://doi.org/10.1126/science.264.5160.828",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "nhm-cryolophosaurus",
+      "title": "Cryolophosaurus | Dino Directory",
+      "publisher": "Natural History Museum, London",
+      "url": "https://www.nhm.ac.uk/discover/dino-directory/cryolophosaurus.html",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "pbdb-cryolophosaurus-ellioti",
+      "title": "Cryolophosaurus ellioti (taxon 64372)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/single.json?name=Cryolophosaurus%20ellioti&show=attr,app,parent,class",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-cryolophosaurus-occs",
+      "title": "Occurrences of Cryolophosaurus (stratigraphy and location)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Cryolophosaurus&show=strat,loc",
+      "accessed": "2026-11-21"
+    }
+  ],
+  "lastReviewed": "2026-11-22"
+}

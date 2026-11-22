@@ -1,0 +1,148 @@
+{
+  "slug": "guanlong",
+  "scientificName": "Guanlong wucaii",
+  "genus": "Guanlong",
+  "nameMeaning": {
+    "text": {
+      "en": "Crowned dragon",
+      "pl": "ukoronowany smok"
+    },
+    "sourceIds": ["nhm", "am"]
+  },
+  "group": "coelurosauria",
+  "groupSourceIds": ["xu-2006", "nhm", "am", "pbdb-taxon"],
+  "isDinosaur": true,
+  "taxonomy": {
+    "status": "valid",
+    "note": {
+      "en": "Guanlong is an early tyrannosauroid, a member of the lineage that later produced Tyrannosaurus (Xu et al. 2006; NHM). PBDB and the Australian Museum place it in the family Proceratosauridae. The data set has no Tyrannosauroidea group, so it is filed under Coelurosauria.",
+      "pl": "Guanlong jest wczesnym tyranozauroidem, przedstawicielem linii, z której później wywodził się Tyrannosaurus (Xu i in. 2006; NHM). PBDB i Australian Museum zaliczają go do rodziny Proceratosauridae. W zbiorze danych nie ma grupy Tyrannosauroidea, więc umieszczono go w Coelurosauria."
+    },
+    "sourceIds": ["xu-2006", "nhm", "pbdb-taxon", "am"]
+  },
+  "diet": {
+    "value": "carnivore",
+    "confidence": "established",
+    "sourceIds": ["nhm", "am"]
+  },
+  "timeRange": {
+    "startMa": 161.5,
+    "endMa": 154.8,
+    "sourceIds": ["brusatte-2010", "pbdb-occs", "am", "nhm"],
+    "note": {
+      "en": "Stage-based: Brusatte et al. (2010), citing Eberth et al. (2001), and PBDB give an Oxfordian age for the Guanlong level in the upper Shishugou Formation. The Ma values are the ICS v2024/12 Oxfordian boundaries. The Australian Museum gives 163–158 Ma, which would reach into the Middle Jurassic, and the NHM Dino Directory 159–154 Ma.",
+      "pl": "Na podstawie pięter: Brusatte i in. (2010), powołując się na Eberth i in. (2001), oraz PBDB podają oksford jako wiek poziomu z Guanlong w górnej części formacji Shishugou. Wartości w mln lat to granice oksfordu według ICS v2024/12. Australian Museum podaje 163–158 mln lat temu, co sięgałoby środkowej jury, a Dino Directory muzeum NHM 159–154 mln lat temu."
+    }
+  },
+  "periods": ["jurassic"],
+  "size": {
+    "lengthM": {
+      "value": [3, 4],
+      "sourceIds": ["nhm", "am"],
+      "note": {
+        "en": "The NHM Dino Directory gives 3 m; the Australian Museum gives 4 m.",
+        "pl": "Dino Directory muzeum NHM podaje 3 m; Australian Museum podaje 4 m."
+      }
+    }
+  },
+  "locations": [
+    {
+      "continent": "asia",
+      "countryCode": "CN",
+      "formation": "Shishugou",
+      "sourceIds": ["pbdb-occs", "am", "brusatte-2010"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "Xu, Clark, Forster, Norell, Erickson, Eberth, Jia & Zhao",
+    "year": 2006,
+    "sourceIds": ["xu-2006", "nhm", "pbdb-taxon"]
+  },
+  "summary": {
+    "text": {
+      "en": "Guanlong was a meat-eating dinosaur, about 3 to 4 metres long, and one of the earliest known tyrannosauroids, the group that later gave rise to Tyrannosaurus rex, which lived about 95 million years after it. On its head it carried an air-filled crest, and its name means 'crowned dragon'. It lived in the Late Jurassic in Xinjiang, north-western China, where fossils of two individuals were found in 2002.",
+      "pl": "Guanlong był mięsożernym dinozaurem o długości około 3–4 metrów i jednym z najwcześniejszych znanych tyranozauroidów – grupy, z której później wywodził się Tyrannosaurus rex, żyjący około 95 milionów lat po nim. Na głowie nosił wypełniony powietrzem grzebień, a jego nazwa oznacza „ukoronowany smok”. Żył w późnej jurze w Sinciangu w północno-zachodnich Chinach, gdzie w 2002 roku znaleziono skamieniałości dwóch osobników."
+    },
+    "sourceIds": ["nhm", "am", "xu-2006", "pbdb-occs"]
+  },
+  "funFacts": [
+    {
+      "text": {
+        "en": "Its species name, wucaii, means 'five colours', after the many-coloured rocks of Wucaiwan, where it was found.",
+        "pl": "Jego nazwa gatunkowa, wucaii, oznacza „pięć kolorów” – od wielobarwnych skał Wucaiwan, gdzie go znaleziono."
+      },
+      "sourceIds": ["am"]
+    }
+  ],
+  "famous": false,
+  "images": [
+    {
+      "commonsFile": "File:Guanlong - Baoding.jpg",
+      "kind": "skeleton-mount",
+      "alt": {
+        "en": "Skeletal mount of the crested tyrannosauroid Guanlong wucaii at the Baoding Natural History Museum.",
+        "pl": "Zmontowany szkielet tyranozauroida z grzebieniem Guanlong wucaii w Baoding Natural History Museum."
+      }
+    }
+  ],
+  "uncertain": [
+    {
+      "field": "size.massKg",
+      "note": {
+        "en": "No mass estimate found in a source we could verify.",
+        "pl": "Nie znaleziono oszacowania masy w źródle, które moglibyśmy zweryfikować."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "pbdb-taxon",
+      "title": "Guanlong (taxon 71190)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/single.json?name=Guanlong&show=attr,parent,class",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-occs",
+      "title": "Occurrences of Guanlong (stratigraphy and location)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Guanlong&show=strat,loc",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "nhm",
+      "title": "Guanlong | Dino Directory",
+      "publisher": "Natural History Museum, London",
+      "url": "https://www.nhm.ac.uk/discover/dino-directory/guanlong.html",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "am",
+      "title": "Guanlong wucaii",
+      "publisher": "Australian Museum",
+      "url": "https://australian.museum/learn/dinosaurs/fact-sheets/guanlong-wucaii/",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "xu-2006",
+      "title": "A basal tyrannosauroid dinosaur from the Late Jurassic of China",
+      "authors": "Xu, X.; Clark, J. M.; Forster, C. A.; Norell, M. A.; Erickson, G. M.; Eberth, D. A.; Jia, C.; Zhao, Q.",
+      "year": 2006,
+      "publisher": "Nature",
+      "doi": "10.1038/nature04511",
+      "url": "https://api.crossref.org/works/10.1038/nature04511",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "brusatte-2010",
+      "title": "The skull of Monolophosaurus jiangi (Dinosauria: Theropoda) and its implications for early theropod phylogeny and evolution",
+      "authors": "Brusatte, S. L.; Benson, R. B. J.; Currie, P. J.; Zhao, X.",
+      "year": 2010,
+      "publisher": "Zoological Journal of the Linnean Society",
+      "doi": "10.1111/j.1096-3642.2009.00563.x",
+      "url": "https://publication.plazi.org/GgServer/xml/E04D7464FF80995FFCDDFC8A8C16FEEC",
+      "accessed": "2026-11-22"
+    }
+  ],
+  "lastReviewed": "2026-11-22"
+}

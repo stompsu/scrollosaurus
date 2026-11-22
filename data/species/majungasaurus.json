@@ -1,0 +1,149 @@
+{
+  "slug": "majungasaurus",
+  "scientificName": "Majungasaurus crenatissimus",
+  "genus": "Majungasaurus",
+  "nameMeaning": {
+    "text": {
+      "en": "Majunga lizard",
+      "pl": "jaszczur z Majungi"
+    },
+    "sourceIds": ["krause-2007"]
+  },
+  "group": "abelisauridae",
+  "groupSourceIds": ["krause-2007", "pbdb-taxon"],
+  "isDinosaur": true,
+  "taxonomy": {
+    "status": "valid",
+    "note": {
+      "en": "The species was first named Megalosaurus crenatissimus, later placed in Dryptosaurus, and for a time called Majungatholus atopus, a name based on a skull roof first mistaken for a pachycephalosaur's. Krause et al. (2007) re-established Majungasaurus crenatissimus as the valid name.",
+      "pl": "Gatunek nazwano najpierw Megalosaurus crenatissimus, później przeniesiono do rodzaju Dryptosaurus, a przez pewien czas nazywano go Majungatholus atopus – od fragmentu sklepienia czaszki, który początkowo wzięto za szczątek pachycefalozaura. Krause i in. (2007) przywrócili Majungasaurus crenatissimus jako nazwę ważną."
+    },
+    "sourceIds": ["krause-2007"]
+  },
+  "diet": {
+    "value": "carnivore",
+    "confidence": "established",
+    "sourceIds": ["krause-2007", "rogers-2003", "pbdb-ecospace"],
+    "note": {
+      "en": "The top predator of its ecosystem; Rogers et al. (2003) found evidence that it also ate members of its own species.",
+      "pl": "Szczytowy drapieżnik swojego ekosystemu; Rogers i in. (2003) znaleźli dowody na to, że zjadał też przedstawicieli własnego gatunku."
+    }
+  },
+  "timeRange": {
+    "startMa": 72.2,
+    "endMa": 66,
+    "sourceIds": ["krause-2007", "pbdb-occs"],
+    "note": {
+      "en": "Krause et al. (2007) find no evidence for any age other than Maastrichtian for the Maevarano Formation, the only unit that certainly yields the species. The Ma values are the ICS v2024/12 Maastrichtian boundaries, so the range is broader than the fossils themselves.",
+      "pl": "Krause i in. (2007) nie znajdują żadnych przesłanek za innym wiekiem formacji Maevarano niż mastrycht; jest to jedyna jednostka, z której gatunek ten na pewno pochodzi. Wartości w mln lat to granice mastrychtu według ICS v2024/12, więc zakres jest szerszy niż wiek samych skamieniałości."
+    }
+  },
+  "periods": ["cretaceous"],
+  "size": {
+    "lengthM": {
+      "value": [6, 7],
+      "sourceIds": ["krause-2007"],
+      "note": {
+        "en": "Krause et al. (2007) describe it as a medium-sized theropod 6–7 m long.",
+        "pl": "Krause i in. (2007) opisują go jako średniej wielkości teropoda o długości 6–7 m."
+      }
+    }
+  },
+  "locations": [
+    {
+      "continent": "africa",
+      "countryCode": "MG",
+      "formation": "Maevarano",
+      "sourceIds": ["krause-2007", "pbdb-occs"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "Depéret",
+    "year": 1896,
+    "note": {
+      "en": "Depéret described it as Megalosaurus crenatissimus from fossils collected in 1895; Lavocat named the genus Majungasaurus in 1955.",
+      "pl": "Depéret opisał go jako Megalosaurus crenatissimus na podstawie skamieniałości zebranych w 1895 roku; Lavocat nazwał rodzaj Majungasaurus w 1955 roku."
+    },
+    "sourceIds": ["krause-2007", "pbdb-taxon"]
+  },
+  "summary": {
+    "text": {
+      "en": "Majungasaurus was an abelisaurid, a meat-eating theropod about 6 to 7 metres long, with a small horn-like bump on top of its head. It was the top predator of Madagascar at the very end of the Cretaceous, between about 72 and 66 million years ago. There is evidence that it sometimes ate other Majungasaurus. Thousands of its teeth have been found, along with several skulls.",
+      "pl": "Majungasaurus był abelizaurem – mięsożernym teropodem o długości około 6–7 metrów, z niewielkim, przypominającym róg guzem na czubku głowy. Był szczytowym drapieżnikiem Madagaskaru u schyłku kredy, około 72–66 milionów lat temu. Istnieją dowody, że czasem zjadał inne osobniki Majungasaurus. Znaleziono tysiące jego zębów oraz kilka czaszek."
+    },
+    "sourceIds": ["krause-2007", "rogers-2003", "pbdb-occs"]
+  },
+  "funFacts": [
+    {
+      "text": {
+        "en": "A piece of its domed skull roof was once named as a new bone-headed dinosaur (pachycephalosaur), Majungatholus atopus. A nearly complete skull found in 1996 showed that it belonged to this meat-eater instead.",
+        "pl": "Fragment jego wypukłego sklepienia czaszki uznano kiedyś za szczątek nowego pachycefalozaura i nazwano Majungatholus atopus. Niemal kompletna czaszka znaleziona w 1996 roku pokazała, że należał on w rzeczywistości do tego drapieżnika."
+      },
+      "sourceIds": ["krause-2007"]
+    }
+  ],
+  "famous": false,
+  "images": [
+    {
+      "commonsFile": "File:Majungasaurus SBU right.jpg",
+      "kind": "skeleton-mount",
+      "alt": {
+        "en": "Mounted skeleton (cast) of Majungasaurus crenatissimus at Stony Brook University.",
+        "pl": "Zmontowany szkielet (odlew) Majungasaurus crenatissimus na Stony Brook University."
+      }
+    }
+  ],
+  "uncertain": [
+    {
+      "field": "size.massKg",
+      "note": {
+        "en": "No mass estimate found in a source we could verify.",
+        "pl": "Nie znaleziono oszacowania masy w źródle, które moglibyśmy zweryfikować."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "krause-2007",
+      "title": "Overview of the history of discovery, taxonomy, phylogeny, and biogeography of Majungasaurus crenatissimus (Theropoda: Abelisauridae) from the Late Cretaceous of Madagascar",
+      "authors": "Krause, D. W.; Sampson, S. D.; Carrano, M. T.; O'Connor, P. M.",
+      "year": 2007,
+      "publisher": "Journal of Vertebrate Paleontology 27 (supplement to 2): 1-20 (Society of Vertebrate Paleontology Memoir 8)",
+      "doi": "10.1671/0272-4634(2007)27[1:OOTHOD]2.0.CO;2",
+      "url": "https://sites.ohio.edu/oconnorp/PDFs/Krause%20etal_2007_Majungasaurus_Intro.pdf",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "rogers-2003",
+      "title": "Cannibalism in the Madagascan dinosaur Majungatholus atopus",
+      "authors": "Rogers, R. R.; Krause, D. W.; Curry Rogers, K.",
+      "year": 2003,
+      "publisher": "Nature 422: 515-518",
+      "doi": "10.1038/nature01532",
+      "url": "https://doi.org/10.1038/nature01532",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-taxon",
+      "title": "Majungasaurus crenatissimus (taxon 53959)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/single.json?name=Majungasaurus%20crenatissimus&show=attr,class",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-occs",
+      "title": "Occurrences of Majungasaurus (stratigraphy and location)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Majungasaurus&show=strat,loc",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-ecospace",
+      "title": "Ecology (ecospace) entries for Majungasaurus and other genera",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/list.json?name=Ouranosaurus,Amargasaurus,Pachyrhinosaurus,Tarbosaurus,Majungasaurus,Elasmosaurus,Rhamphorhynchus,Nigersaurus,Suchomimus,Australovenator&show=attr,ecospace",
+      "accessed": "2026-11-22"
+    }
+  ],
+  "lastReviewed": "2026-11-22"
+}

@@ -1,0 +1,156 @@
+{
+  "slug": "antarctopelta",
+  "scientificName": "Antarctopelta oliveroi",
+  "genus": "Antarctopelta",
+  "nameMeaning": {
+    "text": {
+      "en": "shield of Antarctica",
+      "pl": "tarcza Antarktydy"
+    },
+    "sourceIds": ["salgado-gasparini-2006"]
+  },
+  "group": "ankylosauria",
+  "groupSourceIds": ["salgado-gasparini-2006", "soto-acuna-2021", "pbdb-taxon"],
+  "isDinosaur": true,
+  "taxonomy": {
+    "status": "valid",
+    "note": {
+      "en": "Its place within Ankylosauria is debated. Salgado & Gasparini (2006) found some features shared with nodosaurids and others with ankylosaurids, and could not assign it to either family. Soto-Acuña et al. (2021) write that its tail vertebrae and large armour plates suggest a tail weapon like that of Stegouros, and PBDB places it in Parankylosauria, the early-branching group of southern ankylosaurs they named.",
+      "pl": "Jego pozycja w obrębie Ankylosauria jest przedmiotem sporu. Salgado i Gasparini (2006) stwierdzili, że część cech łączy go z nodozaurami, a część z ankylozaurydami, i nie przypisali go do żadnej z tych rodzin. Soto-Acuña i in. (2021) piszą, że kręgi ogonowe i duże płytki pancerza wskazują na ogonową broń podobną do tej u Stegouros, a PBDB umieszcza go w Parankylosauria – wcześnie oddzielonej grupie południowych ankylozaurów, którą nazwali."
+    },
+    "sourceIds": ["salgado-gasparini-2006", "soto-acuna-2021", "pbdb-taxon"]
+  },
+  "diet": {
+    "value": "herbivore",
+    "confidence": "probable",
+    "sourceIds": ["pbdb-taxa", "salgado-gasparini-2006"],
+    "note": {
+      "en": "PBDB classes it as a herbivore. The describers note leaf-shaped teeth with marginal denticles but do not discuss diet.",
+      "pl": "PBDB klasyfikuje go jako roślinożercę. Autorzy opisu wspominają o liściowatych zębach z ząbkami na krawędziach, ale nie omawiają sposobu odżywiania."
+    }
+  },
+  "timeRange": {
+    "startMa": 83.6,
+    "endMa": 72.2,
+    "sourceIds": ["salgado-gasparini-2006", "pbdb-occs"],
+    "note": {
+      "en": "Stage-based: the describers place the holotype in the lower Gamma Member of the Santa Marta Formation, upper Campanian; PBDB lists the occurrence as late Campanian, in the Snow Hill Island Formation. The Ma values are the ICS v2024/12 boundaries of the whole Campanian, so the range is much broader than the age of the fossil.",
+      "pl": "Na podstawie pięter: autorzy opisu umieszczają holotyp w dolnej części ogniwa Gamma formacji Santa Marta, w górnym kampanie; PBDB podaje to występowanie jako późny kampan w formacji Snow Hill Island. Wartości w mln lat to granice całego kampanu według ICS v2024/12, więc zakres jest znacznie szerszy niż wiek skamieniałości."
+    }
+  },
+  "periods": ["cretaceous"],
+  "size": {
+    "lengthM": {
+      "value": [4, 4],
+      "sourceIds": ["salgado-gasparini-2006"],
+      "note": {
+        "en": "The describers call it a medium-sized ankylosaur with an estimated length of no more than 4 m, so this is an upper limit.",
+        "pl": "Autorzy opisu określają go jako średniej wielkości ankylozaura o szacowanej długości nie większej niż 4 m, więc jest to górna granica."
+      }
+    }
+  },
+  "locations": [
+    {
+      "continent": "antarctica",
+      "countryCode": "AQ",
+      "formation": "Santa Marta",
+      "sourceIds": ["salgado-gasparini-2006", "pbdb-occs"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "Salgado & Gasparini",
+    "year": 2006,
+    "note": {
+      "en": "The holotype, a partial skeleton, was found at Santa Marta Cove on James Ross Island by the Argentine geologist and palaeontologist Eduardo Olivero; the species name honours him.",
+      "pl": "Holotyp, niekompletny szkielet, znalazł w zatoce Santa Marta na Wyspie Jamesa Rossa argentyński geolog i paleontolog Eduardo Olivero; nazwa gatunkowa upamiętnia właśnie jego."
+    },
+    "sourceIds": ["salgado-gasparini-2006", "pbdb-taxa"]
+  },
+  "summary": {
+    "text": {
+      "en": "Antarctopelta, the 'shield of Antarctica', was an armoured, plant-eating ankylosaur up to about 4 metres long. Its partial skeleton was found on James Ross Island, Antarctica, in rocks from the late Campanian, near the end of the Cretaceous. Bony plates of several shapes covered its body. Scientists still debate its closest relatives, and its tail may have carried a flat weapon like that of Stegouros from Chile.",
+      "pl": "Antarctopelta, czyli „tarcza Antarktydy”, był opancerzonym roślinożernym ankylozaurem o długości do około 4 metrów. Jego niekompletny szkielet znaleziono na Wyspie Jamesa Rossa na Antarktydzie, w skałach z późnego kampanu, pod koniec kredy. Ciało pokrywały kostne płytki o różnych kształtach. Naukowcy wciąż spierają się o jego najbliższych krewnych, a na ogonie mógł mieć płaską broń podobną do tej, którą miał Stegouros z Chile."
+    },
+    "sourceIds": ["salgado-gasparini-2006", "soto-acuna-2021", "pbdb-taxa"]
+  },
+  "funFacts": [
+    {
+      "text": {
+        "en": "Its armour mixed smooth, roundish bony plates, each surrounded by a mosaic of smaller, rough-surfaced plates, with tiny button-like bones as well.",
+        "pl": "Jego pancerz łączył gładkie, zaokrąglone płytki kostne, otoczone mozaiką mniejszych płytek o chropowatej powierzchni, z drobnymi kosteczkami przypominającymi guziki."
+      },
+      "sourceIds": ["salgado-gasparini-2006"]
+    }
+  ],
+  "famous": false,
+  "images": [
+    {
+      "commonsFile": "File:Antarctopelta LMR.jpg",
+      "kind": "life-reconstruction",
+      "alt": {
+        "en": "Life restoration of Antarctopelta oliveroi.",
+        "pl": "Rekonstrukcja przyżyciowa Antarctopelta oliveroi."
+      }
+    }
+  ],
+  "uncertain": [
+    {
+      "field": "taxonomy",
+      "note": {
+        "en": "Placement within Ankylosauria is debated: neither Nodosauridae nor Ankylosauridae in the original description; Parankylosauria in PBDB following Soto-Acuña et al. (2021).",
+        "pl": "Pozycja w obrębie Ankylosauria jest sporna: w pierwotnym opisie ani Nodosauridae, ani Ankylosauridae; w PBDB Parankylosauria, za Soto-Acuñą i in. (2021)."
+      }
+    },
+    {
+      "field": "size.massKg",
+      "note": {
+        "en": "No mass estimate found in a source we could verify.",
+        "pl": "Nie znaleziono oszacowania masy w źródle, które moglibyśmy zweryfikować."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "salgado-gasparini-2006",
+      "title": "Reappraisal of an ankylosaurian dinosaur from the Upper Cretaceous of James Ross Island (Antarctica)",
+      "authors": "Salgado, L.; Gasparini, Z.",
+      "year": 2006,
+      "publisher": "Geodiversitas 28(1): 119-135",
+      "doi": "10.5281/zenodo.5376156",
+      "url": "https://zenodo.org/record/5376156",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "soto-acuna-2021",
+      "title": "Bizarre tail weaponry in a transitional ankylosaur from subantarctic Chile",
+      "authors": "Soto-Acuña, S.; Vargas, A. O.; Kaluza, J.; Leppe, M. A.; et al.",
+      "year": 2021,
+      "publisher": "Nature 600: 259-263",
+      "doi": "10.1038/s41586-021-04147-1",
+      "url": "https://doi.org/10.1038/s41586-021-04147-1",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-taxon",
+      "title": "Antarctopelta (taxon 77202) and its parent taxa",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/list.json?name=Antarctopelta&rel=all_parents",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-taxa",
+      "title": "Taxon records with classification and ecospace for Antarctopelta and other genera",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/list.json?name=Rapetosaurus,Rajasaurus,Antarctopelta,Hypsilophodon,Magyarosaurus,Hatzegopteryx,Centrosaurus,Chasmosaurus,Stegoceras,Borealopelta&show=attr,class,ecospace",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-occs",
+      "title": "Occurrences of Antarctopelta and other genera (stratigraphy and location)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Rapetosaurus,Rajasaurus,Antarctopelta,Magyarosaurus,Hatzegopteryx&show=strat,loc",
+      "accessed": "2026-11-22"
+    }
+  ],
+  "lastReviewed": "2026-11-22"
+}

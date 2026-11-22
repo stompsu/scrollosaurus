@@ -4,7 +4,8 @@
   "genus": "Maiasaura",
   "nameMeaning": {
     "text": {
-      "en": "Good mother lizard"
+      "en": "Good mother lizard",
+      "pl": "jaszczur dobra matka"
     },
     "sourceIds": ["nhm-maiasaura"]
   },
@@ -23,19 +24,28 @@
     "startMa": 80,
     "endMa": 75,
     "sourceIds": ["nhm-maiasaura"],
-    "note": "NHM gives 80–75 Ma. PBDB occurrences are all from the Campanian Two Medicine Formation."
+    "note": {
+      "en": "NHM gives 80–75 Ma. PBDB occurrences are all from the Campanian Two Medicine Formation.",
+      "pl": "NHM podaje 80–75 mln lat temu. Wszystkie występowania w PBDB pochodzą z kampańskiej formacji Two Medicine."
+    }
   },
   "periods": ["cretaceous"],
   "size": {
     "lengthM": {
       "value": [9, 9],
       "sourceIds": ["nhm-maiasaura"],
-      "note": "Single museum estimate (NHM)."
+      "note": {
+        "en": "Single museum estimate (NHM).",
+        "pl": "Jedyne oszacowanie muzealne (NHM)."
+      }
     },
     "massKg": {
       "value": [2500, 2500],
       "sourceIds": ["nhm-maiasaura"],
-      "note": "Single museum estimate (NHM); mass estimates vary widely between methods."
+      "note": {
+        "en": "Single museum estimate (NHM); mass estimates vary widely between methods.",
+        "pl": "Jedyne oszacowanie muzealne (NHM); szacunki masy bardzo się różnią w zależności od metody."
+      }
     }
   },
   "locations": [
@@ -53,14 +63,16 @@
   },
   "summary": {
     "text": {
-      "en": "Maiasaura was a duck-billed plant-eater from Montana, USA, that lived during the Campanian, about 80 to 75 million years ago. Its name means 'good mother lizard'. It was found with nests of babies too young to walk well, whose worn teeth show they had been eating: the first evidence that some dinosaurs cared for their young. It grew to around nine metres long."
+      "en": "Maiasaura was a duck-billed plant-eater from Montana, USA, that lived during the Campanian, about 80 to 75 million years ago. Its name means 'good mother lizard'. It was found with nests of babies too young to walk well, whose worn teeth show they had been eating: the first evidence that some dinosaurs cared for their young. It grew to around nine metres long.",
+      "pl": "Maiasaura była kaczodziobym roślinożercą z Montany w USA, żyjącym w kampanie, około 80–75 milionów lat temu. Jej nazwa oznacza „jaszczur dobra matka”. Znaleziono ją wraz z gniazdami pełnymi młodych, zbyt małych, by dobrze chodzić; ich starte zęby pokazują, że już się odżywiały. To pierwszy dowód, że niektóre dinozaury opiekowały się potomstwem. Dorastała do około dziewięciu metrów długości."
     },
     "sourceIds": ["nhm-maiasaura", "pbdb-occurrences", "serc-egg-mountain"]
   },
   "funFacts": [
     {
       "text": {
-        "en": "Maiasaura was named from a nest of juveniles, which gave evidence of family life among dinosaurs."
+        "en": "Maiasaura was named from a nest of juveniles, which gave evidence of family life among dinosaurs.",
+        "pl": "Maiasaura została nazwana na podstawie gniazda z młodymi, które dostarczyło dowodów na życie rodzinne dinozaurów."
       },
       "sourceIds": ["horner-makela-1979"]
     }
@@ -70,7 +82,10 @@
     {
       "commonsFile": "File:Maiasaura MOR.jpg",
       "kind": "skeleton-mount",
-      "alt": { "en": "Mounted skeleton of Maiasaura on display in a museum." }
+      "alt": {
+        "en": "Mounted skeleton of Maiasaura on display in a museum.",
+        "pl": "Zmontowany szkielet Maiasaura wystawiony w muzeum."
+      }
     }
   ],
   "sources": [

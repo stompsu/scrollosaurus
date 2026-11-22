@@ -4,7 +4,8 @@
   "genus": "Ankylosaurus",
   "nameMeaning": {
     "text": {
-      "en": "Fused lizard"
+      "en": "Fused lizard",
+      "pl": "zrośnięty jaszczur"
     },
     "sourceIds": ["nhm-ankylosaurus"]
   },
@@ -23,19 +24,28 @@
     "startMa": 68,
     "endMa": 66,
     "sourceIds": ["nhm-ankylosaurus"],
-    "note": "NHM gives 68–66 Ma. All PBDB occurrences of A. magniventris are Maastrichtian (stage 72.2–66 Ma)."
+    "note": {
+      "en": "NHM gives 68–66 Ma. All PBDB occurrences of A. magniventris are Maastrichtian (stage 72.2–66 Ma).",
+      "pl": "NHM podaje 68–66 mln lat temu. Wszystkie występowania A. magniventris w PBDB pochodzą z mastrychtu (piętro 72,2–66 mln lat temu)."
+    }
   },
   "periods": ["cretaceous"],
   "size": {
     "lengthM": {
       "value": [8, 8],
       "sourceIds": ["nhm-ankylosaurus"],
-      "note": "Single museum estimate (NHM). Ankylosaurus is known from fragmentary remains, so length is extrapolated."
+      "note": {
+        "en": "Single museum estimate (NHM). Ankylosaurus is known from fragmentary remains, so length is extrapolated.",
+        "pl": "Jedyne oszacowanie muzealne (NHM). Ankylosaurus jest znany z fragmentarycznych szczątków, więc jego długość jest ekstrapolowana."
+      }
     },
     "massKg": {
-      "value": [8000, 8000],
-      "sourceIds": ["nhm-ankylosaurus"],
-      "note": "Single museum estimate (NHM); mass estimates vary widely between methods."
+      "value": [4800, 8000],
+      "sourceIds": ["benson-2014", "nhm-ankylosaurus"],
+      "note": {
+        "en": "4,800 kg is the peer-reviewed estimate of Benson et al. (2014), scaled from the thickness (circumference) of the upper arm and thigh bones; its standard error is 0.135 log10(kg). 8,000 kg is the NHM Dino Directory figure, whose basis the page does not give.",
+        "pl": "4800 kg to recenzowane oszacowanie Bensona i in. (2014), wyliczone na podstawie grubości (obwodu) kości ramienia i uda; jego błąd standardowy wynosi 0,135 log10(kg). 8000 kg to wartość z Dino Directory NHM, której podstawy strona nie podaje."
+      }
     }
   },
   "locations": [
@@ -65,7 +75,8 @@
   },
   "summary": {
     "text": {
-      "en": "Ankylosaurus was a plant-eater covered in bony armour plates, with a heavy club at the end of its tail that it probably swung from side to side to defend itself. It lived in western North America at the very end of the Cretaceous, about 68 to 66 million years ago. No complete skeleton has been found, and it is known from more fragmentary remains than some of its smaller relatives."
+      "en": "Ankylosaurus was a plant-eater covered in bony armour plates, with a heavy club at the end of its tail that it probably swung from side to side to defend itself. It lived in western North America at the very end of the Cretaceous, about 68 to 66 million years ago. No complete skeleton has been found, and it is known from more fragmentary remains than some of its smaller relatives.",
+      "pl": "Ankylosaurus był roślinożercą pokrytym kostnymi płytami pancerza, z ciężką buławą na końcu ogona, którą prawdopodobnie wymachiwał na boki, aby się bronić. Żył w zachodniej części Ameryki Północnej u samego schyłku kredy, około 68–66 milionów lat temu. Nie znaleziono kompletnego szkieletu, a znany jest z bardziej fragmentarycznych szczątków niż niektórzy z jego mniejszych krewnych."
     },
     "sourceIds": ["nhm-ankylosaurus", "pbdb-occurrences", "arbour-mallon-2017"]
   },
@@ -74,7 +85,19 @@
     {
       "commonsFile": "File:Ankylosaur head - cast - Custer County Montana - Museum of the Rockies - 2013-07-08.jpg",
       "kind": "skull",
-      "alt": { "en": "Cast of an Ankylosaurus skull on display in a museum." }
+      "alt": {
+        "en": "Cast of an Ankylosaurus skull on display in a museum.",
+        "pl": "Odlew czaszki Ankylosaurus wystawiony w muzeum."
+      }
+    }
+  ],
+  "uncertain": [
+    {
+      "field": "size.massKg",
+      "note": {
+        "en": "The two estimates differ by a factor of about 1.7: 4,800 kg from limb-bone scaling (Benson et al. 2014) and 8,000 kg from the NHM, which does not state its method. Ankylosaurus is known from fragmentary remains.",
+        "pl": "Oba oszacowania różnią się mniej więcej 1,7-krotnie: 4800 kg na podstawie skalowania kości kończyn (Benson i in. 2014) oraz 8000 kg według NHM, które nie podaje metody. Ankylosaurus jest znany z fragmentarycznych szczątków."
+      }
     }
   ],
   "sources": [
@@ -108,7 +131,17 @@
       "doi": "10.1139/facets-2017-0063",
       "url": "https://doi.org/10.1139/facets-2017-0063",
       "accessed": "2026-11-20"
+    },
+    {
+      "id": "benson-2014",
+      "title": "Rates of dinosaur body mass evolution indicate 170 million years of sustained ecological innovation on the avian stem lineage",
+      "authors": "Benson R.B.J., Campione N.E., Carrano M.T., Mannion P.D., Sullivan C., Upchurch P., Evans D.C.",
+      "year": 2014,
+      "publisher": "PLOS Biology 12(5): e1001853",
+      "doi": "10.1371/journal.pbio.1001853",
+      "url": "https://doi.org/10.1371/journal.pbio.1001853",
+      "accessed": "2026-11-22"
     }
   ],
-  "lastReviewed": "2026-11-20"
+  "lastReviewed": "2026-11-22"
 }

@@ -1,7 +1,8 @@
 import { useId, useMemo, useState, type KeyboardEvent } from 'react';
 import { DietIcon, NotADinosaurTag } from '@/components/ui/DietBadge';
 import { formatMa } from '@/lib/geologic-time';
-import { DIET_LABELS } from '@/lib/labels';
+import { tr } from '@/lib/i18n';
+import { localize } from '@/lib/locale';
 import type { SpeciesIndexEntry } from '@/lib/species-index';
 import { createSpeciesSearch } from './search';
 
@@ -71,20 +72,20 @@ export function SearchBox({ items, onPick }: SearchBoxProps) {
   const status = !expanded
     ? ''
     : results.length === 0
-      ? 'No species found'
-      : `${String(results.length)} species found`;
+      ? tr('filters.foundNone')
+      : tr('filters.found', { count: results.length });
 
   return (
     <div className="sc-search" role="search">
       <label htmlFor={inputId} className="sc-field-label">
-        Find a species
+        {tr('filters.find')}
       </label>
       <input
         id={inputId}
         type="text"
         role="combobox"
         className="sc-input"
-        placeholder="e.g. Triceratops, “thunder”"
+        placeholder={tr('filters.findPlaceholder')}
         autoComplete="off"
         spellCheck={false}
         aria-autocomplete="list"
@@ -108,7 +109,7 @@ export function SearchBox({ items, onPick }: SearchBoxProps) {
       <ul
         id={listId}
         role="listbox"
-        aria-label="Matching species"
+        aria-label={tr('filters.matching')}
         className="sc-search-list"
         hidden={!expanded || results.length === 0}
       >
@@ -132,15 +133,18 @@ export function SearchBox({ items, onPick }: SearchBoxProps) {
               <i>{item.genus}</i>
               {!item.isDinosaur && <NotADinosaurTag />}
               <span className="sc-search-meta">
-                {DIET_LABELS[item.diet].label} · “{item.nameMeaning}” · {formatMa(item.startMa)}–
-                {formatMa(item.endMa)} Ma
+                {tr(`diet.${item.diet}`)} · “{localize(item.nameMeaning)}” ·{' '}
+                {tr('time.rangeShort', {
+                  start: formatMa(item.startMa),
+                  end: formatMa(item.endMa),
+                })}
               </span>
             </span>
           </li>
         ))}
       </ul>
       <p id={hintId} className="sr-only">
-        Use the up and down arrows to choose a result and Enter to open it.
+        {tr('filters.searchHint')}
       </p>
       <p className="sr-only" aria-live="polite">
         {status}

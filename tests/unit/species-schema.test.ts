@@ -20,7 +20,7 @@ function species(overrides: Partial<Record<keyof Species, unknown>> = {}): Recor
     slug: 'testosaurus',
     scientificName: 'Testosaurus exemplaris',
     genus: 'Testosaurus',
-    nameMeaning: { text: { en: 'test lizard' }, sourceIds: ['src'] },
+    nameMeaning: { text: { en: 'test lizard', pl: 'jaszczur testowy' }, sourceIds: ['src'] },
     group: 'theropoda',
     groupSourceIds: ['src'],
     isDinosaur: true,
@@ -34,7 +34,7 @@ function species(overrides: Partial<Record<keyof Species, unknown>> = {}): Recor
     },
     locations: [{ continent: 'europe', countryCode: 'GB', sourceIds: ['src'] }],
     discovery: { describedBy: 'A. Author', year: 1900, sourceIds: ['src'] },
-    summary: { text: { en: 'A test animal.' }, sourceIds: ['src'] },
+    summary: { text: { en: 'A test animal.', pl: 'Zwierzę testowe.' }, sourceIds: ['src'] },
     famous: false,
     images: [],
     sources: [source],
@@ -177,7 +177,7 @@ describe('speciesSchema', () => {
   });
 
   it('rejects a field listed twice in uncertain', () => {
-    const u = { field: 'diet', note: 'x' };
+    const u = { field: 'diet', note: { en: 'x' } };
     expect(messages(species({ uncertain: [u, u] }))).toContainEqual(
       expect.stringMatching(/listed twice|lists a field twice/),
     );
@@ -204,8 +204,11 @@ describe('crossCheck', () => {
     expect(check().errors).toEqual([]);
   });
 
-  it('warns once about missing Polish text', () => {
-    expect(check().warnings).toEqual([expect.stringMatching(/1 species have no Polish/)]);
+  it('fails a text without Polish, naming where it is', () => {
+    expect(
+      check({ summary: { text: { en: 'A test animal.' }, sourceIds: ['src'] } }).errors,
+    ).toEqual([expect.stringMatching(/no Polish text at summary\.text$/)]);
+    expect(check().warnings).toEqual([]);
   });
 
   it('warns when a size is empty but not flagged as uncertain', () => {
@@ -215,8 +218,8 @@ describe('crossCheck', () => {
     const flagged = check({
       size: {},
       uncertain: [
-        { field: 'size.lengthM', note: 'No published estimate' },
-        { field: 'size.massKg', note: 'No published estimate' },
+        { field: 'size.lengthM', note: { en: 'No published estimate' } },
+        { field: 'size.massKg', note: { en: 'No published estimate' } },
       ],
     });
     expect(flagged.warnings.filter((w) => w.includes('size.'))).toEqual([]);
@@ -224,7 +227,12 @@ describe('crossCheck', () => {
 
   it('warns when a debated diet is not listed in uncertain', () => {
     const r = check({
-      diet: { value: 'piscivore', confidence: 'debated', sourceIds: ['src'], note: 'Disputed' },
+      diet: {
+        value: 'piscivore',
+        confidence: 'debated',
+        sourceIds: ['src'],
+        note: { en: 'Disputed' },
+      },
     });
     expect(r.warnings).toContainEqual(expect.stringMatching(/diet is debated/));
   });

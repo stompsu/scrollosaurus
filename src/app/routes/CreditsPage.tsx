@@ -1,9 +1,13 @@
 import { Link } from 'react-router';
 import { ImageContext, ImageCredit, SpeciesPicture } from '@/components/ui/SpeciesPicture';
 import { geologicTime } from '@/lib/geologic-time';
+import { tr } from '@/lib/i18n';
+import { useLang } from '@/lib/lang';
+import { langPath, localize } from '@/lib/locale';
 import { species } from '@/lib/species';
 
 export default function CreditsPage() {
+  const lang = useLang();
   const { chart } = geologicTime;
   const credited = [...species]
     .filter((s) => s.images.length > 0)
@@ -12,9 +16,9 @@ export default function CreditsPage() {
   return (
     // overflow-wrap:anywhere lets long URLs/DOIs in credits wrap at 320 px (WCAG 1.4.10).
     <article className="flex max-w-prose min-w-0 flex-col gap-4 [overflow-wrap:anywhere]">
-      <title>Credits · Scrollosaurus</title>
-      <h1 className="font-display text-3xl">Credits</h1>
-      <h2 className="font-display text-xl">Data</h2>
+      <title>{tr('site.pageTitle', { page: tr('credits.title') })}</title>
+      <h1 className="font-display text-3xl">{tr('credits.title')}</h1>
+      <h2 className="font-display text-xl">{tr('credits.data')}</h2>
       <p>
         {chart.name} {chart.version}, {chart.publisher}.{' '}
         <a className="text-accent underline" href={chart.url}>
@@ -22,17 +26,10 @@ export default function CreditsPage() {
         </a>{' '}
         ({chart.license}). {chart.citation}
       </p>
-      <p>
-        Every species fact links to its sources in that species’ details. Data comes mainly from
-        peer-reviewed papers, museums and the Paleobiology Database.
-      </p>
+      <p>{tr('credits.dataNote')}</p>
 
-      <h2 className="font-display text-xl">Images</h2>
-      <p>
-        All images come from Wikimedia Commons, under the licence shown with each one. For this site
-        they are resized, converted to AVIF and WebP, and placed on a dark background where the
-        original is transparent. The licence of each original applies to its copies.
-      </p>
+      <h2 className="font-display text-xl">{tr('credits.images')}</h2>
+      <p>{tr('credits.imagesNote')}</p>
       <ul className="sc-credits-list" data-testid="image-credits">
         {credited.flatMap((s) =>
           s.images.map((image) => (
@@ -40,10 +37,10 @@ export default function CreditsPage() {
               <SpeciesPicture image={image} sizes="5rem" decorative />
               <div>
                 <p>
-                  <Link className="text-accent underline" to={`/species/${s.slug}`}>
+                  <Link className="text-accent underline" to={langPath(`/species/${s.slug}`, lang)}>
                     <i>{s.genus}</i>
                   </Link>
-                  : {image.alt}
+                  : {localize(image.alt)}
                 </p>
                 <p className="text-sm">
                   <ImageContext image={image} />
@@ -56,7 +53,7 @@ export default function CreditsPage() {
       </ul>
       {without.length > 0 && (
         <p className="text-text-muted text-sm">
-          No suitable freely licensed image yet for:{' '}
+          {tr('credits.without')}
           {without.map((s, i) => (
             <span key={s.slug}>
               {i > 0 && ', '}

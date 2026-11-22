@@ -1,0 +1,160 @@
+{
+  "slug": "deinocheirus",
+  "scientificName": "Deinocheirus mirificus",
+  "genus": "Deinocheirus",
+  "nameMeaning": {
+    "text": {
+      "en": "horrible hand",
+      "pl": "straszliwa ręka"
+    },
+    "sourceIds": ["hokudai-2014", "nhm-deinocheirus"]
+  },
+  "group": "ornithomimosauria",
+  "groupSourceIds": ["lee-2014", "pbdb-genera", "nhm-deinocheirus"],
+  "isDinosaur": true,
+  "taxonomy": {
+    "status": "valid",
+    "note": {
+      "en": "Long known only from its arms and shoulder girdles. Lee et al. (2014) described two new specimens and found Deinocheirus to be the largest member of Ornithomimosauria; PBDB places it in Deinocheiridae.",
+      "pl": "Długo znany tylko z przednich kończyn i obręczy barkowych. Lee i in. (2014) opisali dwa nowe okazy i ustalili, że Deinocheirus jest największym przedstawicielem Ornithomimosauria; PBDB umieszcza go w rodzinie Deinocheiridae."
+    },
+    "sourceIds": ["lee-2014", "hokudai-2014", "pbdb-genera"]
+  },
+  "diet": {
+    "value": "omnivore",
+    "confidence": "probable",
+    "sourceIds": ["lee-2014", "hokudai-2014", "pbdb-genera"],
+    "note": {
+      "en": "Skull features, more than a thousand gastroliths and stomach contents with fish remains led Lee et al. (2014) to call it a 'megaomnivore'. PBDB lists it as a herbivore or omnivore.",
+      "pl": "Cechy czaszki, ponad tysiąc gastrolitów oraz zawartość żołądka ze szczątkami ryb skłoniły Lee i in. (2014) do nazwania go „megawszystkożercą”. PBDB wymienia go jako roślinożercę lub wszystkożercę."
+    }
+  },
+  "timeRange": {
+    "startMa": 72.2,
+    "endMa": 66,
+    "sourceIds": ["pbdb-occs", "lee-2014", "nhm-deinocheirus"],
+    "note": {
+      "en": "PBDB dates the D. mirificus occurrences (Nemegt Formation, Mongolia) to the Maastrichtian; the Ma values are the ICS v2024/12 Maastrichtian stage boundaries. A questionable genus-level PBDB record ('? Deinocheirus sp.') from the Baynshire Formation (Cenomanian–Santonian) is not used. NHM gives 70–66 Ma.",
+      "pl": "PBDB datuje występowania D. mirificus (formacja Nemegt, Mongolia) na mastrycht; wartości w mln lat to granice piętra mastrychtu według ICS v2024/12. Wątpliwy rekord PBDB na poziomie rodzaju („? Deinocheirus sp.”) z formacji Baynshire (cenoman–santon) nie został uwzględniony. NHM podaje 70–66 mln lat temu."
+    }
+  },
+  "periods": ["cretaceous"],
+  "size": {
+    "lengthM": {
+      "value": [10, 11],
+      "sourceIds": ["hokudai-2014", "nhm-deinocheirus"],
+      "note": {
+        "en": "11 m for the Bugiin Tsav specimen (Hokkaido University, reporting Lee et al. 2014); NHM gives 10 m.",
+        "pl": "11 m dla okazu z Bugiin Tsav (Uniwersytet Hokkaido, na podstawie pracy Lee i in. 2014); NHM podaje 10 m."
+      }
+    },
+    "massKg": {
+      "value": [6400, 6400],
+      "sourceIds": ["hokudai-2014"],
+      "note": {
+        "en": "Estimated 6.4 tonnes for the Bugiin Tsav specimen (Hokkaido University, reporting Lee et al. 2014).",
+        "pl": "Szacunkowo 6,4 tony dla okazu z Bugiin Tsav (Uniwersytet Hokkaido, na podstawie pracy Lee i in. 2014)."
+      }
+    }
+  },
+  "locations": [
+    {
+      "continent": "asia",
+      "countryCode": "MN",
+      "formation": "Nemegt",
+      "sourceIds": ["pbdb-occs", "lee-2014"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "Osmólska & Roniewicz",
+    "year": 1970,
+    "note": {
+      "en": "The first arms were found by the 1965 Polish–Mongolian Palaeontological Expedition. Hokkaido University credits Halszka Osmólska with naming the animal in 1970; PBDB lists the 1970 paper by Osmólska and Roniewicz but attributes the name to an earlier article by Kielan-Jaworowska (1969).",
+      "pl": "Pierwsze przednie kończyny znalazła Polsko-Mongolska Wyprawa Paleontologiczna w 1965 roku. Uniwersytet Hokkaido przypisuje nadanie nazwy Halszce Osmólskiej w 1970 roku; PBDB wymienia pracę Osmólskiej i Roniewicz z 1970 roku, ale nazwę przypisuje wcześniejszemu artykułowi Kielan-Jaworowskiej (1969)."
+    },
+    "sourceIds": ["pbdb-refs", "pbdb-genera", "hokudai-2014", "lee-2014"]
+  },
+  "summary": {
+    "text": {
+      "en": "For almost 50 years, Deinocheirus was known only from a pair of giant arms, 2.4 metres long, found in Mongolia in 1965. New skeletons described in 2014 revealed a bizarre animal: an 11-metre, 6.4-tonne ornithomimosaur with a long, toothless, duck-like beak, very tall spines along its back and blunt toe claws. More than a thousand stomach stones and fish remains in its belly show it was a giant omnivore.",
+      "pl": "Przez prawie 50 lat Deinocheirus był znany tylko z pary olbrzymich przednich kończyn o długości 2,4 metra, znalezionych w Mongolii w 1965 roku. Nowe szkielety opisane w 2014 roku ujawniły dziwaczne zwierzę: ornitomimozaura o długości 11 metrów i masie 6,4 tony, z długim, bezzębnym dziobem podobnym do kaczego, bardzo wysokimi wyrostkami wzdłuż grzbietu i tępymi pazurami palców stóp. Ponad tysiąc kamieni żołądkowych i szczątki ryb w brzuchu pokazują, że był olbrzymim wszystkożercą."
+    },
+    "sourceIds": ["lee-2014", "hokudai-2014"]
+  },
+  "funFacts": [
+    {
+      "text": {
+        "en": "Parts of one poached skeleton, including the skull, turned up in a private European collection in 2011 and were returned to Mongolia in 2014.",
+        "pl": "Części jednego nielegalnie wykopanego szkieletu, w tym czaszka, odnalazły się w 2011 roku w prywatnej europejskiej kolekcji i w 2014 roku wróciły do Mongolii."
+      },
+      "sourceIds": ["hokudai-2014"]
+    },
+    {
+      "text": {
+        "en": "Its blunt toe claws may have stopped its feet from sinking into wet ground.",
+        "pl": "Tępe pazury palców stóp mogły chronić jego stopy przed zapadaniem się w mokry grunt."
+      },
+      "sourceIds": ["hokudai-2014"]
+    }
+  ],
+  "famous": false,
+  "images": [
+    {
+      "commonsFile": "File:Deinocheirus mount.jpg",
+      "kind": "skeleton-mount",
+      "alt": {
+        "en": "Skeletal mount of Deinocheirus in a museum exhibition.",
+        "pl": "Zmontowany szkielet Deinocheirus na wystawie muzealnej."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "lee-2014",
+      "title": "Resolving the long-standing enigmas of a giant ornithomimosaur Deinocheirus mirificus",
+      "authors": "Lee, Y.-N.; Barsbold, R.; Currie, P. J.; Kobayashi, Y.; Lee, H.-J.; Godefroit, P.; Escuillié, F.; Chinzorig, T.",
+      "year": 2014,
+      "publisher": "Nature 515: 257-260",
+      "doi": "10.1038/nature13874",
+      "url": "https://doi.org/10.1038/nature13874",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "hokudai-2014",
+      "title": "Deinocheirus mirificus, no longer an enigma",
+      "publisher": "Hokkaido University",
+      "year": 2014,
+      "url": "https://www.global.hokudai.ac.jp/blog/65-deinocheirus-mirificus-no-longer-an-enigma/",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "nhm-deinocheirus",
+      "title": "Deinocheirus | Dino Directory",
+      "publisher": "Natural History Museum, London",
+      "url": "https://www.nhm.ac.uk/discover/dino-directory/deinocheirus.html",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-genera",
+      "title": "Taxon entries for Deinocheirus (taxon 38551) and other genera",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/list.json?name=Saturnalia,Silesaurus,Lisowicia,Anchiornis,Yutyrannus,Caudipteryx,Citipati,Deinocheirus,Opisthocoelicaudia,Saltasaurus,Patagotitan&show=attr,app,parent,class,ecospace",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-occs",
+      "title": "Occurrences of Deinocheirus and other genera (stratigraphy and location)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Citipati,Deinocheirus,Opisthocoelicaudia,Saltasaurus,Patagotitan&show=strat,loc",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-refs",
+      "title": "References for Deinocheirus mirificus",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/refs.json?name=Deinocheirus%20mirificus&select=all&show=both",
+      "accessed": "2026-11-22"
+    }
+  ],
+  "lastReviewed": "2026-11-22"
+}

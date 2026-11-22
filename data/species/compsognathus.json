@@ -1,0 +1,149 @@
+{
+  "slug": "compsognathus",
+  "scientificName": "Compsognathus longipes",
+  "genus": "Compsognathus",
+  "nameMeaning": {
+    "text": {
+      "en": "Pretty jaw",
+      "pl": "ładna szczęka"
+    },
+    "sourceIds": ["nhm"]
+  },
+  "group": "compsognathidae",
+  "groupSourceIds": ["pbdb-taxon", "peyer-2006", "nhm"],
+  "isDinosaur": true,
+  "taxonomy": {
+    "status": "valid",
+    "note": {
+      "en": "Peyer (2006) found the French Compsognathus corallestris to be a junior synonym of C. longipes, so the Bavarian and French skeletons belong to one species. PBDB also lists a Kimmeridgian record from Portugal identified only to genus, which is not used here.",
+      "pl": "Peyer (2006) uznał francuski Compsognathus corallestris za młodszy synonim C. longipes, więc szkielety z Bawarii i Francji należą do jednego gatunku. PBDB wymienia też rekord z kimerydu w Portugalii oznaczony tylko do rodzaju, którego tu nie uwzględniono."
+    },
+    "sourceIds": ["peyer-2006", "pbdb-occs"]
+  },
+  "diet": {
+    "value": "carnivore",
+    "confidence": "established",
+    "sourceIds": ["nhm", "conrad-2018"]
+  },
+  "timeRange": {
+    "startMa": 154.8,
+    "endMa": 143.1,
+    "sourceIds": ["pbdb-occs", "peyer-2006", "nhm"],
+    "note": {
+      "en": "Stage-based: PBDB dates the Bavarian C. longipes (Painten Formation) to the late Kimmeridgian; Peyer (2006) places the French specimen in the upper Tithonian of Canjuers, which PBDB lists as early Tithonian. The Ma values are the ICS v2024/12 base of the Kimmeridgian and top of the Tithonian. The NHM Dino Directory gives 145–140 Ma, which would reach into the Cretaceous, and is not used.",
+      "pl": "Na podstawie pięter: PBDB datuje bawarski okaz C. longipes (formacja Painten) na późny kimeryd; Peyer (2006) umieszcza okaz francuski w górnym tytonie z Canjuers, który PBDB podaje jako wczesny tyton. Wartości w mln lat to dolna granica kimerydu i górna granica tytonu według ICS v2024/12. Dino Directory muzeum NHM podaje 145–140 mln lat temu, co sięgałoby kredy, więc tej wartości nie użyto."
+    }
+  },
+  "periods": ["jurassic"],
+  "size": {
+    "lengthM": {
+      "value": [0.7, 0.7],
+      "sourceIds": ["nhm"],
+      "note": {
+        "en": "Single value from the NHM Dino Directory.",
+        "pl": "Pojedyncza wartość z Dino Directory muzeum NHM."
+      }
+    },
+    "massKg": {
+      "value": [3, 3],
+      "sourceIds": ["nhm"],
+      "note": {
+        "en": "Single value from the NHM Dino Directory.",
+        "pl": "Pojedyncza wartość z Dino Directory muzeum NHM."
+      }
+    }
+  },
+  "locations": [
+    {
+      "continent": "europe",
+      "countryCode": "DE",
+      "formation": "Painten",
+      "sourceIds": ["pbdb-occs"]
+    },
+    {
+      "continent": "europe",
+      "countryCode": "FR",
+      "sourceIds": ["pbdb-occs", "peyer-2006"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "Wagner",
+    "year": 1861,
+    "note": {
+      "en": "PBDB dates the name to 1861; the NHM Dino Directory gives 1859.",
+      "pl": "PBDB datuje nazwę na 1861 rok; Dino Directory muzeum NHM podaje 1859 rok."
+    },
+    "sourceIds": ["pbdb-taxon", "nhm"]
+  },
+  "summary": {
+    "text": {
+      "en": "Compsognathus was a small meat-eating theropod, only about 70 centimetres long and weighing around 3 kilograms. It lived in Europe in the Late Jurassic, and its skeletons come from Bavaria in Germany and from southern France. Its name means 'pretty jaw'. One skeleton still holds its last meal: a lizard, which turned out to be a species new to science.",
+      "pl": "Compsognathus był małym mięsożernym teropodem o długości zaledwie około 70 centymetrów i masie około 3 kilogramów. Żył w Europie w późnej jurze, a jego szkielety pochodzą z Bawarii w Niemczech i z południowej Francji. Jego nazwa oznacza „ładna szczęka”. W jednym ze szkieletów zachował się jego ostatni posiłek: jaszczurka, która okazała się nowym dla nauki gatunkiem."
+    },
+    "sourceIds": ["nhm", "peyer-2006", "pbdb-occs", "conrad-2018"]
+  },
+  "funFacts": [
+    {
+      "text": {
+        "en": "The lizard inside Compsognathus was named as a new species, so the type specimen of one animal lies inside the type specimen of another: 'a holotype in a holotype'.",
+        "pl": "Jaszczurka w ciele Compsognathus została opisana jako nowy gatunek, więc okaz typowy jednego zwierzęcia leży wewnątrz okazu typowego innego – „holotyp w holotypie”."
+      },
+      "sourceIds": ["conrad-2018"]
+    }
+  ],
+  "famous": false,
+  "images": [
+    {
+      "commonsFile": "File:Compsognathus Philadelphia white background.jpg",
+      "kind": "skeleton-mount",
+      "alt": {
+        "en": "Mounted skeleton of the small theropod Compsognathus, photographed against a white background.",
+        "pl": "Zmontowany szkielet małego teropoda Compsognathus, sfotografowany na białym tle."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "pbdb-taxon",
+      "title": "Compsognathus (taxon 38538)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/single.json?name=Compsognathus&show=attr,parent,class",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-occs",
+      "title": "Occurrences of Compsognathus (stratigraphy and location)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Compsognathus&show=strat,loc",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "nhm",
+      "title": "Compsognathus | Dino Directory",
+      "publisher": "Natural History Museum, London",
+      "url": "https://www.nhm.ac.uk/discover/dino-directory/compsognathus.html",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "peyer-2006",
+      "title": "A reconsideration of Compsognathus from the upper Tithonian of Canjuers, southeastern France",
+      "authors": "Peyer, K.",
+      "year": 2006,
+      "publisher": "Journal of Vertebrate Paleontology",
+      "doi": "10.1671/0272-4634(2006)26[879:AROCFT]2.0.CO;2",
+      "url": "https://www.bioone.org/journals/journal-of-vertebrate-paleontology/volume-26/issue-4/0272-4634(2006)26[879:AROCFT]2.0.CO;2/A-RECONSIDERATION-OF-COMPSOGNATHUS-FROM-THE-UPPER-TITHONIAN-OF-CANJUERS/10.1671/0272-4634(2006)26[879:AROCFT]2.0.CO;2.full",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "conrad-2018",
+      "title": "A new lizard (Squamata) was the last meal of Compsognathus (Theropoda: Dinosauria) and is a holotype in a holotype",
+      "authors": "Conrad, J. L.",
+      "year": 2018,
+      "publisher": "Zoological Journal of the Linnean Society",
+      "doi": "10.1093/zoolinnean/zlx055",
+      "url": "https://doi.org/10.1093/zoolinnean/zlx055",
+      "accessed": "2026-11-22"
+    }
+  ],
+  "lastReviewed": "2026-11-22"
+}

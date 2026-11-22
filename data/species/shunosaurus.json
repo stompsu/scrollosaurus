@@ -1,0 +1,128 @@
+{
+  "slug": "shunosaurus",
+  "scientificName": "Shunosaurus lii",
+  "genus": "Shunosaurus",
+  "nameMeaning": {
+    "text": {
+      "en": "Shuno lizard",
+      "pl": "jaszczur Shuno"
+    },
+    "sourceIds": ["nhm"]
+  },
+  "group": "sauropoda",
+  "groupSourceIds": ["pbdb-taxon", "chatterjee-zheng-2002", "nhm"],
+  "isDinosaur": true,
+  "taxonomy": {
+    "status": "valid"
+  },
+  "diet": {
+    "value": "herbivore",
+    "confidence": "established",
+    "sourceIds": ["chatterjee-zheng-2002", "nhm"],
+    "note": {
+      "en": "Chatterjee & Zheng (2002): stout, spatulate teeth with well-developed wear facets indicate coarse plant food, and the teeth, skull and neck posture suggest it was adapted to feeding near the ground.",
+      "pl": "Chatterjee i Zheng (2002): mocne, łopatkowate zęby z wyraźnymi powierzchniami starcia wskazują na twardy pokarm roślinny, a budowa zębów, czaszki i ułożenie szyi sugerują przystosowanie do żerowania nisko przy ziemi."
+    }
+  },
+  "timeRange": {
+    "startMa": 170.9,
+    "endMa": 154.8,
+    "sourceIds": ["chatterjee-zheng-2002", "pbdb-occs", "nhm"],
+    "note": {
+      "en": "Chatterjee & Zheng (2002) and the NHM Dino Directory (170–160 Ma) place Shunosaurus in the Middle Jurassic Lower Shaximiao Formation. PBDB dates its S. lii records variously between the Bajocian and the Oxfordian; the range spans them all, using ICS v2024/12 boundaries, and is therefore wide.",
+      "pl": "Chatterjee i Zheng (2002) oraz Dino Directory muzeum NHM (170–160 mln lat temu) umieszczają Shunosaurus w środkowojurajskiej dolnej części formacji Shaximiao. PBDB datuje rekordy S. lii różnie, od bajosu po oksford; zakres obejmuje je wszystkie według granic ICS v2024/12, dlatego jest szeroki."
+    }
+  },
+  "periods": ["jurassic"],
+  "size": {
+    "lengthM": {
+      "value": [10, 10],
+      "sourceIds": ["nhm"],
+      "note": {
+        "en": "Single value from the NHM Dino Directory.",
+        "pl": "Pojedyncza wartość z Dino Directory muzeum NHM."
+      }
+    }
+  },
+  "locations": [
+    {
+      "continent": "asia",
+      "countryCode": "CN",
+      "formation": "Shaximiao",
+      "sourceIds": ["pbdb-occs", "chatterjee-zheng-2002"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "Dong, Zhou & Zhang",
+    "year": 1983,
+    "sourceIds": ["nhm", "pbdb-taxon", "chatterjee-zheng-2002"]
+  },
+  "summary": {
+    "text": {
+      "en": "Shunosaurus was a plant-eating sauropod about 10 metres long from the Middle Jurassic of Sichuan, China. Several complete skeletons are known, and the type specimen comes from Dashanpu near Zigong. Its stout, spoon-shaped teeth were worn down by coarse plants, and it was probably adapted to feeding close to the ground. It is unique among sauropods in having a small bony club at the end of its tail.",
+      "pl": "Shunosaurus był roślinożernym zauropodem o długości około 10 metrów, żyjącym w środkowej jurze na terenie Syczuanu w Chinach. Znanych jest kilka kompletnych szkieletów, a okaz typowy pochodzi z Dashanpu koło Zigong. Jego mocne, łopatkowate zęby były starte przez twarde rośliny i prawdopodobnie był przystosowany do żerowania nisko przy ziemi. Jako jedyny znany zauropod miał na końcu ogona małą kostną buławę."
+    },
+    "sourceIds": ["nhm", "chatterjee-zheng-2002"]
+  },
+  "famous": false,
+  "images": [
+    {
+      "commonsFile": "File:Zigong Dinosaur Museum Shunosaurus lii.jpg",
+      "kind": "skeleton-mount",
+      "alt": {
+        "en": "Several mounted sauropod skeletons in the Zigong Dinosaur Museum, Sichuan, China, in a photo identified as Shunosaurus lii.",
+        "pl": "Kilka zmontowanych szkieletów zauropodów w Zigong Dinosaur Museum w prowincji Syczuan w Chinach, na zdjęciu opisanym jako Shunosaurus lii."
+      }
+    }
+  ],
+  "uncertain": [
+    {
+      "field": "size.massKg",
+      "note": {
+        "en": "No mass estimate found in a source we could verify.",
+        "pl": "Nie znaleziono oszacowania masy w źródle, które moglibyśmy zweryfikować."
+      }
+    },
+    {
+      "field": "timeRange",
+      "note": {
+        "en": "Only stage-level ages available, and PBDB records of S. lii disagree on the stages (Bajocian–Oxfordian, Bathonian–Callovian, Middle Jurassic); no radiometric date for the Shunosaurus beds was verified.",
+        "pl": "Dostępny jest tylko wiek na poziomie pięter, a rekordy S. lii w PBDB różnią się co do pięter (bajos–oksford, baton–kelowej, środkowa jura); nie zweryfikowano żadnej datacji radiometrycznej warstw z Shunosaurus."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "pbdb-taxon",
+      "title": "Shunosaurus (taxon 38660)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/single.json?name=Shunosaurus&show=attr,parent,class",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-occs",
+      "title": "Occurrences of Shunosaurus (stratigraphy and location)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Shunosaurus&show=strat,loc",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "nhm",
+      "title": "Shunosaurus | Dino Directory",
+      "publisher": "Natural History Museum, London",
+      "url": "https://www.nhm.ac.uk/discover/dino-directory/shunosaurus.html",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "chatterjee-zheng-2002",
+      "title": "Cranial anatomy of Shunosaurus, a basal sauropod dinosaur from the Middle Jurassic of China",
+      "authors": "Chatterjee, S.; Zheng, Z.",
+      "year": 2002,
+      "publisher": "Zoological Journal of the Linnean Society",
+      "doi": "10.1046/j.1096-3642.2002.00037.x",
+      "url": "https://academic.oup.com/zoolinnean/article/136/1/145/2624180",
+      "accessed": "2026-11-22"
+    }
+  ],
+  "lastReviewed": "2026-11-22"
+}

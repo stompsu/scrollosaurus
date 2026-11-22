@@ -4,7 +4,8 @@
   "genus": "Mamenchisaurus",
   "nameMeaning": {
     "text": {
-      "en": "Mamenchi lizard"
+      "en": "Mamenchi lizard",
+      "pl": "jaszczur z Mamenchi"
     },
     "sourceIds": ["nhm"]
   },
@@ -13,7 +14,10 @@
   "isDinosaur": true,
   "taxonomy": {
     "status": "valid",
-    "note": "This record follows the type species, M. constructus Young, 1954. The genus also contains several other named species of different ages and sizes (in PBDB from the Bathonian-Callovian to the Late Jurassic, plus one Aptian record of M. anyuensis); their ranges and sizes are not used here.",
+    "note": {
+      "en": "This record follows the type species, M. constructus Young, 1954. The genus also contains several other named species of different ages and sizes (in PBDB from the Bathonian-Callovian to the Late Jurassic, plus one Aptian record of M. anyuensis); their ranges and sizes are not used here.",
+      "pl": "Ten wpis dotyczy gatunku typowego, M. constructus Young, 1954. Rodzaj obejmuje też kilka innych nazwanych gatunków różniących się wiekiem i rozmiarami (w PBDB od batonu–keloweju do późnej jury, a także jeden rekord M. anyuensis z aptu); ich zakresów i rozmiarów tu nie uwzględniono."
+    },
     "sourceIds": ["pbdb-taxon", "pbdb-genus-occs"]
   },
   "diet": {
@@ -25,7 +29,10 @@
     "startMa": 161.5,
     "endMa": 143.1,
     "sourceIds": ["pbdb-occs"],
-    "note": "PBDB dates the type occurrence (Shaximiao) to the Kimmeridgian-Tithonian and two further M. constructus records only to the Late Jurassic; the range spans all three, using ICS v2024/12 boundaries. The NHM Dino Directory gives 155-145 Ma for the genus."
+    "note": {
+      "en": "PBDB dates the type occurrence (Shaximiao) to the Kimmeridgian-Tithonian and two further M. constructus records only to the Late Jurassic; the range spans all three, using ICS v2024/12 boundaries. The NHM Dino Directory gives 155-145 Ma for the genus.",
+      "pl": "PBDB datuje występowanie typowe (Shaximiao) na kimeryd–tyton, a dwa kolejne rekordy M. constructus jedynie na późną jurę; zakres obejmuje wszystkie trzy i opiera się na granicach ICS v2024/12. Dino Directory muzeum NHM podaje dla rodzaju 155–145 mln lat temu."
+    }
   },
   "periods": ["jurassic"],
   "size": {},
@@ -44,14 +51,16 @@
   },
   "summary": {
     "text": {
-      "en": "Mamenchisaurus was a long-necked plant-eating sauropod from China in the Late Jurassic. Its neck was extremely long, more than 40 percent of its whole body length. This record follows the first species named, Mamenchisaurus constructus, described in 1954 from Sichuan. Several other Mamenchisaurus species, some of them older, have been named since."
+      "en": "Mamenchisaurus was a long-necked plant-eating sauropod from China in the Late Jurassic. Its neck was extremely long, more than 40 percent of its whole body length. This record follows the first species named, Mamenchisaurus constructus, described in 1954 from Sichuan. Several other Mamenchisaurus species, some of them older, have been named since.",
+      "pl": "Mamenchisaurus był długoszyim roślinożernym zauropodem z Chin, żyjącym w późnej jurze. Jego szyja była niezwykle długa – stanowiła ponad 40 procent długości całego ciała. Ten wpis dotyczy pierwszego nazwanego gatunku, Mamenchisaurus constructus, opisanego w 1954 roku na podstawie znalezisk z Syczuanu. Od tego czasu nazwano kilka innych gatunków Mamenchisaurus, w tym niektóre starsze."
     },
     "sourceIds": ["nhm", "christian-2013", "pbdb-taxon", "pbdb-occs", "pbdb-genus-occs"]
   },
   "funFacts": [
     {
       "text": {
-        "en": "In Mamenchisaurus the neck makes up more than 40 percent of the total body length."
+        "en": "In Mamenchisaurus the neck makes up more than 40 percent of the total body length.",
+        "pl": "U Mamenchisaurus szyja stanowi ponad 40 procent całkowitej długości ciała."
       },
       "sourceIds": ["christian-2013"]
     }
@@ -62,21 +71,29 @@
       "commonsFile": "File:Mamenchisaurus hochuanensis skeleton in Melbourne.jpg",
       "kind": "skeleton-mount",
       "alt": {
-        "en": "Mounted skeleton of the long-necked sauropod Mamenchisaurus hochuanensis, a related species, in a museum exhibit with other dinosaur skeletons behind it."
+        "en": "Mounted skeleton of the long-necked sauropod Mamenchisaurus hochuanensis, a related species, in a museum exhibit with other dinosaur skeletons behind it.",
+        "pl": "Zmontowany szkielet długoszyjego zauropoda Mamenchisaurus hochuanensis, gatunku pokrewnego, na wystawie muzealnej, z innymi szkieletami dinozaurów w tle."
       },
       "note": {
-        "en": "This is Mamenchisaurus hochuanensis, a related species: no freely licensed image of M. constructus was found."
+        "en": "This is Mamenchisaurus hochuanensis, a related species: no freely licensed image of M. constructus was found.",
+        "pl": "To Mamenchisaurus hochuanensis, gatunek pokrewny: nie znaleziono ilustracji M. constructus na wolnej licencji."
       }
     }
   ],
   "uncertain": [
     {
       "field": "size.lengthM",
-      "note": "No length estimate found for the type species M. constructus. The NHM Dino Directory gives 22 m for the genus, which is not specific to this species."
+      "note": {
+        "en": "No length estimate found for the type species M. constructus. The NHM Dino Directory gives 22 m for the genus, which is not specific to this species.",
+        "pl": "Nie znaleziono oszacowania długości dla gatunku typowego M. constructus. Dino Directory muzeum NHM podaje dla rodzaju 22 m, co nie dotyczy konkretnie tego gatunku."
+      }
     },
     {
       "field": "size.massKg",
-      "note": "No mass estimate found for M. constructus in a source we could verify."
+      "note": {
+        "en": "No mass estimate found for M. constructus in a source we could verify.",
+        "pl": "Nie znaleziono oszacowania masy M. constructus w źródle, które moglibyśmy zweryfikować."
+      }
     }
   ],
   "sources": [

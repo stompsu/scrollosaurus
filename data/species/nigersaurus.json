@@ -1,0 +1,148 @@
+{
+  "slug": "nigersaurus",
+  "scientificName": "Nigersaurus taqueti",
+  "genus": "Nigersaurus",
+  "nameMeaning": {
+    "text": {
+      "en": "Niger reptile",
+      "pl": "gad z Nigru"
+    },
+    "sourceIds": ["sereno-1999"]
+  },
+  "group": "sauropoda",
+  "groupSourceIds": ["sereno-1999", "sereno-2007", "pbdb-taxon"],
+  "isDinosaur": true,
+  "taxonomy": {
+    "status": "valid",
+    "note": {
+      "en": "Nigersaurus is a rebbachisaurid, a member of a family of diplodocoid sauropods (Sereno et al. 1999, 2007). It is filed here under Sauropoda because the group tree has no separate rebbachisaurid node.",
+      "pl": "Nigersaurus jest rebbachisaurydem – należy do rodziny zauropodów z grupy Diplodocoidea (Sereno i in. 1999, 2007). Zaliczono go tu do zauropodów, ponieważ drzewo grup nie ma osobnej gałęzi dla rebbachisaurydów."
+    },
+    "sourceIds": ["sereno-1999", "sereno-2007", "pbdb-taxon"]
+  },
+  "diet": {
+    "value": "herbivore",
+    "confidence": "established",
+    "sourceIds": ["sereno-2007", "pbdb-ecospace"],
+    "note": {
+      "en": "Its muzzle pointed towards the ground: Sereno et al. (2007) conclude that it browsed at ground level, gathering and slicing relatively soft plants.",
+      "pl": "Jego pysk był skierowany ku ziemi: Sereno i in. (2007) wnioskują, że żerował przy ziemi, zbierając i ścinając stosunkowo miękkie rośliny."
+    }
+  },
+  "timeRange": {
+    "startMa": 115,
+    "endMa": 105,
+    "sourceIds": ["sereno-1999", "sereno-2007", "pbdb-occs"],
+    "note": {
+      "en": "Sereno et al. (1999) give about 115–105 Ma (Aptian–Albian) for the Gadoufaoua horizons of the Tegama Group that yielded Nigersaurus; Sereno et al. (2007) place it at about 110 Ma. PBDB dates the occurrences to the Aptian–Albian (121.4–100.5 Ma).",
+      "pl": "Sereno i in. (1999) podają około 115–105 mln lat temu (apt–alb) dla poziomów grupy Tegama w Gadoufaoua, z których pochodzi Nigersaurus; Sereno i in. (2007) umieszczają go około 110 mln lat temu. PBDB datuje występowania na apt–alb (121,4–100,5 mln lat temu)."
+    }
+  },
+  "periods": ["cretaceous"],
+  "size": {
+    "lengthM": {
+      "value": [9, 9],
+      "sourceIds": ["sereno-2007", "sereno-1999"],
+      "note": {
+        "en": "Adult length of about 9 m (Sereno et al. 2007). The first description gave a maximum body length of about 15 m (Sereno et al. 1999).",
+        "pl": "Długość dorosłego osobnika około 9 m (Sereno i in. 2007). Pierwszy opis podawał maksymalną długość ciała około 15 m (Sereno i in. 1999)."
+      }
+    },
+    "massKg": {
+      "value": [4000, 4000],
+      "sourceIds": ["sereno-2007"],
+      "note": {
+        "en": "About 4 tonnes, roughly the mass of an average elephant (Sereno et al. 2007).",
+        "pl": "Około 4 ton, mniej więcej tyle, ile waży przeciętny słoń (Sereno i in. 2007)."
+      }
+    }
+  },
+  "locations": [
+    {
+      "continent": "africa",
+      "countryCode": "NE",
+      "formation": "Elrhaz",
+      "sourceIds": ["pbdb-occs", "sereno-1999"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "Sereno et al.",
+    "year": 1999,
+    "note": {
+      "en": "Described by Paul Sereno and ten co-authors. The species name honours the French palaeontologist Philippe Taquet, whose expeditions of 1965–72 began large-scale fossil exploration in Niger.",
+      "pl": "Opisany przez Paula Sereno i dziesięciu współautorów. Nazwa gatunkowa upamiętnia francuskiego paleontologa Philippe'a Taqueta, którego wyprawy z lat 1965–1972 zapoczątkowały szeroko zakrojone poszukiwania skamieniałości w Nigrze."
+    },
+    "sourceIds": ["sereno-1999", "pbdb-taxon"]
+  },
+  "summary": {
+    "text": {
+      "en": "Nigersaurus was a long-necked, plant-eating sauropod about 9 metres long that lived in what is now Niger roughly 115 to 105 million years ago. Its broad muzzle, with teeth lined up straight across the front, pointed at the ground, where it cropped soft plants. Its jaws held more than 500 teeth, counting the spare teeth stacked behind the working ones. It was one of the most common animals at its fossil site.",
+      "pl": "Nigersaurus był długoszyim, roślinożernym zauropodem o długości około 9 metrów, który żył na terenie dzisiejszego Nigru mniej więcej 115–105 milionów lat temu. Jego szeroki pysk, z zębami ustawionymi w prostym rzędzie w poprzek przodu, był skierowany ku ziemi, gdzie skubał miękkie rośliny. W szczękach miał ponad 500 zębów, licząc zęby zastępcze ułożone za tymi używanymi. Był jednym z najpospolitszych zwierząt w miejscu, z którego pochodzą jego skamieniałości."
+    },
+    "sourceIds": ["sereno-1999", "sereno-2007"]
+  },
+  "funFacts": [
+    {
+      "text": {
+        "en": "Its teeth were replaced very quickly, roughly once a month.",
+        "pl": "Jego zęby były wymieniane bardzo szybko – mniej więcej raz w miesiącu."
+      },
+      "sourceIds": ["sereno-2007"]
+    }
+  ],
+  "famous": false,
+  "images": [
+    {
+      "commonsFile": "File:August 1, 2012 - Cast Skull of a Nigersaurus taqueti on Display at the Royal Ontario Museum (Cast of MNN GAD512).jpg",
+      "kind": "skull",
+      "alt": {
+        "en": "Cast of a Nigersaurus taqueti skull on display at the Royal Ontario Museum, with its rows of teeth across the front of the jaws.",
+        "pl": "Odlew czaszki Nigersaurus taqueti na wystawie w Royal Ontario Museum, z rzędami zębów w poprzek przedniej części szczęk."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "sereno-1999",
+      "title": "Cretaceous sauropods from the Sahara and the uneven rate of skeletal evolution among dinosaurs",
+      "authors": "Sereno, P. C.; Beck, A. L.; Dutheil, D. B.; Larsson, H. C. E.; Lyon, G. H.; Moussa, B.; Sadleir, R. W.; Sidor, C. A.; Varricchio, D. J.; Wilson, G. P.; Wilson, J. A.",
+      "year": 1999,
+      "publisher": "Science 286: 1342-1347",
+      "doi": "10.1126/science.286.5443.1342",
+      "url": "https://doi.org/10.1126/science.286.5443.1342",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "sereno-2007",
+      "title": "Structural extremes in a Cretaceous dinosaur",
+      "authors": "Sereno, P. C.; Wilson, J. A.; Witmer, L. M.; Whitlock, J. A.; Maga, A.; Ide, O.; Rowe, T. A.",
+      "year": 2007,
+      "publisher": "PLoS ONE 2(11): e1230",
+      "doi": "10.1371/journal.pone.0001230",
+      "url": "https://doi.org/10.1371/journal.pone.0001230",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-taxon",
+      "title": "Nigersaurus taqueti (taxon 57367)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/single.json?name=Nigersaurus%20taqueti&show=attr,class",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-occs",
+      "title": "Occurrences of Nigersaurus (stratigraphy and location)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Nigersaurus&show=strat,loc",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-ecospace",
+      "title": "Ecology (ecospace) entries for Nigersaurus and other genera",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/list.json?name=Ouranosaurus,Amargasaurus,Pachyrhinosaurus,Tarbosaurus,Majungasaurus,Elasmosaurus,Rhamphorhynchus,Nigersaurus,Suchomimus,Australovenator&show=attr,ecospace",
+      "accessed": "2026-11-22"
+    }
+  ],
+  "lastReviewed": "2026-11-22"
+}

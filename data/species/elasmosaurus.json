@@ -1,0 +1,165 @@
+{
+  "slug": "elasmosaurus",
+  "scientificName": "Elasmosaurus platyurus",
+  "genus": "Elasmosaurus",
+  "nameMeaning": {
+    "text": {
+      "en": "plate lizard",
+      "pl": "płytowy jaszczur"
+    },
+    "sourceIds": ["smith-directory"]
+  },
+  "group": "plesiosauria",
+  "groupSourceIds": ["pbdb-taxon", "smith-directory"],
+  "isDinosaur": false,
+  "taxonomy": {
+    "status": "valid",
+    "note": {
+      "en": "E. platyurus is the only valid species of Elasmosaurus and is known from a single specimen, ANSP 10081. PBDB places it in the family Elasmosauridae.",
+      "pl": "E. platyurus jest jedynym ważnym gatunkiem rodzaju Elasmosaurus i jest znany z jednego okazu, ANSP 10081. PBDB zalicza go do rodziny Elasmosauridae."
+    },
+    "sourceIds": ["smith-directory", "pbdb-taxon"]
+  },
+  "diet": {
+    "value": "carnivore",
+    "confidence": "probable",
+    "sourceIds": ["pbdb-ecospace", "smith-diet"],
+    "note": {
+      "en": "PBDB lists it as a carnivore. Plesiosaurs in general ate fish and cephalopods, and stomach stones (gastroliths) are particularly common in elasmosaurids; no diet specific to Elasmosaurus was found.",
+      "pl": "PBDB klasyfikuje go jako mięsożercę. Plezjozaury na ogół jadły ryby i głowonogi, a kamienie żołądkowe (gastrolity) są szczególnie częste u elasmozaurów; nie znaleziono danych o diecie samego Elasmosaurus."
+    }
+  },
+  "timeRange": {
+    "startMa": 83.6,
+    "endMa": 72.2,
+    "sourceIds": ["smith-directory", "sachs-2013", "pbdb-occs"],
+    "note": {
+      "en": "The only specimen comes from the Sharon Springs Member of the Pierre Shale in Kansas, dated to the early Campanian (Smith; Sachs et al. 2013); PBDB labels it Early–Middle Campanian. No numerical age was found, so the Ma values are the ICS v2024/12 Campanian boundaries and the range is broader than the fossil itself.",
+      "pl": "Jedyny okaz pochodzi z ogniwa Sharon Springs formacji Pierre Shale w Kansas, datowanego na wczesny kampan (Smith; Sachs i in. 2013); PBDB określa go jako wczesny–środkowy kampan. Nie znaleziono wieku liczbowego, więc wartości w mln lat to granice kampanu według ICS v2024/12, a zakres jest szerszy niż wiek samej skamieniałości."
+    }
+  },
+  "periods": ["cretaceous"],
+  "size": {},
+  "locations": [
+    {
+      "continent": "north-america",
+      "countryCode": "US",
+      "formation": "Pierre Shale",
+      "sourceIds": ["smith-directory", "pbdb-occs"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "Cope",
+    "year": 1868,
+    "note": {
+      "en": "Cope presented the species in March 1868; his self-published 'Synopsis' followed in 1869, which is why some sources give 1869.",
+      "pl": "Cope przedstawił ten gatunek w marcu 1868 roku; wydana przez niego samego „Synopsis” ukazała się w 1869 roku, dlatego niektóre źródła podają rok 1869."
+    },
+    "sourceIds": ["sachs-2013", "pbdb-taxon", "smith-directory"]
+  },
+  "summary": {
+    "text": {
+      "en": "Elasmosaurus was not a dinosaur but a plesiosaur, a marine reptile. It lived in the Late Cretaceous, in the early Campanian, in the sea that covered what is now Kansas. Its neck was enormous: it had 72 neck vertebrae, a record among plesiosaurs until 2012. Only one specimen has ever been found, and it preserves just small parts of the skull.",
+      "pl": "Elasmosaurus nie był dinozaurem, lecz plezjozaurem – gadem morskim. Żył w późnej kredzie, we wczesnym kampanie, w morzu pokrywającym teren dzisiejszego Kansas. Miał ogromną szyję: liczyła 72 kręgi szyjne, co do 2012 roku było rekordem wśród plezjozaurów. Znaleziono tylko jeden okaz, z którego zachowały się jedynie niewielkie fragmenty czaszki."
+    },
+    "sourceIds": ["smith-directory", "sachs-2013", "pbdb-ecospace", "pbdb-taxon"]
+  },
+  "funFacts": [
+    {
+      "text": {
+        "en": "Cope first described the skeleton back to front, with the head at the wrong end. Joseph Leidy pointed out the error in 1870.",
+        "pl": "Cope opisał początkowo szkielet odwrotnie, z głową na niewłaściwym końcu. Joseph Leidy wskazał ten błąd w 1870 roku."
+      },
+      "sourceIds": ["sachs-2013"]
+    }
+  ],
+  "famous": false,
+  "images": [
+    {
+      "commonsFile": "File:Elasmosaurus platyurus.jpg",
+      "kind": "life-reconstruction",
+      "alt": {
+        "en": "Life restoration of the long-necked plesiosaur Elasmosaurus platyurus from the Late Cretaceous of North America.",
+        "pl": "Rekonstrukcja przyżyciowa długoszyjego plezjozaura Elasmosaurus platyurus z późnej kredy Ameryki Północnej."
+      }
+    }
+  ],
+  "uncertain": [
+    {
+      "field": "size.lengthM",
+      "note": {
+        "en": "Only a historical maximum estimate was found; no modern, verified body length.",
+        "pl": "Znaleziono tylko historyczne oszacowanie maksymalne; brak współczesnej, zweryfikowanej długości ciała."
+      }
+    },
+    {
+      "field": "size.massKg",
+      "note": {
+        "en": "No mass estimate found in a source we could verify.",
+        "pl": "Nie znaleziono oszacowania masy w źródle, które moglibyśmy zweryfikować."
+      }
+    },
+    {
+      "field": "timeRange",
+      "note": {
+        "en": "Only stage-level dating (early Campanian) was found; the range uses the full Campanian.",
+        "pl": "Znaleziono tylko datowanie na poziomie piętra (wczesny kampan); zakres obejmuje cały kampan."
+      }
+    },
+    {
+      "field": "locations",
+      "note": {
+        "en": "PBDB also lists Elasmosaurus sp. and ? Elasmosaurus sp. from Japan and Wyoming. Since only one specimen of E. platyurus is known, these referrals are left out.",
+        "pl": "PBDB wymienia też Elasmosaurus sp. i ? Elasmosaurus sp. z Japonii i Wyoming. Ponieważ znany jest tylko jeden okaz E. platyurus, te przypisania pominięto."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "smith-directory",
+      "title": "Elasmosaurus | The Plesiosaur Directory",
+      "authors": "Smith, A. S.",
+      "url": "https://plesiosauria.com/genera/elasmosaurus/",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "smith-diet",
+      "title": "What did plesiosaurs eat and how do we know? | The Plesiosaur Directory",
+      "authors": "Smith, A. S.",
+      "url": "https://plesiosauria.com/diet/",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "sachs-2013",
+      "title": "Revised vertebral count in the 'longest-necked vertebrate' Elasmosaurus platyurus Cope 1868, and clarification of the cervical-dorsal transition in Plesiosauria",
+      "authors": "Sachs, S.; Kear, B. P.; Everhart, M. J.",
+      "year": 2013,
+      "publisher": "PLoS ONE 8(8): e70877",
+      "doi": "10.1371/journal.pone.0070877",
+      "url": "https://doi.org/10.1371/journal.pone.0070877",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-taxon",
+      "title": "Elasmosaurus platyurus (taxon 70301)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/single.json?name=Elasmosaurus%20platyurus&show=attr,class",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-occs",
+      "title": "Occurrences of Elasmosaurus (stratigraphy and location)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Elasmosaurus&show=strat,loc",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-ecospace",
+      "title": "Ecology (ecospace) entries for Elasmosaurus and other genera",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/list.json?name=Ouranosaurus,Amargasaurus,Pachyrhinosaurus,Tarbosaurus,Majungasaurus,Elasmosaurus,Rhamphorhynchus,Nigersaurus,Suchomimus,Australovenator&show=attr,ecospace",
+      "accessed": "2026-11-22"
+    }
+  ],
+  "lastReviewed": "2026-11-22"
+}

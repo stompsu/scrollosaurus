@@ -11,14 +11,22 @@ import {
   type KeyboardEvent,
   type Ref,
 } from 'react';
-import { formatMa, unitById, unitsByRank } from '@/lib/geologic-time';
-import { NOT_A_DINOSAUR } from '@/lib/labels';
+import { BodyPlanIcon } from '@/components/ui/BodyPlanIcon';
+import { DietIcon } from '@/components/ui/DietBadge';
+import { DIETS } from '@/lib/enums';
+import { bodyPlanFor } from '@/components/ui/silhouettes';
+import { formatMa, unitById, unitName, unitsByRank } from '@/lib/geologic-time';
+import { tr } from '@/lib/i18n';
+import { useLang } from '@/lib/lang';
 import type { GeologicRank, GeologicUnit } from '@/lib/schemas/geologic-time';
 import type { SpeciesIndexEntry } from '@/lib/species-index';
 import {
   LANE_GAP_PX,
   LANE_PADDING_PX,
   LANE_SIZE_PX,
+  MARKER_BODY_ICON_PX,
+  MARKER_DIET_ICON_PX,
+  MARKER_ICONS_PX,
   MIN_BAR_PX,
   MIN_VISIBLE_SPAN_MA,
   VERTICAL_LABEL_EXTENT_PX,
@@ -77,6 +85,8 @@ export interface TimelineProps {
    * only move the highlight.
    */
   highlightedSlug?: string;
+  /** When nothing is highlighted: the species whose marker the opening view scrolls into view. */
+  openingSlug?: string;
   /** The opening window, read on mount. Defaults to the window around `highlightedSlug`. */
   initialRange?: MaRange;
   /** Called with the visible window each time the view settles after moving. */
@@ -127,13 +137,19 @@ function createMeasures(): Measures {
 }
 
 function markerName(item: SpeciesIndexEntry): string {
-  const tag = item.isDinosaur ? '' : `, ${NOT_A_DINOSAUR}`;
-  return `${item.genus}${tag}, ${formatMa(item.startMa)} to ${formatMa(item.endMa)} million years ago`;
+  const tag = item.isDinosaur ? '' : `, ${tr('timeline.notADinosaur')}`;
+  return tr('timeline.marker', {
+    genus: item.genus,
+    tag,
+    diet: tr(`diet.${item.diet}`).toLowerCase(),
+    start: formatMa(item.startMa),
+    end: formatMa(item.endMa),
+  });
 }
 
 function labelWidth(item: SpeciesIndexEntry, m: Measures): number {
   const genus = (item.famous ? m.famousLabel : m.label)(item.genus);
-  return genus + (item.isDinosaur ? 0 : 6 + m.tag(NOT_A_DINOSAUR));
+  return MARKER_ICONS_PX + genus + (item.isDinosaur ? 0 : 6 + m.tag(tr('timeline.notADinosaur')));
 }
 
 /** The opening window around a species: its range (with whiskers) at about a fifth of the view. */
@@ -214,7 +230,11 @@ export function windowContext(range: MaRange, ranks: readonly GeologicRank[]): s
       const siblings = UNITS[rank].filter((u) => u.parent === parentId);
       if (siblings.length === units.length) break;
     }
-    parts.push(first === last ? first.name : `${first.name} to ${last.name}`);
+    parts.push(
+      first === last
+        ? unitName(first)
+        : tr('timeline.unitRange', { first: unitName(first), last: unitName(last) }),
+    );
     parent = first === last ? first : undefined;
   }
   return parts.join(', ');
@@ -273,8 +293,17 @@ const Marker = memo(function Marker({
       }}
     >
       <span className="tl-label">
+        {/* Diet and body plan at a glance; the marker's accessible name says the diet in words. */}
+        <span className="tl-icons">
+          <DietIcon diet={item.diet} size={MARKER_DIET_ICON_PX} />
+          <BodyPlanIcon
+            plan={bodyPlanFor(item.groupPath)}
+            width={MARKER_BODY_ICON_PX.width}
+            height={MARKER_BODY_ICON_PX.height}
+          />
+        </span>
         <i>{item.genus}</i>
-        {!item.isDinosaur && <span className="tl-tag">{NOT_A_DINOSAUR}</span>}
+        {!item.isDinosaur && <span className="tl-tag">{tr('timeline.notADinosaur')}</span>}
       </span>
       <span className="tl-bar">
         {item.startUncertaintyMa !== undefined && <span className="tl-whisker tl-whisker--start" />}
@@ -296,6 +325,7 @@ export function Timeline({
   filters,
   onSelect,
   highlightedSlug,
+  openingSlug,
   initialRange: initialRangeProp,
   onViewChange,
   onPreview,
@@ -341,6 +371,12 @@ export function Timeline({
 
   const includeNonDinosaurs = filters?.includeNonDinosaurs ?? false;
   const predicate = filters?.predicate;
+  const lang = useLang();
+  /** Diets that appear among the items, in the usual order, for the icon legend. */
+  const legendDiets = useMemo(
+    () => DIETS.filter((d) => items.some((it) => it.diet === d)),
+    [items],
+  );
   const shown = useMemo(
     () =>
       items
@@ -452,7 +488,10 @@ export function Timeline({
       endAnchored: new Set(shown.filter((_, i) => anchors[i] === 'end').map((it) => it.slug)),
       laneCount,
     };
-  }, [shown, pxPerMa, horizontal, measures]);
+    // Label widths depend on the language (the "not a dinosaur" tag), read from the module locale,
+    // so repack when it changes.
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- `lang` is read via the module locale
+  }, [shown, pxPerMa, horizontal, measures, lang]);
 
   const laneSize = horizontal ? LANE_SIZE_PX.horizontal : LANE_SIZE_PX.vertical;
   const crossExtent = packing.laneCount * laneSize + 2 * LANE_PADDING_PX;
@@ -476,10 +515,16 @@ export function Timeline({
   };
   const inView = shown.filter((it) => overlapsWindow(it, win) && laneVisible(it.slug));
 
-  const bands = useMemo(() => layoutBands(kLevel, pxPerMa, measures), [kLevel, pxPerMa, measures]);
+  // Band and tick labels are text in the current language: recompute when it changes.
+  const bands = useMemo(
+    () => layoutBands(kLevel, pxPerMa, measures),
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- `lang` is read via the module locale
+    [kLevel, pxPerMa, measures, lang],
+  );
   const ticks = useMemo(
     () => layoutTicks(kLevel, pxPerMa, horizontal, measures),
-    [kLevel, pxPerMa, horizontal, measures],
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- `lang` is read via the module locale
+    [kLevel, pxPerMa, horizontal, measures, lang],
   );
 
   // Hand the freshly rendered nodes to the engine before the browser paints.
@@ -491,10 +536,15 @@ export function Timeline({
     const engine = engineRef.current;
     if (!engine) return;
     engine.setNodes({ markerLayer, bandLayers: [bandLayer, gridLayer] }, crossExtent);
-    // Once the opening view has rendered, scroll the lanes so the highlighted marker shows.
+    // Once the opening view has rendered, scroll the lanes so the highlighted (or opening) marker
+    // shows.
     if (pendingReveal.current && snap !== firstSnap.current) {
       pendingReveal.current = false;
-      const current = markerLayer.querySelector<HTMLElement>('[aria-current="true"]');
+      const current =
+        markerLayer.querySelector<HTMLElement>('[aria-current="true"]') ??
+        (openingSlug === undefined
+          ? null
+          : markerLayer.querySelector<HTMLElement>(`[data-slug="${CSS.escape(openingSlug)}"]`));
       if (current) engine.reveal(current, false);
     }
     if (revealSlug.current !== null) {
@@ -509,9 +559,10 @@ export function Timeline({
   });
 
   const context = windowContext(win, ranks);
-  const windowLabel = `Showing ${formatMa(clampToDomain(win.startMa))} to ${formatMa(
-    clampToDomain(win.endMa),
-  )} million years ago${context ? ` · ${context}` : ''}`;
+  const windowLabel = `${tr('timeline.showing', {
+    start: formatMa(clampToDomain(win.startMa)),
+    end: formatMa(clampToDomain(win.endMa)),
+  })}${context ? ` · ${context}` : ''}`;
   // Screen readers hear the window only once the view has settled, not on every commit.
   const [liveLabel, setLiveLabel] = useState('');
   if (snap.settled && liveLabel !== windowLabel) setLiveLabel(windowLabel);
@@ -572,11 +623,11 @@ export function Timeline({
   return (
     <div className="tl" data-orientation={orientation} data-item-count={shown.length}>
       <div className="tl-toolbar">
-        <div role="group" aria-label="Zoom" className="tl-group">
+        <div role="group" aria-label={tr('timeline.zoom')} className="tl-group">
           <button
             type="button"
             className="tl-button"
-            aria-label="Zoom out"
+            aria-label={tr('timeline.zoomOut')}
             onClick={() => zoomBy(1 / ZOOM_STEP)}
           >
             −
@@ -584,13 +635,13 @@ export function Timeline({
           <button
             type="button"
             className="tl-button"
-            aria-label="Zoom in"
+            aria-label={tr('timeline.zoomIn')}
             onClick={() => zoomBy(ZOOM_STEP)}
           >
             +
           </button>
         </div>
-        <div role="group" aria-label="Jump to period" className="tl-group">
+        <div role="group" aria-label={tr('timeline.jump')} className="tl-group">
           {PERIODS.map((p) => (
             <button
               key={p.id}
@@ -598,11 +649,11 @@ export function Timeline({
               className="tl-button"
               onClick={() => zoomTo({ startMa: p.baseMa, endMa: p.topMa })}
             >
-              {p.name}
+              {unitName(p)}
             </button>
           ))}
           <button type="button" className="tl-button" onClick={() => zoomTo(DOMAIN)}>
-            Show whole {MESOZOIC.name}
+            {tr('timeline.showWhole', { era: unitName(MESOZOIC) })}
           </button>
         </div>
         <p className="tl-window" data-testid="timeline-window">
@@ -616,7 +667,7 @@ export function Timeline({
       <div
         ref={viewportRef}
         role="region"
-        aria-label={`Timeline of the ${MESOZOIC.name}`}
+        aria-label={tr('timeline.region', { era: unitName(MESOZOIC) })}
         aria-describedby={helpId}
         tabIndex={0}
         className="tl-viewport"
@@ -699,32 +750,37 @@ export function Timeline({
         </div>
       </div>
 
+      {/* The marker icons in words: each diet icon with its name (icon + text, never icon alone). */}
+      <div className="tl-legend">
+        <span>{tr('timeline.legend')}</span>
+        <ul role="list">
+          {legendDiets.map((d) => (
+            <li key={d}>
+              <DietIcon diet={d} size={MARKER_DIET_ICON_PX} />
+              {tr(`diet.${d}`)}
+            </li>
+          ))}
+        </ul>
+      </div>
+
       <details className="tl-help">
-        <summary>Timeline controls</summary>
+        <summary>{tr('timeline.help')}</summary>
         <ul id={helpId} role="list">
-          <li>
-            Drag, or scroll with a mouse wheel or trackpad, to move through time. Pinch, or hold
-            Ctrl and scroll, to zoom. Drag across the time axis, or hold Alt and scroll, to see more
-            lanes.
-          </li>
-          <li>On touch screens, drag to move and pinch to zoom.</li>
-          <li>
-            Keyboard: focus the timeline, then use the arrow keys to move (hold Shift for bigger
-            steps), + and − to zoom, and Home or End for the oldest or newest end. Tab moves through
-            the species in view, oldest first; Enter or Space selects one.
-          </li>
+          <li>{tr('timeline.helpPointer')}</li>
+          <li>{tr('timeline.helpTouch')}</li>
+          <li>{tr('timeline.helpKeyboard')}</li>
         </ul>
       </details>
 
       <div className="sr-only">
-        <h2 id={listId}>List of species in view</h2>
+        <h2 id={listId}>{tr('timeline.listInView')}</h2>
         <ul role="list" aria-labelledby={listId}>
           {inView.map((it) => (
             <li key={it.slug}>{markerName(it)}</li>
           ))}
         </ul>
         <p>
-          Boundaries in view, million years ago:{' '}
+          {tr('timeline.boundariesInView')}{' '}
           {ticks
             .filter(({ boundary }) => boundary.ma <= win.startMa && boundary.ma >= win.endMa)
             .map(({ spoken }) => spoken)

@@ -4,7 +4,8 @@
   "genus": "Therizinosaurus",
   "nameMeaning": {
     "text": {
-      "en": "scythe lizard"
+      "en": "scythe lizard",
+      "pl": "jaszczur kosiarz"
     },
     "sourceIds": ["nhm"]
   },
@@ -18,25 +19,37 @@
     "value": "herbivore",
     "confidence": "probable",
     "sourceIds": ["zanno-makovicky-2011", "nhm", "pbdb-taxon"],
-    "note": "Inferred from skull and tooth features shared by therizinosaurs; no gut contents are known (Zanno & Makovicky 2011 report no extrinsic diet evidence for Therizinosauria)."
+    "note": {
+      "en": "Inferred from skull and tooth features shared by therizinosaurs; no gut contents are known (Zanno & Makovicky 2011 report no extrinsic diet evidence for Therizinosauria).",
+      "pl": "Wywnioskowane z cech czaszki i zębów wspólnych dla terizinozaurów; zawartość przewodu pokarmowego nie jest znana (Zanno i Makovicky 2011 nie podają żadnych zewnętrznych dowodów na dietę Therizinosauria)."
+    }
   },
   "timeRange": {
     "startMa": 72.2,
     "endMa": 66.0,
     "sourceIds": ["pbdb-occs"],
-    "note": "PBDB dates T. cheloniformis occurrences (Nemegt Formation, Mongolia) to the Maastrichtian; the Ma values are the ICS v2024/12 Maastrichtian stage boundaries. NHM gives about 70 Ma."
+    "note": {
+      "en": "PBDB dates T. cheloniformis occurrences (Nemegt Formation, Mongolia) to the Maastrichtian; the Ma values are the ICS v2024/12 Maastrichtian stage boundaries. NHM gives about 70 Ma.",
+      "pl": "PBDB datuje występowania T. cheloniformis (formacja Nemegt, Mongolia) na mastrycht; wartości w mln lat to granice piętra mastrychtu według ICS v2024/12. NHM podaje około 70 mln lat temu."
+    }
   },
   "periods": ["cretaceous"],
   "size": {
     "lengthM": {
       "value": [10, 10],
       "sourceIds": ["nhm"],
-      "note": "Single published figure (NHM Dino Directory). Therizinosaurus is known only from arm, leg and rib bones, so full-body size is reconstructed from relatives."
+      "note": {
+        "en": "Single published figure (NHM Dino Directory). Therizinosaurus is known only from arm, leg and rib bones, so full-body size is reconstructed from relatives.",
+        "pl": "Jedyna opublikowana wartość (NHM Dino Directory). Therizinosaurus jest znany tylko z kości przednich i tylnych kończyn oraz żeber, więc rozmiary całego ciała rekonstruuje się na podstawie krewnych."
+      }
     },
     "massKg": {
       "value": [6647, 6647],
       "sourceIds": ["zanno-makovicky-2013"],
-      "note": "Single estimate from a theropod equation relating body mass to femur length (Zanno & Makovicky 2013); the skeleton is very incomplete, so this is a rough figure."
+      "note": {
+        "en": "Single estimate from a theropod equation relating body mass to femur length (Zanno & Makovicky 2013); the skeleton is very incomplete, so this is a rough figure.",
+        "pl": "Pojedyncze oszacowanie z równania dla teropodów wiążącego masę ciała z długością kości udowej (Zanno i Makovicky 2013); szkielet jest bardzo niekompletny, więc to wartość przybliżona."
+      }
     }
   },
   "locations": [
@@ -54,14 +67,16 @@
   },
   "summary": {
     "text": {
-      "en": "Therizinosaurus was a giant, two-legged plant eater from Mongolia, living about 70 million years ago, near the end of the Cretaceous. It was a theropod, a group made up mostly of meat-eaters, yet it probably ate plants. Its hands carried enormous claws, possibly used to pull branches closer. It is known only from arm, leg and rib bones, so its full shape and size are partly guesswork."
+      "en": "Therizinosaurus was a giant, two-legged plant eater from Mongolia, living about 70 million years ago, near the end of the Cretaceous. It was a theropod, a group made up mostly of meat-eaters, yet it probably ate plants. Its hands carried enormous claws, possibly used to pull branches closer. It is known only from arm, leg and rib bones, so its full shape and size are partly guesswork.",
+      "pl": "Therizinosaurus był olbrzymim, dwunożnym roślinożercą z Mongolii, żyjącym około 70 milionów lat temu, pod koniec kredy. Był teropodem, czyli należał do grupy złożonej głównie z mięsożerców, a mimo to prawdopodobnie jadł rośliny. Na dłoniach miał ogromne pazury, którymi być może przyciągał gałęzie. Znany jest tylko z kości przednich i tylnych kończyn oraz żeber, więc jego pełny kształt i rozmiary są częściowo domysłem."
     },
     "sourceIds": ["nhm", "zanno-makovicky-2011"]
   },
   "funFacts": [
     {
       "text": {
-        "en": "Therizinosaurus's hand claws were about 50 centimetres long, thought to be the longest of any known land animal."
+        "en": "Therizinosaurus's hand claws were about 50 centimetres long, thought to be the longest of any known land animal.",
+        "pl": "Pazury na dłoniach Therizinosaurus miały około 50 centymetrów długości i uważa się je za najdłuższe u jakiegokolwiek znanego zwierzęcia lądowego."
       },
       "sourceIds": ["nhm"]
     }
@@ -72,18 +87,25 @@
       "commonsFile": "File:Therizinosaurus Restoration.png",
       "kind": "life-reconstruction",
       "alt": {
-        "en": "Life restoration of the giant therizinosaurid Therizinosaurus cheloniformis."
+        "en": "Life restoration of the giant therizinosaurid Therizinosaurus cheloniformis.",
+        "pl": "Rekonstrukcja przyżyciowa olbrzymiego terizinozauryda Therizinosaurus cheloniformis."
       }
     }
   ],
   "uncertain": [
     {
       "field": "size.lengthM",
-      "note": "Only arm, leg and rib bones are known; length is reconstructed from relatives (NHM)."
+      "note": {
+        "en": "Only arm, leg and rib bones are known; length is reconstructed from relatives (NHM).",
+        "pl": "Znane są tylko kości przednich i tylnych kończyn oraz żeber; długość zrekonstruowano na podstawie krewnych (NHM)."
+      }
     },
     {
       "field": "size.massKg",
-      "note": "Single estimate from limited material (Zanno & Makovicky 2013)."
+      "note": {
+        "en": "Single estimate from limited material (Zanno & Makovicky 2013).",
+        "pl": "Pojedyncze oszacowanie na podstawie ograniczonego materiału (Zanno i Makovicky 2013)."
+      }
     }
   ],
   "sources": [

@@ -1,7 +1,9 @@
 import { useId, useState, type ReactNode } from 'react';
 import { DietIcon } from '@/components/ui/DietBadge';
 import { groupFilterOptions } from '@/lib/groups';
-import { CONTINENT_LABELS, DIET_LABELS, PERIOD_LABELS } from '@/lib/labels';
+import { unitById, unitName } from '@/lib/geologic-time';
+import { tr } from '@/lib/i18n';
+import { DIETS_WITH_HINT } from '@/lib/labels';
 import { CONTINENTS, DIETS, PERIOD_IDS } from '@/lib/enums';
 import { SIZE_CLASSES, SIZE_UNKNOWN, type SizeFilter } from '@/lib/size-class';
 import { activeFilterCount, EMPTY_FILTERS, type SpeciesFilters } from '@/lib/view-state';
@@ -71,7 +73,6 @@ export function FilterPanel({ filters, onChange, shownCount, totalCount }: Filte
     onChange({ ...filters, [key]: ordered });
   };
   const has = (key: ListKey, value: string) => (filters[key] as readonly string[]).includes(value);
-  const noun = filters.nonDinosaurs ? 'species' : 'dinosaurs';
 
   return (
     <div className="sc-filters">
@@ -87,8 +88,8 @@ export function FilterPanel({ filters, onChange, shownCount, totalCount }: Filte
             data-testid="non-dinosaur-switch"
           />
           <span>
-            Show animals that weren’t dinosaurs{' '}
-            <span className="text-text-muted">(pterosaurs, marine reptiles)</span>
+            {tr('filters.nonDinosaurs')}{' '}
+            <span className="text-text-muted">{tr('filters.nonDinosaursHint')}</span>
           </span>
         </label>
         <button
@@ -101,16 +102,19 @@ export function FilterPanel({ filters, onChange, shownCount, totalCount }: Filte
           }}
           data-testid="filters-toggle"
         >
-          Filters{active > 0 ? ` (${String(active)})` : ''}
+          {active > 0 ? tr('filters.toggleCount', { count: active }) : tr('filters.toggle')}
         </button>
         <p className="sc-filter-count" aria-live="polite" data-testid="filter-count">
-          Showing {shownCount} of {totalCount} {noun}
+          {tr(filters.nonDinosaurs ? 'filters.showingSpecies' : 'filters.showingDinosaurs', {
+            shown: shownCount,
+            total: totalCount,
+          })}
         </p>
       </div>
 
       <div id={panelId} className="sc-filter-panel" hidden={!open}>
         <fieldset>
-          <legend>Diet</legend>
+          <legend>{tr('filters.diet')}</legend>
           {DIETS.map((d) => (
             <Check
               key={d}
@@ -121,17 +125,17 @@ export function FilterPanel({ filters, onChange, shownCount, totalCount }: Filte
             >
               <span className="sc-badge" data-diet={d}>
                 <DietIcon diet={d} />
-                {DIET_LABELS[d].label}
+                {tr(`diet.${d}`)}
               </span>
-              {DIET_LABELS[d].hint && (
-                <span className="text-text-muted"> ({DIET_LABELS[d].hint})</span>
+              {DIETS_WITH_HINT.has(d) && (
+                <span className="text-text-muted"> ({tr(`diet.${d}Hint`)})</span>
               )}
             </Check>
           ))}
         </fieldset>
 
         <fieldset>
-          <legend>Group</legend>
+          <legend>{tr('filters.group')}</legend>
           {GROUP_OPTIONS.map((g) => (
             <Check
               key={g.id}
@@ -147,7 +151,7 @@ export function FilterPanel({ filters, onChange, shownCount, totalCount }: Filte
         </fieldset>
 
         <fieldset>
-          <legend>Period</legend>
+          <legend>{tr('filters.period')}</legend>
           {PERIOD_IDS.map((p) => (
             <Check
               key={p}
@@ -156,13 +160,13 @@ export function FilterPanel({ filters, onChange, shownCount, totalCount }: Filte
                 setList('periods', p, on);
               }}
             >
-              {PERIOD_LABELS[p]}
+              {unitName(unitById(p))}
             </Check>
           ))}
         </fieldset>
 
         <fieldset>
-          <legend>Size (body length)</legend>
+          <legend>{tr('filters.size')}</legend>
           {SIZE_CLASSES.map((c) => (
             <Check
               key={c.id}
@@ -171,7 +175,8 @@ export function FilterPanel({ filters, onChange, shownCount, totalCount }: Filte
                 setList('sizes', c.id, on);
               }}
             >
-              {c.label} <span className="text-text-muted">({c.description})</span>
+              {tr(`size.${c.id}`)}{' '}
+              <span className="text-text-muted">({tr(`size.${c.id}Range`)})</span>
             </Check>
           ))}
           <Check
@@ -180,13 +185,13 @@ export function FilterPanel({ filters, onChange, shownCount, totalCount }: Filte
               setList('sizes', SIZE_UNKNOWN, on);
             }}
           >
-            Size unknown
+            {tr('size.unknown')}
           </Check>
-          <p className="sc-note">A species whose length estimates span two sizes counts in both.</p>
+          <p className="sc-note">{tr('size.spanNote')}</p>
         </fieldset>
 
         <fieldset>
-          <legend>Continent</legend>
+          <legend>{tr('filters.continent')}</legend>
           {CONTINENTS.map((c) => (
             <Check
               key={c}
@@ -195,20 +200,20 @@ export function FilterPanel({ filters, onChange, shownCount, totalCount }: Filte
                 setList('continents', c, on);
               }}
             >
-              {CONTINENT_LABELS[c]}
+              {tr(`continent.${c}`)}
             </Check>
           ))}
         </fieldset>
 
         <fieldset>
-          <legend>More</legend>
+          <legend>{tr('filters.more')}</legend>
           <Check
             checked={filters.famousOnly}
             onChange={(on) => {
               onChange({ ...filters, famousOnly: on });
             }}
           >
-            Famous only
+            {tr('filters.famous')}
           </Check>
         </fieldset>
 
@@ -220,7 +225,7 @@ export function FilterPanel({ filters, onChange, shownCount, totalCount }: Filte
             onChange({ ...EMPTY_FILTERS, nonDinosaurs: filters.nonDinosaurs });
           }}
         >
-          Clear filters
+          {tr('filters.clear')}
         </button>
       </div>
     </div>

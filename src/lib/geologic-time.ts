@@ -1,4 +1,6 @@
 import rawGeologicTime from '../../data/geologic-time.json';
+import polishUnitNames from '../../data/i18n/pl/geology.json';
+import { formatNumber, getLocale, localDecimal } from './locale';
 import type { GeologicRank, GeologicTime, GeologicUnit } from './schemas/geologic-time';
 
 /**
@@ -17,13 +19,20 @@ export function unitById(id: string): GeologicUnit {
   return unit;
 }
 
+const UNIT_NAMES_PL: Record<string, string | undefined> = polishUnitNames;
+
+/** A unit's name in the current language: "Late Jurassic" / "Późna jura". */
+export function unitName(unit: Pick<GeologicUnit, 'id' | 'name'>): string {
+  return (getLocale() === 'pl' ? UNIT_NAMES_PL[unit.id] : undefined) ?? unit.name;
+}
+
 export function durationMa(unit: GeologicUnit): number {
   return unit.baseMa - unit.topMa;
 }
 
-/** Formats an age for display, e.g. 251.902 → "251.9", 66 → "66". */
+/** Formats an age for display, e.g. 251.902 → "251.9" ("251,9" in Polish), 66 → "66". */
 export function formatMa(ma: number): string {
-  return Number.isInteger(ma) ? String(ma) : ma.toFixed(1).replace(/\.0$/, '');
+  return formatNumber(ma, 1);
 }
 
 /** Rounds an age to the nearest whole Ma for headings, e.g. 251.902 → "252". */
@@ -36,7 +45,7 @@ export function formatMaRounded(ma: number): string {
  * to 0 as `formatMa` would.
  */
 export function formatUncertainty(ma: number): string {
-  return String(Number(ma.toPrecision(2)));
+  return localDecimal(String(Number(ma.toPrecision(2))));
 }
 
 /**
@@ -46,6 +55,6 @@ export function formatUncertainty(ma: number): string {
 export function formatMaWithUncertainty(ma: number, uncertaintyMa?: number): string {
   if (uncertaintyMa === undefined || uncertaintyMa <= 0) return formatMa(ma);
   const u = formatUncertainty(uncertaintyMa);
-  const decimals = u.split('.')[1]?.length ?? 0;
-  return `${String(Number(ma.toFixed(Math.max(decimals, 1))))} ±${u}`;
+  const decimals = u.split(/[.,]/)[1]?.length ?? 0;
+  return `${formatNumber(Number(ma.toFixed(Math.max(decimals, 1))), Math.max(decimals, 1))} ±${u}`;
 }

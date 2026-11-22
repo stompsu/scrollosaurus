@@ -1,0 +1,130 @@
+{
+  "slug": "lambeosaurus",
+  "scientificName": "Lambeosaurus lambei",
+  "genus": "Lambeosaurus",
+  "nameMeaning": {
+    "text": {
+      "en": "Lambe's lizard",
+      "pl": "jaszczur Lambe'a"
+    },
+    "sourceIds": ["nhm-lambeosaurus"]
+  },
+  "group": "hadrosauridae",
+  "groupSourceIds": ["nhm-lambeosaurus", "pbdb-taxon"],
+  "isDinosaur": true,
+  "taxonomy": {
+    "status": "valid"
+  },
+  "diet": {
+    "value": "herbivore",
+    "confidence": "established",
+    "sourceIds": ["nhm-lambeosaurus"]
+  },
+  "timeRange": {
+    "startMa": 76,
+    "endMa": 74,
+    "sourceIds": ["nhm-lambeosaurus", "pbdb-occurrences"],
+    "note": {
+      "en": "NHM gives 76–74 Ma. PBDB dates the occurrences of L. lambei (Dinosaur Park and Oldman formations) only to the Campanian, mostly the Late Campanian (stage 83.6–72.2 Ma).",
+      "pl": "NHM podaje 76–74 mln lat temu. PBDB datuje występowania L. lambei (formacje Dinosaur Park i Oldman) tylko na kampan, głównie późny kampan (piętro 83,6–72,2 mln lat temu)."
+    }
+  },
+  "periods": ["cretaceous"],
+  "size": {
+    "lengthM": {
+      "value": [9, 9],
+      "sourceIds": ["nhm-lambeosaurus"],
+      "note": {
+        "en": "Single museum estimate (NHM).",
+        "pl": "Jedyne oszacowanie muzealne (NHM)."
+      }
+    }
+  },
+  "locations": [
+    {
+      "continent": "north-america",
+      "countryCode": "CA",
+      "formation": "Dinosaur Park",
+      "sourceIds": ["pbdb-occurrences"]
+    },
+    {
+      "continent": "north-america",
+      "countryCode": "CA",
+      "formation": "Oldman",
+      "sourceIds": ["pbdb-occurrences"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "Parks",
+    "year": 1923,
+    "sourceIds": ["nhm-lambeosaurus", "pbdb-taxon"]
+  },
+  "summary": {
+    "text": {
+      "en": "Lambeosaurus was a large, plant-eating duck-billed dinosaur about nine metres long. It lived in what is now Alberta, Canada, about 76 to 74 million years ago, in the Late Cretaceous. It belonged to the lambeosaurines, hadrosaurs with greatly enlarged nasal passages in their head crests; scientists have suggested these worked as echo chambers for calls. Its name means 'Lambe's lizard'.",
+      "pl": "Lambeosaurus był dużym, roślinożernym dinozaurem kaczodziobym o długości około dziewięciu metrów. Żył na terenie dzisiejszej Alberty w Kanadzie około 76–74 milionów lat temu, w późnej kredzie. Należał do lambeozaurów – hadrozaurów z bardzo powiększonymi przewodami nosowymi w grzebieniach na głowie; naukowcy przypuszczają, że służyły one jako komory rezonansowe do wydawania odgłosów. Jego nazwa oznacza „jaszczur Lambe'a”."
+    },
+    "sourceIds": ["nhm-lambeosaurus", "pbdb-occurrences", "bell-2014"]
+  },
+  "famous": false,
+  "images": [
+    {
+      "commonsFile": "File:Lambeosaurus lambei TMP 1982.38.1 mount.jpg",
+      "kind": "skeleton-mount",
+      "alt": {
+        "en": "Skeleton mount of Lambeosaurus lambei, specimen TMP 1982.38.1, at the Royal Tyrrell Museum of Palaeontology.",
+        "pl": "Zmontowany szkielet Lambeosaurus lambei, okaz TMP 1982.38.1, w Royal Tyrrell Museum of Palaeontology."
+      }
+    }
+  ],
+  "uncertain": [
+    {
+      "field": "size.massKg",
+      "note": {
+        "en": "No mass estimate found in a source we could verify.",
+        "pl": "Nie znaleziono oszacowania masy w źródle, które moglibyśmy zweryfikować."
+      }
+    },
+    {
+      "field": "timeRange",
+      "note": {
+        "en": "The 76–74 Ma range is the NHM figure; no verified radiometric range for L. lambei alone was found.",
+        "pl": "Zakres 76–74 mln lat temu to wartość NHM; nie znaleziono zweryfikowanego zakresu radiometrycznego dla samego L. lambei."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "nhm-lambeosaurus",
+      "title": "Lambeosaurus | Dino Directory",
+      "publisher": "Natural History Museum, London",
+      "url": "https://www.nhm.ac.uk/discover/dino-directory/lambeosaurus.html",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "pbdb-taxon",
+      "title": "Lambeosaurus lambei (taxon 56724)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=56724",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "pbdb-occurrences",
+      "title": "Fossil occurrences of Lambeosaurus",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Lambeosaurus&show=strat,loc",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "bell-2014",
+      "title": "A mummified duck-billed dinosaur with a soft-tissue cock's comb",
+      "authors": "Bell, P. R.; Fanti, F.; Currie, P. J.; Arbour, V. M.",
+      "year": 2014,
+      "publisher": "Current Biology",
+      "doi": "10.1016/j.cub.2013.11.008",
+      "url": "https://doi.org/10.1016/j.cub.2013.11.008",
+      "accessed": "2026-11-21"
+    }
+  ],
+  "lastReviewed": "2026-11-21"
+}

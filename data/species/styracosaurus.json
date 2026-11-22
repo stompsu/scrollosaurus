@@ -1,0 +1,151 @@
+{
+  "slug": "styracosaurus",
+  "scientificName": "Styracosaurus albertensis",
+  "genus": "Styracosaurus",
+  "nameMeaning": {
+    "text": {
+      "en": "Spiked lizard",
+      "pl": "jaszczur z kolcami"
+    },
+    "sourceIds": ["nhm-styracosaurus"]
+  },
+  "group": "ceratopsia",
+  "groupSourceIds": ["nhm-styracosaurus", "pbdb-taxon"],
+  "isDinosaur": true,
+  "taxonomy": {
+    "status": "valid",
+    "note": {
+      "en": "PBDB treats Monoclonius nasicornus and Styracosaurus parksi, once named as separate species, as S. albertensis.",
+      "pl": "PBDB traktuje Monoclonius nasicornus i Styracosaurus parksi, opisane niegdyś jako osobne gatunki, jako S. albertensis."
+    },
+    "sourceIds": ["pbdb-occurrences"]
+  },
+  "diet": {
+    "value": "herbivore",
+    "confidence": "established",
+    "sourceIds": ["nhm-styracosaurus"]
+  },
+  "timeRange": {
+    "startMa": 76,
+    "endMa": 75,
+    "sourceIds": ["nhm-styracosaurus", "pbdb-occurrences"],
+    "note": {
+      "en": "NHM gives 76–75 Ma. PBDB dates all occurrences of S. albertensis (Dinosaur Park Formation) only to the Late Campanian (stage 83.6–72.2 Ma).",
+      "pl": "NHM podaje 76–75 mln lat temu. PBDB datuje wszystkie występowania S. albertensis (formacja Dinosaur Park) tylko na późny kampan (piętro 83,6–72,2 mln lat temu)."
+    }
+  },
+  "periods": ["cretaceous"],
+  "size": {
+    "lengthM": {
+      "value": [5.5, 5.5],
+      "sourceIds": ["nhm-styracosaurus"],
+      "note": {
+        "en": "Single museum estimate (NHM).",
+        "pl": "Jedyne oszacowanie muzealne (NHM)."
+      }
+    },
+    "massKg": {
+      "value": [2700, 2700],
+      "sourceIds": ["nhm-styracosaurus"],
+      "note": {
+        "en": "Single museum estimate (NHM); mass estimates vary widely between methods.",
+        "pl": "Jedyne oszacowanie muzealne (NHM); szacunki masy bardzo się różnią w zależności od metody."
+      }
+    }
+  },
+  "locations": [
+    {
+      "continent": "north-america",
+      "countryCode": "CA",
+      "formation": "Dinosaur Park",
+      "sourceIds": ["pbdb-occurrences", "nhm-styracosaurus"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "Lambe",
+    "year": 1913,
+    "sourceIds": ["nhm-styracosaurus", "pbdb-taxon"]
+  },
+  "summary": {
+    "text": {
+      "en": "Styracosaurus was a plant-eating horned dinosaur with a large nose horn and long spikes around its neck frill, but no brow horns. About 5.5 metres long, it walked on four legs and lived about 76 to 75 million years ago in what is now Alberta, Canada. Several skeletons found together in one bone bed suggest it lived in herds. Its first fossils were found in 1913, at what is now Dinosaur Provincial Park.",
+      "pl": "Styracosaurus był roślinożernym dinozaurem rogatym z dużym rogiem na nosie i długimi kolcami wokół kryzy na karku, ale bez rogów nad oczami. Miał około 5,5 metra długości, chodził na czterech nogach i żył około 76–75 milionów lat temu na terenie dzisiejszej Alberty w Kanadzie. Kilka szkieletów znalezionych razem w jednym złożu kości sugeruje, że żył w stadach. Pierwsze skamieniałości odkryto w 1913 roku na terenie dzisiejszego Parku Prowincjonalnego Dinosaur."
+    },
+    "sourceIds": ["nhm-styracosaurus", "pbdb-occurrences"]
+  },
+  "funFacts": [
+    {
+      "text": {
+        "en": "The number of long frill spikes varied between individuals: some skulls have six, others eight.",
+        "pl": "Liczba długich kolców na kryzie różniła się u poszczególnych osobników: niektóre czaszki mają ich sześć, inne osiem."
+      },
+      "sourceIds": ["nhm-styracosaurus"]
+    },
+    {
+      "text": {
+        "en": "A skull nicknamed 'Hannah' has left and right sides so different that, found separately, they might have been mistaken for two species.",
+        "pl": "Czaszka nazwana „Hannah” ma tak różne lewą i prawą stronę, że gdyby znaleziono je osobno, można by je wziąć za dwa różne gatunki."
+      },
+      "sourceIds": ["ualberta-2019"]
+    }
+  ],
+  "famous": false,
+  "images": [
+    {
+      "commonsFile": "File:Styracosaurus \"parksi\" AMNH.jpg",
+      "kind": "skeleton-mount",
+      "alt": {
+        "en": "Skeleton of Styracosaurus albertensis (AMNH 100/979) on display at the American Museum of Natural History.",
+        "pl": "Szkielet Styracosaurus albertensis (AMNH 100/979) na wystawie w American Museum of Natural History."
+      }
+    }
+  ],
+  "uncertain": [
+    {
+      "field": "timeRange",
+      "note": {
+        "en": "The 76–75 Ma range is the NHM figure; no verified radiometric range for S. albertensis was found.",
+        "pl": "Zakres 76–75 mln lat temu to wartość NHM; nie znaleziono zweryfikowanego zakresu radiometrycznego dla S. albertensis."
+      }
+    },
+    {
+      "field": "locations",
+      "note": {
+        "en": "NHM also lists the USA, but no verified occurrence record of S. albertensis from the USA was found.",
+        "pl": "NHM wymienia też USA, ale nie znaleziono zweryfikowanego rekordu występowania S. albertensis w USA."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "nhm-styracosaurus",
+      "title": "Styracosaurus | Dino Directory",
+      "publisher": "Natural History Museum, London",
+      "url": "https://www.nhm.ac.uk/discover/dino-directory/styracosaurus.html",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "pbdb-taxon",
+      "title": "Styracosaurus albertensis (taxon 56144)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=56144",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "pbdb-occurrences",
+      "title": "Fossil occurrences of Styracosaurus",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Styracosaurus&show=strat,loc",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "ualberta-2019",
+      "title": "Dinosaur skull turns paleontology assumptions on their head",
+      "publisher": "University of Alberta",
+      "year": 2019,
+      "url": "https://www.ualberta.ca/en/science/news/2019/november/dinosaur-skull-styracosaurus.html",
+      "accessed": "2026-11-21"
+    }
+  ],
+  "lastReviewed": "2026-11-21"
+}

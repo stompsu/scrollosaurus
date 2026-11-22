@@ -1,0 +1,141 @@
+{
+  "slug": "kunbarrasaurus",
+  "scientificName": "Kunbarrasaurus ieversi",
+  "genus": "Kunbarrasaurus",
+  "nameMeaning": {
+    "text": {
+      "en": "Ievers' shield lizard",
+      "pl": "tarczowy jaszczur Ieversa"
+    },
+    "sourceIds": ["leahey-2015"]
+  },
+  "group": "ankylosauria",
+  "groupSourceIds": ["leahey-2015", "pbdb-kunbarrasaurus-ieversi"],
+  "isDinosaur": true,
+  "taxonomy": {
+    "status": "valid",
+    "note": {
+      "en": "The skeleton (QM F18101) was first assigned to Minmi, preliminarily and only on the basis of its paravertebral elements (bony structures alongside the backbone). Leahey et al. (2015) found many diagnostic differences in its skull and gave it its own genus and species.",
+      "pl": "Szkielet (QM F18101) początkowo przypisano do rodzaju Minmi – wstępnie i wyłącznie na podstawie elementów przykręgowych (struktur kostnych biegnących wzdłuż kręgosłupa). Leahey i in. (2015) wykazali w jego czaszce wiele różnic diagnostycznych i nadali mu własny rodzaj i gatunek."
+    },
+    "sourceIds": ["leahey-2015"]
+  },
+  "diet": {
+    "value": "herbivore",
+    "confidence": "probable",
+    "sourceIds": ["leahey-2015", "pbdb-kunbarrasaurus-ieversi"],
+    "note": {
+      "en": "Inferred from its group: Leahey et al. (2015) describe ankylosaurians as herbivorous ornithischians.",
+      "pl": "Wniosek na podstawie przynależności do grupy: Leahey i in. (2015) opisują ankylozaury jako roślinożerne dinozaury ptasiomiedniczne."
+    }
+  },
+  "timeRange": {
+    "startMa": 106.3,
+    "endMa": 100.5,
+    "sourceIds": ["pbdb-kunbarrasaurus-occs", "leahey-2015"],
+    "note": {
+      "en": "PBDB dates the holotype to the late Albian (106.3-100.5 Ma, stage bounds). Leahey et al. (2015) give the Allaru Mudstone as upper Albian to possibly lower Cenomanian, so the fossil could be slightly younger.",
+      "pl": "PBDB datuje holotyp na późny alb (106,3–100,5 mln lat temu, granice piętra). Leahey i in. (2015) określają wiek formacji Allaru Mudstone na górny alb, być może do dolnego cenomanu, więc skamieniałość może być nieco młodsza."
+    }
+  },
+  "periods": ["cretaceous"],
+  "size": {},
+  "locations": [
+    {
+      "continent": "australia",
+      "countryCode": "AU",
+      "formation": "Allaru Mudstone",
+      "sourceIds": ["leahey-2015"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "Leahey et al.",
+    "year": 2015,
+    "note": {
+      "en": "Found in 1989 by Ian Ievers at Marathon Station, east of Richmond in north-western Queensland.",
+      "pl": "Odkryty w 1989 roku przez Iana Ieversa na farmie Marathon Station, na wschód od Richmond w północno-zachodnim Queenslandzie."
+    },
+    "sourceIds": ["leahey-2015", "pbdb-kunbarrasaurus-ieversi"]
+  },
+  "summary": {
+    "text": {
+      "en": "Kunbarrasaurus was an armoured, plant-eating dinosaur from Queensland, Australia, that lived in the late Albian, a little over 100 million years ago. Its name means Ievers' shield lizard: kunbarra is a Mayi word for shield, and Ian Ievers found the fossil in 1989. For years it was thought to be a Minmi, until a 2015 study of its skull showed it was a different animal.",
+      "pl": "Kunbarrasaurus był opancerzonym roślinożernym dinozaurem z Queenslandu w Australii, żyjącym w późnym albie, nieco ponad 100 mln lat temu. Jego nazwa oznacza „tarczowy jaszczur Ieversa”: kunbarra to w języku mayi tarcza, a Ian Ievers znalazł skamieniałość w 1989 roku. Przez lata uważano go za przedstawiciela rodzaju Minmi, dopóki badanie jego czaszki z 2015 roku nie wykazało, że to inne zwierzę."
+    },
+    "sourceIds": ["leahey-2015", "pbdb-kunbarrasaurus-occs"]
+  },
+  "funFacts": [
+    {
+      "text": {
+        "en": "Its skull is about 90% complete, and its skeleton is one of the most complete ankylosaur skeletons in the world.",
+        "pl": "Jego czaszka jest kompletna w około 90%, a szkielet należy do najbardziej kompletnych szkieletów ankylozaurów na świecie."
+      },
+      "sourceIds": ["leahey-2015"]
+    }
+  ],
+  "famous": false,
+  "images": [
+    {
+      "commonsFile": "File:Kunbarrasaurus skeleton.jpg",
+      "kind": "fossil",
+      "alt": {
+        "en": "Skeleton of the holotype of Kunbarrasaurus ieversi (QM F18101) in dorsal view, with a 20 cm scale.",
+        "pl": "Szkielet holotypu Kunbarrasaurus ieversi (QM F18101) widziany od góry, ze skalą 20 cm."
+      },
+      "note": {
+        "en": "This specimen was first described as a Minmi and later renamed Kunbarrasaurus.",
+        "pl": "Okaz ten opisano najpierw jako Minmi, a później nadano mu nazwę Kunbarrasaurus."
+      }
+    }
+  ],
+  "uncertain": [
+    {
+      "field": "size.lengthM",
+      "note": {
+        "en": "No length has been published for this skeleton; the 2.5-3 m figure in Leahey et al. (2015) refers to other Minmi specimens.",
+        "pl": "Dla tego szkieletu nie opublikowano długości; wartość 2,5–3 m podana przez Leahey i in. (2015) dotyczy innych okazów Minmi."
+      }
+    },
+    {
+      "field": "size.massKg",
+      "note": {
+        "en": "No verified mass estimate found.",
+        "pl": "Nie znaleziono zweryfikowanego oszacowania masy."
+      }
+    },
+    {
+      "field": "locations",
+      "note": {
+        "en": "Leahey et al. (2015) place the holotype in the Allaru Mudstone; PBDB records it from the Toolebuc Formation. The published description is followed.",
+        "pl": "Leahey i in. (2015) umieszczają holotyp w formacji Allaru Mudstone; PBDB podaje formację Toolebuc. Przyjęto wersję z publikacji opisującej okaz."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "leahey-2015",
+      "title": "Cranial osteology of the ankylosaurian dinosaur formerly known as Minmi sp. (Ornithischia: Thyreophora) from the Lower Cretaceous Allaru Mudstone of Richmond, Queensland, Australia",
+      "authors": "Leahey L.G., Molnar R.E., Carpenter K., Witmer L.M., Salisbury S.W.",
+      "year": 2015,
+      "publisher": "PeerJ 3: e1475",
+      "doi": "10.7717/peerj.1475",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4675105/",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-kunbarrasaurus-ieversi",
+      "title": "Kunbarrasaurus ieversi (taxon 371998)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/single.json?name=Kunbarrasaurus%20ieversi&show=attr,parent",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-kunbarrasaurus-occs",
+      "title": "Occurrences of Kunbarrasaurus (stratigraphy and location)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Kunbarrasaurus&show=strat,loc",
+      "accessed": "2026-11-22"
+    }
+  ],
+  "lastReviewed": "2026-11-22"
+}

@@ -1,0 +1,151 @@
+{
+  "slug": "mussaurus",
+  "scientificName": "Mussaurus patagonicus",
+  "genus": "Mussaurus",
+  "nameMeaning": {
+    "text": {
+      "en": "Mouse lizard",
+      "pl": "mysi jaszczur"
+    },
+    "sourceIds": ["natgeo-2019"]
+  },
+  "group": "sauropodomorpha",
+  "groupSourceIds": ["pbdb-taxon", "pol-2021", "otero-2019"],
+  "isDinosaur": true,
+  "taxonomy": {
+    "status": "valid"
+  },
+  "diet": {
+    "value": "herbivore",
+    "confidence": "probable",
+    "sourceIds": ["natgeo-2019", "otero-2019"],
+    "note": {
+      "en": "National Geographic (2019) describes grown Mussaurus eating ferns and other plants. Otero et al. (2019) describe early sauropodomorphs in general as mostly omnivorous. No study of the diet of Mussaurus itself was checked.",
+      "pl": "National Geographic (2019) opisuje dorosłe Mussaurus jako zjadające paprocie i inne rośliny. Otero i in. (2019) opisują wczesne zauropodomorfy ogólnie jako w większości wszystkożerne. Nie sprawdzono żadnej pracy poświęconej diecie samego Mussaurus."
+    }
+  },
+  "timeRange": {
+    "startMa": 192.78,
+    "startUncertaintyMa": 0.14,
+    "endMa": 192.74,
+    "endUncertaintyMa": 0.14,
+    "sourceIds": ["pol-2021", "pbdb-occs"],
+    "note": {
+      "en": "Two U–Pb dates, 192.78 ± 0.14 and 192.74 ± 0.14 Ma, from tuffaceous siltstones of the Mussaurus-bearing beds of the Laguna Colorada Formation (Pol et al. 2021). The authors read them as an Early Jurassic (Sinemurian) maximum age, and PBDB lists both occurrences as Sinemurian. On the ICS v2024/12 chart (Pliensbachian base 192.9 ± 0.3 Ma) the dates fall at the Sinemurian–Pliensbachian boundary.",
+      "pl": "Dwie datacje U–Pb, 192,78 ± 0,14 i 192,74 ± 0,14 mln lat, z tufowych mułowców warstw z Mussaurus w formacji Laguna Colorada (Pol i in. 2021). Autorzy interpretują je jako maksymalny wiek z wczesnej jury (synemur), a PBDB klasyfikuje oba występowania jako synemur. Na tabeli ICS v2024/12 (dolna granica pliensbachu 192,9 ± 0,3 mln lat temu) datacje wypadają na granicy synemuru i pliensbachu."
+    }
+  },
+  "periods": ["jurassic"],
+  "size": {
+    "massKg": {
+      "value": [898.2, 1937],
+      "sourceIds": ["otero-2019", "pol-2021"],
+      "note": {
+        "en": "Range of the adult digital models in Otero et al. (2019), whose convex-hull estimate is 1257 kg. Pol et al. (2021) estimate 1504.8 kg for the largest known specimen.",
+        "pl": "Zakres dla cyfrowych modeli dorosłego osobnika u Otero i in. (2019), których oszacowanie metodą otoczki wypukłej wynosi 1257 kg. Pol i in. (2021) szacują masę największego znanego okazu na 1504,8 kg."
+      }
+    }
+  },
+  "locations": [
+    {
+      "continent": "south-america",
+      "countryCode": "AR",
+      "formation": "Laguna Colorada",
+      "sourceIds": ["pbdb-occs", "pol-2021"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "Bonaparte & Vince",
+    "year": 1979,
+    "sourceIds": ["pbdb-taxon"]
+  },
+  "summary": {
+    "text": {
+      "en": "Mussaurus, the 'mouse lizard', got its name from tiny hatchlings small enough to hold in a hand. It grew fast: from about 60 grams at hatching to around 7 kilograms at one year, and over a tonne as an adult. Fossils of about 80 individuals and more than 100 eggs from Patagonia, Argentina, about 193 million years old, show that it lived in herds, with youngsters of similar age grouped together. It ate plants.",
+      "pl": "Mussaurus, czyli „mysi jaszczur”, zawdzięcza nazwę maleńkim, świeżo wyklutym młodym, które mieściły się w dłoni. Rósł szybko: od około 60 gramów po wykluciu do około 7 kilogramów w wieku roku i ponad tony w dorosłości. Skamieniałości około 80 osobników i ponad 100 jaj z Patagonii w Argentynie, liczące około 193 milionów lat, pokazują, że żył w stadach, w których młode w podobnym wieku trzymały się razem. Jadł rośliny."
+    },
+    "sourceIds": ["natgeo-2019", "otero-2019", "pol-2021"]
+  },
+  "funFacts": [
+    {
+      "text": {
+        "en": "Hatchling Mussaurus probably walked on all fours. As they grew, their centre of mass moved back towards the hips, and they switched to walking on two legs.",
+        "pl": "Świeżo wyklute Mussaurus prawdopodobnie chodziły na czterech nogach. W miarę wzrostu ich środek ciężkości przesuwał się do tyłu, w stronę bioder, i zaczynały chodzić na dwóch nogach."
+      },
+      "sourceIds": ["otero-2019"]
+    }
+  ],
+  "famous": false,
+  "images": [
+    {
+      "commonsFile": "File:Mussaurus patagonicus life restoration.png",
+      "kind": "life-reconstruction",
+      "alt": {
+        "en": "Life restoration of an adult Mussaurus patagonicus, based on a published skeletal reconstruction.",
+        "pl": "Rekonstrukcja przyżyciowa dorosłego Mussaurus patagonicus, oparta na opublikowanej rekonstrukcji szkieletu."
+      }
+    }
+  ],
+  "uncertain": [
+    {
+      "field": "size.lengthM",
+      "note": {
+        "en": "No body length found in a source we could verify; Otero et al. (2019) and Pol et al. (2021) give masses but no length.",
+        "pl": "Nie znaleziono długości ciała w źródle, które moglibyśmy zweryfikować; Otero i in. (2019) oraz Pol i in. (2021) podają masę, ale nie długość."
+      }
+    },
+    {
+      "field": "timeRange",
+      "note": {
+        "en": "The two dates give a maximum age for the fossil-bearing beds, not a first and last appearance, and they sit on the Sinemurian–Pliensbachian boundary of the current ICS chart.",
+        "pl": "Obie datacje wyznaczają maksymalny wiek warstw ze skamieniałościami, a nie pierwsze i ostatnie pojawienie się, i wypadają na granicy synemuru i pliensbachu według obecnej tabeli ICS."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "pbdb-taxon",
+      "title": "Mussaurus (taxon 38643)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/single.json?name=Mussaurus&show=attr,parent,class",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-occs",
+      "title": "Occurrences of Mussaurus (stratigraphy and location)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Mussaurus&show=strat,loc",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "otero-2019",
+      "title": "Ontogenetic changes in the body plan of the sauropodomorph dinosaur Mussaurus patagonicus reveal shifts of locomotor stance during growth",
+      "authors": "Otero, A.; Cuff, A. R.; Allen, V.; Sumner-Rooney, L.; Pol, D.; Hutchinson, J. R.",
+      "year": 2019,
+      "publisher": "Scientific Reports",
+      "doi": "10.1038/s41598-019-44037-1",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6527699",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pol-2021",
+      "title": "Earliest evidence of herd-living and age segregation amongst dinosaurs",
+      "authors": "Pol, D.; Mancuso, A. C.; Smith, R. M. H.; Marsicano, C. A.; Ramezani, J.; Cerda, I. A.; Otero, A.; Fernandez, V.",
+      "year": 2021,
+      "publisher": "Scientific Reports",
+      "doi": "10.1038/s41598-021-99176-1",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8531321",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "natgeo-2019",
+      "title": "Like humans, this dinosaur crawled before it walked",
+      "authors": "Bittel, J.",
+      "year": 2019,
+      "publisher": "National Geographic",
+      "url": "https://www.nationalgeographic.com/science/article/mouse-lizard-dinosaur-crawled-then-walked-baby-mussaurus-patagonicus",
+      "accessed": "2026-11-22"
+    }
+  ],
+  "lastReviewed": "2026-11-22"
+}

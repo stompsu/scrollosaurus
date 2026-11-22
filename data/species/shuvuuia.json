@@ -4,7 +4,8 @@
   "genus": "Shuvuuia",
   "nameMeaning": {
     "text": {
-      "en": "bird"
+      "en": "bird",
+      "pl": "ptak"
     },
     "sourceIds": ["nhm"]
   },
@@ -18,20 +19,29 @@
     "value": "insectivore",
     "confidence": "probable",
     "sourceIds": ["nhm", "leedham-2026", "choiniere-2021"],
-    "note": "An inference from anatomy, not from gut contents. Alvarezsauroids have short, strong forelimbs suited to digging, consistent with eating insects such as ants and termites (Leedham et al. 2026; NHM). Choiniere et al. 2021 found Shuvuuia's eyes and ears suited to hunting at night. PBDB lists it simply as a carnivore."
+    "note": {
+      "en": "An inference from anatomy, not from gut contents. Alvarezsauroids have short, strong forelimbs suited to digging, consistent with eating insects such as ants and termites (Leedham et al. 2026; NHM). Choiniere et al. 2021 found Shuvuuia's eyes and ears suited to hunting at night. PBDB lists it simply as a carnivore.",
+      "pl": "Wniosek z anatomii, a nie z zawartości przewodu pokarmowego. Alwarezzauroidy mają krótkie, silne przednie kończyny przystosowane do kopania, co pasuje do jedzenia owadów, takich jak mrówki i termity (Leedham i in. 2026; NHM). Choiniere i in. 2021 stwierdzili, że oczy i uszy Shuvuuia były przystosowane do polowania nocą. PBDB wymienia go po prostu jako mięsożercę."
+    }
   },
   "timeRange": {
     "startMa": 83.6,
     "endMa": 72.2,
     "sourceIds": ["pbdb-occs"],
-    "note": "PBDB dates S. deserti occurrences (Djadokhta Formation, Mongolia) only to the Campanian; the Ma values are the ICS v2024/12 Campanian stage boundaries. NHM gives 81-75 Ma."
+    "note": {
+      "en": "PBDB dates S. deserti occurrences (Djadokhta Formation, Mongolia) only to the Campanian; the Ma values are the ICS v2024/12 Campanian stage boundaries. NHM gives 81-75 Ma.",
+      "pl": "PBDB datuje występowania S. deserti (formacja Djadokhta, Mongolia) jedynie na kampan; wartości w mln lat to granice piętra kampanu według ICS v2024/12. NHM podaje 81–75 mln lat temu."
+    }
   },
   "periods": ["cretaceous"],
   "size": {
     "lengthM": {
       "value": [0.6, 0.6],
       "sourceIds": ["nhm"],
-      "note": "Single published figure (NHM Dino Directory)."
+      "note": {
+        "en": "Single published figure (NHM Dino Directory).",
+        "pl": "Jedyna opublikowana wartość (NHM Dino Directory)."
+      }
     }
   },
   "locations": [
@@ -49,14 +59,16 @@
   },
   "summary": {
     "text": {
-      "en": "Shuvuuia was a tiny desert dinosaur from Mongolia, about 60 centimetres long, living roughly 84 to 72 million years ago. Its name means 'bird'. Its relatives, the alvarezsauroids, had short, strong arms suited to digging, so scientists think it may have eaten insects such as termites. Its large eyes and owl-like ears suggest it hunted at night."
+      "en": "Shuvuuia was a tiny desert dinosaur from Mongolia, about 60 centimetres long, living roughly 84 to 72 million years ago. Its name means 'bird'. Its relatives, the alvarezsauroids, had short, strong arms suited to digging, so scientists think it may have eaten insects such as termites. Its large eyes and owl-like ears suggest it hunted at night.",
+      "pl": "Shuvuuia był malutkim pustynnym dinozaurem z Mongolii, o długości około 60 centymetrów, żyjącym mniej więcej 84–72 miliony lat temu. Jego nazwa oznacza „ptak”. Jego krewni, alwarezzauroidy, mieli krótkie, silne przednie kończyny przystosowane do kopania, więc naukowcy sądzą, że mógł jeść owady, takie jak termity. Duże oczy i uszy podobne do sowich sugerują, że polował nocą."
     },
     "sourceIds": ["nhm", "pbdb-occs", "leedham-2026", "choiniere-2021"]
   },
   "funFacts": [
     {
       "text": {
-        "en": "Shuvuuia's inner ear suggests its hearing rivalled that of a barn owl, and its eyes were suited to very low light."
+        "en": "Shuvuuia's inner ear suggests its hearing rivalled that of a barn owl, and its eyes were suited to very low light.",
+        "pl": "Ucho wewnętrzne Shuvuuia sugeruje, że jego słuch dorównywał słuchowi płomykówki, a oczy były przystosowane do bardzo słabego światła."
       },
       "sourceIds": ["choiniere-2021"]
     }
@@ -67,18 +79,25 @@
       "commonsFile": "File:Shuvuuia.jpg",
       "kind": "life-reconstruction",
       "alt": {
-        "en": "Life restoration of Shuvuuia deserti based on a skeletal diagram and fossils."
+        "en": "Life restoration of Shuvuuia deserti based on a skeletal diagram and fossils.",
+        "pl": "Rekonstrukcja przyżyciowa Shuvuuia deserti oparta na rysunku szkieletu i skamieniałościach."
       }
     }
   ],
   "uncertain": [
     {
       "field": "diet",
-      "note": "Insectivory is inferred from alvarezsauroid anatomy (Leedham et al. 2026; NHM); there is no direct evidence such as gut contents."
+      "note": {
+        "en": "Insectivory is inferred from alvarezsauroid anatomy (Leedham et al. 2026; NHM); there is no direct evidence such as gut contents.",
+        "pl": "Owadożerność wywnioskowano z anatomii alwarezzauroidów (Leedham i in. 2026; NHM); brak bezpośrednich dowodów, takich jak zawartość przewodu pokarmowego."
+      }
     },
     {
       "field": "size.massKg",
-      "note": "No published mass estimate found in the sources checked."
+      "note": {
+        "en": "No published mass estimate found in the sources checked.",
+        "pl": "W sprawdzonych źródłach nie znaleziono opublikowanego oszacowania masy."
+      }
     }
   ],
   "sources": [

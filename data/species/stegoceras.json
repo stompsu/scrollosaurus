@@ -1,0 +1,172 @@
+{
+  "slug": "stegoceras",
+  "scientificName": "Stegoceras validum",
+  "genus": "Stegoceras",
+  "nameMeaning": {
+    "text": {
+      "en": "horny roof",
+      "pl": "rogaty dach"
+    },
+    "sourceIds": ["nhm"]
+  },
+  "group": "pachycephalosauria",
+  "groupSourceIds": ["pbdb-taxon", "nhm", "schott-2011"],
+  "isDinosaur": true,
+  "taxonomy": {
+    "status": "valid",
+    "note": {
+      "en": "Flat-headed skulls once named Ornatotholus browni are juvenile S. validum (Schott et al. 2011); PBDB also lists Gravitholus albertae and Troodon sternbergi as synonyms. Schott et al. left specimens from Montana and New Mexico out of their study to avoid mixing different species.",
+      "pl": "Płaskie czaszki nazwane niegdyś Ornatotholus browni należą do młodych S. validum (Schott i in. 2011); PBDB podaje jako synonimy także Gravitholus albertae i Troodon sternbergi. Schott i in. pominęli w swoim badaniu okazy z Montany i Nowego Meksyku, aby nie łączyć różnych gatunków."
+    },
+    "sourceIds": ["schott-2011", "pbdb-synonyms"]
+  },
+  "diet": {
+    "value": "herbivore",
+    "confidence": "probable",
+    "sourceIds": ["nhm", "pbdb-taxa", "schott-2011"],
+    "note": {
+      "en": "NHM and PBDB class it as a herbivore; Schott et al. (2011) describe pachycephalosaurs in general as small to medium-sized herbivores.",
+      "pl": "NHM i PBDB klasyfikują go jako roślinożercę; Schott i in. (2011) opisują pachycefalozaury ogólnie jako małych i średniej wielkości roślinożerców."
+    }
+  },
+  "timeRange": {
+    "startMa": 76.47,
+    "endMa": 74.44,
+    "sourceIds": ["ramezani-2022", "schott-2011", "pbdb-occs", "nhm"],
+    "note": {
+      "en": "Formation-dated: the type specimen and most referred specimens come from the Dinosaur Park Formation (Schott et al. 2011), whose base and top are U–Pb-dated to 76.47 and 74.44 Ma (Ramezani et al. 2022); some specimens may come from the older Oldman Formation. PBDB also lists Stegoceras records from Montana, Saskatchewan, New Mexico and Texas, which are not used here. NHM gives 76–74 Ma.",
+      "pl": "Na podstawie datowania formacji: okaz typowy i większość przypisanych okazów pochodzi z formacji Dinosaur Park (Schott i in. 2011), której spąg i strop datowano metodą U–Pb na 76,47 i 74,44 mln lat (Ramezani i in. 2022); niektóre okazy mogą pochodzić ze starszej formacji Oldman. PBDB wymienia też rekordy Stegoceras z Montany, Saskatchewan, Nowego Meksyku i Teksasu, których tu nie uwzględniono. NHM podaje 76–74 mln lat temu."
+    }
+  },
+  "periods": ["cretaceous"],
+  "size": {
+    "lengthM": {
+      "value": [2.4, 2.4],
+      "sourceIds": ["nhm"],
+      "note": {
+        "en": "Single museum figure (NHM Dino Directory); method not stated.",
+        "pl": "Jedyna wartość muzealna (NHM Dino Directory); metody nie podano."
+      }
+    },
+    "massKg": {
+      "value": [16, 16],
+      "sourceIds": ["benson-2014"],
+      "note": {
+        "en": "Single peer-reviewed estimate (Benson et al. 2014), scaled from the thickness (circumference) of the upper arm and thigh bones; its standard error is 0.135 log10(kg).",
+        "pl": "Jedyne recenzowane oszacowanie (Benson i in. 2014), wyliczone na podstawie grubości (obwodu) kości ramienia i uda; jego błąd standardowy wynosi 0,135 log10(kg)."
+      }
+    }
+  },
+  "locations": [
+    {
+      "continent": "north-america",
+      "countryCode": "CA",
+      "formation": "Dinosaur Park",
+      "sourceIds": ["schott-2011", "pbdb-occs"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "Lambe",
+    "year": 1902,
+    "note": {
+      "en": "The lectotype is a nearly complete skull dome (CMN 515) from the east side of the Red Deer River below the mouth of Berry Creek, Alberta.",
+      "pl": "Lektotypem jest niemal kompletna kopuła czaszki (CMN 515) ze wschodniego brzegu rzeki Red Deer poniżej ujścia Berry Creek w Albercie."
+    },
+    "sourceIds": ["nhm", "pbdb-synonyms", "schott-2011"]
+  },
+  "summary": {
+    "text": {
+      "en": "Stegoceras was a pachycephalosaur, a dinosaur about 2.4 metres long from Alberta, Canada, with a dome of bone on top of its skull. Young Stegoceras were flat-headed, and the dome grew as they got older. It lived in the Late Cretaceous, about 76 to 74 million years ago, and probably ate plants.",
+      "pl": "Stegoceras był pachycefalozaurem – dinozaurem o długości około 2,4 metra z Alberty w Kanadzie, z kostną kopułą na czubku czaszki. Młode Stegoceras miały płaskie głowy, a kopuła rosła wraz z wiekiem. Żył w późnej kredzie, około 76–74 milionów lat temu, i prawdopodobnie jadł rośliny."
+    },
+    "sourceIds": ["nhm", "schott-2011", "ramezani-2022"]
+  },
+  "funFacts": [
+    {
+      "text": {
+        "en": "Flat-headed Stegoceras skulls were once thought to belong to a different dinosaur, Ornatotholus browni. They are now seen as young animals whose domes had not yet grown.",
+        "pl": "Płaskie czaszki Stegoceras uważano kiedyś za szczątki innego dinozaura, Ornatotholus browni. Dziś uznaje się je za czaszki młodych zwierząt, którym kopuły jeszcze nie urosły."
+      },
+      "sourceIds": ["schott-2011"]
+    }
+  ],
+  "famous": false,
+  "images": [
+    {
+      "commonsFile": "File:Stegoceras.jpg",
+      "kind": "skeleton-mount",
+      "alt": {
+        "en": "Stegoceras skeletons at the Royal Tyrrell Museum, Alberta, Canada.",
+        "pl": "Szkielety Stegoceras w Royal Tyrrell Museum w Albercie w Kanadzie."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "benson-2014",
+      "title": "Rates of dinosaur body mass evolution indicate 170 million years of sustained ecological innovation on the avian stem lineage",
+      "authors": "Benson R.B.J., Campione N.E., Carrano M.T., Mannion P.D., Sullivan C., Upchurch P., Evans D.C.",
+      "year": 2014,
+      "publisher": "PLOS Biology 12(5): e1001853",
+      "doi": "10.1371/journal.pbio.1001853",
+      "url": "https://doi.org/10.1371/journal.pbio.1001853",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "nhm",
+      "title": "Stegoceras | Dino Directory",
+      "publisher": "Natural History Museum, London",
+      "url": "https://www.nhm.ac.uk/discover/dino-directory/stegoceras.html",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "schott-2011",
+      "title": "Cranial Ontogeny in Stegoceras validum (Dinosauria: Pachycephalosauria): A Quantitative Model of Pachycephalosaur Dome Growth and Variation",
+      "authors": "Schott, R. K.; Evans, D. C.; Goodwin, M. B.; Horner, J. R.; Brown, C. M.; Longrich, N. R.",
+      "year": 2011,
+      "publisher": "PLoS ONE 6(6): e21092",
+      "doi": "10.1371/journal.pone.0021092",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0021092",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "ramezani-2022",
+      "title": "Calibrating the zenith of dinosaur diversity in the Campanian of the Western Interior Basin by CA-ID-TIMS U–Pb geochronology",
+      "authors": "Ramezani, J.; Beveridge, T. L.; Rogers, R. R.; Eberth, D. A.; Roberts, E. M.",
+      "year": 2022,
+      "publisher": "Scientific Reports 12: 16026",
+      "doi": "10.1038/s41598-022-19896-w",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9512893/",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-taxon",
+      "title": "Stegoceras (taxon 38787) and its parent taxa",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/list.json?name=Stegoceras&rel=all_parents",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-synonyms",
+      "title": "Stegoceras validum (taxon 81379) and its synonyms",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/list.json?name=Stegoceras%20validum&rel=synonyms&show=attr,ref",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-taxa",
+      "title": "Taxon records with classification and ecospace for Stegoceras and other genera",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/list.json?name=Rapetosaurus,Rajasaurus,Antarctopelta,Hypsilophodon,Magyarosaurus,Hatzegopteryx,Centrosaurus,Chasmosaurus,Stegoceras,Borealopelta&show=attr,class,ecospace",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-occs",
+      "title": "Occurrences of Centrosaurus, Chasmosaurus and Stegoceras (stratigraphy and location)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Centrosaurus,Chasmosaurus,Stegoceras&show=strat,loc",
+      "accessed": "2026-11-22"
+    }
+  ],
+  "lastReviewed": "2026-11-22"
+}

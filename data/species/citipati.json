@@ -1,0 +1,162 @@
+{
+  "slug": "citipati",
+  "scientificName": "Citipati osmolskae",
+  "genus": "Citipati",
+  "nameMeaning": {
+    "text": {
+      "en": "lord of the funeral pyre",
+      "pl": "pan stosu pogrzebowego"
+    },
+    "sourceIds": ["nhm-citipati"]
+  },
+  "group": "oviraptorosauria",
+  "groupSourceIds": ["clark-2001", "pbdb-genera", "nhm-citipati"],
+  "isDinosaur": true,
+  "taxonomy": {
+    "status": "valid",
+    "note": {
+      "en": "An oviraptorid (Clark et al. 2001). PBDB places it in Citipatinae, NHM in Oviraptorinae; both are within Oviraptoridae.",
+      "pl": "Owiraptoryd (Clark i in. 2001). PBDB umieszcza go w podrodzinie Citipatinae, a NHM – w Oviraptorinae; obie należą do rodziny Oviraptoridae."
+    },
+    "sourceIds": ["clark-2001", "pbdb-genera", "nhm-citipati"]
+  },
+  "diet": {
+    "value": "omnivore",
+    "confidence": "debated",
+    "sourceIds": ["nhm-citipati", "pbdb-genera", "zanno-makovicky-2011"],
+    "note": {
+      "en": "NHM and PBDB list it as an omnivore. Zanno and Makovicky (2011) find a succession of increasing specialisation towards plant-eating in oviraptorosaurs, so how much meat oviraptorids ate is unclear.",
+      "pl": "NHM i PBDB wymieniają go jako wszystkożercę. Zanno i Makovicky (2011) stwierdzają u owiraptorozaurów stopniowo rosnącą specjalizację w kierunku roślinożerności, nie wiadomo więc, ile mięsa jadły owiraptorydy."
+    }
+  },
+  "timeRange": {
+    "startMa": 83.6,
+    "endMa": 72.2,
+    "sourceIds": ["pbdb-occs", "nhm-citipati"],
+    "note": {
+      "en": "PBDB dates the C. osmolskae occurrences (Djadokhta Formation, Ukhaa Tolgod, Mongolia) only to the Campanian, one of them to the Middle Campanian; the Ma values are the ICS v2024/12 Campanian stage boundaries. NHM gives 81–75 Ma.",
+      "pl": "PBDB datuje występowania C. osmolskae (formacja Djadokhta, Ukhaa Tolgod, Mongolia) jedynie na kampan, jedno z nich na środkowy kampan; wartości w mln lat to granice piętra kampanu według ICS v2024/12. NHM podaje 81–75 mln lat temu."
+    }
+  },
+  "periods": ["cretaceous"],
+  "size": {
+    "lengthM": {
+      "value": [2.1, 2.1],
+      "sourceIds": ["nhm-citipati"],
+      "note": {
+        "en": "Museum figure.",
+        "pl": "Wartość muzealna."
+      }
+    }
+  },
+  "locations": [
+    {
+      "continent": "asia",
+      "countryCode": "MN",
+      "formation": "Djadokhta",
+      "sourceIds": ["pbdb-occs", "clark-2001"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "Clark, Norell & Barsbold",
+    "year": 2001,
+    "sourceIds": ["clark-2001", "pbdb-genera"]
+  },
+  "summary": {
+    "text": {
+      "en": "Citipati was an oviraptorid dinosaur about 2 metres long that lived in the Late Cretaceous in what is now Mongolia. It is best known from adults found sitting on nests of eggs at Ukhaa Tolgod, as if brooding them. Two of these nesting skeletons are known, and in both the eggs are arranged in the same way. What it ate is uncertain: it may have eaten both plants and animals.",
+      "pl": "Citipati był dinozaurem z grupy owiraptorydów, długości około 2 metrów, który żył w późnej kredzie na terenie dzisiejszej Mongolii. Najbardziej znany jest z dorosłych osobników znalezionych w Ukhaa Tolgod, siedzących na gniazdach z jajami, jakby je wysiadywały. Znamy dwa takie szkielety na gniazdach i w obu jaja są ułożone tak samo. Nie wiadomo dokładnie, czym się żywił: mógł jeść zarówno rośliny, jak i zwierzęta."
+    },
+    "sourceIds": ["clark-2001", "nhm-citipati", "norell-2018", "pbdb-occs", "pbdb-genera"]
+  },
+  "funFacts": [
+    {
+      "text": {
+        "en": "The second brooding Citipati, described in 2018, is about 11% larger than the first one from Ukhaa Tolgod. The study found no evidence that these animals nested in colonies.",
+        "pl": "Drugi wysiadujący jaja Citipati, opisany w 2018 roku, jest o około 11% większy od pierwszego z Ukhaa Tolgod. Badanie nie wykazało, by zwierzęta te gniazdowały w koloniach."
+      },
+      "sourceIds": ["norell-2018"]
+    }
+  ],
+  "famous": false,
+  "images": [
+    {
+      "commonsFile": "File:Citipati AMNH.jpg",
+      "kind": "fossil",
+      "alt": {
+        "en": "The “Big Mama” Citipati osmolskae skeleton (IGM 100/979) on display at the American Museum of Natural History.",
+        "pl": "Szkielet Citipati osmolskae IGM 100/979, zwany „Big Mama”, na wystawie w American Museum of Natural History."
+      }
+    }
+  ],
+  "uncertain": [
+    {
+      "field": "diet",
+      "note": {
+        "en": "Listed as omnivorous by NHM and PBDB, but oviraptorosaurs show features linked to plant-eating; its real diet is unknown.",
+        "pl": "NHM i PBDB podają, że był wszystkożerny, ale owiraptorozaury mają cechy związane z roślinożernością; jego rzeczywista dieta jest nieznana."
+      }
+    },
+    {
+      "field": "size.massKg",
+      "note": {
+        "en": "No mass estimate found in a source we could verify.",
+        "pl": "Nie znaleziono oszacowania masy w źródle, które moglibyśmy zweryfikować."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "clark-2001",
+      "title": "Two new oviraptorids (Theropoda: Oviraptorosauria), Upper Cretaceous Djadokhta Formation, Ukhaa Tolgod, Mongolia",
+      "authors": "Clark, J. M.; Norell, M. A.; Barsbold, R.",
+      "year": 2001,
+      "publisher": "Journal of Vertebrate Paleontology 21(2): 209-213",
+      "doi": "10.1671/0272-4634(2001)021[0209:TNOTOU]2.0.CO;2",
+      "url": "https://doi.org/10.1671/0272-4634(2001)021%5B0209:TNOTOU%5D2.0.CO;2",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "norell-2018",
+      "title": "A second specimen of Citipati osmolskae associated with a nest of eggs from Ukhaa Tolgod, Omnogov Aimag, Mongolia",
+      "authors": "Norell, M. A.; Balanoff, A. M.; Barta, D. E.; Erickson, G. M.",
+      "year": 2018,
+      "publisher": "American Museum Novitates 3899: 1-44",
+      "doi": "10.1206/3899.1",
+      "url": "https://doi.org/10.1206/3899.1",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "zanno-makovicky-2011",
+      "title": "Herbivorous ecomorphology and specialization patterns in theropod dinosaur evolution",
+      "authors": "Zanno, L. E.; Makovicky, P. J.",
+      "year": 2011,
+      "publisher": "PNAS 108(1): 232-237",
+      "doi": "10.1073/pnas.1011924108",
+      "url": "https://doi.org/10.1073/pnas.1011924108",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "nhm-citipati",
+      "title": "Citipati | Dino Directory",
+      "publisher": "Natural History Museum, London",
+      "url": "https://www.nhm.ac.uk/discover/dino-directory/citipati.html",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-genera",
+      "title": "Taxon entries for Citipati (taxon 57023) and other genera",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/list.json?name=Saturnalia,Silesaurus,Lisowicia,Anchiornis,Yutyrannus,Caudipteryx,Citipati,Deinocheirus,Opisthocoelicaudia,Saltasaurus,Patagotitan&show=attr,app,parent,class,ecospace",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-occs",
+      "title": "Occurrences of Citipati and other genera (stratigraphy and location)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Citipati,Deinocheirus,Opisthocoelicaudia,Saltasaurus,Patagotitan&show=strat,loc",
+      "accessed": "2026-11-22"
+    }
+  ],
+  "lastReviewed": "2026-11-22"
+}

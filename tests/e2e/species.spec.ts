@@ -41,7 +41,9 @@ test('a shared URL reproduces the exact view', async ({ page, context }) => {
   await page.getByTestId('filters-toggle').click();
   await page.getByRole('button', { name: 'Jurassic' }).click();
   await expect(windowLabel(page)).toHaveText(/^Showing 201\.4 to 143\.1 /);
-  await page.getByRole('button', { name: /^Allosaurus, / }).click();
+  // Focus brings the marker's lane into view (on a phone it may start off to the side).
+  await page.getByRole('button', { name: /^Allosaurus, / }).focus();
+  await page.keyboard.press('Enter');
   await expect(drawer(page).getByRole('heading', { level: 2 })).toHaveText('Allosaurus');
   await expect(page).toHaveURL(/\/species\/allosaurus\?diet=carnivore&group=theropoda&from=/);
 

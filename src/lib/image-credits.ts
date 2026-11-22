@@ -51,19 +51,27 @@ export function htmlToText(html: string): string {
  * links in brackets) are dropped. The Commons page, which the credit links, keeps them.
  */
 export function cleanAuthor(author: string): string {
-  return author
-    .replace(/\(([^()]*)\)/g, (m, inner: string) =>
-      /^[\s;,]*((https?:\/\/|www\.)\S+|[\w.+-]+@[\w-]+\.[\w.]+)([\s;,]+((https?:\/\/|www\.)\S+|[\w.+-]+@[\w-]+\.[\w.]+))*[\s;,]*$/.test(
-        inner,
+  return (
+    author
+      // "Photographer: A. Name Source: Some Museum" → "A. Name, Some Museum".
+      .replace(
+        /^\s*(?:photographer|photo|author|artist)\s*:\s*(.*?)\s+source\s*:\s*(.+)$/i,
+        '$1, $2',
       )
-        ? ''
-        : m,
-    )
-    .replace(/[\w.+-]+@[\w-]+\.[\w.]+/g, '')
-    .replace(/\s+/g, ' ')
-    .replace(/\s+([,;])/g, '$1')
-    .trim()
-    .replace(/[\s,;]+$/, '');
+      .replace(/^\s*(?:photographer|photo|author|artist)\s*:\s*/i, '')
+      .replace(/\(([^()]*)\)/g, (m, inner: string) =>
+        /^[\s;,]*((https?:\/\/|www\.)\S+|[\w.+-]+@[\w-]+\.[\w.]+)([\s;,]+((https?:\/\/|www\.)\S+|[\w.+-]+@[\w-]+\.[\w.]+))*[\s;,]*$/.test(
+          inner,
+        )
+          ? ''
+          : m,
+      )
+      .replace(/[\w.+-]+@[\w-]+\.[\w.]+/g, '')
+      .replace(/\s+/g, ' ')
+      .replace(/\s+([,;])/g, '$1')
+      .trim()
+      .replace(/[\s,;]+$/, '')
+  );
 }
 
 /** The licence deed a family's URL must point to. Public domain has no fixed deed. */

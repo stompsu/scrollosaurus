@@ -27,8 +27,17 @@ export const LANE_SIZE_PX = { horizontal: 32, vertical: 120 } as const;
 /** Padding before the first lane, in px. */
 export const LANE_PADDING_PX = 8;
 
-/** A marker's minimum extent along the time axis in the vertical layout (one label line + target size). */
-export const VERTICAL_LABEL_EXTENT_PX = 24;
+/**
+ * A marker's minimum extent along the time axis in the vertical layout: the name line and the icon
+ * line below it (each 18 px).
+ */
+export const VERTICAL_LABEL_EXTENT_PX = 36;
+
+/** Marker icons: the diet icon and the body-plan silhouette, in px. */
+export const MARKER_DIET_ICON_PX = 14;
+export const MARKER_BODY_ICON_PX = { width: 30, height: 14 } as const;
+/** Room the icons take before the name in the horizontal layout: icons, 2 px between, 5 px after. */
+export const MARKER_ICONS_PX = MARKER_DIET_ICON_PX + 2 + MARKER_BODY_ICON_PX.width + 5;
 
 /** Keyboard pan step as a fraction of the viewport (Shift pans five times as far). */
 export const KEY_PAN_FRACTION = 0.1;

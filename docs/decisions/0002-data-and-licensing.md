@@ -41,7 +41,7 @@ Scrollosaurus is an educational app. Its value depends on being right and on res
 
 ### 5. Translations
 
-Translatable text (name meanings, summaries, fun facts, alt text) sits inline in each record as `{ en, pl }`, not in separate `data/i18n/` files as the kickoff sketched: a record and its translations change together. `data/i18n/{en,pl}/` is kept for UI strings (Phase 6). Polish is deferred to Phase 6 by the owner's decision; until then `pl` is optional and the validator warns once while it is missing.
+Translatable text (name meanings, summaries, fun facts, alt text) sits inline in each record as `{ en, pl }`, not in separate `data/i18n/` files as the kickoff sketched: a record and its translations change together. `data/i18n/{en,pl}/` is kept for UI strings (Phase 6). Since Phase 6 every text, notes included, is `{ en, pl }`, and `validate:data` fails the build on any missing Polish translation. Translations are faithful: they add, drop, strengthen or soften nothing.
 
 ### 6. Non-dinosaurs
 
@@ -57,7 +57,7 @@ Pterosaurs, plesiosaurs, ichthyosaurs and mosasaurs have `isDinosaur: false`, li
 - the primary species in `data/site.json` has no species file;
 - an image listed by a species has no entry in `data/generated/images.json`, lacks author, licence or source URL, lacks a licence URL without being public domain, has a licence outside the allowed list, or is missing one of its derivative files.
 
-It warns (without failing) when a length or mass is empty but not listed in `uncertain`, when a listed source is cited by no field, while Polish text is missing, when a species has no image, and when a credit is no longer used.
+It also fails on any text without its Polish translation (Phase 6). It warns (without failing) when a length or mass is empty but not listed in `uncertain`, when a listed source is cited by no field, when a species has no image, and when a credit is no longer used.
 
 ### 8. Licensing of our own content
 

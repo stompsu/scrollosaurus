@@ -1,0 +1,196 @@
+{
+  "slug": "ornithomimus",
+  "scientificName": "Ornithomimus edmontonicus",
+  "genus": "Ornithomimus",
+  "nameMeaning": {
+    "text": {
+      "en": "bird mimic",
+      "pl": "naśladowca ptaka"
+    },
+    "sourceIds": ["nhm-ornithomimus"]
+  },
+  "group": "ornithomimosauria",
+  "groupSourceIds": ["pbdb-ornithomimus-edmontonicus", "nhm-ornithomimus", "cullen-2013"],
+  "isDinosaur": true,
+  "taxonomy": {
+    "status": "valid",
+    "note": {
+      "en": "The type species is Ornithomimus velox Marsh, 1890, from the Denver Formation of Colorado. This record follows O. edmontonicus from Alberta, the species of a bonebed with six skeletons in the Horseshoe Canyon Formation. Cullen et al. (2013) treat Dromiceiomimus brevitertius as a synonym of O. edmontonicus.",
+      "pl": "Gatunkiem typowym jest Ornithomimus velox Marsh, 1890, z formacji Denver w Kolorado. Ten wpis dotyczy O. edmontonicus z Alberty – gatunku z cmentarzyska kostnego z sześcioma szkieletami w formacji Horseshoe Canyon. Cullen i in. (2013) traktują Dromiceiomimus brevitertius jako synonim O. edmontonicus."
+    },
+    "sourceIds": ["pbdb-ornithomimus-edmontonicus", "pbdb-ornithomimus-occs", "cullen-2013"]
+  },
+  "diet": {
+    "value": "omnivore",
+    "confidence": "debated",
+    "sourceIds": ["nhm-ornithomimus", "zanno-makovicky-2011", "pbdb-ornithomimus-edmontonicus"],
+    "note": {
+      "en": "NHM calls Ornithomimus omnivorous and PBDB lists it as herbivore/omnivore. Zanno & Makovicky (2011) infer herbivory for ornithomimosaurs as a group, while noting that their 'herbivore' does not mean eating only plants.",
+      "pl": "NHM określa Ornithomimus jako wszystkożerny, a PBDB jako roślinożerny/wszystkożerny. Zanno i Makovicky (2011) uznają ornitomimozaury jako grupę za roślinożerne, zaznaczając jednak, że ich „roślinożerca” nie oznacza zwierzęcia jedzącego wyłącznie rośliny."
+    }
+  },
+  "timeRange": {
+    "startMa": 73.1,
+    "endMa": 68,
+    "sourceIds": ["eberth-kamo-2020", "cullen-2013", "pbdb-ornithomimus-occs"],
+    "note": {
+      "en": "The span of the Horseshoe Canyon Formation in its type area (73.1-68.0 Ma, U-Pb dating; Eberth & Kamo 2020, read from the abstract). This is the age of the formation, not of the first and last O. edmontonicus fossils. The Cullen et al. (2013) bonebed lies in the Tolman Member, about 70-68 Ma.",
+      "pl": "Zasięg formacji Horseshoe Canyon w jej obszarze typowym (73,1–68,0 mln lat temu, datowanie U-Pb; Eberth i Kamo 2020, według streszczenia). To wiek formacji, a nie pierwszych i ostatnich skamieniałości O. edmontonicus. Cmentarzysko kostne opisane przez Cullena i in. (2013) leży w ogniwie Tolman, około 70–68 mln lat temu."
+    }
+  },
+  "periods": ["cretaceous"],
+  "size": {
+    "lengthM": {
+      "value": [4, 4],
+      "sourceIds": ["nhm-ornithomimus"],
+      "note": {
+        "en": "Single museum figure for the genus (NHM Dino Directory); method not stated.",
+        "pl": "Jedyna wartość muzealna dla rodzaju (NHM Dino Directory); metody nie podano."
+      }
+    }
+  },
+  "locations": [
+    {
+      "continent": "north-america",
+      "countryCode": "CA",
+      "formation": "Horseshoe Canyon",
+      "sourceIds": ["cullen-2013", "pbdb-ornithomimus-occs"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "Sternberg",
+    "year": 1933,
+    "note": {
+      "en": "The genus Ornithomimus was named by Marsh in 1890 for O. velox; Sternberg named O. edmontonicus in 1933.",
+      "pl": "Rodzaj Ornithomimus nazwał Marsh w 1890 roku dla O. velox; Sternberg nazwał O. edmontonicus w 1933 roku."
+    },
+    "sourceIds": ["pbdb-ornithomimus-edmontonicus", "pbdb-ornithomimus-occs", "nhm-ornithomimus"]
+  },
+  "summary": {
+    "text": {
+      "en": "Ornithomimus, the bird mimic, was a dinosaur from Alberta, Canada, near the end of the Cretaceous. Museums give it a length of about 4 metres. Fossils from Alberta show that it was covered in feathers and that adults had wing-like structures on their arms. Several skeletons were found together in one Alberta bonebed, a hint that these animals lived in groups. Whether it ate mostly plants or a mix of food is still debated.",
+      "pl": "Ornithomimus, czyli „naśladowca ptaka”, był dinozaurem z Alberty w Kanadzie, żyjącym pod koniec kredy. Muzea podają, że miał około 4 metrów długości. Skamieniałości z Alberty pokazują, że pokrywały go pióra, a dorosłe osobniki miały na kończynach przednich struktury przypominające skrzydła. W jednym stanowisku w Albercie znaleziono razem kilka szkieletów, co sugeruje, że zwierzęta te żyły w grupach. Wciąż nie wiadomo, czy jadł głównie rośliny, czy pokarm mieszany."
+    },
+    "sourceIds": [
+      "nhm-ornithomimus",
+      "zelenitsky-2012",
+      "cullen-2013",
+      "zanno-makovicky-2011",
+      "eberth-kamo-2020"
+    ]
+  },
+  "funFacts": [
+    {
+      "text": {
+        "en": "Even young Ornithomimus had a covering of filament-like feathers; only older animals show the wing-like structures on the arms, which may have been linked to breeding behaviour.",
+        "pl": "Już młode osobniki Ornithomimus pokrywały nitkowate pióra; struktury przypominające skrzydła widać tylko u starszych zwierząt i mogły one mieć związek z zachowaniami rozrodczymi."
+      },
+      "sourceIds": ["zelenitsky-2012"]
+    }
+  ],
+  "famous": false,
+  "images": [
+    {
+      "commonsFile": "File:Ornithomimus edmontonicus (TMP 1995.110.1), Royal Tyrrell Museum, Drumheller, Alberta, 2025-07-13.jpg",
+      "kind": "fossil",
+      "alt": {
+        "en": "Fossil skeleton of Ornithomimus edmontonicus, the specimen that provided the first evidence of feathered dinosaurs in North America.",
+        "pl": "Skamieniały szkielet Ornithomimus edmontonicus, okaz, który dostarczył pierwszych dowodów na istnienie upierzonych dinozaurów w Ameryce Północnej."
+      }
+    }
+  ],
+  "uncertain": [
+    {
+      "field": "size.massKg",
+      "note": {
+        "en": "No verified mass estimate found.",
+        "pl": "Nie znaleziono zweryfikowanego oszacowania masy."
+      }
+    },
+    {
+      "field": "diet",
+      "note": {
+        "en": "Omnivore or herbivore: sources differ (see the diet note).",
+        "pl": "Wszystkożerca czy roślinożerca: źródła się różnią (zob. uwagę przy diecie)."
+      }
+    },
+    {
+      "field": "timeRange",
+      "note": {
+        "en": "The range is the age of the Horseshoe Canyon Formation, taken from an abstract. PBDB also refers to O. edmontonicus late Campanian fossils from the Dinosaur Park Formation (Alberta) and the Fruitland Formation (New Mexico), which would extend the range; these referrals were not checked.",
+        "pl": "Zasięg to wiek formacji Horseshoe Canyon, wzięty ze streszczenia. PBDB przypisuje O. edmontonicus także skamieniałości z późnego kampanu z formacji Dinosaur Park (Alberta) i Fruitland (Nowy Meksyk), które poszerzyłyby zasięg; tych przypisań nie zweryfikowano."
+      }
+    },
+    {
+      "field": "taxonomy",
+      "note": {
+        "en": "Whether O. edmontonicus belongs in the same genus as the type species O. velox was not checked against a full-text source.",
+        "pl": "Nie sprawdzono w pełnym tekście żadnego źródła, czy O. edmontonicus należy do tego samego rodzaju co gatunek typowy O. velox."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "cullen-2013",
+      "title": "An Ornithomimid (Dinosauria) Bonebed from the Late Cretaceous of Alberta, with Implications for the Behavior, Classification, and Stratigraphy of North American Ornithomimids",
+      "authors": "Cullen T.M., Ryan M.J., Schröder-Adams C., Currie P.J., Kobayashi Y.",
+      "year": 2013,
+      "publisher": "PLOS ONE 8(3): e58853",
+      "doi": "10.1371/journal.pone.0058853",
+      "url": "https://doi.org/10.1371/journal.pone.0058853",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "zelenitsky-2012",
+      "title": "Feathered non-avian dinosaurs from North America provide insight into wing origins",
+      "authors": "Zelenitsky D.K., Therrien F., Erickson G.M., DeBuhr C.L., Kobayashi Y., Eberth D.A., Hadfield F.",
+      "year": 2012,
+      "publisher": "Science 338: 510-514",
+      "doi": "10.1126/science.1225376",
+      "url": "https://doi.org/10.1126/science.1225376",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "zanno-makovicky-2011",
+      "title": "Herbivorous ecomorphology and specialization patterns in theropod dinosaur evolution",
+      "authors": "Zanno L.E., Makovicky P.J.",
+      "year": 2011,
+      "publisher": "Proceedings of the National Academy of Sciences 108(1): 232-237",
+      "doi": "10.1073/pnas.1011924108",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3017133/",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "eberth-kamo-2020",
+      "title": "High-precision U–Pb CA–ID–TIMS dating and chronostratigraphy of the dinosaur-rich Horseshoe Canyon Formation (Upper Cretaceous, Campanian–Maastrichtian), Red Deer River valley, Alberta, Canada",
+      "authors": "Eberth D.A., Kamo S.L.",
+      "year": 2020,
+      "publisher": "Canadian Journal of Earth Sciences 57(10): 1220-1237",
+      "doi": "10.1139/cjes-2019-0019",
+      "url": "https://doi.org/10.1139/cjes-2019-0019",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "nhm-ornithomimus",
+      "title": "Ornithomimus | Dino Directory",
+      "publisher": "Natural History Museum, London",
+      "url": "https://www.nhm.ac.uk/discover/dino-directory/ornithomimus.html",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-ornithomimus-edmontonicus",
+      "title": "Ornithomimus edmontonicus (taxon 63438)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/single.json?name=Ornithomimus%20edmontonicus&show=attr,parent",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-ornithomimus-occs",
+      "title": "Occurrences of Ornithomimus (stratigraphy and location)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Ornithomimus&show=strat,loc",
+      "accessed": "2026-11-22"
+    }
+  ],
+  "lastReviewed": "2026-11-22"
+}

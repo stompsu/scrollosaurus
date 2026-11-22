@@ -1,0 +1,137 @@
+{
+  "slug": "ceratosaurus",
+  "scientificName": "Ceratosaurus nasicornis",
+  "genus": "Ceratosaurus",
+  "nameMeaning": {
+    "text": { "en": "horned lizard", "pl": "rogaty jaszczur" },
+    "sourceIds": ["nhm-ceratosaurus"]
+  },
+  "group": "ceratosauria",
+  "groupSourceIds": ["carrano-sampson-2008", "nhm-ceratosaurus"],
+  "isDinosaur": true,
+  "taxonomy": {
+    "status": "valid",
+    "note": {
+      "en": "PBDB treats the later-named species C. magnicornis and C. dentisulcatus as the same species as C. nasicornis. Ceratosaurus is also known from Portugal; possible remains from Africa and South America are doubted by most scientists.",
+      "pl": "PBDB traktuje później nazwane gatunki C. magnicornis i C. dentisulcatus jako ten sam gatunek co C. nasicornis. Ceratosaurus jest znany także z Portugalii; co do możliwych szczątków z Afryki i Ameryki Południowej większość naukowców ma wątpliwości."
+    },
+    "sourceIds": ["pbdb-ceratosaurus-occs", "nhm-ceratosaurus"]
+  },
+  "diet": {
+    "value": "carnivore",
+    "confidence": "established",
+    "sourceIds": ["nhm-ceratosaurus"]
+  },
+  "timeRange": {
+    "startMa": 154.8,
+    "endMa": 143.1,
+    "sourceIds": ["pbdb-ceratosaurus-nasicornis", "pbdb-ceratosaurus-occs"],
+    "note": {
+      "en": "Kimmeridgian to Tithonian, from PBDB occurrence ages for C. nasicornis in the Morrison Formation (stage-level dates); the Ma values are the ICS v2024/12 stage boundaries. The NHM Dino Directory gives 152-145 Ma.",
+      "pl": "Od kimerydu do tytonu, według wieku występowań C. nasicornis w formacji Morrison podanego w PBDB (daty na poziomie pięter); wartości w mln lat to granice pięter według ICS v2024/12. Katalog Dino Directory muzeum NHM podaje 152–145 mln lat temu."
+    }
+  },
+  "periods": ["jurassic"],
+  "size": {
+    "lengthM": {
+      "value": [6, 7],
+      "sourceIds": ["nhm-ceratosaurus"],
+      "note": {
+        "en": "NHM: 'about six to seven metres long'.",
+        "pl": "NHM: „około sześciu do siedmiu metrów długości”."
+      }
+    },
+    "massKg": {
+      "value": [980, 980],
+      "sourceIds": ["nhm-ceratosaurus"],
+      "note": {
+        "en": "Single published estimate (NHM Dino Directory); method not stated.",
+        "pl": "Jedyne opublikowane oszacowanie (NHM Dino Directory); metody nie podano."
+      }
+    }
+  },
+  "locations": [
+    {
+      "continent": "north-america",
+      "countryCode": "US",
+      "formation": "Morrison",
+      "sourceIds": ["pbdb-ceratosaurus-occs", "nhm-ceratosaurus"]
+    },
+    {
+      "continent": "europe",
+      "countryCode": "PT",
+      "formation": "Lourinhã",
+      "sourceIds": ["pbdb-ceratosaurus-occs", "nhm-ceratosaurus"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "Marsh",
+    "year": 1884,
+    "note": {
+      "en": "The nearly complete first skeleton was found in Colorado in 1883 by the farmer Marshall Parker Felch.",
+      "pl": "Pierwszy, niemal kompletny szkielet znalazł w 1883 roku w Kolorado farmer Marshall Parker Felch."
+    },
+    "sourceIds": ["pbdb-ceratosaurus-nasicornis", "nhm-ceratosaurus"]
+  },
+  "summary": {
+    "text": {
+      "en": "Ceratosaurus was a large meat-eating dinosaur, about 6 to 7 metres long, from the Late Jurassic of North America and Portugal. It had a horn on its snout and a row of small bony plates along its back. The horn was probably too small and fragile for fighting and was likely for display. It lived alongside Allosaurus, but its fossils are much rarer. It probably hunted plant-eating dinosaurs and may also have eaten fish, turtles and crocodiles.",
+      "pl": "Ceratosaurus był dużym mięsożernym dinozaurem o długości około 6–7 metrów, żyjącym w późnej jurze w Ameryce Północnej i Portugalii. Miał róg na pysku i rząd małych kostnych płytek wzdłuż grzbietu. Róg był prawdopodobnie zbyt mały i kruchy, by służyć do walki, więc zapewne służył do pokazów. Żył obok Allosaurus, ale jego skamieniałości są znacznie rzadsze. Prawdopodobnie polował na roślinożerne dinozaury, a być może jadał też ryby, żółwie i krokodyle."
+    },
+    "sourceIds": ["nhm-ceratosaurus", "pbdb-ceratosaurus-occs"]
+  },
+  "funFacts": [
+    {
+      "text": {
+        "en": "Every Ceratosaurus found so far was found alone, so there is no evidence that it hunted in packs.",
+        "pl": "Każdy znaleziony dotąd Ceratosaurus leżał osobno, więc nie ma dowodów na to, że polował w stadach."
+      },
+      "sourceIds": ["nhm-ceratosaurus"]
+    }
+  ],
+  "famous": false,
+  "images": [
+    {
+      "commonsFile": "File:Ceratosaurus mount utah museum 1.jpg",
+      "kind": "skeleton-mount",
+      "alt": {
+        "en": "Cast of a Ceratosaurus skeleton from the Cleveland-Lloyd Quarry, Utah, on display at the Natural History Museum of Utah in Salt Lake City.",
+        "pl": "Odlew szkieletu Ceratosaurus z kamieniołomu Cleveland-Lloyd w stanie Utah, na wystawie w Natural History Museum of Utah w Salt Lake City."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "carrano-sampson-2008",
+      "title": "The phylogeny of Ceratosauria (Dinosauria: Theropoda)",
+      "authors": "Carrano M.T., Sampson S.D.",
+      "year": 2008,
+      "publisher": "Journal of Systematic Palaeontology 6: 183-236",
+      "doi": "10.1017/S1477201907002246",
+      "url": "https://doi.org/10.1017/S1477201907002246",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "nhm-ceratosaurus",
+      "title": "Ceratosaurus | Dino Directory",
+      "publisher": "Natural History Museum, London",
+      "url": "https://www.nhm.ac.uk/discover/dino-directory/ceratosaurus.html",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "pbdb-ceratosaurus-nasicornis",
+      "title": "Ceratosaurus nasicornis (taxon 54165)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/single.json?name=Ceratosaurus%20nasicornis&show=attr,app,parent,class",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "pbdb-ceratosaurus-occs",
+      "title": "Occurrences of Ceratosaurus (stratigraphy and location)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Ceratosaurus&show=strat,loc",
+      "accessed": "2026-11-21"
+    }
+  ],
+  "lastReviewed": "2026-11-22"
+}

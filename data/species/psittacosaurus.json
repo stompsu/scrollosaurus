@@ -3,7 +3,7 @@
   "scientificName": "Psittacosaurus mongoliensis",
   "genus": "Psittacosaurus",
   "nameMeaning": {
-    "text": { "en": "parrot lizard" },
+    "text": { "en": "parrot lizard", "pl": "papuzi jaszczur" },
     "sourceIds": ["nhm-psittacosaurus"]
   },
   "group": "ceratopsia",
@@ -19,19 +19,28 @@
     "startMa": 121.4,
     "endMa": 110.1,
     "sourceIds": ["pbdb-psittacosaurus-mongoliensis"],
-    "note": "Aptian, from the PBDB first and last appearance of P. mongoliensis (stage-level dates). Several occurrences, including the type locality in the Öösh Formation, are dated only as 'Early Cretaceous' in PBDB, so the true range may be wider. Other Psittacosaurus species span a longer interval."
+    "note": {
+      "en": "Aptian, from the PBDB first and last appearance of P. mongoliensis (stage-level dates). Several occurrences, including the type locality in the Öösh Formation, are dated only as 'Early Cretaceous' in PBDB, so the true range may be wider. Other Psittacosaurus species span a longer interval.",
+      "pl": "Apt, według pierwszego i ostatniego wystąpienia P. mongoliensis w PBDB (daty na poziomie pięter). Kilka występowań, w tym miejsce typowe w formacji Öösh, PBDB datuje jedynie jako „wczesna kreda”, więc rzeczywisty zakres może być szerszy. Inne gatunki Psittacosaurus obejmują dłuższy przedział czasu."
+    }
   },
   "periods": ["cretaceous"],
   "size": {
     "lengthM": {
       "value": [2, 2],
       "sourceIds": ["nhm-psittacosaurus"],
-      "note": "Museum figure for the genus, not specifically P. mongoliensis."
+      "note": {
+        "en": "Museum figure for the genus, not specifically P. mongoliensis.",
+        "pl": "Wartość muzealna dla rodzaju, a nie konkretnie dla P. mongoliensis."
+      }
     },
     "massKg": {
       "value": [50, 50],
       "sourceIds": ["nhm-psittacosaurus"],
-      "note": "Museum figure for the genus, not specifically P. mongoliensis."
+      "note": {
+        "en": "Museum figure for the genus, not specifically P. mongoliensis.",
+        "pl": "Wartość muzealna dla rodzaju, a nie konkretnie dla P. mongoliensis."
+      }
     }
   },
   "locations": [
@@ -54,14 +63,16 @@
   },
   "summary": {
     "text": {
-      "en": "Psittacosaurus was a plant-eating dinosaur about 2 metres long from the Early Cretaceous of China, Mongolia and Russia. Its name means 'parrot lizard', and it had a beak. It belongs to the ceratopsians. Fossils of P. mongoliensis include animals from juveniles to adults, so scientists have been able to work out how fast it grew."
+      "en": "Psittacosaurus was a plant-eating dinosaur about 2 metres long from the Early Cretaceous of China, Mongolia and Russia. Its name means 'parrot lizard', and it had a beak. It belongs to the ceratopsians. Fossils of P. mongoliensis include animals from juveniles to adults, so scientists have been able to work out how fast it grew.",
+      "pl": "Psittacosaurus był roślinożernym dinozaurem o długości około 2 metrów z wczesnej kredy Chin, Mongolii i Rosji. Jego nazwa oznacza „papuzi jaszczur”, a jego pysk kończył się dziobem. Należał do ceratopsów. Wśród skamieniałości P. mongoliensis są osobniki od młodych po dorosłe, więc naukowcy mogli ustalić, jak szybko rósł."
     },
     "sourceIds": ["nhm-psittacosaurus", "erickson-tumanova-2000"]
   },
   "funFacts": [
     {
       "text": {
-        "en": "Psittacosaurus mongoliensis was the first dinosaur to have its growth curve (body mass against age) reconstructed from bone histology. It grew faster than living reptiles but slower than most birds."
+        "en": "Psittacosaurus mongoliensis was the first dinosaur to have its growth curve (body mass against age) reconstructed from bone histology. It grew faster than living reptiles but slower than most birds.",
+        "pl": "Psittacosaurus mongoliensis był pierwszym dinozaurem, dla którego na podstawie histologii kości odtworzono krzywą wzrostu (masę ciała w zależności od wieku). Rósł szybciej niż żyjące gady, ale wolniej niż większość ptaków."
       },
       "sourceIds": ["erickson-tumanova-2000"]
     }
@@ -72,22 +83,32 @@
       "commonsFile": "File:Psittacosaurus mongoliensis AMNH 6253.jpg",
       "kind": "fossil",
       "alt": {
-        "en": "Fossil skeleton of Psittacosaurus mongoliensis, the holotype of the synonym Protiguanodon, with gastroliths in its stomach area."
+        "en": "Fossil skeleton of Psittacosaurus mongoliensis, the holotype of the synonym Protiguanodon, with gastroliths in its stomach area.",
+        "pl": "Skamieniały szkielet Psittacosaurus mongoliensis – holotyp Protiguanodon, nazwy uznanej za synonim – z gastrolitami w okolicy żołądka."
       }
     }
   ],
   "uncertain": [
     {
       "field": "timeRange",
-      "note": "PBDB dates the type locality only to the Early Cretaceous; the Aptian range rests on the better-dated occurrences."
+      "note": {
+        "en": "PBDB dates the type locality only to the Early Cretaceous; the Aptian range rests on the better-dated occurrences.",
+        "pl": "PBDB datuje miejsce typowe jedynie na wczesną kredę; zakres w obrębie aptu opiera się na lepiej datowanych występowaniach."
+      }
     },
     {
       "field": "size.lengthM",
-      "note": "Only genus-level museum figures (length and mass) were verified; no species-specific peer-reviewed estimate was found."
+      "note": {
+        "en": "Only genus-level museum figures (length and mass) were verified; no species-specific peer-reviewed estimate was found.",
+        "pl": "Zweryfikowano tylko wartości muzealne dla rodzaju (długość i masa); nie znaleziono recenzowanego oszacowania dla tego konkretnego gatunku."
+      }
     },
     {
       "field": "size.massKg",
-      "note": "Only a genus-level museum figure (NHM, 50 kg) was verified; no species-specific estimate for P. mongoliensis was found."
+      "note": {
+        "en": "Only a genus-level museum figure (NHM, 50 kg) was verified; no species-specific estimate for P. mongoliensis was found.",
+        "pl": "Zweryfikowano tylko wartość muzealną dla rodzaju (NHM, 50 kg); nie znaleziono oszacowania dla samego P. mongoliensis."
+      }
     }
   ],
   "sources": [

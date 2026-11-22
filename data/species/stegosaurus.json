@@ -3,7 +3,7 @@
   "scientificName": "Stegosaurus stenops",
   "genus": "Stegosaurus",
   "nameMeaning": {
-    "text": { "en": "roof lizard" },
+    "text": { "en": "roof lizard", "pl": "jaszczur dachowy" },
     "sourceIds": ["nhm-stegosaurus"]
   },
   "group": "stegosauria",
@@ -11,7 +11,10 @@
   "isDinosaur": true,
   "taxonomy": {
     "status": "valid",
-    "note": "S. stenops is now the type species of Stegosaurus: the ICZN (Opinion 2320, 2013) replaced the poorly preserved former type species, S. armatus, with the better known S. stenops.",
+    "note": {
+      "en": "S. stenops is now the type species of Stegosaurus: the ICZN (Opinion 2320, 2013) replaced the poorly preserved former type species, S. armatus, with the better known S. stenops.",
+      "pl": "S. stenops jest obecnie gatunkiem typowym Stegosaurus: ICZN (Opinia 2320, 2013) zastąpiła słabo zachowany dawny gatunek typowy, S. armatus, lepiej poznanym S. stenops."
+    },
     "sourceIds": ["maidment-2015"]
   },
   "diet": {
@@ -23,19 +26,28 @@
     "startMa": 154.8,
     "endMa": 143.1,
     "sourceIds": ["pbdb-stegosaurus-stenops-occs", "maidment-2015"],
-    "note": "Kimmeridgian to Tithonian, from PBDB occurrence ages for S. stenops in the Morrison Formation (stage-level dates). The well-preserved 'Sophie' specimen comes from a part of the Morrison Formation believed to be Tithonian."
+    "note": {
+      "en": "Kimmeridgian to Tithonian, from PBDB occurrence ages for S. stenops in the Morrison Formation (stage-level dates). The well-preserved 'Sophie' specimen comes from a part of the Morrison Formation believed to be Tithonian.",
+      "pl": "Od kimerydu do tytonu, według wieku występowań S. stenops w formacji Morrison, podanego w PBDB (daty na poziomie pięter). Dobrze zachowany okaz „Sophie” pochodzi z części formacji Morrison uznawanej za tytońską."
+    }
   },
   "periods": ["jurassic"],
   "size": {
     "lengthM": {
       "value": [5.5, 9],
       "sourceIds": ["maidment-2015", "nhm-stegosaurus"],
-      "note": "The near-complete S. stenops specimen NHMUK PV R36730 ('Sophie') is 5.5-6 m long but was not fully grown; 9 m is the museum figure for the genus."
+      "note": {
+        "en": "The near-complete S. stenops specimen NHMUK PV R36730 ('Sophie') is 5.5-6 m long but was not fully grown; 9 m is the museum figure for the genus.",
+        "pl": "Niemal kompletny okaz S. stenops NHMUK PV R36730 („Sophie”) ma 5,5–6 m długości, ale nie był w pełni dorosły; 9 m to wartość muzealna dla rodzaju."
+      }
     },
     "massKg": {
       "value": [1560, 1560],
       "sourceIds": ["brassey-2015"],
-      "note": "Volumetric estimate for the subadult 'Sophie' specimen (95% prediction interval 1082-2256 kg). Limb-bone equations give 2355-3751 kg, which the authors consider implausible. Fully grown animals were larger."
+      "note": {
+        "en": "Volumetric estimate for the subadult 'Sophie' specimen (95% prediction interval 1082-2256 kg). Limb-bone equations give 2355-3751 kg, which the authors consider implausible. Fully grown animals were larger.",
+        "pl": "Oszacowanie objętościowe dla niedorosłego okazu „Sophie” (95-procentowy przedział predykcji 1082–2256 kg). Równania oparte na kościach kończyn dają 2355–3751 kg, co autorzy uznają za nieprawdopodobne. W pełni dorosłe zwierzęta były większe."
+      }
     }
   },
   "locations": [
@@ -49,7 +61,10 @@
   "discovery": {
     "describedBy": "Marsh",
     "year": 1887,
-    "note": "Marsh named the genus Stegosaurus in 1877 and the species S. stenops in 1887.",
+    "note": {
+      "en": "Marsh named the genus Stegosaurus in 1877 and the species S. stenops in 1887.",
+      "pl": "Marsh nazwał rodzaj Stegosaurus w 1877 roku, a gatunek S. stenops w 1887 roku."
+    },
     "sourceIds": [
       "maidment-2015",
       "pbdb-stegosaurus-stenops-occs",
@@ -59,20 +74,23 @@
   },
   "summary": {
     "text": {
-      "en": "Stegosaurus was a large, slow plant eater from the Late Jurassic of western North America, about 150 million years ago. Tall bony plates stood upright along its back, and its spiked tail helped it fight off predators such as Allosaurus. Its head was small for its body. Nobody is sure what the plates were for: ideas include warning off predators, recognising each other and controlling body temperature."
+      "en": "Stegosaurus was a large, slow plant eater from the Late Jurassic of western North America, about 150 million years ago. Tall bony plates stood upright along its back, and its spiked tail helped it fight off predators such as Allosaurus. Its head was small for its body. Nobody is sure what the plates were for: ideas include warning off predators, recognising each other and controlling body temperature.",
+      "pl": "Stegosaurus był dużym, powolnym roślinożercą z późnej jury zachodniej części Ameryki Północnej, sprzed około 150 milionów lat. Wzdłuż grzbietu sterczały mu wysokie kostne płyty, a ogon z kolcami pomagał odpierać drapieżniki, takie jak Allosaurus. Głowę miał małą w stosunku do ciała. Nikt nie wie na pewno, do czego służyły płyty: wśród pomysłów są odstraszanie drapieżników, wzajemne rozpoznawanie się i regulacja temperatury ciała."
     },
     "sourceIds": ["nhm-stegosaurus", "maidment-2015"]
   },
   "funFacts": [
     {
       "text": {
-        "en": "Stegosaurus plates grew in the skin rather than being attached to the skeleton, which is why fossils often show them scattered away from the body."
+        "en": "Stegosaurus plates grew in the skin rather than being attached to the skeleton, which is why fossils often show them scattered away from the body.",
+        "pl": "Płyty Stegosaurus wyrastały w skórze, a nie były przymocowane do szkieletu, dlatego w skamieniałościach często leżą rozrzucone z dala od ciała."
       },
       "sourceIds": ["nhm-stegosaurus"]
     },
     {
       "text": {
-        "en": "One of the most complete Stegosaurus skeletons ever found, nicknamed 'Sophie', is on display at the Natural History Museum in London."
+        "en": "One of the most complete Stegosaurus skeletons ever found, nicknamed 'Sophie', is on display at the Natural History Museum in London.",
+        "pl": "Jeden z najbardziej kompletnych szkieletów Stegosaurus, jakie kiedykolwiek znaleziono, nazywany „Sophie”, jest wystawiony w Muzeum Historii Naturalnej w Londynie."
       },
       "sourceIds": ["nhm-stegosaurus", "maidment-2015"]
     }
@@ -83,7 +101,8 @@
       "commonsFile": "File:Sophie the Stegosaurus stenops of the Natural History Museum, London.jpg",
       "kind": "skeleton-mount",
       "alt": {
-        "en": "Sophie, a Stegosaurus stenops skeleton at the Natural History Museum, London."
+        "en": "Sophie, a Stegosaurus stenops skeleton at the Natural History Museum, London.",
+        "pl": "Sophie – szkielet Stegosaurus stenops w Muzeum Historii Naturalnej w Londynie."
       }
     }
   ],

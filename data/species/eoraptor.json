@@ -4,7 +4,8 @@
   "genus": "Eoraptor",
   "nameMeaning": {
     "text": {
-      "en": "dawn plunderer"
+      "en": "dawn plunderer",
+      "pl": "grabieżca świtu"
     },
     "sourceIds": ["sereno-lab"]
   },
@@ -18,25 +19,37 @@
     "value": "omnivore",
     "confidence": "probable",
     "sourceIds": ["martinez-2011"],
-    "note": "Martinez et al. (2011) read its tooth crowns as evidence of an omnivorous, if not wholly herbivorous, diet. Older accounts that treated it as a theropod describe it as a meat eater (NHM Dino Directory)."
+    "note": {
+      "en": "Martinez et al. (2011) read its tooth crowns as evidence of an omnivorous, if not wholly herbivorous, diet. Older accounts that treated it as a theropod describe it as a meat eater (NHM Dino Directory).",
+      "pl": "Martinez i in. (2011) interpretują korony jego zębów jako dowód diety wszystkożernej, jeśli nie całkowicie roślinożernej. Starsze opisy, traktujące go jako teropoda, przedstawiają go jako mięsożercę (NHM Dino Directory)."
+    }
   },
   "timeRange": {
     "startMa": 231.5,
     "endMa": 229,
     "sourceIds": ["martinez-2011", "pbdb-occs"],
-    "note": "All Ischigualasto dinosaurs, Eoraptor included, come from the Scaphonyx-Exaeretodon-Herrerasaurus biozone, dated by Martinez et al. (2011) to 231.5-229 Ma (late Carnian). Only one PBDB occurrence (Ischigualasto, Carnian)."
+    "note": {
+      "en": "All Ischigualasto dinosaurs, Eoraptor included, come from the Scaphonyx-Exaeretodon-Herrerasaurus biozone, dated by Martinez et al. (2011) to 231.5-229 Ma (late Carnian). Only one PBDB occurrence (Ischigualasto, Carnian).",
+      "pl": "Wszystkie dinozaury z Ischigualasto, w tym Eoraptor, pochodzą z biozony Scaphonyx-Exaeretodon-Herrerasaurus, datowanej przez Martinez i in. (2011) na 231,5–229 mln lat temu (późny karnik). W PBDB jest tylko jedno występowanie (Ischigualasto, karnik)."
+    }
   },
   "periods": ["triassic"],
   "size": {
     "lengthM": {
       "value": [0.9, 1.7],
       "sourceIds": ["sereno-lab", "nhm"],
-      "note": "Sereno's lab page gives 3 feet (about 0.9 m); the NHM Dino Directory gives 1.7 m."
+      "note": {
+        "en": "Sereno's lab page gives 3 feet (about 0.9 m); the NHM Dino Directory gives 1.7 m.",
+        "pl": "Strona laboratorium Sereno podaje 3 stopy (około 0,9 m); Dino Directory muzeum NHM podaje 1,7 m."
+      }
     },
     "massKg": {
       "value": [10, 10],
       "sourceIds": ["nhm"],
-      "note": "Single published estimate (NHM Dino Directory); method not stated."
+      "note": {
+        "en": "Single published estimate (NHM Dino Directory); method not stated.",
+        "pl": "Jedyne opublikowane oszacowanie (NHM Dino Directory); metody nie podano."
+      }
     }
   },
   "locations": [
@@ -54,14 +67,16 @@
   },
   "summary": {
     "text": {
-      "en": "Eoraptor was a small dinosaur from the Ischigualasto rocks of Argentina. It lived about 231 to 229 million years ago and was roughly 1 to 1.7 metres long. It was first described as an early meat eater, but a 2011 study placed it among the early relatives of the giant long-necked sauropods, with teeth suggesting it ate plants and perhaps small animals."
+      "en": "Eoraptor was a small dinosaur from the Ischigualasto rocks of Argentina. It lived about 231 to 229 million years ago and was roughly 1 to 1.7 metres long. It was first described as an early meat eater, but a 2011 study placed it among the early relatives of the giant long-necked sauropods, with teeth suggesting it ate plants and perhaps small animals.",
+      "pl": "Eoraptor był małym dinozaurem ze skał Ischigualasto w Argentynie. Żył około 231–229 milionów lat temu i miał mniej więcej od 1 do 1,7 metra długości. Początkowo opisano go jako wczesnego mięsożercę, ale badanie z 2011 roku umieściło go wśród wczesnych krewnych olbrzymich długoszyich zauropodów; jego zęby sugerują, że jadł rośliny i być może małe zwierzęta."
     },
     "sourceIds": ["nhm", "sereno-lab", "sereno-1993", "martinez-2011", "pbdb-occs"]
   },
   "funFacts": [
     {
       "text": {
-        "en": "Eoraptor and its neighbour Eodromaeus are the only dinosaurs known to keep tiny teeth on the roof of the mouth."
+        "en": "Eoraptor and its neighbour Eodromaeus are the only dinosaurs known to keep tiny teeth on the roof of the mouth.",
+        "pl": "Eoraptor i jego sąsiad Eodromaeus to jedyne znane dinozaury, które zachowały malutkie zęby na podniebieniu."
       },
       "sourceIds": ["martinez-2011"]
     }
@@ -71,13 +86,19 @@
     {
       "commonsFile": "File:Eoraptor Lunensis 20250105.jpg",
       "kind": "skeleton-mount",
-      "alt": { "en": "Skeleton of Eoraptor lunensis shown in a museum exhibition." }
+      "alt": {
+        "en": "Skeleton of Eoraptor lunensis shown in a museum exhibition.",
+        "pl": "Szkielet Eoraptor lunensis prezentowany na wystawie muzealnej."
+      }
     }
   ],
   "uncertain": [
     {
       "field": "group",
-      "note": "Originally described as a theropod (Sereno et al. 1993; still shown as a theropod on the NHM Dino Directory and Sereno lab page). Martinez et al. (2011) reinterpreted it as a basal sauropodomorph, which PBDB follows."
+      "note": {
+        "en": "Originally described as a theropod (Sereno et al. 1993; still shown as a theropod on the NHM Dino Directory and Sereno lab page). Martinez et al. (2011) reinterpreted it as a basal sauropodomorph, which PBDB follows.",
+        "pl": "Pierwotnie opisany jako teropod (Sereno i in. 1993; nadal przedstawiany jako teropod w Dino Directory muzeum NHM i na stronie laboratorium Sereno). Martinez i in. (2011) zinterpretowali go na nowo jako bazalnego zauropodomorfa i za tym ujęciem idzie PBDB."
+      }
     }
   ],
   "sources": [

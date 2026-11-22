@@ -1,0 +1,155 @@
+{
+  "slug": "tarbosaurus",
+  "scientificName": "Tarbosaurus bataar",
+  "genus": "Tarbosaurus",
+  "nameMeaning": {
+    "text": {
+      "en": "alarming lizard",
+      "pl": "przerażający jaszczur"
+    },
+    "sourceIds": ["nhm"]
+  },
+  "group": "tyrannosauridae",
+  "groupSourceIds": ["pbdb-taxon", "hurum-sabath-2003", "nhm"],
+  "isDinosaur": true,
+  "taxonomy": {
+    "status": "valid",
+    "note": {
+      "en": "Maleev described the species in 1955 as Tyrannosaurus bataar; it is now placed in Tarbosaurus. Comparing skulls, Hurum & Sabath (2003) found clear differences from Tyrannosaurus rex, especially in the nasal bones, and grouped Tarbosaurus with other Asian tyrannosaurines.",
+      "pl": "Maleev opisał ten gatunek w 1955 roku jako Tyrannosaurus bataar; obecnie zalicza się go do rodzaju Tarbosaurus. Porównując czaszki, Hurum i Sabath (2003) stwierdzili wyraźne różnice w stosunku do Tyrannosaurus rex, zwłaszcza w budowie kości nosowych, i zaliczyli Tarbosaurus do azjatyckich tyranozaurynów."
+    },
+    "sourceIds": ["pbdb-occs", "hurum-sabath-2003"]
+  },
+  "diet": {
+    "value": "carnivore",
+    "confidence": "established",
+    "sourceIds": ["nhm", "pbdb-ecospace"]
+  },
+  "timeRange": {
+    "startMa": 72.2,
+    "endMa": 66,
+    "sourceIds": ["pbdb-occs", "nhm"],
+    "note": {
+      "en": "PBDB dates the Nemegt Formation records to the Maastrichtian; the Ma values are the ICS v2024/12 Maastrichtian boundaries, so the range is broader than the fossils themselves. NHM gives 74–70 Ma instead. A questionable PBDB record from China (Coniacian–Santonian) is not used.",
+      "pl": "PBDB datuje rekordy z formacji Nemegt na mastrycht; wartości w mln lat to granice mastrychtu według ICS v2024/12, więc zakres jest szerszy niż wiek samych skamieniałości. NHM podaje natomiast 74–70 mln lat temu. Wątpliwy rekord PBDB z Chin (koniak–santon) nie został uwzględniony."
+    }
+  },
+  "periods": ["cretaceous"],
+  "size": {
+    "lengthM": {
+      "value": [10, 10],
+      "sourceIds": ["nhm"],
+      "note": {
+        "en": "Single museum figure (NHM Dino Directory); method not stated.",
+        "pl": "Jedyna wartość muzealna (NHM Dino Directory); metody nie podano."
+      }
+    }
+  },
+  "locations": [
+    {
+      "continent": "asia",
+      "countryCode": "MN",
+      "formation": "Nemegt",
+      "sourceIds": ["pbdb-occs", "hurum-sabath-2003", "nhm"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "Maleev",
+    "year": 1955,
+    "note": {
+      "en": "Maleev named the species Tyrannosaurus bataar in 1955. The genus Tarbosaurus, to which it was later moved, was also named by Maleev in 1955.",
+      "pl": "Maleev nazwał ten gatunek Tyrannosaurus bataar w 1955 roku. Rodzaj Tarbosaurus, do którego później go przeniesiono, również nazwał Maleev w 1955 roku."
+    },
+    "sourceIds": ["pbdb-taxon", "pbdb-occs", "pbdb-ecospace", "nhm"]
+  },
+  "summary": {
+    "text": {
+      "en": "Tarbosaurus was a giant tyrannosaurid, an Asian relative of Tyrannosaurus, about 10 metres long. This meat-eater lived in what is now Mongolia near the end of the Cretaceous, around 72 to 66 million years ago. Its skull was deep but narrower than that of T. rex, with a slender snout and a high, domed nose bone. Dozens of its fossils come from Mongolia's Nemegt Formation.",
+      "pl": "Tarbosaurus był olbrzymim tyranozaurem, azjatyckim krewnym Tyrannosaurus, o długości około 10 metrów. Ten mięsożerca żył na terenie dzisiejszej Mongolii pod koniec kredy, około 72–66 milionów lat temu. Jego czaszka była wysoka, ale węższa niż u T. rex, z wąskim pyskiem i wysoką, wypukłą kością nosową. Dziesiątki jego skamieniałości pochodzą z mongolskiej formacji Nemegt."
+    },
+    "sourceIds": ["nhm", "pbdb-occs", "hurum-sabath-2003"]
+  },
+  "funFacts": [
+    {
+      "text": {
+        "en": "Compared with T. rex, Tarbosaurus had a stiffer lower jaw, and its nose bone was not part of the main chain of bones that took the force of a bite in the upper jaw.",
+        "pl": "W porównaniu z T. rex Tarbosaurus miał sztywniejszą żuchwę, a jego kość nosowa nie należała do głównego łańcucha kości, które w szczęce górnej przejmowały siłę ugryzienia."
+      },
+      "sourceIds": ["hurum-sabath-2003"]
+    }
+  ],
+  "famous": false,
+  "images": [
+    {
+      "commonsFile": "File:Тарбозавр2021.jpg",
+      "kind": "skeleton-mount",
+      "alt": {
+        "en": "Mounted skeleton of Tarbosaurus at the Moscow Paleontological Museum.",
+        "pl": "Zmontowany szkielet Tarbosaurus w Muzeum Paleontologicznym w Moskwie."
+      }
+    }
+  ],
+  "uncertain": [
+    {
+      "field": "timeRange",
+      "note": {
+        "en": "Only stage-level dating was found: PBDB gives Maastrichtian (72.2–66 Ma), NHM gives 74–70 Ma.",
+        "pl": "Znaleziono tylko datowanie na poziomie pięter: PBDB podaje mastrycht (72,2–66 mln lat temu), NHM – 74–70 mln lat temu."
+      }
+    },
+    {
+      "field": "size.massKg",
+      "note": {
+        "en": "No mass estimate found in a source we could verify.",
+        "pl": "Nie znaleziono oszacowania masy w źródle, które moglibyśmy zweryfikować."
+      }
+    },
+    {
+      "field": "locations",
+      "note": {
+        "en": "NHM also lists China, and PBDB refers some Chinese and Russian fossils, several originally named as other tyrannosaurids, to Tarbosaurus. These referrals were not verified, so only Mongolia is listed.",
+        "pl": "NHM wymienia też Chiny, a PBDB przypisuje do Tarbosaurus niektóre skamieniałości z Chin i Rosji, w tym kilka pierwotnie opisanych jako inne tyranozaury. Tych przypisań nie zweryfikowano, więc wymieniono tylko Mongolię."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "hurum-sabath-2003",
+      "title": "Giant theropod dinosaurs from Asia and North America: skulls of Tarbosaurus bataar and Tyrannosaurus rex compared",
+      "authors": "Hurum, J. H.; Sabath, K.",
+      "year": 2003,
+      "publisher": "Acta Palaeontologica Polonica 48(2): 161-190",
+      "url": "https://www.app.pan.pl/article/item/app48-161.html",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "nhm",
+      "title": "Tarbosaurus | Dino Directory",
+      "publisher": "Natural History Museum, London",
+      "url": "https://www.nhm.ac.uk/discover/dino-directory/tarbosaurus.html",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-taxon",
+      "title": "Tarbosaurus bataar (taxon 63705)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/single.json?name=Tarbosaurus%20bataar&show=attr,class",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-occs",
+      "title": "Occurrences of Tarbosaurus (stratigraphy and location)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Tarbosaurus&show=strat,loc",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-ecospace",
+      "title": "Ecology (ecospace) and authority entries for Tarbosaurus and other genera",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/list.json?name=Ouranosaurus,Amargasaurus,Pachyrhinosaurus,Tarbosaurus,Majungasaurus,Elasmosaurus,Rhamphorhynchus,Nigersaurus,Suchomimus,Australovenator&show=attr,ecospace",
+      "accessed": "2026-11-22"
+    }
+  ],
+  "lastReviewed": "2026-11-22"
+}

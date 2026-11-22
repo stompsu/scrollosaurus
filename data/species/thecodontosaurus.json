@@ -1,0 +1,139 @@
+{
+  "slug": "thecodontosaurus",
+  "scientificName": "Thecodontosaurus antiquus",
+  "genus": "Thecodontosaurus",
+  "nameMeaning": {
+    "text": {
+      "en": "Socket-toothed reptile",
+      "pl": "gad o zębach osadzonych w zębodołach"
+    },
+    "sourceIds": ["bristol-2013"]
+  },
+  "group": "sauropodomorpha",
+  "groupSourceIds": ["pbdb-taxon", "ballell-2020"],
+  "isDinosaur": true,
+  "taxonomy": {
+    "status": "valid",
+    "note": {
+      "en": "The holotype, a right dentary, was destroyed in 1940; a left dentary designated by Galton is the neotype (Ballell et al. 2020). Ballell et al. (2020) find little anatomical support for keeping Pantydraco caducus apart from T. antiquus and suggest it may be a juvenile of it. PBDB also lists Thecodontosaurus records from Zimbabwe, Lesotho ('T. minimus'), France and Germany, which are not used here.",
+      "pl": "Holotyp, prawa kość zębowa, został zniszczony w 1940 roku; neotypem jest lewa kość zębowa wyznaczona przez Galtona (Ballell i in. 2020). Ballell i in. (2020) znajdują niewiele anatomicznych podstaw do oddzielania Pantydraco caducus od T. antiquus i sugerują, że może to być młody osobnik tego gatunku. PBDB wymienia też rekordy Thecodontosaurus z Zimbabwe, Lesotho („T. minimus”), Francji i Niemiec, których tu nie uwzględniono."
+    },
+    "sourceIds": ["ballell-2020", "pbdb-occs"]
+  },
+  "diet": {
+    "value": "herbivore",
+    "confidence": "probable",
+    "sourceIds": ["ballell-2020", "bristol-2013"],
+    "note": {
+      "en": "Ballell et al. (2020): one of the earliest sauropodomorphs to shift to a predominantly herbivorous diet, probably still eating animals occasionally.",
+      "pl": "Ballell i in. (2020): jeden z najwcześniejszych zauropodomorfów, które przeszły na dietę przeważnie roślinożerną, choć prawdopodobnie nadal od czasu do czasu jadł zwierzęta."
+    }
+  },
+  "timeRange": {
+    "startMa": 205.7,
+    "endMa": 201.4,
+    "sourceIds": ["ballell-2020", "pbdb-occs", "bristol-2013"],
+    "note": {
+      "en": "Stage-based: Ballell et al. (2020) assign the fissure faunas with Thecodontosaurus in south-western Britain to the Rhaetian (about 205 Ma), not the Carnian age traditionally assumed. The Ma values are the ICS v2024/12 Rhaetian boundaries. Some PBDB T. antiquus records still carry the older Carnian dating, and the University of Bristol (2013) gives about 210 Ma; neither is used.",
+      "pl": "Na podstawie pięter: Ballell i in. (2020) przypisują fauny ze szczelin krasowych z Thecodontosaurus w południowo-zachodniej Brytanii do retyku (około 205 mln lat temu), a nie do tradycyjnie przyjmowanego karniku. Wartości w mln lat to granice retyku według ICS v2024/12. Niektóre rekordy T. antiquus w PBDB mają jeszcze starsze datowanie na karnik, a Uniwersytet w Bristolu (2013) podaje około 210 mln lat temu; żadnej z tych wartości nie użyto."
+    }
+  },
+  "periods": ["triassic"],
+  "size": {
+    "lengthM": {
+      "value": [2.5, 2.5],
+      "sourceIds": ["bristol-2013", "ballell-2020"],
+      "note": {
+        "en": "The University of Bristol (2013) gives 2.5 m. Ballell et al. (2020) give no body length; complete femora are 12–22 cm long.",
+        "pl": "Uniwersytet w Bristolu (2013) podaje 2,5 m. Ballell i in. (2020) nie podają długości ciała; kompletne kości udowe mają 12–22 cm długości."
+      }
+    }
+  },
+  "locations": [
+    {
+      "continent": "europe",
+      "countryCode": "GB",
+      "sourceIds": ["ballell-2020", "pbdb-occs"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "Riley & Stutchbury",
+    "year": 1836,
+    "note": {
+      "en": "Riley & Stutchbury named the genus in 1836; PBDB and Ballell et al. (2020) credit the species name T. antiquus to Morris, 1843. The first bones were found on Durdham Down, Bristol, in 1834.",
+      "pl": "Riley i Stutchbury nazwali rodzaj w 1836 roku; PBDB i Ballell i in. (2020) przypisują nazwę gatunkową T. antiquus Morrisowi (1843). Pierwsze kości znaleziono na Durdham Down w Bristolu w 1834 roku."
+    },
+    "sourceIds": ["pbdb-taxon", "ballell-2020", "bristol-2013"]
+  },
+  "summary": {
+    "text": {
+      "en": "Thecodontosaurus was an agile two-legged dinosaur, about 2.5 metres long, and one of the earliest relatives of the long-necked sauropods. It lived in the Late Triassic, around 205 million years ago, on islands in what is now the Bristol area of England. Its spear-shaped teeth with coarse serrations show that it ate mostly plants, though it may sometimes have eaten animals too.",
+      "pl": "Thecodontosaurus był zwinnym, dwunożnym dinozaurem o długości około 2,5 metra i jednym z najwcześniejszych krewnych długoszyich zauropodów. Żył w późnym triasie, około 205 milionów lat temu, na wyspach w okolicach dzisiejszego Bristolu w Anglii. Jego włóczniowate zęby z grubymi ząbkami na krawędziach wskazują, że jadł głównie rośliny, choć czasem mógł też zjadać zwierzęta."
+    },
+    "sourceIds": ["ballell-2020", "bristol-2013"]
+  },
+  "funFacts": [
+    {
+      "text": {
+        "en": "Thecodontosaurus bones were first dug up on Durdham Down in Bristol in 1834, making it only the fourth dinosaur discovered anywhere in the world.",
+        "pl": "Kości Thecodontosaurus odkopano po raz pierwszy na Durdham Down w Bristolu w 1834 roku; był to dopiero czwarty dinozaur odkryty na świecie."
+      },
+      "sourceIds": ["bristol-2013"]
+    }
+  ],
+  "famous": false,
+  "images": [
+    {
+      "commonsFile": "File:Thecodontosaurus antiquus specimen.JPG",
+      "kind": "fossil",
+      "alt": {
+        "en": "Fossils of Thecodontosaurus antiquus on museum display.",
+        "pl": "Skamieniałości Thecodontosaurus antiquus na wystawie muzealnej."
+      }
+    }
+  ],
+  "uncertain": [
+    {
+      "field": "size.massKg",
+      "note": {
+        "en": "No mass estimate found in a source we could verify.",
+        "pl": "Nie znaleziono oszacowania masy w źródle, które moglibyśmy zweryfikować."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "pbdb-taxon",
+      "title": "Thecodontosaurus (taxon 53022)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/single.json?name=Thecodontosaurus&show=attr,parent,class",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-occs",
+      "title": "Occurrences of Thecodontosaurus (stratigraphy and location)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Thecodontosaurus&show=strat,loc",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "ballell-2020",
+      "title": "Osteological redescription of the Late Triassic sauropodomorph dinosaur Thecodontosaurus antiquus",
+      "authors": "Ballell, A.; Rayfield, E. J.; Benton, M. J.",
+      "year": 2020,
+      "publisher": "Journal of Vertebrate Paleontology",
+      "doi": "10.1080/02724634.2020.1770774",
+      "url": "https://complete.bioone.org/journals/journal-of-vertebrate-paleontology/volume-40/issue-2/02724634.2020.1770774/----Custom-HTML----Osteological/10.1080/02724634.2020.1770774.full",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "bristol-2013",
+      "title": "Life-size model of the Bristol Dinosaur unveiled",
+      "year": 2013,
+      "publisher": "University of Bristol",
+      "url": "https://bristol.ac.uk/news/2013/10020.html",
+      "accessed": "2026-11-22"
+    }
+  ],
+  "lastReviewed": "2026-11-22"
+}

@@ -4,7 +4,8 @@
   "genus": "Carnotaurus",
   "nameMeaning": {
     "text": {
-      "en": "carnivorous bull"
+      "en": "carnivorous bull",
+      "pl": "mięsożerny byk"
     },
     "sourceIds": ["nhm"]
   },
@@ -23,19 +24,28 @@
     "startMa": 72.2,
     "endMa": 66.0,
     "sourceIds": ["pbdb-occs", "pol-2024", "mazzetta-2004"],
-    "note": "Pol et al. 2024 and PBDB date the La Colonia Formation to the Maastrichtian; the Ma values are the ICS v2024/12 Maastrichtian stage boundaries. Older work gave Campanian-Maastrichtian (Mazzetta et al. 2004). NHM gives 71-69 Ma."
+    "note": {
+      "en": "Pol et al. 2024 and PBDB date the La Colonia Formation to the Maastrichtian; the Ma values are the ICS v2024/12 Maastrichtian stage boundaries. Older work gave Campanian-Maastrichtian (Mazzetta et al. 2004). NHM gives 71-69 Ma.",
+      "pl": "Pol i in. 2024 oraz PBDB datują formację La Colonia na mastrycht; wartości w mln lat to granice piętra mastrychtu według ICS v2024/12. Starsze prace podawały kampan–mastrycht (Mazzetta i in. 2004). NHM podaje 71–69 mln lat temu."
+    }
   },
   "periods": ["cretaceous"],
   "size": {
     "lengthM": {
       "value": [8, 8],
       "sourceIds": ["nhm"],
-      "note": "Single published figure (NHM Dino Directory). The tail and lower legs are not known."
+      "note": {
+        "en": "Single published figure (NHM Dino Directory). The tail and lower legs are not known.",
+        "pl": "Jedyna opublikowana wartość (NHM Dino Directory). Ogon i dolne części nóg nie są znane."
+      }
     },
     "massKg": {
       "value": [1500, 2100],
       "sourceIds": ["mazzetta-2004"],
-      "note": "1,500 kg from a volumetric model (Mazzetta et al. 1998, as reported in Mazzetta et al. 2004); about 2,100 kg as the average of limb-bone regressions, which the authors consider likely overestimates."
+      "note": {
+        "en": "1,500 kg from a volumetric model (Mazzetta et al. 1998, as reported in Mazzetta et al. 2004); about 2,100 kg as the average of limb-bone regressions, which the authors consider likely overestimates.",
+        "pl": "1500 kg według modelu objętościowego (Mazzetta i in. 1998, za Mazzetta i in. 2004); około 2100 kg jako średnia z regresji opartych na kościach kończyn – autorzy uważają te wartości za prawdopodobnie zawyżone."
+      }
     }
   },
   "locations": [
@@ -53,14 +63,16 @@
   },
   "summary": {
     "text": {
-      "en": "Carnotaurus was a meat-eating dinosaur from Patagonia, Argentina, living near the end of the Cretaceous. About 8 metres long, it had two horns on top of its head, an unusually short snout and tiny arms that were probably not very useful. Skin impressions show scales over much of its body. Nobody is sure what the horns were for: fighting rivals, attacking prey or attracting a mate."
+      "en": "Carnotaurus was a meat-eating dinosaur from Patagonia, Argentina, living near the end of the Cretaceous. About 8 metres long, it had two horns on top of its head, an unusually short snout and tiny arms that were probably not very useful. Skin impressions show scales over much of its body. Nobody is sure what the horns were for: fighting rivals, attacking prey or attracting a mate.",
+      "pl": "Carnotaurus był mięsożernym dinozaurem z Patagonii w Argentynie, żyjącym pod koniec kredy. Miał około 8 metrów długości, dwa rogi na szczycie głowy, niezwykle krótki pysk i malutkie przednie kończyny, które prawdopodobnie nie były zbyt przydatne. Odciski skóry pokazują łuski na dużej części ciała. Nikt nie wie na pewno, do czego służyły rogi: do walki z rywalami, atakowania ofiar czy zwabiania partnera."
     },
     "sourceIds": ["nhm", "pbdb-occs"]
   },
   "funFacts": [
     {
       "text": {
-        "en": "Carnotaurus is one of the few large dinosaurs with lots of preserved skin impressions, which show a scaly body and no sign of feathers."
+        "en": "Carnotaurus is one of the few large dinosaurs with lots of preserved skin impressions, which show a scaly body and no sign of feathers.",
+        "pl": "Carnotaurus to jeden z niewielu dużych dinozaurów z licznymi zachowanymi odciskami skóry, które pokazują łuskowate ciało bez śladów piór."
       },
       "sourceIds": ["nhm"]
     }
@@ -70,13 +82,19 @@
     {
       "commonsFile": "File:Carnotaurus skeleton LA.jpg",
       "kind": "skeleton-mount",
-      "alt": { "en": "Mounted skeleton of Carnotaurus in a museum." }
+      "alt": {
+        "en": "Mounted skeleton of Carnotaurus in a museum.",
+        "pl": "Zmontowany szkielet Carnotaurus w muzeum."
+      }
     }
   ],
   "uncertain": [
     {
       "field": "timeRange",
-      "note": "The La Colonia Formation is dated Maastrichtian by Pol et al. 2024 and PBDB, but Campanian-Maastrichtian by older work (Mazzetta et al. 2004)."
+      "note": {
+        "en": "The La Colonia Formation is dated Maastrichtian by Pol et al. 2024 and PBDB, but Campanian-Maastrichtian by older work (Mazzetta et al. 2004).",
+        "pl": "Pol i in. 2024 oraz PBDB datują formację La Colonia na mastrycht, ale starsze prace – na kampan–mastrycht (Mazzetta i in. 2004)."
+      }
     }
   ],
   "sources": [

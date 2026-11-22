@@ -4,7 +4,8 @@
   "genus": "Pachycephalosaurus",
   "nameMeaning": {
     "text": {
-      "en": "Thick-headed lizard"
+      "en": "Thick-headed lizard",
+      "pl": "grubogłowy jaszczur"
     },
     "sourceIds": ["nhm-pachycephalosaurus"]
   },
@@ -23,19 +24,28 @@
     "startMa": 69,
     "endMa": 66,
     "sourceIds": ["nhm-pachycephalosaurus"],
-    "note": "NHM gives 69–66 Ma. PBDB occurrences of P. wyomingensis are almost all Maastrichtian (stage 72.2–66 Ma)."
+    "note": {
+      "en": "NHM gives 69–66 Ma. PBDB occurrences of P. wyomingensis are almost all Maastrichtian (stage 72.2–66 Ma).",
+      "pl": "NHM podaje 69–66 mln lat temu. Występowania P. wyomingensis w PBDB pochodzą niemal wyłącznie z mastrychtu (piętro 72,2–66 mln lat temu)."
+    }
   },
   "periods": ["cretaceous"],
   "size": {
     "lengthM": {
       "value": [3, 3],
       "sourceIds": ["nhm-pachycephalosaurus"],
-      "note": "Single museum estimate (NHM); the skeleton is poorly known beyond the skull."
+      "note": {
+        "en": "Single museum figure (NHM), which the page does not explain. No peer-reviewed length estimate was found; larger lengths quoted elsewhere could not be traced to a published study.",
+        "pl": "Jedyna wartość muzealna (NHM), której strona nie objaśnia. Nie znaleziono recenzowanego oszacowania długości; większych długości podawanych w innych miejscach nie udało się powiązać z żadnym opublikowanym badaniem."
+      }
     },
     "massKg": {
-      "value": [450, 450],
-      "sourceIds": ["nhm-pachycephalosaurus"],
-      "note": "Single museum estimate (NHM); mass estimates vary widely between methods."
+      "value": [370, 450],
+      "sourceIds": ["benson-2014", "nhm-pachycephalosaurus"],
+      "note": {
+        "en": "370 kg is the peer-reviewed estimate of Benson et al. (2014), scaled from the thickness (circumference) of the upper arm and thigh bones; its standard error is 0.135 log10(kg). 450 kg is the NHM Dino Directory figure, whose basis the page does not give.",
+        "pl": "370 kg to recenzowane oszacowanie Bensona i in. (2014), wyliczone na podstawie grubości (obwodu) kości ramienia i uda; jego błąd standardowy wynosi 0,135 log10(kg). 450 kg to wartość z Dino Directory NHM, której podstawy strona nie podaje."
+      }
     }
   },
   "locations": [
@@ -50,24 +60,34 @@
       "countryCode": "US",
       "formation": "Lance",
       "sourceIds": ["pbdb-occurrences"]
+    },
+    {
+      "continent": "north-america",
+      "countryCode": "CA",
+      "sourceIds": ["pbdb-occurrences", "nhm-pachycephalosaurus"]
     }
   ],
   "discovery": {
     "describedBy": "Gilmore",
     "year": 1931,
-    "note": "Gilmore described the species as Troodon wyomingensis. The genus Pachycephalosaurus was named by Brown & Schlaikjer in 1943, and the species now belongs to it.",
+    "note": {
+      "en": "Gilmore described the species as Troodon wyomingensis. The genus Pachycephalosaurus was named by Brown & Schlaikjer in 1943, and the species now belongs to it.",
+      "pl": "Gilmore opisał ten gatunek jako Troodon wyomingensis. Rodzaj Pachycephalosaurus nazwali Brown i Schlaikjer w 1943 roku i obecnie gatunek ten do niego należy."
+    },
     "sourceIds": ["pbdb-taxon", "nhm-pachycephalosaurus"]
   },
   "summary": {
     "text": {
-      "en": "Pachycephalosaurus was a two-legged plant eater with a large bony dome on its head, surrounded by spikes and bumps. Some scientists think it used the dome in head-butting contests, others that it was for display. It lived in North America about 69 to 66 million years ago, alongside Tyrannosaurus and Triceratops. Dracorex and Stygimoloch, once named as separate dinosaurs, may be its younger growth stages."
+      "en": "Pachycephalosaurus was a two-legged plant eater with a large bony dome on its head, surrounded by spikes and bumps. Some scientists think it used the dome in head-butting contests, others that it was for display. It lived in North America about 69 to 66 million years ago, alongside Tyrannosaurus and Triceratops. Dracorex and Stygimoloch, once named as separate dinosaurs, may be its younger growth stages.",
+      "pl": "Pachycephalosaurus był dwunożnym roślinożercą z dużą kostną kopułą na głowie, otoczoną kolcami i guzami. Niektórzy naukowcy uważają, że używał kopuły w pojedynkach na uderzenia głową, inni – że służyła do pokazów. Żył w Ameryce Północnej około 69–66 milionów lat temu, obok Tyrannosaurus i Triceratops. Dracorex i Stygimoloch, niegdyś opisane jako osobne dinozaury, mogą być jego młodszymi stadiami wzrostu."
     },
     "sourceIds": ["nhm-pachycephalosaurus", "horner-goodwin-2009"]
   },
   "funFacts": [
     {
       "text": {
-        "en": "Dracorex and Stygimoloch, once named as separate dinosaurs, may be younger growth stages of Pachycephalosaurus: its skull seems to have changed shape dramatically as it grew up."
+        "en": "Dracorex and Stygimoloch, once named as separate dinosaurs, may be younger growth stages of Pachycephalosaurus: its skull seems to have changed shape dramatically as it grew up.",
+        "pl": "Dracorex i Stygimoloch, niegdyś opisane jako osobne dinozaury, mogą być młodszymi stadiami wzrostu Pachycephalosaurus: wydaje się, że jego czaszka w miarę dorastania bardzo zmieniała kształt."
       },
       "sourceIds": ["horner-goodwin-2009"]
     }
@@ -75,17 +95,28 @@
   "famous": false,
   "images": [
     {
-      "commonsFile": "File:Pachycephalosaurus wyomingensis skeleton.JPG",
-      "kind": "skeleton-mount",
+      "commonsFile": "File:AMNH 1696 Pachycephalosaurus.jpg",
+      "kind": "skull",
       "alt": {
-        "en": "Cast skeleton of Pachycephalosaurus wyomingensis at the North American Museum of Ancient Life."
+        "en": "Fossil skull of Pachycephalosaurus wyomingensis, specimen AMNH 1696, seen from the side, with its tall bony dome and a ring of bumps and spikes.",
+        "pl": "Skamieniała czaszka Pachycephalosaurus wyomingensis, okaz AMNH 1696, widziana z boku, z wysoką kostną kopułą i wieńcem guzów oraz kolców."
       }
     }
   ],
   "uncertain": [
     {
+      "field": "size.lengthM",
+      "note": {
+        "en": "Only one museum figure (NHM, 3 m) was verified, with no stated method; no peer-reviewed length was found.",
+        "pl": "Zweryfikowano tylko jedną wartość muzealną (NHM, 3 m), bez podanej metody; nie znaleziono recenzowanej długości."
+      }
+    },
+    {
       "field": "size.massKg",
-      "note": "Only a single museum figure (NHM, 450 kg) was found; mass estimates vary widely between methods, so this figure may not be representative."
+      "note": {
+        "en": "Two estimates were found: 370 kg from limb-bone scaling (Benson et al. 2014) and 450 kg from the NHM, whose method is not stated. The true spread may be wider.",
+        "pl": "Znaleziono dwa oszacowania: 370 kg na podstawie skalowania kości kończyn (Benson i in. 2014) oraz 450 kg według NHM, które nie podaje metody. Rzeczywisty rozrzut może być większy."
+      }
     }
   ],
   "sources": [
@@ -94,7 +125,7 @@
       "title": "Pachycephalosaurus | Dino Directory",
       "publisher": "Natural History Museum, London",
       "url": "https://www.nhm.ac.uk/discover/dino-directory/pachycephalosaurus.html",
-      "accessed": "2026-11-20"
+      "accessed": "2026-11-22"
     },
     {
       "id": "pbdb-taxon",
@@ -118,8 +149,18 @@
       "publisher": "PLoS ONE",
       "doi": "10.1371/journal.pone.0007626",
       "url": "https://doi.org/10.1371/journal.pone.0007626",
-      "accessed": "2026-11-20"
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "benson-2014",
+      "title": "Rates of dinosaur body mass evolution indicate 170 million years of sustained ecological innovation on the avian stem lineage",
+      "authors": "Benson R.B.J., Campione N.E., Carrano M.T., Mannion P.D., Sullivan C., Upchurch P., Evans D.C.",
+      "year": 2014,
+      "publisher": "PLOS Biology 12(5): e1001853",
+      "doi": "10.1371/journal.pbio.1001853",
+      "url": "https://doi.org/10.1371/journal.pbio.1001853",
+      "accessed": "2026-11-22"
     }
   ],
-  "lastReviewed": "2026-11-20"
+  "lastReviewed": "2026-11-22"
 }

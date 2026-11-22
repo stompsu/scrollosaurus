@@ -5,9 +5,10 @@
 import { access, readdir, readFile } from 'node:fs/promises';
 import { basename, join } from 'node:path';
 import type { z } from 'zod';
-import { crossCheck, type SpeciesFile } from '../src/lib/schemas/cross-check.ts';
+import { crossCheck, untranslated, type SpeciesFile } from '../src/lib/schemas/cross-check.ts';
 import { geologicTimeSchema } from '../src/lib/schemas/geologic-time.ts';
 import { groupsSchema } from '../src/lib/schemas/groups.ts';
+import { checkTranslations } from '../src/lib/schemas/i18n-check.ts';
 import { checkImages } from '../src/lib/schemas/image-check.ts';
 import { imageManifestSchema } from '../src/lib/schemas/images.ts';
 import { siteSchema } from '../src/lib/schemas/site.ts';
@@ -58,6 +59,17 @@ async function main(): Promise<void> {
   const site = await parseFile(siteSchema, 'site.json');
   if (site) console.log('✓ site.json');
 
+  const readJson = async (rel: string) =>
+    JSON.parse(await readFile(join(DATA_DIR, rel), 'utf8')) as Record<string, unknown>;
+  const i18nErrors = checkTranslations(
+    await readJson('i18n/en/common.json'),
+    await readJson('i18n/pl/common.json'),
+    await readJson('i18n/pl/geology.json'),
+    geologicTime?.units.map((u) => u.id) ?? [],
+  );
+  errors.push(...i18nErrors);
+  if (i18nErrors.length === 0) console.log('✓ i18n: English and Polish strings match');
+
   const files = (await readdir(join(DATA_DIR, 'species')))
     .filter((f) => f.endsWith('.json'))
     .sort();
@@ -90,6 +102,13 @@ async function main(): Promise<void> {
       speciesSlugs: new Set(species.map((s) => s.data.slug)),
     });
     errors.push(...storyErrors);
+    for (const [file, data] of [
+      ['events.json', events],
+      ['story.json', story],
+      ['size-references.json', sizeReferences],
+    ] as const) {
+      for (const path of untranslated(data)) errors.push(`${file}: no Polish text at ${path}`);
+    }
     if (events && story && sizeReferences && storyErrors.length === 0) {
       console.log(
         `✓ events (${String(events.events.length)}), story (${String(story.steps.length)} steps), size references (${String(sizeReferences.references.length)})`,
@@ -129,7 +148,7 @@ async function main(): Promise<void> {
 
   // The fields curators flagged; this list feeds the phase uncertainties report.
   const flagged = species.flatMap(({ data }) =>
-    (data.uncertain ?? []).map((u) => `${data.slug} ${u.field}: ${u.note}`),
+    (data.uncertain ?? []).map((u) => `${data.slug} ${u.field}: ${u.note.en}`),
   );
   if (flagged.length > 0) {
     console.log(`\nFlagged as uncertain (${String(flagged.length)}):`);

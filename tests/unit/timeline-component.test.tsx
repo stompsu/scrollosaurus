@@ -39,7 +39,7 @@ describe('<Timeline />', () => {
     const onSelect = vi.fn();
     render(<Timeline items={species} onSelect={onSelect} highlightedSlug="tyrannosaurus" />);
     const trex = screen.getByRole('button', {
-      name: 'Tyrannosaurus, 68 to 66 million years ago',
+      name: 'Tyrannosaurus, carnivore, 68 to 66 million years ago',
     });
     expect(trex.querySelector('i')).toHaveTextContent('Tyrannosaurus');
     fireEvent.click(trex);
@@ -67,7 +67,7 @@ describe('<Timeline />', () => {
   it('lists the species in view for screen readers', () => {
     render(<Timeline items={species} onSelect={() => undefined} highlightedSlug="tyrannosaurus" />);
     const list = screen.getByRole('list', { name: 'List of species in view' });
-    expect(list).toHaveTextContent('Tyrannosaurus, 68 to 66 million years ago');
+    expect(list).toHaveTextContent('Tyrannosaurus, carnivore, 68 to 66 million years ago');
   });
 
   it('exposes zoomTo through a ref', () => {

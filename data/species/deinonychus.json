@@ -1,0 +1,157 @@
+{
+  "slug": "deinonychus",
+  "scientificName": "Deinonychus antirrhopus",
+  "genus": "Deinonychus",
+  "nameMeaning": {
+    "text": { "en": "terrible claw", "pl": "straszny pazur" },
+    "sourceIds": ["ostrom-1969", "nhm-deinonychus"]
+  },
+  "group": "dromaeosauridae",
+  "groupSourceIds": ["ostrom-1969", "pbdb-deinonychus-antirrhopus", "nhm-deinonychus"],
+  "isDinosaur": true,
+  "taxonomy": {
+    "status": "valid"
+  },
+  "diet": {
+    "value": "carnivore",
+    "confidence": "established",
+    "sourceIds": ["nhm-deinonychus"]
+  },
+  "timeRange": {
+    "startMa": 124,
+    "endMa": 98,
+    "sourceIds": ["demic-2019", "pbdb-deinonychus-occs", "ostrom-1969"],
+    "note": {
+      "en": "PBDB lists D. antirrhopus from the Little Sheep Mudstone and Himes members of the Cloverly Formation, which D'Emic et al. (2019) date with U-Pb zircon ages to about 124-109 Ma and 109-98 Ma. These are the ages of the rock members, not of individual fossils. The NHM Dino Directory gives 115-108 Ma.",
+      "pl": "PBDB wymienia D. antirrhopus z ogniw Little Sheep Mudstone i Himes formacji Cloverly, które D'Emic i in. (2019) datują metodą U-Pb na cyrkonach na około 124–109 i 109–98 mln lat temu. Są to wieki ogniw skalnych, a nie poszczególnych skamieniałości. Katalog Dino Directory muzeum NHM podaje 115–108 mln lat temu."
+    }
+  },
+  "periods": ["cretaceous"],
+  "size": {
+    "lengthM": {
+      "value": [3.4, 3.4],
+      "sourceIds": ["nhm-deinonychus"],
+      "note": {
+        "en": "Single published figure (NHM Dino Directory).",
+        "pl": "Jedyna opublikowana wartość (NHM Dino Directory)."
+      }
+    },
+    "massKg": {
+      "value": [100, 100],
+      "sourceIds": ["nhm-deinonychus"],
+      "note": {
+        "en": "Single published estimate (NHM Dino Directory); method not stated.",
+        "pl": "Jedyne opublikowane oszacowanie (NHM Dino Directory); metody nie podano."
+      }
+    }
+  },
+  "locations": [
+    {
+      "continent": "north-america",
+      "countryCode": "US",
+      "formation": "Cloverly",
+      "sourceIds": ["ostrom-1969", "pbdb-deinonychus-occs", "demic-2019"]
+    },
+    {
+      "continent": "north-america",
+      "countryCode": "US",
+      "formation": "Antlers",
+      "sourceIds": ["pbdb-deinonychus-occs"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "Ostrom",
+    "year": 1969,
+    "note": {
+      "en": "John Ostrom and Grant Meyer found the first fossils in southern Montana in 1964.",
+      "pl": "John Ostrom i Grant Meyer znaleźli pierwsze skamieniałości w południowej Montanie w 1964 roku."
+    },
+    "sourceIds": ["ostrom-1969", "pbdb-deinonychus-antirrhopus", "nhm-deinonychus", "yale-2015"]
+  },
+  "summary": {
+    "text": {
+      "en": "Deinonychus was a meat-eating dinosaur about 3.4 metres long that lived in North America, mainly in the Early Cretaceous. Its name means 'terrible claw', after the large, sickle-shaped claw on the second toe of each foot, which it held off the ground. It probably had feathers, though none have been found. John Ostrom, who named it, became a leading champion of the idea that birds are related to dinosaurs, which is now widely accepted.",
+      "pl": "Deinonychus był mięsożernym dinozaurem o długości około 3,4 metra, który żył w Ameryce Północnej, głównie we wczesnej kredzie. Jego nazwa oznacza „straszny pazur” – od dużego, sierpowatego pazura na drugim palcu każdej stopy, który trzymał uniesiony nad ziemią. Prawdopodobnie był opierzony, choć nie znaleziono śladów piór. John Ostrom, który go nazwał, stał się czołowym orędownikiem poglądu, że ptaki są spokrewnione z dinozaurami – dziś powszechnie przyjętego."
+    },
+    "sourceIds": ["nhm-deinonychus", "ostrom-1969", "demic-2019", "yale-2015"]
+  },
+  "funFacts": [
+    {
+      "text": {
+        "en": "The 'Velociraptor' of Jurassic Park was modelled on Deinonychus in 'almost every detail', as the author Michael Crichton confirmed to John Ostrom.",
+        "pl": "„Velociraptor” z „Parku Jurajskiego” był wzorowany na Deinonychus „niemal w każdym szczególe”, co autor Michael Crichton potwierdził Johnowi Ostromowi."
+      },
+      "sourceIds": ["yale-2015"]
+    },
+    {
+      "text": {
+        "en": "Its species name, antirrhopus, means 'counterbalancing': long bony rods stiffened its tail, which helped it balance.",
+        "pl": "Nazwa gatunkowa antirrhopus oznacza „przeciwważący”: długie kostne pręty usztywniały jego ogon, który pomagał mu utrzymać równowagę."
+      },
+      "sourceIds": ["ostrom-1969", "nhm-deinonychus"]
+    }
+  ],
+  "famous": false,
+  "images": [
+    {
+      "commonsFile": "File:Deinonychus antirrhopus HK.jpg",
+      "kind": "skeleton-mount",
+      "alt": {
+        "en": "Mounted skeleton of Deinonychus antirrhopus on display at the Hong Kong Science Museum.",
+        "pl": "Zmontowany szkielet Deinonychus antirrhopus na wystawie w Hong Kong Science Museum."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "ostrom-1969",
+      "title": "A new theropod dinosaur from the Lower Cretaceous of Montana",
+      "authors": "Ostrom J.H.",
+      "year": 1969,
+      "publisher": "Postilla 128: 1-17, Peabody Museum of Natural History, Yale University",
+      "url": "https://archive.org/download/postilla128peab/postilla128peab_djvu.txt",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "demic-2019",
+      "title": "Chronostratigraphic revision of the Cloverly Formation (Lower Cretaceous, Western Interior, USA)",
+      "authors": "D'Emic M.D., Foreman B.Z., Jud N.A., Britt B.B., Schmitz M., Crowley J.L.",
+      "year": 2019,
+      "publisher": "Bulletin of the Peabody Museum of Natural History 60: 3-40",
+      "doi": "10.3374/014.060.0101",
+      "url": "https://experts.boisestate.edu/en/publications/chronostratigraphic-revision-of-the-cloverly-formation-lower-cret/",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "yale-2015",
+      "title": "Yale's legacy in 'Jurassic World'",
+      "authors": "Cummings M.",
+      "year": 2015,
+      "publisher": "Yale News, Yale University",
+      "url": "https://news.yale.edu/2015/06/18/yale-s-legacy-jurassic-world",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "nhm-deinonychus",
+      "title": "Deinonychus | Dino Directory",
+      "publisher": "Natural History Museum, London",
+      "url": "https://www.nhm.ac.uk/discover/dino-directory/deinonychus.html",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "pbdb-deinonychus-antirrhopus",
+      "title": "Deinonychus antirrhopus (taxon 54555)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/single.json?name=Deinonychus%20antirrhopus&show=attr,app,parent,class",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-deinonychus-occs",
+      "title": "Occurrences of Deinonychus (stratigraphy and location)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Deinonychus&show=strat,loc",
+      "accessed": "2026-11-21"
+    }
+  ],
+  "lastReviewed": "2026-11-22"
+}
