@@ -1,6 +1,6 @@
+import { useTranslation } from 'react-i18next';
 import { formatMaRounded, unitById } from '@/lib/geologic-time';
-import { tr } from '@/lib/i18n';
-import { localize } from '@/lib/locale';
+import { useLocalize } from '@/lib/lang';
 import type { Events } from '@/lib/schemas/stories';
 import { SourceNotes } from './SourceNotes';
 
@@ -9,9 +9,11 @@ import { SourceNotes } from './SourceNotes';
  * The page shows them once the view reaches the last stage before the boundary.
  */
 export function EventNotes({ events }: { events: Events }) {
+  const { t } = useTranslation();
+  const localize = useLocalize();
   const first = events.events[0];
   const label = first
-    ? tr('time.ago', { value: formatMaRounded(unitById(first.atTopOf).topMa) })
+    ? t('time.ago', { value: formatMaRounded(unitById(first.atTopOf).topMa) })
     : '';
   return (
     <section className="sc-events" aria-label={label} data-testid="event-notes">

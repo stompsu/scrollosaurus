@@ -6,34 +6,34 @@ const all = ['era', 'period', 'epoch', 'stage'] as const;
 
 describe('windowContext', () => {
   it('names every period in the whole-Mesozoic view, not the one at the centre', () => {
-    expect(windowContext({ startMa: 260, endMa: 60 }, ['era', 'period'])).toBe(
+    expect(windowContext('en', { startMa: 260, endMa: 60 }, ['era', 'period'])).toBe(
       'Triassic to Cretaceous',
     );
   });
 
   it('names a single period and drops epochs that just list all of its children', () => {
-    expect(windowContext({ startMa: 201.4, endMa: 143.1 }, ['era', 'period', 'epoch'])).toBe(
+    expect(windowContext('en', { startMa: 201.4, endMa: 143.1 }, ['era', 'period', 'epoch'])).toBe(
       'Jurassic',
     );
   });
 
   it('names a range when the view straddles a boundary, without finer ranks', () => {
-    expect(windowContext({ startMa: 150, endMa: 130 }, all)).toBe('Jurassic to Cretaceous');
+    expect(windowContext('en', { startMa: 150, endMa: 130 }, all)).toBe('Jurassic to Cretaceous');
   });
 
   it('refines down to stages under a single epoch', () => {
-    expect(windowContext({ startMa: 130.2, endMa: 119.7 }, all)).toBe(
+    expect(windowContext('en', { startMa: 130.2, endMa: 119.7 }, all)).toBe(
       'Cretaceous, Early Cretaceous, Hauterivian to Aptian',
     );
-    expect(windowContext({ startMa: 125, endMa: 123 }, all)).toBe(
+    expect(windowContext('en', { startMa: 125, endMa: 123 }, all)).toBe(
       'Cretaceous, Early Cretaceous, Barremian',
     );
   });
 
   it('ignores slivers from rounding at exact boundaries', () => {
-    expect(windowContext({ startMa: 201.4000001, endMa: 143.0999999 }, ['era', 'period'])).toBe(
-      'Jurassic',
-    );
+    expect(
+      windowContext('en', { startMa: 201.4000001, endMa: 143.0999999 }, ['era', 'period']),
+    ).toBe('Jurassic');
   });
 });
 

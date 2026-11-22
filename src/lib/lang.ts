@@ -17,7 +17,7 @@ export function useLangPath(): (path: string) => string {
 /** Picks the current language from a `{ en, pl }` text. */
 export function useLocalize(): (text: { en: string; pl?: string | undefined }) => string {
   const lang = useLang();
-  return useCallback((text) => localize(text, lang), [lang]);
+  return useCallback((text) => localize(lang, text), [lang]);
 }
 
 /** localStorage key for an explicit language choice made with the switch. */

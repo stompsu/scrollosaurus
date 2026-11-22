@@ -1,5 +1,6 @@
 import { useId } from 'react';
-import { tr } from '@/lib/i18n';
+import { useTranslation } from 'react-i18next';
+import { useLang } from '@/lib/lang';
 import { formatRange } from '@/lib/labels';
 import { formatNumber, localize } from '@/lib/locale';
 import type { Species } from '@/lib/schemas/species';
@@ -38,6 +39,8 @@ const BUS_WHEELS =
  * larger animals, a school bus at its sourced length. Every figure shares one metre scale.
  */
 export function SizeComparison({ genus, groupPath, size, references }: SizeComparisonProps) {
+  const { t } = useTranslation();
+  const lang = useLang();
   const titleId = useId();
   const plan = SILHOUETTES[bodyPlanFor(groupPath)];
   const measured = plan.measure === 'wingspan' ? size.wingspanM : size.lengthM;
@@ -72,16 +75,18 @@ export function SizeComparison({ genus, groupPath, size, references }: SizeCompa
   const bu = at('bus');
 
   const wingspan = plan.measure === 'wingspan';
-  const value = formatRange(measured.value, 'm');
-  const height = formatNumber(person?.heightM ?? 0, 2);
+  const value = formatRange(lang, measured.value, 'm');
+  const height = formatNumber(lang, person?.heightM ?? 0, 2);
   const description = [
-    tr('sizeScene.desc', {
+    t('sizeScene.desc', {
       genus,
-      what: tr(wingspan ? 'sizeScene.wingspanWord' : 'sizeScene.lengthWord'),
+      what: t(wingspan ? 'sizeScene.wingspanWord' : 'sizeScene.lengthWord'),
       value,
     }),
-    person ? tr('sizeScene.descPerson', { height }) : undefined,
-    bus && showBus ? tr('sizeScene.descBus', { length: formatNumber(bus.lengthM, 2) }) : undefined,
+    person ? t('sizeScene.descPerson', { height }) : undefined,
+    bus && showBus
+      ? t('sizeScene.descBus', { length: formatNumber(lang, bus.lengthM, 2) })
+      : undefined,
   ]
     .filter(Boolean)
     .join(' ');
@@ -89,7 +94,7 @@ export function SizeComparison({ genus, groupPath, size, references }: SizeCompa
   return (
     <figure className="sc-size" data-testid="size-comparison">
       <figcaption id={titleId} className="sc-drawer-h3">
-        {tr(bus && showBus ? 'sizeScene.titleBus' : 'sizeScene.title')}
+        {t(bus && showBus ? 'sizeScene.titleBus' : 'sizeScene.title')}
       </figcaption>
       <svg
         className="sc-size-scene"
@@ -145,26 +150,26 @@ export function SizeComparison({ genus, groupPath, size, references }: SizeCompa
       <ul className="sc-size-legend">
         <li>
           <i>{genus}</i>:{' '}
-          {tr('sizeScene.species', {
+          {t('sizeScene.species', {
             value,
-            what: tr(wingspan ? 'sizeScene.wingspan' : 'sizeScene.long'),
+            what: t(wingspan ? 'sizeScene.wingspan' : 'sizeScene.long'),
           })}
-          {hi > lo ? tr('sizeScene.rangeNote') : ''}.
+          {hi > lo ? t('sizeScene.rangeNote') : ''}.
         </li>
-        {person && <li>{tr('sizeScene.person', { height })}</li>}
+        {person && <li>{t('sizeScene.person', { height })}</li>}
         {bus && showBus && (
           <li>
-            {tr('sizeScene.bus', {
-              label: localize(bus.label),
-              length: formatNumber(bus.lengthM, 2),
-              note: bus.note ? localize(bus.note) : '',
+            {t('sizeScene.bus', {
+              label: localize(lang, bus.label),
+              length: formatNumber(lang, bus.lengthM, 2),
+              note: bus.note ? localize(lang, bus.note) : '',
             })}
           </li>
         )}
       </ul>
       <p className="sc-note">
-        {tr('sizeScene.outline', { plan: tr(`bodyPlan.${bodyPlanFor(groupPath)}`) })} <i>{genus}</i>
-        {tr('sizeScene.outlineEnd')}
+        {t('sizeScene.outline', { plan: t(`bodyPlan.${bodyPlanFor(groupPath)}`) })} <i>{genus}</i>
+        {t('sizeScene.outlineEnd')}
       </p>
     </figure>
   );

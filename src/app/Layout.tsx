@@ -1,11 +1,12 @@
-import { useEffect, useRef, ViewTransition } from 'react';
+import { use, useEffect, useRef, ViewTransition } from 'react';
+import type { i18n } from 'i18next';
 import { I18nextProvider, useTranslation } from 'react-i18next';
 import { Link, NavLink, Outlet, useLocation, useNavigate } from 'react-router';
 import { ThemeToggle } from '@/components/ui/ThemeToggle';
 import { geologicTime } from '@/lib/geologic-time';
-import { i18nFor } from '@/lib/i18n';
+import { i18nFor, isLangLoaded, loadLang } from '@/lib/i18n';
 import { LANG_STORAGE_KEY, LangContext, useLang } from '@/lib/lang';
-import { langPath, setLocale, splitLangPath, type Lang } from '@/lib/locale';
+import { langPath, splitLangPath, type Lang } from '@/lib/locale';
 
 const navClassFor = (active: boolean) =>
   `inline-block py-2 ${active ? 'text-accent underline underline-offset-4' : 'hover:text-accent'}`;
@@ -48,13 +49,21 @@ function LanguageSwitch() {
   const { pathname, search } = useLocation();
   const other: Lang = lang === 'pl' ? 'en' : 'pl';
   const { path } = splitLangPath(pathname);
+  const to = `${langPath(path, other)}${search}`;
+  // Start fetching the other language's strings as soon as the switch is pointed at or focused.
+  // The navigation itself is a transition, so this page stays up until they have arrived.
+  const prefetch = () => {
+    void loadLang(other).catch(() => undefined);
+  };
   return (
     <Link
-      to={`${langPath(path, other)}${search}`}
+      to={to}
       lang={other}
       hrefLang={other}
       className="sc-lang-switch"
       data-testid="language-switch"
+      onPointerEnter={prefetch}
+      onFocus={prefetch}
       onClick={() => {
         try {
           localStorage.setItem(LANG_STORAGE_KEY, other);
@@ -137,13 +146,21 @@ function Shell() {
 }
 
 /**
+ * The i18next instance for `lang`, suspending until its strings have loaded (Polish is a separate
+ * chunk, preloaded by the /pl/ pages). Inside a navigation the router renders in a transition, so
+ * the previous page stays up meanwhile instead of showing strings in the wrong language.
+ */
+function useLangStrings(lang: Lang): i18n {
+  return isLangLoaded(lang) ? i18nFor(lang) : use(loadLang(lang));
+}
+
+/**
  * The site layout for one language: `/…` is English and `/pl/…` Polish (ADR-0001 §9). It provides
- * the language to the pages below, sets the formatting locale and the document's `lang`, and on
+ * the language and its strings to the pages below, sets the document's `lang`, and on
  * a bare visit to the English home page follows a Polish choice remembered from the switch.
  */
 export function Layout({ lang = 'en' }: { lang?: Lang }) {
-  // Set before the pages render, so number formatting below uses this language.
-  setLocale(lang);
+  const strings = useLangStrings(lang);
   const navigate = useNavigate();
   const { pathname, search } = useLocation();
 
@@ -166,7 +183,7 @@ export function Layout({ lang = 'en' }: { lang?: Lang }) {
 
   return (
     <LangContext value={lang}>
-      <I18nextProvider i18n={i18nFor(lang)}>
+      <I18nextProvider i18n={strings}>
         <Shell />
       </I18nextProvider>
     </LangContext>

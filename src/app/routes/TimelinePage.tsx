@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import {
   Link,
   Navigate,
@@ -22,7 +23,6 @@ import {
 import { EventNotes, StoryPanel } from '@/features/story';
 import { eraColor, eraThemeFor, reachesEndCretaceous } from '@/lib/era-theme';
 import { formatMaRounded, unitById, unitName } from '@/lib/geologic-time';
-import { tr } from '@/lib/i18n';
 import { useLang } from '@/lib/lang';
 import { langPath, type Lang } from '@/lib/locale';
 import { primarySpeciesSlug, species } from '@/lib/species';
@@ -62,6 +62,7 @@ function sameWindow(a: MaRange | undefined, b: MaRange | undefined): boolean {
  */
 export default function TimelinePage() {
   const lang = useLang();
+  const { t } = useTranslation();
   const { slug } = useParams();
   const [params] = useSearchParams();
   const location = useLocation();
@@ -311,11 +312,11 @@ export default function TimelinePage() {
 
   return (
     <section aria-labelledby="home-title" className="flex flex-col gap-4">
-      {!selected && <title>{tr('site.title')}</title>}
+      {!selected && <title>{t('site.title')}</title>}
       <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-2">
         <h1 id="home-title" className="font-display text-xl">
-          {tr('home.heading', {
-            era: unitName(mesozoic),
+          {t('home.heading', {
+            era: unitName(lang, mesozoic),
             start: formatMaRounded(mesozoic.baseMa),
             end: formatMaRounded(mesozoic.topMa),
           })}
@@ -330,7 +331,7 @@ export default function TimelinePage() {
             }}
             data-testid="start-tour"
           >
-            {tr('home.startTour')}
+            {t('home.startTour')}
           </button>
         )}
       </div>
@@ -384,7 +385,7 @@ export default function TimelinePage() {
       {showEventNotes && <EventNotes events={events} />}
 
       {previewed && (
-        <section aria-label={tr('card.preview')} data-testid="species-preview">
+        <section aria-label={t('card.preview')} data-testid="species-preview">
           <SpeciesCard
             item={previewed}
             action={
@@ -393,9 +394,9 @@ export default function TimelinePage() {
                 className="sc-link-button"
                 data-testid="preview-details"
               >
-                {tr('card.details')}
+                {t('card.details')}
                 <span className="sr-only">
-                  {tr('card.detailsAbout', { genus: previewed.genus })}
+                  {t('card.detailsAbout', { genus: previewed.genus })}
                 </span>
               </Link>
             }

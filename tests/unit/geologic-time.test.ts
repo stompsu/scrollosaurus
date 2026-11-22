@@ -111,7 +111,7 @@ describe('formatMa', () => {
     [66, '66'],
     [143.04, '143'],
   ])('formats %s as %s', (input, expected) => {
-    expect(formatMa(input)).toBe(expected);
+    expect(formatMa('en', input)).toBe(expected);
   });
 
   it('rounds for headings', () => {

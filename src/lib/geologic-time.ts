@@ -1,6 +1,6 @@
 import rawGeologicTime from '../../data/geologic-time.json';
-import polishUnitNames from '../../data/i18n/pl/geology.json';
-import { formatNumber, getLocale, localDecimal } from './locale';
+import { tr } from './i18n';
+import { formatNumber, localDecimal, type Lang } from './locale';
 import type { GeologicRank, GeologicTime, GeologicUnit } from './schemas/geologic-time';
 
 /**
@@ -19,20 +19,21 @@ export function unitById(id: string): GeologicUnit {
   return unit;
 }
 
-const UNIT_NAMES_PL: Record<string, string | undefined> = polishUnitNames;
-
-/** A unit's name in the current language: "Late Jurassic" / "Późna jura". */
-export function unitName(unit: Pick<GeologicUnit, 'id' | 'name'>): string {
-  return (getLocale() === 'pl' ? UNIT_NAMES_PL[unit.id] : undefined) ?? unit.name;
+/**
+ * A unit's name in `lang`: "Late Jurassic" / "Późna jura". English names are the chart's own;
+ * other languages read the `geology` namespace (data/i18n/pl/geology.json).
+ */
+export function unitName(lang: Lang, unit: Pick<GeologicUnit, 'id' | 'name'>): string {
+  return lang === 'en' ? unit.name : tr(lang, `geology:${unit.id}`, { defaultValue: unit.name });
 }
 
 export function durationMa(unit: GeologicUnit): number {
   return unit.baseMa - unit.topMa;
 }
 
-/** Formats an age for display, e.g. 251.902 → "251.9" ("251,9" in Polish), 66 → "66". */
-export function formatMa(ma: number): string {
-  return formatNumber(ma, 1);
+/** Formats an age in `lang`, e.g. 251.902 → "251.9" ("251,9" in Polish), 66 → "66". */
+export function formatMa(lang: Lang, ma: number): string {
+  return formatNumber(lang, ma, 1);
 }
 
 /** Rounds an age to the nearest whole Ma for headings, e.g. 251.902 → "252". */
@@ -44,17 +45,17 @@ export function formatMaRounded(ma: number): string {
  * Formats an uncertainty with two significant figures, so 0.024 stays "0.024" instead of rounding
  * to 0 as `formatMa` would.
  */
-export function formatUncertainty(ma: number): string {
-  return localDecimal(String(Number(ma.toPrecision(2))));
+export function formatUncertainty(lang: Lang, ma: number): string {
+  return localDecimal(lang, String(Number(ma.toPrecision(2))));
 }
 
 /**
  * An age with its ± uncertainty, the age given to the same decimal places as the uncertainty:
  * (125.755, 0.061) → "125.755 ±0.061", (201.4, 0.2) → "201.4 ±0.2", (66, undefined) → "66".
  */
-export function formatMaWithUncertainty(ma: number, uncertaintyMa?: number): string {
-  if (uncertaintyMa === undefined || uncertaintyMa <= 0) return formatMa(ma);
-  const u = formatUncertainty(uncertaintyMa);
+export function formatMaWithUncertainty(lang: Lang, ma: number, uncertaintyMa?: number): string {
+  if (uncertaintyMa === undefined || uncertaintyMa <= 0) return formatMa(lang, ma);
+  const u = formatUncertainty(lang, uncertaintyMa);
   const decimals = u.split(/[.,]/)[1]?.length ?? 0;
-  return `${formatNumber(Number(ma.toFixed(Math.max(decimals, 1))), Math.max(decimals, 1))} ±${u}`;
+  return `${formatNumber(lang, Number(ma.toFixed(Math.max(decimals, 1))), Math.max(decimals, 1))} ±${u}`;
 }

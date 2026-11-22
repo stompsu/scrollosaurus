@@ -1,8 +1,8 @@
-import { afterEach, describe, expect, it } from 'vitest';
+import { beforeAll, describe, expect, it } from 'vitest';
 import en from '../../data/i18n/en/common.json';
 import pl from '../../data/i18n/pl/common.json';
-import { setLocale } from '@/lib/locale';
-import { tr } from '@/lib/i18n';
+import { unitById, unitName } from '@/lib/geologic-time';
+import { i18nFor, isLangLoaded, loadLang, tr } from '@/lib/i18n';
 
 function keys(obj: unknown, prefix = ''): string[] {
   if (typeof obj !== 'object' || obj === null) return [prefix];
@@ -10,8 +10,26 @@ function keys(obj: unknown, prefix = ''): string[] {
 }
 const base = (k: string) => k.replace(/_(zero|one|two|few|many|other)$/, '');
 
-afterEach(() => {
-  setLocale('en');
+beforeAll(async () => {
+  await loadLang('pl');
+});
+
+describe('loading languages', () => {
+  it('has English from the start and Polish once loaded, as separate instances', async () => {
+    expect(isLangLoaded('en')).toBe(true);
+    const plInstance = await loadLang('pl');
+    expect(isLangLoaded('pl')).toBe(true);
+    expect(i18nFor('pl')).toBe(plInstance);
+    expect(i18nFor('en')).not.toBe(plInstance);
+  });
+
+  it('formats each language independently, with no shared current language', () => {
+    expect(tr('en', 'filters.found', { count: 5 })).toBe('5 species found');
+    expect(tr('pl', 'filters.found', { count: 5 })).toBe('Znaleziono 5 gatunków');
+    expect(tr('en', 'filters.found', { count: 5 })).toBe('5 species found');
+    expect(unitName('pl', unitById('late-jurassic'))).toBe('Późna jura');
+    expect(unitName('en', unitById('late-jurassic'))).toBe('Late Jurassic');
+  });
 });
 
 describe('Polish plural forms', () => {
@@ -25,8 +43,7 @@ describe('Polish plural forms', () => {
     [103, 'Znaleziono 103 gatunki'],
     [112, 'Znaleziono 112 gatunków'],
   ])('%i', (n, expected) => {
-    setLocale('pl');
-    expect(tr('filters.found', { count: n })).toBe(expected);
+    expect(tr('pl', 'filters.found', { count: n })).toBe(expected);
   });
 
   it('every plural key in Polish has one, few, many and other', () => {
@@ -56,13 +73,10 @@ describe('translation parity', () => {
 describe('marker accessible name', () => {
   it('names the diet in words, in both languages', () => {
     const args = { genus: 'Allosaurus', tag: '', diet: 'x', start: '155', end: '145' };
-    setLocale('en');
-    expect(tr('timeline.marker', { ...args, diet: tr('diet.carnivore').toLowerCase() })).toContain(
-      tr('diet.carnivore').toLowerCase(),
-    );
-    setLocale('pl');
-    const name = tr('timeline.marker', { ...args, diet: tr('diet.carnivore').toLowerCase() });
-    expect(name).toContain(tr('diet.carnivore').toLowerCase());
+    const diet = (lang: 'en' | 'pl') => tr(lang, 'diet.carnivore').toLowerCase();
+    expect(tr('en', 'timeline.marker', { ...args, diet: diet('en') })).toContain(diet('en'));
+    const name = tr('pl', 'timeline.marker', { ...args, diet: diet('pl') });
+    expect(name).toContain(diet('pl'));
     expect(name).toContain('mln lat temu');
   });
 });
