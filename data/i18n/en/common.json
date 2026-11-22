@@ -98,6 +98,7 @@
   },
   "card": {
     "nameMeans": "Name means ",
+    "quoted": "“{{text}}”",
     "details": "Details",
     "detailsAbout": " about {{genus}}",
     "preview": "Species preview"

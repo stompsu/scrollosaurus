@@ -34,6 +34,8 @@ test('numbers, places and units follow the language', async ({ page }) => {
   await expect(drawer).toContainText('1,1 m');
   await expect(drawer).toContainText('Chiny (Azja)');
   await expect(drawer).toContainText('formacja Yixian');
+  // Polish quotation marks around the name meaning.
+  await expect(drawer.getByRole('heading', { level: 2 }).locator('..')).toContainText(/„.+”/);
   await page.goto('species/sinosauropteryx');
   await expect(page.getByTestId('species-drawer')).toContainText('China (Asia), Yixian Formation');
 });

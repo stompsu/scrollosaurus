@@ -143,7 +143,8 @@ export function SpeciesDrawer({
               </p>
             )}
             <p className="sc-card-meaning">
-              <span className="sr-only">{tr('card.nameMeans')}</span>“{localize(item.nameMeaning)}”
+              <span className="sr-only">{tr('card.nameMeans')}</span>
+              {tr('card.quoted', { text: localize(item.nameMeaning) })}
             </p>
           </div>
           <button

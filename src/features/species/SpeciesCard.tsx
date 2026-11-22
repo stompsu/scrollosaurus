@@ -44,7 +44,8 @@ export function SpeciesCard({ item, headingLevel = 2, action }: SpeciesCardProps
           {!item.isDinosaur && <NotADinosaurTag />}
         </Heading>
         <p className="sc-card-meaning">
-          <span className="sr-only">{tr('card.nameMeans')}</span>“{localize(item.nameMeaning)}”
+          <span className="sr-only">{tr('card.nameMeans')}</span>
+          {tr('card.quoted', { text: localize(item.nameMeaning) })}
         </p>
         <div className="sc-card-facts">
           <DietBadge diet={item.diet} confidence={item.dietConfidence} />

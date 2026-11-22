@@ -98,6 +98,7 @@
   },
   "card": {
     "nameMeans": "Nazwa oznacza ",
+    "quoted": "„{{text}}”",
     "details": "Szczegóły",
     "detailsAbout": " o rodzaju {{genus}}",
     "preview": "Podgląd gatunku"
