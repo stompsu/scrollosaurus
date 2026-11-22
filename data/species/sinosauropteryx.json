@@ -15,8 +15,8 @@
     "confidence": "established",
     "sourceIds": ["chen-1998", "nhm-sinosauropteryx", "hendrickx-2025", "qiu-2025"],
     "note": {
-      "en": "Stomach contents are preserved in the larger of the two specimens described in 1998. Mammal jaws once reported inside a 'Sinosauropteryx' (NGMC/GMV 2124) are now attributed to a small tyrannosauroid (Qiu et al. 2025), so they are not used here.",
-      "pl": "Zawartość żołądka zachowała się w większym z dwóch okazów opisanych w 1998 roku. Szczęki ssaków, o których niegdyś informowano, że znajdują się wewnątrz „Sinosauropteryx” (NGMC/GMV 2124), przypisuje się obecnie małemu tyranozauroidowi (Qiu i in. 2025), dlatego nie są tu brane pod uwagę."
+      "en": "Stomach contents are preserved in the larger of the two specimens described in 1998. Mammal jaws once reported inside a 'Sinosauropteryx' (NGMC/GMV 2124) are now attributed to a small tyrannosauroid (Qiu et al. 2025), so they are not used here. Insects are an inference, not a find: Qiu et al. (2025) argue that its slender jaws, small teeth, weak neck muscles and very short arms limited it to delicate prey such as lizards or insects. None of the sources cited here report insect remains inside a Sinosauropteryx.",
+      "pl": "Zawartość żołądka zachowała się w większym z dwóch okazów opisanych w 1998 roku. Szczęki ssaków, o których niegdyś informowano, że znajdują się wewnątrz „Sinosauropteryx” (NGMC/GMV 2124), przypisuje się obecnie małemu tyranozauroidowi (Qiu i in. 2025), dlatego nie są tu brane pod uwagę. Owady to wniosek, a nie znalezisko: Qiu i in. (2025) uważają, że smukłe szczęki, małe zęby, słabe mięśnie szyi i bardzo krótkie przednie kończyny ograniczały go do delikatnej zdobyczy, takiej jak jaszczurki czy owady. Żadne z cytowanych tu źródeł nie opisuje szczątków owadów wewnątrz Sinosauropteryx."
     }
   },
   "timeRange": {
@@ -64,14 +64,15 @@
   },
   "summary": {
     "text": {
-      "en": "Sinosauropteryx was a small meat-eater, about a metre long, that lived around 125 million years ago in what is now north-eastern China. Its body was covered in thin, hair-like primitive feathers. Named in 1996, it was the first dinosaur other than a bird found with feathers. A tiny lizard was found in the stomach of one fossil. Fossil pigments suggest a dark back, pale belly, banded tail and a dark 'bandit mask' across its eyes.",
-      "pl": "Sinosauropteryx był małym mięsożercą długości około metra, który żył mniej więcej 125 milionów lat temu na terenie dzisiejszych północno-wschodnich Chin. Jego ciało pokrywały cienkie, podobne do włosów prymitywne pióra. Nazwany w 1996 roku, był pierwszym znalezionym z piórami dinozaurem, który nie był ptakiem. W żołądku jednej ze skamieniałości znaleziono malutką jaszczurkę. Skamieniałe barwniki sugerują ciemny grzbiet, jasny brzuch, prążkowany ogon i ciemną „maskę bandyty” na oczach."
+      "en": "Sinosauropteryx was a small meat-eater, about a metre long, that lived around 125 million years ago in what is now north-eastern China. Its body was covered in thin, hair-like primitive feathers. Named in 1996, it was the first dinosaur other than a bird found with feathers. A tiny lizard was found in one fossil's stomach; it may also have eaten insects. Fossil pigments suggest a dark back, pale belly, banded tail and a dark 'bandit mask' across its eyes.",
+      "pl": "Sinosauropteryx był małym mięsożercą długości około metra, który żył mniej więcej 125 milionów lat temu na terenie dzisiejszych północno-wschodnich Chin. Jego ciało pokrywały cienkie, podobne do włosów prymitywne pióra. Nazwany w 1996 roku, był pierwszym znalezionym z piórami dinozaurem, który nie był ptakiem. W żołądku jednej ze skamieniałości znaleziono malutką jaszczurkę; być może jadał też owady. Skamieniałe barwniki sugerują ciemny grzbiet, jasny brzuch, prążkowany ogon i ciemną „maskę bandyty” na oczach."
     },
     "sourceIds": [
       "nhm-sinosauropteryx",
       "zhong-2021",
       "pbdb-sinosauropteryx-prima-occs",
-      "smithwick-2017"
+      "smithwick-2017",
+      "qiu-2025"
     ]
   },
   "funFacts": [
@@ -156,7 +157,7 @@
       "publisher": "National Science Review 12(5): nwaf068",
       "doi": "10.1093/nsr/nwaf068",
       "url": "https://doi.org/10.1093/nsr/nwaf068",
-      "accessed": "2026-11-20"
+      "accessed": "2026-11-22"
     },
     {
       "id": "hendrickx-2025",
@@ -203,5 +204,5 @@
       "accessed": "2026-11-20"
     }
   ],
-  "lastReviewed": "2026-11-20"
+  "lastReviewed": "2026-11-22"
 }
