@@ -193,7 +193,8 @@
     "plesiosaur": "długoszyi gad morski",
     "ichthyosaur": "gad morski o kształcie delfina",
     "silesaurid": "smukły, czworonożny krewny dinozaurów",
-    "dicynodont": "dziobaty krewny ssaków z kłami"
+    "dicynodont": "dziobaty krewny ssaków z kłami",
+    "pachycephalosaur": "dwunożny roślinożerca z kopulastą czaszką"
   },
   "tour": {
     "progress": "Wycieczka: krok {{step}} z {{total}}",

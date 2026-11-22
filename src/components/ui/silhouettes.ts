@@ -11,6 +11,7 @@ export type BodyPlan =
   | 'sauropod'
   | 'prosauropod'
   | 'ornithopod'
+  | 'pachycephalosaur'
   | 'ceratopsian'
   | 'stegosaur'
   | 'ankylosaur'
@@ -54,6 +55,11 @@ export const SILHOUETTES: Record<BodyPlan, Silhouette> = {
     height: 42,
     measure: 'length',
     path: 'M0 17 Q20 12 40 9 Q55 7 66 10 Q75 8 82 5 L92 4 L100 9 L98 13 L90 13 L84 15 Q78 19 74 24 L72 30 L69 31 L70 42 L65 42 L64 31 L58 29 L54 33 L56 42 L50 42 L47 31 L42 26 L38 32 L41 42 L35 42 L32 29 L28 21 Q14 20 0 19 Z',
+  },
+  pachycephalosaur: {
+    height: 40,
+    measure: 'length',
+    path: 'M0 18 Q22 13 45 10 Q60 9 72 13 L80 13 Q83 7 89 7 Q95 7 96 11 L100 15 L98 18 L91 18 L84 19 L78 22 L74 27 L72 26 L72 23 L62 25 L56 28 L57 40 L51 40 L49 30 L45 28 L44 40 L38 40 L37 27 Q30 22 18 21 L0 20 Z',
   },
   ceratopsian: {
     height: 34,
@@ -114,6 +120,7 @@ export function bodyPlanFor(groupPath: readonly string[]): BodyPlan {
   if (has('ceratopsia')) return 'ceratopsian';
   if (has('stegosauria')) return 'stegosaur';
   if (has('ankylosauria')) return 'ankylosaur';
+  if (has('pachycephalosauria')) return 'pachycephalosaur';
   if (has('ornithischia')) return 'ornithopod';
   if (has('sauropoda')) return 'sauropod';
   if (has('sauropodomorpha')) return 'prosauropod';

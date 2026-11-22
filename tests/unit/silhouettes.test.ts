@@ -9,6 +9,7 @@ describe('bodyPlanFor', () => {
     [['dicynodontia'], 'dicynodont'],
     [['pterosauria', 'azhdarchidae'], 'pterosaur'],
     [['dinosauria', 'ornithischia', 'marginocephalia', 'ceratopsia'], 'ceratopsian'],
+    [['dinosauria', 'ornithischia', 'marginocephalia', 'pachycephalosauria'], 'pachycephalosaur'],
   ])('%j → %s', (path, plan) => {
     expect(bodyPlanFor(path)).toBe(plan);
   });

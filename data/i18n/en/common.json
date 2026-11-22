@@ -191,7 +191,8 @@
     "plesiosaur": "long-necked marine reptile",
     "ichthyosaur": "dolphin-shaped marine reptile",
     "silesaurid": "slender four-legged dinosaur relative",
-    "dicynodont": "beaked, tusked relative of mammals"
+    "dicynodont": "beaked, tusked relative of mammals",
+    "pachycephalosaur": "two-legged plant-eater with a domed skull"
   },
   "tour": {
     "progress": "Tour: step {{step}} of {{total}}",
