@@ -1,0 +1,150 @@
+{
+  "slug": "leaellynasaura",
+  "scientificName": "Leaellynasaura amicagraphica",
+  "genus": "Leaellynasaura",
+  "nameMeaning": {
+    "text": {
+      "en": "Leaellyn's lizard",
+      "pl": "jaszczur Leaellyn"
+    },
+    "sourceIds": ["nhm-leaellynasaura"]
+  },
+  "group": "ornithopoda",
+  "groupSourceIds": ["nhm-leaellynasaura", "pbdb-leaellynasaura-amicagraphica", "woodward-2018"],
+  "isDinosaur": true,
+  "taxonomy": {
+    "status": "valid",
+    "note": {
+      "en": "The holotype is only a fragmentary skull. Partial skeletons found close to it at Dinosaur Cove, including one with a long tail, were later referred to the species, but Herne and colleagues (2016, as summarised in Herne et al. 2018) considered all those referrals inconclusive.",
+      "pl": "Holotyp to jedynie fragmentaryczna czaszka. Niekompletne szkielety znalezione w jego pobliżu w Dinosaur Cove, w tym jeden z długim ogonem, przypisano później temu gatunkowi, ale Herne i współpracownicy (2016, według podsumowania w Herne i in. 2018) uznali wszystkie te przypisania za niepewne."
+    },
+    "sourceIds": ["herne-2018"]
+  },
+  "diet": {
+    "value": "herbivore",
+    "confidence": "probable",
+    "sourceIds": ["nhm-leaellynasaura", "pbdb-leaellynasaura-amicagraphica"]
+  },
+  "timeRange": {
+    "startMa": 113.2,
+    "endMa": 110.1,
+    "sourceIds": ["pbdb-leaellynasaura-occs", "herne-2018", "nhm-leaellynasaura"],
+    "note": {
+      "en": "PBDB dates the Eumeralla Formation records to the early Albian (113.2-110.1 Ma, stage bounds). Herne et al. (2018) place the Otway fossil sites in a spore-pollen zone that starts at the Aptian-Albian boundary (about 113 Ma) and may reach the middle Albian (about 109.5 Ma), with Dinosaur Cove among the younger sites. NHM gives 115-110 Ma.",
+      "pl": "PBDB datuje okazy z formacji Eumeralla na wczesny alb (113,2–110,1 mln lat temu, granice piętra). Herne i in. (2018) umieszczają stanowiska z rejonu Otway w poziomie sporowo-pyłkowym, który zaczyna się na granicy aptu i albu (około 113 mln lat temu) i może sięgać środkowego albu (około 109,5 mln lat temu); Dinosaur Cove należy do młodszych stanowisk. NHM podaje 115–110 mln lat temu."
+    }
+  },
+  "periods": ["cretaceous"],
+  "size": {},
+  "locations": [
+    {
+      "continent": "australia",
+      "countryCode": "AU",
+      "formation": "Eumeralla",
+      "sourceIds": ["pbdb-leaellynasaura-occs", "herne-2018"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "Rich & Rich",
+    "year": 1989,
+    "note": {
+      "en": "Found at Dinosaur Cove, a sea-cliff site in Victoria, Australia, excavated partly by tunnelling. PBDB credits the name to Rich & Vickers-Rich.",
+      "pl": "Znaleziony w Dinosaur Cove, stanowisku w nadmorskim klifie w stanie Wiktoria w Australii, eksplorowanym częściowo za pomocą tuneli. PBDB przypisuje nazwę Richowi i Vickers-Rich."
+    },
+    "sourceIds": ["herne-2018", "nhm-leaellynasaura", "pbdb-leaellynasaura-amicagraphica"]
+  },
+  "summary": {
+    "text": {
+      "en": "Leaellynasaura was a small plant-eating dinosaur from Dinosaur Cove on the coast of Victoria, Australia, about 113 to 110 million years ago. Back then Australia lay inside the Antarctic Circle, so animals there lived through months of twilight and cool weather. Its name means Leaellyn's lizard. The species is based on a partial skull; whether skeletons found nearby belong to it is still uncertain.",
+      "pl": "Leaellynasaura był małym roślinożernym dinozaurem z Dinosaur Cove na wybrzeżu stanu Wiktoria w Australii, żyjącym około 113–110 mln lat temu. Australia leżała wtedy za kołem podbiegunowym południowym, więc tutejsze zwierzęta przeżywały miesiące półmroku i chłodu. Jego nazwa oznacza „jaszczur Leaellyn”. Gatunek opisano na podstawie niekompletnej czaszki; wciąż nie wiadomo, czy szkielety znalezione w pobliżu należą do niego."
+    },
+    "sourceIds": ["nhm-leaellynasaura", "herne-2018", "woodward-2018", "pbdb-leaellynasaura-occs"]
+  },
+  "funFacts": [
+    {
+      "text": {
+        "en": "In the Early Cretaceous, southern Victoria lay at about 68 degrees south, inside the Antarctic Circle, where polar winters bring long periods of darkness or twilight.",
+        "pl": "We wczesnej kredzie południowa Wiktoria leżała na około 68 stopniu szerokości południowej, za kołem podbiegunowym, gdzie zimą panują długie okresy ciemności lub półmroku."
+      },
+      "sourceIds": ["herne-2018", "woodward-2018"]
+    }
+  ],
+  "famous": false,
+  "images": [
+    {
+      "commonsFile": "File:Leaellynasaura-amicagraphica-dinosaur-skull-holotype-p-185991-1330043-large.jpg",
+      "kind": "skull",
+      "alt": {
+        "en": "Skull of the holotype of Leaellynasaura amicagraphica.",
+        "pl": "Czaszka holotypu Leaellynasaura amicagraphica."
+      }
+    }
+  ],
+  "uncertain": [
+    {
+      "field": "size.lengthM",
+      "note": {
+        "en": "NHM gives 2.0 m, but the holotype is a fragmentary skull and the referral of the skeletons found nearby has been called inconclusive, so no length is given.",
+        "pl": "NHM podaje 2,0 m, ale holotyp to fragmentaryczna czaszka, a przypisanie szkieletów znalezionych w pobliżu uznano za niepewne, więc długości nie podano."
+      }
+    },
+    {
+      "field": "size.massKg",
+      "note": {
+        "en": "No verified mass estimate found.",
+        "pl": "Nie znaleziono zweryfikowanego oszacowania masy."
+      }
+    },
+    {
+      "field": "group",
+      "note": {
+        "en": "Placement is unsettled. NHM lists it in Ornithopoda (Euornithopoda), PBDB puts it in Elasmaria within Euiguanodontia, and Woodward et al. (2018) treat it among basal-ornithopod 'hypsilophodontids'. The broader node Ornithopoda is used.",
+        "pl": "Pozycja systematyczna nie jest ustalona. NHM zalicza go do Ornithopoda (Euornithopoda), PBDB do Elasmaria w obrębie Euiguanodontia, a Woodward i in. (2018) – do bazalnych ornitopodów z grupy „hipsylofodontów”. Użyto szerszego węzła Ornithopoda."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "herne-2018",
+      "title": "A new small-bodied ornithopod (Dinosauria, Ornithischia) from a deep, high-energy Early Cretaceous river of the Australian–Antarctic rift system",
+      "authors": "Herne M.C., Tait A.M., Weisbecker V., Hall M., Nair J.P., Cleeland M., Salisbury S.W.",
+      "year": 2018,
+      "publisher": "PeerJ 5: e4113",
+      "doi": "10.7717/peerj.4113",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5767335/",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "woodward-2018",
+      "title": "The bone microstructure of polar “hypsilophodontid” dinosaurs from Victoria, Australia",
+      "authors": "Woodward H.N., Rich T.H., Vickers-Rich P.",
+      "year": 2018,
+      "publisher": "Scientific Reports 8: 1162",
+      "doi": "10.1038/s41598-018-19362-6",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5773672/",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "nhm-leaellynasaura",
+      "title": "Leaellynasaura | Dino Directory",
+      "publisher": "Natural History Museum, London",
+      "url": "https://www.nhm.ac.uk/discover/dino-directory/leaellynasaura.html",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-leaellynasaura-amicagraphica",
+      "title": "Leaellynasaura amicagraphica (taxon 57102)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/single.json?name=Leaellynasaura%20amicagraphica&show=attr,parent",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-leaellynasaura-occs",
+      "title": "Occurrences of Leaellynasaura (stratigraphy and location)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Leaellynasaura&show=strat,loc",
+      "accessed": "2026-11-22"
+    }
+  ],
+  "lastReviewed": "2026-11-22"
+}

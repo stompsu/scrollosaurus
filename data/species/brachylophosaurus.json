@@ -1,0 +1,189 @@
+{
+  "slug": "brachylophosaurus",
+  "scientificName": "Brachylophosaurus canadensis",
+  "genus": "Brachylophosaurus",
+  "nameMeaning": {
+    "text": {
+      "en": "short-crested lizard",
+      "pl": "jaszczur o krótkim grzebieniu"
+    },
+    "sourceIds": ["nhm-brachylophosaurus"]
+  },
+  "group": "hadrosauridae",
+  "groupSourceIds": [
+    "pbdb-brachylophosaurus-canadensis",
+    "freedman-fowler-horner-2015",
+    "nhm-brachylophosaurus"
+  ],
+  "isDinosaur": true,
+  "taxonomy": {
+    "status": "valid"
+  },
+  "diet": {
+    "value": "herbivore",
+    "confidence": "established",
+    "sourceIds": ["nhm-brachylophosaurus", "tweet-2008"],
+    "note": {
+      "en": "Plant fragments, mostly leaves, inside a subadult skeleton from Montana are interpreted as probable gut contents (Tweet et al. 2008, read from the abstract).",
+      "pl": "Fragmenty roślin, głównie liści, znalezione w szkielecie młodego osobnika z Montany interpretuje się jako prawdopodobną zawartość przewodu pokarmowego (Tweet i in. 2008, według streszczenia)."
+    }
+  },
+  "timeRange": {
+    "startMa": 79.5,
+    "endMa": 77.8,
+    "sourceIds": ["freedman-fowler-horner-2015"],
+    "note": {
+      "en": "Bracket from Freedman Fowler & Horner (2015): B. canadensis comes from the middle Oldman Formation (Comrey Sandstone) and its Montana equivalent, younger than Probrachylophosaurus (79.8-79.5 Ma) and older than the upper Oldman Formation (dated 77.8 Ma). No date for the fossil level itself was given. NHM's 89-88 Ma does not match this and is not used.",
+      "pl": "Przedział według Freedman Fowler i Hornera (2015): B. canadensis pochodzi ze środkowej części formacji Oldman (piaskowiec Comrey) i jej odpowiednika w Montanie, młodszych niż Probrachylophosaurus (79,8–79,5 mln lat temu) i starszych niż górna część formacji Oldman (datowana na 77,8 mln lat temu). Nie podano daty samego poziomu ze skamieniałościami. Wartość NHM (89–88 mln lat temu) nie zgadza się z tym i nie została użyta."
+    }
+  },
+  "periods": ["cretaceous"],
+  "size": {
+    "lengthM": {
+      "value": [7, 7],
+      "sourceIds": ["nhm-brachylophosaurus"],
+      "note": {
+        "en": "Single museum figure (NHM Dino Directory); method not stated.",
+        "pl": "Jedyna wartość muzealna (NHM Dino Directory); metody nie podano."
+      }
+    }
+  },
+  "locations": [
+    {
+      "continent": "north-america",
+      "countryCode": "CA",
+      "formation": "Oldman",
+      "sourceIds": ["freedman-fowler-horner-2015", "pbdb-brachylophosaurus-occs"]
+    },
+    {
+      "continent": "north-america",
+      "countryCode": "US",
+      "formation": "Judith River",
+      "sourceIds": ["freedman-fowler-horner-2015", "pbdb-brachylophosaurus-occs", "gpdm-leonardo"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "Sternberg",
+    "year": 1953,
+    "note": {
+      "en": "The holotype skull was collected in 1936 from the Oldman Formation in what is now Dinosaur Provincial Park, Alberta.",
+      "pl": "Czaszkę holotypu wydobyto w 1936 roku z formacji Oldman na terenie dzisiejszego Parku Prowincjonalnego Dinozaurów w Albercie."
+    },
+    "sourceIds": [
+      "pbdb-brachylophosaurus-canadensis",
+      "freedman-fowler-horner-2015",
+      "nhm-brachylophosaurus"
+    ]
+  },
+  "summary": {
+    "text": {
+      "en": "Brachylophosaurus was a duck-billed dinosaur that lived about 79 to 78 million years ago in what are now Alberta and Montana. Adults had a flat, paddle-shaped crest on top of the head. A young Brachylophosaurus nicknamed Leonardo is a dinosaur mummy: more than 90% of it is covered with skin impressions, and plant fragments inside its body, mostly leaves, are probably its last meal.",
+      "pl": "Brachylophosaurus był kaczodziobym dinozaurem, który żył około 79–78 mln lat temu na terenie dzisiejszej Alberty i Montany. Dorosłe osobniki miały na głowie płaski grzebień w kształcie wiosła. Młody Brachylophosaurus nazwany „Leonardo” to dinozaurowa „mumia”: ponad 90% jego ciała pokrywają odciski skóry, a fragmenty roślin w jego wnętrzu, głównie liście, to zapewne jego ostatni posiłek."
+    },
+    "sourceIds": ["freedman-fowler-horner-2015", "gpdm-leonardo", "tweet-2008"]
+  },
+  "funFacts": [
+    {
+      "text": {
+        "en": "Leonardo, found in Phillips County, Montana, in 2000, was listed in the 2004 Guinness Book of World Records as the best-preserved dinosaur.",
+        "pl": "Leonardo, znaleziony w 2000 roku w hrabstwie Phillips w Montanie, trafił do Księgi rekordów Guinnessa z 2004 roku jako najlepiej zachowany dinozaur."
+      },
+      "sourceIds": ["gpdm-leonardo"]
+    },
+    {
+      "text": {
+        "en": "Tiny tunnels in Leonardo's gut region were probably made by worm-like parasites.",
+        "pl": "Drobne kanaliki w okolicy przewodu pokarmowego Leonarda wydrążyły prawdopodobnie robakowate pasożyty."
+      },
+      "sourceIds": ["tweet-2016", "gpdm-leonardo"]
+    }
+  ],
+  "famous": false,
+  "images": [
+    {
+      "commonsFile": "File:Royal Tyrrell Brachylophosaurus (cropped).jpg",
+      "kind": "skull",
+      "alt": {
+        "en": "Original fossil skull of Brachylophosaurus canadensis (TMP 1990.104.0001), not a cast.",
+        "pl": "Oryginalna skamieniała czaszka Brachylophosaurus canadensis (TMP 1990.104.0001), nie odlew."
+      }
+    }
+  ],
+  "uncertain": [
+    {
+      "field": "size.massKg",
+      "note": {
+        "en": "No verified mass estimate found.",
+        "pl": "Nie znaleziono zweryfikowanego oszacowania masy."
+      }
+    },
+    {
+      "field": "timeRange",
+      "note": {
+        "en": "The range is bracketed by dated layers above and below the fossils, not dated directly. NHM gives 89-88 Ma, which disagrees with the literature.",
+        "pl": "Zasięg wyznaczają datowane warstwy powyżej i poniżej skamieniałości, a nie bezpośrednie datowanie. NHM podaje 89–88 mln lat temu, co nie zgadza się z literaturą."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "freedman-fowler-horner-2015",
+      "title": "A New Brachylophosaurin Hadrosaur (Dinosauria: Ornithischia) with an Intermediate Nasal Crest from the Campanian Judith River Formation of Northcentral Montana",
+      "authors": "Freedman Fowler E.A., Horner J.R.",
+      "year": 2015,
+      "publisher": "PLOS ONE 10(11): e0141304",
+      "doi": "10.1371/journal.pone.0141304",
+      "url": "https://doi.org/10.1371/journal.pone.0141304",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "tweet-2008",
+      "title": "Probable Gut Contents Within A Specimen of Brachylophosaurus Canadensis (Dinosauria: Hadrosauridae) From the Upper Cretaceous Judith River Formation of Montana",
+      "authors": "Tweet J.S., Chin K., Braman D.R., Murphy N.L.",
+      "year": 2008,
+      "publisher": "PALAIOS 23: 624-635",
+      "doi": "10.2110/palo.2007.p07-044r",
+      "url": "https://doi.org/10.2110/palo.2007.p07-044r",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "tweet-2016",
+      "title": "Trace fossils of possible parasites inside the gut contents of a hadrosaurid dinosaur, Upper Cretaceous Judith River Formation, Montana",
+      "authors": "Tweet J., Chin K., Ekdale A.A.",
+      "year": 2016,
+      "publisher": "Journal of Paleontology 90: 279-287",
+      "doi": "10.1017/jpa.2016.43",
+      "url": "https://doi.org/10.1017/jpa.2016.43",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "gpdm-leonardo",
+      "title": "Leonardo",
+      "publisher": "Great Plains Dinosaur Museum",
+      "url": "https://greatplainsdinosaurs.org/leonardo",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "nhm-brachylophosaurus",
+      "title": "Brachylophosaurus | Dino Directory",
+      "publisher": "Natural History Museum, London",
+      "url": "https://www.nhm.ac.uk/discover/dino-directory/brachylophosaurus.html",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-brachylophosaurus-canadensis",
+      "title": "Brachylophosaurus canadensis (taxon 65213)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/single.json?name=Brachylophosaurus%20canadensis&show=attr,parent",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-brachylophosaurus-occs",
+      "title": "Occurrences of Brachylophosaurus (stratigraphy and location)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Brachylophosaurus&show=strat,loc",
+      "accessed": "2026-11-22"
+    }
+  ],
+  "lastReviewed": "2026-11-22"
+}

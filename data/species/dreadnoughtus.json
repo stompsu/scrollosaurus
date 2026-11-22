@@ -1,0 +1,159 @@
+{
+  "slug": "dreadnoughtus",
+  "scientificName": "Dreadnoughtus schrani",
+  "genus": "Dreadnoughtus",
+  "nameMeaning": {
+    "text": {
+      "en": "named after dreadnought battleships",
+      "pl": "nazwany na cześć pancerników typu drednot"
+    },
+    "sourceIds": ["lacovara-2014"]
+  },
+  "group": "titanosauria",
+  "groupSourceIds": ["lacovara-2014", "pbdb-dreadnoughtus-schrani"],
+  "isDinosaur": true,
+  "taxonomy": {
+    "status": "valid"
+  },
+  "diet": {
+    "value": "herbivore",
+    "confidence": "established",
+    "sourceIds": ["pbdb-dreadnoughtus-schrani"]
+  },
+  "timeRange": {
+    "startMa": 83.6,
+    "endMa": 66,
+    "sourceIds": ["lacovara-2014", "pbdb-dreadnoughtus-occs"],
+    "note": {
+      "en": "Lacovara et al. (2014) date the Cerro Fortaleza Formation to the Campanian-Maastrichtian (about 84-66 Ma); the bounds here are the ICS stage ages. PBDB lists both specimens as Campanian only (83.6-72.2 Ma).",
+      "pl": "Lacovara i in. (2014) datują formację Cerro Fortaleza na kampan–mastrycht (około 84–66 mln lat temu); granice podano według wieku pięter ICS. PBDB przypisuje oba okazy wyłącznie do kampanu (83,6–72,2 mln lat temu)."
+    }
+  },
+  "periods": ["cretaceous"],
+  "size": {
+    "lengthM": {
+      "value": [26, 26],
+      "sourceIds": ["lacovara-2014"],
+      "note": {
+        "en": "Provisional estimate for the holotype by Lacovara et al. (2014); most of the neck is missing.",
+        "pl": "Wstępne oszacowanie dla holotypu według Lacovary i in. (2014); brakuje większości szyi."
+      }
+    },
+    "massKg": {
+      "value": [22117, 59291],
+      "sourceIds": ["lacovara-2014", "bates-2015"],
+      "note": {
+        "en": "Lacovara et al. (2014) estimated about 59,300 kg from limb-bone circumferences. Bates et al. (2015) built 3D volume models of the same skeleton giving 22,117-38,225 kg, called the 59,300 kg figure highly implausible, and found that masses above 40,000 kg would need unusually high body densities. Bates et al. consider the lower estimates the most plausible.",
+        "pl": "Lacovara i in. (2014) oszacowali masę na około 59 300 kg na podstawie obwodu kości kończyn. Bates i in. (2015) zbudowali trójwymiarowe modele objętościowe tego samego szkieletu, które dały 22 117–38 225 kg, uznali wartość 59 300 kg za wysoce nieprawdopodobną i stwierdzili, że masa powyżej 40 000 kg wymagałaby niezwykle dużej gęstości ciała. Bates i in. uważają niższe szacunki za najbardziej prawdopodobne."
+      }
+    }
+  },
+  "locations": [
+    {
+      "continent": "south-america",
+      "countryCode": "AR",
+      "formation": "Cerro Fortaleza",
+      "sourceIds": ["lacovara-2014", "pbdb-dreadnoughtus-occs"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "Lacovara et al.",
+    "year": 2014,
+    "note": {
+      "en": "Described from two skeletons from Santa Cruz Province, Argentina: the holotype MPM-PV 1156 and a slightly smaller individual, MPM-PV 3546.",
+      "pl": "Opisany na podstawie dwóch szkieletów z prowincji Santa Cruz w Argentynie: holotypu MPM-PV 1156 i nieco mniejszego osobnika MPM-PV 3546."
+    },
+    "sourceIds": ["lacovara-2014", "pbdb-dreadnoughtus-schrani"]
+  },
+  "summary": {
+    "text": {
+      "en": "Dreadnoughtus was a gigantic plant-eating titanosaur from Patagonia, Argentina, in the Late Cretaceous. Its name recalls the huge dreadnought battleships of the early 20th century. It was about 26 metres long, and it was still growing when it died. In 2014 its mass was put at about 59 tonnes, but a 2015 study argued it was probably much lighter, with 3D models giving roughly 22 to 38 tonnes.",
+      "pl": "Dreadnoughtus był gigantycznym roślinożernym tytanozaurem z Patagonii w Argentynie, żyjącym w późnej kredzie. Jego nazwa nawiązuje do ogromnych pancerników typu drednot z początku XX wieku. Miał około 26 metrów długości i wciąż rósł, kiedy zginął. W 2014 roku jego masę oszacowano na około 59 ton, ale badanie z 2015 roku uznało, że był prawdopodobnie znacznie lżejszy – modele trójwymiarowe dały mniej więcej 22–38 ton."
+    },
+    "sourceIds": ["lacovara-2014", "bates-2015", "pbdb-dreadnoughtus-schrani"]
+  },
+  "funFacts": [
+    {
+      "text": {
+        "en": "The holotype preserves about 70% of the bones behind the skull and about 45% of the whole skeleton.",
+        "pl": "Holotyp zachował około 70% kości szkieletu pozaczaszkowego i około 45% całego szkieletu."
+      },
+      "sourceIds": ["lacovara-2014"]
+    },
+    {
+      "text": {
+        "en": "The species name schrani honours Adam Schran, an American entrepreneur who supported the research.",
+        "pl": "Nazwa gatunkowa schrani upamiętnia Adama Schrana, amerykańskiego przedsiębiorcę, który wspierał badania."
+      },
+      "sourceIds": ["lacovara-2014"]
+    }
+  ],
+  "famous": false,
+  "images": [
+    {
+      "commonsFile": "File:Dreadnoughtus Tail Composite Image (by Kenneth Lacovara).jpg",
+      "kind": "fossil",
+      "alt": {
+        "en": "Composite image of the fossil tail of Dreadnoughtus, with a 1 metre scale bar.",
+        "pl": "Złożony obraz skamieniałego ogona Dreadnoughtus ze skalą 1 metra."
+      },
+      "note": {
+        "en": "Only the tail is shown; it is a composite of photographs, not a mounted skeleton.",
+        "pl": "Widoczny jest tylko ogon; to zestawienie fotografii, a nie zmontowany szkielet."
+      }
+    }
+  ],
+  "uncertain": [
+    {
+      "field": "size.massKg",
+      "note": {
+        "en": "Published estimates for the same skeleton range from about 22 to 59 tonnes depending on the method; the original 59-tonne figure has been called implausible.",
+        "pl": "Opublikowane szacunki dla tego samego szkieletu wahają się od około 22 do 59 ton w zależności od metody; pierwotną wartość 59 ton uznano za nieprawdopodobną."
+      }
+    },
+    {
+      "field": "timeRange",
+      "note": {
+        "en": "Only stage-level ages are available: Campanian-Maastrichtian (Lacovara et al. 2014) or Campanian (PBDB). No radiometric date was found.",
+        "pl": "Dostępny jest tylko wiek na poziomie pięter: kampan–mastrycht (Lacovara i in. 2014) lub kampan (PBDB). Nie znaleziono datowania radiometrycznego."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "lacovara-2014",
+      "title": "A gigantic, exceptionally complete titanosaurian sauropod dinosaur from southern Patagonia, Argentina",
+      "authors": "Lacovara K.J., Lamanna M.C., Ibiricu L.M., Poole J.C., Schroeter E.R., Ullmann P.V., Voegele K.K., Boles Z.M., Carter A.M., Fowler E.K., Egerton V.M., Moyer A.E., Coughenour C.L., Schein J.P., Harris J.D., Martínez R.D., Novas F.E.",
+      "year": 2014,
+      "publisher": "Scientific Reports 4: 6196",
+      "doi": "10.1038/srep06196",
+      "url": "https://doi.org/10.1038/srep06196",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "bates-2015",
+      "title": "Downsizing a giant: re-evaluating Dreadnoughtus body mass",
+      "authors": "Bates K.T., Falkingham P.L., Macaulay S., Brassey C., Maidment S.C.R.",
+      "year": 2015,
+      "publisher": "Biology Letters 11",
+      "doi": "10.1098/rsbl.2015.0215",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4528471/",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-dreadnoughtus-schrani",
+      "title": "Dreadnoughtus schrani (taxon 304824)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/single.json?name=Dreadnoughtus%20schrani&show=attr,parent",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-dreadnoughtus-occs",
+      "title": "Occurrences of Dreadnoughtus (stratigraphy and location)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Dreadnoughtus&show=strat,loc",
+      "accessed": "2026-11-22"
+    }
+  ],
+  "lastReviewed": "2026-11-22"
+}
