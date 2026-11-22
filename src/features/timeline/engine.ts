@@ -356,18 +356,25 @@ export class TimelineEngine {
       this.appliedK = k;
       this.appliedLength = this.length;
       const size = h ? 'width' : 'height';
+      // Nodes survive a switch of orientation, so clear the size left on the other axis.
+      const other = h ? 'height' : 'width';
+      const setSize = (el: HTMLElement | null, px: number) => {
+        if (!el) return;
+        el.style[size] = `${px}px`;
+        el.style.removeProperty(other);
+      };
       for (const m of this.markers) {
         const bar = Math.max(MIN_BAR_PX, k * (m.e - m.s));
         const pos = k * m.s + (m.endAnchored ? bar : 0);
         m.el.style.transform = h ? `translate3d(${pos}px,0,0)` : `translate3d(0,${pos}px,0)`;
-        if (m.bar) m.bar.style[size] = `${bar}px`;
-        if (m.startWhisker) m.startWhisker.style[size] = `${k * m.us}px`;
-        if (m.endWhisker) m.endWhisker.style[size] = `${k * m.ue}px`;
+        setSize(m.bar, bar);
+        setSize(m.startWhisker, k * m.us);
+        setSize(m.endWhisker, k * m.ue);
       }
       for (const b of this.bands) {
         const pos = k * b.s;
         b.el.style.transform = h ? `translate3d(${pos}px,0,0)` : `translate3d(0,${pos}px,0)`;
-        b.el.style[size] = `${k * (b.e - b.s)}px`;
+        setSize(b.el, k * (b.e - b.s));
       }
       for (const p of this.points) {
         const pos = k * p.s;
