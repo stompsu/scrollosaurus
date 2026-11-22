@@ -83,6 +83,8 @@ export interface TimelineProps {
    * only move the highlight.
    */
   highlightedSlug?: string;
+  /** When nothing is highlighted: the species whose marker the opening view scrolls into view. */
+  openingSlug?: string;
   /** The opening window, read on mount. Defaults to the window around `highlightedSlug`. */
   initialRange?: MaRange;
   /** Called with the visible window each time the view settles after moving. */
@@ -321,6 +323,7 @@ export function Timeline({
   filters,
   onSelect,
   highlightedSlug,
+  openingSlug,
   initialRange: initialRangeProp,
   onViewChange,
   onPreview,
@@ -516,10 +519,15 @@ export function Timeline({
     const engine = engineRef.current;
     if (!engine) return;
     engine.setNodes({ markerLayer, bandLayers: [bandLayer, gridLayer] }, crossExtent);
-    // Once the opening view has rendered, scroll the lanes so the highlighted marker shows.
+    // Once the opening view has rendered, scroll the lanes so the highlighted (or opening) marker
+    // shows.
     if (pendingReveal.current && snap !== firstSnap.current) {
       pendingReveal.current = false;
-      const current = markerLayer.querySelector<HTMLElement>('[aria-current="true"]');
+      const current =
+        markerLayer.querySelector<HTMLElement>('[aria-current="true"]') ??
+        (openingSlug === undefined
+          ? null
+          : markerLayer.querySelector<HTMLElement>(`[data-slug="${CSS.escape(openingSlug)}"]`));
       if (current) engine.reveal(current, false);
     }
     if (revealSlug.current !== null) {

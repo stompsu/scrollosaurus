@@ -128,6 +128,9 @@ export default function TimelinePage() {
     [items, filters.nonDinosaurs],
   );
 
+  // A hidden species (e.g. a pterosaur) opens on the primary species, scrolled into view.
+  const openingSlug = highlighted === undefined && hidden ? primary?.slug : undefined;
+
   // Read once by the timeline on mount: the URL's window, else the selected or primary species.
   const [initialRange] = useState<MaRange | undefined>(() => {
     if (view.window) return view.window;
@@ -372,6 +375,7 @@ export default function TimelinePage() {
         filters={timelineFilters}
         onSelect={onSelect}
         {...(highlighted === undefined ? {} : { highlightedSlug: highlighted })}
+        {...(openingSlug === undefined ? {} : { openingSlug })}
         {...(initialRange ? { initialRange } : {})}
         onViewChange={onViewChange}
         onPreview={setPreviewSlug}
