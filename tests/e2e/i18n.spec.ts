@@ -1,5 +1,5 @@
 import AxeBuilder from '@axe-core/playwright';
-import { expect, test } from '@playwright/test';
+import { expect, test, type Page } from '@playwright/test';
 
 let consoleErrors: string[] = [];
 test.beforeEach(({ page }) => {
@@ -14,6 +14,16 @@ test.beforeEach(({ page }) => {
 test.afterEach(() => {
   expect(consoleErrors).toEqual([]);
 });
+
+/**
+ * Opens a Polish page and waits for the app to render it: Polish pages render once their strings
+ * chunk has loaded, which can be just after the `load` event that `goto` waits for.
+ */
+async function gotoPolish(page: Page, path: string) {
+  await page.goto(path);
+  await expect(page.locator('html')).toHaveAttribute('lang', 'pl');
+  await expect(page.getByRole('main')).toBeVisible();
+}
 
 test('Polish pages are served directly, in Polish, with lang="pl"', async ({ page }) => {
   for (const path of ['pl/', 'pl/about/', 'pl/credits/', 'pl/species/tyrannosaurus/']) {
@@ -81,14 +91,13 @@ test('search finds Polish name meanings', async ({ page }) => {
 
 test('no axe violations in Polish', async ({ page }) => {
   for (const path of ['pl/', 'pl/species/stegosaurus', 'pl/credits/', 'pl/?tour=2']) {
-    await page.goto(path);
-    await expect(page.locator('html')).toHaveAttribute('lang', 'pl');
+    await gotoPolish(page, path);
     expect((await new AxeBuilder({ page }).analyze()).violations).toEqual([]);
   }
 });
 
 test('no axe violations in Polish: about, filters open, light theme', async ({ page }) => {
-  await page.goto('pl/about/');
+  await gotoPolish(page, 'pl/about/');
   expect((await new AxeBuilder({ page }).analyze()).violations).toEqual([]);
   await page.goto('pl/');
   await page.getByTestId('filters-toggle').click();
