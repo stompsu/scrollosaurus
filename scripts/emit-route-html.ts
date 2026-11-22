@@ -1,7 +1,8 @@
 /**
  * After `vite build`, writes dist/<path>/index.html for every static route so GitHub Pages
  * serves deep links with a 200 status, in English and under pl/ in Polish (with lang="pl" in the
- * HTML and a preload of the Polish strings, so the language is right before the app starts). dist/404.html renders the not-found page.
+ * HTML and a preload of the Polish strings, so the language is right before the app starts).
+ * dist/404.html renders the not-found page.
  */
 import { copyFile, mkdir, readdir, readFile, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';

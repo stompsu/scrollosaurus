@@ -41,6 +41,7 @@ export function isLangLoaded(lang: Lang): boolean {
 export function loadLang(lang: Lang): Promise<i18n> {
   const ready = instances.get(lang);
   if (ready) return Promise.resolve(ready);
+  if (lang !== 'pl') return Promise.reject(new Error(`No strings for "${lang}"`));
   let promise = pending.get(lang);
   if (!promise) {
     promise = import('./i18n-pl').then(({ common, geology }) => {

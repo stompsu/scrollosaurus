@@ -222,5 +222,11 @@
     "heading": "Lost in deep time",
     "text": "This page doesn’t exist.",
     "back": "Back to the timeline"
+  },
+  "loadError": {
+    "title": "This page couldn’t load",
+    "text": "Part of the site didn’t download, perhaps because of the connection or a new version of the site.",
+    "retry": "Try again",
+    "english": "Open the English page"
   }
 }

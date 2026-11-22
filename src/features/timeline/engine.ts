@@ -443,16 +443,14 @@ export class TimelineEngine {
    * Commits once the view has rested for COMMIT_DEBOUNCE_MS, marking the commit as settled. Not
    * during an animated zoom: a busy main thread can leave more than that between two of its frames,
    * and a mid-animation window must not be reported (and written to the URL) as settled. The
-   * animation's last frame commits the settled view itself.
+   * animation's last frame (or the input that cancels it) commits the view itself, so the timer
+   * simply stands down.
    */
   private scheduleTrailingCommit(): void {
     clearTimeout(this.commitTimer);
     if (this.destroyed) return;
     this.commitTimer = setTimeout(() => {
-      if (this.tweening) {
-        this.scheduleTrailingCommit();
-        return;
-      }
+      if (this.tweening) return;
       const c = this.committed?.snap;
       const s = this.snapshot;
       if (

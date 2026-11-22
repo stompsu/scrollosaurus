@@ -2,6 +2,7 @@ import { act, fireEvent, render, screen } from '@testing-library/react';
 import { createRef } from 'react';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import { Timeline, type TimelineHandle } from '@/features/timeline';
+import { COMMIT_DEBOUNCE_MS, ZOOM_ANIMATION_MS } from '@/features/timeline/config';
 import { primarySpeciesSlug, species } from '@/lib/species';
 
 const band = (id: string) => screen.getByTestId(`band-${id}`);
@@ -131,14 +132,16 @@ describe('<Timeline /> settling', () => {
       });
       runFrames();
     }
-    // ...then a 200 ms stall: longer than the commit debounce, shorter than the zoom.
+    // ...then a stall longer than the commit debounce that still ends before the zoom would.
+    const stall = COMMIT_DEBOUNCE_MS + 50;
+    expect(32 + stall).toBeLessThan(ZOOM_ANIMATION_MS);
     act(() => {
-      vi.advanceTimersByTime(200);
+      vi.advanceTimersByTime(stall);
     });
     expect(onViewChange).not.toHaveBeenCalled();
 
     act(() => {
-      vi.advanceTimersByTime(100);
+      vi.advanceTimersByTime(ZOOM_ANIMATION_MS);
     });
     runFrames();
     runFrames();
