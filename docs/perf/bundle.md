@@ -25,8 +25,9 @@ parts don't add up to the total):
 | minisearch                                                  | 17 kB  | 6 kB       |
 | App code in `src/` (largest: Timeline, engine, drawer)      | 82 kB  | 25 kB      |
 
-So most of the growth since Phase 5 (166.8 kB) came from i18next (new in Phase 6) and from the
-species index growing from 34 to 103 species, not from the strings themselves.
+Of the growth since Phase 5 (166.8 kB), i18next (new in Phase 6) accounts for about 17 kB, and the
+species index, which grew from 34 to 103 species, for most of the rest (the Phase 5 index wasn't
+measured separately). The UI strings themselves were about 4 kB.
 
 ## Options not taken yet (need an owner decision)
 
