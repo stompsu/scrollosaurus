@@ -1,0 +1,153 @@
+{
+  "slug": "patagotitan",
+  "scientificName": "Patagotitan mayorum",
+  "genus": "Patagotitan",
+  "nameMeaning": {
+    "text": {
+      "en": "titan from Patagonia",
+      "pl": "tytan z Patagonii"
+    },
+    "sourceIds": ["nhm-patagotitan"]
+  },
+  "group": "titanosauria",
+  "groupSourceIds": ["carballido-2017", "pbdb-genera", "nhm-patagotitan"],
+  "isDinosaur": true,
+  "taxonomy": {
+    "status": "valid",
+    "note": {
+      "en": "A giant titanosaur (Carballido et al. 2017). PBDB places it in Eutitanosauria.",
+      "pl": "Olbrzymi tytanozaur (Carballido i in. 2017). PBDB umieszcza go w grupie Eutitanosauria."
+    },
+    "sourceIds": ["carballido-2017", "pbdb-genera"]
+  },
+  "diet": {
+    "value": "herbivore",
+    "confidence": "established",
+    "sourceIds": ["nhm-patagotitan", "pbdb-genera"]
+  },
+  "timeRange": {
+    "startMa": 113.2,
+    "endMa": 100.5,
+    "sourceIds": ["otero-2020", "pbdb-occs", "nhm-patagotitan"],
+    "note": {
+      "en": "Otero et al. (2020) give a late Albian age for the Cerro Barcino Formation beds. PBDB dates the type occurrence (Cerro Castaño Member, Chubut, Argentina) only to the Albian; the Ma values are the ICS v2024/12 Albian stage boundaries. NHM gives about 101 Ma. A radiometric date reported in the original description could not be checked.",
+      "pl": "Otero i in. (2020) podają późnoalbski wiek warstw formacji Cerro Barcino. PBDB datuje występowanie typowe (ogniwo Cerro Castaño, Chubut, Argentyna) jedynie na alb; wartości w mln lat to granice piętra albu według ICS v2024/12. NHM podaje około 101 mln lat temu. Nie udało się sprawdzić datowania radiometrycznego podanego w pierwotnym opisie."
+    }
+  },
+  "periods": ["cretaceous"],
+  "size": {
+    "lengthM": {
+      "value": [37.5, 37.5],
+      "sourceIds": ["nhm-patagotitan"],
+      "note": {
+        "en": "Museum figure.",
+        "pl": "Wartość muzealna."
+      }
+    },
+    "massKg": {
+      "value": [42000, 71000],
+      "sourceIds": ["otero-2020", "nhm-patagotitan"],
+      "note": {
+        "en": "Revised estimate of 42–71 tonnes, with a mean of 57 tonnes, from a modified scaling equation (Otero et al. 2020). NHM gives 57,000 kg.",
+        "pl": "Poprawione oszacowanie 42–71 ton, ze średnią 57 ton, uzyskane ze zmodyfikowanego równania skalowania (Otero i in. 2020). NHM podaje 57 000 kg."
+      }
+    }
+  },
+  "locations": [
+    {
+      "continent": "south-america",
+      "countryCode": "AR",
+      "formation": "Cerro Barcino",
+      "sourceIds": ["pbdb-occs", "otero-2020"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "Carballido et al.",
+    "year": 2017,
+    "note": {
+      "en": "Described by José Carballido and eight co-authors.",
+      "pl": "Opisany przez dziewięcioosobowy zespół, którym kierował José Carballido."
+    },
+    "sourceIds": ["carballido-2017", "pbdb-genera"]
+  },
+  "summary": {
+    "text": {
+      "en": "Patagotitan was a titanosaur, a giant plant-eating sauropod, and one of the largest land animals ever found. It was about 37 metres long and lived about 101 million years ago, in the Early Cretaceous, in what is now Patagonia, Argentina. When it was named in 2017, its describers called it the largest species described so far. A 2020 study estimated its weight at 42 to 71 tonnes, about 57 tonnes on average.",
+      "pl": "Patagotitan był tytanozaurem, czyli olbrzymim roślinożernym zauropodem, i jednym z największych znanych zwierząt lądowych. Mierzył około 37 metrów długości i żył około 101 milionów lat temu, we wczesnej kredzie, na terenie dzisiejszej Patagonii w Argentynie. Gdy w 2017 roku nadano mu nazwę, autorzy opisu uznali go za największy opisany dotąd gatunek. Według badania z 2020 roku ważył od 42 do 71 ton, średnio około 57 ton."
+    },
+    "sourceIds": ["nhm-patagotitan", "carballido-2017", "otero-2020"]
+  },
+  "funFacts": [
+    {
+      "text": {
+        "en": "Its discovery revealed a group of giant titanosaurs found only in Patagonia, which lived there from the Albian to the Santonian.",
+        "pl": "Jego odkrycie ujawniło grupę olbrzymich tytanozaurów występujących tylko w Patagonii, które żyły tam od albu do santonu."
+      },
+      "sourceIds": ["carballido-2017"]
+    }
+  ],
+  "famous": false,
+  "images": [
+    {
+      "commonsFile": "File:FMNH Patagotitan.jpg",
+      "kind": "skeleton-mount",
+      "alt": {
+        "en": "Cast of the Patagotitan skeleton on display at the Field Museum of Natural History in Chicago.",
+        "pl": "Odlew szkieletu Patagotitan na wystawie w Field Museum of Natural History w Chicago."
+      }
+    }
+  ],
+  "uncertain": [
+    {
+      "field": "size.lengthM",
+      "note": {
+        "en": "Only a museum figure was verified; the length in the original description could not be checked.",
+        "pl": "Zweryfikowano jedynie wartość muzealną; nie udało się sprawdzić długości podanej w pierwotnym opisie."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "carballido-2017",
+      "title": "A new giant titanosaur sheds light on body mass evolution among sauropod dinosaurs",
+      "authors": "Carballido, J. L.; Pol, D.; Otero, A.; Cerda, I. A.; Salgado, L.; Garrido, A. C.; Ramezani, J.; Cúneo, N. R.; Krause, J. M.",
+      "year": 2017,
+      "publisher": "Proceedings of the Royal Society B 284(1860): 20171219",
+      "doi": "10.1098/rspb.2017.1219",
+      "url": "https://doi.org/10.1098/rspb.2017.1219",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "otero-2020",
+      "title": "The appendicular osteology of Patagotitan mayorum (Dinosauria, Sauropoda)",
+      "authors": "Otero, A.; Carballido, J. L.; Pérez Moreno, A.",
+      "year": 2020,
+      "publisher": "Journal of Vertebrate Paleontology 40(4): e1793158",
+      "doi": "10.1080/02724634.2020.1793158",
+      "url": "https://doi.org/10.1080/02724634.2020.1793158",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "nhm-patagotitan",
+      "title": "Patagotitan | Dino Directory",
+      "publisher": "Natural History Museum, London",
+      "url": "https://www.nhm.ac.uk/discover/dino-directory/patagotitan.html",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-genera",
+      "title": "Taxon entries for Patagotitan (taxon 358623) and other genera",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/list.json?name=Saturnalia,Silesaurus,Lisowicia,Anchiornis,Yutyrannus,Caudipteryx,Citipati,Deinocheirus,Opisthocoelicaudia,Saltasaurus,Patagotitan&show=attr,app,parent,class,ecospace",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-occs",
+      "title": "Occurrences of Patagotitan and other genera (stratigraphy and location)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Citipati,Deinocheirus,Opisthocoelicaudia,Saltasaurus,Patagotitan&show=strat,loc",
+      "accessed": "2026-11-22"
+    }
+  ],
+  "lastReviewed": "2026-11-22"
+}

@@ -1,0 +1,143 @@
+{
+  "slug": "rapetosaurus",
+  "scientificName": "Rapetosaurus krausei",
+  "genus": "Rapetosaurus",
+  "nameMeaning": {
+    "text": {
+      "en": "named after Rapeto, a mythical character in Malagasy folklore; krausei honours expedition leader David Krause",
+      "pl": "nazwany na cześć Rapeto, mitycznej postaci z malgaskiego folkloru; krausei upamiętnia kierownika wyprawy Davida Krausego"
+    },
+    "sourceIds": ["sciam-2001"]
+  },
+  "group": "titanosauria",
+  "groupSourceIds": ["curry-rogers-forster-2001", "pbdb-taxon"],
+  "isDinosaur": true,
+  "taxonomy": {
+    "status": "valid"
+  },
+  "diet": {
+    "value": "herbivore",
+    "confidence": "established",
+    "sourceIds": ["pbdb-taxa", "sciam-2001"]
+  },
+  "timeRange": {
+    "startMa": 72.2,
+    "endMa": 66,
+    "sourceIds": ["pbdb-occs", "sciam-2001"],
+    "note": {
+      "en": "Stage-based: PBDB dates the Maevarano Formation records of R. krausei to the Maastrichtian. The Ma values are the ICS v2024/12 Maastrichtian boundaries, so the range is broader than the fossils themselves. Scientific American (2001) called the fossils 70 million years old.",
+      "pl": "Na podstawie pięter: PBDB datuje rekordy R. krausei z formacji Maevarano na mastrycht. Wartości w mln lat to granice mastrychtu według ICS v2024/12, więc zakres jest szerszy niż wiek samych skamieniałości. „Scientific American” (2001) podał, że skamieniałości mają 70 milionów lat."
+    }
+  },
+  "periods": ["cretaceous"],
+  "size": {},
+  "locations": [
+    {
+      "continent": "africa",
+      "countryCode": "MG",
+      "formation": "Maevarano",
+      "sourceIds": ["pbdb-occs", "curry-rogers-forster-2001"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "Curry Rogers & Forster",
+    "year": 2001,
+    "sourceIds": ["curry-rogers-forster-2001", "sciam-2001"]
+  },
+  "summary": {
+    "text": {
+      "en": "Rapetosaurus was a titanosaur, one of the giant plant-eating sauropods, from Madagascar at the very end of the Cretaceous. When it was described in 2001 it was the most complete titanosaur yet found, showing the group from head to tail. A tiny baby Rapetosaurus weighed about 3.4 kilograms when it hatched and reached about 40 kilograms just weeks later.",
+      "pl": "Rapetosaurus był tytanozaurem – jednym z olbrzymich roślinożernych zauropodów – z Madagaskaru z samego końca kredy. Gdy opisano go w 2001 roku, był najbardziej kompletnym znanym tytanozaurem i pokazał budowę tej grupy od głowy po ogon. Maleńki Rapetosaurus ważył po wykluciu około 3,4 kilograma, a zaledwie kilka tygodni później około 40 kilogramów."
+    },
+    "sourceIds": ["curry-rogers-forster-2001", "curry-rogers-2016", "sciam-2001", "pbdb-occs"]
+  },
+  "funFacts": [
+    {
+      "text": {
+        "en": "The baby probably starved to death during a drought, only weeks after hatching. Its bones suggest that young Rapetosaurus were precocial: active and growing fast from very early on.",
+        "pl": "Młody osobnik prawdopodobnie zmarł z głodu podczas suszy, zaledwie kilka tygodni po wykluciu. Jego kości wskazują, że młode Rapetosaurus były zagniazdownikami: od bardzo wczesnego wieku aktywnymi i szybko rosnącymi."
+      },
+      "sourceIds": ["curry-rogers-2016"]
+    }
+  ],
+  "famous": false,
+  "images": [
+    {
+      "commonsFile": "File:FMNH Rapetosaurus.jpg",
+      "kind": "skeleton-mount",
+      "alt": {
+        "en": "Rapetosaurus skeleton on display at the Field Museum of Natural History in Chicago.",
+        "pl": "Szkielet Rapetosaurus na wystawie w Field Museum of Natural History w Chicago."
+      }
+    }
+  ],
+  "uncertain": [
+    {
+      "field": "size.lengthM",
+      "note": {
+        "en": "No adult body length found in a source we could verify.",
+        "pl": "Nie znaleziono długości dorosłego osobnika w źródle, które moglibyśmy zweryfikować."
+      }
+    },
+    {
+      "field": "size.massKg",
+      "note": {
+        "en": "No adult mass found in a source we could verify; the verified figures (about 3.4 kg at hatching, about 40 kg weeks later) are for one very young individual.",
+        "pl": "Nie znaleziono masy dorosłego osobnika w źródle, które moglibyśmy zweryfikować; zweryfikowane wartości (około 3,4 kg po wykluciu i około 40 kg kilka tygodni później) dotyczą jednego bardzo młodego osobnika."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "curry-rogers-forster-2001",
+      "title": "The last of the dinosaur titans: a new sauropod from Madagascar",
+      "authors": "Curry Rogers, K.; Forster, C. A.",
+      "year": 2001,
+      "publisher": "Nature 412: 530-534",
+      "doi": "10.1038/35087566",
+      "url": "https://doi.org/10.1038/35087566",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "curry-rogers-2016",
+      "title": "Precocity in a tiny titanosaur from the Cretaceous of Madagascar",
+      "authors": "Curry Rogers, K.; Whitney, M.; D'Emic, M.; Bagley, B.",
+      "year": 2016,
+      "publisher": "Science 352: 450-453",
+      "doi": "10.1126/science.aaf1509",
+      "url": "https://doi.org/10.1126/science.aaf1509",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "sciam-2001",
+      "title": "Madagascar Yields New Fossils of Creatures Great and Small",
+      "authors": "Wong, K.",
+      "year": 2001,
+      "publisher": "Scientific American",
+      "url": "https://www.scientificamerican.com/article/madagascar-yields-new-fos/",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-taxon",
+      "title": "Rapetosaurus (taxon 57532) and its parent taxa",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/list.json?name=Rapetosaurus&rel=all_parents",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-taxa",
+      "title": "Taxon records with classification and ecospace for Rapetosaurus and other genera",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/list.json?name=Rapetosaurus,Rajasaurus,Antarctopelta,Hypsilophodon,Magyarosaurus,Hatzegopteryx,Centrosaurus,Chasmosaurus,Stegoceras,Borealopelta&show=attr,class,ecospace",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-occs",
+      "title": "Occurrences of Rapetosaurus and other genera (stratigraphy and location)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Rapetosaurus,Rajasaurus,Antarctopelta,Magyarosaurus,Hatzegopteryx&show=strat,loc",
+      "accessed": "2026-11-22"
+    }
+  ],
+  "lastReviewed": "2026-11-22"
+}

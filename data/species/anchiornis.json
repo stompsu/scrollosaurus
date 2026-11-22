@@ -1,0 +1,203 @@
+{
+  "slug": "anchiornis",
+  "scientificName": "Anchiornis huxleyi",
+  "genus": "Anchiornis",
+  "nameMeaning": {
+    "text": {
+      "en": "near bird",
+      "pl": "prawie ptak"
+    },
+    "sourceIds": ["nhm-anchiornis"]
+  },
+  "group": "avialae",
+  "groupSourceIds": ["pei-2017", "hu-2009", "pbdb-genera", "nhm-anchiornis"],
+  "isDinosaur": true,
+  "taxonomy": {
+    "status": "valid",
+    "note": {
+      "en": "Pei et al. (2017) consider Aurornis xui, another paravian from Jianchang, likely to be a junior synonym of Anchiornis huxleyi.",
+      "pl": "Pei i in. (2017) uważają, że Aurornis xui, inny parawian z Jianchang, jest prawdopodobnie młodszym synonimem Anchiornis huxleyi."
+    },
+    "sourceIds": ["pei-2017"]
+  },
+  "diet": {
+    "value": "carnivore",
+    "confidence": "probable",
+    "sourceIds": ["zheng-2018", "nhm-anchiornis", "pbdb-genera"],
+    "note": {
+      "en": "Gastric pellets attributed to Anchiornis contain lightly acid-etched lizard bones or fish scales (Zheng et al. 2018). NHM lists it as carnivorous; PBDB as carnivorous or omnivorous.",
+      "pl": "Wypluwki żołądkowe przypisywane Anchiornis zawierają lekko nadtrawione kwasem kości jaszczurek lub łuski ryb (Zheng i in. 2018). NHM podaje, że był mięsożerny; PBDB – że był mięsożerny lub wszystkożerny."
+    }
+  },
+  "timeRange": {
+    "startMa": 160.89,
+    "endMa": 160.25,
+    "sourceIds": ["chu-2016", "zheng-2018", "hu-2009", "pbdb-occs", "nhm-anchiornis"],
+    "note": {
+      "en": "Chu et al. (2016) date the key fossil horizons of the Daxishan section in Jianchang (Yanliao Biota) to 160.89–160.25 Ma, in the Oxfordian. Zheng et al. (2018) give about 160 Ma for Anchiornis and Hu et al. (2009) the earliest Late Jurassic. PBDB's stage-based range for the Tiaojishan Formation records is wider (168.2–152.21 Ma). NHM gives 165–153 Ma, which reaches into the Middle Jurassic although NHM labels it Late Jurassic.",
+      "pl": "Chu i in. (2016) datują kluczowe poziomy ze skamieniałościami w profilu Daxishan w Jianchang (biota Yanliao) na 160,89–160,25 mln lat temu, w oksfordzie. Zheng i in. (2018) podają około 160 mln lat temu dla Anchiornis, a Hu i in. (2009) – najwcześniejszą późną jurę. Zakres PBDB dla rekordów z formacji Tiaojishan, oparty na piętrach, jest szerszy (168,2–152,21 mln lat temu). NHM podaje 165–153 mln lat temu, co sięga środkowej jury, choć NHM określa to jako późną jurę."
+    }
+  },
+  "periods": ["jurassic"],
+  "size": {
+    "lengthM": {
+      "value": [0.6, 0.6],
+      "sourceIds": ["nhm-anchiornis"],
+      "note": {
+        "en": "Museum figure.",
+        "pl": "Wartość muzealna."
+      }
+    }
+  },
+  "locations": [
+    {
+      "continent": "asia",
+      "countryCode": "CN",
+      "formation": "Tiaojishan",
+      "sourceIds": ["pbdb-occs", "hu-2009", "pei-2017"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "Xu et al.",
+    "year": 2009,
+    "note": {
+      "en": "Described by Xu Xing and eight co-authors; the paper appeared online in December 2008.",
+      "pl": "Opisany przez Xu Xinga i ośmiu współautorów; praca ukazała się w internecie w grudniu 2008 roku."
+    },
+    "sourceIds": ["xu-2009", "pbdb-genera"]
+  },
+  "summary": {
+    "text": {
+      "en": "Anchiornis was a crow-sized feathered dinosaur that lived about 160 million years ago in what is now north-eastern China, before Archaeopteryx. It had long feathers on its arms, its legs and even its feet. Tiny colour structures in its fossils show a grey and dark body, a reddish-brown crown and white limb feathers with black spots. Like many birds today, it coughed up pellets of lizard bones and fish scales it could not digest.",
+      "pl": "Anchiornis był pierzastym dinozaurem wielkości wrony, który żył około 160 milionów lat temu na terenie dzisiejszych północno-wschodnich Chin, jeszcze przed Archaeopteryx. Miał długie pióra na przednich i tylnych kończynach, a nawet na stopach. Maleńkie struktury barwnikowe w skamieniałościach pokazują szaro-ciemne ciało, rudobrązowy wierzch głowy i białe pióra kończyn z czarnymi plamkami. Jak wiele dzisiejszych ptaków zwracał wypluwki z niestrawionymi kośćmi jaszczurek i łuskami ryb."
+    },
+    "sourceIds": ["nhm-anchiornis", "chu-2016", "zheng-2018", "hu-2009", "li-2010"]
+  },
+  "funFacts": [
+    {
+      "text": {
+        "en": "Anchiornis is the earliest and most basal theropod known to have produced gastric pellets, a sign that a bird-like digestive system appeared early in the bird lineage.",
+        "pl": "Anchiornis to najwcześniejszy i najbardziej pierwotny znany teropod, który zwracał wypluwki żołądkowe – znak, że ptasi układ trawienny pojawił się wcześnie w linii prowadzącej do ptaków."
+      },
+      "sourceIds": ["zheng-2018"]
+    }
+  ],
+  "famous": false,
+  "images": [
+    {
+      "commonsFile": "File:Anchiornis huxleyi holotype.jpg",
+      "kind": "fossil",
+      "alt": {
+        "en": "Fossil of Anchiornis huxleyi (holotype) on temporary display at the Shanghai Natural History Museum as part of the exhibition “China’s Dinosaur World”.",
+        "pl": "Skamieniałość Anchiornis huxleyi (holotyp) na czasowej wystawie „China’s Dinosaur World” w Shanghai Natural History Museum."
+      }
+    }
+  ],
+  "uncertain": [
+    {
+      "field": "group",
+      "note": {
+        "en": "Filed under Avialae following Pei et al. (2017), who find Anchiornis more closely related to avialans than to deinonychosaurs or troodontids. Hu et al. (2009) described it as a troodontid, and PBDB still places it in Troodontidae.",
+        "pl": "Zaliczony do Avialae zgodnie z pracą Pei i in. (2017), według której Anchiornis jest bliżej spokrewniony z awialanami niż z deinonychozaurami czy troodontydami. Hu i in. (2009) opisali go jako troodontyda, a PBDB nadal umieszcza go w Troodontidae."
+      }
+    },
+    {
+      "field": "timeRange",
+      "note": {
+        "en": "The radiometric range is for the Daxishan fossil horizons in Jianchang; we did not verify that every Anchiornis specimen comes from them.",
+        "pl": "Zakres radiometryczny dotyczy poziomów ze skamieniałościami w Daxishan w Jianchang; nie sprawdziliśmy, czy pochodzą z nich wszystkie okazy Anchiornis."
+      }
+    },
+    {
+      "field": "size.massKg",
+      "note": {
+        "en": "No mass estimate found in a source we could verify.",
+        "pl": "Nie znaleziono oszacowania masy w źródle, które moglibyśmy zweryfikować."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "xu-2009",
+      "title": "A new feathered maniraptoran dinosaur fossil that fills a morphological gap in avian origin",
+      "authors": "Xu, X.; Zhao, Q.; Norell, M.; Sullivan, C.; Hone, D.; Erickson, G.; Wang, X.; Han, F.; Guo, Y.",
+      "year": 2009,
+      "publisher": "Chinese Science Bulletin 54(3): 430-435",
+      "doi": "10.1007/s11434-009-0009-6",
+      "url": "https://doi.org/10.1007/s11434-009-0009-6",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "hu-2009",
+      "title": "A pre-Archaeopteryx troodontid theropod from China with long feathers on the metatarsus",
+      "authors": "Hu, D.; Hou, L.; Zhang, L.; Xu, X.",
+      "year": 2009,
+      "publisher": "Nature 461: 640-643",
+      "doi": "10.1038/nature08322",
+      "url": "https://doi.org/10.1038/nature08322",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "li-2010",
+      "title": "Plumage color patterns of an extinct dinosaur",
+      "authors": "Li, Q.; Gao, K.-Q.; Vinther, J.; Shawkey, M. D.; Clarke, J. A.; D'Alba, L.; Meng, Q.; Briggs, D. E. G.; Prum, R. O.",
+      "year": 2010,
+      "publisher": "Science 327: 1369-1372",
+      "doi": "10.1126/science.1186290",
+      "url": "https://doi.org/10.1126/science.1186290",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pei-2017",
+      "title": "New specimens of Anchiornis huxleyi (Theropoda: Paraves) from the Late Jurassic of northeastern China",
+      "authors": "Pei, R.; Li, Q.; Meng, Q.; Norell, M. A.; Gao, K.-Q.",
+      "year": 2017,
+      "publisher": "Bulletin of the American Museum of Natural History 411: 1-66",
+      "doi": "10.1206/0003-0090-411.1.1",
+      "url": "https://doi.org/10.1206/0003-0090-411.1.1",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "zheng-2018",
+      "title": "Exceptional dinosaur fossils reveal early origin of avian-style digestion",
+      "authors": "Zheng, X.; Wang, X.; Sullivan, C.; Zhang, X.; Zhang, F.; Wang, Y.; Li, F.; Xu, X.",
+      "year": 2018,
+      "publisher": "Scientific Reports 8: 14217",
+      "doi": "10.1038/s41598-018-32202-x",
+      "url": "https://doi.org/10.1038/s41598-018-32202-x",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "chu-2016",
+      "title": "High-precision U-Pb geochronology of the Jurassic Yanliao Biota from Jianchang (western Liaoning Province, China): Age constraints on the rise of feathered dinosaurs and eutherian mammals",
+      "authors": "Chu, Z.; He, H.; Ramezani, J.; Bowring, S. A.; Hu, D.; Zhang, L.; Zheng, S.; Wang, X.; Zhou, Z.; Deng, C.; Guo, J.",
+      "year": 2016,
+      "publisher": "Geochemistry, Geophysics, Geosystems 17(10): 3983-3992",
+      "doi": "10.1002/2016GC006529",
+      "url": "https://doi.org/10.1002/2016GC006529",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "nhm-anchiornis",
+      "title": "Anchiornis | Dino Directory",
+      "publisher": "Natural History Museum, London",
+      "url": "https://www.nhm.ac.uk/discover/dino-directory/anchiornis.html",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-genera",
+      "title": "Taxon entries for Anchiornis (taxon 155058) and other genera",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/list.json?name=Saturnalia,Silesaurus,Lisowicia,Anchiornis,Yutyrannus,Caudipteryx,Citipati,Deinocheirus,Opisthocoelicaudia,Saltasaurus,Patagotitan&show=attr,app,parent,class,ecospace",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-occs",
+      "title": "Occurrences of Anchiornis and other genera (stratigraphy and location)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Saturnalia,Silesaurus,Lisowicia,Anchiornis,Yutyrannus,Caudipteryx&show=strat,loc",
+      "accessed": "2026-11-22"
+    }
+  ],
+  "lastReviewed": "2026-11-22"
+}

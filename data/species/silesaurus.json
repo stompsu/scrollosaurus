@@ -1,0 +1,228 @@
+{
+  "slug": "silesaurus",
+  "scientificName": "Silesaurus opolensis",
+  "genus": "Silesaurus",
+  "nameMeaning": {
+    "text": {
+      "en": "Silesian lizard from Opole",
+      "pl": "śląski jaszczur z Opola"
+    },
+    "sourceIds": ["polskieradio-2025"]
+  },
+  "group": "silesauridae",
+  "groupSourceIds": [
+    "nesbitt-2010",
+    "dzik-2003",
+    "cam-2022",
+    "muller-garcia-2020",
+    "norman-2022",
+    "polskieradio-2025",
+    "pbdb-genera"
+  ],
+  "isDinosaur": false,
+  "taxonomy": {
+    "status": "valid"
+  },
+  "diet": {
+    "value": "omnivore",
+    "confidence": "debated",
+    "sourceIds": ["dzik-2003", "qvarnstrom-2021", "uu-2021", "pbdb-genera"],
+    "note": {
+      "en": "Dzik (2003) read its low-crowned, worn teeth and its beak as signs of plant-eating, and PBDB lists it as a herbivore. Fossil droppings (coprolites) attributed to Silesaurus are full of beetles, so it probably also ate insects, perhaps pecking them off the ground or rooting in leaf litter with its beak (Qvarnström et al. 2021).",
+      "pl": "Dzik (2003) uznał jego niskie, starte zęby i dziób za oznaki roślinożerności, a PBDB wymienia go jako roślinożercę. Skamieniałe odchody (koprolity) przypisywane Silesaurus są pełne chrząszczy, więc prawdopodobnie jadł też owady – być może wydziobując je z ziemi lub grzebiąc dziobem w ściółce (Qvarnström i in. 2021)."
+    }
+  },
+  "timeRange": {
+    "startMa": 233.6,
+    "endMa": 227.3,
+    "sourceIds": ["pbdb-occs", "dzik-2003", "uu-2021"],
+    "note": {
+      "en": "Dzik (2003) correlates the Keuper claystone of Krasiejów with the late Carnian Lehrberg Beds. The range is PBDB's age for the type occurrence (Tuvalian, late Carnian); 233.6 Ma is PBDB's value for the base of the Tuvalian, a substage the ICS chart does not date. Uppsala University gives about 230 Ma.",
+      "pl": "Dzik (2003) koreluje kajprowe iłowce z Krasiejowa z późnokarnickimi warstwami Lehrberg. Zakres to wiek występowania typowego według PBDB (tuwal, późny karnik); 233,6 mln lat to wartość PBDB dla dolnej granicy tuwalu – podpiętra, którego tabela ICS nie datuje. Uniwersytet w Uppsali podaje około 230 mln lat temu."
+    }
+  },
+  "periods": ["triassic"],
+  "size": {
+    "massKg": {
+      "value": [15, 15],
+      "sourceIds": ["uu-2021"],
+      "note": {
+        "en": "Estimated body weight of about 15 kg (Uppsala University press release).",
+        "pl": "Szacowana masa ciała około 15 kg (komunikat prasowy Uniwersytetu w Uppsali)."
+      }
+    }
+  },
+  "locations": [
+    {
+      "continent": "europe",
+      "countryCode": "PL",
+      "formation": "Drawno Beds",
+      "sourceIds": ["pbdb-occs", "dzik-2003"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "Dzik",
+    "year": 2003,
+    "note": {
+      "en": "Described by Jerzy Dzik from an accumulation of skeletons in the Late Triassic claystone of Krasiejów, southern Poland.",
+      "pl": "Opisany przez Jerzego Dzika na podstawie nagromadzenia szkieletów w późnotriasowych iłowcach z Krasiejowa w południowej Polsce."
+    },
+    "sourceIds": ["dzik-2003", "pbdb-genera"]
+  },
+  "summary": {
+    "text": {
+      "en": "Silesaurus is usually seen not as a dinosaur but as one of their closest relatives. It lived about 230 million years ago in what is now southern Poland, where many skeletons were found together at Krasiejów. It weighed about 15 kilograms and had a beak at the tip of its jaws. Its teeth hint at plants, but its fossil droppings are packed with beetles. Some scientists argue it was really an early 'bird-hipped' dinosaur.",
+      "pl": "Silesaurus zwykle nie jest uznawany za dinozaura, lecz za jednego z ich najbliższych krewnych. Żył około 230 milionów lat temu na terenie dzisiejszej południowej Polski, gdzie w Krasiejowie znaleziono razem wiele szkieletów. Ważył około 15 kilogramów, a na końcu szczęk miał dziób. Jego zęby wskazują na rośliny, ale skamieniałe odchody są pełne chrząszczy. Niektórzy naukowcy twierdzą, że był w rzeczywistości wczesnym dinozaurem ptasiomiednicznym."
+    },
+    "sourceIds": [
+      "cam-2022",
+      "dzik-2003",
+      "uu-2021",
+      "qvarnstrom-2021",
+      "polskieradio-2025",
+      "muller-garcia-2020",
+      "norman-2022"
+    ]
+  },
+  "funFacts": [
+    {
+      "text": {
+        "en": "In 2021 a new beetle species, Triamyxa coprolithica, was described from a fossil dropping probably left by Silesaurus. The beetle was likely too small to have been its only prey.",
+        "pl": "W 2021 roku opisano nowy gatunek chrząszcza, Triamyxa coprolithica, ze skamieniałego odchodu pozostawionego prawdopodobnie przez Silesaurus. Chrząszcz był zapewne zbyt mały, by stanowić jego jedyną zdobycz."
+      },
+      "sourceIds": ["qvarnstrom-2021", "uu-2021"]
+    }
+  ],
+  "famous": false,
+  "images": [
+    {
+      "commonsFile": "File:Silesaurus opolensis life restoration.jpg",
+      "kind": "life-reconstruction",
+      "alt": {
+        "en": "Life restoration of the Late Triassic dinosaur relative Silesaurus opolensis in the Paleontological Pavilion in the JuraPark of Krasiejów, Upper Silesia, Poland.",
+        "pl": "Rekonstrukcja przyżyciowa Silesaurus opolensis, dalekiego krewnego dinozaurów z późnego triasu, w Pawilonie Paleontologicznym JuraParku w Krasiejowie na Górnym Śląsku."
+      }
+    }
+  ],
+  "uncertain": [
+    {
+      "field": "group",
+      "note": {
+        "en": "Kept outside Dinosauria in its own group, Silesauridae, following Nesbitt et al. (2010), who found silesaurids to be the sister group of dinosaurs. Müller and Garcia (2020) and Norman et al. (2022) instead place silesaurs on the stem of Ornithischia, which would make Silesaurus an early ornithischian dinosaur. PBDB follows that view and lists Silesauridae inside Ornithischia. The question is still debated.",
+        "pl": "Pozostawiony poza Dinosauria, we własnej grupie Silesauridae, zgodnie z pracą Nesbitta i in. (2010), według której sylezaurydy są grupą siostrzaną dinozaurów. Müller i Garcia (2020) oraz Norman i in. (2022) umieszczają natomiast sylezaury u podstawy linii ptasiomiednicznych (Ornithischia), co czyniłoby Silesaurus wczesnym dinozaurem ptasiomiednicznym. PBDB przyjmuje ten pogląd i umieszcza Silesauridae w obrębie Ornithischia. Kwestia ta wciąż jest przedmiotem sporu."
+      }
+    },
+    {
+      "field": "diet",
+      "note": {
+        "en": "Tooth wear suggests plants, while beetle-filled coprolites attributed to it suggest insects as well; the balance between the two is unknown.",
+        "pl": "Starcie zębów wskazuje na rośliny, a przypisywane mu koprolity pełne chrząszczy – także na owady; nie wiadomo, w jakich proporcjach."
+      }
+    },
+    {
+      "field": "size.lengthM",
+      "note": {
+        "en": "The lengths we found (about 2.3 m, up to 3 m) come from sources that are not peer-reviewed or could not be checked against the original description.",
+        "pl": "Znalezione długości (około 2,3 m, do 3 m) pochodzą ze źródeł bez recenzji naukowej albo nie dało się ich sprawdzić w pierwotnym opisie."
+      }
+    },
+    {
+      "field": "locations",
+      "note": {
+        "en": "PBDB names the type horizon Drawno Beds and assigns another Opole occurrence to the Grabowa Formation; only the type horizon is listed.",
+        "pl": "PBDB nazywa poziom typowy warstwami z Drawna (Drawno Beds), a inne występowanie z Opolszczyzny przypisuje formacji Grabowa; podano tylko poziom typowy."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "dzik-2003",
+      "title": "A beaked herbivorous archosaur with dinosaur affinities from the early Late Triassic of Poland",
+      "authors": "Dzik, J.",
+      "year": 2003,
+      "publisher": "Journal of Vertebrate Paleontology 23(3): 556-574",
+      "doi": "10.1671/A1097",
+      "url": "https://bioone.org/journals/journal-of-vertebrate-paleontology/volume-23/issue-3/A1097/A-BEAKED-HERBIVOROUS-ARCHOSAUR-WITH-DINOSAUR-AFFINITIES-FROM-THE-EARLY/10.1671/A1097.full",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "nesbitt-2010",
+      "title": "Ecologically distinct dinosaurian sister group shows early diversification of Ornithodira",
+      "authors": "Nesbitt, S. J.; Sidor, C. A.; Irmis, R. B.; Angielczyk, K. D.; Smith, R. M. H.; Tsuji, L. A.",
+      "year": 2010,
+      "publisher": "Nature 464: 95-98",
+      "doi": "10.1038/nature08718",
+      "url": "https://doi.org/10.1038/nature08718",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "muller-garcia-2020",
+      "title": "A paraphyletic 'Silesauridae' as an alternative hypothesis for the initial radiation of ornithischian dinosaurs",
+      "authors": "Müller, R. T.; Garcia, M. S.",
+      "year": 2020,
+      "publisher": "Biology Letters 16(8): 20200417",
+      "doi": "10.1098/rsbl.2020.0417",
+      "url": "https://doi.org/10.1098/rsbl.2020.0417",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "norman-2022",
+      "title": "Taxonomic, palaeobiological and evolutionary implications of a phylogenetic hypothesis for Ornithischia (Archosauria: Dinosauria)",
+      "authors": "Norman, D. B.; Baron, M. G.; Garcia, M. S.; Müller, R. T.",
+      "year": 2022,
+      "publisher": "Zoological Journal of the Linnean Society 196(4): 1273-1309",
+      "doi": "10.1093/zoolinnean/zlac062",
+      "url": "https://doi.org/10.1093/zoolinnean/zlac062",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "qvarnstrom-2021",
+      "title": "Exceptionally preserved beetles in a Triassic coprolite of putative dinosauriform origin",
+      "authors": "Qvarnström, M.; Fikáček, M.; Vikberg Wernström, J.; Huld, S.; Beutel, R. G.; Arriaga-Varela, E.; Ahlberg, P. E.; Niedźwiedzki, G.",
+      "year": 2021,
+      "publisher": "Current Biology 31(15): 3374-3381",
+      "doi": "10.1016/j.cub.2021.05.015",
+      "url": "https://doi.org/10.1016/j.cub.2021.05.015",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "uu-2021",
+      "title": "New beetle found in fossil faeces attributed to dinosaur ancestor",
+      "publisher": "Uppsala University",
+      "year": 2021,
+      "url": "https://www.uu.se/en/press/press-releases/2021/2021-06-30-new-beetle-found-in-fossil-faeces-attributed-to-dinosaur-ancestor",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "cam-2022",
+      "title": "Shaking the dinosaur family tree: how did 'bird-hipped' dinosaurs evolve?",
+      "publisher": "University of Cambridge",
+      "year": 2022,
+      "url": "https://www.cam.ac.uk/stories/silesaurus",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "polskieradio-2025",
+      "title": "Poland's 'Silesian lizard' keeps scientists debating dinosaur origins",
+      "publisher": "Polskie Radio",
+      "year": 2025,
+      "url": "https://www.polskieradio.pl/395/7791/artykul/3581817",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-genera",
+      "title": "Taxon entries for Silesaurus (taxon 81775) and other genera",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/list.json?name=Saturnalia,Silesaurus,Lisowicia,Anchiornis,Yutyrannus,Caudipteryx,Citipati,Deinocheirus,Opisthocoelicaudia,Saltasaurus,Patagotitan&show=attr,app,parent,class,ecospace",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-occs",
+      "title": "Occurrences of Silesaurus and other genera (stratigraphy and location)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Saturnalia,Silesaurus,Lisowicia,Anchiornis,Yutyrannus,Caudipteryx&show=strat,loc",
+      "accessed": "2026-11-22"
+    }
+  ],
+  "lastReviewed": "2026-11-22"
+}

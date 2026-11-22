@@ -1,0 +1,175 @@
+{
+  "slug": "borealopelta",
+  "scientificName": "Borealopelta markmitchelli",
+  "genus": "Borealopelta",
+  "nameMeaning": {
+    "text": {
+      "en": "Mark Mitchell's northern shield",
+      "pl": "północna tarcza Marka Mitchella"
+    },
+    "sourceIds": ["natgeo-2017", "henderson-ce"]
+  },
+  "group": "ankylosauria",
+  "groupSourceIds": ["brown-2017", "brown-2020", "pbdb-taxa"],
+  "isDinosaur": true,
+  "taxonomy": {
+    "status": "valid",
+    "note": {
+      "en": "A nodosaurid ankylosaur (Brown et al. 2017; PBDB family Nodosauridae).",
+      "pl": "Ankylozaur z rodziny nodozaurów (Brown i in. 2017; w PBDB rodzina Nodosauridae)."
+    },
+    "sourceIds": ["brown-2017", "pbdb-taxa"]
+  },
+  "diet": {
+    "value": "herbivore",
+    "confidence": "established",
+    "sourceIds": ["brown-2020", "henderson-ce", "pbdb-taxa"],
+    "note": {
+      "en": "Its preserved stomach contents are about 88% leaf material, mostly ferns, with some charcoal (Brown et al. 2020).",
+      "pl": "Zachowana zawartość jego żołądka to w około 88% materiał liściowy, głównie paprocie, z domieszką węgla drzewnego (Brown i in. 2020)."
+    }
+  },
+  "timeRange": {
+    "startMa": 112,
+    "endMa": 110,
+    "sourceIds": ["henderson-ce", "natgeo-2017", "brown-2020", "pbdb-occs"],
+    "note": {
+      "en": "The only specimen comes from the Wabiskaw Member of the Clearwater Formation. Henderson (Canadian Encyclopedia) gives about 112 Ma and National Geographic, reporting the 2017 study, about 110 Ma; Brown et al. (2020) date it to the early Albian from ammonites, pollen and foraminifera. PBDB lists the occurrence as Aptian, which disagrees with these sources.",
+      "pl": "Jedyny okaz pochodzi z ogniwa Wabiskaw formacji Clearwater. Henderson (Canadian Encyclopedia) podaje około 112 mln lat temu, a National Geographic, relacjonując badanie z 2017 roku, około 110 mln lat temu; Brown i in. (2020) datują go na wczesny alb na podstawie amonitów, pyłków i otwornic. PBDB podaje to występowanie jako apt, co jest niezgodne z tymi źródłami."
+    }
+  },
+  "periods": ["cretaceous"],
+  "size": {
+    "lengthM": {
+      "value": [5, 6],
+      "sourceIds": ["henderson-ce", "natgeo-2017"],
+      "note": {
+        "en": "Henderson (Canadian Encyclopedia) gives 5–6 m; National Geographic reported 18 feet (about 5.5 m).",
+        "pl": "Henderson (Canadian Encyclopedia) podaje 5–6 m; National Geographic podał 18 stóp (około 5,5 m)."
+      }
+    },
+    "massKg": {
+      "value": [1300, 1300],
+      "sourceIds": ["brown-2017", "natgeo-2017"],
+      "note": {
+        "en": "Brown et al. (2017) estimate a mass exceeding 1,300 kg, so this is a lower bound; National Geographic reported nearly 3,000 pounds (about 1,360 kg).",
+        "pl": "Brown i in. (2017) szacują masę na ponad 1300 kg, więc jest to dolna granica; National Geographic podał prawie 3000 funtów (około 1360 kg)."
+      }
+    }
+  },
+  "locations": [
+    {
+      "continent": "north-america",
+      "countryCode": "CA",
+      "formation": "Clearwater",
+      "sourceIds": ["brown-2020", "pbdb-occs", "henderson-ce"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "Brown et al.",
+    "year": 2017,
+    "note": {
+      "en": "Found by accident on 21 March 2011 by heavy-equipment operator Shawn Funk at the Suncor Millennium Mine, an open-pit oil-sands mine in northern Alberta. Technician Mark Mitchell then spent more than 7,000 hours over nearly six years freeing it from the rock.",
+      "pl": "Znalazł go przypadkiem 21 marca 2011 roku operator ciężkiego sprzętu Shawn Funk w kopalni Suncor Millennium, odkrywkowej kopalni piasków roponośnych w północnej Albercie. Preparator Mark Mitchell poświęcił potem ponad 7000 godzin w ciągu prawie sześciu lat na uwolnienie go ze skały."
+    },
+    "sourceIds": ["natgeo-2017", "brown-2020", "brown-2017", "pbdb-taxa"]
+  },
+  "summary": {
+    "text": {
+      "en": "Borealopelta was a nodosaur, a heavily armoured plant eater about 5 to 6 metres long, that lived in Alberta, Canada, about 112 million years ago. Its body was swept out to sea and settled on the seabed, so its armour, skin and even its last meal were preserved. Traces of pigment suggest it was reddish-brown with a lighter belly, a camouflage pattern called countershading.",
+      "pl": "Borealopelta był nodozaurem – silnie opancerzonym roślinożercą o długości około 5–6 metrów, który żył w Albercie w Kanadzie około 112 milionów lat temu. Jego ciało zostało zniesione do morza i opadło na dno, dzięki czemu zachowały się pancerz, skóra, a nawet ostatni posiłek. Ślady barwnika wskazują, że był rudobrązowy z jaśniejszym brzuchem – takie maskujące ubarwienie nazywa się kontrcieniowaniem."
+    },
+    "sourceIds": ["henderson-ce", "natgeo-2017", "brown-2017", "brown-2020"]
+  },
+  "funFacts": [
+    {
+      "text": {
+        "en": "Its stomach still held its last meal: mostly fern leaves, plus charcoal that may mean it fed in a recently burned forest. A twig in the meal suggests it died between late spring and mid-summer.",
+        "pl": "W jego żołądku zachował się ostatni posiłek: głównie liście paproci oraz węgiel drzewny, który może oznaczać, że żerował w niedawno wypalonym lesie. Gałązka w treści żołądka wskazuje, że zginął między późną wiosną a połową lata."
+      },
+      "sourceIds": ["brown-2020"]
+    },
+    {
+      "text": {
+        "en": "Scientists found melanin pigment in its fossil skin, and its shoulder spikes were lighter, perhaps for display. Some experts consider the colour evidence indirect.",
+        "pl": "Naukowcy wykryli w jego skamieniałej skórze barwnik – melaninę, a kolce na barkach były jaśniejsze, być może na pokaz. Niektórzy eksperci uważają dowody na ubarwienie za pośrednie."
+      },
+      "sourceIds": ["brown-2017", "natgeo-2017"]
+    }
+  ],
+  "famous": false,
+  "images": [
+    {
+      "commonsFile": "File:Borealopelta markmitchelli (TMP 2011.033.0001), Royal Tyrrell Museum, Drumheller, Alberta, 2025-07-13.jpg",
+      "kind": "fossil",
+      "alt": {
+        "en": "The original fossil of Borealopelta markmitchelli (TMP 2011.033.0001), collected at Fort McMurray, at the Royal Tyrrell Museum in Drumheller, Alberta.",
+        "pl": "Oryginalna skamieniałość Borealopelta markmitchelli (TMP 2011.033.0001), zebrana w Fort McMurray, w Royal Tyrrell Museum w Drumheller w Albercie."
+      }
+    }
+  ],
+  "uncertain": [
+    {
+      "field": "timeRange",
+      "note": {
+        "en": "Ages disagree: about 112 Ma (Henderson), about 110 Ma (National Geographic), early Albian (Brown et al. 2020), Aptian (PBDB).",
+        "pl": "Datowania są niezgodne: około 112 mln lat temu (Henderson), około 110 mln lat temu (National Geographic), wczesny alb (Brown i in. 2020), apt (PBDB)."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "brown-2017",
+      "title": "An Exceptionally Preserved Three-Dimensional Armored Dinosaur Reveals Insights into Coloration and Cretaceous Predator-Prey Dynamics",
+      "authors": "Brown, C. M.; Henderson, D. M.; Vinther, J.; Fletcher, I.; Sistiaga, A.; Herrera, J.; Summons, R. E.",
+      "year": 2017,
+      "publisher": "Current Biology 27(16): 2514-2521",
+      "doi": "10.1016/j.cub.2017.06.071",
+      "url": "https://doi.org/10.1016/j.cub.2017.06.071",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "brown-2020",
+      "title": "Dietary palaeoecology of an Early Cretaceous armoured dinosaur (Ornithischia; Nodosauridae) based on floral analysis of stomach contents",
+      "authors": "Brown, C. M.; Greenwood, D. R.; Kalyniuk, J. E.; Braman, D. R.; Henderson, D. M.; Greenwood, C. L.; Basinger, J. F.",
+      "year": 2020,
+      "publisher": "Royal Society Open Science 7(6): 200305",
+      "doi": "10.1098/rsos.200305",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7353971/",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "henderson-ce",
+      "title": "Borealopelta",
+      "authors": "Henderson, D.",
+      "year": 2022,
+      "publisher": "The Canadian Encyclopedia",
+      "url": "https://thecanadianencyclopedia.ca/en/article/borealopelta",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "natgeo-2017",
+      "title": "It's Official: Stunning Fossil Is a New Dinosaur Species",
+      "authors": "Greshko, M.",
+      "year": 2017,
+      "publisher": "National Geographic",
+      "url": "https://www.nationalgeographic.com/science/article/nodosaur-dinosaur-fossil-study-borealopelta-coloration-science",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-taxa",
+      "title": "Taxon records with classification and ecospace for Borealopelta and other genera",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/list.json?name=Rapetosaurus,Rajasaurus,Antarctopelta,Hypsilophodon,Magyarosaurus,Hatzegopteryx,Centrosaurus,Chasmosaurus,Stegoceras,Borealopelta&show=attr,class,ecospace",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-occs",
+      "title": "Occurrences of Hypsilophodon and Borealopelta (stratigraphy and location)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Hypsilophodon,Borealopelta&show=strat,loc",
+      "accessed": "2026-11-22"
+    }
+  ],
+  "lastReviewed": "2026-11-22"
+}

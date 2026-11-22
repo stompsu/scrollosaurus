@@ -1,0 +1,181 @@
+{
+  "slug": "magyarosaurus",
+  "scientificName": "Magyarosaurus dacus",
+  "genus": "Magyarosaurus",
+  "nameMeaning": {
+    "text": {
+      "en": "Magyar lizard",
+      "pl": "madziarski jaszczur"
+    },
+    "sourceIds": ["nhm"]
+  },
+  "group": "titanosauria",
+  "groupSourceIds": ["pbdb-taxon", "nhm", "diez-diaz-2025"],
+  "isDinosaur": true,
+  "taxonomy": {
+    "status": "valid",
+    "note": {
+      "en": "Huene (1932) erected Magyarosaurus with three species, and for decades almost all titanosaur bones from the Hațeg Basin were referred to M. dacus without strong arguments. Díez Díaz et al. (2025) stabilised the type species and recognised three other titanosaurs there, among them Petrustitan, formerly 'Magyarosaurus' hungaricus. PBDB treats M. transsylvanicus as a synonym of M. dacus.",
+      "pl": "Huene (1932) utworzył rodzaj Magyarosaurus z trzema gatunkami i przez dziesięciolecia niemal wszystkie kości tytanozaurów z basenu Hațeg przypisywano bez mocnych argumentów do M. dacus. Díez Díaz i in. (2025) ustabilizowali gatunek typowy i rozpoznali tam trzy inne tytanozaury, w tym Petrustitan, dawniej „Magyarosaurus” hungaricus. PBDB traktuje M. transsylvanicus jako synonim M. dacus."
+    },
+    "sourceIds": ["csiki-sava-2015", "stein-2010", "diez-diaz-2025", "pbdb-synonyms"]
+  },
+  "diet": {
+    "value": "herbivore",
+    "confidence": "established",
+    "sourceIds": ["nhm", "pbdb-taxa"]
+  },
+  "timeRange": {
+    "startMa": 72.2,
+    "endMa": 66,
+    "sourceIds": ["diez-diaz-2025", "csiki-sava-2015", "pbdb-occs", "nhm"],
+    "note": {
+      "en": "Stage-based: Díez Díaz et al. (2025) place M. dacus in lower Maastrichtian deposits, and tuffs in the northwestern Hațeg Basin are radiometrically dated to 71.3 ± 1.6 and 69.8 ± 1.3 Ma (Csiki-Sava et al. 2015). The Ma values are the ICS v2024/12 Maastrichtian boundaries, so the range is broader than the fossils themselves. NHM gives 71–66 Ma.",
+      "pl": "Na podstawie pięter: Díez Díaz i in. (2025) umieszczają M. dacus w osadach dolnego mastrychtu, a tufy z północno-zachodniej części basenu Hațeg datowano radiometrycznie na 71,3 ± 1,6 i 69,8 ± 1,3 mln lat (Csiki-Sava i in. 2015). Wartości w mln lat to granice mastrychtu według ICS v2024/12, więc zakres jest szerszy niż wiek samych skamieniałości. NHM podaje 71–66 mln lat temu."
+    }
+  },
+  "periods": ["cretaceous"],
+  "size": {
+    "lengthM": {
+      "value": [5, 5],
+      "sourceIds": ["nhm"],
+      "note": {
+        "en": "Single museum figure (NHM Dino Directory); method not stated.",
+        "pl": "Jedyna wartość muzealna (NHM Dino Directory); metody nie podano."
+      }
+    },
+    "massKg": {
+      "value": [900, 900],
+      "sourceIds": ["stein-2010"],
+      "note": {
+        "en": "Adult mass estimated by Stein et al. (2010) from humerus and femur circumference.",
+        "pl": "Masa dorosłego osobnika oszacowana przez Steina i in. (2010) na podstawie obwodu kości ramiennej i udowej."
+      }
+    }
+  },
+  "locations": [
+    {
+      "continent": "europe",
+      "countryCode": "RO",
+      "formation": "Sânpetru",
+      "sourceIds": ["pbdb-occs", "csiki-sava-2015"]
+    },
+    {
+      "continent": "europe",
+      "countryCode": "RO",
+      "formation": "Densuș-Ciula",
+      "sourceIds": ["pbdb-occs"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "Nopcsa",
+    "year": 1915,
+    "note": {
+      "en": "Nopcsa named the species Titanosaurus dacus; Huene moved it to the new genus Magyarosaurus in 1932.",
+      "pl": "Nopcsa nazwał gatunek Titanosaurus dacus; Huene przeniósł go w 1932 roku do nowego rodzaju Magyarosaurus."
+    },
+    "sourceIds": ["pbdb-synonyms", "csiki-sava-2015", "nhm"]
+  },
+  "summary": {
+    "text": {
+      "en": "Magyarosaurus was a titanosaur, a plant-eating sauropod, but a small one: adults weighed about 900 kilograms, while other titanosaurs were around ten times heavier. It lived on Hațeg Island, in what is now Romania, near the end of the Cretaceous. Its bones show that even small specimens were fully grown, so it was a dwarf, probably as an adaptation to island life.",
+      "pl": "Magyarosaurus był tytanozaurem – roślinożernym zauropodem – ale niewielkim: dorosłe osobniki ważyły około 900 kilogramów, podczas gdy inne tytanozaury były mniej więcej dziesięć razy cięższe. Żył na wyspie Hațeg, na terenie dzisiejszej Rumunii, pod koniec kredy. Jego kości pokazują, że nawet małe okazy były w pełni dorosłe, więc był to karzeł – prawdopodobnie w wyniku przystosowania do życia na wyspie."
+    },
+    "sourceIds": ["stein-2010", "diez-diaz-2025", "nhm"]
+  },
+  "funFacts": [
+    {
+      "text": {
+        "en": "About a century ago, Nopcsa suggested that the small Hațeg dinosaurs had shrunk on an island. A 2010 study of Magyarosaurus bone tissue supported his idea.",
+        "pl": "Około sto lat temu Nopcsa zasugerował, że małe dinozaury z Hațeg zmniejszyły się, żyjąc na wyspie. Badanie tkanki kostnej Magyarosaurus z 2010 roku potwierdziło jego pomysł."
+      },
+      "sourceIds": ["stein-2010"]
+    },
+    {
+      "text": {
+        "en": "Not every sauropod on Hațeg Island was small: Uriash kadici, which lived there too, was among the largest known sauropods of the Late Cretaceous European islands.",
+        "pl": "Nie wszystkie zauropody na wyspie Hațeg były małe: żyjący tam również Uriash kadici należał do największych znanych zauropodów późnokredowego archipelagu europejskiego."
+      },
+      "sourceIds": ["diez-diaz-2025"]
+    }
+  ],
+  "famous": false,
+  "images": [
+    {
+      "commonsFile": "File:Life reconstruction of Magyarosaurus dacus.jpg",
+      "kind": "life-reconstruction",
+      "alt": {
+        "en": "Life restoration of Magyarosaurus dacus based on Scott Hartman’s skeletal reconstruction.",
+        "pl": "Rekonstrukcja przyżyciowa Magyarosaurus dacus, oparta na rekonstrukcji szkieletu autorstwa Scotta Hartmana."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "stein-2010",
+      "title": "Small body size and extreme cortical bone remodeling indicate phyletic dwarfism in Magyarosaurus dacus (Sauropoda: Titanosauria)",
+      "authors": "Stein, K.; Csiki, Z.; Curry Rogers, K.; Weishampel, D. B.; Redelstorff, R.; Carballido, J. L.; Sander, P. M.",
+      "year": 2010,
+      "publisher": "Proceedings of the National Academy of Sciences 107(20): 9258-9263",
+      "doi": "10.1073/pnas.1000781107",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2889090/",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "csiki-sava-2015",
+      "title": "Island life in the Cretaceous - faunal composition, biogeography, evolution, and extinction of land-living vertebrates on the Late Cretaceous European archipelago",
+      "authors": "Csiki-Sava, Z.; Buffetaut, E.; Ősi, A.; Pereda-Suberbiola, X.; Brusatte, S. L.",
+      "year": 2015,
+      "publisher": "ZooKeys 469: 1-161",
+      "doi": "10.3897/zookeys.469.8439",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4296572/",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "diez-diaz-2025",
+      "title": "Revision of Romanian sauropod dinosaurs reveals high titanosaur diversity and body-size disparity on the latest Cretaceous Haţeg Island, with implications for titanosaurian biogeography",
+      "authors": "Díez Díaz, V.; Mannion, P. D.; Csiki-Sava, Z.; Upchurch, P.",
+      "year": 2025,
+      "publisher": "Journal of Systematic Palaeontology 23(1): 2441516",
+      "doi": "10.1080/14772019.2024.2441516",
+      "url": "https://doi.org/10.1080/14772019.2024.2441516",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "nhm",
+      "title": "Magyarosaurus | Dino Directory",
+      "publisher": "Natural History Museum, London",
+      "url": "https://www.nhm.ac.uk/discover/dino-directory/magyarosaurus.html",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-taxon",
+      "title": "Magyarosaurus (taxon 52883) and its parent taxa",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/list.json?name=Magyarosaurus&rel=all_parents",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-synonyms",
+      "title": "Magyarosaurus dacus (taxon 64331) and its synonyms",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/list.json?name=Magyarosaurus%20dacus&rel=synonyms&show=attr,ref",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-taxa",
+      "title": "Taxon records with classification and ecospace for Magyarosaurus and other genera",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/list.json?name=Rapetosaurus,Rajasaurus,Antarctopelta,Hypsilophodon,Magyarosaurus,Hatzegopteryx,Centrosaurus,Chasmosaurus,Stegoceras,Borealopelta&show=attr,class,ecospace",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-occs",
+      "title": "Occurrences of Magyarosaurus and other genera (stratigraphy and location)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Rapetosaurus,Rajasaurus,Antarctopelta,Magyarosaurus,Hatzegopteryx&show=strat,loc",
+      "accessed": "2026-11-22"
+    }
+  ],
+  "lastReviewed": "2026-11-22"
+}

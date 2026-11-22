@@ -1,0 +1,136 @@
+{
+  "slug": "opisthocoelicaudia",
+  "scientificName": "Opisthocoelicaudia skarzynskii",
+  "genus": "Opisthocoelicaudia",
+  "nameMeaning": {
+    "text": {
+      "en": "hollow-backed tail (vertebrae)",
+      "pl": "(kręgi) ogonowe wklęsłe z tyłu"
+    },
+    "sourceIds": ["nhm-opisthocoelicaudia"]
+  },
+  "group": "titanosauria",
+  "groupSourceIds": ["pbdb-genera", "nhm-opisthocoelicaudia"],
+  "isDinosaur": true,
+  "taxonomy": {
+    "status": "valid",
+    "note": {
+      "en": "Known from a skeleton without skull or neck, while Nemegtosaurus from the same formation is known from a skull, so the two cannot be compared directly. Averianov and Lopatin (2019) raise the question of whether they are the same animal and list differences between Nemegt femora they refer to Nemegtosaurus and the femur of Opisthocoelicaudia. PBDB and NHM place it in Saltasauridae.",
+      "pl": "Znany ze szkieletu bez czaszki i szyi, podczas gdy Nemegtosaurus z tej samej formacji jest znany z czaszki, więc obu rodzajów nie da się bezpośrednio porównać. Averianov i Lopatin (2019) stawiają pytanie, czy to nie to samo zwierzę, i wskazują różnice między kośćmi udowymi z formacji Nemegt, które przypisują do Nemegtosaurus, a kością udową Opisthocoelicaudia. PBDB i NHM umieszczają go w rodzinie Saltasauridae."
+    },
+    "sourceIds": ["averianov-lopatin-2019", "nhm-opisthocoelicaudia", "pbdb-genera"]
+  },
+  "diet": {
+    "value": "herbivore",
+    "confidence": "established",
+    "sourceIds": ["nhm-opisthocoelicaudia", "pbdb-genera"]
+  },
+  "timeRange": {
+    "startMa": 72.2,
+    "endMa": 66,
+    "sourceIds": ["pbdb-occs", "averianov-lopatin-2019", "nhm-opisthocoelicaudia"],
+    "note": {
+      "en": "PBDB dates the single occurrence (Nemegt Formation, Mongolia) to the Maastrichtian; the Ma values are the ICS v2024/12 Maastrichtian stage boundaries. NHM gives 72–68 Ma.",
+      "pl": "PBDB datuje jedyne występowanie (formacja Nemegt, Mongolia) na mastrycht; wartości w mln lat to granice piętra mastrychtu według ICS v2024/12. NHM podaje 72–68 mln lat temu."
+    }
+  },
+  "periods": ["cretaceous"],
+  "size": {
+    "lengthM": {
+      "value": [12, 12],
+      "sourceIds": ["nhm-opisthocoelicaudia"],
+      "note": {
+        "en": "Museum figure.",
+        "pl": "Wartość muzealna."
+      }
+    }
+  },
+  "locations": [
+    {
+      "continent": "asia",
+      "countryCode": "MN",
+      "formation": "Nemegt",
+      "sourceIds": ["pbdb-occs", "averianov-lopatin-2019"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "Borsuk-Białynicka",
+    "year": 1977,
+    "sourceIds": ["pbdb-genera"]
+  },
+  "summary": {
+    "text": {
+      "en": "Opisthocoelicaudia was a titanosaur, a plant-eating sauropod, about 12 metres long. It lived in what is now Mongolia near the end of the Cretaceous. It is known from a skeleton that lacks its skull and neck. Its name refers to its tail vertebrae, hollowed at the back. Another sauropod from the same rocks, Nemegtosaurus, is known from a skull, so scientists have asked whether the two could be the same animal.",
+      "pl": "Opisthocoelicaudia był tytanozaurem, czyli roślinożernym zauropodem, o długości około 12 metrów. Żył na terenie dzisiejszej Mongolii pod koniec kredy. Znamy go ze szkieletu, w którym brakuje czaszki i szyi. Jego nazwa odnosi się do kręgów ogonowych, wklęsłych z tyłu. Inny zauropod z tych samych skał, Nemegtosaurus, jest znany z czaszki, dlatego naukowcy zastanawiają się, czy to nie to samo zwierzę."
+    },
+    "sourceIds": ["nhm-opisthocoelicaudia", "pbdb-occs", "averianov-lopatin-2019"]
+  },
+  "famous": false,
+  "images": [
+    {
+      "commonsFile": "File:Opisthocoelicaudia Museum of Evolution in Warsaw 01.JPG",
+      "kind": "skeleton-mount",
+      "alt": {
+        "en": "Mounted skeleton of Opisthocoelicaudia in the Museum of Evolution in Warsaw.",
+        "pl": "Zmontowany szkielet Opisthocoelicaudia w Muzeum Ewolucji w Warszawie."
+      }
+    }
+  ],
+  "uncertain": [
+    {
+      "field": "size.massKg",
+      "note": {
+        "en": "No mass estimate found in a source we could verify.",
+        "pl": "Nie znaleziono oszacowania masy w źródle, które moglibyśmy zweryfikować."
+      }
+    },
+    {
+      "field": "taxonomy",
+      "note": {
+        "en": "Because Opisthocoelicaudia and Nemegtosaurus are known from non-overlapping parts of the skeleton, whether they are one genus is unresolved (Averianov and Lopatin 2019).",
+        "pl": "Ponieważ Opisthocoelicaudia i Nemegtosaurus są znane z różnych, niepokrywających się części szkieletu, nie rozstrzygnięto, czy to jeden rodzaj (Averianov i Lopatin 2019)."
+      }
+    },
+    {
+      "field": "discovery",
+      "note": {
+        "en": "The original description (Borsuk-Białynicka 1977, Palaeontologia Polonica 37) could not be opened; author and year come from PBDB.",
+        "pl": "Nie udało się otworzyć pierwotnego opisu (Borsuk-Białynicka 1977, Palaeontologia Polonica 37); autorkę i rok podano według PBDB."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "averianov-lopatin-2019",
+      "title": "Sauropod diversity in the Upper Cretaceous Nemegt Formation of Mongolia—a possible new specimen of Nemegtosaurus",
+      "authors": "Averianov, A. O.; Lopatin, A. V.",
+      "year": 2019,
+      "publisher": "Acta Palaeontologica Polonica 64(2): 313-321",
+      "doi": "10.4202/app.00596.2019",
+      "url": "https://www.app.pan.pl/article/item/app005962019.html",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "nhm-opisthocoelicaudia",
+      "title": "Opisthocoelicaudia | Dino Directory",
+      "publisher": "Natural History Museum, London",
+      "url": "https://www.nhm.ac.uk/discover/dino-directory/opisthocoelicaudia.html",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-genera",
+      "title": "Taxon entries for Opisthocoelicaudia (taxon 38698) and other genera",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/list.json?name=Saturnalia,Silesaurus,Lisowicia,Anchiornis,Yutyrannus,Caudipteryx,Citipati,Deinocheirus,Opisthocoelicaudia,Saltasaurus,Patagotitan&show=attr,app,parent,class,ecospace",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-occs",
+      "title": "Occurrences of Opisthocoelicaudia and other genera (stratigraphy and location)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Citipati,Deinocheirus,Opisthocoelicaudia,Saltasaurus,Patagotitan&show=strat,loc",
+      "accessed": "2026-11-22"
+    }
+  ],
+  "lastReviewed": "2026-11-22"
+}

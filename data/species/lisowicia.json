@@ -1,0 +1,160 @@
+{
+  "slug": "lisowicia",
+  "scientificName": "Lisowicia bojani",
+  "genus": "Lisowicia",
+  "nameMeaning": {
+    "text": {
+      "en": "from Lisowice, honouring the anatomist Ludwig Heinrich Bojanus",
+      "pl": "z Lisowic, na cześć anatoma Ludwiga Heinricha Bojanusa"
+    },
+    "sourceIds": ["uu-2018"]
+  },
+  "group": "dicynodontia",
+  "groupSourceIds": ["sulej-niedzwiedzki-2019", "pbdb-genera"],
+  "isDinosaur": false,
+  "taxonomy": {
+    "status": "valid",
+    "note": {
+      "en": "A dicynodont, a plant-eating synapsid (Sulej and Niedźwiedzki 2019). PBDB places it in Placeriinae, within the family Stahleckeriidae.",
+      "pl": "Dicynodont, czyli roślinożerny synapsyd (Sulej i Niedźwiedzki 2019). PBDB umieszcza go w podrodzinie Placeriinae, w obrębie rodziny Stahleckeriidae."
+    },
+    "sourceIds": ["sulej-niedzwiedzki-2019", "pbdb-genera"]
+  },
+  "diet": {
+    "value": "herbivore",
+    "confidence": "established",
+    "sourceIds": ["sulej-niedzwiedzki-2019", "pbdb-genera"],
+    "note": {
+      "en": "Sulej and Niedźwiedzki (2019) count it among the Late Triassic megaherbivores (very large plant-eaters), alongside dinosaurs.",
+      "pl": "Sulej i Niedźwiedzki (2019) zaliczają go, obok dinozaurów, do późnotriasowych megaroślinożerców (bardzo dużych roślinożerców)."
+    }
+  },
+  "timeRange": {
+    "startMa": 210,
+    "endMa": 205,
+    "sourceIds": ["uu-2018", "pbdb-occs"],
+    "note": {
+      "en": "Uppsala University gives about 210–205 Ma (Late Triassic). PBDB dates the occurrence only to the Norian–Rhaetian (227.3–201.4 Ma).",
+      "pl": "Uniwersytet w Uppsali podaje około 210–205 mln lat temu (późny trias). PBDB datuje występowanie jedynie na noryk–retyk (227,3–201,4 mln lat temu)."
+    }
+  },
+  "periods": ["triassic"],
+  "size": {
+    "lengthM": {
+      "value": [4.5, 4.5],
+      "sourceIds": ["uu-2018"],
+      "note": {
+        "en": "About 4.5 m long (Uppsala University press release on the 2019 paper).",
+        "pl": "Około 4,5 m długości (komunikat prasowy Uniwersytetu w Uppsali o pracy z 2019 roku)."
+      }
+    },
+    "massKg": {
+      "value": [9000, 9000],
+      "sourceIds": ["uu-2018"],
+      "note": {
+        "en": "About 9 tonnes, roughly the size of an elephant (Uppsala University press release).",
+        "pl": "Około 9 ton, mniej więcej wielkość słonia (komunikat prasowy Uniwersytetu w Uppsali)."
+      }
+    },
+    "heightM": {
+      "value": [2.6, 2.6],
+      "sourceIds": ["uu-2018"],
+      "note": {
+        "en": "About 2.6 m high (Uppsala University press release).",
+        "pl": "Około 2,6 m wysokości (komunikat prasowy Uniwersytetu w Uppsali)."
+      }
+    }
+  },
+  "locations": [
+    {
+      "continent": "europe",
+      "countryCode": "PL",
+      "sourceIds": ["pbdb-occs", "uu-2018"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "Sulej & Niedźwiedzki",
+    "year": 2019,
+    "note": {
+      "en": "The first bones were found at Lisowice in 2005 by Robert Borzęcki and Piotr Menducki; more than 1,000 bones and fragments have been collected since. The paper appeared online in November 2018 and in print in January 2019.",
+      "pl": "Pierwsze kości znaleźli w Lisowicach w 2005 roku Robert Borzęcki i Piotr Menducki; od tego czasu zebrano ponad 1000 kości i ich fragmentów. Praca ukazała się w internecie w listopadzie 2018 roku, a drukiem w styczniu 2019 roku."
+    },
+    "sourceIds": ["sulej-niedzwiedzki-2019", "uu-2018", "pbdb-genera"]
+  },
+  "summary": {
+    "text": {
+      "en": "Lisowicia was not a dinosaur, nor even a reptile. It was a dicynodont, a plant-eating synapsid: a distant relative of mammals. About 4.5 metres long and weighing around 9 tonnes, it was as big as an elephant and much larger than any other known dicynodont. It lived in what is now Poland about 210 to 205 million years ago, at the same time as early long-necked dinosaurs, and stood on upright legs like a mammal.",
+      "pl": "Lisowicia nie była dinozaurem ani nawet gadem. Był to dicynodont – roślinożerny synapsyd, daleki krewny ssaków. Mierzyła około 4,5 metra długości i ważyła około 9 ton, była więc wielka jak słoń i znacznie większa od wszystkich innych znanych dicynodontów. Żyła na terenie dzisiejszej Polski około 210–205 milionów lat temu, w tym samym czasie co wczesne długoszyje dinozaury, i stała na wyprostowanych kończynach jak ssak."
+    },
+    "sourceIds": ["ucmp-synapsida", "sulej-niedzwiedzki-2019", "uu-2018"]
+  },
+  "funFacts": [
+    {
+      "text": {
+        "en": "Lisowicia is the youngest dicynodont known, and the largest land animal of the Triassic that was not a dinosaur.",
+        "pl": "Lisowicia to najmłodszy znany dicynodont i największe lądowe zwierzę triasu, które nie było dinozaurem."
+      },
+      "sourceIds": ["uu-2018"]
+    },
+    {
+      "text": {
+        "en": "Synapsids were once called 'mammal-like reptiles', but that name is now discouraged: none of them were actually reptiles.",
+        "pl": "Synapsydy nazywano kiedyś „gadami ssakokształtnymi”, ale dziś odradza się tę nazwę: żaden z nich nie był w rzeczywistości gadem."
+      },
+      "sourceIds": ["ucmp-synapsida"]
+    }
+  ],
+  "famous": false,
+  "images": [
+    {
+      "commonsFile": "File:Lisowicia bojani Wikipedia Juandertal.jpg",
+      "kind": "life-reconstruction",
+      "alt": {
+        "en": "Life reconstruction of Lisowicia bojani, based on work by Tomasz Sulej, Grzegorz Niedźwiedzki and Emily Valentine.",
+        "pl": "Rekonstrukcja przyżyciowa Lisowicia bojani, oparta na pracach Tomasza Suleja, Grzegorza Niedźwiedzkiego i Emily Valentine."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "sulej-niedzwiedzki-2019",
+      "title": "An elephant-sized Late Triassic synapsid with erect limbs",
+      "authors": "Sulej, T.; Niedźwiedzki, G.",
+      "year": 2019,
+      "publisher": "Science 363(6422): 78-80",
+      "doi": "10.1126/science.aal4853",
+      "url": "https://doi.org/10.1126/science.aal4853",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "uu-2018",
+      "title": "Gigantic mammal 'cousin' discovered",
+      "publisher": "Uppsala University",
+      "year": 2018,
+      "url": "https://www.mynewsdesk.com/uu/pressreleases/gigantic-mammal-cousin-discovered-2801876",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "ucmp-synapsida",
+      "title": "Introduction to the Synapsida",
+      "publisher": "University of California Museum of Paleontology",
+      "url": "https://ucmp.berkeley.edu/synapsids/synapsida.html",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-genera",
+      "title": "Taxon entries for Lisowicia (taxon 409767) and other genera",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/list.json?name=Saturnalia,Silesaurus,Lisowicia,Anchiornis,Yutyrannus,Caudipteryx,Citipati,Deinocheirus,Opisthocoelicaudia,Saltasaurus,Patagotitan&show=attr,app,parent,class,ecospace",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-occs",
+      "title": "Occurrences of Lisowicia and other genera (stratigraphy and location)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Saturnalia,Silesaurus,Lisowicia,Anchiornis,Yutyrannus,Caudipteryx&show=strat,loc",
+      "accessed": "2026-11-22"
+    }
+  ],
+  "lastReviewed": "2026-11-22"
+}

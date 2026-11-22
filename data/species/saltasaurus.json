@@ -1,0 +1,145 @@
+{
+  "slug": "saltasaurus",
+  "scientificName": "Saltasaurus loricatus",
+  "genus": "Saltasaurus",
+  "nameMeaning": {
+    "text": {
+      "en": "Salta lizard",
+      "pl": "jaszczur z Salty"
+    },
+    "sourceIds": ["nhm-saltasaurus"]
+  },
+  "group": "titanosauria",
+  "groupSourceIds": ["cerda-powell-2010", "pbdb-genera", "nhm-saltasaurus"],
+  "isDinosaur": true,
+  "taxonomy": {
+    "status": "valid",
+    "note": {
+      "en": "A titanosaur (Cerda and Powell 2010). PBDB and NHM place it in Saltasauridae.",
+      "pl": "Tytanozaur (Cerda i Powell 2010). PBDB i NHM umieszczają go w rodzinie Saltasauridae."
+    },
+    "sourceIds": ["cerda-powell-2010", "pbdb-genera", "nhm-saltasaurus"]
+  },
+  "diet": {
+    "value": "herbivore",
+    "confidence": "established",
+    "sourceIds": ["nhm-saltasaurus", "pbdb-genera"]
+  },
+  "timeRange": {
+    "startMa": 72.2,
+    "endMa": 66,
+    "sourceIds": ["pbdb-occs", "nhm-saltasaurus"],
+    "note": {
+      "en": "PBDB places the type occurrence (Lecho Formation, Salta, Argentina) in the Early Maastrichtian but gives the full Maastrichtian range; the Ma values are the ICS v2024/12 Maastrichtian stage boundaries. NHM gives 70–66 Ma.",
+      "pl": "PBDB umieszcza występowanie typowe (formacja Lecho, Salta, Argentyna) we wczesnym mastrychcie, ale podaje zakres całego mastrychtu; wartości w mln lat to granice piętra mastrychtu według ICS v2024/12. NHM podaje 70–66 mln lat temu."
+    }
+  },
+  "periods": ["cretaceous"],
+  "size": {
+    "lengthM": {
+      "value": [12, 12],
+      "sourceIds": ["nhm-saltasaurus"],
+      "note": {
+        "en": "Museum figure.",
+        "pl": "Wartość muzealna."
+      }
+    }
+  },
+  "locations": [
+    {
+      "continent": "south-america",
+      "countryCode": "AR",
+      "formation": "Lecho",
+      "sourceIds": ["pbdb-occs", "cerda-powell-2010"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "Bonaparte & Powell",
+    "year": 1980,
+    "sourceIds": ["pbdb-genera"]
+  },
+  "summary": {
+    "text": {
+      "en": "Saltasaurus was a titanosaur, a plant-eating sauropod, from what is now north-western Argentina. It was one of the last sauropods, living just before they died out, about 70 to 66 million years ago. It was about 12 metres long. Bony plates and small bony nodules in its skin formed a kind of armour, and its discovery gave the first clear evidence of such bones in sauropods.",
+      "pl": "Saltasaurus był tytanozaurem, czyli roślinożernym zauropodem, z terenu dzisiejszej północno-zachodniej Argentyny. Był jednym z ostatnich zauropodów i żył tuż przed ich wymarciem, około 70–66 milionów lat temu. Mierzył około 12 metrów długości. Kostne płytki i drobne kostne guzki w jego skórze tworzyły rodzaj pancerza, a jego odkrycie dostarczyło pierwszych wyraźnych dowodów na istnienie takich kości u zauropodów."
+    },
+    "sourceIds": ["nhm-saltasaurus", "cerda-powell-2010"]
+  },
+  "funFacts": [
+    {
+      "text": {
+        "en": "A study of the armour's bone tissue suggests it formed mainly by bone growing directly in the skin, a process called metaplasia.",
+        "pl": "Badanie tkanki kostnej pancerza sugeruje, że powstawał on głównie przez kostnienie bezpośrednio w skórze – proces zwany metaplazją."
+      },
+      "sourceIds": ["cerda-powell-2010"]
+    }
+  ],
+  "famous": false,
+  "images": [
+    {
+      "commonsFile": "File:Saltasaurus dinosaur.png",
+      "kind": "life-reconstruction",
+      "alt": {
+        "en": "Life reconstruction of two Saltasaurus, a sauropod dinosaur of the Late Cretaceous.",
+        "pl": "Rekonstrukcja przyżyciowa dwóch osobników Saltasaurus, zauropoda z późnej kredy."
+      }
+    }
+  ],
+  "uncertain": [
+    {
+      "field": "size.lengthM",
+      "note": {
+        "en": "Only a museum figure was found; no peer-reviewed length was verified.",
+        "pl": "Znaleziono jedynie wartość muzealną; nie zweryfikowano żadnej recenzowanej długości."
+      }
+    },
+    {
+      "field": "size.massKg",
+      "note": {
+        "en": "No mass estimate found in a source we could verify.",
+        "pl": "Nie znaleziono oszacowania masy w źródle, które moglibyśmy zweryfikować."
+      }
+    },
+    {
+      "field": "discovery",
+      "note": {
+        "en": "The original description (Bonaparte and Powell 1980) could not be opened; authors and year come from PBDB.",
+        "pl": "Nie udało się otworzyć pierwotnego opisu (Bonaparte i Powell 1980); autorów i rok podano według PBDB."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "cerda-powell-2010",
+      "title": "Dermal armor histology of Saltasaurus loricatus, an Upper Cretaceous sauropod dinosaur from Northwest Argentina",
+      "authors": "Cerda, I. A.; Powell, J. E.",
+      "year": 2010,
+      "publisher": "Acta Palaeontologica Polonica 55(3): 389-398",
+      "doi": "10.4202/app.2009.1101",
+      "url": "https://app.pan.pl/article/item/app20091101.html",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "nhm-saltasaurus",
+      "title": "Saltasaurus | Dino Directory",
+      "publisher": "Natural History Museum, London",
+      "url": "https://www.nhm.ac.uk/discover/dino-directory/saltasaurus.html",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-genera",
+      "title": "Taxon entries for Saltasaurus (taxon 38693) and other genera",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/list.json?name=Saturnalia,Silesaurus,Lisowicia,Anchiornis,Yutyrannus,Caudipteryx,Citipati,Deinocheirus,Opisthocoelicaudia,Saltasaurus,Patagotitan&show=attr,app,parent,class,ecospace",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-occs",
+      "title": "Occurrences of Saltasaurus and other genera (stratigraphy and location)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Citipati,Deinocheirus,Opisthocoelicaudia,Saltasaurus,Patagotitan&show=strat,loc",
+      "accessed": "2026-11-22"
+    }
+  ],
+  "lastReviewed": "2026-11-22"
+}

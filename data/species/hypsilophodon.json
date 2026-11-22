@@ -1,0 +1,141 @@
+{
+  "slug": "hypsilophodon",
+  "scientificName": "Hypsilophodon foxii",
+  "genus": "Hypsilophodon",
+  "nameMeaning": {
+    "text": {
+      "en": "high-crested tooth",
+      "pl": "ząb o wysokim grzebieniu"
+    },
+    "sourceIds": ["nhm"]
+  },
+  "group": "ornithopoda",
+  "groupSourceIds": ["pbdb-taxon", "boyd-2015"],
+  "isDinosaur": true,
+  "taxonomy": {
+    "status": "valid",
+    "note": {
+      "en": "Its placement varies between studies. Boyd (2015) recovered H. foxii as the only early-branching (non-iguanodontian) ornithopod in his analysis, but notes that its relationships to other small 'hypsilophodontid' dinosaurs remain ambiguous. PBDB places it in Ornithopoda, family Hypsilophodontidae; the NHM classifies it only as a neornithischian.",
+      "pl": "Jego pozycja różni się w zależności od badania. Boyd (2015) uzyskał w swojej analizie H. foxii jako jedynego wcześnie oddzielonego (niebędącego iguanodontem) ornitopoda, ale zaznacza, że jego pokrewieństwo z innymi małymi „hipsylofodontami” pozostaje niejasne. PBDB umieszcza go w Ornithopoda, w rodzinie Hypsilophodontidae; NHM klasyfikuje go jedynie jako przedstawiciela Neornithischia."
+    },
+    "sourceIds": ["boyd-2015", "pbdb-taxon", "nhm"]
+  },
+  "diet": {
+    "value": "herbivore",
+    "confidence": "established",
+    "sourceIds": ["nhm", "pbdb-taxa"]
+  },
+  "timeRange": {
+    "startMa": 125.77,
+    "endMa": 121.4,
+    "sourceIds": ["pbdb-occs", "nhm"],
+    "note": {
+      "en": "Stage-based: PBDB dates the H. foxii records from the Wessex Formation of the Isle of Wight to the (late) Barremian. The Ma values are the ICS v2024/12 Barremian boundaries. The NHM gives 130–125 Ma, which would reach back into the Hauterivian.",
+      "pl": "Na podstawie pięter: PBDB datuje rekordy H. foxii z formacji Wessex na wyspie Wight na (późny) barrem. Wartości w mln lat to granice barremu według ICS v2024/12. NHM podaje 130–125 mln lat temu, co sięgałoby wstecz do hoterywu."
+    }
+  },
+  "periods": ["cretaceous"],
+  "size": {
+    "lengthM": {
+      "value": [2, 2],
+      "sourceIds": ["nhm"],
+      "note": {
+        "en": "Single museum figure (NHM Dino Directory); method not stated.",
+        "pl": "Jedyna wartość muzealna (NHM Dino Directory); metody nie podano."
+      }
+    },
+    "massKg": {
+      "value": [20, 20],
+      "sourceIds": ["nhm"],
+      "note": {
+        "en": "Single museum figure (NHM Dino Directory); method not stated.",
+        "pl": "Jedyna wartość muzealna (NHM Dino Directory); metody nie podano."
+      }
+    }
+  },
+  "locations": [
+    {
+      "continent": "europe",
+      "countryCode": "GB",
+      "formation": "Wessex",
+      "sourceIds": ["pbdb-occs", "nhm"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "Huxley",
+    "year": 1870,
+    "note": {
+      "en": "PBDB dates Huxley's naming to 1870; the NHM gives 1869. PBDB also lists Hypsilophodon sp. and cf. Hypsilophodon from Spain, Portugal, Romania and Japan; these are not referred to H. foxii and are not used here.",
+      "pl": "PBDB datuje nadanie nazwy przez Huxleya na 1870 rok; NHM podaje rok 1869. PBDB wymienia też Hypsilophodon sp. i cf. Hypsilophodon z Hiszpanii, Portugalii, Rumunii i Japonii; nie są one przypisane do H. foxii i nie zostały tu uwzględnione."
+    },
+    "sourceIds": ["pbdb-taxa", "nhm", "pbdb-occs"]
+  },
+  "summary": {
+    "text": {
+      "en": "Hypsilophodon was a small, fast-running plant eater about 2 metres long that lived in what is now England during the Early Cretaceous. All known fossils come from the Isle of Wight, and it may have lived in groups. Its name means 'high-crested tooth', although its teeth were not actually crested. Scientists still debate exactly where it fits in the family tree of ornithischian dinosaurs.",
+      "pl": "Hypsilophodon był małym, szybko biegającym roślinożercą o długości około 2 metrów, który żył we wczesnej kredzie na terenie dzisiejszej Anglii. Wszystkie znane skamieniałości pochodzą z wyspy Wight; możliwe, że żył w grupach. Jego nazwa oznacza „ząb o wysokim grzebieniu”, choć jego zęby w rzeczywistości nie miały grzebieni. Naukowcy wciąż dyskutują, gdzie dokładnie jest jego miejsce na drzewie rodowym dinozaurów ptasiomiednicznych."
+    },
+    "sourceIds": ["nhm", "boyd-2015", "pbdb-occs"]
+  },
+  "famous": false,
+  "images": [
+    {
+      "commonsFile": "File:Hypsilophodon NMHUK lateral.jpg",
+      "kind": "skeleton-mount",
+      "alt": {
+        "en": "Lateral view of a skeletal mount of Hypsilophodon foxii at the Natural History Museum in London.",
+        "pl": "Widok z boku zmontowanego szkieletu Hypsilophodon foxii w Natural History Museum w Londynie."
+      }
+    }
+  ],
+  "uncertain": [
+    {
+      "field": "group",
+      "note": {
+        "en": "Placed in Ornithopoda by PBDB and by Boyd (2015), who still calls its wider relationships ambiguous; the NHM classifies it only as a neornithischian.",
+        "pl": "PBDB i Boyd (2015) umieszczają go w Ornithopoda, przy czym Boyd nadal określa jego szersze pokrewieństwa jako niejasne; NHM klasyfikuje go jedynie jako przedstawiciela Neornithischia."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "nhm",
+      "title": "Hypsilophodon | Dino Directory",
+      "publisher": "Natural History Museum, London",
+      "url": "https://www.nhm.ac.uk/discover/dino-directory/hypsilophodon.html",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "boyd-2015",
+      "title": "The systematic relationships and biogeographic history of ornithischian dinosaurs",
+      "authors": "Boyd, C. A.",
+      "year": 2015,
+      "publisher": "PeerJ 3: e1523",
+      "doi": "10.7717/peerj.1523",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4690359/",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-taxon",
+      "title": "Hypsilophodon (taxon 38736) and its parent taxa",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/list.json?name=Hypsilophodon&rel=all_parents",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-taxa",
+      "title": "Taxon records with classification and ecospace for Hypsilophodon and other genera",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/list.json?name=Rapetosaurus,Rajasaurus,Antarctopelta,Hypsilophodon,Magyarosaurus,Hatzegopteryx,Centrosaurus,Chasmosaurus,Stegoceras,Borealopelta&show=attr,class,ecospace",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-occs",
+      "title": "Occurrences of Hypsilophodon and Borealopelta (stratigraphy and location)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Hypsilophodon,Borealopelta&show=strat,loc",
+      "accessed": "2026-11-22"
+    }
+  ],
+  "lastReviewed": "2026-11-22"
+}

@@ -49,6 +49,23 @@
     "placeholder": "data:image/webp;base64,UklGRkQAAABXRUJQVlA4IDgAAADQAQCdASoQAAwAA4BaJYwCdACeCspNgAD+2mM1+hqs52MljoYgMFKx8RCW9lxT3jacEbO5unzAAA==",
     "fetched": "2026-11-22"
   },
+  "File:Anchiornis huxleyi holotype.jpg": {
+    "author": "纳瓦拉的亨利",
+    "license": "CC BY-SA 4.0",
+    "licenseFamily": "cc-by-sa",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Anchiornis_huxleyi_holotype.jpg",
+    "width": 1280,
+    "height": 1280,
+    "widths": [
+      320,
+      640,
+      1280
+    ],
+    "basename": "images/ff4fd5b811a5",
+    "placeholder": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAADQAQCdASoQABAAA4BaJQBOgBhfBtpuAAD+S+7+cz7lnjvS1FKyYxWSVBpXnNE8LwXH4Oid2QQxSb2QcklmBasAAAA=",
+    "fetched": "2026-11-22"
+  },
   "File:Ankylosaur head - cast - Custer County Montana - Museum of the Rockies - 2013-07-08.jpg": {
     "author": "Tim Evanson",
     "license": "CC BY-SA 2.0",
@@ -65,6 +82,23 @@
     "basename": "images/fa3d33b8b029",
     "placeholder": "data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAAAQAgCdASoQAA4AA4BaJQBOgB4g/GgQHMSAAM2lNZkjL0fVSsSoC8cSCmcu21Nv96w8KEb3K5kXLtG6vzA6QIgA",
     "fetched": "2026-11-21"
+  },
+  "File:Antarctopelta LMR.jpg": {
+    "author": "Levi B. Martinez-Reza",
+    "license": "CC BY-SA 3.0",
+    "licenseFamily": "cc-by-sa",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Antarctopelta_LMR.jpg",
+    "width": 1280,
+    "height": 542,
+    "widths": [
+      320,
+      640,
+      1280
+    ],
+    "basename": "images/305115a64dee",
+    "placeholder": "data:image/webp;base64,UklGRjgAAABXRUJQVlA4ICwAAADwAQCdASoQAAcAA4BaJaQAAudmfpCfvAAA/vPJBHmMdnKdP27rFfH26NAAAA==",
+    "fetched": "2026-11-22"
   },
   "File:Apatosaurus louisae - CM.jpg": {
     "author": "AbstractionBlue",
@@ -185,6 +219,23 @@
     "placeholder": "data:image/webp;base64,UklGRkYAAABXRUJQVlA4IDoAAADQAgCdASoQABMAPu1krU6ppaSiMAgBMB2JQBWABbvAAPqNvo0Je5YlRqHskXtQn9UIS6jdIq/7yAAA",
     "fetched": "2026-11-21"
   },
+  "File:Borealopelta markmitchelli (TMP 2011.033.0001), Royal Tyrrell Museum, Drumheller, Alberta, 2025-07-13.jpg": {
+    "author": "Chris Woodrich",
+    "license": "CC BY-SA 4.0",
+    "licenseFamily": "cc-by-sa",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Borealopelta_markmitchelli_(TMP_2011.033.0001),_Royal_Tyrrell_Museum,_Drumheller,_Alberta,_2025-07-13.jpg",
+    "width": 1280,
+    "height": 966,
+    "widths": [
+      320,
+      640,
+      1280
+    ],
+    "basename": "images/b95f264915fa",
+    "placeholder": "data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAADwAQCdASoQAAwAA4BaJQBOgCG50P8w6AAA+C1NVV5MAj4atQCrR3zro898j9sCzhyRr7yFh4rKZ1kuTCqgAA==",
+    "fetched": "2026-11-22"
+  },
   "File:Brachiosaurus mount.jpg": {
     "author": "Matt Wedel",
     "license": "CC BY 3.0",
@@ -253,6 +304,40 @@
     "placeholder": "data:image/webp;base64,UklGRjwAAABXRUJQVlA4IDAAAADwAQCdASoQAAwAA4BaJZwAAueBv8bGNCAA/vDrgPe4ajl79iT7dxpCWgSgk+GzgAA=",
     "fetched": "2026-11-21"
   },
+  "File:Caudipteryx zoui 443.jpg": {
+    "author": "Ghedoghedo",
+    "license": "CC BY-SA 4.0",
+    "licenseFamily": "cc-by-sa",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Caudipteryx_zoui_443.jpg",
+    "width": 1280,
+    "height": 1834,
+    "widths": [
+      320,
+      640,
+      1280
+    ],
+    "basename": "images/73ffd644120e",
+    "placeholder": "data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAACQBACdASoQABcAPu1iqk2ppaQiMAgBMB2JbACdMoR4GCqjzdbJVO6Gj+RUGEgAzedrhiLU7Jipsuqw8VAmugVlHNdCdFWjT4evIgOlRBGWn+auJiZmKaCXvg1zE6lBFEI/cbCVnyJgeMuHXZJ65UAA",
+    "fetched": "2026-11-22"
+  },
+  "File:Centrosaurus.png": {
+    "author": "Fred Wierum",
+    "license": "CC BY-SA 4.0",
+    "licenseFamily": "cc-by-sa",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Centrosaurus.png",
+    "width": 1280,
+    "height": 924,
+    "widths": [
+      320,
+      640,
+      1280
+    ],
+    "basename": "images/08f32b37cbb0",
+    "placeholder": "data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAADQAQCdASoQAAwAA4BaJZwAAsf+COWyAAD++LpY6Kekmoc7Qs6QEp7EpQWgkkWXFbJFL9AG/HElKdxcGVajgAAA",
+    "fetched": "2026-11-22"
+  },
   "File:Ceratosaurus mount utah museum 1.jpg": {
     "author": "Jens Lallensack",
     "license": "CC BY-SA 4.0",
@@ -269,6 +354,40 @@
     "basename": "images/ab8b208a7396",
     "placeholder": "data:image/webp;base64,UklGRjwAAABXRUJQVlA4IDAAAADQAQCdASoQAAoAA4BaJQBOgCHwDv00kAD9NXRRG0e6Odv+mk+5/xigUhCg8O0ZgAA=",
     "fetched": "2026-11-21"
+  },
+  "File:Chasmosaurus russelli.jpg": {
+    "author": "D. Gordon E. Robertson",
+    "license": "CC BY-SA 3.0",
+    "licenseFamily": "cc-by-sa",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chasmosaurus_russelli.jpg",
+    "width": 1280,
+    "height": 624,
+    "widths": [
+      320,
+      640,
+      1280
+    ],
+    "basename": "images/784d3b8fb779",
+    "placeholder": "data:image/webp;base64,UklGRkIAAABXRUJQVlA4IDYAAAAQAgCdASoQAAgAA4BaJZQC7AEVTRlVgyYAAPwO6vY36ZDRP2gyR+XggzXkN83H/rpA98/gAAA=",
+    "fetched": "2026-11-22"
+  },
+  "File:Citipati AMNH.jpg": {
+    "author": "Jonathan Chen",
+    "license": "CC BY-SA 4.0",
+    "licenseFamily": "cc-by-sa",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Citipati_AMNH.jpg",
+    "width": 1280,
+    "height": 1048,
+    "widths": [
+      320,
+      640,
+      1280
+    ],
+    "basename": "images/c426b12499c7",
+    "placeholder": "data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAADwAQCdASoQAA0AA4BaJaACdAEXfNbAPOAA/sFX6cW2fu3dvPvChFvRbShfIZgTCPoQRB737WVIFk48EOMOpAAA",
+    "fetched": "2026-11-22"
   },
   "File:Coelophysis bauri mount.jpg": {
     "author": "James St. John",
@@ -337,6 +456,23 @@
     "basename": "images/702ce67d5f88",
     "placeholder": "data:image/webp;base64,UklGRj4AAABXRUJQVlA4IDIAAABwAQCdASoQAAkAA4BaJQBOgAq//AD+n7k5zObBZBq1elEP9oxIXHoSSxF4ZyIA1AAAAA==",
     "fetched": "2026-11-21"
+  },
+  "File:Deinocheirus mount.jpg": {
+    "author": "ケラトプスユウタ",
+    "license": "CC BY-SA 4.0",
+    "licenseFamily": "cc-by-sa",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Deinocheirus_mount.jpg",
+    "width": 1280,
+    "height": 1376,
+    "widths": [
+      320,
+      640,
+      1280
+    ],
+    "basename": "images/60f6cc979e41",
+    "placeholder": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAADwAwCdASoQABEAPu1iqU2ppaOiMAgBMB2JQBdkGQBev01d8bBN9w1YAP7oyg7iYmNPxLVjU5zI3oTDKBACRMzRygMqp3KbRWe5MQuTLU+EbNnmL295JQ8E7OKyRjJ6a3TvMbtOO3gAAA==",
+    "fetched": "2026-11-22"
   },
   "File:Deinonychus antirrhopus HK.jpg": {
     "author": "Jonathan Chen",
@@ -491,6 +627,40 @@
     "placeholder": "data:image/webp;base64,UklGRkYAAABXRUJQVlA4IDoAAADwAQCdASoQAAwAA4BaJYgCdADJzzKWZ1AA/VPd/8rpWGoKZ2EabSgpjXtnAdas51TFvnotwQtPwAAA",
     "fetched": "2026-11-21"
   },
+  "File:FMNH Patagotitan.jpg": {
+    "author": "Zissoudisctrucker",
+    "license": "CC BY-SA 4.0",
+    "licenseFamily": "cc-by-sa",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:FMNH_Patagotitan.jpg",
+    "width": 1280,
+    "height": 959,
+    "widths": [
+      320,
+      640,
+      1280
+    ],
+    "basename": "images/e8a5b7a6aa3d",
+    "placeholder": "data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAADQAQCdASoQAAwAA4BaJQBOgCFN3xeFaAD+m9fdTew+RSqmIVFTUpfH1+Qg+a+/3Nr2xcq3eUk1N4Exg+RgAA==",
+    "fetched": "2026-11-22"
+  },
+  "File:FMNH Rapetosaurus.jpg": {
+    "author": "Zissoudisctrucker",
+    "license": "CC BY-SA 4.0",
+    "licenseFamily": "cc-by-sa",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:FMNH_Rapetosaurus.jpg",
+    "width": 1280,
+    "height": 854,
+    "widths": [
+      320,
+      640,
+      1280
+    ],
+    "basename": "images/88d144c3de43",
+    "placeholder": "data:image/webp;base64,UklGRkgAAABXRUJQVlA4IDwAAACwAQCdASoQAAsAA4BaJYgCdACbtXIAAP70Xyjag4wEYmr7w3SfcF+8Ozd+wCsq04Q+p+DlAbEoTdlUAAA=",
+    "fetched": "2026-11-22"
+  },
   "File:FSAC-KK-11888.jpg": {
     "author": "3blindMies",
     "license": "CC BY-SA 4.0",
@@ -576,6 +746,23 @@
     "placeholder": "data:image/webp;base64,UklGRkQAAABXRUJQVlA4IDgAAACQAQCdASoQAA0AA4BaJYwAApxjd0wA/vaT2fUMjgnDvp5kV7E6D6rt/zpAM67XOfRFYdPi8DwAAA==",
     "fetched": "2026-11-22"
   },
+  "File:Hatzegopteryx.png": {
+    "author": "Mark Witton",
+    "license": "CC BY-SA 4.0",
+    "licenseFamily": "cc-by-sa",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hatzegopteryx.png",
+    "width": 1280,
+    "height": 730,
+    "widths": [
+      320,
+      640,
+      1280
+    ],
+    "basename": "images/0c6a98a9db42",
+    "placeholder": "data:image/webp;base64,UklGRkgAAABXRUJQVlA4IDwAAADQAQCdASoQAAkAA4BaJYgCdAC6gGTvwAD+6qon4V9VD8GKyZgyueF9NBlqNvbp3JBOH3vcsQOt1I1vwAA=",
+    "fetched": "2026-11-22"
+  },
   "File:Heterodontosaurus skeleton.jpg": {
     "author": "★Kumiko★",
     "license": "CC BY-SA 2.0",
@@ -608,6 +795,23 @@
     ],
     "basename": "images/2a3fc9f7cd77",
     "placeholder": "data:image/webp;base64,UklGRkgAAABXRUJQVlA4IDwAAADQAQCdASoQAAwAA4BaJQBOgBbJzAGAAAD+6PDmTZQTdcXCZnj/7Ju2K1YMuCY+fxanG+a5qcywU3stwAA=",
+    "fetched": "2026-11-22"
+  },
+  "File:Hypsilophodon NMHUK lateral.jpg": {
+    "author": "A Cynical Idealist",
+    "license": "CC BY 4.0",
+    "licenseFamily": "cc-by",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hypsilophodon_NMHUK_lateral.jpg",
+    "width": 1280,
+    "height": 774,
+    "widths": [
+      320,
+      640,
+      1280
+    ],
+    "basename": "images/f6c00c242e33",
+    "placeholder": "data:image/webp;base64,UklGRjwAAABXRUJQVlA4IDAAAADQAQCdASoQAAoAA4BaJYgC7ACxYC0dAAD+5Zq2pn2YA5rup8ScjIh1ZDtYKsG8AAA=",
     "fetched": "2026-11-22"
   },
   "File:Ichthyosaurus sp. fossils in Natural History Museum.jpg": {
@@ -695,6 +899,23 @@
     "placeholder": "data:image/webp;base64,UklGRkQAAABXRUJQVlA4IDgAAAAQAgCdASoQAAsAA4BaJQBOgCHc5Ymbk9ogAP75FxqvpaGWwfVj6zYMMk2hQwg1MVcRt/JfrgAAAA==",
     "fetched": "2026-11-21"
   },
+  "File:Life reconstruction of Magyarosaurus dacus.jpg": {
+    "author": "Anonymous Dinonerd",
+    "license": "CC BY-SA 4.0",
+    "licenseFamily": "cc-by-sa",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Life_reconstruction_of_Magyarosaurus_dacus.jpg",
+    "width": 1280,
+    "height": 690,
+    "widths": [
+      320,
+      640,
+      1280
+    ],
+    "basename": "images/f82658053e42",
+    "placeholder": "data:image/webp;base64,UklGRjgAAABXRUJQVlA4ICwAAAAwAQCdASoQAAkAA4BaJaQAA3AA/vOcLpH9ub1XbT6jlAdgayWSH/JatlSAAA==",
+    "fetched": "2026-11-22"
+  },
   "File:Life restoration of a group of giant azhdarchids, Quetzalcoatlus northropi, foraging on a Cretaceous fern prairie.png": {
     "author": "Mark Witton and Darren Naish",
     "license": "CC BY 3.0",
@@ -727,6 +948,23 @@
     ],
     "basename": "images/f82477c7f84e",
     "placeholder": "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAABwAQCdASoQAAoAA4BaJQBOgA4QAAD+5YQ4Fsn1+8QWzgeQq7xsmMLfa30C+AAA",
+    "fetched": "2026-11-22"
+  },
+  "File:Lisowicia bojani Wikipedia Juandertal.jpg": {
+    "author": "Juandertal",
+    "license": "CC BY-SA 4.0",
+    "licenseFamily": "cc-by-sa",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lisowicia_bojani_Wikipedia_Juandertal.jpg",
+    "width": 1280,
+    "height": 906,
+    "widths": [
+      320,
+      640,
+      1280
+    ],
+    "basename": "images/20d44f3fbb96",
+    "placeholder": "data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAAAQAgCdASoQAAsAA4BaJagCdAEPbxDAaZpAAP7JZUIbgQqIz7LjRY0Yz58jiC8uBJ22GkhvQetuQBxL3not81AA",
     "fetched": "2026-11-22"
   },
   "File:M zhaoianus.png": {
@@ -883,6 +1121,23 @@
     "basename": "images/0e17e445d7eb",
     "placeholder": "data:image/webp;base64,UklGRkgAAABXRUJQVlA4IDwAAAAQAgCdASoQAAsAA4BaJYwCdADHeInY6m+AAP6vmzDi+dubmbkFSzqgZ8O4QtfBa0a9/Vpgblo58IgPYAA=",
     "fetched": "2026-11-21"
+  },
+  "File:Opisthocoelicaudia Museum of Evolution in Warsaw 01.JPG": {
+    "author": "Adrian Grycuk",
+    "license": "CC BY-SA 3.0 pl",
+    "licenseFamily": "cc-by-sa",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/pl/deed.en",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Opisthocoelicaudia_Museum_of_Evolution_in_Warsaw_01.JPG",
+    "width": 1280,
+    "height": 843,
+    "widths": [
+      320,
+      640,
+      1280
+    ],
+    "basename": "images/05eb9d9f0a64",
+    "placeholder": "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACwAQCdASoQAAsAA4BaJaACdACDFlEAAPbn13ubd7WEa0LpRmsOTdetPxvciGAA",
+    "fetched": "2026-11-22"
   },
   "File:Ouranosaurus - Museo di Storia Naturale di Venezia.jpg": {
     "author": "DagdaMor",
@@ -1071,6 +1326,39 @@
     "placeholder": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAACwAQCdASoQAAwAA4BaJQBOgBI03vkAAP7UN6CCQXJboGFtsC08BXc0YUtvy/AppKlUajopukUU7GcvE6dvaCON9k/PXAAA",
     "fetched": "2026-11-22"
   },
+  "File:Saltasaurus dinosaur.png": {
+    "author": "LadyofHats Altered by Steveoc 86 and FunkMonk",
+    "license": "Public domain",
+    "licenseFamily": "public-domain",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Saltasaurus_dinosaur.png",
+    "width": 1280,
+    "height": 720,
+    "widths": [
+      320,
+      640,
+      1280
+    ],
+    "basename": "images/e2e3240bdb33",
+    "placeholder": "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACwAQCdASoQAAkAA4BaJZwAApz8ACAAAP71Rvnc7IxFxFNPtW6dAtiiuUyIQAAA",
+    "fetched": "2026-11-22"
+  },
+  "File:Saturnalia tupiniquim.jpg": {
+    "author": "CaetaMS",
+    "license": "CC BY-SA 4.0",
+    "licenseFamily": "cc-by-sa",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Saturnalia_tupiniquim.jpg",
+    "width": 1280,
+    "height": 815,
+    "widths": [
+      320,
+      640,
+      1280
+    ],
+    "basename": "images/74558e9f5a1b",
+    "placeholder": "data:image/webp;base64,UklGRkYAAABXRUJQVlA4IDoAAADQAQCdASoQAAoAA4BaJZwAAui9/+hYAAD+6zZXiJFdieBq1EZKIPVsZGNrAjjSqkYKBy72GkOcIAAA",
+    "fetched": "2026-11-22"
+  },
   "File:Shuvuuia.jpg": {
     "author": "FunkMonk",
     "license": "CC BY-SA 3.0",
@@ -1087,6 +1375,23 @@
     "basename": "images/3e5db6599586",
     "placeholder": "data:image/webp;base64,UklGRkAAAABXRUJQVlA4IDQAAACwAQCdASoQAAoAA4BaJaQAAlcrD1wAAP7uZVl3/zxROp87L13guf8DiFGk+qleheaCAAAA",
     "fetched": "2026-11-21"
+  },
+  "File:Silesaurus opolensis life restoration.jpg": {
+    "author": "Konrad Kurzacz Pimke e-mail:",
+    "license": "CC BY-SA 3.0",
+    "licenseFamily": "cc-by-sa",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Silesaurus_opolensis_life_restoration.jpg",
+    "width": 1280,
+    "height": 828,
+    "widths": [
+      320,
+      640,
+      1280
+    ],
+    "basename": "images/78c304688a30",
+    "placeholder": "data:image/webp;base64,UklGRjYAAABXRUJQVlA4ICoAAACwAQCdASoQAAoAA4BaJZQAAsfWzP9AAPCsuuPdKwt13tAmRVll3r+AAAA=",
+    "fetched": "2026-11-22"
   },
   "File:Sinosauropteryx GMV 2124.jpg": {
     "author": "Llez",
@@ -1105,6 +1410,23 @@
     "placeholder": "data:image/webp;base64,UklGRoIAAABXRUJQVlA4IHYAAAAQBACdASoQABwAPu1iqk4ppaQiMAgBMB2JQBOl6gARCRxegBqPWnOqgAD+3/vGYLVVshi2hVCnRDRfltXpCT/tNdhc2NJxG2FZiwUkmjTYHdwSKinVM+K5fbP9ed+EIOiE+0/uPP1xcELCEaq2ftPcCzAqAAAA",
     "fetched": "2026-11-21"
   },
+  "File:Skull Replica of Rajasaurus narmadensis 01.jpg": {
+    "author": "Dev Jadiya",
+    "license": "CC0",
+    "licenseFamily": "cc0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Skull_Replica_of_Rajasaurus_narmadensis_01.jpg",
+    "width": 1280,
+    "height": 721,
+    "widths": [
+      320,
+      640,
+      1280
+    ],
+    "basename": "images/272d8ebf3a53",
+    "placeholder": "data:image/webp;base64,UklGRkAAAABXRUJQVlA4IDQAAADwAQCdASoQAAkAA4BaJQBOgCHw+IUwi0AA/oka9M+uSjaX2N7ZCuYViAQSmJFKi5/BAAAA",
+    "fetched": "2026-11-22"
+  },
   "File:Sophie the Stegosaurus stenops of the Natural History Museum, London.jpg": {
     "author": "APK",
     "license": "CC BY 4.0",
@@ -1121,6 +1443,23 @@
     "basename": "images/cffcb4cfed98",
     "placeholder": "data:image/webp;base64,UklGRjwAAABXRUJQVlA4IDAAAACwAQCdASoQAAkAA4BaJQBOgBnq2IEAAMrhefHlrBSRY6M9lHJxMX2NW3RxFazAAAA=",
     "fetched": "2026-11-21"
+  },
+  "File:Stegoceras.jpg": {
+    "author": "Sebastian Bergmann from Siegburg, Germany",
+    "license": "CC BY-SA 2.0",
+    "licenseFamily": "cc-by-sa",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Stegoceras.jpg",
+    "width": 1272,
+    "height": 672,
+    "widths": [
+      320,
+      640,
+      1272
+    ],
+    "basename": "images/72d4c3ce3915",
+    "placeholder": "data:image/webp;base64,UklGRj4AAABXRUJQVlA4IDIAAAAQAgCdASoQAAgAA4BaJYgCdADiaNNlRIgAAPy045555F45xQaSPy+e9LXDXKvV6GgAAA==",
+    "fetched": "2026-11-22"
   },
   "File:Styracosaurus \"parksi\" AMNH.jpg": {
     "author": "Jonathan Chen",
@@ -1223,6 +1562,23 @@
     "basename": "images/7bedae590307",
     "placeholder": "data:image/webp;base64,UklGRkIAAABXRUJQVlA4IDYAAAAQAgCdASoQAAcAA4BaJQBOgCLZ5hsqh8wAAPhZcCQAcVkQJMtiUiBMByD6vVtWIDWUUh/AAAA=",
     "fetched": "2026-11-21"
+  },
+  "File:Yutyrannus huali.png": {
+    "author": "Tomopteryx",
+    "license": "CC BY-SA 4.0",
+    "licenseFamily": "cc-by-sa",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Yutyrannus_huali.png",
+    "width": 1280,
+    "height": 533,
+    "widths": [
+      320,
+      640,
+      1280
+    ],
+    "basename": "images/21321dbb1bf1",
+    "placeholder": "data:image/webp;base64,UklGRjgAAABXRUJQVlA4ICwAAADQAQCdASoQAAcAA4BaJaQAAxZMldQdKAD+9xzMnXG8+rmeleiQCVePioAAAA==",
+    "fetched": "2026-11-22"
   },
   "File:Zigong Dinosaur Museum Shunosaurus lii.jpg": {
     "author": "Zhangzhugang",

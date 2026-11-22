@@ -1,0 +1,151 @@
+{
+  "slug": "chasmosaurus",
+  "scientificName": "Chasmosaurus belli",
+  "genus": "Chasmosaurus",
+  "nameMeaning": {
+    "text": {
+      "en": "chasm lizard",
+      "pl": "jaszczur z rozpadliną"
+    },
+    "sourceIds": ["nhm"]
+  },
+  "group": "ceratopsia",
+  "groupSourceIds": ["pbdb-taxa", "nhm", "campbell-2016"],
+  "isDinosaur": true,
+  "taxonomy": {
+    "status": "valid",
+    "note": {
+      "en": "Campbell et al. (2016) recognise two species from the Dinosaur Park Formation, C. belli and C. russelli. The features used to name C. brevirostris and C. kaiseni fall within individual variation, and Mojoceratops perifania is treated as a synonym of C. russelli.",
+      "pl": "Campbell i in. (2016) uznają dwa gatunki z formacji Dinosaur Park: C. belli i C. russelli. Cechy, na podstawie których nazwano C. brevirostris i C. kaiseni, mieszczą się w zmienności osobniczej, a Mojoceratops perifania jest traktowany jako synonim C. russelli."
+    },
+    "sourceIds": ["campbell-2016"]
+  },
+  "diet": {
+    "value": "herbivore",
+    "confidence": "established",
+    "sourceIds": ["nhm", "pbdb-taxa"]
+  },
+  "timeRange": {
+    "startMa": 76.47,
+    "endMa": 74.44,
+    "sourceIds": ["ramezani-2022", "campbell-2016", "pbdb-occs", "nhm"],
+    "note": {
+      "en": "Formation-dated: the Ma values are the U–Pb-dated base and top of the Dinosaur Park Formation (Ramezani et al. 2022). Campbell et al. (2016) found C. belli specimens between about 26.5 and 42 m above the top of the Oldman Formation, spanning roughly 209,000 years, so the species itself occupies only part of this range. NHM gives 76–74 Ma.",
+      "pl": "Na podstawie datowania formacji: wartości w mln lat to datowane metodą U–Pb spąg i strop formacji Dinosaur Park (Ramezani i in. 2022). Campbell i in. (2016) znaleźli okazy C. belli od około 26,5 do 42 m powyżej stropu formacji Oldman, co odpowiada około 209 tysiącom lat, więc sam gatunek zajmuje tylko część tego zakresu. NHM podaje 76–74 mln lat temu."
+    }
+  },
+  "periods": ["cretaceous"],
+  "size": {
+    "lengthM": {
+      "value": [5, 5],
+      "sourceIds": ["nhm"],
+      "note": {
+        "en": "Single museum figure for the genus (NHM Dino Directory); method not stated.",
+        "pl": "Jedyna wartość muzealna dla rodzaju (NHM Dino Directory); metody nie podano."
+      }
+    },
+    "massKg": {
+      "value": [2500, 2500],
+      "sourceIds": ["nhm"],
+      "note": {
+        "en": "Single museum figure for the genus (NHM Dino Directory); method not stated.",
+        "pl": "Jedyna wartość muzealna dla rodzaju (NHM Dino Directory); metody nie podano."
+      }
+    }
+  },
+  "locations": [
+    {
+      "continent": "north-america",
+      "countryCode": "CA",
+      "formation": "Dinosaur Park",
+      "sourceIds": ["pbdb-occs", "campbell-2016"]
+    }
+  ],
+  "discovery": {
+    "describedBy": "Lambe",
+    "year": 1902,
+    "note": {
+      "en": "Lambe named the species Monoclonius belli in 1902; the genus Chasmosaurus, with belli as its type species, dates from Lambe 1914. The first specimens were collected by Lambe in 1897 in what is now Dinosaur Provincial Park.",
+      "pl": "Lambe nazwał gatunek Monoclonius belli w 1902 roku; rodzaj Chasmosaurus, z belli jako gatunkiem typowym, pochodzi od Lambe’a z 1914 roku. Pierwsze okazy zebrał Lambe w 1897 roku na terenie dzisiejszego Parku Prowincjonalnego Dinosaur."
+    },
+    "sourceIds": ["pbdb-synonyms", "pbdb-taxa", "pbdb-occs", "nhm", "campbell-2016"]
+  },
+  "summary": {
+    "text": {
+      "en": "Chasmosaurus, the 'chasm lizard', was a plant-eating horned dinosaur (ceratopsian) about 5 metres long from Alberta, Canada. It had a small nose horn, blunt brow horns and a long neck frill with holes in it. It lived in the Late Cretaceous, about 76 to 74 million years ago, at the same time as a second species of Chasmosaurus, C. russelli.",
+      "pl": "Chasmosaurus, czyli „jaszczur z rozpadliną”, był roślinożernym dinozaurem rogatym (ceratopsem) o długości około 5 metrów z Alberty w Kanadzie. Miał mały róg na nosie, tępe rogi nad oczami i długą kryzę z otworami. Żył w późnej kredzie, około 76–74 milionów lat temu, w tym samym czasie co drugi gatunek tego rodzaju, C. russelli."
+    },
+    "sourceIds": ["nhm", "campbell-2016", "ramezani-2022"]
+  },
+  "funFacts": [
+    {
+      "text": {
+        "en": "The first Chasmosaurus fossils, collected by Lawrence Lambe in 1897, were at first referred to another horned dinosaur, Monoclonius.",
+        "pl": "Pierwsze skamieniałości Chasmosaurus, zebrane przez Lawrence’a Lambe’a w 1897 roku, przypisano początkowo innemu dinozaurowi rogatemu – rodzajowi Monoclonius."
+      },
+      "sourceIds": ["campbell-2016"]
+    }
+  ],
+  "famous": false,
+  "images": [
+    {
+      "commonsFile": "File:Chasmosaurus russelli.jpg",
+      "kind": "skeleton-mount",
+      "alt": {
+        "en": "Mounted skeleton of Chasmosaurus russelli at the Canadian Museum of Nature in Ottawa, Ontario, Canada.",
+        "pl": "Zmontowany szkielet Chasmosaurus russelli w Canadian Museum of Nature w Ottawie w Ontario w Kanadzie."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "nhm",
+      "title": "Chasmosaurus | Dino Directory",
+      "publisher": "Natural History Museum, London",
+      "url": "https://www.nhm.ac.uk/discover/dino-directory/chasmosaurus.html",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "campbell-2016",
+      "title": "A Re-Evaluation of the Chasmosaurine Ceratopsid Genus Chasmosaurus (Dinosauria: Ornithischia) from the Upper Cretaceous (Campanian) Dinosaur Park Formation of Western Canada",
+      "authors": "Campbell, J. A.; Ryan, M. J.; Holmes, R. B.; Schröder-Adams, C. J.",
+      "year": 2016,
+      "publisher": "PLOS ONE 11(1): e0145805",
+      "doi": "10.1371/journal.pone.0145805",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0145805",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "ramezani-2022",
+      "title": "Calibrating the zenith of dinosaur diversity in the Campanian of the Western Interior Basin by CA-ID-TIMS U–Pb geochronology",
+      "authors": "Ramezani, J.; Beveridge, T. L.; Rogers, R. R.; Eberth, D. A.; Roberts, E. M.",
+      "year": 2022,
+      "publisher": "Scientific Reports 12: 16026",
+      "doi": "10.1038/s41598-022-19896-w",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9512893/",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-synonyms",
+      "title": "Chasmosaurus belli (taxon 63914) and its synonyms",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/list.json?name=Chasmosaurus%20belli&rel=synonyms&show=attr,ref",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-taxa",
+      "title": "Taxon records with classification and ecospace for Chasmosaurus and other genera",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/taxa/list.json?name=Rapetosaurus,Rajasaurus,Antarctopelta,Hypsilophodon,Magyarosaurus,Hatzegopteryx,Centrosaurus,Chasmosaurus,Stegoceras,Borealopelta&show=attr,class,ecospace",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": "pbdb-occs",
+      "title": "Occurrences of Centrosaurus, Chasmosaurus and Stegoceras (stratigraphy and location)",
+      "publisher": "The Paleobiology Database",
+      "url": "https://paleobiodb.org/data1.2/occs/list.json?base_name=Centrosaurus,Chasmosaurus,Stegoceras&show=strat,loc",
+      "accessed": "2026-11-22"
+    }
+  ],
+  "lastReviewed": "2026-11-22"
+}
