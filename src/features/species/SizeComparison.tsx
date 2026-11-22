@@ -18,9 +18,9 @@ interface SizeComparisonProps {
   references: SizeReferences;
 }
 
-/** A standing person in a box 44 wide and 100 tall (height = the 1.8 m reference). */
+/** A standing person (head, neck, body) in a box 44 wide and 100 tall (height = the 1.8 m reference). */
 const PERSON =
-  'M24 0 a9 9 0 1 1 0.1 0 Z M12 22 h24 l8 34 h-7 l-5 -20 v64 h-9 v-38 h-2 v38 h-9 v-64 l-5 20 h-7 Z';
+  'M15 9 a9 9 0 1 1 18 0 a9 9 0 1 1 -18 0 Z M20.5 16 h7 v7 h-7 Z M12 22 h24 l8 34 h-7 l-5 -20 v64 h-9 v-38 h-2 v38 h-9 v-64 l-5 20 h-7 Z';
 const PERSON_WIDTH = 0.44;
 
 /**
