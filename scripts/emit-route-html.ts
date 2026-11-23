@@ -1,7 +1,8 @@
 /**
  * After `vite build`, writes dist/<path>/index.html for every static route so GitHub Pages
  * serves deep links with a 200 status, in English and under pl/ in Polish (with lang="pl" in the
- * HTML and a preload of the Polish strings, so the language is right before the app starts).
+ * HTML, a preload of the Polish strings, so the language is right before the app starts, and the
+ * Polish web app manifest).
  * dist/404.html renders the not-found page.
  */
 import { copyFile, mkdir, readdir, readFile, writeFile } from 'node:fs/promises';
@@ -34,8 +35,12 @@ if (polishChunks.length !== 1) {
 const entrySrc = /<script type="module" crossorigin src="([^"]*\/)assets\/[^"]+\.js">/.exec(html);
 if (!entrySrc?.[1]) throw new Error('index.html has no module entry script');
 const preloadPolish = `<link rel="modulepreload" crossorigin href="${entrySrc[1]}assets/${polishChunks[0] ?? ''}">`;
+// Each language links its own web app manifest (scripts/vite-pwa.ts, ADR-0003).
+const manifestLink = `<link rel="manifest" href="${entrySrc[1]}manifest.webmanifest">`;
+if (!html.includes(manifestLink)) throw new Error('index.html has no web app manifest link');
 const polishHtml = html
   .replace('<html lang="en">', '<html lang="pl">')
+  .replace(manifestLink, `<link rel="manifest" href="${entrySrc[1]}pl/manifest.webmanifest">`)
   .replace('</head>', `${preloadPolish}\n  </head>`);
 
 for (const path of paths) {

@@ -1,6 +1,7 @@
 {
   "site": {
     "name": "Scrollosaurus",
+    "description": "Explore dinosaurs on an interactive, zoomable timeline of the Mesozoic.",
     "title": "Scrollosaurus: dinosaurs on a timeline of the Mesozoic",
     "pageTitle": "{{page}} · Scrollosaurus",
     "skip": "Skip to content",
@@ -222,6 +223,11 @@
     "heading": "Lost in deep time",
     "text": "This page doesn’t exist.",
     "back": "Back to the timeline"
+  },
+  "update": {
+    "available": "A new version of the site is ready.",
+    "reload": "Reload",
+    "later": "Later"
   },
   "loadError": {
     "title": "This page couldn’t load",
