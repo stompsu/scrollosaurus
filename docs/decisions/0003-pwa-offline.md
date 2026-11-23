@@ -54,9 +54,9 @@ self-contained file.
 | Request                                                                                                                                                                                                                                    | Strategy                                                                                           | Cache                                             |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------- | ------------------------------------------------- |
 | Entry script and CSS, the `pwa-register` chunk, Polish strings (`i18n-pl-*.js`), Latin and Latin Extended fonts, SVG textures, `theme-init.js`, favicon, icons, both manifests, both page shells (`/scrollosaurus/`, `/scrollosaurus/pl/`) | Downloaded at install; served from the cache                                                       | `scrollosaurus-precache-<version>`, one per build |
-| Page loads (navigations)                                                                                                                                                                                                                   | Network first; offline, the cached shell in the page's language                                    | —                                                 |
+| Page loads (navigations)                                                                                                                                                                                                                   | Network first; offline, or after 4 s without an answer, the cached shell in the page's language    | —                                                 |
 | Species data chunks                                                                                                                                                                                                                        | Cache first, saved when first opened; chunks the current build no longer has are removed on update | `scrollosaurus-species`                           |
-| Images under `images/`                                                                                                                                                                                                                     | Cache first, saved when shown; at most 200 (about 10 MB), oldest removed first                     | `scrollosaurus-images`                            |
+| Images under `images/`                                                                                                                                                                                                                     | Cache first, saved when shown; at most 200 (about 10 MB), oldest saved removed first               | `scrollosaurus-images-<images version>`           |
 | Anything else (other hosts, non-GET, URLs with a query, other font subsets)                                                                                                                                                                | Not touched                                                                                        | —                                                 |
 
 - Every page is a copy of one of two shells, so once the worker is installed every route opens
@@ -67,23 +67,46 @@ self-contained file.
   chunks and images, the same files it would have cached itself, usually straight from the HTTP
   cache. So the first page visited also works offline.
 - At install, hashed files under `assets/` may come from the HTTP cache (they never change).
-  Unhashed ones are revalidated, so an older copy can't end up in a newer precache.
+  Unhashed ones are revalidated, so an older copy can't end up in a newer precache. The install then
+  checks that every `assets/` file the two cached shells load is in the precache. If the host is
+  mid-deploy and served a shell and `sw.js` from different builds, the install fails and is
+  retried on a later visit, rather than keeping a shell that can't start offline.
+- Image file names come from the Commons file name, not the content, so a new revision of a
+  Commons file keeps its URL. The image cache is therefore named after a hash of everything under
+  `public/images`: any change to the image set drops all cached images, so a cached picture can
+  never sit next to a newer credit.
+- The page asks the browser to keep up to 1000 resource-timing entries (the default is 250), so
+  the first-visit list includes every image the timeline loaded.
+- A weak connection that neither answers nor fails gets the cached shell after 4 s, not a blank
+  page. A captive portal's `200` answer is taken as the page, which is the usual limitation.
 - Only complete `200` same-origin responses are stored, never an error page.
 - Species data is not downloaded up front (owner decision): about 636 kB more on a first visit for
   data most visitors never open.
 
 ### 4. Updates: offered, never forced
 
-- `sw.js` has a fixed name. Its contents include a version, a hash of every built file, so each
-  deploy is a new worker. Browsers check `sw.js` on navigation.
+- `sw.js` has a fixed name. Its contents include a version (a hash of every built file and of the
+  precached files copied from `public/`) and the image set's version, so each deploy that changes
+  anything is a new worker. Browsers check `sw.js` on navigation.
 - A new version installs in the background and waits. The old version stays in control of open
-  tabs, so a page never mixes files from two builds.
-- When a new version is waiting, the layout shows a notice (`UpdateNotice`) in a polite live region:
-  an icon and the text "A new version of the site is ready.", a **Reload** button and a **Later**
-  button. With `prefers-reduced-motion` it appears without animation. Reload asks the waiting worker
-  to take over (`SKIP_WAITING`), and the page reloads once it is in control. If the user doesn't
-  reload, the new version takes over after every tab of the site has closed. When the new version
-  activates, it deletes older precaches and species chunks that are gone from the build.
+  tabs, so a page never mixes files from two builds while it waits.
+- When a new version is waiting, including one that began installing while the page loaded, the
+  layout shows a notice (`UpdateNotice`): an icon and the text "A new version of the site is
+  ready.", a **Reload** button and a **Later** button.
+  - A visually hidden, always-present `role="status"` region announces the text politely.
+  - While the notice is up, `scroll-padding-bottom` keeps a focused element from scrolling under
+    it (WCAG 2.4.11). It respects the bottom safe-area inset.
+  - With `prefers-reduced-motion` it appears without animation.
+  - **Later** hides it for that version only (also across a language switch, which remounts the
+    layout); a newer version is offered again. Focus moves to `<main>` (or to the drawer heading).
+  - The species drawer is a modal `<dialog>`, which makes the page behind it inert, so the drawer
+    shows the same notice at the top of its body.
+- **Reload** asks the waiting worker to take over (`SKIP_WAITING`), and the page reloads once it is
+  in control. When the new version activates, it deletes older precaches, image sets and species
+  chunks that are gone from the build. Other open tabs of the site were still on the old version and
+  have now lost its files, so each is told so ("A new version of the site is running in another
+  tab. Reload this page to keep using it."), with Reload and no Later. If nobody clicks Reload, the
+  new version takes over after every tab of the site has closed.
 - A tab left open across a deploy can still ask for a species chunk that no longer exists and was
   never cached; that is how the site behaved before. The species drawer shows its load error then,
   and the language layout's error page Retry button now switches to the waiting version when there
@@ -93,7 +116,9 @@ self-contained file.
 
 `src/lib/pwa.ts` (in the entry, well under 1 kB) starts registration after the `load` event, so it
 never competes with the first paint. The registration code itself is a separate lazily loaded
-chunk, `src/lib/pwa-register.ts`, and the entry gzip budget (211 kB) stays unchanged. Production
+chunk, `src/lib/pwa-register.ts`, and the entry gzip budget (211 kB) stays unchanged. It also
+follows the waiting and installing workers and every change of controller (first visit: hand over
+the loaded URLs; later: another tab switched versions). Production
 builds only: the dev server never registers a worker, so hot reload is never served from a cache.
 
 The router's basename now keeps its trailing slash (`/scrollosaurus/`). Without it, the home page's
@@ -115,8 +140,14 @@ about the visitor is stored or sent. Removing the site's data in the browser rem
   - the English home page, an English species page and a Polish species page reload offline with
     their species data;
   - pages not visited yet open offline in their language;
-  - a changed `sw.js` shows the update notice, which passes axe, and Reload switches to the new
-    version.
+  - a new `sw.js` version shows the update notice (axe-clean); nothing reloads while it waits, and
+    the old precache stays; Reload switches to the new version and removes the old precache;
+  - a second open tab (Polish) is told to reload once the first switches;
+  - with the species drawer open, the notice shows inside the drawer, and Later returns focus to
+    the drawer heading.
+- `tests/unit/sw-strategy.test.ts`, `pwa-register.test.ts` and `update-notice.test.tsx` cover the
+  caching rules, worker tracking (waiting, installing, redundant, first visit, takeover by another
+  tab) and the notice (Later per version, focus, live region).
 - Every other spec runs with service workers blocked (`playwright.config.ts`), so `page.route` and
   network assertions still see every request.
 - Lighthouse (≥ 90 performance, English and Polish pages) and the entry gzip budget are unchanged
