@@ -3,10 +3,12 @@ import type { i18n } from 'i18next';
 import { I18nextProvider, useTranslation } from 'react-i18next';
 import { Link, NavLink, Outlet, useLocation, useNavigate } from 'react-router';
 import { ThemeToggle } from '@/components/ui/ThemeToggle';
+import { UpdateNotice } from '@/components/ui/UpdateNotice';
 import { geologicTime } from '@/lib/geologic-time';
 import { i18nFor, isLangLoaded, loadLang, tr } from '@/lib/i18n';
 import { LANG_STORAGE_KEY, LangContext, useLang } from '@/lib/lang';
 import { langPath, splitLangPath, type Lang } from '@/lib/locale';
+import { applyUpdate } from '@/lib/pwa';
 
 const navClassFor = (active: boolean) =>
   `inline-block py-2 ${active ? 'text-accent underline underline-offset-4' : 'hover:text-accent'}`;
@@ -141,6 +143,7 @@ function Shell() {
           license: chart.license,
         })}
       </footer>
+      <UpdateNotice />
     </div>
   );
 }
@@ -171,7 +174,8 @@ export function LayoutError({ lang = 'en' }: { lang?: Lang }) {
           type="button"
           className="sc-button sc-button--primary"
           onClick={() => {
-            window.location.reload();
+            // A tab left open across a deploy: switch to the new version if it has downloaded.
+            if (!applyUpdate()) window.location.reload();
           }}
         >
           {t('loadError.retry')}

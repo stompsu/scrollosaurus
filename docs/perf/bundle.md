@@ -39,3 +39,10 @@ passes on every page. If the entry needs to shrink later, moving image credits o
   then show the credit once the record (or chunk) has loaded.
 - **Split the index's Polish text** into the Polish chunk: a few kB off the entry for English
   visitors, at the cost of a second index shape to build and validate.
+
+## Phase 6.2 measurement (installable, offline)
+
+The entry is 209.1 kB by the test's count (+1.0 kB): the update notice, its strings and the small
+store in `src/lib/pwa.ts`. Registration is its own chunk (`pwa-register-*.js`, 0.5 kB gzip) loaded
+after the `load` event, and `sw.js` (3.2 kB gzip) is fetched by the browser, not the page. The budget
+stays at 211 kB. See ADR-0003.

@@ -10,6 +10,7 @@ import {
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router';
 import { DietBadge, NotADinosaurTag } from '@/components/ui/DietBadge';
+import { UpdateNotice } from '@/components/ui/UpdateNotice';
 import { ImageContext, ImageCredit, SpeciesPicture } from '@/components/ui/SpeciesPicture';
 import { formatMa, formatMaWithUncertainty } from '@/lib/geologic-time';
 import { groupName } from '@/lib/groups';
@@ -161,6 +162,8 @@ export function SpeciesDrawer({
         </header>
 
         <div ref={bodyRef} className="sc-drawer-body">
+          {/* The page's own notice is inert behind this modal dialog. */}
+          <UpdateNotice inline />
           {hidden && (
             <div className="sc-notice" role="note">
               {hidden === 'non-dinosaur' ? (

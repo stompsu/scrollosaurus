@@ -1,6 +1,7 @@
 {
   "site": {
     "name": "Scrollosaurus",
+    "description": "Poznaj dinozaury na interaktywnej osi czasu mezozoiku, którą można przybliżać.",
     "title": "Scrollosaurus: dinozaury na osi czasu mezozoiku",
     "pageTitle": "{{page}} · Scrollosaurus",
     "skip": "Przejdź do treści",
@@ -224,6 +225,12 @@
     "heading": "Zgubione w otchłani czasu",
     "text": "Ta strona nie istnieje.",
     "back": "Wróć do osi czasu"
+  },
+  "update": {
+    "available": "Nowa wersja serwisu jest gotowa.",
+    "reload": "Odśwież",
+    "later": "Później",
+    "takenOver": "W innej karcie działa już nowa wersja serwisu. Odśwież tę stronę, aby dalej z niej korzystać."
   },
   "loadError": {
     "title": "Nie udało się wczytać strony",

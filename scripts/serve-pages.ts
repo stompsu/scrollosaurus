@@ -25,6 +25,7 @@ const TYPES: Record<string, string> = {
   '.css': 'text/css; charset=utf-8',
   '.svg': 'image/svg+xml',
   '.json': 'application/json',
+  '.webmanifest': 'application/manifest+json',
   '.png': 'image/png',
   '.webp': 'image/webp',
   '.avif': 'image/avif',
@@ -68,7 +69,7 @@ createServer((req, res) => {
     const path = found?.path ?? join(DIST, '404.html');
     const type = TYPES[extname(path)] ?? 'application/octet-stream';
     const gzip =
-      /^(text\/|application\/json|image\/svg)/.test(type) &&
+      /^(text\/|application\/(json|manifest\+json)|image\/svg)/.test(type) &&
       /\bgzip\b/.test(req.headers['accept-encoding'] ?? '');
     res.writeHead(found ? 200 : 404, {
       'Content-Type': type,

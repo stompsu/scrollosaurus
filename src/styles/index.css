@@ -788,3 +788,50 @@ h3 {
     border-color: var(--sc-accent);
   }
 }
+
+/* ---- Phase 6.2: "new version" notice (ADR-0003) ---- */
+
+.sc-update {
+  position: fixed;
+  inset-inline: 1rem;
+  bottom: max(1rem, env(safe-area-inset-bottom));
+  z-index: 40;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.75rem;
+  max-width: 32rem;
+  margin-inline: auto;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--sc-accent);
+  border-radius: 0.75rem;
+  background: var(--sc-surface);
+  color: var(--sc-text);
+  box-shadow: 0 0.5rem 1.5rem rgb(0 0 0 / 0.35);
+  animation: sc-update-in 200ms ease-out;
+}
+/* Inside the species drawer (a modal dialog): part of the flow, at the top of its body. */
+.sc-update--inline {
+  position: static;
+  margin-bottom: 1rem;
+  box-shadow: none;
+}
+/* While the notice is up, keep focused elements scrolled clear of it (WCAG 2.4.11). */
+html[data-update='shown'] {
+  scroll-padding-bottom: 9rem;
+}
+.sc-update-text {
+  flex: 1 1 12rem;
+  font-size: 0.875rem;
+}
+@keyframes sc-update-in {
+  from {
+    opacity: 0;
+    transform: translateY(0.5rem);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .sc-update {
+    animation: none;
+  }
+}

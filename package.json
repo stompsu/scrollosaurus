@@ -13,7 +13,7 @@
     "dev": "vite",
     "build": "pnpm validate:data && vite build && tsx scripts/emit-route-html.ts",
     "preview": "vite preview",
-    "typecheck": "tsc -p tsconfig.app.json && tsc -p tsconfig.node.json",
+    "typecheck": "tsc -p tsconfig.app.json && tsc -p tsconfig.node.json && tsc -p src/sw/tsconfig.json",
     "lint": "eslint . && prettier --check .",
     "format": "prettier --write .",
     "test": "vitest run",

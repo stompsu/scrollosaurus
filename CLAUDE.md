@@ -2,7 +2,7 @@
 
 A static, read-only web app that shows dinosaurs on a scrollable, zoomable, interactive timeline across the Mesozoic (Triassic, Jurassic, Cretaceous, ~252–66 Ma). Each species has an image, key facts, a classification and sources. Users filter by diet, group, period, size and continent, and search by name. English and Polish.
 
-Full brief: `docs/kickoff-prompt.md`. Architecture: `docs/decisions/0001-architecture.md`.
+Full brief: `docs/kickoff-prompt.md`. Architecture: `docs/decisions/0001-architecture.md`. Offline and install (service worker, manifests): `docs/decisions/0003-pwa-offline.md`.
 
 ## Hard constraints
 

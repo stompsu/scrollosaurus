@@ -23,6 +23,9 @@ export default defineConfig({
   use: {
     baseURL: `http://localhost:${PORT}${BASE_PATH}`,
     trace: 'on-first-retry',
+    // The service worker would answer requests from its cache, hiding them from page.route and
+    // network checks. tests/e2e/pwa.spec.ts allows it where it is under test.
+    serviceWorkers: 'block',
   },
   projects: [
     { name: 'desktop', use: { ...devices['Desktop Chrome'] } },

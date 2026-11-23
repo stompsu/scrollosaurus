@@ -9,10 +9,10 @@ on any page. The table below is rewritten by each local run.
 
 | Page                       | Performance | Accessibility | Best practices | SEO | LCP   | TBT   | CLS |
 | -------------------------- | ----------- | ------------- | -------------- | --- | ----- | ----- | --- |
-| /                          | 97          | 100           | 100            | 100 | 2.7 s | 20 ms | 0   |
-| /species/tyrannosaurus/    | 93          | 100           | 100            | 100 | 3.2 s | 60 ms | 0   |
-| /credits/                  | 100         | 100           | 100            | 100 | 0.9 s | 20 ms | 0   |
-| /pl/                       | 96          | 100           | 100            | 100 | 2.8 s | 30 ms | 0   |
-| /pl/species/tyrannosaurus/ | 92          | 100           | 100            | 100 | 3.3 s | 80 ms | 0   |
+| /                          | 96          | 100           | 100            | 100 | 2.8 s | 30 ms | 0   |
+| /species/tyrannosaurus/    | 92          | 100           | 100            | 100 | 3.4 s | 60 ms | 0   |
+| /credits/                  | 100         | 100           | 100            | 100 | 0.9 s | 30 ms | 0   |
+| /pl/                       | 96          | 100           | 100            | 100 | 2.7 s | 10 ms | 0   |
+| /pl/species/tyrannosaurus/ | 95          | 100           | 100            | 100 | 2.8 s | 70 ms | 0   |
 
 <!-- lighthouse:end -->

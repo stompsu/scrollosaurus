@@ -8,6 +8,7 @@ import { defineConfig, loadEnv, type Plugin } from 'vite';
 import type { Groups } from './src/lib/schemas/groups';
 import type { ImageManifest } from './src/lib/schemas/images';
 import type { Species } from './src/lib/schemas/species';
+import { pwaPlugin } from './scripts/vite-pwa.ts';
 import { buildSpeciesIndex } from './src/lib/species-index.ts';
 
 /** GitHub Pages serves the repo at /scrollosaurus/. Override with BASE_PATH (e.g. "/" for a custom domain). */
@@ -28,6 +29,9 @@ const CSP = [
   "object-src 'none'",
   "base-uri 'self'",
   "form-action 'none'",
+  // The service worker and web app manifest (ADR-0003); default-src covers them, stated for clarity.
+  "worker-src 'self'",
+  "manifest-src 'self'",
 ].join('; ');
 
 function cspMeta(): Plugin {
@@ -121,7 +125,14 @@ export default defineConfig(({ command, mode }) => {
   assertNoPerfFixture(command, mode);
   return {
     base,
-    plugins: [react(), tailwindcss(), cspMeta(), preloadFonts(), speciesIndexPlugin()],
+    plugins: [
+      react(),
+      tailwindcss(),
+      cspMeta(),
+      preloadFonts(),
+      speciesIndexPlugin(),
+      pwaPlugin(base),
+    ],
     resolve: {
       alias: { '@': fileURLToPath(new URL('./src', import.meta.url)) },
     },
