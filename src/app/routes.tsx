@@ -1,5 +1,5 @@
 import type { RouteObject } from 'react-router';
-import { Layout } from './Layout';
+import { Layout, LayoutError } from './Layout';
 import AboutPage from './routes/AboutPage';
 import CreditsPage from './routes/CreditsPage';
 import NotFoundPage from './routes/NotFoundPage';
@@ -24,6 +24,11 @@ function pages(): RouteObject[] {
  * and for every species page, in both languages.
  */
 export const routes: RouteObject[] = [
-  { path: 'pl', element: <Layout lang="pl" />, children: pages() },
-  { element: <Layout lang="en" />, children: pages() },
+  {
+    path: 'pl',
+    element: <Layout lang="pl" />,
+    errorElement: <LayoutError lang="pl" />,
+    children: pages(),
+  },
+  { element: <Layout lang="en" />, errorElement: <LayoutError lang="en" />, children: pages() },
 ];

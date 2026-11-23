@@ -1,10 +1,6 @@
-import { afterEach, describe, expect, it } from 'vitest';
+import { describe, expect, it } from 'vitest';
 import { checkTranslations } from '@/lib/schemas/i18n-check';
-import { formatNumber, langPath, localDecimal, setLocale, splitLangPath } from '@/lib/locale';
-
-afterEach(() => {
-  setLocale('en');
-});
+import { formatNumber, langPath, localDecimal, localize, splitLangPath } from '@/lib/locale';
 
 describe('language paths', () => {
   it.each([
@@ -28,12 +24,20 @@ describe('language paths', () => {
 
 describe('number formatting follows the language', () => {
   it('uses a decimal point in English and a comma in Polish, without grouping', () => {
-    expect(formatNumber(1.1)).toBe('1.1');
-    expect(formatNumber(12000)).toBe('12000');
-    setLocale('pl');
-    expect(formatNumber(1.1)).toBe('1,1');
-    expect(formatNumber(12000)).toBe('12000');
-    expect(localDecimal('251.902')).toBe('251,902');
+    expect(formatNumber('en', 1.1)).toBe('1.1');
+    expect(formatNumber('en', 12000)).toBe('12000');
+    expect(formatNumber('pl', 1.1)).toBe('1,1');
+    expect(formatNumber('pl', 12000)).toBe('12000');
+    // Interleaved calls don't leak into each other: there is no shared current language.
+    expect(formatNumber('en', 1.1)).toBe('1.1');
+    expect(localDecimal('pl', '251.902')).toBe('251,902');
+    expect(localDecimal('en', '251.902')).toBe('251.902');
+  });
+
+  it('picks the text for the language, falling back to English', () => {
+    expect(localize('pl', { en: 'Jaw', pl: 'Szczęka' })).toBe('Szczęka');
+    expect(localize('en', { en: 'Jaw', pl: 'Szczęka' })).toBe('Jaw');
+    expect(localize('pl', { en: 'Jaw' })).toBe('Jaw');
   });
 });
 

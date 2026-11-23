@@ -48,7 +48,7 @@ describe('formatMaWithUncertainty', () => {
     [201.4, 0.2, '201.4 ±0.2'],
     [66, undefined, '66'],
   ])('%s ± %s → %s', (ma, u, expected) => {
-    expect(formatMaWithUncertainty(ma, u)).toBe(expected);
+    expect(formatMaWithUncertainty('en', ma, u)).toBe(expected);
   });
 });
 

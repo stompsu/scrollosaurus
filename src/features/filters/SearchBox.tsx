@@ -1,7 +1,8 @@
 import { useId, useMemo, useState, type KeyboardEvent } from 'react';
+import { useTranslation } from 'react-i18next';
 import { DietIcon, NotADinosaurTag } from '@/components/ui/DietBadge';
 import { formatMa } from '@/lib/geologic-time';
-import { tr } from '@/lib/i18n';
+import { useLang } from '@/lib/lang';
 import { localize } from '@/lib/locale';
 import type { SpeciesIndexEntry } from '@/lib/species-index';
 import { createSpeciesSearch } from './search';
@@ -17,6 +18,8 @@ interface SearchBoxProps {
  * open one, Esc to close the list (a second Esc clears the text).
  */
 export function SearchBox({ items, onPick }: SearchBoxProps) {
+  const { t } = useTranslation();
+  const lang = useLang();
   const engine = useMemo(() => createSpeciesSearch(items), [items]);
   const [query, setQuery] = useState('');
   const [open, setOpen] = useState(false);
@@ -72,20 +75,20 @@ export function SearchBox({ items, onPick }: SearchBoxProps) {
   const status = !expanded
     ? ''
     : results.length === 0
-      ? tr('filters.foundNone')
-      : tr('filters.found', { count: results.length });
+      ? t('filters.foundNone')
+      : t('filters.found', { count: results.length });
 
   return (
     <div className="sc-search" role="search">
       <label htmlFor={inputId} className="sc-field-label">
-        {tr('filters.find')}
+        {t('filters.find')}
       </label>
       <input
         id={inputId}
         type="text"
         role="combobox"
         className="sc-input"
-        placeholder={tr('filters.findPlaceholder')}
+        placeholder={t('filters.findPlaceholder')}
         autoComplete="off"
         spellCheck={false}
         aria-autocomplete="list"
@@ -109,7 +112,7 @@ export function SearchBox({ items, onPick }: SearchBoxProps) {
       <ul
         id={listId}
         role="listbox"
-        aria-label={tr('filters.matching')}
+        aria-label={t('filters.matching')}
         className="sc-search-list"
         hidden={!expanded || results.length === 0}
       >
@@ -133,10 +136,10 @@ export function SearchBox({ items, onPick }: SearchBoxProps) {
               <i>{item.genus}</i>
               {!item.isDinosaur && <NotADinosaurTag />}
               <span className="sc-search-meta">
-                {tr(`diet.${item.diet}`)} · “{localize(item.nameMeaning)}” ·{' '}
-                {tr('time.rangeShort', {
-                  start: formatMa(item.startMa),
-                  end: formatMa(item.endMa),
+                {t(`diet.${item.diet}`)} · “{localize(lang, item.nameMeaning)}” ·{' '}
+                {t('time.rangeShort', {
+                  start: formatMa(lang, item.startMa),
+                  end: formatMa(lang, item.endMa),
                 })}
               </span>
             </span>
@@ -144,7 +147,7 @@ export function SearchBox({ items, onPick }: SearchBoxProps) {
         ))}
       </ul>
       <p id={hintId} className="sr-only">
-        {tr('filters.searchHint')}
+        {t('filters.searchHint')}
       </p>
       <p className="sr-only" aria-live="polite">
         {status}

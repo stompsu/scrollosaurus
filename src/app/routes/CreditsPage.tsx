@@ -1,13 +1,14 @@
+import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router';
 import { ImageContext, ImageCredit, SpeciesPicture } from '@/components/ui/SpeciesPicture';
 import { geologicTime } from '@/lib/geologic-time';
-import { tr } from '@/lib/i18n';
 import { useLang } from '@/lib/lang';
 import { langPath, localize } from '@/lib/locale';
 import { species } from '@/lib/species';
 
 export default function CreditsPage() {
   const lang = useLang();
+  const { t } = useTranslation();
   const { chart } = geologicTime;
   const credited = [...species]
     .filter((s) => s.images.length > 0)
@@ -16,9 +17,9 @@ export default function CreditsPage() {
   return (
     // overflow-wrap:anywhere lets long URLs/DOIs in credits wrap at 320 px (WCAG 1.4.10).
     <article className="flex max-w-prose min-w-0 flex-col gap-4 [overflow-wrap:anywhere]">
-      <title>{tr('site.pageTitle', { page: tr('credits.title') })}</title>
-      <h1 className="font-display text-3xl">{tr('credits.title')}</h1>
-      <h2 className="font-display text-xl">{tr('credits.data')}</h2>
+      <title>{t('site.pageTitle', { page: t('credits.title') })}</title>
+      <h1 className="font-display text-3xl">{t('credits.title')}</h1>
+      <h2 className="font-display text-xl">{t('credits.data')}</h2>
       <p>
         {chart.name} {chart.version}, {chart.publisher}.{' '}
         <a className="text-accent underline" href={chart.url}>
@@ -26,10 +27,10 @@ export default function CreditsPage() {
         </a>{' '}
         ({chart.license}). {chart.citation}
       </p>
-      <p>{tr('credits.dataNote')}</p>
+      <p>{t('credits.dataNote')}</p>
 
-      <h2 className="font-display text-xl">{tr('credits.images')}</h2>
-      <p>{tr('credits.imagesNote')}</p>
+      <h2 className="font-display text-xl">{t('credits.images')}</h2>
+      <p>{t('credits.imagesNote')}</p>
       <ul className="sc-credits-list" data-testid="image-credits">
         {credited.flatMap((s) =>
           s.images.map((image) => (
@@ -40,7 +41,7 @@ export default function CreditsPage() {
                   <Link className="text-accent underline" to={langPath(`/species/${s.slug}`, lang)}>
                     <i>{s.genus}</i>
                   </Link>
-                  : {localize(image.alt)}
+                  : {localize(lang, image.alt)}
                 </p>
                 <p className="text-sm">
                   <ImageContext image={image} />
@@ -53,7 +54,7 @@ export default function CreditsPage() {
       </ul>
       {without.length > 0 && (
         <p className="text-text-muted text-sm">
-          {tr('credits.without')}
+          {t('credits.without')}
           {without.map((s, i) => (
             <span key={s.slug}>
               {i > 0 && ', '}

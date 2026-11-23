@@ -224,5 +224,11 @@
     "heading": "Zgubione w otchłani czasu",
     "text": "Ta strona nie istnieje.",
     "back": "Wróć do osi czasu"
+  },
+  "loadError": {
+    "title": "Nie udało się wczytać strony",
+    "text": "Część strony się nie pobrała, być może przez połączenie albo nową wersję serwisu.",
+    "retry": "Spróbuj ponownie",
+    "english": "Otwórz stronę po angielsku"
   }
 }

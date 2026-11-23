@@ -1,8 +1,9 @@
 import { useId, useState, type ReactNode } from 'react';
+import { useTranslation } from 'react-i18next';
 import { DietIcon } from '@/components/ui/DietBadge';
 import { groupFilterOptions } from '@/lib/groups';
 import { unitById, unitName } from '@/lib/geologic-time';
-import { tr } from '@/lib/i18n';
+import { useLang } from '@/lib/lang';
 import { DIETS_WITH_HINT } from '@/lib/labels';
 import { CONTINENTS, DIETS, PERIOD_IDS } from '@/lib/enums';
 import { SIZE_CLASSES, SIZE_UNKNOWN, type SizeFilter } from '@/lib/size-class';
@@ -55,6 +56,8 @@ function Check({
  * size and continent filters. Options within a filter are alternatives; filters combine.
  */
 export function FilterPanel({ filters, onChange, shownCount, totalCount }: FilterPanelProps) {
+  const { t } = useTranslation();
+  const lang = useLang();
   const [open, setOpen] = useState(false);
   const panelId = useId();
   const active = activeFilterCount(filters);
@@ -88,8 +91,8 @@ export function FilterPanel({ filters, onChange, shownCount, totalCount }: Filte
             data-testid="non-dinosaur-switch"
           />
           <span>
-            {tr('filters.nonDinosaurs')}{' '}
-            <span className="text-text-muted">{tr('filters.nonDinosaursHint')}</span>
+            {t('filters.nonDinosaurs')}{' '}
+            <span className="text-text-muted">{t('filters.nonDinosaursHint')}</span>
           </span>
         </label>
         <button
@@ -102,10 +105,10 @@ export function FilterPanel({ filters, onChange, shownCount, totalCount }: Filte
           }}
           data-testid="filters-toggle"
         >
-          {active > 0 ? tr('filters.toggleCount', { count: active }) : tr('filters.toggle')}
+          {active > 0 ? t('filters.toggleCount', { count: active }) : t('filters.toggle')}
         </button>
         <p className="sc-filter-count" aria-live="polite" data-testid="filter-count">
-          {tr(filters.nonDinosaurs ? 'filters.showingSpecies' : 'filters.showingDinosaurs', {
+          {t(filters.nonDinosaurs ? 'filters.showingSpecies' : 'filters.showingDinosaurs', {
             shown: shownCount,
             total: totalCount,
           })}
@@ -114,7 +117,7 @@ export function FilterPanel({ filters, onChange, shownCount, totalCount }: Filte
 
       <div id={panelId} className="sc-filter-panel" hidden={!open}>
         <fieldset>
-          <legend>{tr('filters.diet')}</legend>
+          <legend>{t('filters.diet')}</legend>
           {DIETS.map((d) => (
             <Check
               key={d}
@@ -125,17 +128,17 @@ export function FilterPanel({ filters, onChange, shownCount, totalCount }: Filte
             >
               <span className="sc-badge" data-diet={d}>
                 <DietIcon diet={d} />
-                {tr(`diet.${d}`)}
+                {t(`diet.${d}`)}
               </span>
               {DIETS_WITH_HINT.has(d) && (
-                <span className="text-text-muted"> ({tr(`diet.${d}Hint`)})</span>
+                <span className="text-text-muted"> ({t(`diet.${d}Hint`)})</span>
               )}
             </Check>
           ))}
         </fieldset>
 
         <fieldset>
-          <legend>{tr('filters.group')}</legend>
+          <legend>{t('filters.group')}</legend>
           {GROUP_OPTIONS.map((g) => (
             <Check
               key={g.id}
@@ -151,7 +154,7 @@ export function FilterPanel({ filters, onChange, shownCount, totalCount }: Filte
         </fieldset>
 
         <fieldset>
-          <legend>{tr('filters.period')}</legend>
+          <legend>{t('filters.period')}</legend>
           {PERIOD_IDS.map((p) => (
             <Check
               key={p}
@@ -160,13 +163,13 @@ export function FilterPanel({ filters, onChange, shownCount, totalCount }: Filte
                 setList('periods', p, on);
               }}
             >
-              {unitName(unitById(p))}
+              {unitName(lang, unitById(p))}
             </Check>
           ))}
         </fieldset>
 
         <fieldset>
-          <legend>{tr('filters.size')}</legend>
+          <legend>{t('filters.size')}</legend>
           {SIZE_CLASSES.map((c) => (
             <Check
               key={c.id}
@@ -175,8 +178,8 @@ export function FilterPanel({ filters, onChange, shownCount, totalCount }: Filte
                 setList('sizes', c.id, on);
               }}
             >
-              {tr(`size.${c.id}`)}{' '}
-              <span className="text-text-muted">({tr(`size.${c.id}Range`)})</span>
+              {t(`size.${c.id}`)}{' '}
+              <span className="text-text-muted">({t(`size.${c.id}Range`)})</span>
             </Check>
           ))}
           <Check
@@ -185,13 +188,13 @@ export function FilterPanel({ filters, onChange, shownCount, totalCount }: Filte
               setList('sizes', SIZE_UNKNOWN, on);
             }}
           >
-            {tr('size.unknown')}
+            {t('size.unknown')}
           </Check>
-          <p className="sc-note">{tr('size.spanNote')}</p>
+          <p className="sc-note">{t('size.spanNote')}</p>
         </fieldset>
 
         <fieldset>
-          <legend>{tr('filters.continent')}</legend>
+          <legend>{t('filters.continent')}</legend>
           {CONTINENTS.map((c) => (
             <Check
               key={c}
@@ -200,20 +203,20 @@ export function FilterPanel({ filters, onChange, shownCount, totalCount }: Filte
                 setList('continents', c, on);
               }}
             >
-              {tr(`continent.${c}`)}
+              {t(`continent.${c}`)}
             </Check>
           ))}
         </fieldset>
 
         <fieldset>
-          <legend>{tr('filters.more')}</legend>
+          <legend>{t('filters.more')}</legend>
           <Check
             checked={filters.famousOnly}
             onChange={(on) => {
               onChange({ ...filters, famousOnly: on });
             }}
           >
-            {tr('filters.famous')}
+            {t('filters.famous')}
           </Check>
         </fieldset>
 
@@ -225,7 +228,7 @@ export function FilterPanel({ filters, onChange, shownCount, totalCount }: Filte
             onChange({ ...EMPTY_FILTERS, nonDinosaurs: filters.nonDinosaurs });
           }}
         >
-          {tr('filters.clear')}
+          {t('filters.clear')}
         </button>
       </div>
     </div>

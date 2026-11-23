@@ -1,6 +1,6 @@
 import { formatMa, formatUncertainty, unitName } from '@/lib/geologic-time';
-import { i18nFor } from '@/lib/i18n';
-import { getLocale } from '@/lib/locale';
+import { tr } from '@/lib/i18n';
+import type { Lang } from '@/lib/locale';
 import type { GeologicUnit } from '@/lib/schemas/geologic-time';
 
 /** One edge between geologic units, with the chart's uncertainty or approximate flag. */
@@ -11,26 +11,24 @@ export interface Boundary {
 }
 
 /** "~237" for approximate boundaries, "201.4 ±0.2" where the chart gives an uncertainty. */
-export function formatBoundary(b: Boundary): string {
-  if (b.approximate) return `~${formatMa(b.ma)}`;
+export function formatBoundary(lang: Lang, b: Boundary): string {
+  if (b.approximate) return `~${formatMa(lang, b.ma)}`;
   if (b.uncertaintyMa !== undefined && b.uncertaintyMa > 0) {
-    return `${formatMa(b.ma)} ±${formatUncertainty(b.uncertaintyMa)}`;
+    return `${formatMa(lang, b.ma)} ±${formatUncertainty(lang, b.uncertaintyMa)}`;
   }
-  return formatMa(b.ma);
+  return formatMa(lang, b.ma);
 }
 
 /** Spoken form of a boundary, e.g. "about 237" or "201.4 plus or minus 0.2". */
-export function describeBoundary(b: Boundary): string {
-  const i18n = i18nFor(getLocale());
-  const t = i18n.t.bind(i18n);
-  if (b.approximate) return t('time.about', { value: formatMa(b.ma) });
+export function describeBoundary(lang: Lang, b: Boundary): string {
+  if (b.approximate) return tr(lang, 'time.about', { value: formatMa(lang, b.ma) });
   if (b.uncertaintyMa !== undefined && b.uncertaintyMa > 0) {
-    return t('time.plusMinus', {
-      value: formatMa(b.ma),
-      uncertainty: formatUncertainty(b.uncertaintyMa),
+    return tr(lang, 'time.plusMinus', {
+      value: formatMa(lang, b.ma),
+      uncertainty: formatUncertainty(lang, b.uncertaintyMa),
     });
   }
-  return formatMa(b.ma);
+  return formatMa(lang, b.ma);
 }
 
 /** The boundaries of contiguous units sorted oldest first: each base, then the last top. */
@@ -51,8 +49,8 @@ export function boundariesOf(units: readonly GeologicUnit[]): Boundary[] {
 }
 
 /** Label candidates for a band, longest first. The empty string means "no label". */
-export function bandLabelCandidates(unit: GeologicUnit): string[] {
-  const name = unitName(unit);
+export function bandLabelCandidates(lang: Lang, unit: GeologicUnit): string[] {
+  const name = unitName(lang, unit);
   switch (unit.rank) {
     case 'era':
       return [name, ''];

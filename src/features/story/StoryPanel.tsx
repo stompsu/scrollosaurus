@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
-import { tr } from '@/lib/i18n';
-import { localize } from '@/lib/locale';
+import { useTranslation } from 'react-i18next';
+import { useLocalize } from '@/lib/lang';
 import type { Story } from '@/lib/schemas/stories';
 import { SourceNotes } from './SourceNotes';
 
@@ -20,6 +20,8 @@ interface StoryPanelProps {
  * screen readers read the new step.
  */
 export function StoryPanel({ story, step, onStep, onClose, focusOnOpen = true }: StoryPanelProps) {
+  const { t } = useTranslation();
+  const localize = useLocalize();
   const current = story.steps[step];
   const headingRef = useRef<HTMLHeadingElement>(null);
   const total = story.steps.length;
@@ -39,7 +41,7 @@ export function StoryPanel({ story, step, onStep, onClose, focusOnOpen = true }:
 
   return (
     <section className="sc-story" aria-labelledby="story-step-title" data-testid="story-panel">
-      <p className="sc-story-progress">{tr('tour.progress', { step: step + 1, total })}</p>
+      <p className="sc-story-progress">{t('tour.progress', { step: step + 1, total })}</p>
       <h2 id="story-step-title" ref={headingRef} tabIndex={-1} className="sc-story-title">
         {localize(current.title)}
       </h2>
@@ -54,7 +56,7 @@ export function StoryPanel({ story, step, onStep, onClose, focusOnOpen = true }:
             onStep(step - 1);
           }}
         >
-          {tr('tour.back')}
+          {t('tour.back')}
         </button>
         {step < total - 1 ? (
           <button
@@ -64,15 +66,15 @@ export function StoryPanel({ story, step, onStep, onClose, focusOnOpen = true }:
               onStep(step + 1);
             }}
           >
-            {tr('tour.next')}
+            {t('tour.next')}
           </button>
         ) : (
           <button type="button" className="sc-button sc-button--primary" onClick={onClose}>
-            {tr('tour.finish')}
+            {t('tour.finish')}
           </button>
         )}
         <button type="button" className="sc-button" onClick={onClose}>
-          {tr('tour.close')}
+          {t('tour.close')}
         </button>
       </div>
     </section>

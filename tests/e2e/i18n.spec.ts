@@ -1,5 +1,5 @@
 import AxeBuilder from '@axe-core/playwright';
-import { expect, test } from '@playwright/test';
+import { expect, test, type Page } from '@playwright/test';
 
 let consoleErrors: string[] = [];
 test.beforeEach(({ page }) => {
@@ -14,6 +14,16 @@ test.beforeEach(({ page }) => {
 test.afterEach(() => {
   expect(consoleErrors).toEqual([]);
 });
+
+/**
+ * Opens a Polish page and waits for the app to render it: Polish pages render once their strings
+ * chunk has loaded, which can be just after the `load` event that `goto` waits for.
+ */
+async function gotoPolish(page: Page, path: string) {
+  await page.goto(path);
+  await expect(page.locator('html')).toHaveAttribute('lang', 'pl');
+  await expect(page.getByRole('main')).toBeVisible();
+}
 
 test('Polish pages are served directly, in Polish, with lang="pl"', async ({ page }) => {
   for (const path of ['pl/', 'pl/about/', 'pl/credits/', 'pl/species/tyrannosaurus/']) {
@@ -63,6 +73,41 @@ test('the switch keeps the page and its view, and the choice is remembered', asy
   await expect(page.locator('html')).toHaveAttribute('lang', 'en');
 });
 
+test('Back from the Polish page reached by the switch returns to the English home page', async ({
+  page,
+}) => {
+  await page.goto('./');
+  await page.getByTestId('language-switch').click();
+  await expect(page.locator('html')).toHaveAttribute('lang', 'pl');
+  await page.goBack();
+  // The stored Polish choice applies to a fresh visit only, not to Back.
+  await expect(page.locator('html')).toHaveAttribute('lang', 'en');
+  await expect(page.getByRole('heading', { level: 1 })).toHaveText(/^The Mesozoic, /);
+  await expect(page).not.toHaveURL(/\/pl/);
+});
+
+test('if the Polish strings fail to load, the page says so and offers a retry', async ({
+  page,
+}) => {
+  let requests = 0;
+  await page.route('**/assets/i18n-pl-*.js', (route) => {
+    requests += 1;
+    return route.abort();
+  });
+  await page.goto('pl/about/');
+  await expect(page.getByRole('heading', { level: 1 })).toHaveText('This page couldn’t load');
+  await expect(page.getByRole('button', { name: 'Try again' })).toBeVisible();
+  await expect(page.getByRole('link', { name: 'Open the English page' })).toHaveAttribute(
+    'href',
+    /\/about\/?$/,
+  );
+  // One failed request (the preload, which the import then reuses or repeats once), not a loop.
+  await page.waitForTimeout(500);
+  expect(requests).toBeLessThanOrEqual(3);
+  // The failed chunk is reported in the console; that is expected here.
+  consoleErrors = [];
+});
+
 test('links inside a Polish page stay in Polish', async ({ page }) => {
   await page.goto('pl/species/tyrannosaurus');
   await page.getByTestId('species-drawer').getByRole('link', { name: 'Triceratops' }).click();
@@ -81,14 +126,13 @@ test('search finds Polish name meanings', async ({ page }) => {
 
 test('no axe violations in Polish', async ({ page }) => {
   for (const path of ['pl/', 'pl/species/stegosaurus', 'pl/credits/', 'pl/?tour=2']) {
-    await page.goto(path);
-    await expect(page.locator('html')).toHaveAttribute('lang', 'pl');
+    await gotoPolish(page, path);
     expect((await new AxeBuilder({ page }).analyze()).violations).toEqual([]);
   }
 });
 
 test('no axe violations in Polish: about, filters open, light theme', async ({ page }) => {
-  await page.goto('pl/about/');
+  await gotoPolish(page, 'pl/about/');
   expect((await new AxeBuilder({ page }).analyze()).violations).toEqual([]);
   await page.goto('pl/');
   await page.getByTestId('filters-toggle').click();
