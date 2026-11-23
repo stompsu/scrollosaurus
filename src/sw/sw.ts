@@ -4,29 +4,34 @@
  * no push, no background sync, no requests to other hosts.
  *
  * - Install: caches the entry script, styles, fonts, Polish strings, icons and both page shells.
- * - Pages: network first; offline, the cached shell in the page's language (every route renders
- *   from the same two shells).
+ * - Pages: network first; offline, or after NAVIGATION_TIMEOUT_MS on a weak connection, the
+ *   cached shell in the page's language (every route renders from the same two shells).
  * - Species data chunks and images: cache first, saved when first used; images capped.
- * - A new version waits until the page asks it to take over (the "new version" notice), so an open
- *   tab never mixes files from two builds.
+ * - A new version waits until a page asks it to take over (the "new version" notice). Other open
+ *   tabs are then told to reload (src/lib/pwa-register.ts), because the old caches are removed.
  */
 import {
-  IMAGE_CACHE,
+  imageCacheName,
   MAX_IMAGES,
+  NAVIGATION_TIMEOUT_MS,
   overflow,
+  parseMessage,
   precacheName,
   routeFor,
+  shellAssetsMissing,
   shellFor,
   SPECIES_CACHE,
-  parseMessage,
   staleCaches,
   type SwBuild,
 } from './strategy';
 
 declare const __SC_BUILD__: SwBuild;
 const build = __SC_BUILD__;
+// The WebWorker library types `self` as a generic WorkerGlobalScope; this file only ever runs as a
+// service worker.
 const sw = self as unknown as ServiceWorkerGlobalScope;
 const PRECACHE = precacheName(build.version);
+const IMAGE_CACHE = imageCacheName(build.imagesVersion);
 
 /**
  * Hashed files under assets/ never change, so the copy the page just downloaded can be reused.
@@ -41,16 +46,26 @@ function toInstallRequest(path: string): Request {
 
 sw.addEventListener('install', (event) => {
   event.waitUntil(
-    caches.open(PRECACHE).then((cache) => cache.addAll(build.precache.map(toInstallRequest))),
+    (async () => {
+      const cache = await caches.open(PRECACHE);
+      await cache.addAll(build.precache.map(toInstallRequest));
+      // A shell from another deploy than this sw.js couldn't start offline: fail the install, so
+      // the browser tries again on a later visit, once the host serves one deploy.
+      for (const shell of [build.base, `${build.base}pl/`]) {
+        const html = await (await cache.match(shell))?.text();
+        if (html === undefined || shellAssetsMissing(html, build).length > 0) {
+          await caches.delete(PRECACHE);
+          throw new Error(`Page shell ${shell} does not match this service worker`);
+        }
+      }
+    })(),
   );
 });
 
 sw.addEventListener('activate', (event) => {
   event.waitUntil(
     (async () => {
-      await Promise.all(
-        staleCaches(await caches.keys(), build.version).map((n) => caches.delete(n)),
-      );
+      await Promise.all(staleCaches(await caches.keys(), build).map((n) => caches.delete(n)));
       // Species chunks are hashed: drop the ones this build no longer has.
       const species = await caches.open(SPECIES_CACHE);
       const current = new Set(build.speciesChunks);
@@ -64,7 +79,7 @@ sw.addEventListener('activate', (event) => {
 
 sw.addEventListener('message', (event) => {
   const message = parseMessage(event.data);
-  if (message?.type === 'SKIP_WAITING') void sw.skipWaiting();
+  if (message?.type === 'SKIP_WAITING') event.waitUntil(sw.skipWaiting());
   if (message?.type === 'CACHE_URLS') event.waitUntil(cacheVisited(message.urls));
 });
 
@@ -85,13 +100,27 @@ async function cacheVisited(urls: readonly string[]): Promise<void> {
   }
 }
 
+function cachedShell(request: Request): Promise<Response | undefined> {
+  return caches.match(shellFor(new URL(request.url).pathname, build.base), { cacheName: PRECACHE });
+}
+
+/**
+ * Network first, so a deploy shows up on the next page load. Offline, or when the network hasn't
+ * answered within NAVIGATION_TIMEOUT_MS, the cached shell instead (the same two files every route
+ * uses), so a weak connection doesn't leave a blank page.
+ */
 async function fromNetworkOrShell(request: Request): Promise<Response> {
+  const network = fetch(request);
+  network.catch(() => undefined); // Handled below; don't report the race's loser.
+  const slow = new Promise<Response | undefined>((resolve) => {
+    setTimeout(() => {
+      void cachedShell(request).then(resolve);
+    }, NAVIGATION_TIMEOUT_MS);
+  });
   try {
-    return await fetch(request);
+    return (await Promise.race([network, slow])) ?? (await network);
   } catch (error) {
-    const shell = await caches.match(shellFor(new URL(request.url).pathname, build.base), {
-      cacheName: PRECACHE,
-    });
+    const shell = await cachedShell(request);
     if (shell) return shell;
     throw error;
   }

@@ -13,15 +13,27 @@ export interface SwBuild {
   precache: string[];
   /** Absolute paths of the per-species data chunks (cached when first opened). */
   speciesChunks: string[];
+  /**
+   * Changes whenever any file under images/ changes. Image names don't change when Commons gets a
+   * new revision of a file, so a new value drops every cached image (and its possibly outdated
+   * credit match) at once.
+   */
+  imagesVersion: string;
 }
 
-/** Cache names. The precache is per version; species and images outlive a version. */
+/**
+ * Cache names. The precache is per build and images per image set; species chunks outlive a build
+ * (their names are content hashes) and are pruned to the current build's list on update.
+ */
 export const CACHE_PREFIX = 'scrollosaurus-';
 export const precacheName = (version: string): string => `${CACHE_PREFIX}precache-${version}`;
+export const imageCacheName = (imagesVersion: string): string =>
+  `${CACHE_PREFIX}images-${imagesVersion}`;
 export const SPECIES_CACHE = `${CACHE_PREFIX}species`;
-export const IMAGE_CACHE = `${CACHE_PREFIX}images`;
 /** Most images kept for offline use; the oldest go first (about 10 MB at the sizes we ship). */
 export const MAX_IMAGES = 200;
+/** How long a page load waits for the network before the cached shell is used (a weak signal). */
+export const NAVIGATION_TIMEOUT_MS = 4000;
 
 export type Route = 'navigate' | 'precache' | 'species' | 'image';
 
@@ -33,9 +45,7 @@ export function routeFor(
 ): Route | null {
   if (req.method !== 'GET') return null;
   const url = new URL(req.url);
-  // The home page's address can lose its trailing slash (/scrollosaurus?from=…): still the site.
-  const inSite = url.pathname.startsWith(build.base) || `${url.pathname}/` === build.base;
-  if (url.origin !== origin || !inSite) return null;
+  if (url.origin !== origin || !url.pathname.startsWith(build.base)) return null;
   if (req.mode === 'navigate') return 'navigate';
   // Hashed asset URLs carry no query; anything with one isn't ours to cache.
   if (url.search) return null;
@@ -51,10 +61,29 @@ export function shellFor(pathname: string, base: string): string {
   return pathname === pl || pathname.startsWith(`${pl}/`) ? `${pl}/` : base;
 }
 
-/** Caches this site made for an older version (other sites on the origin are left alone). */
-export function staleCaches(names: readonly string[], version: string): string[] {
-  const current = precacheName(version);
-  return names.filter((n) => n.startsWith(`${CACHE_PREFIX}precache-`) && n !== current);
+/**
+ * Caches this site made for an older build or image set (other sites on the origin, and caches
+ * of another name, are left alone).
+ */
+export function staleCaches(names: readonly string[], build: SwBuild): string[] {
+  const current = [precacheName(build.version), imageCacheName(build.imagesVersion)];
+  return names.filter(
+    (n) =>
+      (n.startsWith(`${CACHE_PREFIX}precache-`) || n.startsWith(`${CACHE_PREFIX}images-`)) &&
+      !current.includes(n),
+  );
+}
+
+/**
+ * Files a page shell loads from assets/ that the precache doesn't have. Not empty means the shell
+ * and sw.js come from different deploys (the host was mid-update), so the install must fail and
+ * be retried rather than leave a shell that can't start offline.
+ */
+export function shellAssetsMissing(html: string, build: SwBuild): string[] {
+  const assets = `${build.base}assets/`;
+  return [...html.matchAll(/(?:src|href)="([^"]+)"/g)]
+    .map((m) => m[1] ?? '')
+    .filter((path) => path.startsWith(assets) && !build.precache.includes(path));
 }
 
 /** The oldest entries beyond `max` (cache keys come back in insertion order). */

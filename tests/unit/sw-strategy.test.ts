@@ -1,9 +1,11 @@
 import { describe, expect, it } from 'vitest';
 import {
+  imageCacheName,
   overflow,
   parseMessage,
   precacheName,
   routeFor,
+  shellAssetsMissing,
   shellFor,
   staleCaches,
   type SwBuild,
@@ -15,6 +17,7 @@ const build: SwBuild = {
   base: '/scrollosaurus/',
   precache: ['/scrollosaurus/', '/scrollosaurus/pl/', '/scrollosaurus/assets/index-x.js'],
   speciesChunks: ['/scrollosaurus/assets/tyrannosaurus-y.js'],
+  imagesVersion: 'img1',
 };
 const get = (path: string, mode = 'cors') => ({
   method: 'GET',
@@ -30,10 +33,8 @@ describe('service worker routing', () => {
     expect(routeFor(get('/scrollosaurus/pl/?diet=carnivore', 'navigate'), ORIGIN, build)).toBe(
       'navigate',
     );
-    // The router writes the home page's view without the trailing slash.
-    expect(routeFor(get('/scrollosaurus?from=130&to=119', 'navigate'), ORIGIN, build)).toBe(
-      'navigate',
-    );
+    // Outside the worker's scope anyway; the router keeps the trailing slash (ADR-0003 §5).
+    expect(routeFor(get('/scrollosaurus?from=130&to=119', 'navigate'), ORIGIN, build)).toBeNull();
   });
 
   it('serves precached files, species chunks and images', () => {
@@ -86,15 +87,25 @@ describe('offline page shell', () => {
 });
 
 describe('cache housekeeping', () => {
-  it('removes only older precaches of this site', () => {
+  it('removes only older precaches and image sets of this site', () => {
     const names = [
       precacheName('abc123'),
       precacheName('old999'),
-      'scrollosaurus-images',
+      imageCacheName('img1'),
+      imageCacheName('img0'),
       'scrollosaurus-species',
       'someone-else',
     ];
-    expect(staleCaches(names, 'abc123')).toEqual([precacheName('old999')]);
+    expect(staleCaches(names, build)).toEqual([precacheName('old999'), imageCacheName('img0')]);
+  });
+
+  it('notices a page shell from another deploy', () => {
+    const shell = (entry: string) =>
+      `<script type="module" crossorigin src="${entry}"></script><link rel="icon" href="/scrollosaurus/favicon.svg">`;
+    expect(shellAssetsMissing(shell('/scrollosaurus/assets/index-x.js'), build)).toEqual([]);
+    expect(shellAssetsMissing(shell('/scrollosaurus/assets/index-new.js'), build)).toEqual([
+      '/scrollosaurus/assets/index-new.js',
+    ]);
   });
 
   it('evicts the oldest entries beyond the limit', () => {

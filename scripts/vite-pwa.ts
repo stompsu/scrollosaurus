@@ -12,7 +12,7 @@
  * Every URL is built from Vite's `base`. Build only: the dev server never registers a worker.
  */
 import { createHash } from 'node:crypto';
-import { readFileSync } from 'node:fs';
+import { existsSync, readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import type { Plugin } from 'vite';
 import type { SwBuild } from '../src/sw/strategy.ts';
@@ -40,7 +40,12 @@ interface SiteStrings {
 
 function readStrings(lang: Lang): SiteStrings {
   const path = join(ROOT, 'data', 'i18n', lang, 'common.json');
-  return JSON.parse(readFileSync(path, 'utf8')) as SiteStrings;
+  // Shape checked just below; the strings themselves are validated by `pnpm validate:data`.
+  const strings = JSON.parse(readFileSync(path, 'utf8')) as Partial<SiteStrings>;
+  if (!strings.site?.name || !strings.site.description) {
+    throw new Error(`vite-pwa: ${path} needs site.name and site.description for the manifest`);
+  }
+  return strings as SiteStrings;
 }
 
 /** The dark theme's background token (`--sc-bg` in the first :root block), the default theme. */
@@ -109,7 +114,7 @@ type BundleFiles = Record<
 >;
 
 /** Hash of every built file, so any change to the build gives the service worker a new version. */
-function versionOf(bundle: BundleFiles): string {
+function versionOf(bundle: BundleFiles, publicFiles: readonly string[]): string {
   const hash = createHash('sha256');
   for (const name of Object.keys(bundle).sort()) {
     if (name === SW_FILE) continue;
@@ -118,8 +123,29 @@ function versionOf(bundle: BundleFiles): string {
     hash.update(name);
     hash.update(file.type === 'chunk' ? file.code : file.source);
   }
+  // Precached files Vite copies from public/ without bundling them.
+  for (const name of publicFiles) {
+    hash.update(name);
+    hash.update(readFileSync(join(ROOT, 'public', name)));
+  }
   return hash.digest('hex').slice(0, 12);
 }
+
+/** Hash of every file under public/images (names and contents; about 37 MB, well under a second). */
+function imagesVersionOf(): string {
+  const dir = join(ROOT, 'public', 'images');
+  const hash = createHash('sha256');
+  if (existsSync(dir)) {
+    for (const name of readdirSync(dir).sort()) {
+      hash.update(name);
+      hash.update(readFileSync(join(dir, name)));
+    }
+  }
+  return hash.digest('hex').slice(0, 12);
+}
+
+/** Unhashed files from public/ that the service worker precaches. */
+const PUBLIC_PRECACHE = ['theme-init.js', 'favicon.svg'] as const;
 
 export function pwaPlugin(base: string): Plugin {
   return {
@@ -172,8 +198,7 @@ export function pwaPlugin(base: string): Plugin {
         const precache = new Set<string>([
           base,
           `${base}pl/`,
-          `${base}theme-init.js`,
-          `${base}favicon.svg`,
+          ...PUBLIC_PRECACHE.map((name) => `${base}${name}`),
           `${base}${MANIFEST_FILE}`,
           `${base}pl/${MANIFEST_FILE}`,
           ...icons.map(([fileName]) => `${base}${fileName}`),
@@ -200,10 +225,11 @@ export function pwaPlugin(base: string): Plugin {
         if (!sw.code.includes('__SC_BUILD__'))
           throw new Error('vite-pwa: no __SC_BUILD__ in sw.js');
         const swBuild: SwBuild = {
-          version: versionOf(bundle),
+          version: versionOf(bundle, PUBLIC_PRECACHE),
           base,
           precache: [...precache].sort(),
           speciesChunks: speciesChunks.sort(),
+          imagesVersion: imagesVersionOf(),
         };
         sw.code = sw.code.replaceAll('__SC_BUILD__', JSON.stringify(swBuild));
       },
