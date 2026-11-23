@@ -229,7 +229,8 @@
   "update": {
     "available": "Nowa wersja serwisu jest gotowa.",
     "reload": "Odśwież",
-    "later": "Później"
+    "later": "Później",
+    "takenOver": "W innej karcie działa już nowa wersja serwisu. Odśwież tę stronę, aby dalej z niej korzystać."
   },
   "loadError": {
     "title": "Nie udało się wczytać strony",

@@ -794,7 +794,7 @@ h3 {
 .sc-update {
   position: fixed;
   inset-inline: 1rem;
-  bottom: 1rem;
+  bottom: max(1rem, env(safe-area-inset-bottom));
   z-index: 40;
   display: flex;
   flex-wrap: wrap;
@@ -809,6 +809,16 @@ h3 {
   color: var(--sc-text);
   box-shadow: 0 0.5rem 1.5rem rgb(0 0 0 / 0.35);
   animation: sc-update-in 200ms ease-out;
+}
+/* Inside the species drawer (a modal dialog): part of the flow, at the top of its body. */
+.sc-update--inline {
+  position: static;
+  margin-bottom: 1rem;
+  box-shadow: none;
+}
+/* While the notice is up, keep focused elements scrolled clear of it (WCAG 2.4.11). */
+html[data-update='shown'] {
+  scroll-padding-bottom: 9rem;
 }
 .sc-update-text {
   flex: 1 1 12rem;

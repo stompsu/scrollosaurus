@@ -227,7 +227,8 @@
   "update": {
     "available": "A new version of the site is ready.",
     "reload": "Reload",
-    "later": "Later"
+    "later": "Later",
+    "takenOver": "A new version of the site is running in another tab. Reload this page to keep using it."
   },
   "loadError": {
     "title": "This page couldn’t load",
