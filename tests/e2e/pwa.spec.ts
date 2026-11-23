@@ -142,32 +142,113 @@ test('pages not visited yet still open offline, in their language', async ({ pag
   await context.setOffline(false);
 });
 
-test('a new deploy is offered, not forced, and is accessible', async ({ page }) => {
+/**
+ * Simulates a deploy by giving dist/sw.js a new version (the browser installs any changed sw.js as
+ * a new worker), runs `body`, and puts the file back.
+ */
+async function withNewDeploy(body: (version: string) => Promise<void>) {
+  const swPath = join(DIST, 'sw.js');
+  const original = readFileSync(swPath, 'utf8');
+  const version = /"version":"(\w+)"/.exec(original)?.[1];
+  expect(version).toBeDefined();
+  const next = `${version ?? ''}e2e`;
+  try {
+    writeFileSync(swPath, original.replace(`"version":"${version ?? ''}"`, `"version":"${next}"`));
+    await body(next);
+  } finally {
+    writeFileSync(swPath, original);
+  }
+}
+
+async function checkForUpdate(page: Page) {
+  await page.evaluate(async () => {
+    await (await navigator.serviceWorker.getRegistration())?.update();
+  });
+}
+
+const cacheNames = (page: Page) => page.evaluate(() => caches.keys());
+
+test('a new deploy is offered, not forced; Reload switches to it', async ({ page }) => {
   await page.goto('');
   await waitForOffline(page, false);
   await expect(page.getByTestId('update-notice')).toHaveCount(0);
+  const [oldPrecache] = (await cacheNames(page)).filter((n) => n.includes('precache-'));
+  expect(oldPrecache).toBeDefined();
 
-  // Simulate a deploy: any change to sw.js makes the browser install it as a new version.
-  const swPath = join(DIST, 'sw.js');
-  const original = readFileSync(swPath, 'utf8');
-  try {
-    writeFileSync(swPath, `${original}\n// e2e: a new deploy\n`);
-    await page.evaluate(async () => {
-      const registration = await navigator.serviceWorker.getRegistration();
-      await registration?.update();
+  await withNewDeploy(async (version) => {
+    await page.evaluate(() => {
+      (window as unknown as { marker: boolean }).marker = true;
     });
+    await checkForUpdate(page);
     const notice = page.getByTestId('update-notice');
     await expect(notice).toBeVisible();
-    await expect(page.getByRole('status')).toContainText('A new version of the site is ready.');
+    await expect(
+      page.getByRole('status').filter({ hasText: 'A new version of the site is ready.' }),
+    ).toHaveCount(1);
     const axe = await new AxeBuilder({ page }).include('[data-testid="update-notice"]').analyze();
     expect(axe.violations).toEqual([]);
+
+    // Offered, not forced: nothing reloads and the old version stays in control while it waits.
+    await page.waitForTimeout(1000);
+    expect(await page.evaluate(() => (window as unknown as { marker?: boolean }).marker)).toBe(
+      true,
+    );
+    expect(await cacheNames(page)).toContain(oldPrecache);
 
     const reloaded = page.waitForEvent('load');
     await notice.getByRole('button', { name: 'Reload' }).click();
     await reloaded;
     await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
     await expect(page.getByTestId('update-notice')).toHaveCount(0);
-  } finally {
-    writeFileSync(swPath, original);
-  }
+    expect(await page.evaluate(() => (window as unknown as { marker?: boolean }).marker)).toBe(
+      undefined,
+    );
+    // The new version is in control and has removed the old one's files.
+    await expect
+      .poll(async () => (await cacheNames(page)).filter((n) => n.includes('precache-')))
+      .toEqual([`scrollosaurus-precache-${version}`]);
+  });
+});
+
+test('other open tabs are asked to reload once one tab switches', async ({ page, context }) => {
+  await page.goto('');
+  await waitForOffline(page, false);
+  const other = await context.newPage();
+  await other.goto('pl/about/');
+  await expect(other.locator('html')).toHaveAttribute('lang', 'pl');
+  await waitForOffline(other, false);
+
+  await withNewDeploy(async () => {
+    await checkForUpdate(page);
+    await expect(other.getByTestId('update-notice')).toBeVisible();
+    await page.getByTestId('update-notice').getByRole('button', { name: 'Reload' }).click();
+
+    const notice = other.getByTestId('update-notice');
+    await expect(notice).toContainText('W innej karcie działa już nowa wersja serwisu.');
+    await expect(notice.getByRole('button')).toHaveText(['Odśwież']);
+    const axe = await new AxeBuilder({ page: other })
+      .include('[data-testid="update-notice"]')
+      .analyze();
+    expect(axe.violations).toEqual([]);
+  });
+});
+
+test('the notice is shown inside the species drawer, which makes the page inert', async ({
+  page,
+}) => {
+  await page.goto('species/tyrannosaurus/');
+  await waitForOffline(page, false);
+  const drawer = page.getByTestId('species-drawer');
+  await expect(drawer).toBeVisible();
+
+  await withNewDeploy(async () => {
+    await checkForUpdate(page);
+    const notice = drawer.getByTestId('update-notice');
+    await expect(notice).toBeVisible();
+    const axe = await new AxeBuilder({ page }).include('[data-testid="species-drawer"]').analyze();
+    expect(axe.violations).toEqual([]);
+    await notice.getByRole('button', { name: 'Later' }).click();
+    await expect(page.getByTestId('update-notice')).toHaveCount(0);
+    await expect(drawer.getByRole('heading', { level: 2 })).toBeFocused();
+  });
 });
