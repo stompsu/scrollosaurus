@@ -29,7 +29,10 @@ Of the growth since Phase 5 (166.8 kB), i18next (new in Phase 6) accounts for ab
 species index, which grew from 34 to 103 species, for most of the rest (the Phase 5 index wasn't
 measured separately). The UI strings themselves were about 4 kB.
 
-## Options not taken yet (need an owner decision)
+## Options not taken
+
+Owner decision (2026-11-23): neither for now, since the entry is within budget and Lighthouse
+passes on every page. If the entry needs to shrink later, moving image credits out comes first.
 
 - **Move image credits out of the index** and load them with each species record, or as a
   separate chunk for the credits page: about 9 kB gzip off the entry. Cards and the drawer would
